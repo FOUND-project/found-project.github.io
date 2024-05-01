@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "In media"
-permalink: /medida/
+permalink: /media/
 author_profile: true
 ---
 
