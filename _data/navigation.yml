@@ -1,7 +1,10 @@
 # main links links
 main:
-  - title: "Documentary about FOUND"
+  - title: "Documentary"
     url: /documentary.html/
+
+  - title: "In media"
+    url: /media/
 
 #  - title: "Publications"
 #    url: /publications/
