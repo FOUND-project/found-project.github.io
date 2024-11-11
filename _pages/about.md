@@ -16,7 +16,7 @@ Womens’ search groups currently use their empirical knowledge to identify pote
 
 Body decomposition alters the soil’s moisture and produces nitrogen-rich areas. Tthese anomalies can be detected using multispectral cameras, which identify nitrogen and chlorophyll anomalies in plants by measuring subtle differences in light reflections.
 
-The FOUND project, launched in 2023, is helping tackle Mexico’s crisis of disappearances by combining the research expertise of these search groups with advanced technology. Based in Jalisco, the state with highest number of recorded disappearances (more than 16,000), FOUND is testing a range of technological methods – including multispectral and thermal imaging, seismic noise analysis, electrical resistivity tomography, forensic entomology and botany, territorial analysis, and soil studies – to help locate clandestine graves. 
+The FOUND project, launched in 2023, is helping tackle Mexico’s crisis of disappearances by combining the research expertise of these search groups with technology. Based in Jalisco, the state with highest number of recorded disappearances (more than 16,000), FOUND is testing a range of technological methods – including multispectral and thermal imaging, seismic noise analysis, electrical resistivity tomography, forensic entomology and botany, territorial analysis, and soil studies – to help locate clandestine graves. 
 
 **The book**
 
