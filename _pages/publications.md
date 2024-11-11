@@ -11,3 +11,5 @@ The [book](https://www.centrogeo.org.mx/cgeo_archivo/240926_libro-interpretar-la
 
 ![book](https://github.com/FOUND-project/found-project.github.io/blob/master/images/1727361199015.jpg)
 
+**Articles**
+[Assessing geospatial models to explain the occurrence of clandestine graves in Mexico](https://www.sciencedirect.com/science/article/abs/pii/S0379073824001956)
