@@ -9,7 +9,7 @@ redirect_from:
 
 Since the ‘war on drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. There are currently 117,000 individuals reported as dissapeared, and the impact on their families is enormous. Through our FOUND project, we leverage technology to collaborate with mothers in their search for missing sons and daughters, working together to bring closure.
 
-<img src="[https://github.com/FOUND-project/found-project.github.io/assets/168593479/01445c38-8b19-486a-b29d-7c403d13774d]">
+<img src="(https://github.com/FOUND-project/found-project.github.io/assets/168593479/01445c38-8b19-486a-b29d-7c403d13774d)">
 
 '**I found my son in the flowers**'
 
