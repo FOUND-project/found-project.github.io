@@ -6,8 +6,8 @@ main:
   - title: "In media/Talks"
     url: /media/
 
-#  - title: "Publications"
-#    url: /publications/
+- title: "Publications"
+url: /publications/
 
 #  - title: "Talks"
 #    url: /talks/    
