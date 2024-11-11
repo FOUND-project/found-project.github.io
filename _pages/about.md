@@ -23,4 +23,4 @@ The FOUND project, launched in 2023, is helping tackle Mexico’s crisis of disa
 
 The [book](https://www.centrogeo.org.mx/cgeo_archivo/240926_libro-interpretar-la-naturaleza.pdf) ‘Interpreting Nature to Locate Those We Are Missing’ (Interpretar la Naturaleza para Encontrar a Quienes nos Faltan), presents the findings on the application of biological, physical, and earth sciences in the detection of clandestine graves.
 
-<img width="700" src="https://github.com/FOUND-project/found-project.github.io/blob/3808ab3740a38a8f24286b64504ddbf106966a68/images/1727361199015.jpg">
+<img width="700" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1727361199015.jpg?raw=true">
