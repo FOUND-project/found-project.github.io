@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "In media"
+title: "In media/Talks"
 permalink: /media/
 author_profile: true
 ---
