@@ -9,7 +9,7 @@ redirect_from:
 
 Since the ‘war on drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. There are currently 117,000 individuals reported as dissapeared, and the impact on their families is enormous. Through our FOUND project, we leverage technology to collaborate with mothers in their search for missing sons and daughters, working together to bring closure.
 
-<img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Screenshot%202024-11-11%20at%2014.12.53.png">
+<img width="700" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Screenshot%202024-11-11%20at%2014.12.53.png">
 
 '**I found my son in the flowers**'
 
@@ -23,4 +23,4 @@ The FOUND project, launched in 2023, is helping tackle Mexico’s crisis of disa
 
 The [book](https://www.centrogeo.org.mx/cgeo_archivo/240926_libro-interpretar-la-naturaleza.pdf) ‘Interpreting Nature to Locate Those We Are Missing’ (Interpretar la Naturaleza para Encontrar a Quienes nos Faltan), presents the findings on the application of biological, physical, and earth sciences in the detection of clandestine graves.
 
-<img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1727361199015.jpg">
+<img width="700" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1727361199015.jpg">
