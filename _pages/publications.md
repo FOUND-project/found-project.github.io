@@ -14,3 +14,5 @@ The [book](https://www.centrogeo.org.mx/cgeo_archivo/240926_libro-interpretar-la
 **Articles**
 
 [Assessing geospatial models to explain the occurrence of clandestine graves in Mexico](https://www.sciencedirect.com/science/article/abs/pii/S0379073824001956)
+
+[Espacio Clandestino: A Nationwide Platform to Support Clandestine Graves Search in Mexico](https://link.springer.com/chapter/10.1007/978-3-031-61440-8_14)
