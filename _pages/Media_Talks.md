@@ -17,3 +17,5 @@ SinEmbargo: [Tecnología para hallarlos ](https://www.sinembargo.mx/18-12-2023/4
 <img width="700" alt="media-reuters" src="https://github.com/FOUND-project/found-project.github.io/assets/168593479/01445c38-8b19-486a-b29d-7c403d13774d">
 
 University of Oxford: [Mexico's Missing: How families and technology are working together](https://www.ox.ac.uk/event/mexicos-missing-how-families-and-technology-are-working-together)
+
+British Association for Forensic Anthropology (BAFA): [Interpreting nature to locate the disappeared: influencing search practices in Jalisco, Mexico](https://bafauk.weebly.com/winter-conference--agm-2024.html)
