@@ -23,3 +23,6 @@ The [book](https://www.centrogeo.org.mx/cgeo_archivo/240926_libro-interpretar-la
 The book is currently being translated into English.
 
 <img width="700" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1727361199015.jpg?raw=true">
+
+**Partner**
+This project involves the participation of mothers' search groups, the National Council for Humanities, Sciences, and Technologies (CONAHCYT), the Jalisco State Commission for the Search for Missing Persons, the Jalisco Institute of Forensic Sciences, various companies, the UNAM Institute of Geophysics, the UNAM Faculty of Engineering, CentroGeo, four University Centers of the University of Guadalajara, the Polytechnic University of the Guadalajara Metropolitan Area, the University of the West of England, and the University of Oxford.
