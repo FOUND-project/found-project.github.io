@@ -9,7 +9,8 @@ redirect_from:
 Since the ‘War on Drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. There are currently 117,000 individuals reported as dissapeared, and the impact on their families is enormous. Through FOUND, we leverage technology to collaborate with mothers in their search for disappeared sons and daughters, working together to bring closure.
 
 <img width="700" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Screenshot%202024-11-11%20at%2014.12.53.png?raw=true">
-'**I found my son in the flowers**. Guerreros Buscadores, Mothers' Search Group'
+
+'**I found my son in the flowers**. Guerreros Buscadores de Jalisco, Mothers' Search Group'
 
 Mothers’ search groups currently use their empirical knowledge to identify potential clandestine graves. For example, in open areas, they look for natural indicators – which they call signs – such as off-season green plants or unusually blooming flowers, which may signal bodies are buried below. They then insert a T-shaped metal stake into the ground and smell it upon removal to detect any scent of decomposition. If decomposition is detected, they proceed to recover the remains.
 
