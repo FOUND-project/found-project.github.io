@@ -8,9 +8,9 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "The FOUND project"
+title                    : "FOUND"
 title_separator          : "-"
-name                     : &name "The FOUND project"
+name                     : &name "FOUND"
 description              : &description "personal description"
 url                      : "https://found-project.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -24,7 +24,8 @@ author:
   avatar           : "mum-baby-drone.jpeg"
   name             : "The FOUND project"
   pronouns         : # example: "she/her"  
-  bio              : "How families and technology are working together"
+  bio              : "How Families and Technology Work Together to Interpret Nature to Locate Those We Are Missing
+#Disappearances #Mexico"
   location         : "Mexico"
   employer         : #"Red Brick University"
   uri              : # URL
