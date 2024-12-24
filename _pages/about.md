@@ -10,7 +10,7 @@ Since the ‘War on Drugs' was declared in 2006, disappearances have been one of
 
 <img width="700" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Screenshot%202024-11-11%20at%2014.12.53.png?raw=true">
 
-'**I found my son in the flowers**. Guerreros Buscadores de Jalisco, Mothers' Search Group'
+'**I found my son in the flowers**'. Guerreros Buscadores de Jalisco, Mothers' Search Group
 
 Mothers’ search groups currently use their empirical knowledge to identify potential clandestine graves. For example, in open areas, they look for natural indicators – which they call signs – such as off-season green plants or unusually blooming flowers, which may signal bodies are buried below. They then insert a T-shaped metal stake into the ground and smell it upon removal to detect any scent of decomposition. If decomposition is detected, they proceed to recover the remains.
 
@@ -18,8 +18,7 @@ Body decomposition alters the soil’s moisture and produces nitrogen-rich areas
 
 The FOUND project [ESP] (Interpretar la Naturaleza para Encontrar a Quienes nos Faltan), launched in 2023, aims to tackle Mexico’s crisis of disappearances by combining the research expertise of these search groups with technology. Based in Jalisco, the state with highest number of recorded disappearances (more than 16,000), FOUND has established two experimental sites and is testing a range of technological methods – including multispectral and thermal imaging, seismic noise analysis, electrical resistivity tomography, forensic entomology and botany, territorial analysis, and soil studies – to help locate clandestine graves. 
 
-**The book**
-
+**The Book**
 The [book](https://www.centrogeo.org.mx/cgeo_archivo/240926_libro-interpretar-la-naturaleza.pdf) ‘Interpreting Nature to Locate Those We Are Missing’ (Interpretar la Naturaleza para Encontrar a Quienes nos Faltan), presents the findings on the application of biological, physical, and earth sciences in the detection of clandestine graves.
 The book is currently being translated into English.
 
