@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: default
 title: "In Media / Talks"
 permalink: /media/
 author_profile: true
