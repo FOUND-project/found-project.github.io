@@ -1,3 +1,12 @@
+---
+layout: archive
+title: "In Media / Talks"
+permalink: /media/
+author_profile: true
+redirect_from: 
+  - /media/
+  - /media.html
+---
 ### Media Coverage
 
 #### Just Security
