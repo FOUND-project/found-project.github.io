@@ -1,7 +1,7 @@
 ---
-layout: archive
+layout: default
 title: "In media/Talks"
-permalink: /Media_Talks/
+permalink: /media-talks/
 author_profile: true
 ---
 ### Media Coverage
