@@ -3,6 +3,9 @@ layout: archive
 title: "In Media / Talks"
 permalink: /media/
 author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
 ---
 
 ### Media Coverage
