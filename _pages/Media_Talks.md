@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: "In media/Talks"
-permalink: /media/
+permalink: /Media_Talks/
 author_profile: true
 ---
 ### Media Coverage
