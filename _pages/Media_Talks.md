@@ -5,7 +5,7 @@ permalink: /media/
 author_profile: true
 redirect_from: 
   - /media/
-  - /media.html
+  - /Media_Talks.html
 ---
 ### Media Coverage
 
