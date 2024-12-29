@@ -25,13 +25,14 @@ In other settings, like abandoned houses, these mothers tap the cement floor wit
 
 Launched in 2023, the FOUND project (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) combines the expertise of search groups with advanced technology to address Mexico’s crisis of disappearances. Based in Jalisco—the state with the highest number of recorded disappearances (over 16,000)—FOUND has established experimental sites replicating clandestine burial scenarios common in the region. Using donated pig carcasses that died of natural causes as proxies for human remains, the project examines conditions such as exposure to extreme heat, fragmentation, and wrapping in plastic or blankets. FOUND is testing a range of methods informed by the knowledge of local mothers, including:
 
-- **Multispectral, hyperspectral and thermal imaging**
+- **Multispectral Imaging**
+During Phase 1 of the project, the results showed that, in line with the findings of mothers’ collectives, body decomposition alters the soil’s moisture and produces nitrogen-rich areas, often visible in unusual plant growth such as off-season green plants or unexpected blooming flowers. By using multispectral cameras mounted on drones, nitrogen and chlorophyll anomalies in plants can be detected through subtle variations in light reflections. Though traditionally used in agriculture to monitor plant development and health, these technologies can be adapted for detecting clandestine graves by using vegetation indices.
+
+In 2025, during Phase 2 of the project, the following technologies will be tested:
+- **Hyperspectral Imaging**
 - **Lasers, Airborne LiDAR**
 - **Seismic Noise Interferometry Tomography (TIRSA)**
-- **Electrical resistivity tomography, Conductivimeter**
-- **Forensic entomology and botany**
-- **Territorial analysis**
-- **Soil studies**
+- **Electrical Resistivity Tomography, Conductivimeter**
 
 These approaches aim to enhance the detection of clandestine graves.
 
