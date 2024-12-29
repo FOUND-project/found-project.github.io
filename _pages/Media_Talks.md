@@ -1,11 +1,8 @@
 ---
-layout: default
-title: "In Media / Talks"
+layout: archive
+title: "In media/Talks"
 permalink: /media/
 author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
 ---
 
 ### Media Coverage
