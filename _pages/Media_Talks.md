@@ -1,10 +1,11 @@
 ---
 layout: default
-title: "In media/Talks"
+title: "In Media / Talks"
 permalink: /media-talks/
 author_profile: true
 ---
-### Media Coverage
+
+## Media Coverage
 
 #### Just Security
 [Camera-Fitted Drones May Help Locate Graves of Mexico’s Disappeared](https://www.justsecurity.org/105181/drones-graves-mexicos-disappeared/)
@@ -21,9 +22,7 @@ author_profile: true
 #### SinEmbargo
 [Tecnología para hallarlos](https://www.sinembargo.mx/18-12-2023/4440515)
 
-
-
-### Talks
+## Talks
 
 #### University of Oxford
 [Mexico's Missing: How families and technology are working together](https://www.ox.ac.uk/event/mexicos-missing-how-families-and-technology-are-working-together)
