@@ -23,12 +23,12 @@ In other settings, like abandoned houses, these mothers tap the cement floor wit
 
 ## About the FOUND Project
 
-Launched in 2023, the FOUND project (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) combines the expertise of search groups with advanced technology to address Mexico’s crisis of disappearances. Based in Jalisco, the state with the highest number of recorded disappearances (over 16,000), FOUND has established two experimental sites and is testing a range of methods informed by the knowledge of these mothers, including::
+Launched in 2023, the FOUND project (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) combines the expertise of search groups with advanced technology to address Mexico’s crisis of disappearances. Based in Jalisco—the state with the highest number of recorded disappearances (over 16,000)—FOUND has established experimental sites replicating clandestine burial scenarios common in the region. Using donated pig carcasses that died of natural causes as proxies for human remains, the project examines conditions such as exposure to extreme heat, fragmentation, and wrapping in plastic or blankets. FOUND is testing a range of methods informed by the knowledge of local mothers, including:
 
 - **Multispectral, hyperspectral and thermal imaging**
-- **Lasers**
-- **Seismic noise analysis**
-- **Electrical resistivity tomography**
+- **Lasers, Airborne LiDAR**
+- **Seismic Noise Interferometry Tomography (TIRSA)**
+- **Electrical resistivity tomography, Conductivimeter**
 - **Forensic entomology and botany**
 - **Territorial analysis**
 - **Soil studies**
@@ -63,32 +63,7 @@ This project involves the participation of:
 - Four University Centers of the University of Guadalajara  
 - The Polytechnic University of the Guadalajara Metropolitan Area  
 - The University of the West of England  
-- The University of Oxford  
-
-## The Science Behind FOUND
-FOUND established experimental sites in Jalisco. These sites simulate real burial scenarios by burying pig carcasses subjected to conditions such as extreme heat, fragmentation, and being wrapped in plastic or blankets. 
-
-**Multispectral & Hyperspectral Cameras**
-
-The results showed that, in line with the findings of mothers' collectives, body decomposition alters the soil’s moisture and produces nitrogen-rich areas, often visible in unusual plant growth such as off-season green plants or unexpected blooming flowers. By using multi- and hyperspectral cameras mounted on drones, nitrogen and chlorophyll anomalies in plants can be detected through subtle variations in light reflections. Though traditionally used in agriculture to monitor plant development and health, these technologies can be adapted for detecting clandestine graves by using vegetation indices.
-
-**Airborne LiDAR**
-
-In the first stage, photogrammetry successfully detected soil subsidence caused by body decomposition and soil compaction. This technique used systematically captured oblique aerial photographs with a double-sweep method. However, in one site (Cajititlán), dense shrub vegetation hindered accurate terrain reconstruction, making it impossible to detect subsidence obscured by the canopy. This limitation suggests that photogrammetry may also fail in forested areas with denser canopies.
-
-Airborne LiDAR is proposed as an alternative for terrain reconstruction because, as an active sensor, it can penetrate vegetation canopies using laser scanning, unlike passive aerial photography, which relies on sunlight. The project aims to assess whether LiDAR can reconstruct microtopography in areas with tree cover, such as pine-oak forests or mangroves, to detect the subtle subsidence caused by decomposition and soil compaction over clandestine graves.
-
-**Seismic Noise Interferometry Tomography (TIRSA)**
-
-TIRSA measures the velocity of S-waves derived from seismic noise. While it has not been widely referenced in forensic science literature, its extensive use in other fields suggests significant potential for this application. TIRSA generates a 3D representation of subsurface structures by analyzing the travel times of waveforms from cross-correlations between station pairs. These correlations capture the subsurface response, known as the Empirical Green’s Function (EGF), which reflects the prevailing wave field in seismic noise (Campillo and Paul, 2003). The EGF primarily consists of surface waves, whose dispersion characteristics can be measured across a broad frequency range (Shapiro, 2004; Gouédard et al., 2008).
-
-In Mexico, the UNAM Faculty of Engineering has successfully applied these techniques to cavity exploration, geotechnical studies, and archaeological investigations (e.g., Cárdenas-Soto et al., 2016, 2020, 2021; Argote et al., 2020; Chávez-García et al., 2020; Piña-Flores et al., 2020). These methods can be adapted for smaller-scale investigations with controlled experiments.
-
-TIRSA’s advantages for detecting clandestine graves include the flexibility of geophone arrangements (in terms of distribution and spacing) and the fact that it does not require precise positioning over the mapped area.
-
-**Conductivimeter**
-
-The conductivimeter, part of near-field and artificial electromagnetic techniques, operates in the frequency domain (FDEM). It measures subsurface conductivity using two coils: a transmitter and a receiver. A sinusoidal alternating current flows through the transmitter coil, generating a primary electromagnetic field that propagates through the surface and underground. This field induces currents in conductive bodies, which generate a secondary magnetic field that is detected by the receiver coil. The investigation depth depends on the electromagnetic wave frequency and the coil separation. The conductivimeter is efficient, easy to operate, and provides quick conductivity readings at predefined depths. Through FOUND, the conductivimeter will be used for surveys at burial sites, conducted twice a year—once during the dry season and once during the rainy season.
+- The University of Oxford
 
 ---
 
