@@ -41,7 +41,7 @@ These approaches aim to enhance the detection of clandestine graves.
 
 ## The Book
 
-The [book](https://www.centrogeo.org.mx/cgeo_archivo/240926_libro-interpretar-la-naturaleza.pdf) *‘Interpreting Nature to Locate Those We Are Missing’* (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) presents findings on the application of biological, physical, and earth sciences in detecting clandestine graves.  
+The book *‘Interpreting Nature to Locate Those We Are Missing’* (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) presents findings on the application of biological, physical, and earth sciences in detecting clandestine graves.  
 It is currently being translated into English.
 
 <div style="text-align: center;">
