@@ -1,3 +1,4 @@
+---
 layout: archive
 title: "In Media / Talks"
 permalink: /media/
