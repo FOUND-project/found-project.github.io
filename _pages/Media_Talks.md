@@ -1,5 +1,5 @@
 layout: archive
-title: "In Media / Talks"
+title: "In media/Talks"
 permalink: /media/
 author_profile: true
 ---
