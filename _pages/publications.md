@@ -10,7 +10,6 @@ The book *[Interpreting Nature to Locate Those We Are Missing](https://www.centr
 The book is currently being translated into English.
 
 ---
-
 ## **Articles**  
 
 - **[Assessing Geospatial Models to Explain the Occurrence of Clandestine Graves in Mexico](https://www.sciencedirect.com/science/article/abs/pii/S0379073824001956)**  
