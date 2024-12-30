@@ -22,8 +22,6 @@ author_profile: true
 #### SinEmbargo
 [Tecnología para hallarlos](https://www.sinembargo.mx/18-12-2023/4440515)
 
-![Reuters Media Coverage](https://github.com/FOUND-project/found-project.github.io/assets/168593479/01445c38-8b19-486a-b29d-7c403d13774d)
-
 ### Talks
 
 #### University of Oxford
