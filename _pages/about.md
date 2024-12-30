@@ -10,8 +10,8 @@ redirect_from:
 Since the ‘War on Drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. Over 117,000 individuals are currently reported as disappeared, and the impact on their families is enormous. Through FOUND, we leverage technology to collaborate with mothers in their search for disappeared sons and daughters, working together to bring closure.
 
 <div style="text-align: center;">
-  <img width="700" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Screenshot%202024-11-11%20at%2014.12.53.png?raw=true" alt="Mothers searching for disappeared loved ones using nature's clues">
   <p><em>'I found my son in the flowers'. Guerreros Buscadores de Jalisco, Mothers' Search Group</em></p>
+  <img width="700" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Screenshot%202024-11-11%20at%2014.12.53.png?raw=true" alt="Mothers searching for disappeared loved ones using nature's clues">
 </div>
 
 ## The Role of Mothers’ Search Groups
