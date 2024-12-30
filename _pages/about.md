@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "FOUND: Leveraging Technology to Locate Clandestine Graves"
+title: "Leveraging Technology to Locate Clandestine Graves"
 author_profile: true
 redirect_from: 
   - /about/
