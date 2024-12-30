@@ -26,6 +26,7 @@ Launched in 2023, the FOUND project (*Interpretar la Naturaleza para Encontrar a
 - Forensic Entomology and Botany, Territorial Analysis, Soil Studies.
 
 - **Multispectral Imaging**
+  
 During Phase 1 of the project, the results showed that, in line with the findings of mothers’ collectives, body decomposition alters the soil’s moisture and produces nitrogen-rich areas, often visible in unusual plant growth such as off-season green plants or unexpected blooming flowers. By using multispectral cameras mounted on drones, nitrogen and chlorophyll anomalies in plants can be detected through subtle variations in light reflections. Though traditionally used in agriculture to monitor plant development and health, these technologies can be adapted for detecting clandestine graves by using vegetation indices.
 
 In 2025, during Phase 2 of the project, the following technologies will be tested:
