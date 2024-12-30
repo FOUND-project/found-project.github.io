@@ -18,7 +18,7 @@ Since the ‘War on Drugs' was declared in 2006, disappearances have been one of
 
 Mothers’ search groups currently use their empirical knowledge to identify potential clandestine graves. For example, in open areas, they look for natural indicators—called signs—such as off-season green plants or unusually blooming flowers, which may signal bodies buried below. They insert a T-shaped metal stake into the ground and smell it upon removal to detect any scent of decomposition. If detected, they proceed to recover the remains.
 
-In other settings, like abandoned houses, these mothers tap the cement floor with the same metal stake – known as a vidente (seer or clairvoyant) – listening for changes in sound that could indicate an anomaly, such as a hollow space, and potentially, a body. Upon detecting any anomaly, they break through the floor to recover the remains.
+In other settings, like abandoned houses, these mothers tap the cement floor with the same metal stake – known as a 'vidente' (seer or clairvoyant) – listening for changes in sound that could indicate an anomaly, such as a hollow space, and potentially, a body. Upon detecting any anomaly, they break through the floor to recover the remains.
 
 ## About the FOUND Project
 
@@ -26,7 +26,6 @@ Launched in 2023, the FOUND project (*Interpretar la Naturaleza para Encontrar a
 - Forensic Entomology and Botany, Territorial Analysis, Soil Studies.
 
 - **Multispectral Imaging**
-  
 During Phase 1 of the project, the results showed that, in line with the findings of mothers’ collectives, body decomposition alters the soil’s moisture and produces nitrogen-rich areas, often visible in unusual plant growth such as off-season green plants or unexpected blooming flowers. By using multispectral cameras mounted on drones, nitrogen and chlorophyll anomalies in plants can be detected through subtle variations in light reflections. Though traditionally used in agriculture to monitor plant development and health, these technologies can be adapted for detecting clandestine graves by using vegetation indices.
 
 In 2025, during Phase 2 of the project, the following technologies will be tested:
