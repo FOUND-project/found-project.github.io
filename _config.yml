@@ -110,6 +110,11 @@ atom_feed:
   hide                   : false     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
+# Navigation
+
+navigation:
+  - title: Talks and media
+    url: /media/
 
 # SEO Related
 google_site_verification :
