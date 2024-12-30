@@ -6,7 +6,10 @@ author_profile: true
 ---
 
 ## **The Book**  (2024)
-The book *[Interpreting Nature to Locate Those We Are Missing](https://www.centrogeo.org.mx/cgeo_archivo/240926_libro-interpretar-la-naturaleza.pdf)* (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) explores the application of biological, physical, and earth sciences in detecting clandestine graves. It was presented at Oxford during the Winter Conference of the British Association of Forensic Anthropology and at the Guadalajara International Book Fair, the world’s largest event for Spanish-language publications. 
+The book *[Interpreting Nature to Locate Those We Are Missing](https://www.centrogeo.org.mx/cgeo_archivo/240926_libro-interpretar-la-naturaleza.pdf)* (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) explores the application of biological, physical, and earth sciences in detecting clandestine graves. 
+
+It was presented at Oxford during the Winter Conference of the British Association of Forensic Anthropology and at the Guadalajara International Book Fair, the world’s largest event for Spanish-language publications. 
+
 The book is currently being translated into English.
 
 
