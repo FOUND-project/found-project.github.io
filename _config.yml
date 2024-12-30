@@ -22,8 +22,8 @@ repository               : "FOUND-project/found-project.github.io"
 author:
   # Biographic information
   avatar           : "mum-baby-drone.jpeg"
-  
-  XX name             : "FOUND"   
+  ##
+  name             : "FOUND"   
   location         : "Mexico"
   employer         : #"Red Brick University"
   uri              : # URL
