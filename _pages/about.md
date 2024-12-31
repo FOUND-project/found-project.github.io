@@ -33,6 +33,7 @@ During Phase 1 of the project, the results showed that, in line with the finding
   <img width="700" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="Animated GIF description">
 </div>
 
+
 In 2025, during Phase 2 of the project, the following technologies will be tested:
 - **Hyperspectral Imaging**
 - **Lasers, Airborne LiDAR**
