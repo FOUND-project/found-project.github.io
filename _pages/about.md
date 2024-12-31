@@ -29,10 +29,10 @@ Launched in 2023, the FOUND project (*Interpretar la Naturaleza para Encontrar a
   
 During Phase 1 of the project, the results showed that, in line with the findings of mothers’ collectives, body decomposition alters the soil’s moisture and produces nitrogen-rich areas, often visible in unusual plant growth such as off-season green plants or unexpected blooming flowers. By using multispectral cameras mounted on drones, nitrogen and chlorophyll anomalies in plants can be detected through subtle variations in light reflections. Though traditionally used in agriculture to monitor plant development and health, these technologies can be adapted for detecting clandestine graves by using vegetation indices.
 
-<div style="text-align: center;">
-  <img width="700" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="Animated GIF description">
+<div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
+  <img width="500" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="GIF 1 description">
+  <img width="500" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="GIF 2 description">
 </div>
-
 
 In 2025, during Phase 2 of the project, the following technologies will be tested:
 - **Hyperspectral Imaging**
