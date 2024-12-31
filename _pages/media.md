@@ -29,3 +29,6 @@ author_profile: true
 
 #### British Association for Forensic Anthropology (BAFA)
 [Interpreting nature to locate the disappeared: influencing search practices in Jalisco, Mexico](https://bafauk.weebly.com/winter-conference--agm-2024.html)
+
+#### Guadalajara International Book Fair (FIL)
+[Presentan Interpretar la naturaleza para encontrar a quienes nos faltan](https://jalisco.quadratin.com.mx/principal/presentan-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/)
