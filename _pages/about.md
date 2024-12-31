@@ -57,7 +57,7 @@ The book *‘Interpreting Nature to Locate Those We Are Missing’* (*Interpreta
 The book is currently being translated into English.
 
 <div style="text-align: center;">
-  <a href="https://www.centrogeo.org.mx/cgeo_archivo/240926_libro-interpretar-la-naturaleza.pdf" class="btn btn-primary" style="margin-top: 10px;">Download the Book (Spanish)</a>
+  <a href="https://estamosbuscando.jalisco.gob.mx/wp-content/uploads/2024/09/LIBRO%20INTERPRETAR%20LA%20NATURALEZA.pdf" class="btn btn-primary" style="margin-top: 10px;">Download the Book (Spanish)</a>
 </div>
 
 ## Partners
