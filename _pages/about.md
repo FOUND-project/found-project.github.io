@@ -1,11 +1,12 @@
 ---
 permalink: /
-title: "Testing Technologies to Locate Clandestine Graves"
+title: "Closure Through Technology"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+#Disappearance #Mexico
 
 Since the ‘War on Drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. Over 117,000 individuals are currently reported as disappeared, and the impact on their families is enormous. Through FOUND, we leverage technology to collaborate with mothers in their search for disappeared sons and daughters, working together to bring closure.
 
