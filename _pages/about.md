@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Leveraging Technology to Locate Clandestine Graves"
+title: "Testing Technologies to Locate Clandestine Graves"
 author_profile: true
 redirect_from: 
   - /about/
@@ -11,7 +11,7 @@ Since the ‘War on Drugs' was declared in 2006, disappearances have been one of
 
 <div style="text-align: center;">
   <p><em>'I found my son in the flowers'. Guerreros Buscadores de Jalisco, Mothers' Search Group</em></p>
-  <img width="700" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Screenshot%202024-11-11%20at%2014.12.53.png?raw=true" alt="Mothers searching for disappeared loved ones using nature's clues">
+  <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Screenshot%202024-11-11%20at%2014.12.53.png?raw=true" alt="Mothers searching for disappeared loved ones using nature's clues">
 </div>
 
 ## The Role of Mothers’ Search Groups
