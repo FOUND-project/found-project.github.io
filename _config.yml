@@ -21,7 +21,7 @@ repository               : "FOUND-project/found-project.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "mum-baby-drone.jpeg"
+  avatar           : "https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_logo.jpg"
   ##
   name             : "FOUND"   
   location         : "Mexico"
