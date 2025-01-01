@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Technology and Families: A Path to Closure"
+title: "[FOUND] Technology and Families: A Path to Closure"
 author_profile: true
 redirect_from: 
   - /about/
