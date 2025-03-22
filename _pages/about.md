@@ -8,10 +8,10 @@ redirect_from:
 ---
 #Disappearance #Mexico
 
-Since the ‘War on Drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. Over 117,000 individuals are currently reported as disappeared, and the impact on their families is enormous. Through FOUND, we leverage technology to collaborate with mothers in their search for disappeared sons and daughters, working together to bring closure.
+Since the ‘War on Drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. Over 118,000 individuals are currently reported as disappeared, and the impact on their families is enormous. Through FOUND, we leverage technology to collaborate with mothers in their search for disappeared sons and daughters, working together to bring closure.
 
 <div style="text-align: center;">
-  <p><em>'I found my son in the flowers'. Guerreros Buscadores de Jalisco, Mothers' Search Group</em></p>
+  <p><em>'I found my son in the flowers'. Jalisco, Mothers' Search Group</em></p>
   <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Screenshot%202024-11-11%20at%2014.12.53.png?raw=true" alt="Mothers searching for disappeared loved ones using nature's clues">
 </div>
 
@@ -40,13 +40,15 @@ During Phase 1 of the project, the results showed that, in line with the finding
 </div>
 
 
-In 2025, during Phase 2 of the project, the following technologies will be tested:
+In 2025, during Phase 2 of the project, the following technologies are being tested:
 - **Hyperspectral Imaging**
 - **Lasers, Airborne LiDAR**
 - **Seismic Noise Interferometry Tomography (TIRSA)**
 - **Electrical Resistivity Tomography, Conductivimeter**
 
-These approaches aim to enhance the detection of clandestine graves.
+As a result of the project, the Jalisco Search Commission has incorporated drones, multispectral cameras, and a laser scanner into its official search practices. FOUND’s experiments have supported the integration of technology into search efforts in Jalisco—the state with the highest number of disappeared persons in Mexico, with over 16,000 cases. This initiative has become sustainable, with state public funds allocated for these acquisitions. Additional instruments will be purchased in 2026 using public funds.
+
+FOUND is also funded by the FCDO/Frontier Tech Hub.
 
 <div style="text-align: center;">
   <img width="700" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1727361199015.jpg?raw=true" alt="Researchers using technology to analyze potential grave sites">
@@ -58,7 +60,7 @@ The book *‘Interpreting Nature to Locate Those We Are Missing’* (*Interpreta
 The book is currently being translated into English.
 
 <div style="text-align: center;">
-  <a href="https://estamosbuscando.jalisco.gob.mx/wp-content/uploads/2024/09/LIBRO%20INTERPRETAR%20LA%20NATURALEZA.pdf" 
+  <a href="https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file" 
      style="display: inline-block; padding: 10px 20px; color: #fff; background-color: rgba(0, 128, 0, 0.5); border: 2px solid #008000; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; margin-top: 10px;">
     Download the Book (Spanish)
   </a>
