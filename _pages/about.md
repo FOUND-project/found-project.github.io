@@ -46,9 +46,9 @@ In 2025, during Phase 2 of the project, the following technologies are being tes
 - **Seismic Noise Interferometry Tomography (TIRSA)**
 - **Electrical Resistivity Tomography, Conductivimeter**
 
-As a result of the project, the Jalisco Search Commission has incorporated drones, multispectral cameras, and a laser scanner into its official search practices. FOUND’s experiments have supported the integration of technology into search efforts in Jalisco—the state with the highest number of disappeared persons in Mexico, with over 16,000 cases. This initiative has become sustainable, with state public funds allocated for these acquisitions. Additional instruments will be purchased in 2026 using public funds.
+As a result of the project, the Jalisco Search Commission has incorporated drones, multispectral cameras, and a laser scanner into its official search practices. FOUND’s experiments have supported the integration of technology into search efforts in Jalisco—the state with the highest number of disappeared persons in Mexico, with over 16,000 cases. Additional instruments will be purchased in 2026 using public funds.
 
-FOUND is also funded by the FCDO/Frontier Tech Hub.
+FOUND is also funded by the *[FCDO/Frontier Tech Hub](https://www.frontiertechhub.org/pilot-portfolio/found-technologies-to-locate-clandestine-graves)*.
 
 <div style="text-align: center;">
   <img width="700" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1727361199015.jpg?raw=true" alt="Researchers using technology to analyze potential grave sites">
