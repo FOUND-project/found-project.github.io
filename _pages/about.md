@@ -113,10 +113,10 @@ This project involves the participation of:
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; justify-items: center;">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01%20(2).jpeg?raw=true" width="100%">
-  
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.46%20(1).jpeg?raw=true" width="100%">
+
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" width="100%">
   
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" width="100%">
-  
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" width="100%">
+
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.46%20(1).jpeg?raw=true" width="100%">
 </div>
