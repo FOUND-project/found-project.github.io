@@ -1,9 +1,9 @@
 ---
-permalink: /
+layout: archive
+title: "Gallery"
+permalink: /Gallery/
 author_profile: true
-redirect_from: 
-  - /Gallery/
-  - /Gallery.html
+---
 ---
 
 <h2>Photo Gallery</h2>
