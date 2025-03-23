@@ -15,7 +15,7 @@ Since the ‘War on Drugs' was declared in 2006, disappearances have been one of
   <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Screenshot%202025-03-22%20at%2017.31.35.png" alt="Mothers searching for disappeared loved ones using nature's clues">
 </div>
 
-## The Role of Mothers’ Search Groups
+## The Role of Searching Mothers Collectives
 
 Mothers’ search groups currently use their empirical knowledge to identify potential clandestine graves. For example, in open areas, they look for natural indicators—called signs—such as off-season green plants or unusually blooming flowers, which may signal bodies buried below. They insert a T-shaped metal stake into the ground and smell it upon removal to detect any scent of decomposition. If detected, they proceed to recover the remains.
 
@@ -23,7 +23,7 @@ In other settings, like abandoned houses, these mothers tap the cement floor wit
 
 ## About the FOUND Project
 
-Launched in 2023, the FOUND project (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) combines the expertise of search groups with advanced technology to address Mexico’s crisis of disappearances. Based in Jalisco—the state with the highest number of recorded disappearances (over 16,000)—FOUND has established experimental sites replicating clandestine burial scenarios common in the region. Using donated pig carcasses that died of natural causes as proxies for human remains, the project examines conditions such as exposure to extreme heat, fragmentation, and wrapping in plastic or blankets. 
+Launched in 2023, the FOUND project (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) combines the expertise of searching mothers collectives with advanced technology to address Mexico’s crisis of disappearances. Based in Jalisco—the state with the highest number of recorded disappearances (over 16,000)—FOUND has established experimental sites replicating clandestine burial scenarios common in the region. Using donated pig carcasses as proxies for human remains, the project examines conditions such as exposure to extreme heat, fragmentation, and wrapping in plastic or blankets. 
  <div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
   <img width="500" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="GIF 1 description">
 </div>
