@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "[FOUND] Technology and Families: In Search of Our Disappeared"
+title: "[FOUND] Technologies for Locating our Disappeared"
 author_profile: true
 redirect_from: 
   - /about/
