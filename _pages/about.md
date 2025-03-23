@@ -102,4 +102,9 @@ This project involves the participation of:
 
 <div style="text-align: center;">
    <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.46%20(1).jpeg?raw=true">
-   
+
+<div style="text-align: center;">
+   <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true">   
+
+<div style="text-align: center;">
+   <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true">  
