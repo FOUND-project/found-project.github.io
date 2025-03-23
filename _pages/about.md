@@ -79,7 +79,7 @@ This project involves the participation of:
 - Various companies  
 - [The UNAM Institute of Geophysics](https://www.geofisica.unam.mx/)
 - [The UNAM Faculty of Engineering](https://www.ingenieria.unam.mx/)
-- Four University Centers of the [University of Guadalajara](https://www.udg.mx/)
+- Four Centres of the [University of Guadalajara](https://www.udg.mx/)
 - [The Polytechnic University of the Guadalajara Metropolitan Area](https://upzmg.edu.jalisco.gob.mx/inicio)
 - [The University of the West of England](https://www.uwe.ac.uk/)
 - [The University of Oxford](https://www.ox.ac.uk/)
