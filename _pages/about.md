@@ -12,7 +12,7 @@ Since the ‘War on Drugs' was declared in 2006, disappearances have been one of
 
 <div style="text-align: center;">
   <p><em>'I found my son in the flowers'. Searching Mothers Collective. Jalisco, Mexico</em></p>
-  <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Screenshot%202025-03-22%20at%2017.31.35.png" alt="Mothers searching for disappeared loved ones using nature's clues">
+  <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/dc6c6ec0888979079569f42c9d1af58a8c832bb8/images/Screenshot%202025-03-22%20at%2017.31.35.png" alt="Mothers searching for disappeared loved ones using nature's clues">
 </div>
 
 ## The Role of Searching Mothers Collectives
