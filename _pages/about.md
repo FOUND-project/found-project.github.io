@@ -85,6 +85,8 @@ This project involves the participation of:
 - [The University of Oxford](https://www.ox.ac.uk/)
 - [Frontier Tech Hub](https://www.frontiertechhub.org/)
 - [British Association for Forensic Anthropology](https://bafauk.weebly.com/)
+- [Colombia’s Unit for the Search of Persons Reported as Disappeared](https://unidadbusqueda.gov.co/)
+- [Uruguay’s Ministry of the Interior](https://www.gub.uy/ministerio-interior/)
 
 ---
 <div style="text-align: center;">
