@@ -104,7 +104,7 @@ This project involves the participation of:
 
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" width="100%">
   
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" width="100%">
+<img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" style="width: 100%; height: 250px; object-fit: cover;">
 
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.46%20(1).jpeg?raw=true" width="100%">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.46%20(1).jpeg?raw=true" style="width: 100%; height: 250px; object-fit: cover;">
 </div>
