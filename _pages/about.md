@@ -41,7 +41,7 @@ During Phase 1 of the project, the results showed that, in line with the finding
 </div>
 
 
-In 2025, during Phase 2 of the project, the following technologies are being tested:
+In 2025, the following technologies are being tested:
 - **Hyperspectral Imaging**
 - **Lasers, Airborne LiDAR**
 - **Seismic Noise Interferometry Tomography (TIRSA)**
@@ -65,6 +65,7 @@ The book is currently being translated into English.
      style="display: inline-block; padding: 10px 20px; color: #fff; background-color: rgba(0, 128, 0, 0.5); border: 2px solid #008000; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; margin-top: 10px;">
     Download the Book (Spanish)
   </a>
+  The book is currently in the process of being translated into English.
 </div>
 
 ## Partners
