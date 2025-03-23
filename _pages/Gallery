@@ -1,1 +1,8 @@
+<h2>Photo Gallery</h2>
 
+<div class="gallery">
+  <img src="/assets/gallery/image1.jpg" alt="Description 1">
+  <img src="/assets/gallery/image2.jpg" alt="Description 2">
+  <img src="/assets/gallery/image3.jpg" alt="Description 3">
+  <!-- continue with the rest -->
+</div>
