@@ -72,18 +72,18 @@ The book is currently being translated into English.
 
 This project involves the participation of:
 
-- Mothers' Search Groups
-- CentroGeo 
-- The National Council for Humanities, Sciences, and Technologies (CONAHCYT)  
-- The Jalisco State Commission for the Search for Missing Persons  
-- The Jalisco Institute of Forensic Sciences  
+- Searching Mothers Collectives
+- [CentroGeo](https://www.centrogeo.org.mx/) 
+- [Mexico’s Secretariat of Science, Humanities, Technology and Innovatio](https://secihti.mx/)
+- [The Jalisco State Commission for the Search for Missing Persons](https://sgg.jalisco.gob.mx/areas-de-la-subsecretaria/comision-estatal-de-busqueda-de-personas-del-estado-de-jalisco) 
 - Various companies  
-- The UNAM Institute of Geophysics  
-- The UNAM Faculty of Engineering   
-- Four University Centers of the University of Guadalajara  
-- The Polytechnic University of the Guadalajara Metropolitan Area  
-- The University of the West of England  
-- The University of Oxford
+- [The UNAM Institute of Geophysics](https://www.geofisica.unam.mx/)
+- [The UNAM Faculty of Engineering](https://www.ingenieria.unam.mx/)
+- Four University Centers of the [University of Guadalajara](https://www.udg.mx/)
+- [The Polytechnic University of the Guadalajara Metropolitan Area](https://upzmg.edu.jalisco.gob.mx/inicio)
+- [The University of the West of England](https://www.uwe.ac.uk/)
+- [The University of Oxford](https://www.ox.ac.uk/)
+- [Frontier Tech Hub](https://www.frontiertechhub.org/)
 
 ---
 <div style="text-align: center;">
