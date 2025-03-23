@@ -8,7 +8,7 @@ redirect_from:
 ---
 #Disappearance #Mexico
 
-Since the ‘War on Drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. Over 118,000 individuals are currently reported as disappeared, and the impact on their families is enormous. Through FOUND, we leverage technology to collaborate with mothers in their search for disappeared sons and daughters, working together to bring a form of closure.
+Since the ‘War on Drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. Over 118,000 individuals are currently reported as disappeared, and the consequences for their families are beyond measure. Through FOUND, we leverage technology to collaborate with mothers in their search for disappeared sons and daughters, working together to bring a form of closure.
 
 <div style="text-align: center;">
   <p><em>'I found my son in the flowers'. Searching Mothers Collectives. Jalisco, Mexico</em></p>
@@ -84,6 +84,7 @@ This project involves the participation of:
 - [The University of the West of England](https://www.uwe.ac.uk/)
 - [The University of Oxford](https://www.ox.ac.uk/)
 - [Frontier Tech Hub](https://www.frontiertechhub.org/)
+- [British Association for Forensic Anthropology](https://bafauk.weebly.com/)
 
 ---
 <div style="text-align: center;">
