@@ -96,3 +96,6 @@ This project involves the participation of:
 <div style="text-align: center;">
   <p><em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan</em></p>
   <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_logo.jpg?raw=true">
+
+<div style="text-align: center;">
+   <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01%20(2).jpeg?raw=true">
