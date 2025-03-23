@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "[FOUND] Technology and Families: A Path to Closure"
+title: "[FOUND] Technology and Families: In Search of Our Disappeared"
 author_profile: true
 redirect_from: 
   - /about/
