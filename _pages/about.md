@@ -65,7 +65,7 @@ The book is currently being translated into English.
      style="display: inline-block; padding: 10px 20px; color: #fff; background-color: rgba(0, 128, 0, 0.5); border: 2px solid #008000; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; margin-top: 10px;">
     Download the Book (Spanish)
   </a>
-  The book is currently in the process of being translated into English.
+  The book is currently being translated into English.
 </div>
 
 ## Partners
