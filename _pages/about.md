@@ -23,7 +23,7 @@ In other settings, like abandoned houses, these mothers tap the cement floor wit
 
 ## About the FOUND Project
 
-Launched in 2023, the FOUND project (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) combines the expertise of searching mothers collectives with advanced technology to address Mexico’s crisis of disappearances. Based in Jalisco—the state with the highest number of recorded disappearances (over 16,000)—FOUND has established experimental sites replicating clandestine burial scenarios common in the region. Using donated pig carcasses as proxies for human remains, the project examines conditions such as exposure to extreme heat, fragmentation, and wrapping in plastic or blankets. 
+The FOUND project (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) combines the expertise of searching mothers collectives with advanced technology to address Mexico’s crisis of disappearances. Based in Jalisco—the state with the highest number of recorded disappearances (over 16,000)—FOUND has established experimental sites replicating clandestine burial scenarios common in the region. Using donated pig carcasses as proxies for human remains, the project examines conditions such as exposure to extreme heat, fragmentation, and wrapping in plastic or blankets. 
  <div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
   <img width="500" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="GIF 1 description">
 </div>
