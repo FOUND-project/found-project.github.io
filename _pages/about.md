@@ -8,7 +8,7 @@ redirect_from:
 ---
 #Disappearance #Mexico
 
-Since the ‘War on Drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. Over 118,000 individuals are currently reported as disappeared, and the impact on their families is enormous. Through FOUND, we leverage technology to collaborate with mothers in their search for disappeared sons and daughters, working together to bring closure.
+Since the ‘War on Drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. Over 118,000 individuals are currently reported as disappeared, and the impact on their families is enormous. Through FOUND, we leverage technology to collaborate with mothers in their search for disappeared sons and daughters, working together to bring a form of closure.
 
 <div style="text-align: center;">
   <p><em>'I found my son in the flowers'. Searching Mothers Collective. Jalisco, Mexico</em></p>
@@ -17,7 +17,7 @@ Since the ‘War on Drugs' was declared in 2006, disappearances have been one of
 
 ## The Role of Searching Mothers Collectives
 
-Mothers’ search groups currently use their empirical knowledge to identify potential clandestine graves. For example, in open areas, they look for natural indicators—called signs—such as off-season green plants or unusually blooming flowers, which may signal bodies buried below. They insert a T-shaped metal stake into the ground and smell it upon removal to detect any scent of decomposition. If detected, they proceed to recover the remains.
+Searching Mothers’ Collectives currently draw on their empirical knowledge to identify potential clandestine graves—where the remains of their disappeared children might be found. For example, in open areas, they look for natural indicators—called signs—such as off-season green plants or unusually blooming flowers, which may signal bodies buried below. They insert a T-shaped metal stake into the ground and smell it upon removal to detect any scent of decomposition. If detected, they proceed to recover the remains.
 
 In other settings, like abandoned houses, these mothers tap the cement floor with the same metal stake – known as a 'vidente' (seer or clairvoyant) – listening for changes in sound that could indicate an anomaly, such as a hollow space, and potentially, a body. 
 
