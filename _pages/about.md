@@ -78,7 +78,7 @@ This project involves the participation of:
 
 - Searching Mothers Collectives
 - [CentroGeo](https://www.centrogeo.org.mx/) 
-- [Mexico’s Secretariat of Science, Humanities, Technology and Innovatio](https://secihti.mx/)
+- [Mexico’s Secretariat of Science, Humanities, Technology and Innovation](https://secihti.mx/)
 - [The Jalisco State Commission for the Search for Missing Persons](https://sgg.jalisco.gob.mx/areas-de-la-subsecretaria/comision-estatal-de-busqueda-de-personas-del-estado-de-jalisco) 
 - Various companies  
 - [The UNAM Institute of Geophysics](https://www.geofisica.unam.mx/)
