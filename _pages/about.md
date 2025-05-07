@@ -8,7 +8,7 @@ redirect_from:
 ---
 #Disappearance #Mexico
 
-The FOUND project is focused on exploring the use of advanced technologies to identify clandestine graves in Mexico. The project involves tools such as hyper and multispectral cameras, LiDAR, seismic noise sensors, and conductivity meters to locate hidden graves. In response to the recent discovery of a *[mass crematorium](https://www.bbc.co.uk/news/articles/cly8gv7j5gyo)*, which has given increased national attention to the issue of missing persons linked to cartel violence, the team is investigating how satellite data can be used to detect crematorium sites in Mexico, based on ash evidence, with promising early results.
+The FOUND project is focused on exploring the use of advanced technologies to identify clandestine graves in Mexico. The project involves tools such as hyper and multispectral cameras, LiDAR, seismic noise sensors, and conductivity meters to locate hidden graves. In response to the recent discovery of a *[clandestine crematorium](https://www.bbc.co.uk/news/articles/cly8gv7j5gyo)*, which has given increased national attention to the issue of missing persons linked to cartel violence, the team is investigating how satellite data can be used to detect crematorium sites in Mexico, based on ash evidence, with promising early results.
  <div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
   <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/GIF%20rancho.gif?raw=true" alt="GIF 1 description">
 </div>
