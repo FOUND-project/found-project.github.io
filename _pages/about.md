@@ -48,6 +48,7 @@ In 2025, the following technologies are being tested:
 - **Lasers, Airborne LiDAR**
 - **Seismic Noise Interferometry Tomography (TIRSA)**
 - **Electrical Resistivity Tomography, Conductivimeter**
+- **Satellite Data & Spectral Indices**
 
 <div style="text-align: center;">
   <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true">
