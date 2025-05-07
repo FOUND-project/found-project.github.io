@@ -13,6 +13,7 @@ The FOUND project is focused on exploring the use of advanced technologies to id
   <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/GIF%20rancho.gif?raw=true" alt="GIF 1 description">
 </div>
 
+
 Since the ‘War on Drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. Over 118,000 individuals are currently reported as disappeared, and the consequences for their families are beyond measure. Through FOUND, we leverage technology to collaborate with mothers in their search for disappeared sons and daughters, working together to bring a form of closure.
 
 <div style="text-align: center;">
