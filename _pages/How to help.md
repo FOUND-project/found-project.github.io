@@ -19,8 +19,9 @@ You can support the mothers directly — every contribution makes a difference.
 Please find the details below:
 
 <div style="background-color: #f9f9f9; padding: 1em; border-left: 4px solid #333; margin-bottom: 1em;">
-  <p><strong>Account holder:</strong> [Mother’s Name or Group]</p>
-  <p><strong>Bank:</strong> [Bank Name]</p>
+  <p><strong>Account holder:</strong> [Indira Navarro]</p>
+  <p><strong>Bank:</strong> [BBVA]</p>
+  <p><strong>Card details:</strong> [4152314253589934]</p>
   <p><strong>IBAN:</strong> [Insert IBAN]</p>
   <p><strong>SWIFT/BIC:</strong> [Insert Code]</p>
 </div>
