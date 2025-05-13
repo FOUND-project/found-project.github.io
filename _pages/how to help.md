@@ -12,7 +12,6 @@ You can support these mothers directly — every contribution makes a difference
 
 ## 💳 Donate
 Please find the details below:
-<div style="text-align: center;">
 
   #### Guerreros Buscadores de Jalisco - Mother's Search Group
 [Guerreros Buscadores Facebook Page](https://www.facebook.com/profile.php?id=61555458753120)
