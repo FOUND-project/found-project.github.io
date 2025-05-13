@@ -8,17 +8,14 @@ redirect_from:
   - /about.html
 ---
 
-We believe this is a powerful moment to stand with the families who are still searching for their loved ones.
-
-One of the mothers who collaborates with us will be in Oxford this June 2025. Her presence reminds us of the immense courage and determination behind every search.
-
-You can support the mothers directly — every contribution makes a difference.
+You can support these mothers directly — every contribution makes a difference.
 
 ## 💳 Donate
 Please find the details below:
 <div style="text-align: center;">
-  
-*[Guerreros Buscadores de Jalisco](https://www.facebook.com/profile.php?id=61555458753120)*
+
+  #### Guerreros Buscadores de Jalisco - Mother's Search Group
+[Guerreros Buscadores Facebook Page](https://www.facebook.com/profile.php?id=61555458753120)
 
 <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/donationsmothers.jpg?raw=true" alt="Guerreros Buscadores de Jalisco - Mother's Search Group">
 </div>
