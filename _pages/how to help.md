@@ -23,6 +23,7 @@ Please find the details below:
   <p><strong>Card details:</strong> [4152314253589934]</p>
   <p><strong>IBAN:</strong> [Insert IBAN]</p>
   <p><strong>SWIFT/BIC:</strong> [Insert Code]</p>
+  <p><strong>PayPal</strong> [Insert PayPal]</p>
 </div>
 
 You may choose to donate one of the following suggested amounts:
