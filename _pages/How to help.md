@@ -56,7 +56,7 @@ You may choose to donate one of the following suggested amounts:
 
 ## 🧾 Need a receipt?
 
-If you'd like a donation receipt or need confirmation, please contact Guerreros Buscadores de Jalisco Mother's Search Group at <a href="mailto:guerrerosbuscadoresdejalisco@gmail.com">guerrerosbuscadoresdejalisco@gmail.com</a>.
+If you'd like a donation receipt or need confirmation, please contact Guerreros Buscadores de Jalisco Mother's Search Group at <a href="mailto:guerrerosbuscadoresdejalisco@gmail.com">guerrerosbuscadoresdejalisco@gmail.com</a>
 
 ## 📣 Spread the Word
 
