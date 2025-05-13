@@ -1,0 +1,60 @@
+---
+layout: archive
+title: "How to Help"
+permalink: /how-to-help/
+author_profile: true
+---
+
+We believe this is a powerful moment to stand with the families who are still searching for their loved ones.
+
+One of the mothers who collaborates with us will be in Oxford this June. Her presence reminds us of the immense courage and resilience behind every search.
+
+You can support the mothers directly — every contribution makes a difference.
+
+## 💳 Donate
+
+We currently accept direct contributions via bank transfer. Please find the details below:
+
+<div style="background-color: #f9f9f9; padding: 1em; border-left: 4px solid #333; margin-bottom: 1em;">
+  <p><strong>Account holder:</strong> [Mother’s Name or Group]</p>
+  <p><strong>Bank:</strong> [Bank Name]</p>
+  <p><strong>IBAN:</strong> [Insert IBAN]</p>
+  <p><strong>SWIFT/BIC:</strong> [Insert Code]</p>
+</div>
+
+You may choose to donate one of the following suggested amounts:
+
+<div style="text-align: center; margin-bottom: 2em;">
+  <button onclick="selectAmount(10)">£10</button>
+  <button onclick="selectAmount(20)">£20</button>
+  <button onclick="selectAmount(50)">£50</button>
+  <button onclick="selectAmount(100)">£100</button>
+  <button onclick="selectAmount(200)">£200</button>
+  <button onclick="selectAmount(500)">£500</button>
+  <button onclick="selectAmount('other')">Other</button>
+</div>
+
+<div id="donation-confirmation" style="display:none; text-align:center; margin-bottom:2em;">
+  <p><strong>You selected: <span id="donation-amount"></span></strong></p>
+  <p>Please use the bank details above to make your contribution.</p>
+</div>
+
+<script>
+  function selectAmount(value) {
+    document.getElementById("donation-confirmation").style.display = "block";
+    document.getElementById("donation-amount").innerText = 
+      (value === 'other') ? "Other amount" : "£" + value;
+  }
+</script>
+
+## 🧾 Need a receipt?
+
+If you'd like a donation receipt or need confirmation, please contact us at <a href="mailto:contact@found-project.org">contact@found-project.org</a>.
+
+## 📣 Spread the Word
+
+We will also launch a campaign on LinkedIn to help raise awareness. Sharing this page with friends and colleagues is already a big help.
+
+Thank you for standing with the mothers.
+
+---
