@@ -3,6 +3,9 @@ layout: /
 title: "How to Help"
 permalink: /how-to-help/
 author_profile: true
+redirect_from: 
+  - /about/
+  - /about.html
 ---
 
 We believe this is a powerful moment to stand with the families who are still searching for their loved ones.
