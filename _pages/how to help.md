@@ -19,7 +19,7 @@ Please find the details below:
 <div style="text-align: center;">
   
 *[Guerreros Buscadores de Jalisco Mother's Search Group](https://www.facebook.com/profile.php?id=61555458753120)*
-
+<div style="text-align: center;">
 <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/donationsmothers.jpg?raw=true" alt="Guerreros Buscadores de Jalisco - Mother's Search Group">
 </div>
 
