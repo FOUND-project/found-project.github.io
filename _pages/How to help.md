@@ -5,13 +5,6 @@ permalink: /how-to-help/
 author_profile: true
 ---
 
----
-layout: archive
-title: "How to Help"
-permalink: /how-to-help/
-author_profile: true
----
-
 We believe this is a powerful moment to stand with the families who are still searching for their loved ones.
 
 One of the mothers who collaborates with us will be in Oxford this June 2025. Her presence reminds us of the immense courage and determination behind every search.
