@@ -3,9 +3,6 @@ layout: archive
 title: "How to Help"
 permalink: /how-to-help/
 author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
 ---
 
 You can support these mothers directly — every contribution makes a difference.
