@@ -26,7 +26,6 @@ These are the details to donate — your support allows us to continue our searc
   <p><strong>PayPal</strong> [Insert PayPal]</p>
 </div>
 
-You may choose to donate one of the following suggested amounts:
 
 <div style="text-align: center; margin-bottom: 2em;">
   <button onclick="selectAmount(10)">£10</button>
