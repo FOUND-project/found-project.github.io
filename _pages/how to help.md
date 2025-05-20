@@ -14,7 +14,7 @@ Please find the details below:
 
 <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/donationsmothers.jpg?raw=true" alt="Guerreros Buscadores de Jalisco - Mother's Search Group">
 
-This is the donation card that allows us to continue our searches. Thank you for your empathy — it is through your support that we can carry on looking for our missing loved ones. Until we find them! 
+These are the details to donate — your support allows us to continue our searches. Thank you for your empathy — it is through your support that we can carry on looking for our missing loved ones. Until we find them! 
 
 
 <div style="background-color: #f9f9f9; padding: 1em; border-left: 4px solid #333; margin-bottom: 1em;">
