@@ -12,7 +12,7 @@ Please find the details below:
 
 [Guerreros Buscadores de Jalisco Facebook Page - Mother's Search Group](https://www.facebook.com/profile.php?id=61555458753120)
 
-<img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/donationsmothers.jpg?raw=true" alt="Guerreros Buscadores de Jalisco - Mother's Search Group">
+<img width="300" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/donationsmothers.jpg?raw=true" alt="Guerreros Buscadores de Jalisco - Mother's Search Group">
 
 These are the details to donate — your support allows us to continue our searches. Thank you for your empathy — it is through your support that we can carry on looking for our missing loved ones. Until we find them! 
 
