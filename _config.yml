@@ -211,7 +211,7 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-  Hot to help:
+  how-to-help:
     output: true
     permalink: /:collection/:path/
 
