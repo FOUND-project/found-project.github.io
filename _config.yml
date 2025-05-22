@@ -211,9 +211,6 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
-  how-to-help:
-    output: true
-    permalink: /:collection/:path/
 
 # Defaults
 defaults:
