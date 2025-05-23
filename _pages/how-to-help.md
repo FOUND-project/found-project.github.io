@@ -9,12 +9,11 @@ You can support these mothers directly — every contribution makes a difference
 
 ## 💳 Donate
 Please find the details below:
-
 [Guerreros Buscadores de Jalisco Facebook Page - Mother's Search Group](https://www.facebook.com/profile.php?id=61555458753120)
 
 <img width="300" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/donationsmothers.jpg?raw=true" alt="Guerreros Buscadores de Jalisco - Mother's Search Group">
 
-These are the details to donate — your support allows us to continue our searches. Thank you for your empathy — it is through your support that we can carry on looking for our missing loved ones. Until we find them! 
+"These are the details to donate — your support allows us to continue our searches. Thank you for your empathy — it is through your support that we can carry on looking for our missing loved ones. Until we find them!" 
 
 
 <div style="background-color: #f9f9f9; padding: 1em; border-left: 4px solid #333; margin-bottom: 1em;">
@@ -53,7 +52,7 @@ These are the details to donate — your support allows us to continue our searc
 
 ## 🧾 Need a receipt?
 
-If you'd like a donation receipt or need confirmation, please contact Guerreros Buscadores de Jalisco Mother's Search Group at <a href="mailto:guerrerosbuscadoresdejalisco@gmail.com">guerrerosbuscadoresdejalisco@gmail.com</a>
+Please contact Guerreros Buscadores de Jalisco Mother's Search Group at <a href="mailto:guerrerosbuscadoresdejalisco@gmail.com">guerrerosbuscadoresdejalisco@gmail.com</a>
 
 ## 📣 Spread the Word
 
