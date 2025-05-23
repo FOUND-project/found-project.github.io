@@ -22,6 +22,7 @@ These are the details to donate — your support allows us to continue our searc
   <p><strong>Account holder:</strong> [Indira Navarro]</p>
   <p><strong>Bank:</strong> [BBVA]</p>
   <p><strong>Card details:</strong> [4152314253589934]</p>
+  <p><strong>Account Number:</strong> [1502613941]</p>
   <p><strong>CLABE:</strong> [012320015026139414]</p>
   <p><strong>SWIFT:</strong> [BCMRMXMMPYM]</p>
 </div>
