@@ -26,7 +26,7 @@ author:
   name             : "FOUND"
   location         : "Mexico"
   employer         : #"Red Brick University"
-  uri              : "*[FOUND LinkedIn](https://www.linkedin.com/company/found-project)*"
+  uri              : *[FOUND LinkedIn](https://www.linkedin.com/company/found-project)*
   email            : "miguel.moctezuma@bsg.ox.ac.uk" 
 
   # Academic websites
