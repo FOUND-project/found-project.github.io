@@ -18,12 +18,12 @@ These are the details to donate — your support allows us to continue our searc
 
 
 <div style="background-color: #f9f9f9; padding: 1em; border-left: 4px solid #333; margin-bottom: 1em;">
+  MEXICO 
   <p><strong>Account holder:</strong> [Indira Navarro]</p>
   <p><strong>Bank:</strong> [BBVA]</p>
   <p><strong>Card details:</strong> [4152314253589934]</p>
-  <p><strong>IBAN:</strong> [Insert IBAN]</p>
-  <p><strong>SWIFT/BIC:</strong> [Insert Code]</p>
-  <p><strong>PayPal</strong> [Insert PayPal]</p>
+  <p><strong>CLABE:</strong> [012320015026139414]</p>
+  <p><strong>SWIFT:</strong> [BCMRMXMMPYM]</p>
 </div>
 
 
