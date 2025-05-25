@@ -12,9 +12,9 @@ Madres buscadoras (searching mothers) draw on their deep knowledge to identify p
 In other settings, like abandoned houses, these mothers tap the cement floor with the same metal stake – known as a 'vidente' (seer or clairvoyant) – listening for changes in sound that could indicate an anomaly, such as a hollow space, and potentially, a body. 
 
 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 1em;">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" style="width: 200px; height: 150px; object-fit: cover;">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" style="width: 250px; height: 200px; object-fit: cover;">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Mothers searching" style="width: 200px; height: 280px; object-fit: cover;">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Mothers searching" style="width: 200px; height: 150px; object-fit: cover;">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Mothers searching" style="width: 250px; height: 200px; object-fit: cover;">
 </div>
 
 Since the ‘War on Drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. Over 120,000 individuals are currently reported as disappeared, and the consequences for their families are beyond measure. 
@@ -31,8 +31,8 @@ The FOUND project is focused on exploring the use of advanced technologies to id
 Launched in 2023, the FOUND project (Interpretar la Naturaleza para Encontrar a Quienes nos Faltan) combines the expertise of searching mothers’ collectives with advanced technologies to address Mexico’s crisis of disappearances. Based in Jalisco—the state with the highest number of recorded disappearances (over 16,000)—FOUND has established experimental sites that replicate clandestine burial scenarios common in the region. These sites use donated pig carcasses as proxies for human remains, allowing researchers to test technologies and study patterns of decomposition and environmental indicators.
 
 <div style="display: flex; justify-content: center; gap: 20px; text-align: center; flex-wrap: wrap;">
-  <img width="400" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="GIF 1 description">
-  <img width="400" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="GIF 2 description">
+  <img width="350" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="GIF 1 description">
+  <img width="350" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="GIF 2 description">
 </div>
 
 
