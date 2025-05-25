@@ -12,9 +12,9 @@ Madres buscadoras (searching mothers) draw on their deep knowledge to identify p
 In other settings, like abandoned houses, these mothers tap the cement floor with the same metal stake – known as a 'vidente' (seer or clairvoyant) – listening for changes in sound that could indicate an anomaly, such as a hollow space, and potentially, a body. 
 
 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 1em;">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" width="200">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Mothers searching" width="200">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Mothers searching" width="200">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" style="width: 200px; height: 150px; object-fit: cover;">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Mothers searching" style="width: 200px; height: 280px; object-fit: cover;">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Mothers searching" style="width: 200px; height: 150px; object-fit: cover;">
 </div>
 
 Since the ‘War on Drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. Over 120,000 individuals are currently reported as disappeared, and the consequences for their families are beyond measure. 
