@@ -46,11 +46,11 @@ FOUND is testing a range of methods informed by the knowledge of local mothers, 
 - **Satellite Data & Spectral Indices**
 
 <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 1em;">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Image 1" style="width: 280px; height: 200px; object-fit: cover;">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Image 1" style="width: 260px; height: 180px; object-fit: cover;">
   
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Image 2" style="width: 200px; height: 280px; object-fit: cover;">
   
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Image 3" style="width: 280px; height: 200px; object-fit: cover;">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Image 3" style="width: 260px; height: 180px; object-fit: cover;">
 </div>
 
 
