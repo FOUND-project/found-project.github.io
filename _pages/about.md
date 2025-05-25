@@ -31,8 +31,8 @@ The FOUND project is focused on exploring the use of advanced technologies to id
 Launched in 2023, the FOUND project (Interpretar la Naturaleza para Encontrar a Quienes nos Faltan) combines the expertise of searching mothers’ collectives with advanced technologies to address Mexico’s crisis of disappearances. Based in Jalisco—the state with the highest number of recorded disappearances (over 16,000)—FOUND has established experimental sites that replicate clandestine burial scenarios common in the region. These sites use donated pig carcasses as proxies for human remains, allowing researchers to test technologies and study patterns of decomposition and environmental indicators.
 
 <div style="display: flex; justify-content: center; gap: 20px; text-align: center; flex-wrap: wrap;">
-  <img width="300" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="GIF 1 description">
-  <img width="300" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="GIF 2 description">
+  <img width="400" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="GIF 1 description">
+  <img width="400" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="GIF 2 description">
 </div>
 
 
@@ -45,13 +45,14 @@ FOUND is testing a range of methods informed by the knowledge of local mothers, 
 - **Electrical Resistivity Tomography, Conductivimeter**
 - **Satellite Data & Spectral Indices**
 
-<div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 1em;">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" width="200" alt="Image 1">
+<div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 1em;">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Image 1" style="width: 200px; height: 150px; object-fit: cover;">
   
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" width="200" alt="Image 2">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Image 2" style="width: 200px; height: 280px; object-fit: cover;">
   
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" width="200" style="object-fit: cover; height: 200px;" alt="Image 3">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Image 3" style="width: 200px; height: 150px; object-fit: cover;">
 </div>
+
 
 As a result of the project, the Jalisco Search Commission has incorporated drones, multispectral cameras, and a laser scanner into its official search practices. Further instruments are scheduled to be acquired in 2026 with public funding. Knowledge exchange is under way with forensic teams and search units from Colombia, Uruguay, and the United Kingdom.
 
