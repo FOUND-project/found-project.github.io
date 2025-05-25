@@ -12,7 +12,7 @@ Madres buscadoras (searching mothers) draw on their deep knowledge to identify p
 In other settings, like abandoned houses, these mothers tap the cement floor with the same metal stake – known as a 'vidente' (seer or clairvoyant) – listening for changes in sound that could indicate an anomaly, such as a hollow space, and potentially, a body. 
 
 <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 1em;">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" width="330">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" width="250">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Mothers searching" width="250">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Mothers searching" width="250">
 </div>
@@ -31,8 +31,8 @@ The FOUND project is focused on exploring the use of advanced technologies to id
 Launched in 2023, the FOUND project (Interpretar la Naturaleza para Encontrar a Quienes nos Faltan) combines the expertise of searching mothers’ collectives with advanced technologies to address Mexico’s crisis of disappearances. Based in Jalisco—the state with the highest number of recorded disappearances (over 16,000)—FOUND has established experimental sites that replicate clandestine burial scenarios common in the region. These sites use donated pig carcasses as proxies for human remains, allowing researchers to test technologies and study patterns of decomposition and environmental indicators.
 
 <div style="display: flex; justify-content: center; gap: 20px; text-align: center; flex-wrap: wrap;">
-  <img width="400" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="GIF 1 description">
-  <img width="400" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="GIF 2 description">
+  <img width="300" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="GIF 1 description">
+  <img width="300" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="GIF 2 description">
 </div>
 
 
@@ -46,11 +46,11 @@ FOUND is testing a range of methods informed by the knowledge of local mothers, 
 - **Satellite Data & Spectral Indices**
 
 <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 1em;">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" width="300" alt="Image 1">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" width="200" alt="Image 1">
   
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" width="300" alt="Image 2">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" width="200" alt="Image 2">
   
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" width="300" style="object-fit: cover; height: 200px;" alt="Image 3">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" width="200" style="object-fit: cover; height: 200px;" alt="Image 3">
 </div>
 
 As a result of the project, the Jalisco Search Commission has incorporated drones, multispectral cameras, and a laser scanner into its official search practices. Further instruments are scheduled to be acquired in 2026 with public funding. Knowledge exchange is under way with forensic teams and search units from Colombia, Uruguay, and the United Kingdom.
