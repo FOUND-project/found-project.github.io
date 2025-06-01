@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "Events & Projects"
-permalink: /Events-&-Projects/
+title: "Disappearance of Worlds"
+permalink: /Disappearance-of-Worlds/
 author_profile: true
 ---
 
