@@ -11,45 +11,46 @@ We invite you to attend The Disappearance of Worlds, a solo exhibition by Mexica
 
 This powerful art exhibition and dialogues on disappearance are dedicated to the search for truth and justice in the face of disappearance in Mexico. It will feature madres buscadoras (searching mothers) from Jalisco and Estado de México, alongside researchers, who will share their stories and insights surrounded by Chantal Meza’s evocative artwork.
 
-
+<img width="300" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/donationsmothers.jpg?raw=true" alt="Guerreros Buscadores de Jalisco - Mother's Search Group">
 
 PROGRAMME
 
 Searching for the Disappeared: The Case of Mexico
 Saturday 7 June | 4pm-6pm | Pichette Auditorium, Pembroke College
-Fernanda Lobo Díaz – Human Rights Program, Universidad Iberoamericana (Chair)
-Lizet & Carmen Cardona – Corazones Robados Searching Mothers’ Collective
-Booking mandatory, tickets available here.
+ Fernanda Lobo Díaz – Human Rights Program, Universidad Iberoamericana (Chair)
+ Lizet & Carmen Cardona – Corazones Robados Searching Mothers’ Collective
+Booking mandatory, tickets available [here](https://www.eventbrite.com/e/searching-for-the-disappeared-the-case-of-mexico-registration-1335246611559?aff=odcleoeventsincollection&keep_tld=1).
 
 The Disappearance of Humanitarianism
 Friday 13 June | 6pm-7.30pm | Pichette Auditorium, Pembroke College
-Gareth Owen – Former Humanitarian Director, Save the Children
-Booking mandatory, tickets available here.
+ Gareth Owen – Former Humanitarian Director, Save the Children
+Booking mandatory, tickets available [here](https://www.eventbrite.com/e/the-disappearance-of-humanitarianism-registration-1335326329999?aff=odcleoeventsincollection&keep_tld=1).
  
 Technological Responses to Disappearance
 Saturday 14 June | 4pm-6pm | Pichette Auditorium, Pembroke College
-Índira Navarro – Leader, Searching Mothers’ Collective ‘Guerreros Buscadores de Jalisco’ 
-Nicholas Márquez – President, British Association of Forensic Anthropology
-Miguel Moctezuma – Global Security Programme, Pembroke College/The FOUND Project 
-José Luis Silván – CentroGeo/The FOUND project
-Jorge Ruiz-Reyes – Transitional Justice Lab, University of Notre Dame
-Andrea Horcasitas –Human Rights Program Coordinator, Universidad Iberoamericana, Mexico
-Mariela Garfias – Head of Programmes, British Embassy in Mexico
-Chantal Meza – Painter (Chair)
-Booking mandatory, tickets available here.
+ Índira Navarro – Leader, Searching Mothers’ Collective ‘Guerreros Buscadores de Jalisco’ 
+ Nicholas Márquez – President, British Association of Forensic Anthropology
+ Miguel Moctezuma – Global Security Programme, Pembroke College/The FOUND Project 
+ José Luis Silván – CentroGeo/The FOUND project
+ Jorge Ruiz-Reyes – Transitional Justice Lab, University of Notre Dame
+ Andrea Horcasitas –Human Rights Program Coordinator, Universidad Iberoamericana, Mexico
+ Mariela Garfias – Head of Programmes, British Embassy in Mexico
+ Chantal Meza – Painter (Chair)
+Booking mandatory, tickets available [here](https://www.eventbrite.com/e/technological-responses-to-disappearance-registration-1335338436209?aff=odcleoeventsincollection&keep_tld=1).
 
 Justice for the Disappeared
 Friday 20 June | 6pm-7.30pm | Pichette Auditorium, Pembroke College
-Phil Scraton – Campaigner & Emeritus Professor, Queens University Belfast
-Dr. Annette Idler –Director, Global Security Programme, Pembroke College, and Associate Professor in Global Security, University of Oxford (Chair) .
-Booking mandatory, tickets available here.
+ Phil Scraton – Campaigner & Emeritus Professor, Queens University Belfast
+ Dr. Annette Idler –Director, Global Security Programme, Pembroke College, and Associate Professor in Global Security, University of Oxford 
+ (Chair) .
+Booking mandatory, tickets available [here](https://www.eventbrite.com/e/justice-for-the-disappeared-registration-1335353180309?aff=odcleoeventsincollection&keep_tld=1).
 
 Escape from Disappearance: The Power of Sanctuary
 Saturday 21 June | 4pm-6pm | Pichette Auditorium, Pembroke College
-Jan Royall – Principal, Somerville College Oxford
-Brad Evans – Director, Centre for the Study of Violence, Professor of Political Violence & Aesthetics, University of Bath
-Hari Reed – incoming co-director, Asylum Welcome
-Booking mandatory, tickets available here.
+ Jan Royall – Principal, Somerville College Oxford
+ Brad Evans – Director, Centre for the Study of Violence, Professor of Political Violence & Aesthetics, University of Bath
+ Hari Reed – incoming co-director, Asylum Welcome
+Booking mandatory, tickets available [here](https://www.eventbrite.com/e/escape-from-disappearance-the-power-of-sanctuary-registration-1335368185189?aff=odcleoeventsincollection&keep_tld=1).
 
 Partners 
 
