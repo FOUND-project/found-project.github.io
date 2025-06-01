@@ -40,15 +40,13 @@ author_profile: true
 
 ## Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance  
 ### University of Oxford, 7–22 June 2025
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Chantal-Meza-1.jpg?raw=true" alt="Chantal Meza artwork">
 
 We invite you to attend **The Disappearance of Worlds**, a solo exhibition by Mexican artist **Chantal Meza**, hosted at Pembroke College, University of Oxford, from **7–22 June 2025**.
 
 This powerful exhibition and accompanying dialogues are dedicated to the search for truth and justice in the face of disappearance in Mexico. It features *madres buscadoras* (searching mothers) from Jalisco and Estado de México, alongside researchers, who will share their stories and insights surrounded by Chantal Meza’s evocative artwork.
 
-<div class="image-row">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Chantal-Meza-1.jpg?raw=true" alt="Chantal Meza artwork">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/talksmothers.jpeg?raw=true" alt="Talks with mothers">
-</div>
 
 ## PROGRAMME
 
@@ -56,7 +54,7 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
   <div class="event-title">Searching for the Disappeared: The Case of Mexico</div>
   <strong>Saturday 7 June | 4pm–6pm | Pichette Auditorium, Pembroke College</strong><br>
     Speakers: Lizet & Carmen Cardona – Corazones Robados Searching Mothers’ Collective  
-    Chair: Fernanda Lobo Díaz – Human Rights Program, Universidad Iberoamericana 
+Chair: Fernanda Lobo Díaz – Human Rights Program, Universidad Iberoamericana 
   <a href="https://www.eventbrite.com/e/searching-for-the-disappeared-the-case-of-mexico-registration-1335246611559?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a>
 </div>
 
@@ -71,8 +69,7 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
   <div class="event-title">Technological Responses to Disappearance</div>
   <strong>Saturday 14 June | 4pm–6pm | Pichette Auditorium, Pembroke College</strong><br>
   Speakers: Índira Navarro, Nicholas Márquez, Miguel Moctezuma, José Luis Silván, Jorge Ruiz-Reyes, Andrea Horcasitas, Mariela Garfias  
-  
-  Chair: Chantal Meza  
+Chair: Chantal Meza  
   <a href="https://www.eventbrite.com/e/technological-responses-to-disappearance-registration-1335338436209?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a>
 </div>
 
@@ -80,8 +77,7 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
   <div class="event-title">Justice for the Disappeared</div>
   <strong>Friday 20 June | 6pm–7.30pm | Pichette Auditorium, Pembroke College</strong><br>
   Speakers: Phil Scraton
-  
-  Dr. Annette Idler (Chair)  
+Chair: Professor Annette Idler
   <a href="https://www.eventbrite.com/e/justice-for-the-disappeared-registration-1335353180309?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a>
 </div>
 
