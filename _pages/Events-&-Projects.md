@@ -40,7 +40,6 @@ author_profile: true
 
 ## Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance  
 ### University of Oxford, 7–22 June 2025
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Chantal-Meza-1.jpg?raw=true" alt="Chantal Meza artwork">
 
 We invite you to attend **The Disappearance of Worlds**, a solo exhibition by Mexican artist **Chantal Meza**, hosted at Pembroke College, University of Oxford, from **7–22 June 2025**.
 
@@ -111,3 +110,4 @@ She has lectured at institutions such as Harvard University, École Normale Sup�
 Her ongoing series, *State of Disappearance*, has been exhibited in Bristol, London, and is currently on permanent display at the Chancellors Building, University of Bath.  
 
 More at: [www.chantal-meza.com](http://www.chantal-meza.com)
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Chantal-Meza-1.jpg?raw=true" alt="Chantal Meza artwork">
