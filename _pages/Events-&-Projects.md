@@ -61,11 +61,10 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
 </div>
 
 <div class="event-details">
-  <div class="event-title">Embroidery Workshop | Taller de Bordado
-‘We embroider memory so that history does not repeat itself’.</div>
+  <div class="event-title">Embroidery Workshop | Taller de Bordado: ‘We embroider memory so that history does not repeat itself’.</div>
   <strong>Sunday 8 June | 9am-11am | JCR Art Gallery, Pembroke College</strong><br>
 
-  <p><strong>Speakers:</strong><br>
+  <p><strong>Instructors:</strong><br>
   Lizet & Carmen Cardona – Corazones Robados Searching Mothers’ Collective</p>
   <p><a href="https://docs.google.com/spreadsheets/d/1HHpeTunC2vp_CjPR4X9l4cso4yS1mcEYzbRmsayvNgw/edit?usp=sharing" target="_blank">Booking required – click here</a></p>
 </div>
