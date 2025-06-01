@@ -136,6 +136,9 @@ Global Security Programme, University of Oxford
 Violence & Transitional Justice Lab, University of Notre Dame  
 Human Rights Program, Universidad Iberoamericana  
 
+
+<img class="full-width-img" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/partners.png?raw=true" alt="Talks with mothers">
+
 ---
 
 ## About the Artist
@@ -148,5 +151,3 @@ Her ongoing series, *State of Disappearance*, has been exhibited in Bristol, Lon
 
 More at: [www.chantal-meza.com](http://www.chantal-meza.com)  
 <img class="full-width-img" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Chantal-Meza-1.jpg?raw=true" alt="Chantal Meza artwork">
-
-<img class="full-width-img" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/talksmothers.jpeg?raw=true" alt="Talks with mothers">
