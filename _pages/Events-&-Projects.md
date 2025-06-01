@@ -55,8 +55,8 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
 <div class="event-details">
   <div class="event-title">Searching for the Disappeared: The Case of Mexico</div>
   <strong>Saturday 7 June | 4pm–6pm | Pichette Auditorium, Pembroke College</strong><br>
-  Chair: Fernanda Lobo Díaz – Human Rights Program, Universidad Iberoamericana  
-  Speakers: Lizet & Carmen Cardona – Corazones Robados Searching Mothers’ Collective  
+    Speakers: Lizet & Carmen Cardona – Corazones Robados Searching Mothers’ Collective  
+    Chair: Fernanda Lobo Díaz – Human Rights Program, Universidad Iberoamericana 
   <a href="https://www.eventbrite.com/e/searching-for-the-disappeared-the-case-of-mexico-registration-1335246611559?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a>
 </div>
 
@@ -71,6 +71,7 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
   <div class="event-title">Technological Responses to Disappearance</div>
   <strong>Saturday 14 June | 4pm–6pm | Pichette Auditorium, Pembroke College</strong><br>
   Speakers: Índira Navarro, Nicholas Márquez, Miguel Moctezuma, José Luis Silván, Jorge Ruiz-Reyes, Andrea Horcasitas, Mariela Garfias  
+  
   Chair: Chantal Meza  
   <a href="https://www.eventbrite.com/e/technological-responses-to-disappearance-registration-1335338436209?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a>
 </div>
@@ -78,7 +79,9 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
 <div class="event-details">
   <div class="event-title">Justice for the Disappeared</div>
   <strong>Friday 20 June | 6pm–7.30pm | Pichette Auditorium, Pembroke College</strong><br>
-  Speakers: Phil Scraton, Dr. Annette Idler (Chair)  
+  Speakers: Phil Scraton
+  
+  Dr. Annette Idler (Chair)  
   <a href="https://www.eventbrite.com/e/justice-for-the-disappeared-registration-1335353180309?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a>
 </div>
 
