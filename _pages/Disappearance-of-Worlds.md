@@ -58,8 +58,6 @@ We invite you to attend **The Disappearance of Worlds**, a solo exhibition by Me
 
 This powerful exhibition and accompanying dialogues are dedicated to the search for truth and justice in the face of disappearance in Mexico. It features *madres buscadoras* (searching mothers) from Jalisco and Estado de México, alongside researchers, who will share their stories and insights surrounded by Chantal Meza’s evocative artwork.
 
-<img class="full-width-img" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/talksmothers.jpeg?raw=true" alt="Talks with mothers">
-
 ## PROGRAMME
 
 <div class="event-details">
@@ -148,3 +146,5 @@ Her ongoing series, *State of Disappearance*, has been exhibited in Bristol, Lon
 
 More at: [www.chantal-meza.com](http://www.chantal-meza.com)  
 <img class="full-width-img" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Chantal-Meza-1.jpg?raw=true" alt="Chantal Meza artwork">
+
+<img class="full-width-img" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/talksmothers.jpeg?raw=true" alt="Talks with mothers">
