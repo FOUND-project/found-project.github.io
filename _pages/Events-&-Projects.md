@@ -61,6 +61,16 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
 </div>
 
 <div class="event-details">
+  <div class="event-title">Embroidery Workshop | Taller de Bordado
+‘We embroider memory so that history does not repeat itself’.</div>
+  <strong>Sunday 8 June | 9am-11am | JCR Art Gallery, Pembroke College</strong><br>
+
+  <p><strong>Speakers:</strong><br>
+  Lizet & Carmen Cardona – Corazones Robados Searching Mothers’ Collective</p>
+  <p><a href="https://docs.google.com/spreadsheets/d/1HHpeTunC2vp_CjPR4X9l4cso4yS1mcEYzbRmsayvNgw/edit?usp=sharing" target="_blank">Booking required – click here</a></p>
+</div>
+
+<div class="event-details">
   <div class="event-title">The Disappearance of Humanitarianism</div>
   <strong>Friday 13 June | 6pm–7.30pm | Pichette Auditorium, Pembroke College</strong><br>
 
