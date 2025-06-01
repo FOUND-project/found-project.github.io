@@ -52,7 +52,6 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
 <div class="event-details">
   <div class="event-title">Searching for the Disappeared: The Case of Mexico</div>
   <strong>Saturday 7 June | 4pm–6pm | Pichette Auditorium, Pembroke College</strong><br>
-
   <p><strong>Speakers:</strong> Lizet & Carmen Cardona – Corazones Robados Searching Mothers’ Collective</p>
   <p><strong>Chair:</strong> Fernanda Lobo Díaz – Human Rights Program, Universidad Iberoamericana</p>
   <p><a href="https://www.eventbrite.com/e/searching-for-the-disappeared-the-case-of-mexico-registration-1335246611559?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a></p>
@@ -61,7 +60,6 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
 <div class="event-details">
   <div class="event-title">The Disappearance of Humanitarianism</div>
   <strong>Friday 13 June | 6pm–7.30pm | Pichette Auditorium, Pembroke College</strong><br>
-
   <p><strong>Speaker:</strong> Gareth Owen – Former Humanitarian Director, Save the Children</p>
   <p><a href="https://www.eventbrite.com/e/the-disappearance-of-humanitarianism-registration-1335326329999?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a></p>
 </div>
@@ -70,7 +68,15 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
   <div class="event-title">Technological Responses to Disappearance</div>
   <strong>Saturday 14 June | 4pm–6pm | Pichette Auditorium, Pembroke College</strong><br>
 
-  <p><strong>Speakers:</strong> Índira Navarro, Nicholas Márquez, Miguel Moctezuma, José Luis Silván, Jorge Ruiz-Reyes, Andrea Horcasitas, Mariela Garfias</p>
+  <p><strong>Speakers:</strong> 
+    Índira Navarro – Leader, Searching Mothers’ Collective ‘Guerreros Buscadores de Jalisco
+    Nicholas Márquez – President, British Association of Forensic Anthropology (BAFA)
+    Miguel Moctezuma – Global Security Programme, Pembroke College/The FOUND Project 
+    José Luis Silván – CentroGeo/The FOUND project
+    Jorge Ruiz-Reyes – Transitional Justice Lab, University of Notre Dame
+    Andrea Horcasitas –Human Rights Program Coordinator, Universidad Iberoamericana, Mexico
+    Mariela Garfias – Head of Programmes, British Embassy in Mexico
+  </p>
   <p><strong>Chair:</strong> Chantal Meza</p>
   <p><a href="https://www.eventbrite.com/e/technological-responses-to-disappearance-registration-1335338436209?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a></p>
 </div>
@@ -79,8 +85,8 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
   <div class="event-title">Justice for the Disappeared</div>
   <strong>Friday 20 June | 6pm–7.30pm | Pichette Auditorium, Pembroke College</strong><br>
 
-  <p><strong>Speakers:</strong> Phil Scraton</p>
-  <p><strong>Chair:</strong> Professor Annette Idler</p>
+  <p><strong>Speakers:</strong> Phil Scraton – Campaigner & Emeritus Professor, Queens University Belfast </p>
+  <p><strong>Chair:</strong> Professor Annette Idler – Director, Global Security Programme, Pembroke College, and Associate Professor in Global Security, University of Oxford </p>
   <p><a href="https://www.eventbrite.com/e/justice-for-the-disappeared-registration-1335353180309?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a></p>
 </div>
 
@@ -88,7 +94,11 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
   <div class="event-title">Escape from Disappearance: The Power of Sanctuary</div>
   <strong>Saturday 21 June | 4pm–6pm | Pichette Auditorium, Pembroke College</strong><br>
 
-  <p><strong>Speakers:</strong> Jan Royall, Brad Evans, Hari Reed</p>
+  <p><strong>Speakers:</strong> 
+    Jan Royall – Principal, Somerville College Oxford
+    Brad Evans – Director, Centre for the Study of Violence, Professor of Political Violence & Aesthetics, University of Bath
+    Hari Reed – incoming co-director, Asylum Welcome
+    </p>
   <p><a href="https://www.eventbrite.com/e/escape-from-disappearance-the-power-of-sanctuary-registration-1335368185189?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a></p>
 </div>
 
