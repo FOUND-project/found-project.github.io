@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Disappearance of Worlds"
+title: "Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance"
 permalink: /Disappearance-of-Worlds/
 author_profile: true
 ---
@@ -50,13 +50,15 @@ author_profile: true
     color: #002c5d;
   }
 </style>
-
-## Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance  
+  
 ### University of Oxford, 7–22 June 2025
 
 We invite you to attend **The Disappearance of Worlds**, a solo exhibition by Mexican artist **Chantal Meza**, hosted at Pembroke College, University of Oxford, from **7–22 June 2025**.
 
 This powerful exhibition and accompanying dialogues are dedicated to the search for truth and justice in the face of disappearance in Mexico. It features *madres buscadoras* (searching mothers) from Jalisco and Estado de México, alongside researchers, who will share their stories and insights surrounded by Chantal Meza’s evocative artwork.
+
+<img class="full-width-img" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Disappearance%20of%20Worlds.png?raw=true" alt="Chantal Meza artwork">
+
 
 ## PROGRAMME
 
