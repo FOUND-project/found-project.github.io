@@ -66,6 +66,10 @@ You can support these mothers directly — every contribution makes a difference
   <p><strong>SWIFT:</strong> BCMRMXMMPYM</p>
 </div>
 
+## Contact
+
+guerrerosbuscadoresdejalisco@gmail.com
+
 #### Corazones Robados  
 [Visit Facebook Page](https://www.facebook.com/profile.php?id=61550050887715)
 
@@ -104,10 +108,6 @@ You can support these mothers directly — every contribution makes a difference
       (value === 'other') ? "Other amount" : "£" + value;
   }
 </script>
-
-## Contact
-
-guerrerosbuscadoresdejalisco@gmail.com
 
 ## 📣 Spread the Word
 
