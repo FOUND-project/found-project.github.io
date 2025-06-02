@@ -8,7 +8,11 @@ author_profile: true
 You can support these mothers directly — every contribution makes a difference.
 
 ## 💳 Donate
-[Guerreros Buscadores de Jalisco Facebook Page - Mother's Search Group](https://www.facebook.com/profile.php?id=61555458753120)
+
+### 🔍 Search Collectives You Can Support
+
+#### Guerreros Buscadores de Jalisco  
+[Visit Facebook Page](https://www.facebook.com/profile.php?id=61555458753120)
 
 <style>
   .side-by-side-images {
@@ -47,23 +51,36 @@ You can support these mothers directly — every contribution makes a difference
 
 <div class="side-by-side-images">
   <img class="img-left" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Final%20Guerreros%20Buscadores.png?raw=true" alt="Guerreros Buscadores de Jalisco - Mother's Search Group">
-  
   <img class="img-right" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/donationsmothers.jpg?raw=true" alt="Donations to Mothers">
 </div>
 
 "These are the details to donate — your support allows us to continue our searches. Thank you for your empathy — it is through your support that we can carry on looking for our missing loved ones. Until we find them!" 
 
-
-<div style="background-color: #f9f9f9; padding: 1em; border-left: 4px solid #333; margin-bottom: 1em;">
-  MEXICO 
-  <p><strong>Account holder:</strong> [Indira Navarro]</p>
-  <p><strong>Bank:</strong> [BBVA]</p>
-  <p><strong>Card details:</strong> [4152314253589934]</p>
-  <p><strong>Account Number:</strong> [1502613941]</p>
-  <p><strong>CLABE:</strong> [012320015026139414]</p>
-  <p><strong>SWIFT:</strong> [BCMRMXMMPYM]</p>
+<div style="background-color: #f9f9f9; padding: 1em; border-left: 4px solid #333; margin-bottom: 2em;">
+  <p><strong>Country:</strong> Mexico</p>
+  <p><strong>Account holder:</strong> Indira Navarro</p>
+  <p><strong>Bank:</strong> BBVA</p>
+  <p><strong>Card details:</strong> 4152314253589934</p>
+  <p><strong>Account Number:</strong> 1502613941</p>
+  <p><strong>CLABE:</strong> 012320015026139414</p>
+  <p><strong>SWIFT:</strong> BCMRMXMMPYM</p>
 </div>
 
+#### Corazones Robados  
+[Visit Facebook Page](https://www.facebook.com/profile.php?id=61550050887715)
+
+<div class="side-by-side-images">
+  <img class="img-left" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Corazones%20Robados.jpg?raw=true" alt="Corazones Robados - Mother's Search Group">
+</div>
+
+<div style="background-color: #f9f9f9; padding: 1em; border-left: 4px solid #333; margin-bottom: 2em;">
+  <p><strong>Country:</strong> Mexico</p>
+  <p><strong>Account holder:</strong> Lizeth Cardona Martínez</p>
+  <p><strong>Bank:</strong> BanCoppel</p>
+  <p><strong>Account Number:</strong> 10091255508</p>
+  <p><strong>CLABE:</strong> 137180100912555080</p>
+  <p><strong>Card:</strong> 4169160853673011</p>
+</div>
 
 <div style="text-align: center; margin-bottom: 2em;">
   <button onclick="selectAmount(10)">£10</button>
@@ -90,12 +107,10 @@ You can support these mothers directly — every contribution makes a difference
 
 ## Contact
 
- guerrerosbuscadoresdejalisco@gmail.com
+guerrerosbuscadoresdejalisco@gmail.com
 
 ## 📣 Spread the Word
 
 We will also launch a campaign on LinkedIn to help raise awareness. Sharing this page with friends and colleagues is already a big help.
 
-Thank you for standing with the mothers. Hasta encontrarlos!
-
----
+Thank you for standing with the Madres Buscadoras. Hasta encontrarlos!
