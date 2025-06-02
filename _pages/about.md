@@ -114,7 +114,7 @@ FOUND is supported by the *[FCDO Frontier Tech Hub](https://www.frontiertechhub.
 The book *Interpreting Nature to Locate Those We Are Missing* (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) outlines scientific approaches to locating clandestine graves. An English edition is forthcoming.
 
 <div style="text-align: center;">
-  <a href="https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file" class="button-link" target="_blank">
+  <a href="https://github.com/FOUND-project/found-project.github.io/blob/master/images/the%20book.jpg?raw=true" class="button-link" target="_blank">
     📘 Download the Book (Spanish)
   </a>
 </div>
