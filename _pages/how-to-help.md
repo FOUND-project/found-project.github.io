@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6c2a8d7e-18d0-48e5-9c78-27e7bbb7a4ef)---
+---
 layout: archive
 title: "How to Help"
 permalink: /how-to-help/
