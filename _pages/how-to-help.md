@@ -31,11 +31,11 @@ You can support these mothers directly — every contribution makes a difference
   }
 
   .img-left {
-    width: 300px;
+    width: 200px;
   }
 
   .img-right {
-    width: 420px;
+    width: 330px;
   }
 
   @media (max-width: 700px) {
