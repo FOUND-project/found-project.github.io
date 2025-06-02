@@ -35,7 +35,7 @@ You can support these mothers directly — every contribution makes a difference
   }
 
   .img-right {
-    width: 360px;
+    width: 400px;
   }
 
   @media (max-width: 700px) {
