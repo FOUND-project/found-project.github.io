@@ -58,6 +58,8 @@ redirect_from:
   }
 </style>
 
+Since the ‘War on Drugs’ was declared in 2006, over 120,000 people are reported as disappeared in Mexico. The consequences for their families are immeasurable.
+
 ## The Role of Searching Mothers Collectives
 
 *Madres buscadoras* (searching mothers) draw on deep knowledge to identify potential clandestine graves—sites where their disappeared loved ones might be buried. In open areas, they look for natural indicators—such as off-season greenery or unusually blooming flowers—that suggest bodies may be enriching the soil. Using a T-shaped metal stake, they pierce the ground and smell it for decomposition. 
@@ -69,8 +71,6 @@ In abandoned houses, the same tool—called a *vidente* (seer)—is used to tap 
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Mothers searching" class="small">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Mothers searching" class="medium">
 </div>
-
-Since the ‘War on Drugs' was declared in 2006, over 120,000 people are reported as disappeared in Mexico. The consequences for their families are immeasurable.
 
 ## About the FOUND Project
 
