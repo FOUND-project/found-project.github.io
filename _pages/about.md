@@ -6,93 +6,142 @@ redirect_from:
   - /about/
   - /about.html
 ---
+
+<style>
+  .responsive-img-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 1.5rem 0;
+  }
+
+  .responsive-img-group img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  @media (min-width: 600px) {
+    .responsive-img-group img.small {
+      width: 200px;
+      height: 280px;
+    }
+    .responsive-img-group img.medium {
+      width: 260px;
+      height: 180px;
+    }
+    .responsive-img-group img.large {
+      width: 350px;
+    }
+    .responsive-img-group img.xlarge {
+      width: 500px;
+    }
+  }
+
+  .button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: rgba(0, 128, 0, 0.6);
+    border: 2px solid #008000;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .button-link:hover {
+    background-color: #008000;
+  }
+</style>
+
 ## The Role of Searching Mothers Collectives
-Madres buscadoras (searching mothers) draw on their deep knowledge to identify potential clandestine graves—sites where the remains of their disappeared loved ones might be located. In open areas, for example, they look for natural indicators—known as signs—such as off-season green plants or unusually blooming flowers, which may suggest the presence of buried bodies releasing additional nutrients into the soil. They insert a T-shaped metal stake into the ground and smell it upon removal to detect any scent of decomposition. If detected, they proceed to recover the remains.
 
-In other settings, like abandoned houses, these mothers tap the cement floor with the same metal stake – known as a 'vidente' (seer or clairvoyant) – listening for changes in sound that could indicate an anomaly, such as a hollow space, and potentially, a body. 
+*Madres buscadoras* (searching mothers) draw on deep knowledge to identify potential clandestine graves—sites where their disappeared loved ones might be buried. In open areas, they look for natural indicators—such as off-season greenery or unusually blooming flowers—that suggest bodies may be enriching the soil. Using a T-shaped metal stake, they pierce the ground and smell it for decomposition. 
 
-<div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 1em;">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" style="width: 250px; height: 200px; object-fit: cover;">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Mothers searching" style="width: 200px; height: 280px; object-fit: cover;">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Mothers searching" style="width: 250px; height: 200px; object-fit: cover;">
+In abandoned houses, the same tool—called a *vidente* (seer)—is used to tap cement floors and listen for hollow sounds that may indicate graves.
+
+<div class="responsive-img-group">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" class="medium">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Mothers searching" class="small">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Mothers searching" class="medium">
 </div>
 
-Since the ‘War on Drugs' was declared in 2006, disappearances have been one of the most critical issues in Mexico. Over 120,000 individuals are currently reported as disappeared, and the consequences for their families are beyond measure. 
+Since the ‘War on Drugs' was declared in 2006, over 120,000 people are reported as disappeared in Mexico. The consequences for their families are immeasurable.
 
 ## About the FOUND Project
-Through FOUND, we leverage technology to collaborate with mothers in their search for disappeared sons and daughters, working together to bring a form of closure.
 
-The FOUND project is focused on exploring the use of advanced technologies to identify clandestine graves in Mexico. The project involves tools such as hyper and multispectral cameras, LiDAR, seismic noise sensors, and conductivity meters to locate hidden graves. In response to the recent discovery of a *[clandestine crematorium](https://www.bbc.co.uk/news/articles/cly8gv7j5gyo)*, which has given increased national attention to the issue of missing persons linked to cartel violence, the team is investigating how satellite data can be used to detect crematorium sites in Mexico, based on ash evidence, with promising early results.
+**FOUND** leverages science and technology to support searching mothers in locating the disappeared. We use tools like hyperspectral and multispectral cameras, LiDAR, seismic noise sensors, and conductivity meters to detect hidden graves.
 
- <div style="display: flex; justify-content: center; gap: 20px; text-align: center;">
-  <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="GIF 1 description">
+Recent efforts also focus on using satellite data to detect clandestine crematoriums based on ash signatures—such as those linked to cartel violence and mass disappearances. Early findings are promising.
+
+<div class="responsive-img-group">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="xlarge">
 </div>
 
-Launched in 2023, the FOUND project (Interpretar la Naturaleza para Encontrar a Quienes nos Faltan) combines the expertise of searching mothers’ collectives with advanced technologies to address Mexico’s crisis of disappearances. Based in Jalisco—the state with the highest number of recorded disappearances (over 16,000)—FOUND has established experimental sites that replicate clandestine burial scenarios common in the region. These sites use donated pig carcasses as proxies for human remains, allowing researchers to test technologies and study patterns of decomposition and environmental indicators.
+Launched in 2023, FOUND (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) combines grassroots wisdom with cutting-edge forensic tools. Based in Jalisco—the Mexican state with the highest number of disappearances—FOUND runs experimental burial sites using pig carcasses as proxies. These test sites help researchers evaluate decomposition patterns and environmental signals.
 
-<div style="display: flex; justify-content: center; gap: 20px; text-align: center; flex-wrap: wrap;">
-  <img width="350" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="GIF 1 description">
-  <img width="350" src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="GIF 2 description">
+<div class="responsive-img-group">
+  <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 gif" class="large">
+  <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Flower signal gif" class="large">
 </div>
 
+We test methods that integrate:
 
-FOUND is testing a range of methods informed by the knowledge of local mothers, including:
-- Forensic Entomology and Botany, Territorial Analysis, Soil Studies.
-- **Multispectral Imaging**
-- **Hyperspectral Imaging**
-- **Lasers, Airborne LiDAR**
-- **Seismic Noise Interferometry Tomography (TIRSA)**
-- **Electrical Resistivity Tomography, Conductivimeter**
-- **Satellite Data & Spectral Indices**
+- Forensic Entomology, Botany, Territorial Analysis, Soil Science
+- **Multispectral & Hyperspectral Imaging**
+- **Airborne LiDAR & Laser Technology**
+- **Seismic Noise Interferometry (TIRSA)**
+- **Electrical Resistivity Tomography, Conductivimetry**
+- **Satellite Spectral Analysis**
 
-<div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 1em;">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Image 1" style="width: 260px; height: 180px; object-fit: cover;">
-  
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Image 2" style="width: 200px; height: 280px; object-fit: cover;">
-  
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Image 3" style="width: 260px; height: 180px; object-fit: cover;">
+<div class="responsive-img-group">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Image 1" class="medium">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Image 2" class="small">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Image 3" class="medium">
 </div>
 
+Thanks to this work, the Jalisco Search Commission now uses drones, multispectral cameras, and laser scanners in official search operations. More tech is scheduled for 2026. FOUND has also initiated international collaboration with teams in Colombia, Uruguay, and the UK.
 
-As a result of the project, the Jalisco Search Commission has incorporated drones, multispectral cameras, and a laser scanner into its official search practices. Further instruments are scheduled to be acquired in 2026 with public funding. Knowledge exchange is under way with forensic teams and search units from Colombia, Uruguay, and the United Kingdom.
-
-FOUND is currently funded by the *[FCDO Frontier Tech Hub](https://www.frontiertechhub.org/pilot-portfolio/found-technologies-to-locate-clandestine-graves)*.
+FOUND is supported by the *[FCDO Frontier Tech Hub](https://www.frontiertechhub.org/pilot-portfolio/found-technologies-to-locate-clandestine-graves)*.
 
 <div style="text-align: center;">
-  <img width="700" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1727361199015.jpg?raw=true" alt="Researchers using technology to analyze potential grave sites">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1727361199015.jpg?raw=true" alt="Researchers using tech" class="xlarge">
 </div>
 
 ## The Book
 
-The book *‘Interpreting Nature to Locate Those We Are Missing’* (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) presents findings on the application of biological, physical, and earth sciences in detecting clandestine graves. 
-The book is currently being translated into English.
+The book *Interpreting Nature to Locate Those We Are Missing* (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) outlines scientific approaches to locating clandestine graves. An English edition is forthcoming.
 
 <div style="text-align: center;">
-  <a href="https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file" 
-     style="display: inline-block; padding: 10px 20px; color: #fff; background-color: rgba(0, 128, 0, 0.5); border: 2px solid #008000; border-radius: 5px; text-decoration: none; font-size: 16px; font-weight: bold; margin-top: 10px;">
-    Download the Book (Spanish)
+  <a href="https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file" class="button-link" target="_blank">
+    📘 Download the Book (Spanish)
   </a>
-  The book is currently being translated into English.
 </div>
 
 ## Partners
 
-This project involves the participation of:
+This project is made possible thanks to:
 
 - Searching Mothers Collectives
-- [CentroGeo](https://www.centrogeo.org.mx/) 
-- [The Jalisco State Commission for the Search for Missing Persons](https://sgg.jalisco.gob.mx/areas-de-la-subsecretaria/comision-estatal-de-busqueda-de-personas-del-estado-de-jalisco) 
-- [The UNAM Institute of Geophysics](https://www.geofisica.unam.mx/)
-- [The UNAM Faculty of Engineering](https://www.ingenieria.unam.mx/)
+- [CentroGeo](https://www.centrogeo.org.mx/)
+- [Jalisco Search Commission](https://sgg.jalisco.gob.mx/areas-de-la-subsecretaria/comision-estatal-de-busqueda-de-personas-del-estado-de-jalisco)
+- [UNAM Institute of Geophysics](https://www.geofisica.unam.mx/)
+- [UNAM Faculty of Engineering](https://www.ingenieria.unam.mx/)
 - Four Centres of the [University of Guadalajara](https://www.udg.mx/)
-- [The Polytechnic University of the Guadalajara Metropolitan Area](https://upzmg.edu.jalisco.gob.mx/inicio)
-- [The University of the West of England](https://www.uwe.ac.uk/)
-- [The University of Oxford](https://www.ox.ac.uk/)
+- [UPZMG](https://upzmg.edu.jalisco.gob.mx/inicio)
+- [University of the West of England](https://www.uwe.ac.uk/)
+- [University of Oxford](https://www.ox.ac.uk/)
 - [Frontier Tech Hub](https://www.frontiertechhub.org/)
 - [British Association for Forensic Anthropology](https://bafauk.weebly.com/)
-- [Colombia’s Unit for the Search of Persons Reported as Disappeared](https://unidadbusqueda.gov.co/)
+- [Colombia’s Unit for the Search of Disappeared Persons](https://unidadbusqueda.gov.co/)
 
 ---
+
 <div style="text-align: center;">
   <p><em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan</em></p>
-  <img width="500" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_logo.jpg?raw=true">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_logo.jpg?raw=true" alt="FOUND logo" style="max-width: 500px; width: 100%;">
+</div>
