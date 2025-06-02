@@ -20,7 +20,6 @@ You can support these mothers directly — every contribution makes a difference
   }
 
   .side-by-side-images img {
-    max-width: 100%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -31,17 +30,25 @@ You can support these mothers directly — every contribution makes a difference
     transform: scale(1.02);
   }
 
-  @media (min-width: 600px) {
-    .side-by-side-images img {
-      width: 300px;
+  .img-left {
+    width: 300px;
+  }
+
+  .img-right {
+    width: 360px;
+  }
+
+  @media (max-width: 700px) {
+    .img-left, .img-right {
+      width: 100%;
     }
   }
 </style>
 
 <div class="side-by-side-images">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Final%20Guerreros%20Buscadores.png?raw=true" alt="Guerreros Buscadores de Jalisco - Mother's Search Group">
+  <img class="img-left" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Final%20Guerreros%20Buscadores.png?raw=true" alt="Guerreros Buscadores de Jalisco - Mother's Search Group">
   
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/donationsmothers.jpg?raw=true" alt="Donations to Mothers">
+  <img class="img-right" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/donationsmothers.jpg?raw=true" alt="Donations to Mothers">
 </div>
 
 "These are the details to donate — your support allows us to continue our searches. Thank you for your empathy — it is through your support that we can carry on looking for our missing loved ones. Until we find them!" 
