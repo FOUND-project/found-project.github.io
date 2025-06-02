@@ -80,8 +80,6 @@ In abandoned houses, the same tool—called a *vidente* (seer)—is used to tap 
 
 ## About the FOUND Project
 
-</div>
-
 Launched in 2023, FOUND (Interpretar la Naturaleza para Encontrar a Quienes nos Faltan) combines the grassroots knowledge of searching mothers with cutting-edge technological tools. Based in Jalisco—the Mexican state with the highest number of recorded disappearances (over 16,000)—FOUND operates experimental sites that use pig carcasses as proxies for human remains. These sites enable researchers to study decomposition patterns, analyse environmental indicators, and test detection technologies.
 
 As a result of this work, the Jalisco Search Commission now incorporates drones, multispectral cameras, and laser scanners into its official search operations, with further technologies scheduled for acquisition in 2026. FOUND has also established international collaborations with forensic teams in Colombia, Uruguay, and the United Kingdom.
