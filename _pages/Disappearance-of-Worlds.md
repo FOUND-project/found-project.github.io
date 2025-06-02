@@ -194,7 +194,7 @@ Global Security Programme, University of Oxford
 Violence & Transitional Justice Lab, University of Notre Dame  
 Human Rights Program, Universidad Iberoamericana  
 
-<img class="full-width-img" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Disappearance%20of%20Worlds.png?raw=true" alt="Talks with mothers">
+<img class="full-width-img" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/partners.png?raw=true" alt="Talks with mothers">
 ---
 
 ## About the Artist
