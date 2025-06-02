@@ -106,8 +106,6 @@ We test methods that integrate:
 
 FOUND is supported by the *[FCDO Frontier Tech Hub](https://www.frontiertechhub.org/pilot-portfolio/found-technologies-to-locate-clandestine-graves)*.
 
-</div>
-
 ## The Book
 
 The book *Interpreting Nature to Locate Those We Are Missing* (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) outlines scientific approaches to locating clandestine graves. An English edition is forthcoming.
@@ -116,6 +114,40 @@ The book *Interpreting Nature to Locate Those We Are Missing* (*Interpretar la N
   <a href="https://github.com/FOUND-project/found-project.github.io/blob/master/images/the%20book.jpg?raw=true" class="button-link" target="_blank">
     📘 Download the Book (Spanish)
   </a>
+
+<style>
+  .found-logo-container {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .found-logo-container p {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #1b4d3e;
+  }
+
+  .found-logo-container img {
+    max-width: 500px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .found-logo-container img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+</style>
+
+<div class="found-logo-container">
+  <p><em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan</em></p>
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/the%20book.jpg?raw=true" alt="FOUND logo">
+</div>
+
 </div>
 
 ## Partners
@@ -167,5 +199,5 @@ This project is made possible thanks to:
 
 <div class="found-logo-container">
   <p><em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan</em></p>
-  <a href="/"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_logo.jpg?raw=true" alt="FOUND logo"></a>
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_logo.jpg?raw=true" alt="FOUND logo">
 </div>
