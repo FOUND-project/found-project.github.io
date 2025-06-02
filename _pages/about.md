@@ -106,8 +106,6 @@ We test methods that integrate:
 
 FOUND is supported by the *[FCDO Frontier Tech Hub](https://www.frontiertechhub.org/pilot-portfolio/found-technologies-to-locate-clandestine-graves)*.
 
-<div style="text-align: center;">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1727361199015.jpg?raw=true" alt="Researchers using tech" class="xlarge">
 </div>
 
 ## The Book
