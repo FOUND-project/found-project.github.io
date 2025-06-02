@@ -9,9 +9,9 @@ You can support these mothers directly — every contribution makes a difference
 
 ## 💳 Donate
 
-### 🔍 Search Collectives You Can Support
+#### 🔍 Search Collectives You Can Support
 
-#### Guerreros Buscadores de Jalisco  
+### Guerreros Buscadores de Jalisco  
 [Visit Facebook Page](https://www.facebook.com/profile.php?id=61555458753120)
 
 <style>
@@ -70,7 +70,7 @@ You can support these mothers directly — every contribution makes a difference
 
 guerrerosbuscadoresdejalisco@gmail.com
 
-#### Corazones Robados  
+### Corazones Robados  
 [Visit Facebook Page](https://www.facebook.com/profile.php?id=61550050887715)
 
 <div class="side-by-side-images">
