@@ -144,7 +144,7 @@ The book *Interpreting Nature to Locate Those We Are Missing* (*Interpretar la N
 </style>
 
 <div class="found-logo-container">
-  <p><em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan</em></p>
+  <p><em></em></p>
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/the%20book.jpg?raw=true" alt="FOUND logo">
 </div>
 
