@@ -60,6 +60,11 @@ redirect_from:
 
 Since the ‘War on Drugs’ was declared in 2006, over 120,000 people are reported as disappeared in Mexico. The consequences for their families are immeasurable.
 
+**FOUND** leverages science and technology to support searching mothers in locating their disappeared loved ones. We use tools like drones, hyperspectral and multispectral cameras, LiDAR, seismic noise sensors, and conductivity meters to detect clandestine graves. Recent efforts also focus on using satellite data to detect clandestine crematoriums based on ash signatures. Early findings are promising.
+
+<div class="responsive-img-group">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="xlarge">
+
 ## The Role of Searching Mothers Collectives
 
 *Madres buscadoras* (searching mothers) draw on deep knowledge to identify potential clandestine graves—sites where their disappeared loved ones might be buried. In open areas, they look for natural indicators—such as off-season greenery or unusually blooming flowers—that suggest bodies may be enriching the soil. Using a T-shaped metal stake, they pierce the ground and smell it for decomposition. 
@@ -73,16 +78,10 @@ In abandoned houses, the same tool—called a *vidente* (seer)—is used to tap 
 </div>
 
 ## About the FOUND Project
-
-**FOUND** leverages science and technology to support searching mothers in locating the disappeared. We use tools like hyperspectral and multispectral cameras, LiDAR, seismic noise sensors, and conductivity meters to detect hidden graves.
-
-Recent efforts also focus on using satellite data to detect clandestine crematoriums based on ash signatures—such as those linked to cartel violence and mass disappearances. Early findings are promising.
-
-<div class="responsive-img-group">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="xlarge">
 </div>
+Launched in 2023, FOUND (Interpretar la Naturaleza para Encontrar a Quienes nos Faltan) combines the grassroots knowledge of searching mothers with cutting-edge technological tools. Based in Jalisco—the Mexican state with the highest number of recorded disappearances (over 16,000)—FOUND operates experimental sites that use pig carcasses as proxies for human remains. These sites enable researchers to study decomposition patterns, analyse environmental indicators, and test detection technologies.
 
-Launched in 2023, FOUND (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) combines grassroots wisdom with cutting-edge forensic tools. Based in Jalisco—the Mexican state with the highest number of disappearances—FOUND runs experimental burial sites using pig carcasses as proxies. These test sites help researchers evaluate decomposition patterns and environmental signals.
+As a result of this work, the Jalisco Search Commission now incorporates drones, multispectral cameras, and laser scanners into its official search operations, with further technologies scheduled for acquisition in 2026. FOUND has also established international collaborations with forensic teams in Colombia, Uruguay, and the United Kingdom.
 
 <div class="responsive-img-group">
   <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 gif" class="large">
@@ -103,8 +102,6 @@ We test methods that integrate:
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Image 2" class="small">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Image 3" class="medium">
 </div>
-
-Thanks to this work, the Jalisco Search Commission now uses drones, multispectral cameras, and laser scanners in official search operations. More tech is scheduled for 2026. FOUND has also initiated international collaboration with teams in Colombia, Uruguay, and the UK.
 
 FOUND is supported by the *[FCDO Frontier Tech Hub](https://www.frontiertechhub.org/pilot-portfolio/found-technologies-to-locate-clandestine-graves)*.
 
