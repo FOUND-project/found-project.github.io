@@ -6,6 +6,20 @@ redirect_from:
   - /about/
   - /about.html
 ---
+<style>
+  .page {
+    max-width: 1000px !important; /* Increase from ~700px default */
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .page {
+      padding: 0 1rem;
+    }
+  }
+</style>
+
 
 <style>
   .responsive-img-group {
