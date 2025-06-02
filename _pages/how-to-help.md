@@ -1,4 +1,4 @@
----
+![image](https://github.com/user-attachments/assets/6c2a8d7e-18d0-48e5-9c78-27e7bbb7a4ef)---
 layout: archive
 title: "How to Help"
 permalink: /how-to-help/
@@ -8,10 +8,41 @@ author_profile: true
 You can support these mothers directly — every contribution makes a difference.
 
 ## 💳 Donate
-Please find the details below:
 [Guerreros Buscadores de Jalisco Facebook Page - Mother's Search Group](https://www.facebook.com/profile.php?id=61555458753120)
 
-<img width="300" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/donationsmothers.jpg?raw=true" alt="Guerreros Buscadores de Jalisco - Mother's Search Group">
+<style>
+  .side-by-side-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 2rem 0;
+  }
+
+  .side-by-side-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+
+  .side-by-side-images img:hover {
+    transform: scale(1.02);
+  }
+
+  @media (min-width: 600px) {
+    .side-by-side-images img {
+      width: 300px;
+    }
+  }
+</style>
+
+<div class="side-by-side-images">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Final%20Guerreros%20Buscadores.png?raw=true" alt="Guerreros Buscadores de Jalisco - Mother's Search Group">
+  
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/donationsmothers.jpg?raw=true" alt="Donations to Mothers">
+</div>
 
 "These are the details to donate — your support allows us to continue our searches. Thank you for your empathy — it is through your support that we can carry on looking for our missing loved ones. Until we find them!" 
 
@@ -50,9 +81,9 @@ Please find the details below:
   }
 </script>
 
-## 🧾 Need a receipt?
+## Contact
 
-Please contact Guerreros Buscadores de Jalisco Mother's Search Group at <a href="mailto:guerrerosbuscadoresdejalisco@gmail.com">guerrerosbuscadoresdejalisco@gmail.com</a>
+ guerrerosbuscadoresdejalisco@gmail.com
 
 ## 📣 Spread the Word
 
