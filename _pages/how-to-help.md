@@ -51,7 +51,6 @@ You can support these mothers directly — every contribution makes a difference
 
 <div class="side-by-side-images">
   <img class="img-left" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Final%20Guerreros%20Buscadores.png?raw=true" alt="Guerreros Buscadores de Jalisco - Mother's Search Group">
-  <img class="img-right" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/donationsmothers.jpg?raw=true" alt="Donations to Mothers">
 </div>
 
 "These are the details to donate — your support allows us to continue our searches. Thank you for your empathy — it is through your support that we can carry on looking for our missing loved ones. Until we find them!" 
