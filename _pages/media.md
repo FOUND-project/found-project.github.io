@@ -7,6 +7,9 @@ author_profile: true
 
 #### Media Coverage
 
+#### El País
+[“Altas concentraciones de ceniza” y humo de gasolina: los indicios que apuntan a que en el rancho de Teuchitlán hubo crematorios clandestinos](https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html)
+
 #### TV Azteca
 [Tecnología contra las desapariciones en México](https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas)
 
