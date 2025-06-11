@@ -118,13 +118,13 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
   <strong>Friday 6 June | 6pm-7pm | Pichette Auditorium, Pembroke College</strong><br>
 
   <p><strong>Welcome</strong><br>
-  Vanessa Gouws Operations Bursar, Pembroke College
+  Vanessa Gouws Operations Bursar, Pembroke College</p>
   <p><strong>Introduction Master of Pembroke College</strong><br>
-  The Rt Hon Sir Ernest Ryder
+  The Rt Hon Sir Ernest Ryder</p>
   <p><strong>Distinguished Guest</strong><br>
-  Caroline Douilliez, Head of Missing Persons Centre, International Committee of the Red Cross – ICRC
+  Caroline Douilliez, Head of Missing Persons Centre, International Committee of the Red Cross – ICRC</p>
   <p><strong>Exhibition Partner</strong><br>
-  Dr. Michelle Castelleti, Director of Oxford Festival of Arts
+  Dr. Michelle Castelleti, Director of Oxford Festival of Arts</p>
   <p><strong>In Conversation</strong><br>
   Painter Chantal Meza in conversation with Will Gompertz – Director, Sir John Soane’s Museum, journalist and writer</p>
 </div>
