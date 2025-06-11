@@ -117,16 +117,16 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
   <div class="event-title">Opening Talk: Chantal Meza in conversation with Will Gompertz</div>
   <strong>Friday 6 June | 6pm-7pm | Pichette Auditorium, Pembroke College</strong><br>
 
- <p><strong>Welcome</strong><br>
-Vanessa Gouws Operations Bursar, Pembroke College
-<p><strong>Introduction Master of Pembroke College</strong><br>
-The Rt Hon Sir Ernest Ryder
-<p><strong>Distinguished Guest</strong><br>
-Caroline Douilliez, Head of Missing Persons Centre, International Committee of the Red Cross – ICRC
-<p><strong>Exhibition Partner</strong><br>
-Dr. Michelle Castelleti, Director of Oxford Festival of Arts
-<p><strong>In Conversation</strong><br>
-Painter Chantal Meza in conversation with Will Gompertz – Director, Sir John Soane’s Museum, journalist and writer
+  <p><strong>Welcome</strong><br>
+  Vanessa Gouws Operations Bursar, Pembroke College
+  <p><strong>Introduction Master of Pembroke College</strong><br>
+  The Rt Hon Sir Ernest Ryder
+  <p><strong>Distinguished Guest</strong><br>
+  Caroline Douilliez, Head of Missing Persons Centre, International Committee of the Red Cross – ICRC
+  <p><strong>Exhibition Partner</strong><br>
+  Dr. Michelle Castelleti, Director of Oxford Festival of Arts
+  <p><strong>In Conversation</strong><br>
+  Painter Chantal Meza in conversation with Will Gompertz – Director, Sir John Soane’s Museum, journalist and writer
 </div>
 
 <div class="event-details">
