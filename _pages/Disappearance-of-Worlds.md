@@ -113,7 +113,7 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
 
 ## PROGRAMME
 
-<div class="event-details">
+
   <div class="event-title">Opening Talk: Chantal Meza in conversation with Will Gompertz</div>
   <strong>Friday 6 June | 6pm-7pm | Pichette Auditorium, Pembroke College</strong><br>
 
