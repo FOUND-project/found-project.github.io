@@ -163,7 +163,7 @@ This powerful exhibition and accompanying dialogues are dedicated to the search 
   <strong>Saturday 14 June | 4pm–6pm | Pichette Auditorium, Pembroke College</strong><br>
 
   <p><strong>Speakers:</strong><br>
-  Índira Navarro – Leader, Searching Mothers’ Collective ‘Guerreros Buscadores de Jalisco’<br>
+  Indira Navarro – Leader, Searching Mothers’ Collective ‘Guerreros Buscadores de Jalisco’<br>
   Nicholas Márquez – President, British Association of Forensic Anthropology (BAFA)<br>
   Miguel Moctezuma – Global Security Programme, Pembroke College / The FOUND Project<br>
   José Luis Silván – CentroGeo / The FOUND Project<br>
