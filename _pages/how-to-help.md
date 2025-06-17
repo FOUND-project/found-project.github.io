@@ -56,6 +56,7 @@ You can support these mothers directly — every contribution makes a difference
 "These are the details to donate — your support allows us to continue our searches. Thank you for your empathy — it is through your support that we can carry on looking for our missing loved ones. Until we find them!" 
 
 <div style="background-color: #f9f9f9; padding: 1em; border-left: 4px solid #333; margin-bottom: 2em;">
+    <p><strong>PayPal:</strong> guerrerosbuscadoresdejalisco@gmail.com </p>
   <p><strong>Country:</strong> Mexico</p>
   <p><strong>Account holder:</strong> Indira Navarro</p>
   <p><strong>Bank:</strong> BBVA</p>
@@ -64,10 +65,6 @@ You can support these mothers directly — every contribution makes a difference
   <p><strong>CLABE:</strong> 012320015026139414</p>
   <p><strong>SWIFT:</strong> BCMRMXMMPYM</p>
 </div>
-
-## Contact
-
-guerrerosbuscadoresdejalisco@gmail.com
 
 ---
 
