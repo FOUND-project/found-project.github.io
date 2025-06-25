@@ -72,6 +72,38 @@ redirect_from:
   }
 </style>
 
+<div class="flex items-center h-32 text-4xl font-semibold">
+  <span>Using technology to&nbsp;</span>
+  <div class="overflow-hidden h-10 relative">
+    <ul id="animated-words" class="animate-words">
+      <li>dignify.</li>
+      <li>remember.</li>
+      <li>search.</li>
+      <li>bring closure.</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  #animated-words {
+    animation: slideWords 8s infinite;
+  }
+
+  @keyframes slideWords {
+    0% { transform: translateY(0%); }
+    25% { transform: translateY(-100%); }
+    50% { transform: translateY(-200%); }
+    75% { transform: translateY(-300%); }
+    100% { transform: translateY(0%); }
+  }
+
+  #animated-words li {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    list-style: none;
+  }
+</style>
+
 Since the ‘War on Drugs’ was declared in 2006, over 120,000 people are reported as disappeared in Mexico. The consequences for their families are immeasurable.
 
 **FOUND** leverages science and technology to support searching mothers in locating their disappeared loved ones. We use tools like drones, hyperspectral and multispectral cameras, LiDAR, seismic noise sensors, and conductivity meters to detect clandestine graves. Recent efforts also focus on using satellite data to detect clandestine crematoriums based on ash signatures. Early findings are promising.
