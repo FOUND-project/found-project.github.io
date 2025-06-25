@@ -73,7 +73,7 @@ redirect_from:
 </style>
 
 <div style="font-size: 1.3rem; font-weight: 500; display: flex; align-items: center; height: 1.8rem; margin: 1.5rem 0;">
-  <span>Using technology to&nbsp;</span>
+  <span>Using technology to{&nbsp;</span>
   <div style="overflow: hidden; height: 1.8rem; position: relative;">
     <ul id="found-animated-words" style="margin: 0; padding: 0; list-style: none; animation: continuousScroll 8s linear infinite;">
       <li style="height: 1.8rem; line-height: 1.8rem;">dignify.</li>
@@ -85,6 +85,7 @@ redirect_from:
       <li style="height: 1.8rem; line-height: 1.8rem;">remember.</li>
       <li style="height: 1.8rem; line-height: 1.8rem;">search.</li>
       <li style="height: 1.8rem; line-height: 1.8rem;">bring closure.</li>
+    }
     </ul>
   </div>
 </div>
