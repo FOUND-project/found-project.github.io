@@ -72,36 +72,26 @@ redirect_from:
   }
 </style>
 
-<div class="flex items-center h-32 text-4xl font-semibold">
+<div style="font-size: 2rem; font-weight: 600; display: flex; align-items: center; height: 3rem; margin: 2rem 0;">
   <span>Using technology to&nbsp;</span>
-  <div class="overflow-hidden h-10 relative">
-    <ul id="animated-words" class="animate-words">
-      <li>dignify.</li>
-      <li>remember.</li>
-      <li>search.</li>
-      <li>bring closure.</li>
+  <div style="overflow: hidden; height: 3rem; position: relative;">
+    <ul id="found-animated-words" style="margin: 0; padding: 0; animation: slideWords 8s infinite; list-style: none;">
+      <li style="height: 3rem; line-height: 3rem;">dignify.</li>
+      <li style="height: 3rem; line-height: 3rem;">remember.</li>
+      <li style="height: 3rem; line-height: 3rem;">search.</li>
+      <li style="height: 3rem; line-height: 3rem;">bring closure.</li>
     </ul>
   </div>
 </div>
 
 <style>
-  #animated-words {
-    animation: slideWords 8s infinite;
-  }
-
-  @keyframes slideWords {
-    0% { transform: translateY(0%); }
-    25% { transform: translateY(-100%); }
-    50% { transform: translateY(-200%); }
-    75% { transform: translateY(-300%); }
-    100% { transform: translateY(0%); }
-  }
-
-  #animated-words li {
-    height: 2.5rem;
-    line-height: 2.5rem;
-    list-style: none;
-  }
+@keyframes slideWords {
+  0% { transform: translateY(0%); }
+  25% { transform: translateY(-100%); }
+  50% { transform: translateY(-200%); }
+  75% { transform: translateY(-300%); }
+  100% { transform: translateY(0%); }
+}
 </style>
 
 Since the ‘War on Drugs’ was declared in 2006, over 120,000 people are reported as disappeared in Mexico. The consequences for their families are immeasurable.
