@@ -96,7 +96,7 @@ redirect_from:
 }
 </style>
 
-Since the ‘War on Drugs’ was declared in 2006, over 120,000 people are reported as disappeared in Mexico. The consequences for their families are immeasurable.
+Over 120,000 people are reported as disappeared in Mexico. The consequences for their families are immeasurable.
 
 **FOUND** leverages science and technology to support searching mothers in locating their disappeared loved ones. We use tools like drones, hyperspectral and multispectral cameras, LiDAR, seismic noise sensors, and conductivity meters to detect clandestine graves. Recent efforts also focus on using satellite data to detect clandestine crematoriums based on ash signatures. Early findings are promising.
 
