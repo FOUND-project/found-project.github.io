@@ -13,9 +13,6 @@ author_profile: true
 #### TV Azteca
 [Tecnología contra las desapariciones en México](https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas)
 
-#### Just Security
-[Camera-Fitted Drones May Help Locate Graves of Mexico’s Disappeared](https://www.justsecurity.org/105181/drones-graves-mexicos-disappeared/)
-
 #### Animal Político
 [Interpretar la naturaleza para encontrar a quienes nos faltan](https://animalpolitico.com/analisis/invitades/libro-madres-buscadoras-fil)
 
@@ -30,11 +27,14 @@ author_profile: true
 
 ### Talks
 
-#### University of Oxford
-[Mexico's Missing: How families and technology are working together](https://www.ox.ac.uk/event/mexicos-missing-how-families-and-technology-are-working-together)
+#### University of Oxford / Oxford Festival of the Arts
+[Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance](https://artsfestivaloxford.org/events/chantal-meza-the-disappearance-of-worlds/)
 
 #### British Association for Forensic Anthropology (BAFA)
 [Interpreting nature to locate the disappeared: influencing search practices in Jalisco, Mexico](https://bafauk.weebly.com/winter-conference--agm-2024.html)
 
 #### Guadalajara International Book Fair (FIL)
 [Presentan Interpretar la naturaleza para encontrar a quienes nos faltan](https://jalisco.quadratin.com.mx/principal/presentan-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/)
+
+#### University of Oxford
+[Mexico's Missing: How families and technology are working together](https://www.ox.ac.uk/event/mexicos-missing-how-families-and-technology-are-working-together)
