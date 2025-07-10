@@ -12,9 +12,7 @@ It was presented at Oxford during the Winter Conference of the British Associati
 
 The book is currently being translated into English.
 
-
 ---
-
 ## **Articles**  
 
 - **[Assessing Geospatial Models to Explain the Occurrence of Clandestine Graves in Mexico](https://www.sciencedirect.com/science/article/abs/pii/S0379073824001956)**  
@@ -22,3 +20,8 @@ The book is currently being translated into English.
 
 - **[Espacio Clandestino: A Nationwide Platform to Support Clandestine Graves Search in Mexico](https://link.springer.com/chapter/10.1007/978-3-031-61440-8_14)**    
   Silván-Cárdenas, J.L., Alegre-Mondragón, A.J. (2024)
+
+---
+## **Blogs**  
+- **[Camera-Fitted Drones May Help Locate Graves of Mexico’s Disappeared]([https://link.springer.com/](https://www.justsecurity.org/105181/drones-graves-mexicos-disappeared/))
+Karina García-Reyes, Miguel Moctezuma (2024)
