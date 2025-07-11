@@ -6,6 +6,9 @@ author_profile: true
 ---
 
 ## **The Book**  (2024)
+Centro de Investigación en Ciencias de Información Geoespacial (CentroGeo)
+Secretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI), México
+
 The book *[Interpreting Nature to Locate Those We Are Missing](https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file)* (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) explores the application of biological, physical, and earth sciences in detecting clandestine graves. 
 
 It was presented at Oxford during the Winter Conference of the British Association of Forensic Anthropology and at the Guadalajara International Book Fair, the world’s largest event for Spanish-language publications. 
