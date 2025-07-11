@@ -6,7 +6,8 @@ author_profile: true
 ---
 
 ## **The Book**  (2024)
-Centro de Investigación en Ciencias de Información Geoespacial (CentroGeo) 
+>
+Centro de Investigación en Ciencias de Información Geoespacial (CentroGeo)
 >
 Secretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI), México
 >
