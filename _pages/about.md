@@ -148,10 +148,9 @@ FOUND is supported by the *[FCDO Frontier Tech Hub](https://www.frontiertechhub.
 
 The book *Interpreting Nature to Locate Those We Are Missing* (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) outlines scientific approaches to locating clandestine graves. An English edition is forthcoming.
 >
-Centro de Investigación en Ciencias de Información Geoespacial (CentroGeo)
 
+    Centro de Investigación en Ciencias de Información Geoespacial (CentroGeo)
     Secretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI), México
-
     ISBN: 978-607-59992
 >
 <div style="text-align: center;">
