@@ -197,8 +197,6 @@ The book *Interpreting Nature to Locate Those We Are Missing* (*Interpretar la N
 
 This project is made possible thanks to:
 
-## Partners
-
 <style>
   .partner-logo-group {
     display: flex;
@@ -239,6 +237,20 @@ This project is made possible thanks to:
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/10%20logo%20FT+logo_Primary+version_white+text.png?raw=true" alt="Frontier Tech Hub" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/11%20logo%20BAFAlogo_orig.png?raw=true" alt="British Association for Forensic Anthropology" class="partner-logo">
   <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg" alt="Colombia’s Unit for the Search of Disappeared Persons" class="partner-logo">
+  <!-- UNAM Institute of Geophysics -->
+<div style="background-color: #f0f0f0; border-radius: 6px; padding: 10px;">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/5%20logo%20IGeofisicaUNAM.png?raw=true" alt="UNAM Institute of Geophysics" class="partner-logo">
+</div>
+
+<!-- University of Guadalajara -->
+<div style="background-color: #f0f0f0; border-radius: 6px; padding: 10px;">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/7%20logo%20Escudo_udg.png?raw=true" alt="University of Guadalajara" class="partner-logo">
+</div>
+
+<!-- Frontier Tech Hub -->
+<div style="background-color: #1b4d3e; border-radius: 6px; padding: 10px;">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/10%20logo%20FT+logo_Primary+version_white+text.png?raw=true" alt="Frontier Tech Hub" class="partner-logo">
+</div>
 </div>
 
 
