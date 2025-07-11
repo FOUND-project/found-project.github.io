@@ -17,11 +17,13 @@ The book is currently being translated into English.
 
 - **[Assessing Geospatial Models to Explain the Occurrence of Clandestine Graves in Mexico](https://www.sciencedirect.com/science/article/abs/pii/S0379073824001956)**  
   J.L. Silván-Cárdenas, Ana J. Alegre-Mondragón, C. Silva-Arias (2024)
+  Forensic Science International
 
 - **[Espacio Clandestino: A Nationwide Platform to Support Clandestine Graves Search in Mexico](https://link.springer.com/chapter/10.1007/978-3-031-61440-8_14)**    
   Silván-Cárdenas, J.L., Alegre-Mondragón, A.J. (2024)
-
+  SpringerNature
 ---
 ## **Blogs**  
-- **[Camera-Fitted Drones May Help Locate Graves of Mexico’s Disappeared][https://www.justsecurity.org/105181/drones-graves-mexicos-disappeared/)**
-Karina García-Reyes, Miguel Moctezuma (2024)
+- **[Camera-Fitted Drones May Help Locate Graves of Mexico’s Disappeared](https://www.justsecurity.org/105181/drones-graves-mexicos-disappeared/)**
+  Karina García-Reyes, Miguel Moctezuma (2024)
+  justsecurity.org
