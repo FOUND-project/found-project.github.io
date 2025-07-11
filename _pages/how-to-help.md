@@ -8,7 +8,7 @@ author_profile: true
 You can support these mothers directly — every contribution makes a difference.
 
 <div 
-  <img src="images/mothers walking.gif" alt="Mothers GIF" class="xlarge">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/1d881785054497664dee947ddd93882c55a74da6/images/mothers%20walking.gif" class="xlarge">
 </div>
 
 ## 💳 Donate
