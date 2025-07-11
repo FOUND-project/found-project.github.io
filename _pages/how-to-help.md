@@ -7,8 +7,8 @@ author_profile: true
 
 You can support these mothers directly — every contribution makes a difference.
 
-<div 
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/1d881785054497664dee947ddd93882c55a74da6/images/mothers%20walking.gif" class="xlarge">
+<div class="responsive-img-group">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/mothers%20walking.gif?raw=true" alt="Satellite detection GIF" class="xlarge">
 </div>
 
 ## 💳 Donate
