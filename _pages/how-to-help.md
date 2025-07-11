@@ -6,6 +6,9 @@ author_profile: true
 ---
 
 You can support these mothers directly — every contribution makes a difference.
+<div class="responsive-img-group">
+  <img src="images/mothers walking.gif" alt="Mothers GIF" class="xlarge">
+</div>
 
 ## 💳 Donate
 
