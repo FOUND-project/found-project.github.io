@@ -258,5 +258,4 @@ This project is made possible thanks to:
 
 <div class="found-logo-container">
   <p><em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan</em></p>
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_logo.jpg?raw=true" alt="FOUND logo">
 </div>
