@@ -31,4 +31,3 @@ The book is currently being translated into English.
 
 - **[Camera-Fitted Drones May Help Locate Graves of Mexico’s Disappeared](ttps://www.justsecurity.org/105181/drones-graves-mexicos-disappeared/)**    
   Karina García-Reyes, Miguel Moctezuma (2024)
----
