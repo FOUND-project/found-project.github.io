@@ -197,19 +197,48 @@ The book *Interpreting Nature to Locate Those We Are Missing* (*Interpretar la N
 
 This project is made possible thanks to:
 
-<div class="responsive-img-group">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1%20logo%20Final%20Guerreros%20Buscadores.png?raw=true" alt="Guerreros Buscadores de Jalisco logo" class="medium">
-  <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/2%20logo_centrogeo_wide.svg" alt="CentroGeo logo" class="medium">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/3%20logo%20CBJ.png?raw=true" alt="Jalisco Search Commission logo" class="medium">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/4%20logo%20oxford-university-logo.png?raw=true" alt="University of Oxford logo" class="medium">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/5%20logo%20IGeofisicaUNAM.png?raw=true" alt="UNAM Institute of Geophysics logo" class="medium">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6%20logo%20Ingenieria%20UNAM.png?raw=true" alt="UNAM Faculty of Engineering logo" class="medium">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/7%20logo%20Escudo_udg.png?raw=true" alt="University of Guadalajara logo" class="medium">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/8%20logo%20UPZMG2.png?raw=true" alt="UPZMG logo" class="medium">
-  <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/9%20logo%20UWE%20Bristol.svg" alt="University of the West of England logo" class="medium">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/10%20logo%20FT+logo_Primary+version_white+text.png?raw=true" alt="Frontier Tech Hub logo" class="medium">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/11%20logo%20BAFAlogo_orig.png?raw=true" alt="British Association for Forensic Anthropology logo" class="medium">
-  <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg" alt="Colombia’s Unit for the Search of Disappeared Persons logo" class="medium">
+## Partners
+
+<style>
+  .partner-logo-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .partner-logo {
+    max-width: 220px;
+    height: auto;
+    object-fit: contain;
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  @media (max-width: 600px) {
+    .partner-logo {
+      max-width: 140px;
+    }
+  }
+</style>
+
+<div class="partner-logo-group">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1%20logo%20Final%20Guerreros%20Buscadores.png?raw=true" alt="Guerreros Buscadores de Jalisco" class="partner-logo">
+  <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/2%20logo_centrogeo_wide.svg" alt="CentroGeo" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/3%20logo%20CBJ.png?raw=true" alt="Jalisco Search Commission" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/4%20logo%20oxford-university-logo.png?raw=true" alt="University of Oxford" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/5%20logo%20IGeofisicaUNAM.png?raw=true" alt="UNAM Institute of Geophysics" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6%20logo%20Ingenieria%20UNAM.png?raw=true" alt="UNAM Faculty of Engineering" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/7%20logo%20Escudo_udg.png?raw=true" alt="University of Guadalajara" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/8%20logo%20UPZMG2.png?raw=true" alt="UPZMG" class="partner-logo">
+  <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/9%20logo%20UWE%20Bristol.svg" alt="University of the West of England" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/10%20logo%20FT+logo_Primary+version_white+text.png?raw=true" alt="Frontier Tech Hub" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/11%20logo%20BAFAlogo_orig.png?raw=true" alt="British Association for Forensic Anthropology" class="partner-logo">
+  <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg" alt="Colombia’s Unit for the Search of Disappeared Persons" class="partner-logo">
 </div>
 
 
