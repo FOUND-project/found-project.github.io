@@ -238,21 +238,6 @@ This project is made possible thanks to:
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/11%20logo%20BAFAlogo_orig.png?raw=true" alt="British Association for Forensic Anthropology" class="partner-logo">
   <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg" alt="Colombia’s Unit for the Search of Disappeared Persons" class="partner-logo">
 </div>
-
-
-- Searching Mothers Collectives
-- [CentroGeo](https://www.centrogeo.org.mx/)
-- [Jalisco Search Commission](https://sgg.jalisco.gob.mx/areas-de-la-subsecretaria/comision-estatal-de-busqueda-de-personas-del-estado-de-jalisco)
-- [UNAM Institute of Geophysics](https://www.geofisica.unam.mx/)
-- [UNAM Faculty of Engineering](https://www.ingenieria.unam.mx/)
-- Four Centres of the [University of Guadalajara](https://www.udg.mx/)
-- [UPZMG](https://upzmg.edu.jalisco.gob.mx/inicio)
-- [University of the West of England](https://www.uwe.ac.uk/)
-- [University of Oxford](https://www.ox.ac.uk/)
-- [Frontier Tech Hub](https://www.frontiertechhub.org/)
-- [British Association for Forensic Anthropology](https://bafauk.weebly.com/)
-- [Colombia’s Unit for the Search of Disappeared Persons](https://unidadbusqueda.gov.co/)
-
 ---
 
 <style>
