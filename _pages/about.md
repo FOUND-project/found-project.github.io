@@ -231,7 +231,7 @@ This project is made possible thanks to:
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/4%20logo%20oxford-university-logo.png?raw=true" alt="University of Oxford" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/5%20logo%20IGeofisicaUNAM.png?raw=true" alt="UNAM Institute of Geophysics" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6%20logo%20Ingenieria%20UNAM.png?raw=true" alt="UNAM Faculty of Engineering" class="partner-logo">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/7%20logo%20Escudo_udg.png?raw=true" alt="University of Guadalajara" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/03611be3ab594215c0dd7ad6eca1e9a5ec4d2f4e/images/580141488dfc53bfdbde59fa6b043438.jpg" alt="University of Guadalajara" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/8%20logo%20UPZMG2.png?raw=true" alt="UPZMG" class="partner-logo">
   <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/9%20logo%20UWE%20Bristol.svg" alt="University of the West of England" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/10%20logo%20FT+logo_Primary+version_white+text.png?raw=true" alt="Frontier Tech Hub" class="partner-logo">
