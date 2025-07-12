@@ -229,7 +229,7 @@ This project is made possible thanks to:
   <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/2%20logo_centrogeo_wide.svg" alt="CentroGeo" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/3%20logo%20CBJ.png?raw=true" alt="Jalisco Search Commission" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/4%20logo%20oxford-university-logo.png?raw=true" alt="University of Oxford" class="partner-logo">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/5%20logo%20IGeofisicaUNAM.png?raw=true" alt="UNAM Institute of Geophysics" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/images(1).png?raw=true" alt="UNAM Institute of Geophysics" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6%20logo%20Ingenieria%20UNAM.png?raw=true" alt="UNAM Faculty of Engineering" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/580141488dfc53bfdbde59fa6b043438.jpg?raw=true" alt="University of Guadalajara" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/8%20logo%20UPZMG2.png?raw=true" alt="UPZMG" class="partner-logo">
