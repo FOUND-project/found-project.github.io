@@ -234,6 +234,10 @@ The book *Interpreting Nature to Locate Those We Are Missing* (*Interpretar la N
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/8%20logo%20UPZMG2.png?raw=true" alt="UPZMG" class="partner-logo">
   <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/9%20logo%20UWE%20Bristol.svg" alt="University of the West of England" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/11%20logo%20BAFAlogo_orig.png?raw=true" alt="British Association for Forensic Anthropology" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/derechos_humanos.png?raw=true" alt="Ibero" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/British%20Embassy%20Mexico_Blue%20(ENG).png?raw=true" alt="British Embassy" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/OFOTA_COLOUR_WEB.jpg?raw=true" alt="OFA" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Beth.jpg?raw=true" alt="Bath" class="partner-logo">
   <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg" alt="Colombia’s Unit for the Search of Disappeared Persons" class="partner-logo">
 </div>
 ---
