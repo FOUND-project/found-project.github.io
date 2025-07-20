@@ -113,6 +113,7 @@ In abandoned houses, the same tool—called a *vidente* (seer)—is used to tap 
 <div class="responsive-img-group">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" class="medium">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Mothers searching" class="small">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Mothers searching" class="small">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Mothers searching" class="medium">
 </div>
 
