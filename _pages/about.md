@@ -96,13 +96,31 @@ redirect_from:
 }
 </style>
 
-Over 120,000 people are reported as disappeared in Mexico. The consequences for their families are immeasurable.
+Over 120,000 people are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
 
-**FOUND** leverages science and technology to support searching mothers in locating their disappeared loved ones. We use tools like drones, hyperspectral and multispectral cameras, LiDAR, seismic noise sensors, and conductivity meters to detect clandestine graves. Recent efforts also focus on using satellite data to detect clandestine crematoriums based on ash signatures. Early findings are promising.
+**FOUND** brings together cutting-edge technology, forensic science, and the lived expertise of mothers' search collectives to locate those who we are missing. We work in close collaboration with these groups, combining traditional search knowledge with tools like drones, LiDAR, multi & hyperspectral imaging, seismic sensors, conductivimetry Measurements, and satellite data.
+
+- 27 human remains located
+
+- Technologies adopted by the Jalisco Search Commission
+
+- Collaborations with Mexico, Colombia, Uruguay, and the United Kingdom
+
+What makes FOUND unique?
+We bridge grassroots knowledge and technology, creating practical tools for humanitarian challenges.
 
 <div class="responsive-img-group">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="xlarge">
 </div>
+
+## Our Methods
+
+- Multispectral & Hyperspectral Imaging
+- Airborne LiDAR & Laser Technology
+- Seismic Noise Interferometry (TIRSA)
+- Electrical Resistivity Tomography, Conductivimetry Measurements
+- Satellite Spectral Analysis
+- Forensic Entomology, Botany, Territorial Analysis, Soil Science
 
 ## The Role of Searching Mothers Collectives
 
@@ -193,8 +211,6 @@ The book *Interpreting Nature to Locate Those We Are Missing* (*Interpretar la N
 </div>
 
 </div>
-
-## Partners
 
 <style>
   .partner-logo-group {
