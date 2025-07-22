@@ -171,6 +171,17 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
 </div>
 
 <h2>The Role of Searching Mothers Collectives</h2>
+Searching mothers in Mexico are at the heart of FOUND’s work. These women-led collectives, formed out of necessity in the face of limited or ineffective State action, have become the most consistent and courageous force in the search for the disappeared.
+
+Although it is the State’s responsibility to lead these efforts, these mothers have refused to stop. Their determination and accumulated knowledge have led to the discovery of thousands of clandestine graves and have reshaped national conversations around disappearance and justice.
+
+Their methods—developed through years of lived experience—represent a vital form of forensic knowledge. At FOUND, we are committed to listening, learning, and incorporating their practices into our own technological approaches. Their insights shape how we use drones, remote sensing, and geophysical tools in the field.
+
+Examples of their methods include:
+	•	Identifying off-season plant growth or unusual vegetation patterns.
+	•	Detecting changes in soil colour, compaction, or surface texture.
+	•	Using T-shaped metal rods (videntes) to probe the ground and detect voids or odours.
+	•	Listening for hollow sounds beneath cement floors or tiles.
 
 <style>
 .mothers-logo-group {
