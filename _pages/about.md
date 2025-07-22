@@ -214,55 +214,6 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
     <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Plants and hands" class="mothers-logo">
     <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Listening for voids" class="mothers-logo">
  <img src=" https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-09-24%20at%2002.08.57.jpeg?raw=true" alt="Listening for voids" class="mothers-logo">
- 
-</div>
-
-## The Book
-
-The book *Interpreting Nature to Locate Those We Are Missing* (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) outlines scientific approaches to locating clandestine graves. An English edition is forthcoming.
->
-
-    Centro de Investigación en Ciencias de Información Geoespacial (CentroGeo)
-    Secretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI), México
-    ISBN: 978-607-59992
->
-<div style="text-align: center;">
-  <a href="https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file" class="button-link" target="_blank">
-    📘 Download the Book (Spanish)
-  </a>
-
-<style>
-  .found-logo-container {
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .found-logo-container p {
-    font-style: italic;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    color: #1b4d3e;
-  }
-
-  .found-logo-container img {
-    max-width: 500px;
-    width: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  }
-
-  .found-logo-container img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  }
-</style>
-
-<div class="found-logo-container">
-  <p><em></em></p>
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/the%20book.jpg?raw=true" alt="FOUND logo">
-</div>
 
 </div>
 
