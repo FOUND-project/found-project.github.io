@@ -145,7 +145,7 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
     z-index: 1;
 }
 
-.methods-logo.enlarged {
+.methods-logo:hover {
     transform: scale(2);
     z-index: 5;
 }
@@ -158,22 +158,13 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
 </style>
 
 <div class="methods-logo-group">
-    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 gif" class="methods-logo" onclick="enlargeImage(this)" onmouseleave="resetImage(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Flowers over graves" class="methods-logo" onclick="enlargeImage(this)" onmouseleave="resetImage(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="methods-logo" onclick="enlargeImage(this)" onmouseleave="resetImage(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Fieldwork" class="methods-logo" onclick="enlargeImage(this)" onmouseleave="resetImage(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Search tool" class="methods-logo" onclick="enlargeImage(this)" onmouseleave="resetImage(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search practice" class="methods-logo" onclick="enlargeImage(this)" onmouseleave="resetImage(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 gif" class="methods-logo">
+    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Flowers over graves" class="methods-logo">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="methods-logo">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Fieldwork" class="methods-logo">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Search tool" class="methods-logo">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search practice" class="methods-logo">
 </div>
-
-<script>
-function enlargeImage(img) {
-    img.classList.add('enlarged');
-}
-function resetImage(img) {
-    img.classList.remove('enlarged');
-}
-</script>
 
 <h2>The Role of Searching Mothers Collectives</h2>
 
@@ -201,7 +192,7 @@ function resetImage(img) {
     z-index: 1;
 }
 
-.mothers-logo.enlarged {
+.mothers-logo:hover {
     transform: scale(2);
     z-index: 5;
 }
@@ -214,20 +205,11 @@ function resetImage(img) {
 </style>
 
 <div class="mothers-logo-group">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" class="mothers-logo" onclick="enlargeMotherImage(this)" onmouseleave="resetMotherImage(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Search in the field" class="mothers-logo" onclick="enlargeMotherImage(this)" onmouseleave="resetMotherImage(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Plants and hands" class="mothers-logo" onclick="enlargeMotherImage(this)" onmouseleave="resetMotherImage(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Listening for voids" class="mothers-logo" onclick="enlargeMotherImage(this)" onmouseleave="resetMotherImage(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" class="mothers-logo">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Search in the field" class="mothers-logo">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Plants and hands" class="mothers-logo">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Listening for voids" class="mothers-logo">
 </div>
-
-<script>
-function enlargeMotherImage(img) {
-    img.classList.add('enlarged');
-}
-function resetMotherImage(img) {
-    img.classList.remove('enlarged');
-}
-</script>
 
 ## The Book
 
