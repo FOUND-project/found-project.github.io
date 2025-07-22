@@ -100,6 +100,7 @@ Over 120,000 people are reported as disappeared in Mexico. Behind each case ther
 
 **FOUND** brings together cutting-edge technology, forensic science, and the lived expertise of mothers' search collectives to locate those who we are missing. We work in close collaboration with these groups, combining traditional search knowledge with tools like drones, LiDAR, multi & hyperspectral imaging, seismic sensors, conductivimetry measurements, and satellite data.
 
+**Our impact:**
 - Remains of 27 persons recovered
 - 4 experimental sites
 - Technologies adopted by the Jalisco Search Commission
@@ -179,10 +180,10 @@ Although it is the State’s responsibility to lead these efforts, these mothers
 Their methods—developed through years of lived experience—represent a vital form of forensic knowledge. At FOUND, we are committed to listening, learning, and incorporating their practices into our own technological approaches. Their insights shape how we use drones, remote sensing, and geophysical tools in the field.
 
 Examples of their methods include:
-• Identifying off-season plant growth or unusual vegetation patterns.
-• Detecting changes in soil colour, compaction, or surface texture.
-• Using T-shaped metal rods (videntes) to probe the ground and detect voids or odours.
-• Listening for hollow sounds beneath cement floors or tiles.
+- Identifying off-season plant growth or unusual vegetation patterns.
+- Detecting changes in soil colour, compaction, or surface texture.
+- Using T-shaped metal rods (videntes) to probe the ground and detect voids or odours.
+- Listening for hollow sounds beneath cement floors or tiles.
 
 <style>
 .mothers-logo-group {
