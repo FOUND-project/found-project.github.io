@@ -110,7 +110,9 @@ What makes FOUND unique?
 We bridge grassroots knowledge and technology, creating practical tools for humanitarian challenges.
 
 <div class="responsive-img-group">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="xlarge">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="large">
+  <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 gif" class="large">
+  <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Flower signal gif" class="large">
 </div>
 
 ## Our Methods
@@ -121,6 +123,12 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
 - Electrical Resistivity Tomography, Conductivimetry Measurements
 - Satellite Spectral Analysis
 - Forensic Entomology, Botany, Territorial Analysis, Soil Science
+
+<div class="responsive-img-group">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Image 1" class="medium">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Image 2" class="small">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Image 3" class="medium">
+</div>
 
 ## The Role of Searching Mothers Collectives
 
@@ -134,34 +142,6 @@ In abandoned houses, the same tool—called a *vidente* (seer)—is used to tap 
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Mothers searching" class="small">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Mothers searching" class="medium">
 </div>
-
-## About the FOUND Project
-
-Launched in 2023, FOUND (Interpretar la Naturaleza para Encontrar a Quienes nos Faltan) combines the grassroots knowledge of searching mothers with cutting-edge technological tools. Based in Jalisco—the Mexican state with the highest number of recorded disappearances (over 16,000)—FOUND operates experimental sites that use pig carcasses as proxies for human remains. These sites enable researchers to study decomposition patterns, analyse environmental indicators, and test detection technologies.
-
-As a result of this work, the Jalisco Search Commission now incorporates drones, multispectral cameras, and laser scanners into its official search operations, with further technologies scheduled for acquisition in 2026. FOUND has also established international collaborations with forensic teams in Colombia, Uruguay, and the United Kingdom.
-
-<div class="responsive-img-group">
-  <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 gif" class="large">
-  <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Flower signal gif" class="large">
-</div>
-
-We test methods that integrate:
-
-- **Multispectral & Hyperspectral Imaging**
-- **Airborne LiDAR & Laser Technology**
-- **Seismic Noise Interferometry (TIRSA)**
-- **Electrical Resistivity Tomography, Conductivimetry**
-- **Satellite Spectral Analysis**
-- **Forensic Entomology, Botany, Territorial Analysis, Soil Science**
-
-<div class="responsive-img-group">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Image 1" class="medium">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Image 2" class="small">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Image 3" class="medium">
-</div>
-
-FOUND is supported by the *[FCDO Frontier Tech Hub](https://www.frontiertechhub.org/pilot-portfolio/found-technologies-to-locate-clandestine-graves)*.
 
 ## The Book
 
