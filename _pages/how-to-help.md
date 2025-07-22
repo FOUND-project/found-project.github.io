@@ -11,64 +11,6 @@ Below, you can support these mothers directly — every contribution makes a dif
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/mothers%20walking.gif?raw=true" alt="Satellite detection GIF" class="xlarge">
 </div>
 
-<h2>The Role of Searching Mothers Collectives</h2>
-Searching mothers in Mexico are at the heart of FOUND’s work. These women-led collectives, formed out of necessity in the face of limited or ineffective State action, have become the most consistent and courageous force in the search for the disappeared.
-
-Although it is the State’s responsibility to lead these efforts, these mothers have refused to stop. Their determination and accumulated knowledge have led to the discovery of thousands of clandestine graves and have reshaped national conversations around disappearance and justice.
-
-Their methods—developed through years of lived experience—represent a vital form of forensic knowledge. At FOUND, we are committed to listening, learning, and incorporating their practices into our own technological approaches. Their insights shape how we use drones, remote sensing, and geophysical tools in the field.
-
-Examples of their methods include:
-	•	Identifying off-season plant growth or unusual vegetation patterns.
-	•	Detecting changes in soil colour, compaction, or surface texture.
-	•	Using T-shaped metal rods (videntes) to probe the ground and detect voids or odours.
-	•	Listening for hollow sounds beneath cement floors or tiles.
-
-<style>
-.mothers-logo-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.mothers-logo {
-    max-width: 220px;
-    height: auto;
-    object-fit: contain;
-    background-color: white;
-    padding: 10px;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    position: relative;
-    z-index: 1;
-}
-
-.mothers-logo:hover {
-    transform: scale(2);
-    z-index: 5;
-}
-
-@media (max-width: 600px) {
-    .mothers-logo {
-        max-width: 140px;
-    }
-}
-</style>
-
-<div class="mothers-logo-group">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" class="mothers-logo">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Search in the field" class="mothers-logo">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Plants and hands" class="mothers-logo">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Listening for voids" class="mothers-logo">
- <img src=" https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-09-24%20at%2002.08.57.jpeg?raw=true" alt="Listening for voids" class="mothers-logo">
-
-</div>
-
 ## 💳 Donate
 
 #### 🔍 Search Collectives You Can Support
