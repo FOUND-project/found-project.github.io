@@ -101,16 +101,12 @@ Over 120,000 people are reported as disappeared in Mexico. Behind each case ther
 **FOUND** brings together cutting-edge technology, forensic science, and the lived expertise of mothers' search collectives to locate those who we are missing. We work in close collaboration with these groups, combining traditional search knowledge with tools like drones, LiDAR, multi & hyperspectral imaging, seismic sensors, conductivimetry Measurements, and satellite data.
 
 - 27 human remains located
-
 - Technologies adopted by the Jalisco Search Commission
-
 - Collaborations with Mexico, Colombia, Uruguay, and the United Kingdom
 
-What makes FOUND unique?
 We bridge grassroots knowledge and technology, creating practical tools for humanitarian challenges.
 
 <div class="responsive-img-group">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="large">
   <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 gif" class="large">
   <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Flower signal gif" class="large">
 </div>
@@ -125,6 +121,7 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
 - Forensic Entomology, Botany, Territorial Analysis, Soil Science
 
 <div class="responsive-img-group">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="large">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Image 1" class="medium">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Image 2" class="small">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Image 3" class="medium">
