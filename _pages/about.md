@@ -112,6 +112,7 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
 </div>
 
 ## Our Methods
+<h2>Our Methods: Technologies in Action</h2>
 
 - Multispectral & Hyperspectral Imaging
 - Airborne LiDAR & Laser Technology
@@ -120,11 +121,55 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
 - Satellite Spectral Analysis
 - Forensic Entomology, Botany, Territorial Analysis, Soil Science
 
-<div class="responsive-img-group">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="large">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Image 1" class="medium">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Image 2" class="small">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Image 3" class="medium">
+<style>
+.methods-logo-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.methods-logo {
+    max-width: 220px;
+    height: auto;
+    object-fit: contain;
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.methods-logo.enlarged {
+    transform: scale(1.5);
+    z-index: 10;
+}
+
+@media (max-width: 600px) {
+    .methods-logo {
+        max-width: 140px;
+    }
+}
+</style>
+
+<div class="methods-logo-group">
+    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 gif" class="methods-logo" onclick="toggleEnlarge(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Flowers over graves" class="methods-logo" onclick="toggleEnlarge(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="methods-logo" onclick="toggleEnlarge(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Fieldwork" class="methods-logo" onclick="toggleEnlarge(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Search tool" class="methods-logo" onclick="toggleEnlarge(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search practice" class="methods-logo" onclick="toggleEnlarge(this)">
+</div>
+
+<script>
+function toggleEnlarge(img) {
+    img.classList.toggle('enlarged');
+}
+</script>
+
 </div>
 
 ## The Role of Searching Mothers Collectives
@@ -190,19 +235,17 @@ The book *Interpreting Nature to Locate Those We Are Missing* (*Interpretar la N
 </div>
 
 ## Partners
-<h2>Our Methods: Technologies in Action</h2>
-
 <style>
-.methods-logo-group {
+  .partner-logo-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
-}
+  }
 
-.methods-logo {
+  .partner-logo {
     max-width: 220px;
     height: auto;
     object-fit: contain;
@@ -210,36 +253,34 @@ The book *Interpreting Nature to Locate Those We Are Missing* (*Interpretar la N
     padding: 10px;
     border-radius: 6px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
+  }
 
-.methods-logo.enlarged {
-    transform: scale(1.5);
-    z-index: 10;
-}
-
-@media (max-width: 600px) {
-    .methods-logo {
-        max-width: 140px;
+  @media (max-width: 600px) {
+    .partner-logo {
+      max-width: 140px;
     }
-}
+  }
 </style>
 
-<div class="methods-logo-group">
-    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 gif" class="methods-logo" onclick="toggleEnlarge(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Flowers over graves" class="methods-logo" onclick="toggleEnlarge(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="methods-logo" onclick="toggleEnlarge(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Fieldwork" class="methods-logo" onclick="toggleEnlarge(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Search tool" class="methods-logo" onclick="toggleEnlarge(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search practice" class="methods-logo" onclick="toggleEnlarge(this)">
+<div class="partner-logo-group">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Social-web-v1.jpg?raw=true" alt="Frontier Tech Hub" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1%20logo%20Final%20Guerreros%20Buscadores.png?raw=true" alt="Guerreros Buscadores de Jalisco" class="partner-logo">
+  <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/2%20logo_centrogeo_wide.svg" alt="CentroGeo" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/3%20logo%20CBJ.png?raw=true" alt="Jalisco Search Commission" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/4%20logo%20oxford-university-logo.png?raw=true" alt="University of Oxford" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/images(1).png?raw=true" alt="UNAM Institute of Geophysics" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6%20logo%20Ingenieria%20UNAM.png?raw=true" alt="UNAM Faculty of Engineering" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/580141488dfc53bfdbde59fa6b043438.jpg?raw=true" alt="University of Guadalajara" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/8%20logo%20UPZMG2.png?raw=true" alt="UPZMG" class="partner-logo">
+  <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/9%20logo%20UWE%20Bristol.svg" alt="University of the West of England" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/11%20logo%20BAFAlogo_orig.png?raw=true" alt="British Association for Forensic Anthropology" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/derechos_humanos.png?raw=true" alt="Ibero" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/British%20Embassy%20Mexico_Blue%20(ENG).png?raw=true" alt="British Embassy" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/OFOTA_COLOUR_WEB.jpg?raw=true" alt="OFA" class="partner-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Beth.jpg?raw=true" alt="Bath" class="partner-logo">
+  <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg" alt="Colombia’s Unit for the Search of Disappeared Persons" class="partner-logo">
 </div>
 
-<script>
-function toggleEnlarge(img) {
-    img.classList.toggle('enlarged');
-}
-</script>
 ---
 
 <style>
