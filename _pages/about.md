@@ -175,18 +175,59 @@ function resetImage(img) {
 }
 </script>
 
-## The Role of Searching Mothers Collectives
+<h2>The Role of Searching Mothers Collectives</h2>
 
-*Madres buscadoras* (searching mothers) draw on deep knowledge to identify potential clandestine graves—sites where their disappeared loved ones might be buried. In open areas, they look for natural indicators—such as off-season greenery or unusually blooming flowers—that suggest bodies may be enriching the soil. Using a T-shaped metal stake, they pierce the ground and smell it for decomposition. 
+<style>
+.mothers-logo-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
 
-In abandoned houses, the same tool—called a *vidente* (seer)—is used to tap cement floors and listen for hollow sounds that may indicate graves.
+.mothers-logo {
+    max-width: 220px;
+    height: auto;
+    object-fit: contain;
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
 
-<div class="responsive-img-group">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" class="medium">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Mothers searching" class="small">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Mothers searching" class="small">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Mothers searching" class="medium">
+.mothers-logo.enlarged {
+    transform: scale(2);
+    z-index: 5;
+}
+
+@media (max-width: 600px) {
+    .mothers-logo {
+        max-width: 140px;
+    }
+}
+</style>
+
+<div class="mothers-logo-group">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" class="mothers-logo" onclick="enlargeMotherImage(this)" onmouseleave="resetMotherImage(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Search in the field" class="mothers-logo" onclick="enlargeMotherImage(this)" onmouseleave="resetMotherImage(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Plants and hands" class="mothers-logo" onclick="enlargeMotherImage(this)" onmouseleave="resetMotherImage(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Listening for voids" class="mothers-logo" onclick="enlargeMotherImage(this)" onmouseleave="resetMotherImage(this)">
 </div>
+
+<script>
+function enlargeMotherImage(img) {
+    img.classList.add('enlarged');
+}
+function resetMotherImage(img) {
+    img.classList.remove('enlarged');
+}
+</script>
 
 ## The Book
 
