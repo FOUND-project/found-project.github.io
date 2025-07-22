@@ -100,7 +100,7 @@ Over 120,000 people are reported as disappeared in Mexico. Behind each case ther
 
 **FOUND** brings together cutting-edge technology, forensic science, and the lived expertise of mothers' search collectives to locate those who we are missing. We work in close collaboration with these groups, combining traditional search knowledge with tools like drones, LiDAR, multi & hyperspectral imaging, seismic sensors, conductivimetry measurements, and satellite data.
 
-- Remains of 27 people recovered
+- Remains of 27 persons recovered
 - 4 experimental sites
 - Technologies adopted by the Jalisco Search Commission
 - Collaborations with Mexico, Colombia, Uruguay, and the United Kingdom
@@ -108,6 +108,7 @@ Over 120,000 people are reported as disappeared in Mexico. Behind each case ther
 We bridge grassroots knowledge and technology, creating practical tools for humanitarian challenges.
 
 <div class="responsive-img-group">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="360 gif" class="large">
   <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 gif" class="large">
   <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Flower signal gif" class="large">
 </div>
@@ -158,7 +159,6 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
 </style>
 
 <div class="methods-logo-group">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="methods-logo">
     <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Fieldwork" class="methods-logo">
     <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Search tool" class="methods-logo">
     <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search practice" class="methods-logo">
