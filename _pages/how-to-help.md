@@ -5,16 +5,13 @@ permalink: /how-to-help/
 author_profile: true
 ---
 
-Below, you can support these mothers directly — every contribution makes a difference.
+You can support these mothers directly — every contribution makes a difference.
 
 <div class="responsive-img-group">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/mothers%20walking.gif?raw=true" alt="Satellite detection GIF" class="xlarge">
 </div>
 
 ## 💳 Donate
-
-#### 🔍 Search Collectives You Can Support
-
 ### Guerreros Buscadores de Jalisco  
 [Visit Facebook Page](https://www.facebook.com/profile.php?id=61555458753120)
 
@@ -70,49 +67,6 @@ Below, you can support these mothers directly — every contribution makes a dif
   <p><strong>SWIFT:</strong> BCMRMXMMPYM</p>
 </div>
 
----
 
-### Corazones Robados  
-[Visit Facebook Page](https://www.facebook.com/profile.php?id=61550050887715)
-
-<div class="side-by-side-images">
-  <img class="img-left" src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Corazones%20Robados.jpg?raw=true" alt="Corazones Robados - Mother's Search Group">
-</div>
-
-<div style="background-color: #f9f9f9; padding: 1em; border-left: 4px solid #333; margin-bottom: 2em;">
-  <p><strong>Country:</strong> Mexico</p>
-  <p><strong>Account holder:</strong> Lizeth Cardona Martínez</p>
-  <p><strong>Bank:</strong> BanCoppel</p>
-  <p><strong>Account Number:</strong> 10091255508</p>
-  <p><strong>CLABE:</strong> 137180100912555080</p>
-  <p><strong>Card:</strong> 4169160853673011</p>
-</div>
-
-<div style="text-align: center; margin-bottom: 2em;">
-  <button onclick="selectAmount(10)">£10</button>
-  <button onclick="selectAmount(20)">£20</button>
-  <button onclick="selectAmount(50)">£50</button>
-  <button onclick="selectAmount(100)">£100</button>
-  <button onclick="selectAmount(200)">£200</button>
-  <button onclick="selectAmount(500)">£500</button>
-  <button onclick="selectAmount('other')">Other</button>
-</div>
-
-<div id="donation-confirmation" style="display:none; text-align:center; margin-bottom:2em;">
-  <p><strong>You selected: <span id="donation-amount"></span></strong></p>
-  <p>Please use the bank details above to make your contribution.</p>
-</div>
-
-<script>
-  function selectAmount(value) {
-    document.getElementById("donation-confirmation").style.display = "block";
-    document.getElementById("donation-amount").innerText = 
-      (value === 'other') ? "Other amount" : "£" + value;
-  }
-</script>
-
-## 📣 Spread the Word
-
-We will also launch a campaign on LinkedIn to help raise awareness. Sharing this page with friends and colleagues is already a big help.
-
-Thank you for standing with the Madres Buscadoras. Hasta encontrarlos!
+## How to collaborate and aplify
+Follow us on [LinkedIn](https://www.linkedin.com/company/found-project)
