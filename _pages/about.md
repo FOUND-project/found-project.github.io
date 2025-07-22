@@ -98,9 +98,9 @@ redirect_from:
 
 Over 120,000 people are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
 
-**FOUND** brings together cutting-edge technology, forensic science, and the lived expertise of mothers' search collectives to locate those who we are missing. We work in close collaboration with these groups, combining traditional search knowledge with tools like drones, LiDAR, multi & hyperspectral imaging, seismic sensors, conductivimetry Measurements, and satellite data.
+**FOUND** brings together cutting-edge technology, forensic science, and the lived expertise of mothers' search collectives to locate those who we are missing. We work in close collaboration with these groups, combining traditional search knowledge with tools like drones, LiDAR, multi & hyperspectral imaging, seismic sensors, conductivimetry measurements, and satellite data.
 
-- 27 human remains located
+- Remains of 27 people recovered
 - 4 experimental sites
 - Technologies adopted by the Jalisco Search Commission
 - Collaborations with Mexico, Colombia, Uruguay, and the United Kingdom
