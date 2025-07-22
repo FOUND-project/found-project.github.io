@@ -101,6 +101,7 @@ Over 120,000 people are reported as disappeared in Mexico. Behind each case ther
 **FOUND** brings together cutting-edge technology, forensic science, and the lived expertise of mothers' search collectives to locate those who we are missing. We work in close collaboration with these groups, combining traditional search knowledge with tools like drones, LiDAR, multi & hyperspectral imaging, seismic sensors, conductivimetry Measurements, and satellite data.
 
 - 27 human remains located
+- 4 experimental sites
 - Technologies adopted by the Jalisco Search Commission
 - Collaborations with Mexico, Colombia, Uruguay, and the United Kingdom
 
@@ -111,7 +112,6 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
   <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Flower signal gif" class="large">
 </div>
 
-## Our Methods
 <h2>Our Methods: Technologies in Action</h2>
 
 - Multispectral & Hyperspectral Imaging
@@ -141,11 +141,13 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     cursor: pointer;
     transition: transform 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .methods-logo.enlarged {
-    transform: scale(1.5);
-    z-index: 10;
+    transform: scale(2);
+    z-index: 5;
 }
 
 @media (max-width: 600px) {
@@ -156,21 +158,22 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
 </style>
 
 <div class="methods-logo-group">
-    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 gif" class="methods-logo" onclick="toggleEnlarge(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Flowers over graves" class="methods-logo" onclick="toggleEnlarge(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="methods-logo" onclick="toggleEnlarge(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Fieldwork" class="methods-logo" onclick="toggleEnlarge(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Search tool" class="methods-logo" onclick="toggleEnlarge(this)">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search practice" class="methods-logo" onclick="toggleEnlarge(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 gif" class="methods-logo" onclick="enlargeImage(this)" onmouseleave="resetImage(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Flowers over graves" class="methods-logo" onclick="enlargeImage(this)" onmouseleave="resetImage(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="Satellite detection GIF" class="methods-logo" onclick="enlargeImage(this)" onmouseleave="resetImage(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Fieldwork" class="methods-logo" onclick="enlargeImage(this)" onmouseleave="resetImage(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Search tool" class="methods-logo" onclick="enlargeImage(this)" onmouseleave="resetImage(this)">
+    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search practice" class="methods-logo" onclick="enlargeImage(this)" onmouseleave="resetImage(this)">
 </div>
 
 <script>
-function toggleEnlarge(img) {
-    img.classList.toggle('enlarged');
+function enlargeImage(img) {
+    img.classList.add('enlarged');
+}
+function resetImage(img) {
+    img.classList.remove('enlarged');
 }
 </script>
-
-</div>
 
 ## The Role of Searching Mothers Collectives
 
