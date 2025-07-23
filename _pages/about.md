@@ -158,17 +158,16 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
 </style>
 
 <div class="methods-logo-group">
-    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 gif" class="large">
-  <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Flower signal gif" class="large">  
+    <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="Fieldwork" class="methods-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Fieldwork" class="methods-logo">  
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Fieldwork" class="methods-logo">
     <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search practice" class="methods-logo">
    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/2.jpeg?raw=true" alt="Search practice" class="methods-logo">
     <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Search tool" class="methods-logo">
  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/3.jpeg?raw=true" alt="Search practice" class="methods-logo">
-     <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Search tool" class="methods-logo">
- <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6.jpg?raw=true" alt="Search practice" class="methods-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-07-30%20at%2021.40.57.jpeg?raw=true" alt="Search practice" class="methods-logo">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6.jpg?raw=true" alt="Search practice" class="methods-logo">
    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/IMG-20231204-WA0038.jpg?raw=true" alt="Search practice" class="methods-logo">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-07-30%20at%2021.40.57.jpeg?raw=true" alt="Search practice" class="methods-logo">
    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-12-02%20at%2018.42.17.jpeg?raw=true" alt="Search practice" class="methods-logo">
 </div>
 
