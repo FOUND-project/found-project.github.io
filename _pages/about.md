@@ -311,3 +311,33 @@ Examples of their methods include:
 <div class="found-logo-container">
   <p><em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan</em></p>
 </div>
+
+<style>
+  .clickable-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .clickable-image.expanded {
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    width: 90vw;
+    height: auto;
+    z-index: 1000;
+    transform: scale(1.05);
+    background-color: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const imgs = document.querySelectorAll('.clickable-image');
+    imgs.forEach(img => {
+      img.addEventListener('click', () => {
+        img.classList.toggle('expanded');
+      });
+    });
+  });
+</script>
