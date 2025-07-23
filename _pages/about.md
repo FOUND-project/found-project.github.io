@@ -100,6 +100,10 @@ Over 120,000 people are reported as disappeared in Mexico. Behind each case ther
 
 **FOUND** brings together cutting-edge technology, forensic science, and the lived expertise of mothers' search collectives to locate those who we are missing. We work in close collaboration with these groups, combining traditional search knowledge with tools like drones, LiDAR, multi & hyperspectral imaging, seismic sensors, conductivimetry measurements, and satellite data.
 
+<div class="responsive-img-group">
+  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="360 gif" class="large">
+</div>
+
 **Our impact:**
 - Remains of 27 persons recovered
 - 4 experimental sites
@@ -107,10 +111,6 @@ Over 120,000 people are reported as disappeared in Mexico. Behind each case ther
 - Collaborations with Mexico, Colombia, Uruguay, and the United Kingdom
 
 We bridge grassroots knowledge and technology, creating practical tools for humanitarian challenges.
-
-<div class="responsive-img-group">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="360 gif" class="large">
-</div>
 
 <h2>Our Methods: Technologies in Action</h2>
 
