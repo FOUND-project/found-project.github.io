@@ -96,7 +96,7 @@ redirect_from:
 }
 </style>
 
-Over 120,000 people are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
+Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
 
 **FOUND** brings together cutting-edge technology, forensic science, and the lived expertise of mothers' search collectives to locate those who we are missing. We work in close collaboration with these groups, combining traditional search knowledge with tools like drones, LiDAR, multi & hyperspectral imaging, seismic sensors, conductivimetry measurements, and satellite data.
 
