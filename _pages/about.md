@@ -212,7 +212,6 @@ Searching mothers in Mexico are at the heart of FOUND’s work. These women-led 
 
 <div class="mothers-logo-group">
     <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Plants and hands" class="mothers-logo">
- <img src=" https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-09-24%20at%2002.08.57.jpeg?raw=true" alt="Listening for voids" class="mothers-logo">
 
 </div>
 
@@ -265,7 +264,6 @@ Examples of their methods include:
 <div class="mothers-logo-group">
     <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" class="mothers-logo">
     <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Search in the field" class="mothers-logo">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Plants and hands" class="mothers-logo">
     <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Listening for voids" class="mothers-logo">
  <img src=" https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-09-24%20at%2002.08.57.jpeg?raw=true" alt="Listening for voids" class="mothers-logo">
 
