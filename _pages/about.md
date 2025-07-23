@@ -104,7 +104,7 @@ Over 120,000 persons are reported as disappeared in Mexico. Behind each case the
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="360 gif" class="large">
 </div>
 
-**Our impact:**
+**OUR IMPACT**
 - Remains of 27 persons recovered
 - 4 experimental sites
 - Technologies adopted by the Jalisco Search Commission
