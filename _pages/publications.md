@@ -51,6 +51,8 @@ ISBN: 978-607-59992
 ---
 
 ## **Articles**
+- **[Design of spectral indices for the detection of soil pollutants associated with the disappearance of persons: The case of Mexico]([https://www.sciencedirect.com/science/article/abs/pii/S0379073824001956](https://www.sciencedirect.com/science/article/abs/pii/S2352938525002289))**  
+  *J.L. Silván-Cárdenas, Ana J. Alegre-Mondragón, J. M. Madrigal-Gomez, C. Silva-Arias (2025)*
 
 - **[Assessing Geospatial Models to Explain the Occurrence of Clandestine Graves in Mexico](https://www.sciencedirect.com/science/article/abs/pii/S0379073824001956)**  
   *J.L. Silván-Cárdenas, Ana J. Alegre-Mondragón, C. Silva-Arias (2024)*
