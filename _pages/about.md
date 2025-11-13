@@ -104,13 +104,18 @@ Over 120,000 persons are reported as disappeared in Mexico. Behind each case the
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="360 gif" class="large">
 </div>
 
-**OUR IMPACT**
-- Remains of 27 persons recovered
-- 4 experimental sites
-- Technologies adopted by the Jalisco Search Commission
-- Collaborations with Mexico, Colombia, Uruguay, and the United Kingdom
+<h2>We are working directly with</h2>
 
-We bridge grassroots knowledge and technology, creating practical tools for humanitarian challenges.
+- Executive Office of the UN Secretary-General
+- UK's Foreign, Commonwealth & Development Office (FCDO)
+- Local Search Commissions and Attorney’s Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)
+- ⁠Colombian Search Unit
+- ⁠Mexico’s National Search Commission
+- ⁠Mexican Science and Technology Secretariat
+- ⁠British Embassy in Mexico City
+- British Association for Forensic Anthropology
+
+FOUND is guided and motivated by mothers’ search groups and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.
 
 <h2>Our Methods: Technologies in Action</h2>
 
@@ -173,7 +178,7 @@ We bridge grassroots knowledge and technology, creating practical tools for huma
 
 
 <h2>The Role of Searching Mothers Collectives</h2>
-Searching mothers in Mexico are at the heart of FOUND’s work. These women-led collectives, formed out of necessity in the face of limited or ineffective State action, have become the most consistent and courageous force in the search for the disappeared.
+Searching mothers in Mexico are at the heart of FOUND’s work. These women-led collectives, formed out of necessity in the face of limited or ineffective State action, have become the most consistent force in the search for the disappeared.
 <style>
 .mothers-logo-group {
     display: flex;
@@ -310,7 +315,6 @@ Examples of their methods include:
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/8%20logo%20UPZMG2.png?raw=true" alt="UPZMG" class="partner-logo">
   <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/9%20logo%20UWE%20Bristol.svg" alt="University of the West of England" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/11%20logo%20BAFAlogo_orig.png?raw=true" alt="British Association for Forensic Anthropology" class="partner-logo">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/derechos_humanos.png?raw=true" alt="Ibero" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/British%20Embassy%20Mexico_Blue%20(ENG).png?raw=true" alt="British Embassy" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/OFOTA_COLOUR_WEB.jpg?raw=true" alt="OFA" class="partner-logo">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Beth.jpg?raw=true" alt="Bath" class="partner-logo">
