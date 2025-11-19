@@ -64,10 +64,10 @@ ISBN: 978-607-59992
 
 ## **Blogs**
 
-- **[On the Frontier of Finding Peace](https://www.frontiertechhub.org/insights/otf-finding-peace](https://www.frontiertechhub.org/insights/technological-responses-to-disappearance)**
+- **[On the Frontier of Finding Peace](https://www.frontiertechhub.org/insights/technological-responses-to-disappearance)**
    *Mariela Garfias & Frontier Tech Hub (2025)*
 
-- **[Academic playing role in project to find hidden graves in Mexico using drone technology](https://www.uwe.ac.uk/news/mexico-project)
+- **[Academic playing role in project to find hidden graves in Mexico using drone technology](https://www.uwe.ac.uk/news/mexico-project)**
    *University of the West of England - Bristol (2025)*
 
 - **[Camera-Fitted Drones May Help Locate Graves of Mexico’s Disappeared](https://www.justsecurity.org/105181/drones-graves-mexicos-disappeared/)**  
