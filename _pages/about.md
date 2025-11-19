@@ -266,7 +266,7 @@ Their methods—developed through years of lived experience—represent a vital 
 
     <div class="mothers-media-item-wrapper">
         <iframe 
-            src="https://www.youtube.com/embed/FrrFDv8xIxs?si=kChZ7A-V8IPJwlW9&amp;start=19"
+            src="https://www.youtube.com/embed/FrrFDv8xIxs?si=kChZ7A-V8IPJwlW9&amp;start=1:16"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
