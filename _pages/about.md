@@ -262,8 +262,6 @@ Their methods—developed through years of lived experience—represent a vital 
 }
 </style>
 
-</div>
-
 
 ## Partners
 <style>
