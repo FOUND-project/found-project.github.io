@@ -1,16 +1,16 @@
 # main links links
 main:
+  - title: "In media/Talks"
+    url: /media/
+  
+    - title: "Publications"
+    url: /publications/
+  
   - title: "How to help"
     url: /how-to-help/
   
   - title: "Documentary"
     url: /documentary/
-
-  - title: "In media/Talks"
-    url: /media/
-
-  - title: "Publications"
-    url: /publications/
 
   - title: "Disappearance of Worlds"
     url: /Disappearance-of-Worlds/
