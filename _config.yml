@@ -27,7 +27,7 @@ author:
   location         : "Mexico"
   employer         : #"Red Brick University"
   uri              : "https://www.linkedin.com/company/found-project"
-  email            : "miguel.moctezuma@bsg.ox.ac.uk" 
+  email            : "miguel.moctezuma@pmb.ox.ac.uk" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
@@ -199,6 +199,7 @@ kramdown:
 
 # Collections
 collections:
+
   how-to-help:
     output: true
     permalink: /:collection/:path/
