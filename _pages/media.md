@@ -96,7 +96,6 @@ Explore some of the stories below:
         <span class="media-tag">Article</span>
       </div>
       <div class="media-footer">
-        Global Development feature on FOUND’s experimental sites in Jalisco.
       </div>
     </a>
   </article>
@@ -110,7 +109,6 @@ Explore some of the stories below:
         <span class="media-tag">Article</span>
       </div>
       <div class="media-footer">
-        International coverage on technology, pigs and the search for the disappeared.
       </div>
     </a>
   </article>
@@ -124,7 +122,6 @@ Explore some of the stories below:
         <span class="media-tag">Artículo</span>
       </div>
       <div class="media-footer">
-        Versión en español sobre ciencia, tecnología y búsqueda de desaparecidos.
       </div>
     </a>
   </article>
@@ -138,7 +135,6 @@ Explore some of the stories below:
         <span class="media-tag">Article</span>
       </div>
       <div class="media-footer">
-        UK coverage on how experimental graves support searches for cartel victims.
       </div>
     </a>
   </article>
@@ -152,7 +148,6 @@ Explore some of the stories below:
         <span class="media-tag">Article</span>
       </div>
       <div class="media-footer">
-        Story on the combination of drones, lasers and forensic experimentation in FOUND.
       </div>
     </a>
   </article>
@@ -166,7 +161,6 @@ Explore some of the stories below:
         <span class="media-tag">Article</span>
       </div>
       <div class="media-footer">
-        Science-focused piece on experimental graves and forensic innovation.
       </div>
     </a>
   </article>
@@ -180,7 +174,6 @@ Explore some of the stories below:
         <span class="media-tag">Article</span>
       </div>
       <div class="media-footer">
-        US coverage on how experimental sites support searches for the missing.
       </div>
     </a>
   </article>
@@ -194,7 +187,6 @@ Explore some of the stories below:
         <span class="media-tag">Artículo</span>
       </div>
       <div class="media-footer">
-        Cobertura nacional sobre el uso de tecnología y trabajo con familias buscadoras.
       </div>
     </a>
   </article>
@@ -208,7 +200,6 @@ Explore some of the stories below:
         <span class="media-tag">Article</span>
       </div>
       <div class="media-footer">
-        Scientific coverage on satellite imagery and clandestine graves in Mexico.
       </div>
     </a>
   </article>
@@ -222,7 +213,6 @@ Explore some of the stories below:
         <span class="media-tag">Artículo</span>
       </div>
       <div class="media-footer">
-        Análisis sobre tecnología geoespacial y violencia en fosas clandestinas.
       </div>
     </a>
   </article>
@@ -236,7 +226,6 @@ Explore some of the stories below:
         <span class="media-tag">Article</span>
       </div>
       <div class="media-footer">
-        Piece on clandestine cremation sites and forensic analysis.
       </div>
     </a>
   </article>
@@ -250,7 +239,6 @@ Explore some of the stories below:
         <span class="media-tag">Artículo</span>
       </div>
       <div class="media-footer">
-        Reportaje en español sobre crematorios clandestinos en Jalisco.
       </div>
     </a>
   </article>
@@ -264,7 +252,6 @@ Explore some of the stories below:
         <span class="media-tag">TV segment</span>
       </div>
       <div class="media-footer">
-        Segmento televisivo sobre tecnologías contra las desapariciones.
       </div>
     </a>
   </article>
@@ -278,7 +265,6 @@ Explore some of the stories below:
         <span class="media-tag">Opinion</span>
       </div>
       <div class="media-footer">
-        Ensayo sobre naturaleza, búsqueda y la labor de las madres buscadoras.
       </div>
     </a>
   </article>
@@ -292,7 +278,6 @@ Explore some of the stories below:
         <span class="media-tag">Article</span>
       </div>
       <div class="media-footer">
-        International wire story on mothers, drones and unmarked graves.
       </div>
     </a>
   </article>
@@ -306,7 +291,6 @@ Explore some of the stories below:
         <span class="media-tag">TV / Social</span>
       </div>
       <div class="media-footer">
-        Short piece on drone-supported searches in Jalisco.
       </div>
     </a>
   </article>
@@ -320,7 +304,6 @@ Explore some of the stories below:
         <span class="media-tag">Artículo</span>
       </div>
       <div class="media-footer">
-        Nota sobre el uso de tecnología para apoyar la búsqueda de personas.
       </div>
     </a>
   </article>
