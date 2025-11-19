@@ -117,8 +117,6 @@ This powerful exhibition and accompanying dialogues were dedicated to the search
   <div class="event-title">Opening Talk: Chantal Meza in conversation with Will Gompertz</div>
   <strong>Friday 6 June | 6pm-7pm | Pichette Auditorium, Pembroke College</strong><br>
 
-  <p><strong>Welcome</strong><br>
-  Vanessa Gouws Operations Bursar, Pembroke College</p>
   <p><strong>Introduction Master of Pembroke College</strong><br>
   The Rt Hon Sir Ernest Ryder</p>
   <p><strong>Distinguished Guest</strong><br>
@@ -137,7 +135,6 @@ This powerful exhibition and accompanying dialogues were dedicated to the search
   Lizet & Carmen Cardona – Corazones Robados Searching Mothers’ Collective</p>
   <p><strong>Chair:</strong><br>
   Fernanda Lobo Díaz – Human Rights Program, Universidad Iberoamericana</p>
-  <p><a href="https://www.eventbrite.com/e/searching-for-the-disappeared-the-case-of-mexico-registration-1335246611559?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a></p>
 </div>
 
 <div class="event-details">
@@ -146,7 +143,6 @@ This powerful exhibition and accompanying dialogues were dedicated to the search
 
   <p><strong>Instructors:</strong><br>
   Lizet & Carmen Cardona – Corazones Robados Searching Mothers’ Collective</p>
-  <p><a href="https://docs.google.com/spreadsheets/d/1HHpeTunC2vp_CjPR4X9l4cso4yS1mcEYzbRmsayvNgw/edit?usp=sharing" target="_blank">Booking required – click here</a></p>
 </div>
 
 <div class="event-details">
@@ -155,7 +151,6 @@ This powerful exhibition and accompanying dialogues were dedicated to the search
 
   <p><strong>Speaker:</strong><br>
   Gareth Owen – Former Humanitarian Director, Save the Children</p>
-  <p><a href="https://www.eventbrite.com/e/the-disappearance-of-humanitarianism-registration-1335326329999?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a></p>
 </div>
 
 <div class="event-details">
@@ -172,7 +167,6 @@ This powerful exhibition and accompanying dialogues were dedicated to the search
   Mariela Garfias – Head of Programmes, British Embassy in Mexico</p>
   <p><strong>Chair:</strong><br>
   Chantal Meza</p>
-  <p><a href="https://www.eventbrite.com/e/technological-responses-to-disappearance-registration-1335338436209?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a></p>
 </div>
 
 <div class="event-details">
@@ -183,7 +177,6 @@ This powerful exhibition and accompanying dialogues were dedicated to the search
   Phil Scraton – Campaigner & Emeritus Professor, Queen’s University Belfast</p>
   <p><strong>Chair:</strong><br>
   Professor Annette Idler – Director, Global Security Programme, Pembroke College & Associate Professor in Global Security, University of Oxford</p>
-  <p><a href="https://www.eventbrite.com/e/justice-for-the-disappeared-registration-1335353180309?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a></p>
 </div>
 
 <div class="event-details">
@@ -194,7 +187,6 @@ This powerful exhibition and accompanying dialogues were dedicated to the search
   Jan Royall – Principal, Somerville College Oxford<br>
   Brad Evans – Director, Centre for the Study of Violence; Professor of Political Violence & Aesthetics, University of Bath<br>
   Hari Reed – Incoming Co-Director, Asylum Welcome</p>
-  <p><a href="https://www.eventbrite.com/e/escape-from-disappearance-the-power-of-sanctuary-registration-1335368185189?aff=odcleoeventsincollection&keep_tld=1" target="_blank">Booking required – click here</a></p>
 </div>
 
 ## Partners
