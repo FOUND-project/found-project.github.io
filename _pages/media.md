@@ -4,11 +4,6 @@ title: "In media and talks"
 permalink: /media/
 author_profile: true
 ---
-<h2>In media and talks</h2>
-<p>
-FOUND’s work has been featured in international and national media, as well as in specialist outlets and TV segments. 
-Explore some of the stories below:
-</p>
 
 <style>
 .media-grid {
