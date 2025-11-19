@@ -262,11 +262,30 @@ Their methods—developed through years of lived experience—represent a vital 
 }
 </style>
 
-<div class="mothers-logo-group">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%206.jpg?raw=true" alt="Mothers searching" class="mothers-logo">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%201.jpg?raw=true" alt="Search in the field" class="mothers-logo">
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Picture%203.jpg?raw=true" alt="Listening for voids" class="mothers-logo">
- <img src=" https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-09-24%20at%2002.08.57.jpeg?raw=true" alt="Listening for voids" class="mothers-logo">
+<div class="mothers-media-group">
+
+    <div class="mothers-media-item-wrapper">
+        <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" 
+             alt="Plants and hands" 
+             class="mothers-media-item">
+        <p class="mothers-caption">
+            Buscadora holding a plant growing on skull fragments.
+        </p>
+    </div>
+
+    <div class="mothers-media-item-wrapper">
+        <iframe 
+            src="https://www.youtube.com/embed/FrrFDv8xIxs?si=kChZ7A-V8IPJwlW9&amp;start=19"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            class="mothers-media-item">
+        </iframe>
+        <p class="mothers-caption">
+            Indira Navarro, from Guerreros Buscadores de Jalisco, during a talk in Oxford.
+        </p>
+    </div>
 
 </div>
 
