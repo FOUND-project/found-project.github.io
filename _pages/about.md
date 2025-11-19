@@ -262,22 +262,6 @@ Their methods—developed through years of lived experience—represent a vital 
 }
 </style>
 
-<div class="mothers-media-group">
-
-    <div class="mothers-media-item-wrapper">
-        <iframe 
-            src="https://www.youtube.com/embed/FrrFDv8xIxs?si=kChZ7A-V8IPJwlW9&amp;start=1:16"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            class="mothers-media-item">
-        </iframe>
-        <p class="mothers-caption">
-            Indira Navarro, from Guerreros Buscadores de Jalisco, during a talk in Oxford.
-        </p>
-    </div>
-
 </div>
 
 
