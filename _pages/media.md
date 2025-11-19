@@ -31,9 +31,6 @@ author_profile: true
 #### Science
 [Satellites could reveal the secret burial grounds of Mexico’s murder victims](https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims)
 
-#### University of the West of England - Bristol
-[Academic playing role in project to find hidden graves in Mexico using drone technology](https://www.uwe.ac.uk/news/mexico-project)
-
 #### WIRED
 [Cómo la tecnología geoespacial expone el horror de las fosas clandestinas en México](https://es.wired.com/articulos/tecnologia-geoespacial-expone-el-horror-de-las-fosas-clandestinas-en-mexico)
 
