@@ -12,8 +12,8 @@ main:
   - title: "Documentary"
     url: /documentary/
 
-  - title: "News & Updates"
-    url: /news-updates/
+  - title: "News"
+    url: /news/
 
 #  - title: "Talks"
 #    url: /talks/    
