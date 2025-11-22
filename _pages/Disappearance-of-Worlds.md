@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance"
-permalink: /Disappearance-of-Worlds/
+title: "News & Updates"
+permalink: /News-Updates/
 author_profile: true
 ---
 
