@@ -127,3 +127,16 @@ We will continue developing — and embedding in official protocols — new ways
 <p>FOUND: Interpreting Nature to Locate Those We Are Missing</p>
   </div>
 </div>
+
+<div class="news-card">
+  <div class="news-title">
+    FOUND featured by Associated Press, The Independent, LA Times, VICE, NBC
+  </div>
+  <div class="news-content">
+    <ul style="margin-top: 0; padding-left: 20px; line-height: 1.3;">
+  <li>Associated Press: [Why are scientists dressing pigs in clothes and burying them in Mexico?](https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86)</li>
+  <li>The Independent: [How pigs could help find missing Mexican drug cartel victims](https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html)</li>
+  <li>LA Times: [Why are scientists dressing pigs in clothes and burying them in Mexico?](https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico)</li>
+  <li>VICE: [Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims](https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/)</li>
+  <li>NBC: [Clothed pigs are buried in Mexico as scientists use them in search of missing](https://www.nbcnews.com/news/amp/rcna221791)</li>
+</ul>
