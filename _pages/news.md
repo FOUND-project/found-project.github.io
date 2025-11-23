@@ -84,6 +84,24 @@ author_profile: true
   </div>
 </div>
 
+<div class="news-card" id="ubpd-visit">
+  <div class="news-title">
+    🇨🇴🇲🇽 Second Visit of Colombia’s Search Unit for Missing Persons (UBPD) to FOUND’s Experimental Sites in Jalisco
+  </div>
+  <div class="news-content">
+    <p>We are deeply grateful to <strong>CVM Cyber</strong> and <strong>Ciaran Martin</strong> for their generous support in making this visit possible.</p>
+
+    <p>We welcomed <strong>Héctor Javier Gómez</strong>, geophysicist from Colombia’s <em>Unidad de Búsqueda de Personas Dadas por Desaparecidas (UBPD)</em>, for a joint field deployment to FOUND’s experimental sites in Jalisco.</p>
+
+    <p>This visit focused on the gathering and processing of drone-based hyperspectral imagery across all five of FOUND’s experimental sites — marking only the second time this cutting-edge technology has been used in Mexico for humanitarian purposes.</p>
+
+    <p><a href="https://found-project.github.io/news/#ubpd-visit" class="share-link">🔗 Share this update</a></p>
+  </div>
+</div>
+
+
+
+
 <div class="news-card">
   <div class="news-title">
     📄 FOUND is in The Guardian
