@@ -64,7 +64,7 @@ author_profile: true
 
     <p>During this second visit, the UBPD offered key technical recommendations to enhance FOUND’s detection strategies for clandestine graves. The collaboration will continue in January 2026, when the FOUND team will visit UBPD’s facilities in Colombia to exchange experiences and integrate UBPD methodologies across FOUND’s partner states in Mexico.</p>
 </div>
-
+</div>
 
 <div class="news-card">
   <div class="news-title">
