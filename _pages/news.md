@@ -64,5 +64,14 @@ author_profile: true
 
     <p>During this second visit, the UBPD offered key technical recommendations to enhance FOUND’s detection strategies for clandestine graves. The collaboration will continue in January 2026, when the FOUND team will visit UBPD’s facilities in Colombia to exchange experiences and integrate UBPD methodologies across FOUND’s partner states in Mexico.</p>
 
+<div class="news-card">
+  <div class="news-title">
+    FOUND is in The Guardian
+  </div>
+  <div class="news-content">
+    <p>We are deeply grateful to <strong>CVM Cyber</strong> and <strong>Ciaran Martin</strong> for their generous support in making this visit possible.</p>
+
+    <p>This piece is the result of more than six months of email conversations, WhatsApp messages, and the journalist’s in-person visit to our experimental sites in Jalisco, Mexico. We are deeply grateful for the care, depth and commitment brought to this story after months spent listening to families, researchers and officials.</p>
+ <p><a [📄 Read the article here](https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims)
   </div>
 </div>
