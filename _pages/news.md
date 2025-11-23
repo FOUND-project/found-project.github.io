@@ -98,3 +98,30 @@ author_profile: true
     <img src="/images/Found_theGuardian.jpeg" alt="FOUND in The Guardian">
   </div>
 </div>
+
+<div class="news-card">
+  <div class="news-title">
+    FOUND has received new support from the UK's Foreign, Commonwealth and Development Office (FCDO) through the Frontier Tech Hub.
+  </div>
+  <div class="news-content">
+    <p>In the pitch, Mariela Garfias and Miguel Moctezuma showcased FOUND’s impact to date, and our team was awarded funding that will enable us to scale our mission: to drive systemic change in how missing persons are searched for in hashtag#Mexico, hashtag#Colombia, and beyond.
+
+🌱 Driven by families and research communities
+FOUND is guided and motivated by mothers’ search groups and researchers from CentroGeo, UNAM, IPN, UdeG, ITESO, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.
+
+🔍 We are now working directly with:
+- Executive Office of the UN Secretary-General
+- UK’s Foreign, Commonwealth & Development Office (FCDO)
+- Local Search Commissions and Attorney’s Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)
+⁠- Colombian Search Unit
+⁠- Mexico’s National Search Commission
+- ⁠Mexican Science and Technology Secretariat
+⁠- British Embassy in Mexico City
+- British Association for Forensic Anthropology
+
+🛰️ Technology for memory, dignity, and closure
+We will continue developing — and embedding in official protocols — new ways to locate missing persons using advanced tools such as machine-learning models, hyperspectral cameras, seismic instruments, and electrical resistivity.
+
+FOUND: Interpreting Nature to Locate Those We Are Missing</p>
+  </div>
+</div>
