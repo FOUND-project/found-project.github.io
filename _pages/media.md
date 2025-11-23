@@ -15,7 +15,7 @@ author_profile: true
 
   .media-card {
     background: #ffffff;
-    border-left: 4px solid #1b4d3e; /* Green line for consistency */
+    border-left: 4px solid #1b4d3e; /* Green vertical line */
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     padding: 1.2rem 1.2rem 1.4rem;
@@ -41,7 +41,7 @@ author_profile: true
   .media-title {
     font-size: 1rem;
     font-weight: 600;
-    color: #1b4d3e;
+    color: #222; /* Neutral colour for consistency */
     margin: 0 0 0.5rem 0;
   }
 
@@ -66,27 +66,10 @@ author_profile: true
     color: #555;
   }
 
-  .talks-section {
-    margin-top: 3rem;
-  }
-
-  .talks-section h3 {
-    font-size: 1.2rem;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-    color: #1b4d3e;
-  }
-
-  .talks-section a {
-    font-weight: 500;
-    color: #1b4d3e;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 1rem;
-  }
-
-  .talks-section a:hover {
-    text-decoration: underline;
+  .media-footer {
+    margin-top: 0.9rem;
+    font-size: 0.8rem;
+    color: #777;
   }
 </style>
 
@@ -316,26 +299,74 @@ author_profile: true
 
 </div>
 
+<style>
+  .talks-section {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .talk-card {
+    border-left: 4px solid #1b4d3e;
+    background: #f9f9f9;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: background-color 0.3s ease;
+  }
+
+  .talk-card:hover {
+    background-color: #eef6ee;
+  }
+
+  .talk-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #222;
+  }
+
+  .talk-link {
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: #1b4d3e;
+    font-weight: 500;
+  }
+
+  .talk-link:hover {
+    text-decoration: underline;
+  }
+</style>
+
 <div class="talks-section">
   <h2><strong>Talks</strong></h2>
 
-  <h3>University of Oxford / Oxford Festival of the Arts</h3>
-  <a href="https://artsfestivaloxford.org/events/chantal-meza-the-disappearance-of-worlds/" target="_blank">
-    Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance
-  </a>
+  <div class="talk-card">
+    <div class="talk-title">University of Oxford / Oxford Festival of the Arts</div>
+    <a class="talk-link" href="https://artsfestivaloxford.org/events/chantal-meza-the-disappearance-of-worlds/" target="_blank">
+      Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance
+    </a>
+  </div>
 
-  <h3>British Association for Forensic Anthropology (BAFA)</h3>
-  <a href="https://bafauk.weebly.com/winter-conference--agm-2024.html" target="_blank">
-    Interpreting nature to locate the disappeared: influencing search practices in Jalisco, Mexico
-  </a>
+  <div class="talk-card">
+    <div class="talk-title">British Association for Forensic Anthropology (BAFA)</div>
+    <a class="talk-link" href="https://bafauk.weebly.com/winter-conference--agm-2024.html" target="_blank">
+      Interpreting nature to locate the disappeared: influencing search practices in Jalisco, Mexico
+    </a>
+  </div>
 
-  <h3>Guadalajara International Book Fair (FIL)</h3>
-  <a href="https://jalisco.quadratin.com.mx/principal/presentan-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/" target="_blank">
-    Presentan Interpretar la naturaleza para encontrar a quienes nos faltan
-  </a>
+  <div class="talk-card">
+    <div class="talk-title">Guadalajara International Book Fair (FIL)</div>
+    <a class="talk-link" href="https://jalisco.quadratin.com.mx/principal/presentan-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/" target="_blank">
+      Presentan Interpretar la naturaleza para encontrar a quienes nos faltan
+    </a>
+  </div>
 
-  <h3>University of Oxford</h3>
-  <a href="https://www.ox.ac.uk/event/mexicos-missing-how-families-and-technology-are-working-together" target="_blank">
-    Mexico's Missing: How families and technology are working together
-  </a>
+  <div class="talk-card">
+    <div class="talk-title">University of Oxford</div>
+    <a class="talk-link" href="https://www.ox.ac.uk/event/mexicos-missing-how-families-and-technology-are-working-together" target="_blank">
+      Mexico's Missing: How families and technology are working together
+    </a>
+  </div>
 </div>
