@@ -5,49 +5,34 @@ permalink: /publications/
 author_profile: true
 ---
 
-## **The Book** (2024)
+<h2><strong>The Book</strong> (2024)</h2>
 
-The book *[Interpreting Nature to Locate Those We Are Missing](https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file)* (*Interpretar la Naturaleza para Encontrar a Quienes nos Faltan*) explores the application of biological, physical, and earth sciences in detecting clandestine graves.
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem; margin-bottom: 2rem;">
+  <div style="flex: 1 1 300px;">
+    <p>The book <em><a href="https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file" target="_blank">Interpreting Nature to Locate Those We Are Missing</a></em> (<em>Interpretar la Naturaleza para Encontrar a Quienes nos Faltan</em>) explores the application of biological, physical, and earth sciences in detecting clandestine graves.</p>
 
-It was presented at Oxford during the Winter Conference of the British Association of Forensic Anthropology and at the Guadalajara International Book Fair, the world’s largest event for Spanish-language publications.
+    <p>It was presented at Oxford during the Winter Conference of the British Association of Forensic Anthropology and at the Guadalajara International Book Fair, the world’s largest event for Spanish-language publications.</p>
 
-The book is currently being translated into English.
+    <p>The book is currently being translated into English.</p>
 
-Centro de Investigación en Ciencias de Información Geoespacial (CentroGeo)  
-Secretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI), México  
-ISBN: 978-607-59992
+    <p>Centro de Investigación en Ciencias de Información Geoespacial (CentroGeo)<br>
+    Secretaría de Ciencia, Humanidades, Tecnología e Innovación (SECIHTI), México<br>
+    ISBN: 978-607-59992</p>
+  </div>
+
+  <div style="flex: 0 0 250px; text-align: center;">
+    <img src="/images/the_book.jpg" alt="FOUND Book Cover" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+  </div>
+</div>
 
 <div style="text-align: center; margin: 2rem 0;">
-  <a href="https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file" class="button-link" target="_blank" style="display: inline-block; padding: 0.6rem 1.2rem; background-color: #1b4d3e; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">
+  <a href="https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file" 
+     class="button-link" 
+     target="_blank" 
+     style="display: inline-block; padding: 0.6rem 1.2rem; background-color: #1b4d3e; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">
     📘 Download the Book (Spanish)
   </a>
 </div>
-
-<div class="found-logo-container">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/the%20book.jpg?raw=true" alt="FOUND Book Cover">
-</div>
-
-<style>
-  .found-logo-container {
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .found-logo-container img {
-    max-width: 500px;
-    width: 100%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  }
-
-  .found-logo-container img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  }
-</style>
-
 ---
 
 ## **Articles**
