@@ -37,7 +37,7 @@ author_profile: true
   </div>
 
   <div style="flex: 0 0 250px; text-align: center;">
-    <img src="/images/the_book.jpg" alt="FOUND Book Cover" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <img src="/images/the%20book.jpg" alt="FOUND Book Cover" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
   </div>
 </div>
 
