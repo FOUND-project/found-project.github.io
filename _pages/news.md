@@ -110,14 +110,16 @@ author_profile: true
 FOUND is guided and motivated by mothers’ search groups and researchers from CentroGeo, UNAM, IPN, UdeG, ITESO, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.</p>
 
 <p>🔍 We are now working directly with:</p>
-<p>- Executive Office of the UN Secretary-General</p>
-<p>- UK’s Foreign, Commonwealth & Development Office (FCDO)</p>
-<p>- Local Search Commissions and Attorney’s Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)</p>
-<p>⁠- Colombian Search Unit</p>
-<p>⁠- Mexico’s National Search Commission</p>
-<p>- ⁠Mexican Science and Technology Secretariat</p>
-<p>⁠- British Embassy in Mexico City</p>
-<p>- British Association for Forensic Anthropology</p>
+<ul style="margin-top: 0; padding-left: 20px; line-height: 1.3;">
+  <li>Executive Office of the UN Secretary-General</li>
+  <li>UK’s Foreign, Commonwealth & Development Office (FCDO)</li>
+  <li>Local Search Commissions and Attorney’s Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)</li>
+  <li>Colombian Search Unit</li>
+  <li>Mexico’s National Search Commission</li>
+  <li>Mexican Science and Technology Secretariat</li>
+  <li>British Embassy in Mexico City</li>
+  <li>British Association for Forensic Anthropology</li>
+</ul>
 
 <p>🛰️ Technology for memory, dignity, and closure
 We will continue developing — and embedding in official protocols — new ways to locate missing persons using advanced tools such as machine-learning models, hyperspectral cameras, seismic instruments, and electrical resistivity.</p>
