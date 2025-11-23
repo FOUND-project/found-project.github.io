@@ -104,12 +104,12 @@ author_profile: true
     FOUND has received new support from the UK's Foreign, Commonwealth and Development Office (FCDO) through the Frontier Tech Hub.
   </div>
   <div class="news-content">
-    <p>In the pitch, Mariela Garfias and Miguel Moctezuma showcased FOUND’s impact to date, and our team was awarded funding that will enable us to scale our mission: to drive systemic change in how missing persons are searched for in hashtag#Mexico, hashtag#Colombia, and beyond.
+    <p>In the pitch, Mariela Garfias and Miguel Moctezuma showcased FOUND’s impact to date, and our team was awarded funding that will enable us to scale our mission: to drive systemic change in how missing persons are searched for in hashtag#Mexico, hashtag#Colombia, and beyond.</p>
 
-🌱 Driven by families and research communities
-FOUND is guided and motivated by mothers’ search groups and researchers from CentroGeo, UNAM, IPN, UdeG, ITESO, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.
+<p>🌱 Driven by families and research communities
+FOUND is guided and motivated by mothers’ search groups and researchers from CentroGeo, UNAM, IPN, UdeG, ITESO, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.</p>
 
-🔍 We are now working directly with:
+<p>🔍 We are now working directly with:
 - Executive Office of the UN Secretary-General
 - UK’s Foreign, Commonwealth & Development Office (FCDO)
 - Local Search Commissions and Attorney’s Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)
@@ -117,11 +117,11 @@ FOUND is guided and motivated by mothers’ search groups and researchers from C
 ⁠- Mexico’s National Search Commission
 - ⁠Mexican Science and Technology Secretariat
 ⁠- British Embassy in Mexico City
-- British Association for Forensic Anthropology
+- British Association for Forensic Anthropology</p>
 
-🛰️ Technology for memory, dignity, and closure
-We will continue developing — and embedding in official protocols — new ways to locate missing persons using advanced tools such as machine-learning models, hyperspectral cameras, seismic instruments, and electrical resistivity.
+<p>🛰️ Technology for memory, dignity, and closure
+We will continue developing — and embedding in official protocols — new ways to locate missing persons using advanced tools such as machine-learning models, hyperspectral cameras, seismic instruments, and electrical resistivity.</p>
 
-FOUND: Interpreting Nature to Locate Those We Are Missing</p>
+<p>FOUND: Interpreting Nature to Locate Those We Are Missing</p>
   </div>
 </div>
