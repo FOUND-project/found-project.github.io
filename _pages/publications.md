@@ -32,26 +32,81 @@ author_profile: true
   </div>
 </div>
 ---
+<h2><strong>Articles</strong></h2>
 
-## **Articles**
-- **[Design of spectral indices for the detection of soil pollutants associated with the disappearance of persons: The case of Mexico](https://www.sciencedirect.com/science/article/abs/pii/S2352938525002289)**  
-  *J.L. Silván-Cárdenas, Ana J. Alegre-Mondragón, J. M. Madrigal-Gomez, C. Silva-Arias (2025)*
+<div class="resource-grid">
+  <div class="resource-card">
+    <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S2352938525002289" target="_blank">Design of spectral indices for the detection of soil pollutants associated with the disappearance of persons</a></h3>
+    <p class="meta">J.L. Silván-Cárdenas, Ana J. Alegre-Mondragón, J. M. Madrigal-Gomez, C. Silva-Arias (2025)</p>
+  </div>
 
-- **[Assessing Geospatial Models to Explain the Occurrence of Clandestine Graves in Mexico](https://www.sciencedirect.com/science/article/abs/pii/S0379073824001956)**  
-  *J.L. Silván-Cárdenas, Ana J. Alegre-Mondragón, C. Silva-Arias (2024)*
+  <div class="resource-card">
+    <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S0379073824001956" target="_blank">Assessing Geospatial Models to Explain the Occurrence of Clandestine Graves in Mexico</a></h3>
+    <p class="meta">J.L. Silván-Cárdenas, Ana J. Alegre-Mondragón, C. Silva-Arias (2024)</p>
+  </div>
 
-- **[Espacio Clandestino: A Nationwide Platform to Support Clandestine Graves Search in Mexico](https://link.springer.com/chapter/10.1007/978-3-031-61440-8_14)**  
-  *Silván-Cárdenas, J.L., Alegre-Mondragón, A.J. (2024)*
+  <div class="resource-card">
+    <h3><a href="https://link.springer.com/chapter/10.1007/978-3-031-61440-8_14" target="_blank">Espacio Clandestino: A Nationwide Platform to Support Clandestine Graves Search in Mexico</a></h3>
+    <p class="meta">Silván-Cárdenas, J.L., Alegre-Mondragón, A.J. (2024)</p>
+  </div>
+</div>
 
----
+<h2><strong>Blogs</strong></h2>
 
-## **Blogs**
+<div class="resource-grid">
+  <div class="resource-card">
+    <h3><a href="https://www.frontiertechhub.org/insights/technological-responses-to-disappearance" target="_blank">On the Frontier of Finding Peace</a></h3>
+    <p class="meta">Mariela Garfias & Frontier Tech Hub (2025)</p>
+  </div>
 
-- **[On the Frontier of Finding Peace](https://www.frontiertechhub.org/insights/technological-responses-to-disappearance)**
-   *Mariela Garfias & Frontier Tech Hub (2025)*
+  <div class="resource-card">
+    <h3><a href="https://www.uwe.ac.uk/news/mexico-project" target="_blank">Academic playing role in project to find hidden graves in Mexico using drone technology</a></h3>
+    <p class="meta">University of the West of England - Bristol (2025)</p>
+  </div>
 
-- **[Academic playing role in project to find hidden graves in Mexico using drone technology](https://www.uwe.ac.uk/news/mexico-project)**
-   *University of the West of England - Bristol (2025)*
+  <div class="resource-card">
+    <h3><a href="https://www.justsecurity.org/105181/drones-graves-mexicos-disappeared/" target="_blank">Camera-Fitted Drones May Help Locate Graves of Mexico’s Disappeared</a></h3>
+    <p class="meta">Karina García-Reyes, Miguel Moctezuma (2024)</p>
+  </div>
+</div>
 
-- **[Camera-Fitted Drones May Help Locate Graves of Mexico’s Disappeared](https://www.justsecurity.org/105181/drones-graves-mexicos-disappeared/)**  
-  *Karina García-Reyes, Miguel Moctezuma (2024)*
+<style>
+  .resource-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .resource-card {
+    background: #f9f9f9;
+    padding: 1rem 1.5rem;
+    border-left: 4px solid #1b4d3e;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+
+  .resource-card:hover {
+    background-color: #eef6ee;
+  }
+
+  .resource-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .resource-card a {
+    text-decoration: none;
+    color: #1b4d3e;
+  }
+
+  .resource-card a:hover {
+    text-decoration: underline;
+  }
+
+  .meta {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.3rem;
+  }
+</style>
