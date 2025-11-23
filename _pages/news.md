@@ -75,7 +75,7 @@ author_profile: true
 <p>
   <a href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" 
      target="_blank">
-    📄 Read the article here
+    Read the article here
   </a>
 </p>
   </div>
