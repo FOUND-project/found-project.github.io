@@ -344,7 +344,7 @@ author_profile: true
 
   <div class="talk-card">
     <div class="talk-title">University of Oxford / Oxford Festival of the Arts</div>
-    <a class="talk-link" href="https://artsfestivaloxford.org/events/chantal-meza-the-disappearance-of-worlds/" target="_blank">
+    <a class="talk-link" href="https://www.ox.ac.uk/event/technological-responses-disappearance" target="_blank">
       Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance
     </a>
   </div>
