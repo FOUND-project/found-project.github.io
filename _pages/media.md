@@ -6,77 +6,88 @@ author_profile: true
 ---
 
 <style>
-.media-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0 3rem;
-}
+  .media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0 3rem;
+  }
 
-.media-card {
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  padding: 1.2rem 1.2rem 1.4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border: 1px solid rgba(0,0,0,0.04);
-}
+  .media-card {
+    background: #ffffff;
+    border-left: 4px solid #1b4d3e; /* Green line for consistency */
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    padding: 1.2rem 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
 
-.media-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.10);
-}
+  .media-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  }
 
-.media-logo {
-  height: 26px;
-  margin-bottom: 0.9rem;
-  object-fit: contain;
-}
+  .media-outlet {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #777;
+    margin-bottom: 0.3rem;
+  }
 
-.media-outlet {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #777;
-  margin-bottom: 0.2rem;
-}
+  .media-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1b4d3e;
+    margin: 0 0 0.5rem 0;
+  }
 
-.media-title {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0.1rem 0 0.5rem;
-  color: #222;
-}
+  .media-link {
+    text-decoration: none;
+    color: inherit;
+  }
 
-.media-link {
-  text-decoration: none;
-  color: inherit;
-}
+  .media-link:hover .media-title {
+    text-decoration: underline;
+  }
 
-.media-link:hover .media-title {
-  text-decoration: underline;
-}
+  .media-tag {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    background: #f2f4f7;
+    color: #555;
+  }
 
-.media-tag {
-  display: inline-block;
-  margin-top: 0.4rem;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 0.18rem 0.5rem;
-  border-radius: 999px;
-  background: #f2f4f7;
-  color: #555;
-}
+  .talks-section {
+    margin-top: 3rem;
+  }
 
-.media-footer {
-  margin-top: 0.9rem;
-  font-size: 0.8rem;
-  color: #777;
-}
+  .talks-section h3 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: #1b4d3e;
+  }
+
+  .talks-section a {
+    font-weight: 500;
+    color: #1b4d3e;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .talks-section a:hover {
+    text-decoration: underline;
+  }
 </style>
 
 <div class="media-grid">
@@ -305,16 +316,26 @@ author_profile: true
 
 </div>
 
-### Talks
+<div class="talks-section">
+  <h2><strong>Talks</strong></h2>
 
-#### University of Oxford / Oxford Festival of the Arts
-[Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance](https://artsfestivaloxford.org/events/chantal-meza-the-disappearance-of-worlds/)
+  <h3>University of Oxford / Oxford Festival of the Arts</h3>
+  <a href="https://artsfestivaloxford.org/events/chantal-meza-the-disappearance-of-worlds/" target="_blank">
+    Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance
+  </a>
 
-#### British Association for Forensic Anthropology (BAFA)
-[Interpreting nature to locate the disappeared: influencing search practices in Jalisco, Mexico](https://bafauk.weebly.com/winter-conference--agm-2024.html)
+  <h3>British Association for Forensic Anthropology (BAFA)</h3>
+  <a href="https://bafauk.weebly.com/winter-conference--agm-2024.html" target="_blank">
+    Interpreting nature to locate the disappeared: influencing search practices in Jalisco, Mexico
+  </a>
 
-#### Guadalajara International Book Fair (FIL)
-[Presentan Interpretar la naturaleza para encontrar a quienes nos faltan](https://jalisco.quadratin.com.mx/principal/presentan-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/)
+  <h3>Guadalajara International Book Fair (FIL)</h3>
+  <a href="https://jalisco.quadratin.com.mx/principal/presentan-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/" target="_blank">
+    Presentan Interpretar la naturaleza para encontrar a quienes nos faltan
+  </a>
 
-#### University of Oxford
-[Mexico's Missing: How families and technology are working together](https://www.ox.ac.uk/event/mexicos-missing-how-families-and-technology-are-working-together)
+  <h3>University of Oxford</h3>
+  <a href="https://www.ox.ac.uk/event/mexicos-missing-how-families-and-technology-are-working-together" target="_blank">
+    Mexico's Missing: How families and technology are working together
+  </a>
+</div>
