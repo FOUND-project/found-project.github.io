@@ -119,6 +119,41 @@ author_profile: true
 <!-- Popup for copied link -->
 <div id="copied-popup">Link copied!</div>
 
+<!-- ==========================================
+     NEWS PAGE HEADER (Fixes LinkedIn Preview)
+=========================================== -->
+
+<!-- Open Graph Metadata -->
+<meta property="og:title" content="FOUND — News & Updates">
+<meta property="og:description" content="Latest developments from FOUND across Mexico, Colombia, and beyond.">
+<meta property="og:image" content="https://found-project.github.io/images/found-logo.png">
+<meta property="og:url" content="https://found-project.github.io/news/">
+<meta property="og:type" content="website">
+
+<!-- Visible Header Section -->
+<div class="news-header" style="
+  border-left: 4px solid #1b4d3e;
+  background: #f5f8f5;
+  padding: 1.8rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+">
+  <img src="/images/found-logo.png" alt="FOUND Logo" style="
+    width: 90px;
+    height: auto;
+    border-radius: 4px;
+  ">
+  <div>
+    <h1 style="margin: 0; font-size: 1.6rem; color: #1b4d3e;">FOUND — News & Updates</h1>
+    <p style="margin: 0.4rem 0 0; font-size: 1rem; color: #333;">
+      Latest developments on our work to locate missing persons in Mexico, Colombia, and beyond.
+    </p>
+  </div>
+</div>
 
 <!-- ===========================
      CARD 1 — UBPD VISIT
