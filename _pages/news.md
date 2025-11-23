@@ -68,10 +68,15 @@ author_profile: true
 
 <div class="news-card">
   <div class="news-title">
-    FOUND is in The Guardian
+    📄 FOUND is in The Guardian
   </div>
   <div class="news-content">
     <p>This piece is the result of more than six months of email conversations, WhatsApp messages, and the journalist’s in-person visit to our experimental sites in Jalisco, Mexico. We are deeply grateful for the care, depth and commitment brought to this story after months spent listening to families, researchers and officials.</p>
-[📄 Read the article here](https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims)
+<p>
+  <a href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" 
+     target="_blank">
+    📄 Read the article here
+  </a>
+</p>
   </div>
 </div>
