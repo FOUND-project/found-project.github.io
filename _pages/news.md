@@ -150,7 +150,7 @@ author_profile: true
   <div>
     <h1 style="margin: 0; font-size: 1.6rem; color: #1b4d3e;">FOUND — News & Updates</h1>
     <p style="margin: 0.4rem 0 0; font-size: 1rem; color: #333;">
-      Latest developments on our work to locate missing persons in Mexico, Colombia, and beyond.
+      Latest developments on our work.
     </p>
   </div>
 </div>
