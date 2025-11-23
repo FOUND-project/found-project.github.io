@@ -74,13 +74,14 @@ author_profile: true
   <div class="news-content">
     <p>This piece is the result of more than six months of email conversations, WhatsApp messages, and the journalist’s in-person visit to our experimental sites in Jalisco, Mexico. We are deeply grateful for the care, depth and commitment brought to this story after months spent listening to families, researchers and officials.</p>
 
-    <img src="/images/Found_theGuardian.jpeg" alt="FOUND in The Guardian" style="width: 50%; border-radius: 6px; margin-top: 1rem; margin-bottom: 1rem;">
-
     <p>
       <a href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" 
          target="_blank">
         Read the article here
       </a>
     </p>
+
+    <img src="/images/Found_theGuardian.jpeg" alt="FOUND in The Guardian" style="width: 50%; border-radius: 6px; margin-top: 1rem; margin-bottom: 1rem;">
+
   </div>
 </div>
