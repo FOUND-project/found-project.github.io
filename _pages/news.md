@@ -73,14 +73,14 @@ author_profile: true
 
 <div class="news-card">
   <div class="news-title">
-    🇨🇴🇲🇽 Second Visit of Colombia’s Search Unit (UBPD) to FOUND’s Experimental Sites in Jalisco
+    🇨🇴🇲🇽 Second Visit of Colombia’s Search Unit for Missing Persons  (UBPD) to FOUND’s Experimental Sites in Jalisco
   </div>
   <div class="news-content">
     <p>We are deeply grateful to <strong>CVM Cyber</strong> and <strong>Ciaran Martin</strong> for their generous support in making this visit possible.</p>
     <p>We welcomed <strong>Héctor Javier Gómez</strong>, geophysicist from Colombia’s <em>Unidad de Búsqueda de Personas Dadas por Desaparecidas (UBPD)</em>, for a joint field deployment to FOUND’s experimental sites in Jalisco.</p>
     <p>This visit focused on the gathering and processing of drone-based hyperspectral imagery across all five of FOUND’s experimental sites — marking only the second time this cutting-edge technology has been used in Mexico for humanitarian purposes.</p>
     <p>It follows the October 2025 visit by <strong>Dr Julián Arias</strong>, Director of Prospection, Recovery and Identification at UBPD, which formally launched our collaboration on search and identification methodologies.</p>
-    <p>During this second visit, the UBPD offered key technical recommendations to enhance FOUND’s detection strategies for clandestine graves. The collaboration will continue in January 2026, when the FOUND team will visit UBPD’s facilities in Colombia to exchange experiences and integrate UBPD methodologies across FOUND’s partner states in Mexico.</p>
+    <p>During this second visit, the UBPD offered key technical recommendations to enhance FOUND’s detection strategies for clandestine graves. The collaboration will continue in January 2026, when the FOUND team will visit UBPD’s team in Colombia to exchange experiences and integrate UBPD methodologies across FOUND’s partner states in Mexico.</p>
   </div>
 </div>
 
