@@ -142,7 +142,7 @@ author_profile: true
   gap: 1.5rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 ">
-  <img src="/images/found-logo.png" alt="FOUND Logo" style="
+  <img src="/images/Found_logo.jpg" alt="FOUND Logo" style=" 
     width: 90px;
     height: auto;
     border-radius: 4px;
