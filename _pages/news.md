@@ -4,7 +4,6 @@ title: "News"
 permalink: /news/
 author_profile: true
 ---
-
 <!-- ===========================
      NEWS CARDS STYLES
 =========================== -->
@@ -53,23 +52,32 @@ author_profile: true
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 
+  /* SHARE SECTION */
   .share-wrapper {
     margin-top: 1.5rem;
     display: flex;
-    gap: 14px;
+    gap: 28px;
     align-items: center;
   }
 
-  .share-icon {
-    font-size: 1.3rem;
-    cursor: pointer;
-    text-decoration: none;
+  .share-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: #1b4d3e;
+    text-decoration: none;
+    font-size: 0.8rem;
+    cursor: pointer;
     position: relative;
   }
 
+  .share-item .icon {
+    font-size: 1.35rem;
+    margin-bottom: 2px;
+  }
+
   /* Tooltip */
-  .share-icon:hover::after {
+  .share-item:hover .icon::after {
     content: attr(data-tooltip);
     position: absolute;
     top: -28px;
@@ -78,12 +86,13 @@ author_profile: true
     background: #1b4d3e;
     color: white;
     padding: 4px 8px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     border-radius: 4px;
     white-space: nowrap;
+    z-index: 999;
   }
 
-  /* Floating copied animation */
+  /* Floating "Copied!" popup */
   #copied-popup {
     position: fixed;
     bottom: 40px;
@@ -131,21 +140,27 @@ author_profile: true
     <p>During this second visit, the UBPD offered key technical recommendations to enhance FOUND’s detection strategies for clandestine graves. The collaboration will continue in January 2026, when the FOUND team will visit UBPD’s team in Colombia to exchange experiences and integrate UBPD methodologies across FOUND’s partner states in Mexico.</p>
 
     <div class="share-wrapper">
-      <a class="share-icon" data-tooltip="LinkedIn"
-         href="https://www.linkedin.com/shareArticle?mini=true&url=https://found-project.github.io/news/#ubpd-visit"
-         target="_blank">🔗</a>
 
-      <a class="share-icon" data-tooltip="Twitter / X"
-         href="https://twitter.com/intent/tweet?url=https://found-project.github.io/news/#ubpd-visit"
-         target="_blank">🐦</a>
+      <a class="share-item" href="https://www.linkedin.com/shareArticle?mini=true&url=https://found-project.github.io/news/#ubpd-visit" target="_blank">
+        <span class="icon" data-tooltip="LinkedIn">🔗</span>
+        <span>LinkedIn</span>
+      </a>
 
-      <a class="share-icon" data-tooltip="WhatsApp"
-         href="https://wa.me/?text=https://found-project.github.io/news/#ubpd-visit"
-         target="_blank">💬</a>
+      <a class="share-item" href="https://twitter.com/intent/tweet?url=https://found-project.github.io/news/#ubpd-visit" target="_blank">
+        <span class="icon" data-tooltip="Twitter / X">🐦</span>
+        <span>Twitter</span>
+      </a>
 
-      <span class="share-icon copy-link"
-            data-share="https://found-project.github.io/news/#ubpd-visit"
-            data-tooltip="Copy link">📋</span>
+      <a class="share-item" href="https://wa.me/?text=https://found-project.github.io/news/#ubpd-visit" target="_blank">
+        <span class="icon" data-tooltip="WhatsApp">💬</span>
+        <span>WhatsApp</span>
+      </a>
+
+      <span class="share-item copy-link" data-share="https://found-project.github.io/news/#ubpd-visit">
+        <span class="icon" data-tooltip="Copy link">📋</span>
+        <span>Copy link</span>
+      </span>
+
     </div>
   </div>
 </div>
@@ -162,30 +177,32 @@ author_profile: true
   <div class="news-content">
     <p>This piece is the result of more than six months of email conversations, WhatsApp messages, and the journalist’s in-person visit to our experimental sites in Jalisco, Mexico. We are deeply grateful for the care, depth and commitment brought to this story after months spent listening to families, researchers and officials.</p>
 
-    <p>
-      <a href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" target="_blank">
-        📖 Read the article here
-      </a>
-    </p>
+    <p><a href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" target="_blank">📖 Read the article here</a></p>
 
     <img src="/images/Found_theGuardian.jpeg" alt="FOUND in The Guardian">
 
     <div class="share-wrapper">
-      <a class="share-icon" data-tooltip="LinkedIn"
-         href="https://www.linkedin.com/shareArticle?mini=true&url=https://found-project.github.io/news/#guardian"
-         target="_blank">🔗</a>
 
-      <a class="share-icon" data-tooltip="Twitter / X"
-         href="https://twitter.com/intent/tweet?url=https://found-project.github.io/news/#guardian"
-         target="_blank">🐦</a>
+      <a class="share-item" href="https://www.linkedin.com/shareArticle?mini=true&url=https://found-project.github.io/news/#guardian" target="_blank">
+        <span class="icon" data-tooltip="LinkedIn">🔗</span>
+        <span>LinkedIn</span>
+      </a>
 
-      <a class="share-icon" data-tooltip="WhatsApp"
-         href="https://wa.me/?text=https://found-project.github.io/news/#guardian"
-         target="_blank">💬</a>
+      <a class="share-item" href="https://twitter.com/intent/tweet?url=https://found-project.github.io/news/#guardian" target="_blank">
+        <span class="icon" data-tooltip="Twitter / X">🐦</span>
+        <span>Twitter</span>
+      </a>
 
-      <span class="share-icon copy-link"
-            data-share="https://found-project.github.io/news/#guardian"
-            data-tooltip="Copy link">📋</span>
+      <a class="share-item" href="https://wa.me/?text=https://found-project.github.io/news/#guardian" target="_blank">
+        <span class="icon" data-tooltip="WhatsApp">💬</span>
+        <span>WhatsApp</span>
+      </a>
+
+      <span class="share-item copy-link" data-share="https://found-project.github.io/news/#guardian">
+        <span class="icon" data-tooltip="Copy link">📋</span>
+        <span>Copy link</span>
+      </span>
+
     </div>
   </div>
 </div>
@@ -203,10 +220,10 @@ author_profile: true
 
     <p>In the pitch, our team showcased FOUND’s impact to date, and we were awarded funding that will enable us to scale our mission: to drive systemic change in how missing persons are searched for in Mexico, Colombia, and beyond.</p>
 
-    <p>🌱 <strong>Driven by families and research communities</strong><br>
+    <p>🌱 Driven by families and research communities<br>
     FOUND is guided and motivated by mothers’ search groups and researchers from CentroGeo, UNAM, IPN, UdeG, ITESO, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.</p>
 
-    <p>🔍 <strong>We are now working directly with:</strong></p>
+    <p>🔍 We are now working directly with:</p>
     <ul style="margin-top: 0; padding-left: 20px; line-height: 1.3;">
       <li>Executive Office of the UN Secretary-General</li>
       <li>UK’s Foreign, Commonwealth & Development Office (FCDO)</li>
@@ -218,27 +235,33 @@ author_profile: true
       <li>British Association for Forensic Anthropology</li>
     </ul>
 
-    <p>🛰️ <strong>Technology for memory, dignity, and closure</strong><br>
-    We will continue developing — and embedding in official protocols — new ways to locate missing persons using advanced tools such as machine-learning models, hyperspectral cameras, seismic instruments, and electrical resistivity.</p>
+    <p>🛰️ Technology for memory, dignity, and closure<br>
+    We will continue developing — and embedding in official protocols — new ways to locate missing persons using advanced tools such as machine learning models, hyperspectral cameras, seismic instruments, and electrical resistivity.</p>
 
     <p><em>FOUND: Interpreting Nature to Locate Those We Are Missing</em></p>
 
     <div class="share-wrapper">
-      <a class="share-icon" data-tooltip="LinkedIn"
-         href="https://www.linkedin.com/shareArticle?mini=true&url=https://found-project.github.io/news/#fcdo"
-         target="_blank">🔗</a>
 
-      <a class="share-icon" data-tooltip="Twitter / X"
-         href="https://twitter.com/intent/tweet?url=https://found-project.github.io/news/#fcdo"
-         target="_blank">🐦</a>
+      <a class="share-item" href="https://www.linkedin.com/shareArticle?mini=true&url=https://found-project.github.io/news/#fcdo" target="_blank">
+        <span class="icon" data-tooltip="LinkedIn">🔗</span>
+        <span>LinkedIn</span>
+      </a>
 
-      <a class="share-icon" data-tooltip="WhatsApp"
-         href="https://wa.me/?text=https://found-project.github.io/news/#fcdo"
-         target="_blank">💬</a>
+      <a class="share-item" href="https://twitter.com/intent/tweet?url=https://found-project.github.io/news/#fcdo" target="_blank">
+        <span class="icon" data-tooltip="Twitter / X">🐦</span>
+        <span>Twitter</span>
+      </a>
 
-      <span class="share-icon copy-link"
-            data-share="https://found-project.github.io/news/#fcdo"
-            data-tooltip="Copy link">📋</span>
+      <a class="share-item" href="https://wa.me/?text=https://found-project.github.io/news/#fcdo" target="_blank">
+        <span class="icon" data-tooltip="WhatsApp">💬</span>
+        <span>WhatsApp</span>
+      </a>
+
+      <span class="share-item copy-link" data-share="https://found-project.github.io/news/#fcdo">
+        <span class="icon" data-tooltip="Copy link">📋</span>
+        <span>Copy link</span>
+      </span>
+
     </div>
   </div>
 </div>
@@ -262,21 +285,27 @@ author_profile: true
     </ul>
 
     <div class="share-wrapper">
-      <a class="share-icon" data-tooltip="LinkedIn"
-         href="https://www.linkedin.com/shareArticle?mini=true&url=https://found-project.github.io/news/#media-coverage"
-         target="_blank">🔗</a>
 
-      <a class="share-icon" data-tooltip="Twitter / X"
-         href="https://twitter.com/intent/tweet?url=https://found-project.github.io/news/#media-coverage"
-         target="_blank">🐦</a>
+      <a class="share-item" href="https://www.linkedin.com/shareArticle?mini=true&url=https://found-project.github.io/news/#media-coverage" target="_blank">
+        <span class="icon" data-tooltip="LinkedIn">🔗</span>
+        <span>LinkedIn</span>
+      </a>
 
-      <a class="share-icon" data-tooltip="WhatsApp"
-         href="https://wa.me/?text=https://found-project.github.io/news/#media-coverage"
-         target="_blank">💬</a>
+      <a class="share-item" href="https://twitter.com/intent/tweet?url=https://found-project.github.io/news/#media-coverage" target="_blank">
+        <span class="icon" data-tooltip="Twitter / X">🐦</span>
+        <span>Twitter</span>
+      </a>
 
-      <span class="share-icon copy-link"
-            data-share="https://found-project.github.io/news/#media-coverage"
-            data-tooltip="Copy link">📋</span>
+      <a class="share-item" href="https://wa.me/?text=https://found-project.github.io/news/#media-coverage" target="_blank">
+        <span class="icon" data-tooltip="WhatsApp">💬</span>
+        <span>WhatsApp</span>
+      </a>
+
+      <span class="share-item copy-link" data-share="https://found-project.github.io/news/#media-coverage">
+        <span class="icon" data-tooltip="Copy link">📋</span>
+        <span>Copy link</span>
+      </span>
+
     </div>
   </div>
 </div>
@@ -291,13 +320,13 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Expand/collapse cards */
   document.querySelectorAll(".news-card").forEach(card => {
     card.addEventListener("click", function (e) {
-      if (e.target.classList.contains("share-icon")) return;
+      if (e.target.closest(".share-item")) return; 
       card.classList.toggle("open");
     });
   });
 
   /* Copy link animation */
-  const copiedPopup = document.getElementById("copied-popup");
+  const popup = document.getElementById("copied-popup");
 
   document.querySelectorAll(".copy-link").forEach(btn => {
     btn.addEventListener("click", async function (e) {
@@ -305,10 +334,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const link = btn.dataset.share;
       await navigator.clipboard.writeText(link);
 
-      copiedPopup.classList.add("show");
-      setTimeout(() => copiedPopup.classList.remove("show"), 1500);
+      popup.classList.add("show");
+      setTimeout(() => popup.classList.remove("show"), 1500);
     });
   });
 });
 </script>
-
