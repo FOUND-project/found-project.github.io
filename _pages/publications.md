@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-<h2><strong>The Book</strong> (2024)</h2>
+<h2><strong>The Book</strong> </h2>
 
 <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem; margin-bottom: 2rem;">
   <div style="flex: 1 1 300px;">
