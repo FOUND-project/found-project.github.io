@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-<h2><strong>The Book</strong> </h2>
+<h2><strong>The Book</strong> (2024)</h2>
 
 <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 2rem; margin-bottom: 2rem;">
   <div style="flex: 1 1 300px;">
@@ -21,17 +21,15 @@ author_profile: true
   </div>
 
   <div style="flex: 0 0 250px; text-align: center;">
-    <img src="/images/the%20book.png" alt="FOUND Book Cover" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+    <img src="/images/the%20book.png" alt="FOUND Book Cover" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; margin-bottom: 1rem;">
+    
+    <a href="https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file" 
+       class="button-link" 
+       target="_blank" 
+       style="display: inline-block; padding: 0.6rem 1.2rem; background-color: #1b4d3e; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">
+      📘 Download the Book (Spanish)
+    </a>
   </div>
-</div>
-
-<div style="text-align: center; margin: 2rem 0;">
-  <a href="https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file" 
-     class="button-link" 
-     target="_blank" 
-     style="display: inline-block; padding: 0.6rem 1.2rem; background-color: #1b4d3e; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">
-    📘 Download the Book (Spanish)
-  </a>
 </div>
 ---
 
