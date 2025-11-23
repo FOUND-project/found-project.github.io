@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "[FOUND] Technologies for Locating our Disappeared"
+title: "[FOUND] Interpretar la Naturaleza para Encontrar a Quienes nos Faltan"
 author_profile: true
 redirect_from: 
   - /about/
