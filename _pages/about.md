@@ -118,7 +118,7 @@ redirect_from:
     </div>
   </div>
 
-  <p style="font-size: 1.1rem;">Over 130,000 people are reported as disappeared in Mexico. Behind each case is a family searching for answers.</p>
+  <p style="font-size: 1.1rem;">Over 120,000 people are reported as disappeared in Mexico. Behind each case is a family searching for answers.</p>
   <p style="font-size: 1.1rem;">FOUND combines science, grassroots knowledge, and political strategy to locate, restore presence, and drive systemic change.</p>
 
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="FOUND demo gif" class="intro-img">
