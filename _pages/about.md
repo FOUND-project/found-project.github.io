@@ -96,8 +96,7 @@ redirect_from:
 </style>
 
 Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
-
-**FOUND** combines technology and grassroots knowledge to locate and drive systemic change.
+**FOUND** combines technology and grassroots knowledge to search, locate and drive systemic change.
 
 <div class="responsive-img-group">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="360 gif" class="large">
