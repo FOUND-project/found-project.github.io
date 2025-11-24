@@ -6,192 +6,98 @@ redirect_from:
   - /about/
   - /about.html
 ---
-<!-- Enhanced FOUND Homepage -->
-
 <style>
   .page {
-    max-width: 1080px;
+    max-width: 1000px !important; /* Increase from ~700px default */
     margin: 0 auto;
-    padding: 0 1.5rem;
-    font-family: 'Segoe UI', sans-serif;
-  }
-
-  .hero-text {
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin: 2rem 0 1rem;
-    display: flex;
-    align-items: center;
-  }
-
-  .hero-animate-container {
-    overflow: hidden;
-    height: 1.8rem;
-    position: relative;
-  }
-
-  .hero-animate-container ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    animation: scrollWords 8s linear infinite;
-  }
-
-  .hero-animate-container li {
-    height: 1.8rem;
-    line-height: 1.8rem;
-  }
-
-  @keyframes scrollWords {
-    0% { transform: translateY(0%); }
-    100% { transform: translateY(-50%); }
-  }
-
-  .section {
-    margin: 3rem 0;
-  }
-
-  .section h2 {
-    border-left: 6px solid #1b4d3e;
-    padding-left: 1rem;
-    color: #1b4d3e;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-  }
-
-  .intro-img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin: 1rem auto;
-    display: block;
-  }
-
-  .methods-logo-group, .mothers-logo-group, .partner-logo-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .methods-logo, .mothers-logo, .partner-logo {
-    max-width: 200px;
-    height: auto;
-    object-fit: contain;
-    background-color: white;
-    padding: 10px;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-  }
-
-  .methods-logo:hover, .mothers-logo:hover, .partner-logo:hover {
-    transform: scale(1.08);
+    padding: 0 1rem;
   }
 
   @media (max-width: 768px) {
-    .hero-text {
-      flex-direction: column;
-      align-items: flex-start;
+    .page {
+      padding: 0 1rem;
     }
   }
 </style>
 
-<div class="page">
+<style>
+  .responsive-img-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 1.5rem 0;
+  }
 
-  <div class="hero-text">
-    Using technology to&nbsp;
-    <div class="hero-animate-container">
-      <ul>
-        <li>dignify.</li>
-        <li>remember.</li>
-        <li>search.</li>
-        <li>bring closure.</li>
-        <li>dignify.</li>
-        <li>remember.</li>
-        <li>search.</li>
-        <li>bring closure.</li>
-      </ul>
-    </div>
-  </div>
+  .responsive-img-group img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
 
-  <p style="font-size: 1.1rem;">Over 120,000 people are reported as disappeared in Mexico. Behind each case is a family searching for answers.</p>
-  <p style="font-size: 1.1rem;">FOUND combines science, grassroots knowledge, and political strategy to locate, restore presence, and drive systemic change.</p>
+  @media (min-width: 600px) {
+    .responsive-img-group img.small {
+      width: 200px;
+      height: 280px;
+    }
+    .responsive-img-group img.medium {
+      width: 260px;
+      height: 180px;
+    }
+    .responsive-img-group img.large {
+      width: 350px;
+    }
+    .responsive-img-group img.xlarge {
+      width: 500px;
+    }
+  }
 
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="FOUND demo gif" class="intro-img">
+  .button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: rgba(0, 128, 0, 0.6);
+    border: 2px solid #008000;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+  }
 
-  <div class="section">
-    <h2>🌱 Driven by families and research communities</h2>
-    <p>FOUND is guided and motivated by mothers' search collectives and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and more.</p>
-  </div>
+  .button-link:hover {
+    background-color: #008000;
+  }
+</style>
 
-  <div class="section">
-    <h2>Institutional Collaborations</h2>
-    <ul>
-      <li>UN Secretary-General’s Office</li>
-      <li>UK Foreign, Commonwealth & Development Office (FCDO)</li>
-      <li>Search Commissions and Attorney’s Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua</li>
-      <li>Colombia’s Search Unit (UBPD)</li>
-      <li>Mexico’s National Search Commission</li>
-      <li>Mexican Science and Technology Secretariat</li>
-      <li>British Embassy in Mexico City</li>
-      <li>British Association for Forensic Anthropology</li>
+<div style="font-size: 1.3rem; font-weight: 500; display: flex; align-items: center; height: 1.8rem; margin: 1.5rem 0;">
+  <span>Using technology to&nbsp;</span>
+  <div style="overflow: hidden; height: 1.8rem; position: relative;">
+    <ul id="found-animated-words" style="margin: 0; padding: 0; list-style: none; animation: continuousScroll 8s linear infinite;">
+      <li style="height: 1.8rem; line-height: 1.8rem;">dignify.</li>
+      <li style="height: 1.8rem; line-height: 1.8rem;">remember.</li>
+      <li style="height: 1.8rem; line-height: 1.8rem;">search.</li>
+      <li style="height: 1.8rem; line-height: 1.8rem;">bring closure.</li>
+      <!-- Repeat for seamless loop -->
+      <li style="height: 1.8rem; line-height: 1.8rem;">dignify.</li>
+      <li style="height: 1.8rem; line-height: 1.8rem;">remember.</li>
+      <li style="height: 1.8rem; line-height: 1.8rem;">search.</li>
+      <li style="height: 1.8rem; line-height: 1.8rem;">bring closure.</li>
     </ul>
-  </div>
-
-  <div class="section">
-    <h2>Technologies in Action</h2>
-    <ul>
-      <li>Multispectral & Hyperspectral Imaging</li>
-      <li>Airborne LiDAR & Laser Tech</li>
-      <li>Seismic Noise Interferometry</li>
-      <li>Electrical Resistivity Tomography</li>
-      <li>Satellite Spectral Analysis</li>
-      <li>Forensic Botany, Entomology, Soil & Territorial Analysis</li>
-    </ul>
-
-    <div class="methods-logo-group">
-      <img src="/images/360.gif" class="methods-logo">
-      <img src="/images/flowers graves.gif" class="methods-logo">
-      <img src="/images/2.jpeg" class="methods-logo">
-      <img src="/images/3.jpeg" class="methods-logo">
-      <img src="/images/6.jpg" class="methods-logo">
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>The Role of Mothers' Collectives</h2>
-    <p>Women-led collectives have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. FOUND listens, learns, and incorporates their methods into our technological efforts.</p>
-
-    <div class="mothers-logo-group">
-      <img src="/images/plant hands.jpeg" class="mothers-logo">
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Partners</h2>
-    <div class="partner-logo-group">
-      <img src="/images/1 logo Final Guerreros Buscadores.png" class="partner-logo">
-      <img src="/images/2 logo_centrogeo_wide.svg" class="partner-logo">
-      <img src="/images/4 logo oxford-university-logo.png" class="partner-logo">
-      <img src="/images/6 logo Ingenieria UNAM.png" class="partner-logo">
-      <img src="/images/11 logo BAFAlogo_orig.png" class="partner-logo">
-      <img src="/images/12 logo ubpd_color_logo.svg" class="partner-logo">
-    </div>
-  </div>
-
-  <div class="found-logo-container">
-    <p><em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan</em></p>
   </div>
 </div>
 
+<style>
+@keyframes continuousScroll {
+  0% { transform: translateY(0%); }
+  100% { transform: translateY(-50%); }
+}
+</style>
 
 Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
 
-**FOUND** combines technology, grassroots knowledge, and political strategy to locate, restore presence, and drive systemic change.
+**FOUND** combines technology and grassroots knowledge to locate and drive systemic change.
 
 <div class="responsive-img-group">
   <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="360 gif" class="large">
@@ -271,9 +177,8 @@ FOUND is guided and motivated by **mothers’ search groups** and researchers fr
    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-12-02%20at%2018.42.17.jpeg?raw=true" alt="Search practice" class="methods-logo">
 </div>
 
-
 <h2>The Role of Buscadoras</h2>
-Searching mothers in Mexico are at the heart of FOUND’s work. These women-led collectives, formed out of necessity in the face of limited or ineffective State action, have become the most consistent force in the search for the disappeared.
+Women-led collectives are at the heart of FOUND’s work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. FOUND listens, learns, and incorporates their methods into our technological efforts.
 <style>
 .mothers-logo-group {
     display: flex;
@@ -315,10 +220,6 @@ Searching mothers in Mexico are at the heart of FOUND’s work. These women-led 
 
 </div>
 
-Their determination and accumulated knowledge have led to the discovery of thousands of clandestine graves and have reshaped national conversations around disappearance and justice.
-
-Their methods—developed through years of lived experience—represent a vital form of forensic knowledge. At FOUND, we are committed to listening, learning, and incorporating their practices into our own technological approaches. Their insights shape how we use drones, remote sensing, and geophysical tools in the field.
-
 <style>
 .mothers-logo-group {
     display: flex;
@@ -354,7 +255,6 @@ Their methods—developed through years of lived experience—represent a vital 
     }
 }
 </style>
-
 
 ## Partners
 <style>
