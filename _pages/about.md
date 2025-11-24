@@ -105,7 +105,7 @@ Over 120,000 persons are reported as disappeared in Mexico. Behind each case the
 
 <h2>🌱 Driven by families and research communities</h2>
 
-FOUND is guided and motivated by **mothers’ search groups** and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.
+FOUND is guided and motivated by **search collectives** and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.
 
 <h2>Institutional Collaborations</h2>
 
