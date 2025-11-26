@@ -470,7 +470,7 @@ redirect_from:
         </div>
         <div class="social-card">
           <h3>Highlight 2</h3>
-          <p><em>Paste your second embed code here. You can replace this text entirely with the platform’s embed snippet.</em></p>
+          <p><em><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728" height="924" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></em></p>
         </div>
       </div>
     </section>
