@@ -466,7 +466,7 @@ redirect_from:
       <div class="social-grid">
         <div class="social-card">
           <h3>Highlight 1</h3>
-          <p><em>Paste your embed code here (for example, a post from X/Twitter, Instagram, Facebook, etc.).</em></p>
+          <p><em><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728" height="924" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></em></p>
         </div>
         <div class="social-card">
           <h3>Highlight 2</h3>
