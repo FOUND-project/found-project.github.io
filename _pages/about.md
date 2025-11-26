@@ -466,11 +466,11 @@ redirect_from:
       <div class="social-grid">
         <div class="social-card">
           <h3>Highlight 1</h3>
-          <p><em><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7397214737035583488?collapsed=1" height="601" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></em></p>
+          <p><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7397214737035583488?collapsed=1" height="601" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
         </div>
         <div class="social-card">
           <h3>Highlight 2</h3>
-          <p><em><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7396917134833905664" height="1338" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></em></p>
+          <p><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7396917134833905664" height="1338" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
         </div>
       </div>
     </section>
