@@ -537,6 +537,20 @@ redirect_from:
       <h2 class="section-title">Follow Our Journey</h2>
       <p class="section-subtitle">Stay connected with our latest findings, community stories, and collaborative efforts</p>
 
+<!-- Twitter/X -->
+        <div class="social-embed twitter-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">
+              Almost a year after I started researching the story, I&#39;m thrilled that my 
+              <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section.
+              <a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a>
+            </p>
+            &mdash; Suzanne Bearne (@sbearne) 
+            <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a>
+          </blockquote>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
       <div class="social-grid">
         <!-- LinkedIn FCDO -->
         <div class="social-embed">
@@ -569,20 +583,6 @@ redirect_from:
             frameborder="0"
             allowfullscreen=""
             title="Embedded LinkedIn post 2"></iframe>
-        </div>
-
-        <!-- Twitter/X -->
-        <div class="social-embed twitter-embed">
-          <blockquote class="twitter-tweet">
-            <p lang="en" dir="ltr">
-              Almost a year after I started researching the story, I&#39;m thrilled that my 
-              <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section.
-              <a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a>
-            </p>
-            &mdash; Suzanne Bearne (@sbearne) 
-            <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a>
-          </blockquote>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
     </section>
