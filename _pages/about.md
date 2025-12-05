@@ -6,6 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -21,58 +22,66 @@ redirect_from:
     :root {
       --primary-green: #2d5f4d;
       --light-green: #4a8c73;
-      --accent-green: rgba(0, 128, 0, 0.1);
+      --accent-green: #e8f5f0;
       --text-dark: #1a1a1a;
+      --text-medium: #4a4a4a;
       --text-light: #666;
-      --bg-light: #f8f9fa;
+      --border-light: #e0e0e0;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
       color: var(--text-dark);
-      line-height: 1.7;
-      background: #fff;
+      line-height: 1.65;
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     .page {
-      max-width: 1200px;
+      max-width: 1240px;
       margin: 0 auto;
-      padding: 0 2rem;
+      padding: 0 2.5rem;
     }
 
     /* Hero Section */
     .hero {
-      padding: 4rem 0 3rem;
-      border-bottom: 1px solid #e0e0e0;
+      padding: 5rem 0 4rem;
+      border-bottom: 2px solid var(--border-light);
+      background: linear-gradient(to bottom, #ffffff 0%, #fafbfa 100%);
     }
 
     .animated-tagline {
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 600;
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 700;
       display: flex;
       align-items: center;
       margin-bottom: 2rem;
       color: var(--primary-green);
       flex-wrap: wrap;
       gap: 0.5rem;
+      letter-spacing: -0.02em;
     }
 
     .word-carousel {
       overflow: hidden;
-      height: 2.5rem;
+      height: 3rem;
       position: relative;
       display: inline-block;
-      min-width: 180px;
+      min-width: 200px;
     }
 
     .word-list {
       list-style: none;
-      animation: continuousScroll 10s linear infinite;
+      animation: continuousScroll 12s linear infinite;
     }
 
     .word-list li {
-      height: 2.5rem;
-      line-height: 2.5rem;
+      height: 3rem;
+      line-height: 3rem;
       color: var(--light-green);
       font-weight: 700;
     }
@@ -83,82 +92,115 @@ redirect_from:
     }
 
     .hero-description {
-      font-size: 1.15rem;
-      color: var(--text-light);
-      max-width: 800px;
-      margin-bottom: 2rem;
-      line-height: 1.8;
+      font-size: 1.2rem;
+      color: var(--text-medium);
+      max-width: 850px;
+      margin-bottom: 2.5rem;
+      line-height: 1.75;
+      font-weight: 400;
+    }
+
+    .hero-description strong {
+      color: var(--primary-green);
+      font-weight: 600;
     }
 
     .hero-image {
       width: 100%;
-      max-width: 600px;
-      margin: 2rem auto;
+      max-width: 700px;
+      margin: 3rem auto;
       display: block;
-      border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      border-radius: 16px;
+      box-shadow: var(--shadow-lg);
+      transition: transform 0.3s ease;
+    }
+
+    .hero-image:hover {
+      transform: scale(1.02);
     }
 
     /* Social Media Section */
     .social-section {
-      background: linear-gradient(135deg, var(--accent-green) 0%, rgba(74, 140, 115, 0.05) 100%);
-      padding: 2rem 0;
-      margin: 1.5rem 0;
-      border-radius: 16px;
+      background: var(--accent-green);
+      padding: 3rem 2.5rem;
+      margin: 3rem -2.5rem;
+      position: relative;
+    }
+
+    .social-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary-green), transparent);
+      opacity: 0.2;
     }
 
     .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-size: clamp(2rem, 4vw, 2.75rem);
       font-weight: 700;
       color: var(--primary-green);
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
       text-align: center;
+      letter-spacing: -0.02em;
     }
 
     .section-subtitle {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: var(--text-light);
       text-align: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
+      line-height: 1.6;
     }
 
-    /* Social grid instead of carousel */
     .social-grid {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
     }
 
     .social-embed {
-      background: #fff;
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-md);
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 360px;
+      min-height: 400px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(45, 95, 77, 0.08);
+      overflow: hidden;
+    }
+
+    .social-embed:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+      border-color: var(--light-green);
     }
 
     .social-embed iframe {
       width: 100%;
-      border-radius: 8px;
+      border-radius: 12px;
       border: 0;
+      max-width: 504px;
     }
 
     .social-embed.twitter-embed {
-      min-height: 420px;
+      min-height: 450px;
     }
 
     /* Content Sections */
     .content-section {
-      padding: 2rem 0;
-      border-bottom: 1px solid #e8e8e8;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border-light);
     }
 
     .content-section:last-of-type {
@@ -166,21 +208,46 @@ redirect_from:
     }
 
     h2 {
-      font-size: clamp(1.6rem, 3vw, 2rem);
+      font-size: clamp(1.75rem, 3vw, 2.25rem);
       font-weight: 700;
       color: var(--primary-green);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
+      letter-spacing: -0.01em;
+      position: relative;
+      padding-bottom: 0.75rem;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--light-green);
+      border-radius: 2px;
     }
 
     .info-list {
       list-style: none;
       padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 0.75rem 2rem;
+      margin-top: 2rem;
     }
 
     .info-list li {
-      padding: 0.5rem 0 0.5rem 2rem;
+      padding: 0.75rem 0 0.75rem 2.25rem;
       position: relative;
-      color: var(--text-light);
+      color: var(--text-medium);
+      font-size: 1.05rem;
+      transition: all 0.2s ease;
+    }
+
+    .info-list li:hover {
+      color: var(--primary-green);
+      padding-left: 2.5rem;
     }
 
     .info-list li:before {
@@ -189,114 +256,191 @@ redirect_from:
       left: 0;
       color: var(--light-green);
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      transition: all 0.2s ease;
+    }
+
+    .info-list li:hover:before {
+      transform: scale(1.2);
     }
 
     /* Image Galleries */
     .image-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.75rem;
+      margin: 2.5rem 0;
     }
 
     .gallery-item {
       position: relative;
       overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
       background: white;
-      padding: 12px;
-      transition: all 0.3s ease;
+      padding: 0.75rem;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
       cursor: pointer;
+      border: 1px solid rgba(0,0,0,0.04);
     }
 
     .gallery-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: var(--shadow-lg);
       z-index: 10;
+      border-color: var(--light-green);
     }
 
     .gallery-item img {
       width: 100%;
       height: auto;
       display: block;
-      border-radius: 6px;
+      border-radius: 8px;
+      transition: transform 0.35s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
     }
 
     /* Partner Logos */
     .partner-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 2rem;
-      margin: 2.5rem 0;
+      margin: 3rem 0;
     }
 
     .partner-logo {
       background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.3s ease;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(0,0,0,0.04);
+      min-height: 140px;
     }
 
     .partner-logo:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--light-green);
     }
 
     .partner-logo img {
       max-width: 100%;
       height: auto;
-      max-height: 80px;
+      max-height: 90px;
       object-fit: contain;
+      filter: grayscale(20%);
+      transition: filter 0.3s ease;
+    }
+
+    .partner-logo:hover img {
+      filter: grayscale(0%);
     }
 
     /* Footer */
     .footer {
       text-align: center;
-      padding: 3rem 0;
-      margin-top: 3rem;
-      border-top: 1px solid #e0e0e0;
+      padding: 4rem 0;
+      margin-top: 4rem;
+      border-top: 2px solid var(--border-light);
+      background: linear-gradient(to top, #fafbfa 0%, #ffffff 100%);
     }
 
     .footer em {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: var(--primary-green);
-      font-weight: 500;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: 0.01em;
+    }
+
+    /* Emoji spacing fix */
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     /* Responsive */
+    @media (max-width: 1024px) {
+      .social-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+    }
+
     @media (max-width: 768px) {
       .page {
         padding: 0 1.5rem;
       }
 
       .hero {
-        padding: 2rem 0;
+        padding: 3rem 0 2rem;
       }
 
       .social-section {
-        padding: 3rem 1rem;
-        margin: 2rem 0;
+        padding: 3rem 1.5rem;
+        margin: 3rem -1.5rem;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
 
       .content-section {
-        padding: 2.5rem 0;
+        padding: 2rem 0;
       }
 
       .image-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 1.25rem;
       }
 
       .partner-grid {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1.5rem;
       }
+
+      .info-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .animated-tagline {
+        font-size: 1.5rem;
+      }
+
+      .word-carousel {
+        height: 2.5rem;
+        min-width: 160px;
+      }
+
+      .word-list li {
+        height: 2.5rem;
+        line-height: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Selection styling */
+    ::selection {
+      background: var(--light-green);
+      color: white;
     }
   </style>
 </head>
@@ -327,68 +471,9 @@ redirect_from:
       <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="FOUND Project in Action" class="hero-image">
     </section>
 
-    <!-- Social Media Section – Grid -->
-    <section class="social-section">
-      <h2 class="section-title">Follow Our Journey</h2>
-      <p class="section-subtitle">Stay connected with our latest findings, community stories, and collaborative efforts</p>
-
-      <div class="social-grid">
-
- <!-- LinkedIn 4 – FCDO activity -->
-        <div class="social-embed">
-          <iframe
-            src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624"
-            height="924"
-            width="504"
-            frameborder="0"
-            allowfullscreen=""
-            title="FCDO LinkedIn post"></iframe>
-        </div>
-
-        <!-- LinkedIn 1 -->
-        <div class="social-embed">
-          <iframe
-            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7398929122778877954"
-            height="1170"
-            width="504"
-            frameborder="0"
-            allowfullscreen=""
-            title="Embedded LinkedIn post 1"></iframe>
-        </div>
-
-        <!-- LinkedIn 2 -->
-        <div class="social-embed">
-          <iframe
-            src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
-            height="924"
-            width="504"
-            frameborder="0"
-            allowfullscreen=""
-            title="Embedded LinkedIn post 2"></iframe>
-        </div>
-
-<!-- Twitter/X -->
-        <div class="social-embed twitter-embed">
-          <blockquote class="twitter-tweet">
-            <p lang="en" dir="ltr">
-              Almost a year after I started researching the story, I&#39;m thrilled that my 
-              <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section.
-              <a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a>
-            </p>
-            &mdash; Suzanne Bearne (@sbearne) 
-            <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a>
-          </blockquote>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-
-       
-
-      </div>
-    </section>
-
     <!-- Community Driven Section -->
     <section class="content-section">
-      <h2>🌱 Driven by families and research communities</h2>
+      <h2><span>🌱</span><span>Driven by families and research communities</span></h2>
       <p class="hero-description">
         FOUND is guided and motivated by <strong>search collectives</strong> and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.
       </p>
@@ -442,8 +527,63 @@ redirect_from:
       <p class="hero-description">
         Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. FOUND listens, learns, and incorporates their methods into our technological efforts.
       </p>
-      <div class="image-gallery" style="max-width: 400px; margin: 2rem auto;">
+      <div class="image-gallery" style="max-width: 450px; margin: 2rem auto;">
         <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Buscadoras at work"></div>
+      </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+      <h2 class="section-title">Follow Our Journey</h2>
+      <p class="section-subtitle">Stay connected with our latest findings, community stories, and collaborative efforts</p>
+
+      <div class="social-grid">
+        <!-- LinkedIn FCDO -->
+        <div class="social-embed">
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624"
+            height="924"
+            width="504"
+            frameborder="0"
+            allowfullscreen=""
+            title="FCDO LinkedIn post"></iframe>
+        </div>
+
+        <!-- LinkedIn 1 -->
+        <div class="social-embed">
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7398929122778877954"
+            height="1170"
+            width="504"
+            frameborder="0"
+            allowfullscreen=""
+            title="Embedded LinkedIn post 1"></iframe>
+        </div>
+
+        <!-- LinkedIn 2 -->
+        <div class="social-embed">
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
+            height="924"
+            width="504"
+            frameborder="0"
+            allowfullscreen=""
+            title="Embedded LinkedIn post 2"></iframe>
+        </div>
+
+        <!-- Twitter/X -->
+        <div class="social-embed twitter-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">
+              Almost a year after I started researching the story, I&#39;m thrilled that my 
+              <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section.
+              <a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a>
+            </p>
+            &mdash; Suzanne Bearne (@sbearne) 
+            <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a>
+          </blockquote>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
       </div>
     </section>
 
