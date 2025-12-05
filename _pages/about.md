@@ -441,7 +441,7 @@ redirect_from:
             <div class="social-embed">
               <iframe
                 class="linkedin-embed"
-                src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
+                src="<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728" height="924" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>"
                 frameborder="0"
                 allowfullscreen=""
                 title="Embedded LinkedIn Post"></iframe>
