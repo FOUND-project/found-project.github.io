@@ -354,15 +354,8 @@ redirect_from:
         
         <div class="social-embed">
           <div class="social-placeholder">
-            <h3>Instagram Posts</h3>
-            <p>Embed Instagram posts here using:<br>Instagram embed code</p>
-          </div>
-        </div>
-        
-        <div class="social-embed">
-          <div class="social-placeholder">
             <h3>LinkedIn Updates</h3>
-            <p>Embed LinkedIn posts here using:<br>LinkedIn embed code</p>
+            <p><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7395051185759682560" height="852" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
           </div>
         </div>
       </div>
