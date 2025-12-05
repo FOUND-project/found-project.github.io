@@ -334,18 +334,15 @@ redirect_from:
 
       <div class="social-grid">
 
-        <!-- Twitter/X -->
-        <div class="social-embed twitter-embed">
-          <blockquote class="twitter-tweet">
-            <p lang="en" dir="ltr">
-              Almost a year after I started researching the story, I&#39;m thrilled that my 
-              <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section.
-              <a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a>
-            </p>
-            &mdash; Suzanne Bearne (@sbearne) 
-            <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a>
-          </blockquote>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+ <!-- LinkedIn 4 – FCDO activity -->
+        <div class="social-embed">
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624"
+            height="924"
+            width="504"
+            frameborder="0"
+            allowfullscreen=""
+            title="FCDO LinkedIn post"></iframe>
         </div>
 
         <!-- LinkedIn 1 -->
@@ -370,27 +367,21 @@ redirect_from:
             title="Embedded LinkedIn post 2"></iframe>
         </div>
 
-        <!-- LinkedIn 3 -->
-        <div class="social-embed">
-          <iframe
-            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7395051185759682560"
-            height="852"
-            width="504"
-            frameborder="0"
-            allowfullscreen=""
-            title="Embedded LinkedIn post 3"></iframe>
+<!-- Twitter/X -->
+        <div class="social-embed twitter-embed">
+          <blockquote class="twitter-tweet">
+            <p lang="en" dir="ltr">
+              Almost a year after I started researching the story, I&#39;m thrilled that my 
+              <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section.
+              <a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a>
+            </p>
+            &mdash; Suzanne Bearne (@sbearne) 
+            <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a>
+          </blockquote>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
 
-        <!-- LinkedIn 4 – FCDO activity -->
-        <div class="social-embed">
-          <iframe
-            src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624"
-            height="924"
-            width="504"
-            frameborder="0"
-            allowfullscreen=""
-            title="FCDO LinkedIn post"></iframe>
-        </div>
+       
 
       </div>
     </section>
