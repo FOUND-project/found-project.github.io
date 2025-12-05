@@ -356,7 +356,7 @@ redirect_from:
 <div class="social-embed">
           <div class="social-placeholder">
             <h3>LinkedIn Updates</h3>
-           <br></<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728" height="924" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></p>
+            <p>Embed LinkedIn posts here using:<br><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728" height="924" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
           </div>
         </div>
       </div>
