@@ -353,12 +353,10 @@ redirect_from:
           </div>
         </div>
         
-in this code, include the linkedin embed code at the end
-
 <div class="social-embed">
           <div class="social-placeholder">
             <h3>LinkedIn Updates</h3>
-           <br><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728" height="924" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
+           <br></<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728" height="924" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></p>
           </div>
         </div>
       </div>
