@@ -102,8 +102,8 @@ redirect_from:
     /* Social Media Section */
     .social-section {
       background: linear-gradient(135deg, var(--accent-green) 0%, rgba(74, 140, 115, 0.05) 100%);
-      padding: 4rem 0;
-      margin: 3rem 0;
+      padding: 2rem 0;
+      margin: 1.5rem 0;
       border-radius: 16px;
     }
 
@@ -119,7 +119,7 @@ redirect_from:
       font-size: 1.1rem;
       color: var(--text-light);
       text-align: center;
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
@@ -164,7 +164,7 @@ redirect_from:
 
     /* Content Sections */
     .content-section {
-      padding: 4rem 0;
+      padding: 2rem 0;
       border-bottom: 1px solid #e8e8e8;
     }
 
@@ -348,14 +348,21 @@ redirect_from:
         <div class="social-embed">
           <div class="social-placeholder">
             <h3>Twitter/X Feed</h3>
-            <p><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Almost a year after I started researching the story, I&#39;m thrilled that my <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section.<a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a></p>&mdash; Suzanne Bearne (@sbearne) <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+            <p>Embed your Twitter timeline here using:<br><code>&lt;iframe&gt;</code> or Twitter widget code</p>
+          </div>
+        </div>
+        
+        <div class="social-embed">
+          <div class="social-placeholder">
+            <h3>Instagram Posts</h3>
+            <p>Embed Instagram posts here using:<br>Instagram embed code</p>
           </div>
         </div>
         
         <div class="social-embed">
           <div class="social-placeholder">
             <h3>LinkedIn Updates</h3>
-            <p><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7395051185759682560" height="852" width="504" frameborder="0" title="Embedded post"></iframe></p>
+            <p>Embed LinkedIn posts here using:<br>LinkedIn embed code</p>
           </div>
         </div>
       </div>
@@ -400,7 +407,6 @@ redirect_from:
         <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 Technology"></div>
         <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Field Documentation"></div>
         <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Field Equipment"></div>
-        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search Practice"></div>
         <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/2.jpeg?raw=true" alt="Community Work"></div>
         <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Search Tools"></div>
         <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/3.jpeg?raw=true" alt="Field Research"></div>
@@ -408,6 +414,7 @@ redirect_from:
         <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6.jpg?raw=true" alt="Technology in Use"></div>
         <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/IMG-20231204-WA0038.jpg?raw=true" alt="Field Operations"></div>
         <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-12-02%20at%2018.42.17.jpeg?raw=true" alt="Search Activities"></div>
+        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search Practice"></div>
       </div>
     </section>
 
