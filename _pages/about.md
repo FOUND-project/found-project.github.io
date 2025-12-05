@@ -6,7 +6,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -437,38 +436,44 @@ redirect_from:
               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
 
-            <!-- Slide 2 – LinkedIn -->
+            <!-- Slide 2 – LinkedIn: share 7398929122778877954 -->
             <div class="social-embed">
               <iframe
                 class="linkedin-embed"
-                src="<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728" height="924" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>"
+                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7398929122778877954"
                 frameborder="0"
                 allowfullscreen=""
-                title="Embedded LinkedIn Post"></iframe>
+                title="FOUND LinkedIn post 1"></iframe>
             </div>
 
-            <!-- Slide 3 – Placeholder -->
+            <!-- Slide 3 – LinkedIn: ugcPost 7398371958595145728 -->
             <div class="social-embed">
-              <div class="social-placeholder">
-                <h3>Coming soon…</h3>
-                <p>More FOUND updates – including new stories and social media content – will appear here.</p>
-              </div>
+              <iframe
+                class="linkedin-embed"
+                src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
+                frameborder="0"
+                allowfullscreen=""
+                title="FOUND LinkedIn post 2"></iframe>
             </div>
 
-            <!-- Slide 4 – Placeholder -->
+            <!-- Slide 4 – LinkedIn: share 7395051185759682560 -->
             <div class="social-embed">
-              <div class="social-placeholder">
-                <h3>Media Highlights</h3>
-                <p>Documentaries, interviews, and coverage about FOUND and our partners.</p>
-              </div>
+              <iframe
+                class="linkedin-embed"
+                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7395051185759682560"
+                frameborder="0"
+                allowfullscreen=""
+                title="FOUND LinkedIn post 3"></iframe>
             </div>
 
-            <!-- Slide 5 – Placeholder -->
+            <!-- Slide 5 – LinkedIn: FCDO activity 7343552976185114624 -->
             <div class="social-embed">
-              <div class="social-placeholder">
-                <h3>Community Stories</h3>
-                <p>Experiences and reflections shared by buscadoras, families, and collaborators.</p>
-              </div>
+              <iframe
+                class="linkedin-embed"
+                src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624"
+                frameborder="0"
+                allowfullscreen=""
+                title="FCDO LinkedIn post"></iframe>
             </div>
 
           </div>
