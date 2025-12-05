@@ -353,23 +353,20 @@ redirect_from:
           </div>
         </div>
         
-    <div class="social-embed">
-  <div class="social-placeholder">
-    <h3>LinkedIn Updates</h3>
-    <p>Latest updates from our LinkedIn page:</p>
-  </div>
+in this code, include the linkedin embed code at the end
 
-  <!-- LinkedIn Embed -->
-  <iframe 
-    src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
-    height="924"
-    width="504"
-    frameborder="0"
-    allowfullscreen=""
-    title="Embedded LinkedIn Post">
-  </iframe>
-</div>
-</section>
+<div class="social-embed">
+          <div class="social-placeholder">
+            <h3>LinkedIn Updates</h3>
+           <br><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728" height="924" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728" height="924" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 
     <!-- Community Driven Section -->
     <section class="content-section">
