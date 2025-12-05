@@ -348,7 +348,7 @@ redirect_from:
         <div class="social-embed">
           <div class="social-placeholder">
             <h3>Twitter/X Feed</h3>
-            <p>Embed your Twitter timeline here using:<br><code>&lt;iframe&gt;</code> or Twitter widget code</p>
+            <p><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Almost a year after I started researching the story, I&#39;m thrilled that my <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section.<a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a></p>&mdash; Suzanne Bearne (@sbearne) <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
           </div>
         </div>
         
