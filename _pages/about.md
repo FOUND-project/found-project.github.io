@@ -355,7 +355,7 @@ redirect_from:
         <div class="social-embed">
           <div class="social-placeholder">
             <h3>LinkedIn Updates</h3>
-            <p><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7395051185759682560" height="852" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></p>
+            <p><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7395051185759682560" height="852" width="504" frameborder="0" title="Embedded post"></iframe></p>
           </div>
         </div>
       </div>
