@@ -6,6 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
