@@ -362,10 +362,6 @@ redirect_from:
       </div>
     </section>
 
-
-
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728" height="924" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-
     <!-- Community Driven Section -->
     <section class="content-section">
       <h2>🌱 Driven by families and research communities</h2>
