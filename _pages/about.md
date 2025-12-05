@@ -12,7 +12,6 @@ redirect_from:
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FOUND Project - Using Technology to Search and Remember</title>
-
   <style>
     * {
       margin: 0;
@@ -42,7 +41,7 @@ redirect_from:
       padding: 0 2rem;
     }
 
-    /* Hero */
+    /* Hero Section */
     .hero {
       padding: 4rem 0 3rem;
       border-bottom: 1px solid #e0e0e0;
@@ -101,7 +100,7 @@ redirect_from:
       box-shadow: 0 8px 30px rgba(0,0,0,0.12);
     }
 
-    /* FOLLOW OUR JOURNEY — CAROUSEL */
+    /* Social Media Section */
     .social-section {
       background: linear-gradient(135deg, var(--accent-green) 0%, rgba(74, 140, 115, 0.05) 100%);
       padding: 2rem 0;
@@ -127,6 +126,7 @@ redirect_from:
       margin-right: auto;
     }
 
+    /* Carousel */
     .social-carousel {
       max-width: 1100px;
       margin: 0 auto;
@@ -138,71 +138,88 @@ redirect_from:
     .carousel-window {
       overflow: hidden;
       flex: 1;
+      touch-action: pan-y;
     }
 
     .carousel-track {
       display: flex;
-      transition: transform 0.5s ease;
+      transition: transform 0.4s ease;
       will-change: transform;
     }
 
     .social-embed {
       background: white;
       border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      min-height: 400px;
+      padding: 1rem;
+      min-height: 420px;
       min-width: 100%;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       box-sizing: border-box;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .social-placeholder {
+      text-align: center;
+      color: var(--text-light);
+      padding: 1rem;
+    }
+
+    .social-placeholder h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-green);
+    }
+
+    .linkedin-embed {
+      width: 100%;
+      height: 70vh;
+      max-height: 600px;
+      border: 0;
+      border-radius: 8px;
     }
 
     .carousel-btn {
-      background: #ffffff;
-      border-radius: 999px;
-      border: 1px solid rgba(0,0,0,0.1);
-      width: 38px;
-      height: 38px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: white;
+      border: 1px solid rgba(0,0,0,0.15);
+      border-radius: 50%;
+      width: 42px;
+      height: 42px;
+      font-size: 1.6rem;
+      color: var(--primary-green);
       cursor: pointer;
+      flex-shrink: 0;
       box-shadow: 0 2px 8px rgba(0,0,0,0.12);
       transition: 0.2s ease;
-      color: var(--primary-green);
-      font-size: 1.4rem;
-      flex-shrink: 0;
     }
 
     .carousel-btn:hover {
-      background: rgba(74, 140, 115, 0.06);
-      transform: translateY(-2px);
+      background: rgba(74,140,115,0.12);
+      transform: translateY(-1px);
     }
 
     .carousel-dots {
-      margin-top: 1.2rem;
+      margin-top: 1rem;
       text-align: center;
     }
 
     .carousel-dots .dot {
       width: 10px;
       height: 10px;
-      border-radius: 999px;
-      border: none;
+      border-radius: 50%;
       margin: 0 4px;
-      background: rgba(0,0,0,0.18);
+      background: rgba(0,0,0,0.25);
+      border: none;
       cursor: pointer;
       transition: 0.2s ease;
     }
 
     .carousel-dots .dot.active {
       background: var(--primary-green);
-      width: 16px;
-      transform: scale(1.15);
+      transform: scale(1.2);
     }
-
 
     /* Content Sections */
     .content-section {
@@ -241,7 +258,7 @@ redirect_from:
       font-size: 1.2rem;
     }
 
-    /* Gallery */
+    /* Image Galleries */
     .image-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -250,19 +267,30 @@ redirect_from:
     }
 
     .gallery-item {
+      position: relative;
       overflow: hidden;
       border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       background: white;
       padding: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      z-index: 10;
     }
 
     .gallery-item img {
       width: 100%;
+      height: auto;
+      display: block;
       border-radius: 6px;
     }
 
-    /* Partners */
+    /* Partner Logos */
     .partner-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -274,10 +302,23 @@ redirect_from:
       background: white;
       padding: 1.5rem;
       border-radius: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .partner-logo:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+
+    .partner-logo img {
+      max-width: 100%;
+      height: auto;
+      max-height: 80px;
+      object-fit: contain;
     }
 
     /* Footer */
@@ -288,183 +329,335 @@ redirect_from:
       border-top: 1px solid #e0e0e0;
     }
 
+    .footer em {
+      font-size: 1.2rem;
+      color: var(--primary-green);
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .page {
+        padding: 0 1.5rem;
+      }
+
+      .hero {
+        padding: 2rem 0;
+      }
+
+      .social-section {
+        padding: 3rem 1rem;
+        margin: 2rem 0;
+      }
+
+      .social-carousel {
+        gap: 0.3rem;
+      }
+
+      .carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+      }
+
+      .social-embed {
+        padding: 0.5rem;
+        min-height: 360px;
+      }
+
+      .linkedin-embed {
+        height: 60vh;
+      }
+
+      .content-section {
+        padding: 2.5rem 0;
+      }
+
+      .image-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+      }
+
+      .partner-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 1rem;
+      }
+    }
   </style>
 </head>
-
 <body>
-<div class="page">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="animated-tagline">
-      <span>Using technology to&nbsp;</span>
-      <div class="word-carousel">
-        <ul class="word-list">
-          <li>dignify.</li>
-          <li>remember.</li>
-          <li>search.</li>
-          <li>bring closure.</li>
-          <li>dignify.</li>
-          <li>remember.</li>
-          <li>search.</li>
-          <li>bring closure.</li>
-        </ul>
-      </div>
-    </div>
-
-    <p class="hero-description">
-      Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
-      <strong>FOUND</strong> combines technology and grassroots knowledge to search, locate and drive systemic change.
-    </p>
-
-    <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true"
-         class="hero-image" alt="FOUND Project in Action">
-  </section>
-
-
-  <!-- FOLLOW OUR JOURNEY CAROUSEL -->
-  <section class="social-section">
-    <h2 class="section-title">Follow Our Journey</h2>
-    <p class="section-subtitle">Stay connected with our latest findings, community stories, and collaborative efforts</p>
-
-    <div class="social-carousel">
-      <button class="carousel-btn prev">&#10094;</button>
-
-      <div class="carousel-window">
-        <div class="carousel-track">
-
-          <!-- Slide 1: Twitter -->
-          <div class="social-embed">
-            <blockquote class="twitter-tweet">
-              <p lang="en">
-                Almost a year after I started researching the story, I'm thrilled that my
-                @guardian article about the innovations used to find disappeared persons in Mexico is now trending.
-              </p>
-              — Suzanne Bearne (@sbearne)
-              <a href="https://twitter.com/sbearne/status/1991827389375193330">
-                November 21, 2025
-              </a>
-            </blockquote>
-            <script async src="https://platform.twitter.com/widgets.js"></script>
-          </div>
-
-          <!-- Slide 2: LinkedIn -->
-          <div class="social-embed">
-            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
-                    height="924" width="504" frameborder="0"
-                    allowfullscreen="" title="Embedded LinkedIn Post"
-                    style="max-width: 100%;">
-            </iframe>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="social-embed">
-            <div>
-              <h3>Coming soon…</h3>
-              <p>More FOUND updates and embeds will appear here.</p>
-            </div>
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="social-embed">
-            <div>
-              <h3>Media Highlights</h3>
-              <p>Documentaries, interviews, and news coverage.</p>
-            </div>
-          </div>
-
-          <!-- Slide 5 -->
-          <div class="social-embed">
-            <div>
-              <h3>Community Stories</h3>
-              <p>Stories from buscadoras, partners, and communities.</p>
-            </div>
-          </div>
-
+  <div class="page">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="animated-tagline">
+        <span>Using technology to&nbsp;</span>
+        <div class="word-carousel">
+          <ul class="word-list">
+            <li>dignify.</li>
+            <li>remember.</li>
+            <li>search.</li>
+            <li>bring closure.</li>
+            <li>dignify.</li>
+            <li>remember.</li>
+            <li>search.</li>
+            <li>bring closure.</li>
+          </ul>
         </div>
       </div>
 
-      <button class="carousel-btn next">&#10095;</button>
-    </div>
+      <p class="hero-description">
+        Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology and grassroots knowledge to search, locate and drive systemic change.
+      </p>
 
-    <div class="carousel-dots">
-      <button class="dot active" data-slide="0"></button>
-      <button class="dot" data-slide="1"></button>
-      <button class="dot" data-slide="2"></button>
-      <button class="dot" data-slide="3"></button>
-      <button class="dot" data-slide="4"></button>
-    </div>
+      <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" alt="FOUND Project in Action" class="hero-image">
+    </section>
 
-  </section>
+    <!-- Social Media Section – Carousel -->
+    <section class="social-section">
+      <h2 class="section-title">Follow Our Journey</h2>
+      <p class="section-subtitle">Stay connected with our latest findings, community stories, and collaborative efforts</p>
 
+      <div class="social-carousel">
+        <button class="carousel-btn prev" aria-label="Previous update">&#10094;</button>
 
-  <!-- COMMUNITY SECTION -->
-  <section class="content-section">
-    <h2>🌱 Driven by families and research communities</h2>
-    <p class="hero-description">
-      FOUND is guided and motivated by <strong>search collectives</strong> and researchers from leading universities and institutions.
-    </p>
-  </section>
+        <div class="carousel-window">
+          <div class="carousel-track">
 
+            <!-- Slide 1 – Twitter/X -->
+            <div class="social-embed">
+              <blockquote class="twitter-tweet">
+                <p lang="en" dir="ltr">
+                  Almost a year after I started researching the story, I&#39;m thrilled that my 
+                  <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section.
+                  <a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a>
+                </p>
+                &mdash; Suzanne Bearne (@sbearne) 
+                <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a>
+              </blockquote>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
 
-  <!-- INSTITUTIONAL COLLABORATIONS -->
-  <section class="content-section">
-    <h2>Institutional Collaborations</h2>
-    <ul class="info-list">
-      <li>Executive Office of the UN Secretary-General</li>
-      <li>FCDO (United Kingdom)</li>
-      <li>Local Search Commissions</li>
-      <li>Colombian Search Unit</li>
-      <li>National Search Commission of Mexico</li>
-    </ul>
-  </section>
+            <!-- Slide 2 – LinkedIn -->
+            <div class="social-embed">
+              <iframe
+                class="linkedin-embed"
+                src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
+                frameborder="0"
+                allowfullscreen=""
+                title="Embedded LinkedIn Post"></iframe>
+            </div>
 
+            <!-- Slide 3 – Placeholder -->
+            <div class="social-embed">
+              <div class="social-placeholder">
+                <h3>Coming soon…</h3>
+                <p>More FOUND updates – including new stories and social media content – will appear here.</p>
+              </div>
+            </div>
 
-  <!-- TECHNOLOGIES -->
-  <section class="content-section">
-    <h2>Technologies in Action</h2>
-    <ul class="info-list">
-      <li>Multispectral & Hyperspectral Imaging</li>
-      <li>LiDAR</li>
-      <li>Seismic Noise Interferometry</li>
-      <li>Electrical Resistivity</li>
-      <li>Satellite Analysis</li>
-    </ul>
-  </section>
+            <!-- Slide 4 – Placeholder -->
+            <div class="social-embed">
+              <div class="social-placeholder">
+                <h3>Media Highlights</h3>
+                <p>Documentaries, interviews, and coverage about FOUND and our partners.</p>
+              </div>
+            </div>
 
+            <!-- Slide 5 – Placeholder -->
+            <div class="social-embed">
+              <div class="social-placeholder">
+                <h3>Community Stories</h3>
+                <p>Experiences and reflections shared by buscadoras, families, and collaborators.</p>
+              </div>
+            </div>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan</em>
-  </footer>
+          </div>
+        </div>
 
-</div>
+        <button class="carousel-btn next" aria-label="Next update">&#10095;</button>
+      </div>
 
-<!-- CAROUSEL SCRIPT -->
-<script>
-(function () {
-  const track = document.querySelector('.carousel-track');
-  const slides = document.querySelectorAll('.social-embed');
-  const prevBtn = document.querySelector('.carousel-btn.prev');
-  const nextBtn = document.querySelector('.carousel-btn.next');
-  const dots = document.querySelectorAll('.carousel-dots .dot');
+      <div class="carousel-dots" aria-label="Carousel navigation">
+        <button class="dot active" data-slide="0" aria-label="Go to slide 1"></button>
+        <button class="dot" data-slide="1" aria-label="Go to slide 2"></button>
+        <button class="dot" data-slide="2" aria-label="Go to slide 3"></button>
+        <button class="dot" data-slide="3" aria-label="Go to slide 4"></button>
+        <button class="dot" data-slide="4" aria-label="Go to slide 5"></button>
+      </div>
+    </section>
 
-  let index = 0;
+    <!-- Community Driven Section -->
+    <section class="content-section">
+      <h2>🌱 Driven by families and research communities</h2>
+      <p class="hero-description">
+        FOUND is guided and motivated by <strong>search collectives</strong> and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.
+      </p>
+    </section>
 
-  function updateCarousel(newIndex) {
-    index = (newIndex + slides.length) % slides.length;
-    track.style.transform = 'translateX(' + (-index * 100) + '%)';
-    dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-  }
+    <!-- Institutional Collaborations -->
+    <section class="content-section">
+      <h2>Institutional Collaborations</h2>
+      <ul class="info-list">
+        <li>Executive Office of the UN Secretary-General</li>
+        <li>UK's Foreign, Commonwealth & Development Office (FCDO)</li>
+        <li>Local Search Commissions and Attorney's Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)</li>
+        <li>Colombian Search Unit</li>
+        <li>Mexico's National Search Commission</li>
+        <li>Mexican Science and Technology Secretariat</li>
+        <li>British Embassy in Mexico City</li>
+        <li>British Association for Forensic Anthropology</li>
+      </ul>
+    </section>
 
-  prevBtn.addEventListener('click', () => updateCarousel(index - 1));
-  nextBtn.addEventListener('click', () => updateCarousel(index + 1));
+    <!-- Technologies Section -->
+    <section class="content-section">
+      <h2>Technologies in Action</h2>
+      <ul class="info-list">
+        <li>Multispectral & Hyperspectral Imaging</li>
+        <li>Airborne LiDAR</li>
+        <li>Seismic Noise Interferometry (TIRSA)</li>
+        <li>Electrical Resistivity Tomography, Conductivimetry Measurements</li>
+        <li>Satellite Spectral Analysis</li>
+        <li>Forensic Entomology, Botany, Territorial Analysis, Soil Science</li>
+      </ul>
 
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => updateCarousel(Number(dot.dataset.slide)));
-  });
-})();
-</script>
+      <div class="image-gallery">
+        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 Technology"></div>
+        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Field Documentation"></div>
+        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Field Equipment"></div>
+        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/2.jpeg?raw=true" alt="Community Work"></div>
+        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Search Tools"></div>
+        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/3.jpeg?raw=true" alt="Field Research"></div>
+        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-07-30%20at%2021.40.57.jpeg?raw=true" alt="Team Collaboration"></div>
+        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6.jpg?raw=true" alt="Technology in Use"></div>
+        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/IMG-20231204-WA0038.jpg?raw=true" alt="Field Operations"></div>
+        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-12-02%20at%2018.42.17.jpeg?raw=true" alt="Search Activities"></div>
+        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search Practice"></div>
+      </div>
+    </section>
 
+    <!-- Buscadoras Section -->
+    <section class="content-section">
+      <h2>The Role of Buscadoras</h2>
+      <p class="hero-description">
+        Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. FOUND listens, learns, and incorporates their methods into our technological efforts.
+      </p>
+      <div class="image-gallery" style="max-width: 400px; margin: 2rem auto;">
+        <div class="gallery-item"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Buscadoras at work"></div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="content-section">
+      <h2>Partners</h2>
+      <div class="partner-grid">
+        <div class="partner-logo"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Social-web-v1.jpg?raw=true" alt="Frontier Tech Hub"></div>
+        <div class="partner-logo"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1%20logo%20Final%20Guerreros%20Buscadores.png?raw=true" alt="Guerreros Buscadores"></div>
+        <div class="partner-logo"><img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/2%20logo_centrogeo_wide.svg" alt="CentroGeo"></div>
+        <div class="partner-logo"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/3%20logo%20CBJ.png?raw=true" alt="Jalisco Search Commission"></div>
+        <div class="partner-logo"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/4%20logo%20oxford-university-logo.png?raw=true" alt="Oxford University"></div>
+        <div class="partner-logo"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/images(1).png?raw=true" alt="UNAM Geophysics"></div>
+        <div class="partner-logo"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6%20logo%20Ingenieria%20UNAM.png?raw=true" alt="UNAM Engineering"></div>
+        <div class="partner-logo"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/580141488dfc53bfdbde59fa6b043438.jpg?raw=true" alt="UdeG"></div>
+        <div class="partner-logo"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/8%20logo%20UPZMG2.png?raw=true" alt="UPZMG"></div>
+        <div class="partner-logo"><img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/9%20logo%20UWE%20Bristol.svg" alt="UWE Bristol"></div>
+        <div class="partner-logo"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/11%20logo%20BAFAlogo_orig.png?raw=true" alt="BAFA"></div>
+        <div class="partner-logo"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/British%20Embassy%20Mexico_Blue%20(ENG).png?raw=true" alt="British Embassy"></div>
+        <div class="partner-logo"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/OFOTA_COLOUR_WEB.jpg?raw=true" alt="OFA"></div>
+        <div class="partner-logo"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Beth.jpg?raw=true" alt="Bath University"></div>
+        <div class="partner-logo"><img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg" alt="Colombia UBPD"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan</em>
+    </footer>
+  </div>
+
+  <!-- Carousel Script: Infinite loop + swipe + controls -->
+  <script>
+    (function () {
+      const track = document.querySelector('.carousel-track');
+      const slides = document.querySelectorAll('.social-embed');
+      const prevBtn = document.querySelector('.carousel-btn.prev');
+      const nextBtn = document.querySelector('.carousel-btn.next');
+      const dots = document.querySelectorAll('.carousel-dots .dot');
+
+      if (!track || slides.length === 0) return;
+
+      let index = 0;
+      let startX = 0;
+      let isDragging = false;
+      let autoTimer = null;
+      const AUTO_DELAY = 8000; // ms
+
+      function updateCarousel(newIndex) {
+        index = (newIndex + slides.length) % slides.length;
+        track.style.transform = 'translateX(' + (-index * 100) + '%)';
+        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+      }
+
+      function nextSlide() {
+        updateCarousel(index + 1);
+      }
+
+      function prevSlide() {
+        updateCarousel(index - 1);
+      }
+
+      function resetAuto() {
+        if (autoTimer) clearInterval(autoTimer);
+        autoTimer = setInterval(nextSlide, AUTO_DELAY);
+      }
+
+      // Buttons
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAuto();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAuto();
+      });
+
+      // Dots
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const target = Number(dot.dataset.slide);
+          updateCarousel(target);
+          resetAuto();
+        });
+      });
+
+      // Touch swipe
+      track.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+      });
+
+      track.addEventListener('touchmove', e => {
+        if (!isDragging) return;
+        const diff = e.touches[0].clientX - startX;
+        if (Math.abs(diff) > 70) {
+          isDragging = false;
+          if (diff > 0) {
+            prevSlide();
+          } else {
+            nextSlide();
+          }
+          resetAuto();
+        }
+      });
+
+      track.addEventListener('touchend', () => {
+        isDragging = false;
+      });
+
+      // Start autoplay
+      resetAuto();
+    })();
+  </script>
 </body>
 </html>
