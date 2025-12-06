@@ -137,8 +137,10 @@ author_profile: true
       line-height: 1.4;
       display: flex;
       align-items: flex-start;
+      justify-content: space-between;
       gap: 0.75rem;
       letter-spacing: -0.01em;
+      cursor: pointer;
     }
 
     .news-title .emoji {
@@ -146,12 +148,16 @@ author_profile: true
       flex-shrink: 0;
     }
 
+    .news-title-text {
+      flex: 1;
+    }
+
     .expand-indicator {
-      margin-left: auto;
       font-size: 1.2rem;
       color: #1b4d3e;
       transition: transform 0.3s ease;
       flex-shrink: 0;
+      margin-left: 1rem;
     }
 
     .news-card.open .expand-indicator {
@@ -159,27 +165,17 @@ author_profile: true
     }
 
     .news-content {
-      display: none;
+      max-height: 0;
       opacity: 0;
-      transition: opacity 0.4s ease;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+      margin-top: 0;
     }
 
     .news-card.open .news-content {
-      display: block;
+      max-height: 2000px; /* Large enough to accommodate content */
       opacity: 1;
       margin-top: 1.5rem;
-      animation: slideDown 0.4s ease;
-    }
-
-    @keyframes slideDown {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     .news-content p {
@@ -333,6 +329,7 @@ author_profile: true
 
       .news-title {
         font-size: 1.15rem;
+        flex-wrap: wrap;
       }
 
       .share-wrapper {
@@ -374,7 +371,7 @@ author_profile: true
     <div class="news-card" id="ubpd-visit">
       <div class="news-title">
         <span class="emoji">🇨🇴🇲🇽</span>
-        <span>Second Visit of Colombia's Search Unit for Missing Persons (UBPD) to FOUND's Experimental Sites in Jalisco</span>
+        <span class="news-title-text">Second Visit of Colombia's Search Unit for Missing Persons (UBPD) to FOUND's Experimental Sites in Jalisco</span>
         <span class="expand-indicator">▼</span>
       </div>
       
@@ -417,7 +414,7 @@ author_profile: true
     <div class="news-card" id="guardian">
       <div class="news-title">
         <span class="emoji">📄</span>
-        <span>FOUND is in The Guardian</span>
+        <span class="news-title-text">FOUND is in The Guardian</span>
         <span class="expand-indicator">▼</span>
       </div>
       
@@ -456,7 +453,7 @@ author_profile: true
     <div class="news-card" id="fcdo">
       <div class="news-title">
         <span class="emoji">🇬🇧</span>
-        <span>FOUND has received new support from the UK's Foreign, Commonwealth and Development Office (FCDO) through the Frontier Tech Hub</span>
+        <span class="news-title-text">FOUND has received new support from the UK's Foreign, Commonwealth and Development Office (FCDO) through the Frontier Tech Hub</span>
         <span class="expand-indicator">▼</span>
       </div>
       
@@ -511,7 +508,7 @@ author_profile: true
     <div class="news-card" id="media-coverage">
       <div class="news-title">
         <span class="emoji">📰</span>
-        <span>FOUND featured by Associated Press, The Independent, LA Times, VICE, NBC</span>
+        <span class="news-title-text">FOUND featured by Associated Press, The Independent, LA Times, VICE, NBC</span>
         <span class="expand-indicator">▼</span>
       </div>
       
@@ -554,17 +551,36 @@ author_profile: true
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Expand/collapse cards
+      // Expand/collapse cards - click on title or anywhere in card
       document.querySelectorAll(".news-card").forEach(card => {
+        const title = card.querySelector(".news-title");
+        const content = card.querySelector(".news-content");
+        
+        title.addEventListener("click", function (e) {
+          e.stopPropagation();
+          toggleCard(card);
+        });
+        
         card.addEventListener("click", function (e) {
-          // Don't toggle if clicking on a link or share button
-          if (e.target.closest("a") || e.target.closest(".share-item")) {
+          // Don't toggle if clicking on links or share buttons
+          if (e.target.closest("a") || e.target.closest(".share-item") || e.target.closest(".news-title")) {
             return;
           }
-          
-          card.classList.toggle("open");
+          toggleCard(card);
         });
       });
+
+      function toggleCard(card) {
+        card.classList.toggle("open");
+        
+        // Update the expand indicator
+        const indicator = card.querySelector(".expand-indicator");
+        if (card.classList.contains("open")) {
+          indicator.textContent = "▲";
+        } else {
+          indicator.textContent = "▼";
+        }
+      }
 
       // Copy link functionality
       const popup = document.getElementById("copied-popup");
@@ -580,9 +596,39 @@ author_profile: true
             setTimeout(() => popup.classList.remove("show"), 2000);
           } catch (err) {
             console.error("Failed to copy:", err);
+            // Fallback for older browsers
+            const textArea = document.createElement("textarea");
+            textArea.value = link;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+              document.execCommand("copy");
+              popup.classList.add("show");
+              setTimeout(() => popup.classList.remove("show"), 2000);
+            } catch (err2) {
+              console.error("Fallback copy failed:", err2);
+            }
+            document.body.removeChild(textArea);
           }
         });
       });
+      
+      // Open card if URL has hash
+      const hash = window.location.hash;
+      if (hash) {
+        const card = document.querySelector(hash);
+        if (card && card.classList.contains("news-card")) {
+          // Small delay to ensure DOM is ready
+          setTimeout(() => {
+            card.classList.add("open");
+            const indicator = card.querySelector(".expand-indicator");
+            if (indicator) indicator.textContent = "▲";
+            
+            // Scroll to the card
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
+        }
+      }
     });
   </script>
 </body>
