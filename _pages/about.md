@@ -630,9 +630,6 @@ redirect_from:
           <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 degree imaging technology in use" loading="lazy" class="loading" onload="this.classList.remove('loading')">
         </div>
         <div class="gallery-item">
-          <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/flowers%20graves.gif" alt="Field documentation with flowers" loading="lazy" class="loading" onload="this.classList.remove('loading')">
-        </div>
-        <div class="gallery-item">
           <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Advanced field equipment setup" loading="lazy" class="loading" onload="this.classList.remove('loading')">
         </div>
         <div class="gallery-item">
