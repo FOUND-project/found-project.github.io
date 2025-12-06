@@ -159,18 +159,27 @@ author_profile: true
     }
 
     .news-content {
-      max-height: 0;
-      overflow: hidden;
+      display: none;
       opacity: 0;
-      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                  opacity 0.4s ease,
-                  margin-top 0.3s ease;
+      transition: opacity 0.4s ease;
     }
 
     .news-card.open .news-content {
-      max-height: 3000px;
+      display: block;
       opacity: 1;
       margin-top: 1.5rem;
+      animation: slideDown 0.4s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .news-content p {
