@@ -754,4 +754,48 @@ redirect_from:
         <div class="partner-logo">
           <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/3%20logo%20CBJ.png?raw=true" alt="Jalisco Search Commission partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
         </div>
-        <div class
+        <div class="partner-logo">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/4%20logo%20oxford-university-logo.png?raw=true" alt="Oxford University partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="partner-logo">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/images(1).png?raw=true" alt="UNAM Geophysics partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="partner-logo">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6%20logo%20Ingenieria%20UNAM.png?raw=true" alt="UNAM Engineering partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="partner-logo">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/580141488dfc53bfdbde59fa6b043438.jpg?raw=true" alt="UdeG partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="partner-logo">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/8%20logo%20UPZMG2.png?raw=true" alt="UPZMG partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="partner-logo">
+          <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/9%20logo%20UWE%20Bristol.svg" alt="UWE Bristol partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="partner-logo">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/11%20logo%20BAFAlogo_orig.png?raw=true" alt="BAFA partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="partner-logo">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/British%20Embassy%20Mexico_Blue%20(ENG).png?raw=true" alt="British Embassy partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="partner-logo">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/OFOTA_COLOUR_WEB.jpg?raw=true" alt="OFA partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="partner-logo">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Beth.jpg?raw=true" alt="Bath University partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="partner-logo">
+          <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg" alt="Colombia UBPD partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan</em>
+    </footer>
+  </div>
+
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>
