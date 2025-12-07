@@ -64,13 +64,14 @@ redirect_from:
       border-radius: 4px;
     }
 
-    .page {
+    /* REMOVED the .page container to make it full width */
+    /* .page {
       max-width: 1400px;
       margin: 0 auto;
       padding: 0 clamp(1rem, 4vw, 3rem);
-    }
+    } */
 
-    /* ENHANCED TITLE SECTION */
+    /* ENHANCED TITLE SECTION - Now full width */
     .title-section {
       padding: clamp(3rem, 8vw, 5rem) 0 clamp(2rem, 6vw, 4rem);
       background: linear-gradient(135deg, #1a3d2f 0%, var(--dark-green) 50%, var(--primary-green) 100%);
@@ -78,7 +79,6 @@ redirect_from:
       overflow: hidden;
       text-align: center;
       margin-bottom: 2rem;
-      border-radius: 0 0 24px 24px;
       box-shadow: var(--shadow-lg);
     }
 
@@ -118,6 +118,7 @@ redirect_from:
       position: relative;
       z-index: 1;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 0 clamp(1rem, 4vw, 3rem);
     }
 
     .title-accent {
@@ -125,9 +126,9 @@ redirect_from:
       font-weight: 700;
     }
 
-    /* Hero Section */
+    /* Hero Section - Now wider */
     .hero {
-      padding: clamp(2rem, 6vw, 4rem) 0 clamp(2rem, 6vw, 4rem);
+      padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 3rem);
       background: linear-gradient(135deg, #f8fcfb 0%, #ffffff 100%);
       position: relative;
       overflow: hidden;
@@ -148,6 +149,8 @@ redirect_from:
     .hero-content {
       position: relative;
       z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .animated-tagline {
@@ -213,7 +216,7 @@ redirect_from:
     /* Hero Image */
     .hero-image-container {
       width: 100%;
-      max-width: 900px;
+      max-width: 1100px; /* Increased from 900px */
       margin: 4rem auto 0;
       position: relative;
       border-radius: 20px;
@@ -264,15 +267,20 @@ redirect_from:
       opacity: 0;
     }
 
-    /* Content Sections */
+    /* Content Sections - Now wider */
     .content-section {
-      padding: clamp(2.5rem, 5vw, 4rem) 0;
+      padding: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
       border-bottom: 1px solid var(--border-light);
       scroll-margin-top: 2rem;
     }
 
     .content-section:last-of-type {
       border-bottom: none;
+    }
+
+    .section-container {
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .section-header {
@@ -301,13 +309,13 @@ redirect_from:
       border-radius: 2px;
     }
 
-    /* ENHANCED & COMPACT Info Lists */
+    /* ENHANCED & COMPACT Info Lists - Now wider */
     .info-list {
       list-style: none;
       padding-left: 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-      gap: 0.75rem 1.5rem; /* Reduced vertical and horizontal gap */
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); /* Increased from 300px */
+      gap: 0.75rem 2rem; /* Increased horizontal gap */
       margin-top: 1.5rem;
     }
 
@@ -355,10 +363,10 @@ redirect_from:
       color: white;
     }
 
-    /* Enhanced Image Galleries */
+    /* Enhanced Image Galleries - Now wider */
     .image-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); /* Increased from 280px */
       gap: clamp(1.5rem, 3vw, 2.5rem);
       margin: 3rem 0;
     }
@@ -413,11 +421,11 @@ redirect_from:
       transform: scale(1.08);
     }
 
-    /* Social Media Section */
+    /* Social Media Section - Now wider */
     .social-section {
       background: linear-gradient(135deg, var(--accent-green) 0%, #ffffff 100%);
-      padding: clamp(3rem, 6vw, 5rem) 0;
-      margin: 4rem calc(clamp(1rem, 4vw, 3rem) * -1);
+      padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem);
+      margin: 4rem 0;
       position: relative;
       overflow: hidden;
     }
@@ -431,6 +439,11 @@ redirect_from:
       height: 2px;
       background: linear-gradient(90deg, transparent, var(--primary-green), transparent);
       opacity: 0.3;
+    }
+
+    .social-container {
+      max-width: 1600px; /* Increased from 1400px */
+      margin: 0 auto;
     }
 
     .section-title {
@@ -455,12 +468,9 @@ redirect_from:
     }
 
     .social-grid {
-      max-width: 1400px;
-      margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); /* Increased from 350px */
       gap: clamp(1.5rem, 3vw, 2.5rem);
-      padding: 0 clamp(1rem, 4vw, 2.5rem);
     }
 
     .social-embed {
@@ -487,7 +497,7 @@ redirect_from:
     .iframe-container {
       position: relative;
       width: 100%;
-      max-width: 550px;
+      max-width: 600px; /* Increased from 550px */
       overflow: hidden;
       border-radius: 16px;
     }
@@ -498,10 +508,10 @@ redirect_from:
       display: block;
     }
 
-    /* Enhanced Partners Section */
+    /* Enhanced Partners Section - Now wider */
     .partners-section {
       background: linear-gradient(135deg, #f8fcfb 0%, #ffffff 100%);
-      padding: clamp(4rem, 8vw, 6rem) 0;
+      padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 4vw, 3rem);
       position: relative;
     }
 
@@ -516,19 +526,24 @@ redirect_from:
       opacity: 0.2;
     }
 
+    .partners-container {
+      max-width: 1600px; /* Increased */
+      margin: 0 auto;
+    }
+
     .partners-intro {
       text-align: center;
-      max-width: 900px;
+      max-width: 1000px; /* Increased from 900px */
       margin: 0 auto 4rem;
       color: var(--text-medium);
       font-size: clamp(1.1rem, 2.5vw, 1.3rem);
       line-height: 1.8;
     }
 
-    /* ENHANCED PARTNER GRID - Bigger logos */
+    /* ENHANCED PARTNER GRID - Bigger logos and wider */
     .partner-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); /* Increased from 240px */
       gap: clamp(2rem, 4vw, 3rem);
       margin: 4rem 0;
     }
@@ -543,7 +558,7 @@ redirect_from:
       justify-content: center;
       transition: all 0.4s var(--transition-smooth);
       border: 2px solid transparent;
-      min-height: 180px;
+      min-height: 200px; /* Increased from 180px */
       aspect-ratio: 1.5;
       position: relative;
       overflow: hidden;
@@ -595,28 +610,13 @@ redirect_from:
     .partner-logo:nth-child(4), /* Jalisco Search Commission */
     .partner-logo:nth-child(5) { /* Oxford */
       padding: clamp(2.5rem, 5vw, 3.5rem);
-      min-height: 200px;
+      min-height: 220px; /* Increased from 200px */
     }
 
-    /* Partner Categories */
-    .partner-category {
-      margin: 5rem 0 3rem;
-    }
-
-    .partner-category h3 {
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      color: var(--primary-green);
-      margin-bottom: 2rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--accent-green);
-      font-weight: 600;
-    }
-
-    /* Buscadoras Special Section */
+    /* Buscadoras Special Section - Now wider */
     .buscadoras-section {
       background: linear-gradient(135deg, #fff8f5 0%, #ffffff 100%);
-      padding: clamp(4rem, 8vw, 6rem) 0;
-      border-radius: 24px;
+      padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 4vw, 3rem);
       margin: 4rem 0;
       position: relative;
       overflow: hidden;
@@ -634,13 +634,13 @@ redirect_from:
     }
 
     .buscadoras-content {
-      max-width: 900px;
+      max-width: 1100px; /* Increased from 900px */
       margin: 0 auto;
       text-align: center;
     }
 
     .buscadoras-image {
-      max-width: 500px;
+      max-width: 600px; /* Increased from 500px */
       margin: 3rem auto;
       border-radius: 20px;
       overflow: hidden;
@@ -652,10 +652,10 @@ redirect_from:
       transform: translateY(-8px);
     }
 
-    /* Footer */
+    /* Footer - Now wider */
     .footer {
       text-align: center;
-      padding: clamp(4rem, 8vw, 6rem) 0;
+      padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 4vw, 3rem);
       margin-top: 4rem;
       border-top: 2px solid var(--border-light);
       background: linear-gradient(135deg, #f8fcfb 0%, #ffffff 100%);
@@ -671,6 +671,11 @@ redirect_from:
       right: 0;
       height: 2px;
       background: linear-gradient(90deg, transparent, var(--primary-green), transparent);
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .footer em {
@@ -692,7 +697,7 @@ redirect_from:
     /* Mobile optimizations */
     @media (max-width: 1024px) {
       .partner-grid {
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
         gap: 1.5rem;
       }
     }
@@ -713,13 +718,20 @@ redirect_from:
       }
 
       .partner-grid {
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 160px), 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr));
         gap: 1.25rem;
       }
 
       .partner-logo {
         padding: 1.5rem;
-        min-height: 140px;
+        min-height: 160px; /* Adjusted for mobile */
+      }
+
+      .partner-logo:nth-child(2),
+      .partner-logo:nth-child(3),
+      .partner-logo:nth-child(4),
+      .partner-logo:nth-child(5) {
+        min-height: 180px; /* Adjusted for mobile */
       }
 
       .info-list {
@@ -730,6 +742,16 @@ redirect_from:
       .info-list li {
         padding: 0.5rem 0 0.5rem 2rem;
         min-height: 38px;
+      }
+      
+      .hero,
+      .content-section,
+      .social-section,
+      .partners-section,
+      .buscadoras-section,
+      .footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
       }
     }
 
@@ -756,7 +778,7 @@ redirect_from:
 
       .partner-logo {
         padding: 1rem;
-        min-height: 120px;
+        min-height: 140px;
       }
       
       .title-section {
@@ -769,6 +791,16 @@ redirect_from:
       
       .project-subtitle {
         font-size: 1.2rem;
+      }
+      
+      .hero,
+      .content-section,
+      .social-section,
+      .partners-section,
+      .buscadoras-section,
+      .footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
       }
     }
 
@@ -824,57 +856,59 @@ redirect_from:
   </style>
 </head>
 <body>
-  <div class="page">
-    <!-- ENHANCED TITLE SECTION -->
-    <section class="title-section">
-      <h1 class="project-title">FOUND</h1>
-      <p class="project-subtitle">
-        <span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan
-      </p>
-    </section>
+  <!-- ENHANCED TITLE SECTION -->
+  <section class="title-section">
+    <h1 class="project-title">FOUND</h1>
+    <p class="project-subtitle">
+      <span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan
+    </p>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-        <div class="animated-tagline">
-          <span>Using technology to&nbsp;</span>
-          <div class="word-carousel" role="text" aria-label="Rotating tagline">
-            <ul class="word-list">
-              <li>dignify.</li>
-              <li>remember.</li>
-              <li>search.</li>
-              <li>bring closure.</li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="hero-description">
-          Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology and grassroots knowledge to search, locate and drive systemic change.
-        </p>
-
-        <div class="hero-image-container skeleton">
-          <img 
-            src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" 
-            alt="FOUND Project team using advanced technology in field search operations" 
-            class="hero-image loading"
-            loading="lazy"
-            onload="this.classList.remove('loading'); this.parentElement.classList.remove('skeleton')">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="animated-tagline">
+        <span>Using technology to&nbsp;</span>
+        <div class="word-carousel" role="text" aria-label="Rotating tagline">
+          <ul class="word-list">
+            <li>dignify.</li>
+            <li>remember.</li>
+            <li>search.</li>
+            <li>bring closure.</li>
+          </ul>
         </div>
       </div>
-    </section>
 
-    <!-- Community Driven Section -->
-    <section class="content-section" id="community">
+      <p class="hero-description">
+        Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology and grassroots knowledge to search, locate and drive systemic change.
+      </p>
+
+      <div class="hero-image-container skeleton">
+        <img 
+          src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" 
+          alt="FOUND Project team using advanced technology in field search operations" 
+          class="hero-image loading"
+          loading="lazy"
+          onload="this.classList.remove('loading'); this.parentElement.classList.remove('skeleton')">
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Driven Section -->
+  <section class="content-section" id="community">
+    <div class="section-container">
       <div class="section-header">
         <h2><span>Driven by Families and Research Communities</span></h2>
       </div>
       <p class="hero-description">
         FOUND is guided and motivated by <strong>search collectives</strong> and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- Institutional Collaborations -->
-    <section class="content-section" id="collaborations">
+  <!-- Institutional Collaborations -->
+  <section class="content-section" id="collaborations">
+    <div class="section-container">
       <h2>Institutional Collaborations</h2>
       <ul class="info-list">
         <li>Executive Office of the UN Secretary-General</li>
@@ -886,10 +920,12 @@ redirect_from:
         <li>British Embassy in Mexico City</li>
         <li>British Association for Forensic Anthropology</li>
       </ul>
-    </section>
+    </div>
+  </section>
 
-    <!-- Technologies Section -->
-    <section class="content-section" id="technologies">
+  <!-- Technologies Section -->
+  <section class="content-section" id="technologies">
+    <div class="section-container">
       <h2>Technologies in Action</h2>
       <ul class="info-list">
         <li>Multispectral & Hyperspectral Imaging</li>
@@ -932,23 +968,25 @@ redirect_from:
           <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search methodology in practice" loading="lazy" class="loading" onload="this.classList.remove('loading')">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Buscadoras Section -->
-    <section class="buscadoras-section" id="buscadoras">
-      <div class="buscadoras-content">
-        <h2>The Role of Buscadoras</h2>
-        <p class="hero-description">
-          Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. FOUND listens, learns, and incorporates their methods into our technological efforts.
-        </p>
-        <div class="buscadoras-image">
-          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Buscadoras hands with plants symbolizing hope and remembrance" loading="lazy" class="loading" onload="this.classList.remove('loading')">
-        </div>
+  <!-- Buscadoras Section -->
+  <section class="buscadoras-section" id="buscadoras">
+    <div class="buscadoras-content">
+      <h2>The Role of Buscadoras</h2>
+      <p class="hero-description">
+        Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. FOUND listens, learns, and incorporates their methods into our technological efforts.
+      </p>
+      <div class="buscadoras-image">
+        <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Buscadoras hands with plants symbolizing hope and remembrance" loading="lazy" class="loading" onload="this.classList.remove('loading')">
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Social Media Section -->
-    <section class="social-section" id="social">
+  <!-- Social Media Section -->
+  <section class="social-section" id="social">
+    <div class="social-container">
       <h2 class="section-title">Follow Our Journey</h2>
       <p class="section-subtitle">Stay connected with our latest findings, community stories, and collaborative efforts</p>
 
@@ -1008,10 +1046,12 @@ redirect_from:
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Enhanced Partners Section -->
-    <section class="partners-section" id="partners">
+  <!-- Enhanced Partners Section -->
+  <section class="partners-section" id="partners">
+    <div class="partners-container">
       <h2 class="section-title">Our Partners</h2>
       <p class="partners-intro">
         FOUND brings together an exceptional coalition of academic institutions, government agencies, civil society organizations, and international partners. Together, we work toward a common goal: bringing dignity and closure to families searching for their loved ones.
@@ -1064,13 +1104,15 @@ redirect_from:
           <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg" alt="Colombia UBPD partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
       <em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
