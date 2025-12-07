@@ -5,18 +5,12 @@ permalink: /news/
 author_profile: true
 ---
 
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FOUND — News & Updates</title>
-  
-  <meta property="og:title" content="FOUND — News & Updates">
-  <meta property="og:description" content="Latest developments from FOUND across Mexico, Colombia, and beyond.">
-  <meta property="og:image" content="https://found-project.github.io/images/found-logo.png">
-  <meta property="og:url" content="https://found-project.github.io/news/">
-  <meta property="og:type" content="website">
-  
   <style>
     * {
       margin: 0;
@@ -25,7 +19,7 @@ author_profile: true
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: linear-gradient(135deg, #f5f7fa 0%, #e8eef5 100%);
       padding: 3rem 2rem;
       line-height: 1.6;
@@ -38,9 +32,8 @@ author_profile: true
       margin: 0 auto;
     }
 
-    /* Header */
     .news-header {
-      background: linear-gradient(135deg, #ffffff 0%, #f8faf8 100%);
+      background: white;
       border-radius: 16px;
       padding: 2.5rem;
       margin-bottom: 3rem;
@@ -55,7 +48,6 @@ author_profile: true
       width: 100px;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
 
     .news-header h1 {
@@ -63,7 +55,6 @@ author_profile: true
       color: #1b4d3e;
       font-weight: 700;
       margin-bottom: 0.5rem;
-      letter-spacing: -0.02em;
     }
 
     .news-header p {
@@ -71,120 +62,31 @@ author_profile: true
       color: #555;
     }
 
-    /* News Grid */
     .news-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
-      margin-bottom: 3rem;
     }
 
-    /* News Cards */
     .news-card {
       background: white;
       border-radius: 16px;
       padding: 2rem;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
       border: 1px solid rgba(0, 0, 0, 0.06);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      cursor: pointer;
-      position: relative;
       border-left: 5px solid #1b4d3e;
+      transition: all 0.3s ease;
     }
 
     .news-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-      border-left-color: #2d7a5f;
     }
 
-    .news-card.active {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 90%;
-      max-width: 800px;
-      max-height: 85vh;
-      overflow-y: auto;
-      z-index: 1000;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-      animation: popIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    @keyframes popIn {
-      from {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.9);
-      }
-      to {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-      }
-    }
-
-    .news-card.active:hover {
-      transform: translate(-50%, -50%);
-    }
-
-    /* Overlay */
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 999;
-      backdrop-filter: blur(4px);
-    }
-
-    .overlay.active {
-      display: block;
-      animation: fadeIn 0.3s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* Close Button */
-    .close-btn {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: #f0f0f0;
-      border: none;
-      cursor: pointer;
-      font-size: 1.5rem;
-      color: #1b4d3e;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease;
-      z-index: 10;
-    }
-
-    .news-card.active .close-btn {
-      display: flex;
-    }
-
-    .close-btn:hover {
-      background: #1b4d3e;
-      color: white;
-      transform: rotate(90deg);
-    }
-
-    /* Card Content */
     .card-emoji {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
       display: block;
+      margin-bottom: 1rem;
     }
 
     .card-title {
@@ -193,31 +95,45 @@ author_profile: true
       color: #1b4d3e;
       line-height: 1.4;
       margin-bottom: 1rem;
-      letter-spacing: -0.01em;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 1rem;
     }
 
-    .card-preview {
-      color: #666;
-      line-height: 1.6;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+    .expand-btn {
+      background: #1b4d3e;
+      color: white;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
     }
 
-    .news-card.active .card-preview {
-      display: none;
+    .expand-btn:hover {
+      background: #2d7a5f;
+      transform: scale(1.1);
     }
 
     .card-content {
-      display: none;
-      margin-top: 1.5rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
       color: #333;
       line-height: 1.7;
     }
 
-    .news-card.active .card-content {
-      display: block;
+    .card-content.expanded {
+      max-height: 5000px;
+      margin-top: 1rem;
     }
 
     .card-content p {
@@ -257,15 +173,10 @@ author_profile: true
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     }
 
-    /* Share Section */
     .share-wrapper {
       margin-top: 2rem;
       padding-top: 1.5rem;
       border-top: 2px solid rgba(27, 77, 62, 0.1);
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-      flex-wrap: wrap;
     }
 
     .share-label {
@@ -273,7 +184,8 @@ author_profile: true
       color: #1b4d3e;
       font-size: 0.9rem;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      display: block;
     }
 
     .share-buttons {
@@ -288,7 +200,7 @@ author_profile: true
       align-items: center;
       gap: 0.3rem;
       padding: 0.75rem 1rem;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      background: #f8f9fa;
       border-radius: 10px;
       color: #1b4d3e;
       text-decoration: none;
@@ -302,19 +214,18 @@ author_profile: true
     .share-item:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(27, 77, 62, 0.15);
-      background: linear-gradient(135deg, #ffffff 0%, #f0f4f0 100%);
+      background: white;
     }
 
     .share-item .icon {
       font-size: 1.5rem;
     }
 
-    /* Toast */
     #toast {
       position: fixed;
       bottom: 40px;
       right: 40px;
-      background: linear-gradient(135deg, #1b4d3e 0%, #2d7a5f 100%);
+      background: #1b4d3e;
       color: white;
       padding: 1rem 1.5rem;
       border-radius: 12px;
@@ -330,7 +241,6 @@ author_profile: true
       opacity: 1;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       body {
         padding: 1.5rem 1rem;
@@ -351,36 +261,14 @@ author_profile: true
         gap: 1.5rem;
       }
 
-      .news-card.active {
-        width: 95%;
-        max-height: 90vh;
-        padding: 1.5rem;
-      }
-
       .card-title {
         font-size: 1.2rem;
-      }
-
-      .share-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-      }
-
-      #toast {
-        bottom: 20px;
-        right: 20px;
-        left: 20px;
-        text-align: center;
       }
     }
   </style>
 </head>
 <body>
-  <div class="overlay" id="overlay"></div>
-  
   <div class="container">
-    <!-- Header -->
     <div class="news-header">
       <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_logo.jpg?raw=true" alt="FOUND Logo">
       <div>
@@ -389,15 +277,14 @@ author_profile: true
       </div>
     </div>
 
-    <!-- News Grid -->
     <div class="news-grid">
       <!-- Card 1 -->
-      <div class="news-card" data-id="ubpd-visit">
-        <button class="close-btn">×</button>
+      <div class="news-card">
         <span class="card-emoji">🇨🇴🇲🇽</span>
-        <h2 class="card-title">Second Visit of Colombia's Search Unit for Missing Persons (UBPD) to FOUND's Experimental Sites in Jalisco</h2>
-        <p class="card-preview">We welcomed Héctor Javier Gómez, geophysicist from Colombia's UBPD, for a joint field deployment to FOUND's experimental sites in Jalisco...</p>
-        
+        <div class="card-title">
+          <span>Second Visit of Colombia's Search Unit for Missing Persons (UBPD) to FOUND's Experimental Sites in Jalisco</span>
+          <button class="expand-btn" onclick="toggleCard(this)">+</button>
+        </div>
         <div class="card-content">
           <p>We are deeply grateful to <strong>CVM Cyber</strong> and <strong>Ciaran Martin</strong> for their generous support in making this visit possible.</p>
           
@@ -424,7 +311,7 @@ author_profile: true
                 <span class="icon">💬</span>
                 <span>WhatsApp</span>
               </a>
-              <span class="share-item copy-link" data-url="https://found-project.github.io/news/#ubpd-visit">
+              <span class="share-item" onclick="copyLink('https://found-project.github.io/news/#ubpd-visit')">
                 <span class="icon">📋</span>
                 <span>Copy</span>
               </span>
@@ -434,12 +321,12 @@ author_profile: true
       </div>
 
       <!-- Card 2 -->
-      <div class="news-card" data-id="guardian">
-        <button class="close-btn">×</button>
+      <div class="news-card">
         <span class="card-emoji">📄</span>
-        <h2 class="card-title">FOUND is in The Guardian</h2>
-        <p class="card-preview">This piece is the result of more than six months of email conversations, WhatsApp messages, and the journalist's in-person visit to our experimental sites...</p>
-        
+        <div class="card-title">
+          <span>FOUND is in The Guardian</span>
+          <button class="expand-btn" onclick="toggleCard(this)">+</button>
+        </div>
         <div class="card-content">
           <p>This piece is the result of more than six months of email conversations, WhatsApp messages, and the journalist's in-person visit to our experimental sites in Jalisco, Mexico. We are deeply grateful for the care, depth and commitment brought to this story after months spent listening to families, researchers and officials.</p>
           
@@ -462,7 +349,7 @@ author_profile: true
                 <span class="icon">💬</span>
                 <span>WhatsApp</span>
               </a>
-              <span class="share-item copy-link" data-url="https://found-project.github.io/news/#guardian">
+              <span class="share-item" onclick="copyLink('https://found-project.github.io/news/#guardian')">
                 <span class="icon">📋</span>
                 <span>Copy</span>
               </span>
@@ -472,12 +359,12 @@ author_profile: true
       </div>
 
       <!-- Card 3 -->
-      <div class="news-card" data-id="fcdo">
-        <button class="close-btn">×</button>
+      <div class="news-card">
         <span class="card-emoji">🇬🇧</span>
-        <h2 class="card-title">FOUND has received new support from the UK's FCDO through the Frontier Tech Hub</h2>
-        <p class="card-preview">In the pitch, our team showcased FOUND's impact to date, and we were awarded funding that will enable us to scale our mission...</p>
-        
+        <div class="card-title">
+          <span>FOUND has received new support from the UK's FCDO through the Frontier Tech Hub</span>
+          <button class="expand-btn" onclick="toggleCard(this)">+</button>
+        </div>
         <div class="card-content">
           <p>In the pitch, our team showcased FOUND's impact to date, and we were awarded funding that will enable us to scale our mission: to drive systemic change in how missing persons are searched for in Mexico, Colombia, and beyond.</p>
           
@@ -516,7 +403,7 @@ author_profile: true
                 <span class="icon">💬</span>
                 <span>WhatsApp</span>
               </a>
-              <span class="share-item copy-link" data-url="https://found-project.github.io/news/#fcdo">
+              <span class="share-item" onclick="copyLink('https://found-project.github.io/news/#fcdo')">
                 <span class="icon">📋</span>
                 <span>Copy</span>
               </span>
@@ -526,12 +413,12 @@ author_profile: true
       </div>
 
       <!-- Card 4 -->
-      <div class="news-card" data-id="media-coverage">
-        <button class="close-btn">×</button>
+      <div class="news-card">
         <span class="card-emoji">📰</span>
-        <h2 class="card-title">FOUND featured by Associated Press, The Independent, LA Times, VICE, NBC</h2>
-        <p class="card-preview">Major international media outlets have covered FOUND's innovative work in Mexico...</p>
-        
+        <div class="card-title">
+          <span>FOUND featured by Associated Press, The Independent, LA Times, VICE, NBC</span>
+          <button class="expand-btn" onclick="toggleCard(this)">+</button>
+        </div>
         <div class="card-content">
           <ul>
             <li><strong>Associated Press:</strong> <a href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li>
@@ -556,7 +443,7 @@ author_profile: true
                 <span class="icon">💬</span>
                 <span>WhatsApp</span>
               </a>
-              <span class="share-item copy-link" data-url="https://found-project.github.io/news/#media-coverage">
+              <span class="share-item" onclick="copyLink('https://found-project.github.io/news/#media-coverage')">
                 <span class="icon">📋</span>
                 <span>Copy</span>
               </span>
@@ -570,86 +457,37 @@ author_profile: true
   <div id="toast">✓ Link copied!</div>
 
   <script>
-    const overlay = document.getElementById('overlay');
-    const toast = document.getElementById('toast');
-    const cards = document.querySelectorAll('.news-card');
-
-    // Open card on click
-    cards.forEach(card => {
-      card.addEventListener('click', (e) => {
-        // Don't open if clicking on links, share buttons, or close button
-        if (e.target.closest('a') || e.target.closest('.share-item') || e.target.closest('.close-btn')) {
-          return;
-        }
-        
-        card.classList.add('active');
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      });
-
-      // Close button
-      const closeBtn = card.querySelector('.close-btn');
-      closeBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        closeCard();
-      });
-    });
-
-    // Close on overlay click
-    overlay.addEventListener('click', closeCard);
-
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeCard();
+    function toggleCard(btn) {
+      const content = btn.closest('.news-card').querySelector('.card-content');
+      const isExpanded = content.classList.contains('expanded');
+      
+      if (isExpanded) {
+        content.classList.remove('expanded');
+        btn.textContent = '+';
+      } else {
+        content.classList.add('expanded');
+        btn.textContent = '−';
       }
-    });
-
-    function closeCard() {
-      cards.forEach(card => card.classList.remove('active'));
-      overlay.classList.remove('active');
-      document.body.style.overflow = '';
     }
 
-    // Copy link functionality
-    document.querySelectorAll('.copy-link').forEach(btn => {
-      btn.addEventListener('click', async (e) => {
-        e.stopPropagation();
-        e.preventDefault();
-        const url = btn.dataset.url;
+    function copyLink(url) {
+      navigator.clipboard.writeText(url).then(() => {
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2000);
+      }).catch(() => {
+        // Fallback
+        const textarea = document.createElement('textarea');
+        textarea.value = url;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
         
-        try {
-          await navigator.clipboard.writeText(url);
-          showToast();
-        } catch (err) {
-          // Fallback
-          const textarea = document.createElement('textarea');
-          textarea.value = url;
-          document.body.appendChild(textarea);
-          textarea.select();
-          document.execCommand('copy');
-          document.body.removeChild(textarea);
-          showToast();
-        }
+        const toast = document.getElementById('toast');
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2000);
       });
-    });
-
-    function showToast() {
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 2000);
-    }
-
-    // Open card from URL hash
-    if (window.location.hash) {
-      const id = window.location.hash.substring(1);
-      const card = document.querySelector(`[data-id="${id}"]`);
-      if (card) {
-        setTimeout(() => {
-          card.classList.add('active');
-          overlay.classList.add('active');
-          document.body.style.overflow = 'hidden';
-        }, 100);
-      }
     }
   </script>
 </body>
