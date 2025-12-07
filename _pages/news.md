@@ -5,6 +5,7 @@ permalink: /news/
 author_profile: true
 ---
 
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -164,23 +165,23 @@ author_profile: true
       transform: rotate(180deg);
     }
 
-    /* Fixed: Using grid for smooth expand/collapse */
+    /* Fixed: Using max-height for smooth expand/collapse */
     .news-content {
-      display: grid;
-      grid-template-rows: 0fr;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease, margin-top 0.4s ease;
       opacity: 0;
-      transition: grid-template-rows 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
       margin-top: 0;
     }
 
-    .news-content > div {
-      overflow: hidden;
-    }
-
     .news-card.open .news-content {
-      grid-template-rows: 1fr;
+      max-height: 5000px; /* Large enough to fit any content */
       opacity: 1;
       margin-top: 1.5rem;
+    }
+
+    .news-content-inner {
+      padding: 0.5rem 0;
     }
 
     .news-content p {
@@ -365,7 +366,7 @@ author_profile: true
   <div class="container">
     <!-- Header -->
     <div class="news-header">
-      <img src="/images/Found_logo.jpg" alt="FOUND Logo">
+      <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_logo.jpg?raw=true" alt="FOUND Logo">
       <div>
         <h1>FOUND — News & Updates</h1>
         <p>Latest developments on our work across Mexico, Colombia, and beyond.</p>
@@ -381,7 +382,7 @@ author_profile: true
       </div>
       
       <div class="news-content">
-        <div>
+        <div class="news-content-inner">
           <p>We are deeply grateful to <strong>CVM Cyber</strong> and <strong>Ciaran Martin</strong> for their generous support in making this visit possible.</p>
           
           <p>We welcomed <strong>Héctor Javier Gómez</strong>, geophysicist from Colombia's <em>Unidad de Búsqueda de Personas Dadas por Desaparecidas (UBPD)</em>, for a joint field deployment to FOUND's experimental sites in Jalisco.</p>
@@ -426,12 +427,12 @@ author_profile: true
       </div>
       
       <div class="news-content">
-        <div>
+        <div class="news-content-inner">
           <p>This piece is the result of more than six months of email conversations, WhatsApp messages, and the journalist's in-person visit to our experimental sites in Jalisco, Mexico. We are deeply grateful for the care, depth and commitment brought to this story after months spent listening to families, researchers and officials.</p>
           
           <p><a href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" target="_blank">📖 Read the article here</a></p>
           
-          <img src="/images/Found_theGuardian.jpeg" alt="FOUND in The Guardian">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_theGuardian.jpeg?raw=true" alt="FOUND in The Guardian">
           
           <div class="share-wrapper">
             <span class="share-label">Share this update:</span>
@@ -467,7 +468,7 @@ author_profile: true
       </div>
       
       <div class="news-content">
-        <div>
+        <div class="news-content-inner">
           <p>In the pitch, our team showcased FOUND's impact to date, and we were awarded funding that will enable us to scale our mission: to drive systemic change in how missing persons are searched for in Mexico, Colombia, and beyond.</p>
           
           <p><strong>🌱 Driven by families and research communities</strong><br>
@@ -524,7 +525,7 @@ author_profile: true
       </div>
       
       <div class="news-content">
-        <div>
+        <div class="news-content-inner">
           <ul>
             <li><strong>Associated Press:</strong> <a href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li>
             <li><strong>The Independent:</strong> <a href="https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html" target="_blank">How pigs could help find missing Mexican drug cartel victims</a></li>
