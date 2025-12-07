@@ -7,6 +7,7 @@ redirect_from:
   - /about.html
 ---
 
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -64,10 +65,10 @@ redirect_from:
       border-radius: 4px;
     }
 
-    /* Language Toggle Styles */
+    /* Language Toggle Styles - FIXED POSITIONING */
     .language-toggle {
       position: fixed;
-      top: 1.5rem;
+      top: 2.5rem; /* Increased from 1.5rem */
       right: clamp(1rem, 4vw, 3rem);
       z-index: 1000;
       display: flex;
@@ -168,6 +169,7 @@ redirect_from:
       text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       position: relative;
       z-index: 1;
+      margin-top: 1rem; /* Added space for the button */
     }
 
     .project-subtitle {
@@ -819,8 +821,12 @@ redirect_from:
       }
 
       .language-toggle {
-        top: 1rem;
-        right: 1rem;
+        top: 1.5rem; /* Adjusted for mobile */
+        right: 1.5rem;
+      }
+      
+      .project-title {
+        margin-top: 1.5rem; /* More space for button on mobile */
       }
     }
 
@@ -851,11 +857,12 @@ redirect_from:
       }
       
       .title-section {
-        padding: 2.5rem 1rem 2rem;
+        padding: 3rem 1rem 2rem; /* Adjusted top padding */
       }
       
       .project-title {
         font-size: 2.2rem;
+        margin-top: 1.5rem; /* More space for button */
       }
       
       .project-subtitle {
@@ -873,8 +880,8 @@ redirect_from:
       }
 
       .language-toggle {
-        top: 0.8rem;
-        right: 0.8rem;
+        top: 1rem;
+        right: 1rem;
         padding: 0.3rem;
       }
 
@@ -920,6 +927,10 @@ redirect_from:
         transform: none !important;
         box-shadow: var(--shadow-sm) !important;
       }
+      
+      .language-toggle {
+        display: none !important;
+      }
     }
 
     /* High contrast mode support */
@@ -936,7 +947,7 @@ redirect_from:
   </style>
 </head>
 <body>
-  <!-- Language Toggle Button -->
+  <!-- Language Toggle Button - NOW VISIBLE -->
   <div class="language-toggle">
     <button class="lang-btn en active" onclick="switchLanguage('en')">ENGLISH</button>
     <button class="lang-btn es" onclick="switchLanguage('es')">ESPAÑOL</button>
