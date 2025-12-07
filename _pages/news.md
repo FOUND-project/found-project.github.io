@@ -5,7 +5,6 @@ permalink: /news/
 author_profile: true
 ---
 
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -89,40 +88,56 @@ author_profile: true
       margin-bottom: 1rem;
     }
 
+    /* Hide checkbox */
+    .expand-toggle {
+      display: none;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 1rem;
+      cursor: pointer;
+    }
+
     .card-title {
       font-size: 1.35rem;
       font-weight: 700;
       color: #1b4d3e;
       line-height: 1.4;
-      margin-bottom: 1rem;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: start;
-      gap: 1rem;
+      flex: 1;
     }
 
-    .expand-btn {
+    .expand-icon {
       background: #1b4d3e;
       color: white;
-      border: none;
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      cursor: pointer;
-      font-size: 1.2rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
+      font-size: 1.2rem;
       transition: all 0.3s ease;
+      flex-shrink: 0;
+      user-select: none;
     }
 
-    .expand-btn:hover {
+    .card-header:hover .expand-icon {
       background: #2d7a5f;
       transform: scale(1.1);
     }
 
+    .expand-icon::before {
+      content: '+';
+    }
+
+    .expand-toggle:checked ~ .card-header .expand-icon::before {
+      content: '−';
+    }
+
+    /* Content expansion */
     .card-content {
       max-height: 0;
       overflow: hidden;
@@ -131,7 +146,7 @@ author_profile: true
       line-height: 1.7;
     }
 
-    .card-content.expanded {
+    .expand-toggle:checked ~ .card-content {
       max-height: 5000px;
       margin-top: 1rem;
     }
@@ -221,26 +236,6 @@ author_profile: true
       font-size: 1.5rem;
     }
 
-    #toast {
-      position: fixed;
-      bottom: 40px;
-      right: 40px;
-      background: #1b4d3e;
-      color: white;
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      font-weight: 600;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-      z-index: 9999;
-      box-shadow: 0 8px 32px rgba(27, 77, 62, 0.4);
-    }
-
-    #toast.show {
-      opacity: 1;
-    }
-
     @media (max-width: 768px) {
       body {
         padding: 1.5rem 1rem;
@@ -281,10 +276,11 @@ author_profile: true
       <!-- Card 1 -->
       <div class="news-card">
         <span class="card-emoji">🇨🇴🇲🇽</span>
-        <div class="card-title">
-          <span>Second Visit of Colombia's Search Unit for Missing Persons (UBPD) to FOUND's Experimental Sites in Jalisco</span>
-          <button class="expand-btn" onclick="toggleCard(this)">+</button>
-        </div>
+        <input type="checkbox" id="card1" class="expand-toggle">
+        <label for="card1" class="card-header">
+          <span class="card-title">Second Visit of Colombia's Search Unit for Missing Persons (UBPD) to FOUND's Experimental Sites in Jalisco</span>
+          <span class="expand-icon"></span>
+        </label>
         <div class="card-content">
           <p>We are deeply grateful to <strong>CVM Cyber</strong> and <strong>Ciaran Martin</strong> for their generous support in making this visit possible.</p>
           
@@ -311,10 +307,6 @@ author_profile: true
                 <span class="icon">💬</span>
                 <span>WhatsApp</span>
               </a>
-              <span class="share-item" onclick="copyLink('https://found-project.github.io/news/#ubpd-visit')">
-                <span class="icon">📋</span>
-                <span>Copy</span>
-              </span>
             </div>
           </div>
         </div>
@@ -323,10 +315,11 @@ author_profile: true
       <!-- Card 2 -->
       <div class="news-card">
         <span class="card-emoji">📄</span>
-        <div class="card-title">
-          <span>FOUND is in The Guardian</span>
-          <button class="expand-btn" onclick="toggleCard(this)">+</button>
-        </div>
+        <input type="checkbox" id="card2" class="expand-toggle">
+        <label for="card2" class="card-header">
+          <span class="card-title">FOUND is in The Guardian</span>
+          <span class="expand-icon"></span>
+        </label>
         <div class="card-content">
           <p>This piece is the result of more than six months of email conversations, WhatsApp messages, and the journalist's in-person visit to our experimental sites in Jalisco, Mexico. We are deeply grateful for the care, depth and commitment brought to this story after months spent listening to families, researchers and officials.</p>
           
@@ -349,10 +342,6 @@ author_profile: true
                 <span class="icon">💬</span>
                 <span>WhatsApp</span>
               </a>
-              <span class="share-item" onclick="copyLink('https://found-project.github.io/news/#guardian')">
-                <span class="icon">📋</span>
-                <span>Copy</span>
-              </span>
             </div>
           </div>
         </div>
@@ -361,10 +350,11 @@ author_profile: true
       <!-- Card 3 -->
       <div class="news-card">
         <span class="card-emoji">🇬🇧</span>
-        <div class="card-title">
-          <span>FOUND has received new support from the UK's FCDO through the Frontier Tech Hub</span>
-          <button class="expand-btn" onclick="toggleCard(this)">+</button>
-        </div>
+        <input type="checkbox" id="card3" class="expand-toggle">
+        <label for="card3" class="card-header">
+          <span class="card-title">FOUND has received new support from the UK's FCDO through the Frontier Tech Hub</span>
+          <span class="expand-icon"></span>
+        </label>
         <div class="card-content">
           <p>In the pitch, our team showcased FOUND's impact to date, and we were awarded funding that will enable us to scale our mission: to drive systemic change in how missing persons are searched for in Mexico, Colombia, and beyond.</p>
           
@@ -403,10 +393,6 @@ author_profile: true
                 <span class="icon">💬</span>
                 <span>WhatsApp</span>
               </a>
-              <span class="share-item" onclick="copyLink('https://found-project.github.io/news/#fcdo')">
-                <span class="icon">📋</span>
-                <span>Copy</span>
-              </span>
             </div>
           </div>
         </div>
@@ -415,10 +401,11 @@ author_profile: true
       <!-- Card 4 -->
       <div class="news-card">
         <span class="card-emoji">📰</span>
-        <div class="card-title">
-          <span>FOUND featured by Associated Press, The Independent, LA Times, VICE, NBC</span>
-          <button class="expand-btn" onclick="toggleCard(this)">+</button>
-        </div>
+        <input type="checkbox" id="card4" class="expand-toggle">
+        <label for="card4" class="card-header">
+          <span class="card-title">FOUND featured by Associated Press, The Independent, LA Times, VICE, NBC</span>
+          <span class="expand-icon"></span>
+        </label>
         <div class="card-content">
           <ul>
             <li><strong>Associated Press:</strong> <a href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li>
@@ -443,52 +430,12 @@ author_profile: true
                 <span class="icon">💬</span>
                 <span>WhatsApp</span>
               </a>
-              <span class="share-item" onclick="copyLink('https://found-project.github.io/news/#media-coverage')">
-                <span class="icon">📋</span>
-                <span>Copy</span>
-              </span>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <div id="toast">✓ Link copied!</div>
-
-  <script>
-    function toggleCard(btn) {
-      const content = btn.closest('.news-card').querySelector('.card-content');
-      const isExpanded = content.classList.contains('expanded');
-      
-      if (isExpanded) {
-        content.classList.remove('expanded');
-        btn.textContent = '+';
-      } else {
-        content.classList.add('expanded');
-        btn.textContent = '−';
-      }
-    }
-
-    function copyLink(url) {
-      navigator.clipboard.writeText(url).then(() => {
-        const toast = document.getElementById('toast');
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2000);
-      }).catch(() => {
-        // Fallback
-        const textarea = document.createElement('textarea');
-        textarea.value = url;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-        
-        const toast = document.getElementById('toast');
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2000);
-      });
-    }
-  </script>
 </body>
 </html>
+
