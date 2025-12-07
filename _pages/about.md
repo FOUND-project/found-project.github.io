@@ -28,6 +28,7 @@ redirect_from:
       --dark-green: #1e4034;
       --light-green: #4a8c73;
       --accent-green: #e8f5f0;
+      --gold-accent: #d4af37;
       --text-dark: #1a1a1a;
       --text-medium: #4a4a4a;
       --text-light: #666;
@@ -69,9 +70,64 @@ redirect_from:
       padding: 0 clamp(1rem, 4vw, 3rem);
     }
 
+    /* ENHANCED TITLE SECTION */
+    .title-section {
+      padding: clamp(3rem, 8vw, 5rem) 0 clamp(2rem, 6vw, 4rem);
+      background: linear-gradient(135deg, #1a3d2f 0%, var(--dark-green) 50%, var(--primary-green) 100%);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      margin-bottom: 2rem;
+      border-radius: 0 0 24px 24px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .title-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 70% 30%, rgba(232, 245, 240, 0.05) 0%, transparent 50%);
+      z-index: 0;
+    }
+
+    .project-title {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      color: white;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 1;
+    }
+
+    .project-subtitle {
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 400;
+      color: var(--accent-green);
+      font-style: italic;
+      letter-spacing: 0.02em;
+      line-height: 1.5;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .title-accent {
+      color: var(--gold-accent);
+      font-weight: 700;
+    }
+
     /* Hero Section */
     .hero {
-      padding: clamp(4rem, 10vw, 6rem) 0 clamp(3rem, 8vw, 5rem);
+      padding: clamp(2rem, 6vw, 4rem) 0 clamp(2rem, 6vw, 4rem);
       background: linear-gradient(135deg, #f8fcfb 0%, #ffffff 100%);
       position: relative;
       overflow: hidden;
@@ -210,7 +266,7 @@ redirect_from:
 
     /* Content Sections */
     .content-section {
-      padding: clamp(3rem, 6vw, 5rem) 0;
+      padding: clamp(2.5rem, 5vw, 4rem) 0;
       border-bottom: 1px solid var(--border-light);
       scroll-margin-top: 2rem;
     }
@@ -220,7 +276,7 @@ redirect_from:
     }
 
     .section-header {
-      margin-bottom: 3rem;
+      margin-bottom: 2.5rem;
     }
 
     h2 {
@@ -245,31 +301,32 @@ redirect_from:
       border-radius: 2px;
     }
 
-    /* Enhanced Info Lists */
+    /* ENHANCED & COMPACT Info Lists */
     .info-list {
       list-style: none;
       padding-left: 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-      gap: 1rem clamp(1.5rem, 4vw, 3rem);
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: 0.75rem 1.5rem; /* Reduced vertical and horizontal gap */
+      margin-top: 1.5rem;
     }
 
     .info-list li {
-      padding: 1rem 0 1rem 2.5rem;
+      padding: 0.75rem 0 0.75rem 2.25rem; /* Reduced padding */
       position: relative;
       color: var(--text-medium);
-      font-size: clamp(1rem, 2.5vw, 1.1rem);
+      font-size: clamp(0.95rem, 2.5vw, 1.05rem); /* Slightly smaller font */
       transition: all 0.3s ease;
-      min-height: 48px;
+      min-height: 42px; /* Reduced min-height */
       display: flex;
       align-items: center;
       border-bottom: 1px solid transparent;
+      line-height: 1.5;
     }
 
     .info-list li:hover {
       color: var(--primary-green);
-      padding-left: 3rem;
+      padding-left: 2.5rem; /* Reduced hover padding */
       border-bottom-color: var(--accent-green);
     }
 
@@ -279,13 +336,13 @@ redirect_from:
       left: 0;
       color: var(--light-green);
       font-weight: bold;
-      font-size: 1.4rem;
+      font-size: 1.2rem; /* Slightly smaller */
       transition: all 0.3s ease;
       top: 50%;
       transform: translateY(-50%);
       background: var(--accent-green);
-      width: 32px;
-      height: 32px;
+      width: 28px; /* Smaller circle */
+      height: 28px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -667,6 +724,12 @@ redirect_from:
 
       .info-list {
         grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+      
+      .info-list li {
+        padding: 0.5rem 0 0.5rem 2rem;
+        min-height: 38px;
       }
     }
 
@@ -694,6 +757,18 @@ redirect_from:
       .partner-logo {
         padding: 1rem;
         min-height: 120px;
+      }
+      
+      .title-section {
+        padding: 2.5rem 1rem 2rem;
+      }
+      
+      .project-title {
+        font-size: 2.2rem;
+      }
+      
+      .project-subtitle {
+        font-size: 1.2rem;
       }
     }
 
@@ -750,6 +825,14 @@ redirect_from:
 </head>
 <body>
   <div class="page">
+    <!-- ENHANCED TITLE SECTION -->
+    <section class="title-section">
+      <h1 class="project-title">FOUND Project</h1>
+      <p class="project-subtitle">
+        <span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan
+      </p>
+    </section>
+
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
