@@ -789,7 +789,7 @@ redirect_from:
 
     <!-- Footer -->
     <footer class="footer">
-      <em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan</em>
+      <em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>
     </footer>
   </div>
 
