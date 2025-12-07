@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "How to Help"
+title: 
 permalink: /how-to-help/
 author_profile: true
 ---
