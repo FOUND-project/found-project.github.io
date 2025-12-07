@@ -65,98 +65,12 @@ redirect_from:
       border-radius: 4px;
     }
 
-    /* Language Toggle Styles - LOWER POSITION */
-    .language-toggle {
-      position: fixed;
-      top: 4rem; /* MUCH LOWER - from 2.5rem */
-      right: clamp(1rem, 4vw, 3rem);
-      z-index: 1000;
-      display: flex;
-      gap: 0.5rem;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-radius: 50px;
-      padding: 0.5rem;
-      box-shadow: var(--shadow-md);
-      border: 1px solid var(--border-light);
-      transition: all 0.3s var(--transition-smooth);
-    }
-
-    .language-toggle:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .lang-btn {
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: all 0.3s var(--transition-smooth);
-      background: transparent;
-      color: var(--text-medium);
-    }
-
-    .lang-btn.active {
-      background: var(--primary-green);
-      color: white;
-      box-shadow: 0 2px 8px rgba(45, 95, 77, 0.2);
-    }
-
-    .lang-btn:hover:not(.active) {
-      background: var(--accent-green);
-      color: var(--primary-green);
-    }
-
-    .lang-btn.es {
-      min-width: 85px;
-    }
-
-    /* Content visibility based on language - SIMPLIFIED */
-    .lang-en {
-      display: block;
-    }
-
-    .lang-es {
-      display: none;
-    }
-
-    /* FIXED: Changed from body.spanish to body.spanish or body.es */
-    body.spanish .lang-en,
-    body.es .lang-en {
-      display: none;
-    }
-
-    body.spanish .lang-es,
-    body.es .lang-es {
-      display: block;
-    }
-
-    /* Language-specific animations */
-    .word-carousel.es {
-      min-width: clamp(220px, 35vw, 350px);
-    }
-
-    /* Hide/show word carousels based on language */
-    .word-carousel.en {
-      display: inline-block;
-    }
-
-    .word-carousel.es {
-      display: none;
-    }
-
-    body.spanish .word-carousel.en,
-    body.es .word-carousel.en {
-      display: none;
-    }
-
-    body.spanish .word-carousel.es,
-    body.es .word-carousel.es {
-      display: inline-block;
-    }
+    /* REMOVED the .page container to make it full width */
+    /* .page {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 clamp(1rem, 4vw, 3rem);
+    } */
 
     /* ENHANCED TITLE SECTION - Now full width */
     .title-section {
@@ -840,11 +754,6 @@ redirect_from:
         padding-left: 1.5rem;
         padding-right: 1.5rem;
       }
-
-      .language-toggle {
-        top: 3rem; /* Adjusted for mobile */
-        right: 1.5rem;
-      }
     }
 
     @media (max-width: 480px) {
@@ -874,7 +783,7 @@ redirect_from:
       }
       
       .title-section {
-        padding: 3.5rem 1rem 2rem; /* More top padding for button */
+        padding: 2.5rem 1rem 2rem;
       }
       
       .project-title {
@@ -893,17 +802,6 @@ redirect_from:
       .footer {
         padding-left: 1rem;
         padding-right: 1rem;
-      }
-
-      .language-toggle {
-        top: 2.5rem;
-        right: 1rem;
-        padding: 0.3rem;
-      }
-
-      .lang-btn {
-        padding: 0.5rem 0.8rem;
-        font-size: 0.8rem;
       }
     }
 
@@ -943,10 +841,6 @@ redirect_from:
         transform: none !important;
         box-shadow: var(--shadow-sm) !important;
       }
-      
-      .language-toggle {
-        display: none !important;
-      }
     }
 
     /* High contrast mode support */
@@ -963,20 +857,11 @@ redirect_from:
   </style>
 </head>
 <body>
-  <!-- Language Toggle Button - NOW LOWER AND WORKING -->
-  <div class="language-toggle">
-    <button class="lang-btn en active" onclick="switchLanguage('en')">ENGLISH</button>
-    <button class="lang-btn es" onclick="switchLanguage('es')">ESPAÑOL</button>
-  </div>
-
   <!-- ENHANCED TITLE SECTION -->
   <section class="title-section">
     <h1 class="project-title">FOUND</h1>
     <p class="project-subtitle">
-      <span class="title-accent lang-en">Interpretar la Naturaleza</span>
-      <span class="title-accent lang-es">Interpretar la Naturaleza</span>
-      <span class="lang-en">para Encontrar a Quienes nos Faltan</span>
-      <span class="lang-es">para Encontrar a Quienes nos Faltan</span>
+      <span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan
     </p>
   </section>
 
@@ -984,9 +869,8 @@ redirect_from:
   <section class="hero">
     <div class="hero-content">
       <div class="animated-tagline">
-        <span class="lang-en">Using technology to&nbsp;</span>
-        <span class="lang-es">Usando tecnología para&nbsp;</span>
-        <div class="word-carousel en" role="text" aria-label="Rotating tagline">
+        <span>Using technology to&nbsp;</span>
+        <div class="word-carousel" role="text" aria-label="Rotating tagline">
           <ul class="word-list">
             <li>dignify.</li>
             <li>remember.</li>
@@ -994,21 +878,10 @@ redirect_from:
             <li>bring closure.</li>
           </ul>
         </div>
-        <div class="word-carousel es" role="text" aria-label="Rotating tagline">
-          <ul class="word-list">
-            <li>dignificar.</li>
-            <li>recordar.</li>
-            <li>buscar.</li>
-            <li>dar consuelo.</li>
-          </ul>
-        </div>
       </div>
 
-      <p class="hero-description lang-en">
+      <p class="hero-description">
         Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology and grassroots knowledge to search, locate and drive systemic change.
-      </p>
-      <p class="hero-description lang-es">
-        Más de 120,000 personas están reportadas como desaparecidas en México. Detrás de cada caso hay una familia buscando respuestas. <strong>FOUND</strong> combina tecnología y conocimiento comunitario para buscar, localizar e impulsar cambios sistémicos.
       </p>
 
       <div class="hero-image-container skeleton">
@@ -1026,14 +899,10 @@ redirect_from:
   <section class="content-section" id="community">
     <div class="section-container">
       <div class="section-header">
-        <h2 class="lang-en"><span>Driven by Families and Research Communities</span></h2>
-        <h2 class="lang-es"><span>Impulsado por Familias y Comunidades de Investigación</span></h2>
+        <h2><span>Driven by Families and Research Communities</span></h2>
       </div>
-      <p class="hero-description lang-en">
+      <p class="hero-description">
         FOUND is guided and motivated by <strong>search collectives</strong> and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.
-      </p>
-      <p class="hero-description lang-es">
-        FOUND es guiado y motivado por <strong>colectivos de búsqueda</strong> e investigadores del CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, y las Universidades Autónomas de Zacatecas y San Luis Potosí.
       </p>
     </div>
   </section>
@@ -1041,10 +910,8 @@ redirect_from:
   <!-- Institutional Collaborations -->
   <section class="content-section" id="collaborations">
     <div class="section-container">
-      <h2 class="lang-en">Institutional Collaborations</h2>
-      <h2 class="lang-es">Colaboraciones Institucionales</h2>
-      
-      <ul class="info-list lang-en">
+      <h2>Institutional Collaborations</h2>
+      <ul class="info-list">
         <li>Executive Office of the UN Secretary-General</li>
         <li>UK's Foreign, Commonwealth & Development Office (FCDO)</li>
         <li>Local Search Commissions and Attorney's Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)</li>
@@ -1054,27 +921,14 @@ redirect_from:
         <li>British Embassy in Mexico City</li>
         <li>British Association for Forensic Anthropology</li>
       </ul>
-      
-      <ul class="info-list lang-es">
-        <li>Oficina Ejecutiva del Secretario General de la ONU</li>
-        <li>Oficina de Relaciones Exteriores, Commonwealth y Desarrollo del Reino Unido (FCDO)</li>
-        <li>Comisiones Locales de Búsqueda y Fiscalías de Jalisco, Zacatecas, San Luis Potosí y Chihuahua (México)</li>
-        <li>Unidad de Búsqueda de Personas Dadas por Desaparecidas de Colombia</li>
-        <li>Comisión Nacional de Búsqueda de México</li>
-        <li>Secretaría de Ciencia y Tecnología de México</li>
-        <li>Embajada Británica en la Ciudad de México</li>
-        <li>Asociación Británica de Antropología Forense</li>
-      </ul>
     </div>
   </section>
 
   <!-- Technologies Section -->
   <section class="content-section" id="technologies">
     <div class="section-container">
-      <h2 class="lang-en">Technologies in Action</h2>
-      <h2 class="lang-es">Tecnologías en Acción</h2>
-      
-      <ul class="info-list lang-en">
+      <h2>Technologies in Action</h2>
+      <ul class="info-list">
         <li>Multispectral & Hyperspectral Imaging</li>
         <li>Airborne LiDAR</li>
         <li>Seismic Noise Interferometry (TIRSA)</li>
@@ -1082,18 +936,8 @@ redirect_from:
         <li>Satellite Spectral Analysis</li>
         <li>Forensic Entomology, Botany, Territorial Analysis, Soil Science</li>
       </ul>
-      
-      <ul class="info-list lang-es">
-        <li>Imágenes Multiespectrales e Hiperspectrales</li>
-        <li>LiDAR Aéreo</li>
-        <li>Interferometría de Ruido Sísmico (TIRSA)</li>
-        <li>Tomografía de Resistividad Eléctrica, Mediciones de Conductividad</li>
-        <li>Análisis Espectral por Satélite</li>
-        <li>Entomología Forense, Botánica, Análisis Territorial, Ciencias del Suelo</li>
-      </ul>
 
       <div class="image-gallery">
-        <!-- Gallery items remain the same (images don't need translation) -->
         <div class="gallery-item">
           <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 degree imaging technology in use" loading="lazy" class="loading" onload="this.classList.remove('loading')">
         </div>
@@ -1131,16 +975,10 @@ redirect_from:
   <!-- Buscadoras Section -->
   <section class="buscadoras-section" id="buscadoras">
     <div class="buscadoras-content">
-      <h2 class="lang-en">The Role of Buscadoras</h2>
-      <h2 class="lang-es">El Papel de las Buscadoras</h2>
-      
-      <p class="hero-description lang-en">
+      <h2>The Role of Buscadoras</h2>
+      <p class="hero-description">
         Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. FOUND listens, learns, and incorporates their methods into our technological efforts.
       </p>
-      <p class="hero-description lang-es">
-        Los colectivos liderados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, son conocimiento forense vital. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.
-      </p>
-      
       <div class="buscadoras-image">
         <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Buscadoras hands with plants symbolizing hope and remembrance" loading="lazy" class="loading" onload="this.classList.remove('loading')">
       </div>
@@ -1150,14 +988,11 @@ redirect_from:
   <!-- Social Media Section -->
   <section class="social-section" id="social">
     <div class="social-container">
-      <h2 class="section-title lang-en">Follow Our Journey</h2>
-      <h2 class="section-title lang-es">Sigue Nuestro Recorrido</h2>
-      
-      <p class="section-subtitle lang-en">Stay connected with our latest findings, community stories, and collaborative efforts</p>
-      <p class="section-subtitle lang-es">Mantente conectado con nuestros últimos hallazgos, historias comunitarias y esfuerzos colaborativos</p>
+      <h2 class="section-title">Follow Our Journey</h2>
+      <p class="section-subtitle">Stay connected with our latest findings, community stories, and collaborative efforts</p>
 
       <div class="social-grid">
-        <!-- Social media embeds remain the same (they display in their original language) -->
+        <!-- Twitter/X -->
         <div class="social-embed twitter-embed">
           <blockquote class="twitter-tweet">
             <p lang="en" dir="ltr">
@@ -1170,6 +1005,7 @@ redirect_from:
           </blockquote>
         </div>
 
+        <!-- LinkedIn FCDO -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
@@ -1183,6 +1019,7 @@ redirect_from:
           </div>
         </div>
 
+        <!-- LinkedIn 1 -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
@@ -1196,6 +1033,7 @@ redirect_from:
           </div>
         </div>
 
+        <!-- LinkedIn 2 -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
@@ -1215,18 +1053,12 @@ redirect_from:
   <!-- Enhanced Partners Section -->
   <section class="partners-section" id="partners">
     <div class="partners-container">
-      <h2 class="section-title lang-en">Our Partners</h2>
-      <h2 class="section-title lang-es">Nuestros Socios</h2>
-      
-      <p class="partners-intro lang-en">
+      <h2 class="section-title">Our Partners</h2>
+      <p class="partners-intro">
         FOUND brings together an exceptional coalition of academic institutions, government agencies, civil society organizations, and international partners. Together, we work toward a common goal: bringing dignity and closure to families searching for their loved ones.
-      </p>
-      <p class="partners-intro lang-es">
-        FOUND reúne una coalición excepcional de instituciones académicas, agencias gubernamentales, organizaciones de la sociedad civil y socios internacionales. Juntos, trabajamos hacia un objetivo común: brindar dignidad y consuelo a las familias que buscan a sus seres queridos.
       </p>
 
       <div class="partner-grid">
-        <!-- Partner logos remain the same -->
         <div class="partner-logo">
           <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Social-web-v1.jpg?raw=true" alt="Frontier Tech Hub partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
         </div>
@@ -1279,77 +1111,10 @@ redirect_from:
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
-      <em class="lang-en">FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>
-      <em class="lang-es">FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>
+      <em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>
     </div>
   </footer>
 
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-  <script>
-    // Language switching functionality - FIXED
-    function switchLanguage(lang) {
-      console.log('Switching to language:', lang); // Debug log
-      
-      // Update body class - FIXED: using 'es' instead of 'spanish'
-      document.body.classList.remove('english', 'spanish', 'en', 'es');
-      if (lang === 'es') {
-        document.body.classList.add('es', 'spanish');
-      } else {
-        document.body.classList.add('en', 'english');
-      }
-      
-      // Update button states
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.classList.contains(lang)) {
-          btn.classList.add('active');
-        }
-      });
-      
-      // Save preference to localStorage
-      localStorage.setItem('preferred-language', lang);
-      
-      // Update meta tags for SEO
-      if (lang === 'es') {
-        document.documentElement.lang = 'es';
-        document.title = 'Proyecto FOUND - Usando Tecnología para Buscar y Recordar';
-        if (document.querySelector('meta[name="description"]')) {
-          document.querySelector('meta[name="description"]').content = 'FOUND combina tecnología y conocimiento comunitario para buscar personas desaparecidas en México, brindando dignidad y consuelo a las familias.';
-        }
-        if (document.querySelector('meta[property="og:title"]')) {
-          document.querySelector('meta[property="og:title"]').content = 'Proyecto FOUND - Usando Tecnología para Buscar y Recordar';
-        }
-        if (document.querySelector('meta[property="og:description"]')) {
-          document.querySelector('meta[property="og:description"]').content = 'Más de 120,000 personas están reportadas como desaparecidas en México. FOUND combina tecnología y conocimiento comunitario para buscar, localizar e impulsar cambios sistémicos.';
-        }
-      } else {
-        document.documentElement.lang = 'en';
-        document.title = 'FOUND Project - Using Technology to Search and Remember';
-        if (document.querySelector('meta[name="description"]')) {
-          document.querySelector('meta[name="description"]').content = 'FOUND combines technology and grassroots knowledge to search for disappeared persons in Mexico, bringing dignity and closure to families.';
-        }
-        if (document.querySelector('meta[property="og:title"]')) {
-          document.querySelector('meta[property="og:title"]').content = 'FOUND Project - Using Technology to Search and Remember';
-        }
-        if (document.querySelector('meta[property="og:description"]')) {
-          document.querySelector('meta[property="og:description"]').content = 'Over 120,000 persons are reported as disappeared in Mexico. FOUND combines technology and grassroots knowledge to search, locate and drive systemic change.';
-        }
-      }
-      
-      // Force a reflow to ensure CSS updates
-      document.body.offsetHeight;
-    }
-
-    // Initialize language based on user preference or browser language
-    document.addEventListener('DOMContentLoaded', function() {
-      const savedLang = localStorage.getItem('preferred-language');
-      const browserLang = navigator.language.startsWith('es') ? 'es' : 'en';
-      const defaultLang = savedLang || browserLang;
-      
-      console.log('Initializing language:', defaultLang); // Debug log
-      switchLanguage(defaultLang);
-    });
-  </script>
 </body>
 </html>
