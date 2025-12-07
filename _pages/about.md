@@ -64,12 +64,41 @@ redirect_from:
       border-radius: 4px;
     }
 
-    /* REMOVED the .page container to make it full width */
-    /* .page {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 clamp(1rem, 4vw, 3rem);
-    } */
+    /* Language toggle */
+    .lang-toggle {
+      position: absolute;
+      top: 1.5rem;
+      right: clamp(1rem, 4vw, 3rem);
+      display: inline-flex;
+      gap: 0.5rem;
+      z-index: 2;
+    }
+
+    .lang-btn {
+      border: 1px solid rgba(255,255,255,0.8);
+      background: rgba(0,0,0,0.15);
+      color: #ffffff;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s var(--transition-smooth);
+      backdrop-filter: blur(6px);
+    }
+
+    .lang-btn:hover {
+      background: rgba(0,0,0,0.3);
+    }
+
+    .lang-btn.active {
+      background: #ffffff;
+      color: var(--dark-green);
+      border-color: #ffffff;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+    }
 
     /* ENHANCED TITLE SECTION - Now full width */
     .title-section {
@@ -753,6 +782,11 @@ redirect_from:
         padding-left: 1.5rem;
         padding-right: 1.5rem;
       }
+
+      .lang-toggle {
+        top: 1rem;
+        right: 1rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -858,6 +892,12 @@ redirect_from:
 <body>
   <!-- ENHANCED TITLE SECTION -->
   <section class="title-section">
+    <!-- Language toggle -->
+    <div class="lang-toggle" aria-label="Language selection">
+      <button type="button" class="lang-btn active" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="es">ES</button>
+    </div>
+
     <h1 class="project-title">FOUND</h1>
     <p class="project-subtitle">
       <span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan
@@ -868,18 +908,18 @@ redirect_from:
   <section class="hero">
     <div class="hero-content">
       <div class="animated-tagline">
-        <span>Using technology to&nbsp;</span>
+        <span id="hero-tagline-static">Using technology to&nbsp;</span>
         <div class="word-carousel" role="text" aria-label="Rotating tagline">
           <ul class="word-list">
-            <li>dignify.</li>
-            <li>remember.</li>
-            <li>search.</li>
-            <li>bring closure.</li>
+            <li id="word-1">dignify.</li>
+            <li id="word-2">remember.</li>
+            <li id="word-3">search.</li>
+            <li id="word-4">bring closure.</li>
           </ul>
         </div>
       </div>
 
-      <p class="hero-description">
+      <p class="hero-description" id="hero-main-text">
         Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology and grassroots knowledge to search, locate and drive systemic change.
       </p>
 
@@ -898,9 +938,9 @@ redirect_from:
   <section class="content-section" id="community">
     <div class="section-container">
       <div class="section-header">
-        <h2><span>Driven by Families and Research Communities</span></h2>
+        <h2 id="community-title"><span>Driven by Families and Research Communities</span></h2>
       </div>
-      <p class="hero-description">
+      <p class="hero-description" id="community-text">
         FOUND is guided and motivated by <strong>search collectives</strong> and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.
       </p>
     </div>
@@ -909,16 +949,16 @@ redirect_from:
   <!-- Institutional Collaborations -->
   <section class="content-section" id="collaborations">
     <div class="section-container">
-      <h2>Institutional Collaborations</h2>
+      <h2 id="collab-title">Institutional Collaborations</h2>
       <ul class="info-list">
-        <li>Executive Office of the UN Secretary-General</li>
-        <li>UK's Foreign, Commonwealth & Development Office (FCDO)</li>
-        <li>Local Search Commissions and Attorney's Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)</li>
-        <li>Colombian Search Unit</li>
-        <li>Mexico's National Search Commission</li>
-        <li>Mexican Science and Technology Secretariat</li>
-        <li>British Embassy in Mexico City</li>
-        <li>British Association for Forensic Anthropology</li>
+        <li id="collab-item-1">Executive Office of the UN Secretary-General</li>
+        <li id="collab-item-2">UK's Foreign, Commonwealth &amp; Development Office (FCDO)</li>
+        <li id="collab-item-3">Local Search Commissions and Attorney's Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)</li>
+        <li id="collab-item-4">Colombian Search Unit</li>
+        <li id="collab-item-5">Mexico's National Search Commission</li>
+        <li id="collab-item-6">Mexican Science and Technology Secretariat</li>
+        <li id="collab-item-7">British Embassy in Mexico City</li>
+        <li id="collab-item-8">British Association for Forensic Anthropology</li>
       </ul>
     </div>
   </section>
@@ -926,14 +966,14 @@ redirect_from:
   <!-- Technologies Section -->
   <section class="content-section" id="technologies">
     <div class="section-container">
-      <h2>Technologies in Action</h2>
+      <h2 id="tech-title">Technologies in Action</h2>
       <ul class="info-list">
-        <li>Multispectral & Hyperspectral Imaging</li>
-        <li>Airborne LiDAR</li>
-        <li>Seismic Noise Interferometry (TIRSA)</li>
-        <li>Electrical Resistivity Tomography, Conductivimetry Measurements</li>
-        <li>Satellite Spectral Analysis</li>
-        <li>Forensic Entomology, Botany, Territorial Analysis, Soil Science</li>
+        <li id="tech-item-1">Multispectral &amp; Hyperspectral Imaging</li>
+        <li id="tech-item-2">Airborne LiDAR</li>
+        <li id="tech-item-3">Seismic Noise Interferometry (TIRSA)</li>
+        <li id="tech-item-4">Electrical Resistivity Tomography, Conductivimetry Measurements</li>
+        <li id="tech-item-5">Satellite Spectral Analysis</li>
+        <li id="tech-item-6">Forensic Entomology, Botany, Territorial Analysis, Soil Science</li>
       </ul>
 
       <div class="image-gallery">
@@ -974,8 +1014,8 @@ redirect_from:
   <!-- Buscadoras Section -->
   <section class="buscadoras-section" id="buscadoras">
     <div class="buscadoras-content">
-      <h2>The Role of Buscadoras</h2>
-      <p class="hero-description">
+      <h2 id="buscadoras-title">The Role of Buscadoras</h2>
+      <p class="hero-description" id="buscadoras-text">
         Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. FOUND listens, learns, and incorporates their methods into our technological efforts.
       </p>
       <div class="buscadoras-image">
@@ -987,8 +1027,8 @@ redirect_from:
   <!-- Social Media Section -->
   <section class="social-section" id="social">
     <div class="social-container">
-      <h2 class="section-title">Follow Our Journey</h2>
-      <p class="section-subtitle">Stay connected with our latest findings, community stories, and collaborative efforts</p>
+      <h2 class="section-title" id="social-title">Follow Our Journey</h2>
+      <p class="section-subtitle" id="social-subtitle">Stay connected with our latest findings, community stories, and collaborative efforts</p>
 
       <div class="social-grid">
         <!-- Twitter/X -->
@@ -1052,8 +1092,8 @@ redirect_from:
   <!-- Enhanced Partners Section -->
   <section class="partners-section" id="partners">
     <div class="partners-container">
-      <h2 class="section-title">Our Partners</h2>
-      <p class="partners-intro">
+      <h2 class="section-title" id="partners-title">Our Partners</h2>
+      <p class="partners-intro" id="partners-intro">
         FOUND brings together an exceptional coalition of academic institutions, government agencies, civil society organizations, and international partners. Together, we work toward a common goal: bringing dignity and closure to families searching for their loved ones.
       </p>
 
@@ -1110,10 +1150,124 @@ redirect_from:
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
-      <em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>
+      <em id="footer-text">FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>
     </div>
   </footer>
 
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <!-- Language toggle script -->
+  <script>
+    (function() {
+      const translations = {
+        en: {
+          'hero-tagline-static': 'Using technology to&nbsp;',
+          'word-1': 'dignify.',
+          'word-2': 'remember.',
+          'word-3': 'search.',
+          'word-4': 'bring closure.',
+          'hero-main-text': 'Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology and grassroots knowledge to search, locate and drive systemic change.',
+          'community-title': 'Driven by Families and Research Communities',
+          'community-text': 'FOUND is guided and motivated by <strong>search collectives</strong> and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.',
+          'collab-title': 'Institutional Collaborations',
+          'collab-item-1': 'Executive Office of the UN Secretary-General',
+          'collab-item-2': 'UK\'s Foreign, Commonwealth &amp; Development Office (FCDO)',
+          'collab-item-3': 'Local Search Commissions and Attorney\'s Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)',
+          'collab-item-4': 'Colombian Search Unit',
+          'collab-item-5': 'Mexico\'s National Search Commission',
+          'collab-item-6': 'Mexican Science and Technology Secretariat',
+          'collab-item-7': 'British Embassy in Mexico City',
+          'collab-item-8': 'British Association for Forensic Anthropology',
+          'tech-title': 'Technologies in Action',
+          'tech-item-1': 'Multispectral &amp; Hyperspectral Imaging',
+          'tech-item-2': 'Airborne LiDAR',
+          'tech-item-3': 'Seismic Noise Interferometry (TIRSA)',
+          'tech-item-4': 'Electrical Resistivity Tomography, Conductivimetry Measurements',
+          'tech-item-5': 'Satellite Spectral Analysis',
+          'tech-item-6': 'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
+          'buscadoras-title': 'The Role of Buscadoras',
+          'buscadoras-text': 'Women-led collectives are at the heart of FOUND\'s work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. FOUND listens, learns, and incorporates their methods into our technological efforts.',
+          'social-title': 'Follow Our Journey',
+          'social-subtitle': 'Stay connected with our latest findings, community stories, and collaborative efforts',
+          'partners-title': 'Our Partners',
+          'partners-intro': 'FOUND brings together an exceptional coalition of academic institutions, government agencies, civil society organizations, and international partners. Together, we work toward a common goal: bringing dignity and closure to families searching for their loved ones.',
+          'footer-text': 'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
+        },
+        es: {
+          'hero-tagline-static': 'Usando tecnología para&nbsp;',
+          'word-1': 'dignificar.',
+          'word-2': 'recordar.',
+          'word-3': 'buscar.',
+          'word-4': 'dar cierre.',
+          'hero-main-text': 'Más de 120,000 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de base para buscar, localizar y promover cambios sistémicos.',
+          'community-title': 'Impulsado por familias y comunidades de investigación',
+          'community-text': 'FOUND está guiado e impulsado por <strong>colectivos de búsqueda</strong> y personas investigadoras de CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge y las Universidades Autónomas de Zacatecas y San Luis Potosí.',
+          'collab-title': 'Colaboraciones institucionales',
+          'collab-item-1': 'Oficina Ejecutiva del Secretario General de la ONU',
+          'collab-item-2': 'Ministerio de Asuntos Exteriores, de la Mancomunidad y de Desarrollo del Reino Unido (FCDO)',
+          'collab-item-3': 'Comisiones Locales de Búsqueda y Fiscalías de Jalisco, Zacatecas, San Luis Potosí y Chihuahua (México)',
+          'collab-item-4': 'Unidad de Búsqueda de Personas dadas por Desaparecidas de Colombia',
+          'collab-item-5': 'Comisión Nacional de Búsqueda de Personas de México',
+          'collab-item-6': 'Secretaría de Ciencia y Tecnología de México',
+          'collab-item-7': 'Embajada Británica en la Ciudad de México',
+          'collab-item-8': 'Asociación Británica de Antropología Forense',
+          'tech-title': 'Tecnologías en acción',
+          'tech-item-1': 'Imágenes multiespectrales e hiperespectrales',
+          'tech-item-2': 'LiDAR aerotransportado',
+          'tech-item-3': 'Interferometría de ruido sísmico (TIRSA)',
+          'tech-item-4': 'Tomografía de resistividad eléctrica y mediciones de conductividad',
+          'tech-item-5': 'Análisis espectral satelital',
+          'tech-item-6': 'Entomología y botánica forense, análisis territorial y ciencia del suelo',
+          'buscadoras-title': 'El papel de las buscadoras',
+          'buscadoras-text': 'Los colectivos encabezados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.',
+          'social-title': 'Sigue nuestro camino',
+          'social-subtitle': 'Mantente al tanto de nuestros hallazgos, las historias de las comunidades y los esfuerzos de colaboración.',
+          'partners-title': 'Nuestras alianzas',
+          'partners-intro': 'FOUND reúne una coalición excepcional de instituciones académicas, instancias gubernamentales, organizaciones de la sociedad civil y aliados internacionales. Juntas, trabajamos con un objetivo común: brindar dignidad y cierre a las familias que buscan a sus seres queridos.',
+          'footer-text': 'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
+        }
+      };
+
+      function setLanguage(lang) {
+        const dict = translations[lang] || translations.en;
+        Object.keys(dict).forEach(function(id) {
+          const el = document.getElementById(id);
+          if (el) {
+            el.innerHTML = dict[id];
+          }
+        });
+
+        document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
+
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+
+        try {
+          localStorage.setItem('found-lang', lang);
+        } catch (e) {}
+      }
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const savedLang = (function() {
+          try {
+            return localStorage.getItem('found-lang');
+          } catch (e) {
+            return null;
+          }
+        })();
+
+        const initialLang = savedLang === 'es' || savedLang === 'en' ? savedLang : 'en';
+        setLanguage(initialLang);
+
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            const lang = btn.dataset.lang;
+            setLanguage(lang);
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
