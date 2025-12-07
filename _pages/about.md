@@ -65,10 +65,10 @@ redirect_from:
       border-radius: 4px;
     }
 
-    /* Language Toggle Styles - FIXED POSITIONING */
+    /* Language Toggle Styles - LOWER POSITION */
     .language-toggle {
       position: fixed;
-      top: 2.5rem; /* Increased from 1.5rem */
+      top: 4rem; /* MUCH LOWER - from 2.5rem */
       right: clamp(1rem, 4vw, 3rem);
       z-index: 1000;
       display: flex;
@@ -114,7 +114,7 @@ redirect_from:
       min-width: 85px;
     }
 
-    /* Content visibility based on language */
+    /* Content visibility based on language - SIMPLIFIED */
     .lang-en {
       display: block;
     }
@@ -123,17 +123,39 @@ redirect_from:
       display: none;
     }
 
-    body.spanish .lang-en {
+    /* FIXED: Changed from body.spanish to body.spanish or body.es */
+    body.spanish .lang-en,
+    body.es .lang-en {
       display: none;
     }
 
-    body.spanish .lang-es {
+    body.spanish .lang-es,
+    body.es .lang-es {
       display: block;
     }
 
     /* Language-specific animations */
     .word-carousel.es {
       min-width: clamp(220px, 35vw, 350px);
+    }
+
+    /* Hide/show word carousels based on language */
+    .word-carousel.en {
+      display: inline-block;
+    }
+
+    .word-carousel.es {
+      display: none;
+    }
+
+    body.spanish .word-carousel.en,
+    body.es .word-carousel.en {
+      display: none;
+    }
+
+    body.spanish .word-carousel.es,
+    body.es .word-carousel.es {
+      display: inline-block;
     }
 
     /* ENHANCED TITLE SECTION - Now full width */
@@ -169,7 +191,6 @@ redirect_from:
       text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       position: relative;
       z-index: 1;
-      margin-top: 1rem; /* Added space for the button */
     }
 
     .project-subtitle {
@@ -821,12 +842,8 @@ redirect_from:
       }
 
       .language-toggle {
-        top: 1.5rem; /* Adjusted for mobile */
+        top: 3rem; /* Adjusted for mobile */
         right: 1.5rem;
-      }
-      
-      .project-title {
-        margin-top: 1.5rem; /* More space for button on mobile */
       }
     }
 
@@ -857,12 +874,11 @@ redirect_from:
       }
       
       .title-section {
-        padding: 3rem 1rem 2rem; /* Adjusted top padding */
+        padding: 3.5rem 1rem 2rem; /* More top padding for button */
       }
       
       .project-title {
         font-size: 2.2rem;
-        margin-top: 1.5rem; /* More space for button */
       }
       
       .project-subtitle {
@@ -880,7 +896,7 @@ redirect_from:
       }
 
       .language-toggle {
-        top: 1rem;
+        top: 2.5rem;
         right: 1rem;
         padding: 0.3rem;
       }
@@ -947,7 +963,7 @@ redirect_from:
   </style>
 </head>
 <body>
-  <!-- Language Toggle Button - NOW VISIBLE -->
+  <!-- Language Toggle Button - NOW LOWER AND WORKING -->
   <div class="language-toggle">
     <button class="lang-btn en active" onclick="switchLanguage('en')">ENGLISH</button>
     <button class="lang-btn es" onclick="switchLanguage('es')">ESPAÑOL</button>
@@ -1271,11 +1287,17 @@ redirect_from:
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   <script>
-    // Language switching functionality
+    // Language switching functionality - FIXED
     function switchLanguage(lang) {
-      // Update body class
-      document.body.classList.remove('english', 'spanish');
-      document.body.classList.add(lang === 'es' ? 'spanish' : 'english');
+      console.log('Switching to language:', lang); // Debug log
+      
+      // Update body class - FIXED: using 'es' instead of 'spanish'
+      document.body.classList.remove('english', 'spanish', 'en', 'es');
+      if (lang === 'es') {
+        document.body.classList.add('es', 'spanish');
+      } else {
+        document.body.classList.add('en', 'english');
+      }
       
       // Update button states
       document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -1292,16 +1314,31 @@ redirect_from:
       if (lang === 'es') {
         document.documentElement.lang = 'es';
         document.title = 'Proyecto FOUND - Usando Tecnología para Buscar y Recordar';
-        document.querySelector('meta[name="description"]').content = 'FOUND combina tecnología y conocimiento comunitario para buscar personas desaparecidas en México, brindando dignidad y consuelo a las familias.';
-        document.querySelector('meta[property="og:title"]').content = 'Proyecto FOUND - Usando Tecnología para Buscar y Recordar';
-        document.querySelector('meta[property="og:description"]').content = 'Más de 120,000 personas están reportadas como desaparecidas en México. FOUND combina tecnología y conocimiento comunitario para buscar, localizar e impulsar cambios sistémicos.';
+        if (document.querySelector('meta[name="description"]')) {
+          document.querySelector('meta[name="description"]').content = 'FOUND combina tecnología y conocimiento comunitario para buscar personas desaparecidas en México, brindando dignidad y consuelo a las familias.';
+        }
+        if (document.querySelector('meta[property="og:title"]')) {
+          document.querySelector('meta[property="og:title"]').content = 'Proyecto FOUND - Usando Tecnología para Buscar y Recordar';
+        }
+        if (document.querySelector('meta[property="og:description"]')) {
+          document.querySelector('meta[property="og:description"]').content = 'Más de 120,000 personas están reportadas como desaparecidas en México. FOUND combina tecnología y conocimiento comunitario para buscar, localizar e impulsar cambios sistémicos.';
+        }
       } else {
         document.documentElement.lang = 'en';
         document.title = 'FOUND Project - Using Technology to Search and Remember';
-        document.querySelector('meta[name="description"]').content = 'FOUND combines technology and grassroots knowledge to search for disappeared persons in Mexico, bringing dignity and closure to families.';
-        document.querySelector('meta[property="og:title"]').content = 'FOUND Project - Using Technology to Search and Remember';
-        document.querySelector('meta[property="og:description"]').content = 'Over 120,000 persons are reported as disappeared in Mexico. FOUND combines technology and grassroots knowledge to search, locate and drive systemic change.';
+        if (document.querySelector('meta[name="description"]')) {
+          document.querySelector('meta[name="description"]').content = 'FOUND combines technology and grassroots knowledge to search for disappeared persons in Mexico, bringing dignity and closure to families.';
+        }
+        if (document.querySelector('meta[property="og:title"]')) {
+          document.querySelector('meta[property="og:title"]').content = 'FOUND Project - Using Technology to Search and Remember';
+        }
+        if (document.querySelector('meta[property="og:description"]')) {
+          document.querySelector('meta[property="og:description"]').content = 'Over 120,000 persons are reported as disappeared in Mexico. FOUND combines technology and grassroots knowledge to search, locate and drive systemic change.';
+        }
       }
+      
+      // Force a reflow to ensure CSS updates
+      document.body.offsetHeight;
     }
 
     // Initialize language based on user preference or browser language
@@ -1310,10 +1347,8 @@ redirect_from:
       const browserLang = navigator.language.startsWith('es') ? 'es' : 'en';
       const defaultLang = savedLang || browserLang;
       
+      console.log('Initializing language:', defaultLang); // Debug log
       switchLanguage(defaultLang);
-      
-      // Add smooth transition for language switching
-      document.body.style.transition = 'opacity 0.3s ease';
     });
   </script>
 </body>
