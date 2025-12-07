@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "[FOUND] Interpretar la Naturaleza para Encontrar a Quienes nos Faltan"
+title:
 author_profile: true
 redirect_from: 
   - /about/
@@ -827,7 +827,7 @@ redirect_from:
   <div class="page">
     <!-- ENHANCED TITLE SECTION -->
     <section class="title-section">
-      <h1 class="project-title">FOUND Project</h1>
+      <h1 class="project-title">FOUND</h1>
       <p class="project-subtitle">
         <span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan
       </p>
