@@ -13,7 +13,7 @@ redirect_from:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="FOUND combines technology and grassroots knowledge to search for disappeared persons in Mexico, bringing dignity and closure to families.">
   <meta property="og:title" content="FOUND Project - Using Technology to Search and Remember">
-  <meta property="og:description" content="Over 120,000 persons are reported as disappeared in Mexico. FOUND combines technology and grassroots knowledge to search, locate and drive systemic change.">
+  <meta property="og:description" content="Over 120,000 persons are reported as disappeared in Mexico. Behind each case, there is a family searching for answers. FOUND combines technology with the knowledge of searching families to learn, locate, and drive systemic change.">
   <meta property="og:type" content="website">
   <title>FOUND Project - Using Technology to Search and Remember</title>
   <style>
@@ -920,7 +920,7 @@ redirect_from:
       </div>
 
       <p class="hero-description" id="hero-main-text">
-        Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology and grassroots knowledge to search, locate and drive systemic change.
+        Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, understand, locate, and drive systemic change.
       </p>
 
       <div class="hero-image-container skeleton">
@@ -1016,7 +1016,7 @@ redirect_from:
     <div class="buscadoras-content">
       <h2 id="buscadoras-title">The Role of Buscadoras</h2>
       <p class="hero-description" id="buscadoras-text">
-        Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. FOUND listens, learns, and incorporates their methods into our technological efforts.
+        Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.
       </p>
       <div class="buscadoras-image">
         <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Buscadoras hands with plants symbolizing hope and remembrance" loading="lazy" class="loading" onload="this.classList.remove('loading')">
@@ -1028,7 +1028,7 @@ redirect_from:
   <section class="social-section" id="social">
     <div class="social-container">
       <h2 class="section-title" id="social-title">Follow Our Journey</h2>
-      <p class="section-subtitle" id="social-subtitle">Stay connected with our latest findings, community stories, and collaborative efforts</p>
+      <p class="section-subtitle" id="social-subtitle">Stay connected with our latest findings, community stories, and collaborations</p>
 
       <div class="social-grid">
         <!-- Twitter/X -->
@@ -1094,7 +1094,7 @@ redirect_from:
     <div class="partners-container">
       <h2 class="section-title" id="partners-title">Our Partners</h2>
       <p class="partners-intro" id="partners-intro">
-        FOUND brings together an exceptional coalition of academic institutions, government agencies, civil society organizations, and international partners. Together, we work toward a common goal: bringing dignity and closure to families searching for their loved ones.
+        FOUND brings together a coalition of academic institutions, government bodies, civil society organisations, and international partners. Together, we seek to honour the memory of those who are missing and stand with families as they search for a form of closure.
       </p>
 
       <div class="partner-grid">
@@ -1199,7 +1199,7 @@ redirect_from:
           'word-2': 'recordar.',
           'word-3': 'buscar.',
           'word-4': 'dar cierre.',
-          'hero-main-text': 'Más de 120,000 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de mujeres buscadoras para buscar, localizar y promover cambios sistémicos.',
+          'hero-main-text': 'Más de 120,000 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de familias buscadoras para buscar, localizar y promover cambios sistémicos.',
           'community-title': 'Impulsado por familias y comunidades de investigación',
           'community-text': 'FOUND está guiado e impulsado por <strong>colectivos de búsqueda</strong> y personas investigadoras de CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge y las Universidades Autónomas de Zacatecas y San Luis Potosí.',
           'collab-title': 'Colaboraciones institucionales',
