@@ -1166,7 +1166,7 @@ redirect_from:
           'word-2': 'remember.',
           'word-3': 'search.',
           'word-4': 'bring closure.',
-          'hero-main-text': 'Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology and grassroots knowledge to search, locate and drive systemic change.',
+          'hero-main-text': 'Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology and the knowledge of searching families to learn, locate, and drive systemic change.',
           'community-title': 'Driven by Families and Research Communities',
           'community-text': 'FOUND is guided and motivated by <strong>search collectives</strong> and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.',
           'collab-title': 'Institutional Collaborations',
@@ -1188,9 +1188,9 @@ redirect_from:
           'buscadoras-title': 'The Role of Buscadoras',
           'buscadoras-text': 'Women-led collectives are at the heart of FOUND\'s work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. FOUND listens, learns, and incorporates their methods into our technological efforts.',
           'social-title': 'Follow Our Journey',
-          'social-subtitle': 'Stay connected with our latest findings, community stories, and collaborative efforts',
+          'social-subtitle': 'Stay connected with our latest findings, community stories, and collaborations',
           'partners-title': 'Our Partners',
-          'partners-intro': 'FOUND brings together an exceptional coalition of academic institutions, government agencies, civil society organizations, and international partners. Together, we work toward a common goal: bringing dignity and closure to families searching for their loved ones.',
+          'partners-intro': 'FOUND brings together a coalition of academic institutions, government bodies, civil society organisations, and international partners. Together, we seek to honour the memory of those who are missing and stand with families as they search for a form of closure.',
           'footer-text': 'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
         },
         es: {
