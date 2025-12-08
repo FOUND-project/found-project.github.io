@@ -890,7 +890,7 @@ redirect_from:
     <div class="lang-toggle" aria-label="Language selection">
       <button type="button" class="lang-btn active" data-lang="en">EN</button>
       <button type="button" class="lang-btn" data-lang="es">ES</button>
-      <button type="button" class="lang-btn" data-lang="nah">NAH</button>
+      <button type="button" class="lang-btn" data-lang="nah">NÁHUATL</button>
     </div>
 
     <h1 class="project-title">FOUND</h1>
