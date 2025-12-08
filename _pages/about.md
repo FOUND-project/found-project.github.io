@@ -1199,7 +1199,7 @@ redirect_from:
           'word-2': 'recordar.',
           'word-3': 'buscar.',
           'word-4': 'dar cierre.',
-          'hero-main-text': 'Más de 120,000 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de base para buscar, localizar y promover cambios sistémicos.',
+          'hero-main-text': 'Más de 120,000 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de mujeres buscadoras para buscar, localizar y promover cambios sistémicos.',
           'community-title': 'Impulsado por familias y comunidades de investigación',
           'community-text': 'FOUND está guiado e impulsado por <strong>colectivos de búsqueda</strong> y personas investigadoras de CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge y las Universidades Autónomas de Zacatecas y San Luis Potosí.',
           'collab-title': 'Colaboraciones institucionales',
@@ -1219,11 +1219,11 @@ redirect_from:
           'tech-item-5': 'Análisis espectral satelital',
           'tech-item-6': 'Entomología y botánica forense, análisis territorial y ciencia del suelo',
           'buscadoras-title': 'El papel de las buscadoras',
-          'buscadoras-text': 'Los colectivos encabezados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.',
+          'buscadoras-text': 'Los colectivos de búsqueda están en el corazón del trabajo de FOUND. Estas familias han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.',
           'social-title': 'Sigue nuestro camino',
-          'social-subtitle': 'Mantente al tanto de nuestros hallazgos, las historias de las comunidades y los esfuerzos de colaboración.',
+          'social-subtitle': 'Mantente al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.',
           'partners-title': 'Nuestras alianzas',
-          'partners-intro': 'FOUND reúne una coalición excepcional de instituciones académicas, instancias gubernamentales, organizaciones de la sociedad civil y aliados internacionales. Juntas, trabajamos con un objetivo común: brindar dignidad y cierre a las familias que buscan a sus seres queridos.',
+          'partners-intro': 'FOUND reúne una coalición de instituciones académicas, instancias gubernamentales, organizaciones de la sociedad civil y aliados internacionales. Trabajamos con un objetivo común: honrar la memoria de quienes nos faltan y acompañar a las familias en la búsqueda de una forma de cierre.',
           'footer-text': 'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
         }
       };
