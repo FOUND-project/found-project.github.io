@@ -915,7 +915,7 @@ redirect_from:
       </div>
 
       <p class="hero-description" id="hero-main-text">
-        Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.
+        124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.
       </p>
 
       <div class="hero-image-container skeleton">
@@ -1161,7 +1161,7 @@ redirect_from:
           'word-2': 'remember.',
           'word-3': 'search.',
           'word-4': 'bring closure.',
-          'hero-main-text': 'Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology and the knowledge of searching families to learn, locate, and drive systemic change.',
+          'hero-main-text': '124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology and the knowledge of searching families to learn, locate, and drive systemic change.',
           'community-title': 'Driven by Families and Research Communities',
           'community-text': 'FOUND is guided and motivated by <strong>search collectives</strong> and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.',
           'collab-title': 'Institutional Collaborations',
@@ -1194,7 +1194,7 @@ redirect_from:
           'word-2': 'recordar.',
           'word-3': 'buscar.',
           'word-4': 'dar cierre.',
-          'hero-main-text': 'Más de 120,000 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de familias buscadoras para buscar, localizar y promover cambios sistémicos.',
+          'hero-main-text': '124,354 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de familias buscadoras para buscar, localizar y promover cambios sistémicos.',
           'community-title': 'Impulsado por familias y comunidades de investigación',
           'community-text': 'FOUND está guiado e impulsado por <strong>colectivos de búsqueda</strong> y personas investigadoras de CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge y las Universidades Autónomas de Zacatecas y San Luis Potosí.',
           'collab-title': 'Colaboraciones institucionales',
@@ -1227,7 +1227,7 @@ redirect_from:
           'word-2': 'quilnamictia.',
           'word-3': 'temoa.',
           'word-4': 'yolpakilistli quimacatia.',
-          'hero-main-text': 'Okachi de 120,000 tlacameh tlahcuilolmeh quen polihuihqueh ipan México. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia teknolojíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
+          'hero-main-text': '124,352 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia teknolojíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
           'community-title': 'In familias huan tlamachtianimeh quinyecana',
           'community-text': 'FOUND quinyecanah huan quinyolchicahua <strong>colectivos de búsqueda</strong> huan tlamachtianimeh de CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge huan Universidades Autónomas de Zacatecas huan San Luis Potosí.',
           'collab-title': 'Tlen tlatlanecuiltilis nemilistli (colaboraciones institucionales)',
