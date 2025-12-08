@@ -343,18 +343,18 @@ redirect_from:
       list-style: none;
       padding-left: 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); /* Increased from 300px */
-      gap: 0.75rem 2rem; /* Increased horizontal gap */
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+      gap: 0.75rem 2rem;
       margin-top: 1.5rem;
     }
 
     .info-list li {
-      padding: 0.75rem 0 0.75rem 2.25rem; /* Reduced padding */
+      padding: 0.75rem 0 0.75rem 2.25rem;
       position: relative;
       color: var(--text-medium);
-      font-size: clamp(0.95rem, 2.5vw, 1.05rem); /* Slightly smaller font */
+      font-size: clamp(0.95rem, 2.5vw, 1.05rem);
       transition: all 0.3s ease;
-      min-height: 42px; /* Reduced min-height */
+      min-height: 42px;
       display: flex;
       align-items: center;
       border-bottom: 1px solid transparent;
@@ -363,7 +363,7 @@ redirect_from:
 
     .info-list li:hover {
       color: var(--primary-green);
-      padding-left: 2.5rem; /* Reduced hover padding */
+      padding-left: 2.5rem;
       border-bottom-color: var(--accent-green);
     }
 
@@ -373,12 +373,12 @@ redirect_from:
       left: 0;
       color: var(--light-green);
       font-weight: bold;
-      font-size: 1.2rem; /* Slightly smaller */
+      font-size: 1.2rem;
       transition: all 0.3s ease;
       top: 50%;
       transform: translateY(-50%);
       background: var(--accent-green);
-      width: 28px; /* Smaller circle */
+      width: 28px;
       height: 28px;
       border-radius: 50%;
       display: flex;
@@ -395,7 +395,7 @@ redirect_from:
     /* Enhanced Image Galleries - Now wider */
     .image-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); /* Increased from 280px */
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
       gap: clamp(1.5rem, 3vw, 2.5rem);
       margin: 3rem 0;
     }
@@ -471,7 +471,7 @@ redirect_from:
     }
 
     .social-container {
-      max-width: 1600px; /* Increased from 1400px */
+      max-width: 1600px;
       margin: 0 auto;
     }
 
@@ -498,7 +498,7 @@ redirect_from:
 
     .social-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); /* Increased from 350px */
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
       gap: clamp(1.5rem, 3vw, 2.5rem);
     }
 
@@ -526,7 +526,7 @@ redirect_from:
     .iframe-container {
       position: relative;
       width: 100%;
-      max-width: 600px; /* Increased from 550px */
+      max-width: 600px;
       overflow: hidden;
       border-radius: 16px;
     }
@@ -556,13 +556,13 @@ redirect_from:
     }
 
     .partners-container {
-      max-width: 1600px; /* Increased */
+      max-width: 1600px;
       margin: 0 auto;
     }
 
     .partners-intro {
       text-align: center;
-      max-width: 1000px; /* Increased from 900px */
+      max-width: 1000px;
       margin: 0 auto 4rem;
       color: var(--text-medium);
       font-size: clamp(1.1rem, 2.5vw, 1.3rem);
@@ -572,7 +572,7 @@ redirect_from:
     /* ENHANCED PARTNER GRID - Bigger logos and wider */
     .partner-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); /* Increased from 240px */
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
       gap: clamp(2rem, 4vw, 3rem);
       margin: 4rem 0;
     }
@@ -587,7 +587,7 @@ redirect_from:
       justify-content: center;
       transition: all 0.4s var(--transition-smooth);
       border: 2px solid transparent;
-      min-height: 200px; /* Increased from 180px */
+      min-height: 200px;
       aspect-ratio: 1.5;
       position: relative;
       overflow: hidden;
@@ -633,13 +633,12 @@ redirect_from:
       transform: scale(1.05);
     }
 
-    /* Special styling for logos that need more visibility */
-    .partner-logo:nth-child(2), /* Guerreros Buscadores */
-    .partner-logo:nth-child(3), /* CentroGeo */
-    .partner-logo:nth-child(4), /* Jalisco Search Commission */
-    .partner-logo:nth-child(5) { /* Oxford */
+    .partner-logo:nth-child(2),
+    .partner-logo:nth-child(3),
+    .partner-logo:nth-child(4),
+    .partner-logo:nth-child(5) {
       padding: clamp(2.5rem, 5vw, 3.5rem);
-      min-height: 220px; /* Increased from 200px */
+      min-height: 220px;
     }
 
     /* Buscadoras Special Section - Now wider */
@@ -663,13 +662,13 @@ redirect_from:
     }
 
     .buscadoras-content {
-      max-width: 1100px; /* Increased from 900px */
+      max-width: 1100px;
       margin: 0 auto;
       text-align: center;
     }
 
     .buscadoras-image {
-      max-width: 600px; /* Increased from 500px */
+      max-width: 600px;
       margin: 3rem auto;
       border-radius: 20px;
       overflow: hidden;
@@ -723,7 +722,6 @@ redirect_from:
       z-index: 1;
     }
 
-    /* Mobile optimizations */
     @media (max-width: 1024px) {
       .partner-grid {
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
@@ -753,14 +751,14 @@ redirect_from:
 
       .partner-logo {
         padding: 1.5rem;
-        min-height: 160px; /* Adjusted for mobile */
+        min-height: 160px;
       }
 
       .partner-logo:nth-child(2),
       .partner-logo:nth-child(3),
       .partner-logo:nth-child(4),
       .partner-logo:nth-child(5) {
-        min-height: 180px; /* Adjusted for mobile */
+        min-height: 180px;
       }
 
       .info-list {
@@ -838,7 +836,6 @@ redirect_from:
       }
     }
 
-    /* Smooth scroll */
     html {
       scroll-behavior: smooth;
     }
@@ -849,7 +846,6 @@ redirect_from:
       }
     }
 
-    /* Selection styling */
     ::selection {
       background: var(--light-green);
       color: white;
@@ -860,7 +856,6 @@ redirect_from:
       color: white;
     }
 
-    /* Print styles */
     @media print {
       .social-section,
       .image-gallery,
@@ -876,7 +871,6 @@ redirect_from:
       }
     }
 
-    /* High contrast mode support */
     @media (prefers-contrast: high) {
       :root {
         --primary-green: #1a3d2f;
@@ -896,6 +890,7 @@ redirect_from:
     <div class="lang-toggle" aria-label="Language selection">
       <button type="button" class="lang-btn active" data-lang="en">EN</button>
       <button type="button" class="lang-btn" data-lang="es">ES</button>
+      <button type="button" class="lang-btn" data-lang="nah">NAH</button>
     </div>
 
     <h1 class="project-title">FOUND</h1>
@@ -920,7 +915,7 @@ redirect_from:
       </div>
 
       <p class="hero-description" id="hero-main-text">
-        Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, understand, locate, and drive systemic change.
+        Over 120,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.
       </p>
 
       <div class="hero-image-container skeleton">
@@ -1186,7 +1181,7 @@ redirect_from:
           'tech-item-5': 'Satellite Spectral Analysis',
           'tech-item-6': 'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
           'buscadoras-title': 'The Role of Buscadoras',
-          'buscadoras-text': 'Women-led collectives are at the heart of FOUND\'s work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. FOUND listens, learns, and incorporates their methods into our technological efforts.',
+          'buscadoras-text': 'Women-led collectives are at the heart of FOUND\'s work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.',
           'social-title': 'Follow Our Journey',
           'social-subtitle': 'Stay connected with our latest findings, community stories, and collaborations',
           'partners-title': 'Our Partners',
@@ -1225,6 +1220,39 @@ redirect_from:
           'partners-title': 'Nuestras alianzas',
           'partners-intro': 'FOUND reúne una coalición de instituciones académicas, instancias gubernamentales, organizaciones de la sociedad civil y aliados internacionales. Trabajamos con un objetivo común: honrar la memoria de quienes nos faltan y acompañar a las familias en la búsqueda de una forma de cierre.',
           'footer-text': 'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
+        },
+        nah: {
+          'hero-tagline-static': 'Teknolojíayoh ika&nbsp;',
+          'word-1': 'tlatepanita.',
+          'word-2': 'quilnamictia.',
+          'word-3': 'temoa.',
+          'word-4': 'yolpakilistli quimacatia.',
+          'hero-main-text': 'Okachi de 120,000 tlacameh tlahcuilolmeh quen polihuihqueh ipan México. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia teknolojíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
+          'community-title': 'In familias huan tlamachtianimeh quinyecana',
+          'community-text': 'FOUND quinyecanah huan quinyolchicahua <strong>colectivos de búsqueda</strong> huan tlamachtianimeh de CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge huan Universidades Autónomas de Zacatecas huan San Luis Potosí.',
+          'collab-title': 'Tlen tlatlanecuiltilis nemilistli (colaboraciones institucionales)',
+          'collab-item-1': 'Oficina Ejecutiva del Secretario General de la ONU',
+          'collab-item-2': 'Foreign, Commonwealth &amp; Development Office (FCDO) tlen Reino Unido',
+          'collab-item-3': 'Comisiones Locales de Búsqueda huan Fiscalías de Jalisco, Zacatecas, San Luis Potosí huan Chihuahua (México)',
+          'collab-item-4': 'Unidad de Búsqueda de Personas dadas por Desaparecidas de Colombia',
+          'collab-item-5': 'Comisión Nacional de Búsqueda de Personas de México',
+          'collab-item-6': 'Secretaría de Ciencia y Tecnología de México',
+          'collab-item-7': 'Embajada Británica ipan Ciudad de México',
+          'collab-item-8': 'Asociación Británica de Antropología Forense',
+          'tech-title': 'Teknolojíayoh tlen motequiti',
+          'tech-item-1': 'Imágenes multiespectrales huan hiperespectrales',
+          'tech-item-2': 'LiDAR ipan aire',
+          'tech-item-3': 'Interferometría de ruido sísmico (TIRSA)',
+          'tech-item-4': 'Tomografía de resistividad eléctrica huan medisión de conductividad',
+          'tech-item-5': 'Análisis espectral satelital',
+          'tech-item-6': 'Entomología huan botánica forense, análisis de tlalli huan territorio',
+          'buscadoras-title': 'In papel in buscadoras',
+          'buscadoras-text': 'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan país tlen polihuiliztli huan tlayectlaliz justice. Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknológicoh tequitl.',
+          'social-title': 'Xiquito in totlanejmachtiliz',
+          'social-subtitle': 'Ximoyetkixtia inin tlen tipantlaliah, tlen tlanechicoliztli in comunidades huan inin tlen timocoyonaltiah san sejco.',
+          'partners-title': 'Tochan tlacamachtiloyan huan tocnihhuan',
+          'partners-intro': 'FOUND quitlalia san sejco tlacamachtiloyan, tlatocayotl tlen gobierno, organizaciones de la sociedad civil huan tocnihhuan internacionales. San sejco titequitiyah para tlachihua tlatlepanittacayotl in aquin polihuihqueh huan para timochicahualtia in familias tlen quitemoah se tlayolpakilistli.',
+          'footer-text': 'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
         }
       };
 
@@ -1237,7 +1265,13 @@ redirect_from:
           }
         });
 
-        document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : 'en');
+        if (lang === 'es') {
+          document.documentElement.setAttribute('lang', 'es');
+        } else if (lang === 'nah') {
+          document.documentElement.setAttribute('lang', 'nah');
+        } else {
+          document.documentElement.setAttribute('lang', 'en');
+        }
 
         document.querySelectorAll('.lang-btn').forEach(function(btn) {
           btn.classList.toggle('active', btn.dataset.lang === lang);
@@ -1257,7 +1291,7 @@ redirect_from:
           }
         })();
 
-        const initialLang = savedLang === 'es' || savedLang === 'en' ? savedLang : 'en';
+        const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
         setLanguage(initialLang);
 
         document.querySelectorAll('.lang-btn').forEach(function(btn) {
