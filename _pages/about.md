@@ -973,7 +973,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-5">Mexico's National Search Commission</div>
-              <div class="collab-note" id="collab-note-5">National coordination</div>
+              <div class="collab-note" id="collab-note-5">Casework and technical exchange</div>
             </div>
           </div>
 
@@ -989,7 +989,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-6">Mexican Science and Technology Secretariat</div>
-              <div class="collab-note" id="collab-note-6">Science and technology collaboration</div>
+              <div class="collab-note" id="collab-note-6">Funding</div>
             </div>
           </div>
 
@@ -1005,7 +1005,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-7">British Embassy in Mexico City</div>
-              <div class="collab-note" id="collab-note-7">Diplomatic support</div>
+              <div class="collab-note" id="collab-note-7">Funding, Coordination support</div>
             </div>
           </div>
 
@@ -1245,9 +1245,9 @@ redirect_from:
           'collab-note-2': 'Policy, funding, and partnerships',
           'collab-note-3': 'Operational collaboration, policy impact',
           'collab-note-4': 'Casework and technical exchange',
-          'collab-note-5': 'National coordination',
-          'collab-note-6': 'Science and technology collaboration',
-          'collab-note-7': 'Diplomatic support',
+          'collab-note-5': 'Casework and technical exchang',
+          'collab-note-6': 'Funding, policy impact',
+          'collab-note-7': 'Funding, Coordination support',
           'collab-note-8': 'Forensic expertise',
           'tech-title': 'Technologies in Action',
           'tech-item-1': 'Multispectral &amp; Hyperspectral Imaging',
@@ -1286,9 +1286,9 @@ redirect_from:
           'collab-note-2': 'Política pública, financiamiento y alianzas',
           'collab-note-3': 'Colaboración operativa e impacto en políticas',
           'collab-note-4': 'Casos e intercambio técnico',
-          'collab-note-5': 'Coordinación nacional',
-          'collab-note-6': 'Colaboración en ciencia y tecnología',
-          'collab-note-7': 'Acompañamiento diplomático',
+          'collab-note-5': 'Casos e intercambio técnico',
+          'collab-note-6': 'Financiamiento, Política pública',
+          'collab-note-7': 'Financiamiento, Colaboración operativa',
           'collab-note-8': 'Experiencia forense',
           'tech-title': 'Tecnologías en acción',
           'tech-item-1': 'Imágenes multiespectrales e hiperespectrales',
