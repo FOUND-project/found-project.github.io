@@ -16,12 +16,9 @@ redirect_from:
   <meta property="og:description" content="124,354 persons are reported as disappeared in Mexico. Behind each case, there is a family searching for answers. FOUND combines technology with the knowledge of searching families to learn, locate, and drive systemic change.">
   <meta property="og:type" content="website">
   <title>FOUND Project - Using Technology to Search and Remember</title>
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
       --primary-green: #2d5f4d;
@@ -45,6 +42,7 @@ redirect_from:
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
       }
+      html { scroll-behavior: auto !important; }
     }
 
     body {
@@ -57,14 +55,12 @@ redirect_from:
       overflow-x: hidden;
     }
 
-    /* Focus styles for accessibility */
     *:focus-visible {
       outline: 3px solid var(--light-green);
       outline-offset: 2px;
-      border-radius: 4px;
+      border-radius: 6px;
     }
 
-    /* Language toggle */
     .lang-toggle {
       position: absolute;
       top: 1.5rem;
@@ -89,9 +85,7 @@ redirect_from:
       backdrop-filter: blur(6px);
     }
 
-    .lang-btn:hover {
-      background: rgba(0,0,0,0.3);
-    }
+    .lang-btn:hover { background: rgba(0,0,0,0.3); }
 
     .lang-btn.active {
       background: #ffffff;
@@ -100,7 +94,6 @@ redirect_from:
       box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
     }
 
-    /* ENHANCED TITLE SECTION - Now full width */
     .title-section {
       padding: clamp(3rem, 8vw, 5rem) 0 clamp(2rem, 6vw, 4rem);
       background: linear-gradient(135deg, #1a3d2f 0%, var(--dark-green) 50%, var(--primary-green) 100%);
@@ -114,12 +107,10 @@ redirect_from:
     .title-section::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-                  radial-gradient(circle at 70% 30%, rgba(232, 245, 240, 0.05) 0%, transparent 50%);
+      inset: 0;
+      background:
+        radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(232, 245, 240, 0.05) 0%, transparent 50%);
       z-index: 0;
     }
 
@@ -150,12 +141,8 @@ redirect_from:
       padding: 0 clamp(1rem, 4vw, 3rem);
     }
 
-    .title-accent {
-      color: var(--gold-accent);
-      font-weight: 700;
-    }
+    .title-accent { color: var(--gold-accent); font-weight: 700; }
 
-    /* Hero Section - Now wider */
     .hero {
       padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 3rem);
       background: linear-gradient(135deg, #f8fcfb 0%, #ffffff 100%);
@@ -242,10 +229,9 @@ redirect_from:
       border-radius: 3px;
     }
 
-    /* Hero Image */
     .hero-image-container {
       width: 100%;
-      max-width: 1100px; /* Increased from 900px */
+      max-width: 1100px;
       margin: 4rem auto 0;
       position: relative;
       border-radius: 20px;
@@ -256,31 +242,21 @@ redirect_from:
       transition: transform 0.6s var(--transition-smooth);
     }
 
-    .hero-image-container:hover {
-      transform: translateY(-8px);
-    }
+    .hero-image-container:hover { transform: translateY(-8px); }
 
-    .hero-image-container::before {
-      content: '';
-      display: block;
-      padding-top: 56.25%;
-    }
+    .hero-image-container::before { content: ''; display: block; padding-top: 56.25%; }
 
     .hero-image {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.8s var(--transition-smooth);
     }
 
-    .hero-image-container:hover .hero-image {
-      transform: scale(1.05);
-    }
+    .hero-image-container:hover .hero-image { transform: scale(1.05); }
 
-    /* Skeleton loader */
     .skeleton {
       background: linear-gradient(90deg, #f0f0f0 25%, #e8f5f0 50%, #f0f0f0 75%);
       background-size: 200% 100%;
@@ -292,28 +268,19 @@ redirect_from:
       100% { background-position: -200% 0; }
     }
 
-    .hero-image.loading {
-      opacity: 0;
-    }
+    .hero-image.loading { opacity: 0; }
 
-    /* Content Sections - Now wider */
     .content-section {
       padding: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
       border-bottom: 1px solid var(--border-light);
       scroll-margin-top: 2rem;
     }
 
-    .content-section:last-of-type {
-      border-bottom: none;
-    }
+    .content-section:last-of-type { border-bottom: none; }
 
     .section-container {
       max-width: 1400px;
       margin: 0 auto;
-    }
-
-    .section-header {
-      margin-bottom: 2.5rem;
     }
 
     h2 {
@@ -338,7 +305,6 @@ redirect_from:
       border-radius: 2px;
     }
 
-    /* ENHANCED & COMPACT Info Lists - Now wider */
     .info-list {
       list-style: none;
       padding-left: 0;
@@ -392,7 +358,120 @@ redirect_from:
       color: white;
     }
 
-    /* Enhanced Image Galleries - Now wider */
+    /* === NEW: Institutional Collaborations (logos + labels) === */
+    .collab-wrap {
+      margin-top: 2rem;
+    }
+
+    .collab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+      gap: clamp(1.25rem, 2.5vw, 2rem);
+      margin-top: 1.5rem;
+    }
+
+    .collab-card {
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(45, 95, 77, 0.10);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.35s var(--transition-smooth), box-shadow 0.35s var(--transition-smooth), border-color 0.35s var(--transition-smooth);
+      min-height: 210px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .collab-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 15% 10%, rgba(232,245,240,0.85) 0%, transparent 55%),
+                  radial-gradient(circle at 85% 0%, rgba(212,175,55,0.12) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+    }
+
+    .collab-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(74, 140, 115, 0.55);
+    }
+
+    .collab-card:hover::before { opacity: 1; }
+
+    .collab-logo {
+      padding: 1.25rem 1.25rem 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 140px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .collab-logo img {
+      max-width: 100%;
+      max-height: 95px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: grayscale(25%) brightness(1.05);
+      transition: transform 0.35s var(--transition-smooth), filter 0.35s var(--transition-smooth), opacity 0.3s ease;
+    }
+
+    .collab-logo img.loading { opacity: 0; }
+
+    .collab-card:hover .collab-logo img {
+      filter: grayscale(0%) brightness(1);
+      transform: scale(1.04);
+    }
+
+    .collab-meta {
+      padding: 0.85rem 1.15rem 1.15rem;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      background: linear-gradient(180deg, rgba(232,245,240,0.25) 0%, rgba(255,255,255,0.85) 100%);
+      position: relative;
+      z-index: 1;
+    }
+
+    .collab-name {
+      font-weight: 700;
+      color: var(--dark-green);
+      font-size: 1.02rem;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+
+    .collab-note {
+      margin-top: 0.35rem;
+      color: var(--text-light);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .collab-fallback {
+      width: 100%;
+      max-width: 210px;
+      height: 90px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent-green) 0%, rgba(232,245,240,0.2) 100%);
+      border: 1px dashed rgba(45,95,77,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--dark-green);
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .collab-fallback span {
+      font-size: 1.25rem;
+    }
+
     .image-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
@@ -415,7 +494,6 @@ redirect_from:
 
     .gallery-item::before {
       content: '';
-      display: block;
       position: absolute;
       inset: 1rem;
       background: var(--accent-green);
@@ -442,15 +520,10 @@ redirect_from:
       z-index: 1;
     }
 
-    .gallery-item img.loading {
-      opacity: 0;
-    }
+    .gallery-item img.loading { opacity: 0; }
 
-    .gallery-item:hover img {
-      transform: scale(1.08);
-    }
+    .gallery-item:hover img { transform: scale(1.08); }
 
-    /* Social Media Section - Now wider */
     .social-section {
       background: linear-gradient(135deg, var(--accent-green) 0%, #ffffff 100%);
       padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem);
@@ -470,10 +543,7 @@ redirect_from:
       opacity: 0.3;
     }
 
-    .social-container {
-      max-width: 1600px;
-      margin: 0 auto;
-    }
+    .social-container { max-width: 1600px; margin: 0 auto; }
 
     .section-title {
       font-size: clamp(2rem, 5vw, 3.2rem);
@@ -531,13 +601,8 @@ redirect_from:
       border-radius: 16px;
     }
 
-    .iframe-container iframe {
-      width: 100%;
-      border: 0;
-      display: block;
-    }
+    .iframe-container iframe { width: 100%; border: 0; display: block; }
 
-    /* Enhanced Partners Section - Now wider */
     .partners-section {
       background: linear-gradient(135deg, #f8fcfb 0%, #ffffff 100%);
       padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 4vw, 3rem);
@@ -555,10 +620,7 @@ redirect_from:
       opacity: 0.2;
     }
 
-    .partners-container {
-      max-width: 1600px;
-      margin: 0 auto;
-    }
+    .partners-container { max-width: 1600px; margin: 0 auto; }
 
     .partners-intro {
       text-align: center;
@@ -569,7 +631,6 @@ redirect_from:
       line-height: 1.8;
     }
 
-    /* ENHANCED PARTNER GRID - Bigger logos and wider */
     .partner-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
@@ -608,9 +669,7 @@ redirect_from:
       border-color: var(--light-green);
     }
 
-    .partner-logo:hover::before {
-      opacity: 0.1;
-    }
+    .partner-logo:hover::before { opacity: 0.1; }
 
     .partner-logo img {
       max-width: 100%;
@@ -624,9 +683,7 @@ redirect_from:
       z-index: 1;
     }
 
-    .partner-logo img.loading {
-      opacity: 0;
-    }
+    .partner-logo img.loading { opacity: 0; }
 
     .partner-logo:hover img {
       filter: grayscale(0%) brightness(1);
@@ -641,7 +698,6 @@ redirect_from:
       min-height: 220px;
     }
 
-    /* Buscadoras Special Section - Now wider */
     .buscadoras-section {
       background: linear-gradient(135deg, #fff8f5 0%, #ffffff 100%);
       padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 4vw, 3rem);
@@ -676,11 +732,8 @@ redirect_from:
       transition: transform 0.6s var(--transition-smooth);
     }
 
-    .buscadoras-image:hover {
-      transform: translateY(-8px);
-    }
+    .buscadoras-image:hover { transform: translateY(-8px); }
 
-    /* Footer - Now wider */
     .footer {
       text-align: center;
       padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 4vw, 3rem);
@@ -701,10 +754,7 @@ redirect_from:
       background: linear-gradient(90deg, transparent, var(--primary-green), transparent);
     }
 
-    .footer-content {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
+    .footer-content { max-width: 1400px; margin: 0 auto; }
 
     .footer em {
       font-size: clamp(1.3rem, 3vw, 1.8rem);
@@ -722,171 +772,80 @@ redirect_from:
       z-index: 1;
     }
 
+    html { scroll-behavior: smooth; }
+
+    ::selection { background: var(--light-green); color: white; }
+    ::-moz-selection { background: var(--light-green); color: white; }
+
     @media (max-width: 1024px) {
-      .partner-grid {
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
-        gap: 1.5rem;
-      }
+      .partner-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 1.5rem; }
+      .collab-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); }
     }
 
     @media (max-width: 768px) {
-      .animated-tagline {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-      }
+      .animated-tagline { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+      .word-carousel { min-width: 200px; }
+      .social-grid { grid-template-columns: 1fr; }
 
-      .word-carousel {
-        min-width: 200px;
-      }
-
-      .social-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .partner-grid {
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr));
-        gap: 1.25rem;
-      }
-
-      .partner-logo {
-        padding: 1.5rem;
-        min-height: 160px;
-      }
+      .partner-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr)); gap: 1.25rem; }
+      .partner-logo { padding: 1.5rem; min-height: 160px; }
 
       .partner-logo:nth-child(2),
       .partner-logo:nth-child(3),
       .partner-logo:nth-child(4),
-      .partner-logo:nth-child(5) {
-        min-height: 180px;
-      }
+      .partner-logo:nth-child(5) { min-height: 180px; }
 
-      .info-list {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-      }
-      
-      .info-list li {
-        padding: 0.5rem 0 0.5rem 2rem;
-        min-height: 38px;
-      }
-      
+      .info-list { grid-template-columns: 1fr; gap: 0.5rem; }
+      .info-list li { padding: 0.5rem 0 0.5rem 2rem; min-height: 38px; }
+
       .hero,
       .content-section,
       .social-section,
       .partners-section,
       .buscadoras-section,
-      .footer {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-      }
+      .footer { padding-left: 1.5rem; padding-right: 1.5rem; }
 
-      .lang-toggle {
-        top: 1rem;
-        right: 1rem;
-      }
+      .lang-toggle { top: 1rem; right: 1rem; }
     }
 
     @media (max-width: 480px) {
-      .animated-tagline {
-        font-size: 1.8rem;
-      }
+      .animated-tagline { font-size: 1.8rem; }
+      .word-carousel { height: 2.5rem; min-width: 150px; }
+      .word-list li { height: 2.5rem; line-height: 2.5rem; font-size: 1.8rem; }
 
-      .word-carousel {
-        height: 2.5rem;
-        min-width: 150px;
-      }
+      .partner-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .partner-logo { padding: 1rem; min-height: 140px; }
 
-      .word-list li {
-        height: 2.5rem;
-        line-height: 2.5rem;
-        font-size: 1.8rem;
-      }
+      .title-section { padding: 2.5rem 1rem 2rem; }
+      .project-title { font-size: 2.2rem; }
+      .project-subtitle { font-size: 1.2rem; }
 
-      .partner-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-      }
-
-      .partner-logo {
-        padding: 1rem;
-        min-height: 140px;
-      }
-      
-      .title-section {
-        padding: 2.5rem 1rem 2rem;
-      }
-      
-      .project-title {
-        font-size: 2.2rem;
-      }
-      
-      .project-subtitle {
-        font-size: 1.2rem;
-      }
-      
       .hero,
       .content-section,
       .social-section,
       .partners-section,
       .buscadoras-section,
-      .footer {
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-    }
-
-    ::selection {
-      background: var(--light-green);
-      color: white;
-    }
-
-    ::-moz-selection {
-      background: var(--light-green);
-      color: white;
+      .footer { padding-left: 1rem; padding-right: 1rem; }
     }
 
     @media print {
-      .social-section,
-      .image-gallery,
-      .partner-grid {
-        break-inside: avoid;
-      }
-
-      .social-embed:hover,
-      .gallery-item:hover,
-      .partner-logo:hover {
+      .social-section, .image-gallery, .partner-grid, .collab-grid { break-inside: avoid; }
+      .social-embed:hover, .gallery-item:hover, .partner-logo:hover, .collab-card:hover {
         transform: none !important;
         box-shadow: var(--shadow-sm) !important;
       }
     }
 
     @media (prefers-contrast: high) {
-      :root {
-        --primary-green: #1a3d2f;
-        --border-light: #999;
-      }
-
-      .partner-logo {
-        border: 2px solid var(--primary-green);
-      }
+      :root { --primary-green: #1a3d2f; --border-light: #999; }
+      .partner-logo, .collab-card { border: 2px solid var(--primary-green) !important; }
     }
   </style>
 </head>
+
 <body>
-  <!-- ENHANCED TITLE SECTION -->
+  <!-- TITLE SECTION -->
   <section class="title-section">
-    <!-- Language toggle -->
     <div class="lang-toggle" aria-label="Language selection">
       <button type="button" class="lang-btn active" data-lang="en">EN</button>
       <button type="button" class="lang-btn" data-lang="es">ES</button>
@@ -899,7 +858,7 @@ redirect_from:
     </p>
   </section>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
       <div class="animated-tagline">
@@ -915,13 +874,14 @@ redirect_from:
       </div>
 
       <p class="hero-description" id="hero-main-text">
-        124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.
+        124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
+        <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.
       </p>
 
       <div class="hero-image-container skeleton">
-        <img 
-          src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true" 
-          alt="FOUND Project team using advanced technology in field search operations" 
+        <img
+          src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true"
+          alt="FOUND Project team using advanced technology in field search operations"
           class="hero-image loading"
           loading="lazy"
           onload="this.classList.remove('loading'); this.parentElement.classList.remove('skeleton')">
@@ -929,7 +889,7 @@ redirect_from:
     </div>
   </section>
 
-  <!-- Community Driven Section -->
+  <!-- COMMUNITY -->
   <section class="content-section" id="community">
     <div class="section-container">
       <div class="section-header">
@@ -941,24 +901,142 @@ redirect_from:
     </div>
   </section>
 
-  <!-- Institutional Collaborations -->
+  <!-- INSTITUTIONAL COLLABORATIONS (UPDATED WITH IMAGES) -->
   <section class="content-section" id="collaborations">
     <div class="section-container">
       <h2 id="collab-title">Institutional Collaborations</h2>
-      <ul class="info-list">
-        <li id="collab-item-1">Executive Office of the UN Secretary-General</li>
-        <li id="collab-item-2">UK's Foreign, Commonwealth &amp; Development Office (FCDO)</li>
-        <li id="collab-item-3">Local Search Commissions and Attorney's Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)</li>
-        <li id="collab-item-4">Colombian Search Unit</li>
-        <li id="collab-item-5">Mexico's National Search Commission</li>
-        <li id="collab-item-6">Mexican Science and Technology Secretariat</li>
-        <li id="collab-item-7">British Embassy in Mexico City</li>
-        <li id="collab-item-8">British Association for Forensic Anthropology</li>
-      </ul>
+
+      <div class="collab-wrap" aria-label="Institutional collaborations logos">
+        <div class="collab-grid">
+          <!-- 1 -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/1%20Executive%20Office%20of%20the%20UN%20Secretary-General.svg"
+                alt="Executive Office of the UN Secretary-General logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-1">Executive Office of the UN Secretary-General</div>
+              <div class="collab-note" id="collab-note-1">International collaboration</div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20UK's%20Foreign%2C%20Commonwealth%20%26%20Development%20Office%20(FCDO).png"
+                alt="UK Foreign, Commonwealth & Development Office (FCDO) logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-2">UK's Foreign, Commonwealth &amp; Development Office (FCDO)</div>
+              <div class="collab-note" id="collab-note-2">Policy, funding, and partnerships</div>
+            </div>
+          </div>
+
+          <!-- 3 (Jalisco Search Commission: logo added; label stays aligned with your list) -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/3%20Comisio%CC%81n%20de%20Bu%CC%81squeda%20de%20Jalisco.png"
+                alt="Comisión de Búsqueda de Jalisco logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-3">Local Search Commissions and Attorney's Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)</div>
+              <div class="collab-note" id="collab-note-3">Operational collaboration</div>
+            </div>
+          </div>
+
+          <!-- 4 (no logo provided) -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <div class="collab-fallback" aria-hidden="true"><span>UBPD</span></div>
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-4">Colombian Search Unit</div>
+              <div class="collab-note" id="collab-note-4">Casework and technical exchange</div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/4%20Comision%20Nacional%20de%20Busqueda.png"
+                alt="Mexico National Search Commission logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-5">Mexico's National Search Commission</div>
+              <div class="collab-note" id="collab-note-5">National coordination</div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/5%20Logotipo_SECIHTI_2025-2030.svg"
+                alt="Mexican Science and Technology Secretariat (SECIHTI) logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-6">Mexican Science and Technology Secretariat</div>
+              <div class="collab-note" id="collab-note-6">Science &amp; technology collaboration</div>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/6%20British%20Embassy%20Mexico_Blue%20(ENG).png"
+                alt="British Embassy Mexico City logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-7">British Embassy in Mexico City</div>
+              <div class="collab-note" id="collab-note-7">Diplomatic support</div>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/7%20logo%20BAFAlogo_orig.png"
+                alt="British Association for Forensic Anthropology logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-8">British Association for Forensic Anthropology</div>
+              <div class="collab-note" id="collab-note-8">Forensic expertise</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Technologies Section -->
+  <!-- TECHNOLOGIES -->
   <section class="content-section" id="technologies">
     <div class="section-container">
       <h2 id="tech-title">Technologies in Action</h2>
@@ -1006,7 +1084,7 @@ redirect_from:
     </div>
   </section>
 
-  <!-- Buscadoras Section -->
+  <!-- BUSCADORAS -->
   <section class="buscadoras-section" id="buscadoras">
     <div class="buscadoras-content">
       <h2 id="buscadoras-title">The Role of Buscadoras</h2>
@@ -1019,27 +1097,25 @@ redirect_from:
     </div>
   </section>
 
-  <!-- Social Media Section -->
+  <!-- SOCIAL -->
   <section class="social-section" id="social">
     <div class="social-container">
       <h2 class="section-title" id="social-title">Follow Our Journey</h2>
       <p class="section-subtitle" id="social-subtitle">Stay connected with our latest findings, community stories, and collaborations</p>
 
       <div class="social-grid">
-        <!-- Twitter/X -->
         <div class="social-embed twitter-embed">
           <blockquote class="twitter-tweet">
             <p lang="en" dir="ltr">
-              Almost a year after I started researching the story, I'm thrilled that my 
+              Almost a year after I started researching the story, I'm thrilled that my
               <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section.
               <a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a>
             </p>
-            &mdash; Suzanne Bearne (@sbearne) 
+            &mdash; Suzanne Bearne (@sbearne)
             <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a>
           </blockquote>
         </div>
 
-        <!-- LinkedIn FCDO -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
@@ -1053,7 +1129,6 @@ redirect_from:
           </div>
         </div>
 
-        <!-- LinkedIn 1 -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
@@ -1067,7 +1142,6 @@ redirect_from:
           </div>
         </div>
 
-        <!-- LinkedIn 2 -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
@@ -1084,7 +1158,7 @@ redirect_from:
     </div>
   </section>
 
-  <!-- Enhanced Partners Section -->
+  <!-- PARTNERS (UNCHANGED) -->
   <section class="partners-section" id="partners">
     <div class="partners-container">
       <h2 class="section-title" id="partners-title">Our Partners</h2>
@@ -1127,7 +1201,7 @@ redirect_from:
           <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/11%20logo%20BAFAlogo_orig.png?raw=true" alt="BAFA partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
         </div>
         <div class="partner-logo">
-          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/British%20Embassy%20Mexico_Blue%20(ENG).png?raw=true" alt="British Embassy partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/d7867dc147eb1b230142511fce739aa481c6177d/images/6%20British%20Embassy%20Mexico_Blue%20(ENG).png?raw=true" alt="British Embassy partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
         </div>
         <div class="partner-logo">
           <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/OFOTA_COLOUR_WEB.jpg?raw=true" alt="OFA partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
@@ -1142,7 +1216,7 @@ redirect_from:
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
       <em id="footer-text">FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>
@@ -1151,7 +1225,7 @@ redirect_from:
 
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <!-- Language toggle script -->
+  <!-- LANGUAGE TOGGLE -->
   <script>
     (function() {
       const translations = {
@@ -1173,6 +1247,14 @@ redirect_from:
           'collab-item-6': 'Mexican Science and Technology Secretariat',
           'collab-item-7': 'British Embassy in Mexico City',
           'collab-item-8': 'British Association for Forensic Anthropology',
+          'collab-note-1': 'International collaboration',
+          'collab-note-2': 'Policy, funding, and partnerships',
+          'collab-note-3': 'Operational collaboration',
+          'collab-note-4': 'Casework and technical exchange',
+          'collab-note-5': 'National coordination',
+          'collab-note-6': 'Science &amp; technology collaboration',
+          'collab-note-7': 'Diplomatic support',
+          'collab-note-8': 'Forensic expertise',
           'tech-title': 'Technologies in Action',
           'tech-item-1': 'Multispectral &amp; Hyperspectral Imaging',
           'tech-item-2': 'Airborne LiDAR',
@@ -1206,6 +1288,14 @@ redirect_from:
           'collab-item-6': 'Secretaría de Ciencia y Tecnología de México',
           'collab-item-7': 'Embajada Británica en la Ciudad de México',
           'collab-item-8': 'Asociación Británica de Antropología Forense',
+          'collab-note-1': 'Colaboración internacional',
+          'collab-note-2': 'Política pública, financiamiento y alianzas',
+          'collab-note-3': 'Colaboración operativa',
+          'collab-note-4': 'Casos y intercambio técnico',
+          'collab-note-5': 'Coordinación nacional',
+          'collab-note-6': 'Colaboración en ciencia y tecnología',
+          'collab-note-7': 'Acompañamiento diplomático',
+          'collab-note-8': 'Experiencia forense',
           'tech-title': 'Tecnologías en acción',
           'tech-item-1': 'Imágenes multiespectrales e hiperespectrales',
           'tech-item-2': 'LiDAR aerotransportado',
@@ -1227,7 +1317,7 @@ redirect_from:
           'word-2': 'quilnamictia.',
           'word-3': 'temoa.',
           'word-4': 'yolpakilistli quimacatia.',
-          'hero-main-text': '124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia teknolojíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
+          'hero-main-text': '124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia প্রযুক্তolojiayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
           'community-title': 'In familias huan tlamachtianimeh quinyecana',
           'community-text': 'FOUND quinyecanah huan quinyolchicahua <strong>colectivos de búsqueda</strong> huan tlamachtianimeh de CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge huan Universidades Autónomas de Zacatecas huan San Luis Potosí.',
           'collab-title': 'Tlen tlatlanecuiltilis nemilistli (colaboraciones institucionales)',
@@ -1239,6 +1329,14 @@ redirect_from:
           'collab-item-6': 'Secretaría de Ciencia y Tecnología de México',
           'collab-item-7': 'Embajada Británica ipan Ciudad de México',
           'collab-item-8': 'Asociación Británica de Antropología Forense',
+          'collab-note-1': 'Colaboración internacional',
+          'collab-note-2': 'Política pública, financiamiento y alianzas',
+          'collab-note-3': 'Colaboración operativa',
+          'collab-note-4': 'Casos y intercambio técnico',
+          'collab-note-5': 'Coordinación nacional',
+          'collab-note-6': 'Colaboración en ciencia y tecnología',
+          'collab-note-7': 'Acompañamiento diplomático',
+          'collab-note-8': 'Experiencia forense',
           'tech-title': 'Teknolojíayoh tlen motequiti',
           'tech-item-1': 'Imágenes multiespectrales huan hiperespectrales',
           'tech-item-2': 'LiDAR ipan aire',
@@ -1260,44 +1358,27 @@ redirect_from:
         const dict = translations[lang] || translations.en;
         Object.keys(dict).forEach(function(id) {
           const el = document.getElementById(id);
-          if (el) {
-            el.innerHTML = dict[id];
-          }
+          if (el) el.innerHTML = dict[id];
         });
 
-        if (lang === 'es') {
-          document.documentElement.setAttribute('lang', 'es');
-        } else if (lang === 'nah') {
-          document.documentElement.setAttribute('lang', 'nah');
-        } else {
-          document.documentElement.setAttribute('lang', 'en');
-        }
+        document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en'));
 
         document.querySelectorAll('.lang-btn').forEach(function(btn) {
           btn.classList.toggle('active', btn.dataset.lang === lang);
         });
 
-        try {
-          localStorage.setItem('found-lang', lang);
-        } catch (e) {}
+        try { localStorage.setItem('found-lang', lang); } catch (e) {}
       }
 
       document.addEventListener('DOMContentLoaded', function() {
-        const savedLang = (function() {
-          try {
-            return localStorage.getItem('found-lang');
-          } catch (e) {
-            return null;
-          }
-        })();
-
+        let savedLang = null;
+        try { savedLang = localStorage.getItem('found-lang'); } catch (e) {}
         const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
         setLanguage(initialLang);
 
         document.querySelectorAll('.lang-btn').forEach(function(btn) {
           btn.addEventListener('click', function() {
-            const lang = btn.dataset.lang;
-            setLanguage(lang);
+            setLanguage(btn.dataset.lang);
           });
         });
       });
