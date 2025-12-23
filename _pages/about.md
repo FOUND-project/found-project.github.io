@@ -1100,6 +1100,21 @@ redirect_from:
     </p>
 
     <div class="social-grid">
+       <!-- ✅ LinkedIn 2 (FIXED) -->
+      <div class="social-embed">
+        <div class="iframe-container">
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7407705201647845376"
+            height="1170"
+            width="504"
+            frameborder="0"
+            allowfullscreen
+            title="FOUND Project LinkedIn update"
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+      
       <!-- Twitter -->
       <div class="social-embed twitter-embed">
         <blockquote class="twitter-tweet">
@@ -1123,21 +1138,6 @@ redirect_from:
             frameborder="0"
             allowfullscreen
             title="FCDO LinkedIn post about FOUND Project"
-            loading="lazy">
-          </iframe>
-        </div>
-      </div>
-
-      <!-- ✅ LinkedIn 2 (FIXED) -->
-      <div class="social-embed">
-        <div class="iframe-container">
-          <iframe
-            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7407705201647845376"
-            height="1170"
-            width="504"
-            frameborder="0"
-            allowfullscreen
-            title="FOUND Project LinkedIn update"
             loading="lazy">
           </iframe>
         </div>
