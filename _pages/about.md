@@ -778,18 +778,21 @@ redirect_from:
           </div>
         </div>
 
-        <!-- 7. Guerreros Buscadores -->
-        <div class="collab-card">
-          <div class="collab-logo">
-            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/blob/b2323f813df618867a6227a87e7efb9e084fe75e/images/Final%20Guerreros%20Buscadores.png"
-                 alt="Guerreros Buscadores de Jalisco logo"
-                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
-          </div>
-          <div class="collab-meta">
-            <div class="collab-name" id="collab-item-7">Guerreros Buscadores de Jalisco</div>
-            <div class="collab-note" id="collab-note-7">Families’ leadership and field expertise</div>
-          </div>
-        </div>
+      <!-- 7. Guerreros Buscadores -->
+<div class="collab-card">
+  <div class="collab-logo">
+    <img
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b2323f813df618867a6227a87e7efb9e084fe75e/images/Final%20Guerreros%20Buscadores.png"
+      alt="Guerreros Buscadores de Jalisco logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')">
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-7">Guerreros Buscadores de Jalisco</div>
+    <div class="collab-note" id="collab-note-7">Families’ leadership and field expertise</div>
+  </div>
+</div>
 
         <!-- 8. British Embassy -->
         <div class="collab-card">
