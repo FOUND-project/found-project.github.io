@@ -1125,13 +1125,13 @@ redirect_from:
 
         <div class="social-embed">
           <div class="iframe-container">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:share:7398929122778877954"
-              height="1170"
-              width="504"
-              frameborder="0"
-              allowfullscreen=""
-              title="FOUND Project LinkedIn update"
+            <iframe 
+              src="https://www.linkedin.com/embed/feed/update/urn:li:share:7407705201647845376
+              height="1170" 
+              width="504" 
+              frameborder="0" 
+              allowfullscreen="" 
+              title="Embedded post">
               loading="lazy"></iframe>
           </div>
         </div>
