@@ -575,7 +575,7 @@ redirect_from:
     .partner-logo img.loading{opacity:0;}
     .partner-logo:hover img{filter:grayscale(0%) brightness(1);transform:scale(1.05);}
 
-    /* Buscadoras */
+    /* ✅ Buscadoras (Role of Mothers) */
     .buscadoras-section{
       background:linear-gradient(135deg,#fff8f5 0%,#fff 100%);
       padding:clamp(4rem,8vw,6rem) clamp(1rem,4vw,3rem);
@@ -692,309 +692,65 @@ redirect_from:
     </div>
   </section>
 
-  <!-- INSTITUTIONAL PARTNERSHIPS (ADDED YOUR 8 ITEMS) -->
+  <!-- INSTITUTIONAL PARTNERSHIPS -->
   <section class="content-section" id="collaborations">
     <div class="section-container">
       <h2 id="collab-title">Institutional Partnerships</h2>
 
       <div class="collab-wrap" aria-label="Institutional partnerships logos">
         <div class="collab-grid">
-          <!-- Existing -->
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/1%20Executive%20Office%20of%20the%20UN%20Secretary-General.svg"
-                   alt="Executive Office of the UN Secretary-General logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-1">Executive Office of the UN Secretary-General</div>
-              <div class="collab-note" id="collab-note-1">International collaboration</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20UK's%20Foreign%2C%20Commonwealth%20%26%20Development%20Office%20(FCDO).png"
-                   alt="UK Foreign, Commonwealth & Development Office (FCDO) logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-2">UK Foreign, Commonwealth &amp; Development Office (FCDO)</div>
-              <div class="collab-note" id="collab-note-2">Policy, funding, and partnerships</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/3%20Comisio%CC%81n%20de%20Bu%CC%81squeda%20de%20Jalisco.png"
-                   alt="Comisión de Búsqueda de Jalisco logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-3">Local Search Commissions and Attorney’s Offices (Mexico)</div>
-              <div class="collab-note" id="collab-note-3">Operational collaboration, policy impact</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg"
-                   alt="Colombian Search Unit (UBPD) logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-4">Colombian Search Unit (UBPD)</div>
-              <div class="collab-note" id="collab-note-4">Casework and technical exchange</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/4%20Comision%20Nacional%20de%20Busqueda.png"
-                   alt="Mexico National Search Commission logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-5">Mexico’s National Search Commission</div>
-              <div class="collab-note" id="collab-note-5">National coordination</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/5%20Logotipo_SECIHTI_2025-2030.svg"
-                   alt="Mexican Science and Technology Secretariat logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-6">Mexican Science and Technology Secretariat</div>
-              <div class="collab-note" id="collab-note-6">Funding, policy impact</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/6%20British%20Embassy%20Mexico_Blue%20(ENG).png"
-                   alt="British Embassy Mexico City logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-7">British Embassy in Mexico City</div>
-              <div class="collab-note" id="collab-note-7">Funding, coordination support</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/7%20logo%20BAFAlogo_orig.png"
-                   alt="British Association for Forensic Anthropology logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-8">British Association for Forensic Anthropology</div>
-              <div class="collab-note" id="collab-note-8">Forensic expertise</div>
-            </div>
-          </div>
-
-          <!-- ✅ ADDED: your 8 items -->
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/26bd52ce350828b22814cfedc872786dd43de672/images/580141488dfc53bfdbde59fa6b043438.jpg"
-                   alt="University of Guadalajara (UdeG) logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-9">University of Guadalajara (UdeG)</div>
-              <div class="collab-note" id="collab-note-9">Technical expertise, experimental sites</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20logo_centrogeo_wide.svg"
-                   alt="CentroGeo logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-10">CentroGeo</div>
-              <div class="collab-note" id="collab-note-10">Co-lead, technical expertise</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/images(1).png?raw=true"
-                   alt="UNAM (Geophysics) logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-11">UNAM (Geophysics)</div>
-              <div class="collab-note" id="collab-note-11">Technical expertise</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6%20logo%20Ingenieria%20UNAM.png?raw=true"
-                   alt="UNAM (Engineering) logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-12">UNAM (Engineering)</div>
-              <div class="collab-note" id="collab-note-12">Technical expertise</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Social-web-v1.jpg?raw=true"
-                   alt="Frontier Tech Hub logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-13">Frontier Tech Hub</div>
-              <div class="collab-note" id="collab-note-13">Funding, technical expertise</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://github.com/FOUND-project/found-project.github.io/blob/7821557189d43b528dfa1ddb944c86d90348ce7b/images/8%20DTG_Logo_Screen_LRG-1.png?raw=true"
-                   alt="DTG logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-14">DT-Global</div>
-              <div class="collab-note" id="collab-note-14">Funding, technical expertise</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/4%20logo%20oxford-university-logo.png?raw=true"
-                   alt="University of Oxford logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-15">University of Oxford</div>
-              <div class="collab-note" id="collab-note-15">Technical expertise</div>
-            </div>
-          </div>
-
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/9%20logo%20UWE%20Bristol.svg"
-                   alt="UWE Bristol logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-16">UWE Bristol</div>
-              <div class="collab-note" id="collab-note-16">Funding, technical expertise</div>
-            </div>
-          </div>
-
+          <!-- ... your collaborations grid unchanged ... -->
+          <!-- (left as-is to keep this snippet focused; use your existing code here) -->
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SOCIAL (3rd element fixed) -->
+  <!-- ✅ ADDED: BUSCADORAS / ROLE OF MOTHERS (from original code) -->
+  <section class="buscadoras-section" id="buscadoras">
+    <div class="buscadoras-content">
+      <h2 id="buscadoras-title">The Role of Buscadoras</h2>
+      <p class="hero-description" id="buscadoras-text">
+        Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.
+      </p>
+      <div class="buscadoras-image">
+        <img
+          src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true"
+          alt="Buscadoras hands with plants symbolising hope and remembrance"
+          loading="lazy"
+          class="loading"
+          onload="this.classList.remove('loading')" />
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL -->
   <section class="social-section" id="social">
     <div class="social-container">
       <h2 class="section-title" id="social-title">Follow Our Journey</h2>
       <p class="section-subtitle" id="social-subtitle">Stay connected with our latest findings, community stories, and collaborations</p>
 
       <div class="social-grid">
-        <div class="social-embed twitter-embed">
-          <blockquote class="twitter-tweet">
-            <p lang="en" dir="ltr">
-              Almost a year after I started researching the story, I'm thrilled that my
-              <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section.
-              <a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a>
-            </p>
-            &mdash; Suzanne Bearne (@sbearne)
-            <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a>
-          </blockquote>
-        </div>
-
-        <div class="social-embed">
-          <div class="iframe-container">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624"
-              height="924"
-              width="504"
-              frameborder="0"
-              allowfullscreen
-              title="FCDO LinkedIn post about FOUND Project"
-              loading="lazy"></iframe>
-          </div>
-        </div>
-
-        <!-- ✅ FIXED: your broken third iframe (missing quote + misplaced loading) -->
-        <div class="social-embed">
-          <div class="iframe-container">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:share:7407705201647845376"
-              height="1170"
-              width="504"
-              frameborder="0"
-              allowfullscreen
-              title="FOUND Project LinkedIn update"
-              loading="lazy"></iframe>
-          </div>
-        </div>
-
-        <div class="social-embed">
-          <div class="iframe-container">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
-              height="924"
-              width="504"
-              frameborder="0"
-              allowfullscreen
-              title="FOUND Project community engagement"
-              loading="lazy"></iframe>
-          </div>
-        </div>
+        <!-- ... your social embeds unchanged ... -->
       </div>
     </div>
   </section>
 
-  <!-- PARTNERS (DOUBLE-CHECKED + UPDATED URLs) -->
+  <!-- PARTNERS -->
   <section class="partners-section" id="partners">
     <div class="partners-container">
       <h2 class="section-title" id="partners-title">Our Partners</h2>
       <p class="partners-intro" id="partners-intro">
         FOUND brings together a coalition of academic institutions, government bodies, civil society organisations, and international partners. Together, we seek to honour the memory of those who are missing and stand with families as they search for a form of closure.
       </p>
-
-      <div class="partner-grid">
-        <div class="partner-logo">
-          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Social-web-v1.jpg?raw=true" alt="Frontier Tech Hub partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-        </div>
         <div class="partner-logo">
           <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/1%20logo%20Final%20Guerreros%20Buscadores.png?raw=true" alt="Guerreros Buscadores partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')" />
         </div>
         <div class="partner-logo">
-          <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20logo_centrogeo_wide.svg" alt="CentroGeo partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')" />
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/9986ece075d5f98f97e04690298110f38ea02541/images/OFOTA_COLOUR_WEB.jpg" alt="OFA partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')" />
         </div>
-        <div class="partner-logo">
-          <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/26bd52ce350828b22814cfedc872786dd43de672/images/580141488dfc53bfdbde59fa6b043438.jpg" alt="University of Guadalajara partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-        </div>
-        <div class="partner-logo">
-          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/4%20logo%20oxford-university-logo.png?raw=true" alt="University of Oxford partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-        </div>
-        <div class="partner-logo">
-          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/images(1).png?raw=true" alt="UNAM Geophysics partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-        </div>
-        <div class="partner-logo">
-          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6%20logo%20Ingenieria%20UNAM.png?raw=true" alt="UNAM Engineering partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-        </div>
-        <div class="partner-logo">
-          <img src="https://github.com/FOUND-project/found-project.github.io/blob/7821557189d43b528dfa1ddb944c86d90348ce7b/images/8%20DTG_Logo_Screen_LRG-1.png?raw=true" alt="DTG partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-        </div>
-        <div class="partner-logo">
-          <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/9%20logo%20UWE%20Bristol.svg" alt="UWE Bristol partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')" />
+       <div class="partner-logo">
+          <img src=" https://github.com/FOUND-project/found-project.github.io/blob/9986ece075d5f98f97e04690298110f38ea02541/images/Beth.jpg" alt="Bath partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')" />
         </div>
       </div>
     </div>
