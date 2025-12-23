@@ -1092,65 +1092,74 @@ redirect_from:
   </section>
 
   <!-- SOCIAL -->
-  <section class="social-section" id="social">
-    <div class="social-container">
-      <h2 class="section-title" id="social-title">Follow Our Journey</h2>
-      <p class="section-subtitle" id="social-subtitle">Stay connected with our latest findings, community stories, and collaborations</p>
+<section class="social-section" id="social">
+  <div class="social-container">
+    <h2 class="section-title" id="social-title">Follow Our Journey</h2>
+    <p class="section-subtitle" id="social-subtitle">
+      Stay connected with our latest findings, community stories, and collaborations
+    </p>
 
-      <div class="social-grid">
-        <div class="social-embed twitter-embed">
-          <blockquote class="twitter-tweet">
-            <p lang="en" dir="ltr">
-              Almost a year after I started researching the story, I'm thrilled that my
-              <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section.
-              <a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a>
-            </p>
-            &mdash; Suzanne Bearne (@sbearne)
-            <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a>
-          </blockquote>
+    <div class="social-grid">
+      <!-- Twitter -->
+      <div class="social-embed twitter-embed">
+        <blockquote class="twitter-tweet">
+          <p lang="en" dir="ltr">
+            Almost a year after I started researching the story, I'm thrilled that my
+            <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section.
+            <a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a>
+          </p>
+          &mdash; Suzanne Bearne (@sbearne)
+          <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a>
+        </blockquote>
+      </div>
+
+      <!-- LinkedIn 1 -->
+      <div class="social-embed">
+        <div class="iframe-container">
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624"
+            height="924"
+            width="504"
+            frameborder="0"
+            allowfullscreen
+            title="FCDO LinkedIn post about FOUND Project"
+            loading="lazy">
+          </iframe>
         </div>
+      </div>
 
-        <div class="social-embed">
-          <div class="iframe-container">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624"
-              height="924"
-              width="504"
-              frameborder="0"
-              allowfullscreen=""
-              title="FCDO LinkedIn post about FOUND Project"
-              loading="lazy"></iframe>
-          </div>
+      <!-- ✅ LinkedIn 2 (FIXED) -->
+      <div class="social-embed">
+        <div class="iframe-container">
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7407705201647845376"
+            height="1170"
+            width="504"
+            frameborder="0"
+            allowfullscreen
+            title="FOUND Project LinkedIn update"
+            loading="lazy">
+          </iframe>
         </div>
+      </div>
 
-        <div class="social-embed">
-          <div class="iframe-container">
-            <iframe 
-              src="https://www.linkedin.com/embed/feed/update/urn:li:share:7407705201647845376
-              height="1170" 
-              width="504" 
-              frameborder="0" 
-              allowfullscreen="" 
-              title="Embedded post">
-              loading="lazy"></iframe>
-          </div>
-        </div>
-
-        <div class="social-embed">
-          <div class="iframe-container">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
-              height="924"
-              width="504"
-              frameborder="0"
-              allowfullscreen=""
-              title="FOUND Project community engagement"
-              loading="lazy"></iframe>
-          </div>
+      <!-- LinkedIn 3 -->
+      <div class="social-embed">
+        <div class="iframe-container">
+          <iframe
+            src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
+            height="924"
+            width="504"
+            frameborder="0"
+            allowfullscreen
+            title="FOUND Project community engagement"
+            loading="lazy">
+          </iframe>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- PARTNERS (UNCHANGED) -->
   <section class="partners-section" id="partners">
