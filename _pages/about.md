@@ -811,11 +811,11 @@ redirect_from:
         <div class="collab-card">
           <div class="collab-logo">
             <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/5ea7b61d8c5c6467ad4253f2898109033aac13e7/images/OFOTA_COLOUR_WEB.jpg"
-                 alt="Oxford Forum for Technology and Analysis logo"
+                 alt="Oxford Festival of the Arts logo"
                  loading="lazy" class="loading" onload="this.classList.remove('loading')">
           </div>
           <div class="collab-meta">
-            <div class="collab-name" id="collab-item-9">Oxford Forum for Technology and Analysis</div>
+            <div class="collab-name" id="collab-item-9">OOxford Festival of the Arts</div>
             <div class="collab-note" id="collab-note-9">Oxford Forum partner</div>
           </div>
         </div>
@@ -824,14 +824,16 @@ redirect_from:
         <div class="collab-card">
           <div class="collab-logo">
             <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b2323f813df618867a6227a87e7efb9e084fe75e/images/Beth.jpg"
-                 alt="Beth – Oxford Forum partner"
+                 alt="Bath – Oxford Forum partner"
                  loading="lazy" class="loading" onload="this.classList.remove('loading')">
           </div>
           <div class="collab-meta">
-            <div class="collab-name" id="collab-item-10">Beth</div>
+            <div class="collab-name" id="collab-item-10">Bath</div>
             <div class="collab-note" id="collab-note-10">Technical expertise · Oxford Forum partner</div>
           </div>
         </div>
+
+
 
         <!-- Remaining academic & funding partners can follow here -->
 
