@@ -952,7 +952,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-3">Local Search Commissions and Attorney's Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)</div>
-              <div class="collab-note" id="collab-note-3">Operational collaboration</div>
+              <div class="collab-note" id="collab-note-3">Operational collaboration, Policy impact</div>
             </div>
           </div>
 
@@ -968,8 +968,8 @@ redirect_from:
                 onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
-              <div class="collab-name" id="collab-item-5">Mexico's National Search Commission</div>
-              <div class="collab-note" id="collab-note-5">National coordination</div>
+              <div class="collab-name" id="collab-item-5">Unidad de Busqueda de Colombia</div>
+              <div class="collab-note" id="collab-note-5">Casework and technical exchange</div>
             </div>
           </div>
 
@@ -1001,7 +1001,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-6">Mexican Science and Technology Secretariat</div>
-              <div class="collab-note" id="collab-note-6">Science &amp; technology collaboration</div>
+              <div class="collab-note" id="collab-note-6">Funding, Policy impact</div>
             </div>
           </div>
 
@@ -1017,7 +1017,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-7">British Embassy in Mexico City</div>
-              <div class="collab-note" id="collab-note-7">Diplomatic support</div>
+              <div class="collab-note" id="collab-note-7">Funding, Coordination support</div>
             </div>
           </div>
 
