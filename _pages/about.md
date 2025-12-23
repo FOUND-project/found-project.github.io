@@ -61,6 +61,7 @@ redirect_from:
       border-radius: 6px;
     }
 
+    /* Language toggle */
     .lang-toggle {
       position: absolute;
       top: 1.5rem;
@@ -94,6 +95,7 @@ redirect_from:
       box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
     }
 
+    /* Title */
     .title-section {
       padding: clamp(3rem, 8vw, 5rem) 0 clamp(2rem, 6vw, 4rem);
       background: linear-gradient(135deg, #1a3d2f 0%, var(--dark-green) 50%, var(--primary-green) 100%);
@@ -143,6 +145,7 @@ redirect_from:
 
     .title-accent { color: var(--gold-accent); font-weight: 700; }
 
+    /* Hero */
     .hero {
       padding: clamp(2rem, 6vw, 4rem) clamp(1rem, 4vw, 3rem);
       background: linear-gradient(135deg, #f8fcfb 0%, #ffffff 100%);
@@ -243,7 +246,6 @@ redirect_from:
     }
 
     .hero-image-container:hover { transform: translateY(-8px); }
-
     .hero-image-container::before { content: ''; display: block; padding-top: 56.25%; }
 
     .hero-image {
@@ -270,6 +272,7 @@ redirect_from:
 
     .hero-image.loading { opacity: 0; }
 
+    /* Sections */
     .content-section {
       padding: clamp(2.5rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem);
       border-bottom: 1px solid var(--border-light);
@@ -358,10 +361,8 @@ redirect_from:
       color: white;
     }
 
-    /* === NEW: Institutional Collaborations (logos + labels) === */
-    .collab-wrap {
-      margin-top: 2rem;
-    }
+    /* === Institutional Collaborations (logos + labels) === */
+    .collab-wrap { margin-top: 2rem; }
 
     .collab-grid {
       display: grid;
@@ -378,7 +379,7 @@ redirect_from:
       overflow: hidden;
       position: relative;
       transition: transform 0.35s var(--transition-smooth), box-shadow 0.35s var(--transition-smooth), border-color 0.35s var(--transition-smooth);
-      min-height: 210px;
+      min-height: 220px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -388,8 +389,9 @@ redirect_from:
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 15% 10%, rgba(232,245,240,0.85) 0%, transparent 55%),
-                  radial-gradient(circle at 85% 0%, rgba(212,175,55,0.12) 0%, transparent 60%);
+      background:
+        radial-gradient(circle at 15% 10%, rgba(232,245,240,0.85) 0%, transparent 55%),
+        radial-gradient(circle at 85% 0%, rgba(212,175,55,0.12) 0%, transparent 60%);
       opacity: 0;
       transition: opacity 0.35s ease;
       pointer-events: none;
@@ -453,25 +455,7 @@ redirect_from:
       line-height: 1.45;
     }
 
-    .collab-fallback {
-      width: 100%;
-      max-width: 210px;
-      height: 90px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, var(--accent-green) 0%, rgba(232,245,240,0.2) 100%);
-      border: 1px dashed rgba(45,95,77,0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--dark-green);
-      font-weight: 800;
-      letter-spacing: 0.08em;
-    }
-
-    .collab-fallback span {
-      font-size: 1.25rem;
-    }
-
+    /* Gallery */
     .image-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
@@ -521,9 +505,9 @@ redirect_from:
     }
 
     .gallery-item img.loading { opacity: 0; }
-
     .gallery-item:hover img { transform: scale(1.08); }
 
+    /* Social */
     .social-section {
       background: linear-gradient(135deg, var(--accent-green) 0%, #ffffff 100%);
       padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem);
@@ -603,6 +587,7 @@ redirect_from:
 
     .iframe-container iframe { width: 100%; border: 0; display: block; }
 
+    /* Partners */
     .partners-section {
       background: linear-gradient(135deg, #f8fcfb 0%, #ffffff 100%);
       padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 4vw, 3rem);
@@ -698,6 +683,7 @@ redirect_from:
       min-height: 220px;
     }
 
+    /* Buscadoras */
     .buscadoras-section {
       background: linear-gradient(135deg, #fff8f5 0%, #ffffff 100%);
       padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 4vw, 3rem);
@@ -734,6 +720,7 @@ redirect_from:
 
     .buscadoras-image:hover { transform: translateY(-8px); }
 
+    /* Footer */
     .footer {
       text-align: center;
       padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 4vw, 3rem);
@@ -901,7 +888,7 @@ redirect_from:
     </div>
   </section>
 
-  <!-- INSTITUTIONAL COLLABORATIONS (UPDATED WITH IMAGES) -->
+  <!-- INSTITUTIONAL COLLABORATIONS (FIXED + IMAGES + UNIQUE IDs + WORKS IN 3 LANGUAGES) -->
   <section class="content-section" id="collaborations">
     <div class="section-container">
       <h2 id="collab-title">Institutional Collaborations</h2>
@@ -929,7 +916,7 @@ redirect_from:
             <div class="collab-logo">
               <img
                 src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20UK's%20Foreign%2C%20Commonwealth%20%26%20Development%20Office%20(FCDO).png"
-                alt="UK Foreign, Commonwealth & Development Office (FCDO) logo"
+                alt="UK Foreign, Commonwealth &amp; Development Office (FCDO) logo"
                 loading="lazy"
                 class="loading"
                 onload="this.classList.remove('loading')">
@@ -940,7 +927,7 @@ redirect_from:
             </div>
           </div>
 
-          <!-- 3 (Jalisco Search Commission: logo added; label stays aligned with your list) -->
+          <!-- 3 -->
           <div class="collab-card">
             <div class="collab-logo">
               <img
@@ -951,25 +938,26 @@ redirect_from:
                 onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
-              <div class="collab-name" id="collab-item-3">Local Search Commissions and Attorney's Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)</div>
-              <div class="collab-note" id="collab-note-3">Operational collaboration, Policy impact</div>
+              <div class="collab-name" id="collab-item-3">
+                Local Search Commissions and Attorney's Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)
+              </div>
+              <div class="collab-note" id="collab-note-3">Operational collaboration, policy impact</div>
             </div>
           </div>
 
-
-          <!-- 4 -->
+          <!-- 4 (UBPD) -->
           <div class="collab-card">
             <div class="collab-logo">
               <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/blob/d7867dc147eb1b230142511fce739aa481c6177d/images/12%20logo%20ubpd_color_logo.svg"
-                alt="Unidad de Busqueda de Colombia"
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg"
+                alt="Colombian Search Unit (UBPD) logo"
                 loading="lazy"
                 class="loading"
                 onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
-              <div class="collab-name" id="collab-item-5">Unidad de Busqueda de Colombia</div>
-              <div class="collab-note" id="collab-note-5">Casework and technical exchange</div>
+              <div class="collab-name" id="collab-item-4">Colombian Search Unit</div>
+              <div class="collab-note" id="collab-note-4">Casework and technical exchange</div>
             </div>
           </div>
 
@@ -978,7 +966,7 @@ redirect_from:
             <div class="collab-logo">
               <img
                 src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/4%20Comision%20Nacional%20de%20Busqueda.png"
-                alt="Mexico National Search Commission logo"
+                alt="Mexico's National Search Commission logo"
                 loading="lazy"
                 class="loading"
                 onload="this.classList.remove('loading')">
@@ -1001,7 +989,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-6">Mexican Science and Technology Secretariat</div>
-              <div class="collab-note" id="collab-note-6">Funding, Policy impact</div>
+              <div class="collab-note" id="collab-note-6">Science and technology collaboration</div>
             </div>
           </div>
 
@@ -1017,7 +1005,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-7">British Embassy in Mexico City</div>
-              <div class="collab-note" id="collab-note-7">Funding, Coordination support</div>
+              <div class="collab-note" id="collab-note-7">Diplomatic support</div>
             </div>
           </div>
 
@@ -1255,10 +1243,10 @@ redirect_from:
           'collab-item-8': 'British Association for Forensic Anthropology',
           'collab-note-1': 'International collaboration',
           'collab-note-2': 'Policy, funding, and partnerships',
-          'collab-note-3': 'Operational collaboration',
+          'collab-note-3': 'Operational collaboration, policy impact',
           'collab-note-4': 'Casework and technical exchange',
           'collab-note-5': 'National coordination',
-          'collab-note-6': 'Science &amp; technology collaboration',
+          'collab-note-6': 'Science and technology collaboration',
           'collab-note-7': 'Diplomatic support',
           'collab-note-8': 'Forensic expertise',
           'tech-title': 'Technologies in Action',
@@ -1296,8 +1284,8 @@ redirect_from:
           'collab-item-8': 'Asociación Británica de Antropología Forense',
           'collab-note-1': 'Colaboración internacional',
           'collab-note-2': 'Política pública, financiamiento y alianzas',
-          'collab-note-3': 'Colaboración operativa',
-          'collab-note-4': 'Casos y intercambio técnico',
+          'collab-note-3': 'Colaboración operativa e impacto en políticas',
+          'collab-note-4': 'Casos e intercambio técnico',
           'collab-note-5': 'Coordinación nacional',
           'collab-note-6': 'Colaboración en ciencia y tecnología',
           'collab-note-7': 'Acompañamiento diplomático',
@@ -1323,7 +1311,7 @@ redirect_from:
           'word-2': 'quilnamictia.',
           'word-3': 'temoa.',
           'word-4': 'yolpakilistli quimacatia.',
-          'hero-main-text': '124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia প্রযুক্তolojiayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
+          'hero-main-text': '124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia teknolojíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
           'community-title': 'In familias huan tlamachtianimeh quinyecana',
           'community-text': 'FOUND quinyecanah huan quinyolchicahua <strong>colectivos de búsqueda</strong> huan tlamachtianimeh de CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge huan Universidades Autónomas de Zacatecas huan San Luis Potosí.',
           'collab-title': 'Tlen tlatlanecuiltilis nemilistli (colaboraciones institucionales)',
@@ -1336,11 +1324,11 @@ redirect_from:
           'collab-item-7': 'Embajada Británica ipan Ciudad de México',
           'collab-item-8': 'Asociación Británica de Antropología Forense',
           'collab-note-1': 'Colaboración internacional',
-          'collab-note-2': 'Política pública, financiamiento y alianzas',
-          'collab-note-3': 'Colaboración operativa',
-          'collab-note-4': 'Casos y intercambio técnico',
+          'collab-note-2': 'Política pública, financiamiento huan alianzas',
+          'collab-note-3': 'Colaboración operativa huan impacto ipan políticas',
+          'collab-note-4': 'Casos huan intercambio técnico',
           'collab-note-5': 'Coordinación nacional',
-          'collab-note-6': 'Colaboración en ciencia y tecnología',
+          'collab-note-6': 'Colaboración ipan ciencia huan tecnología',
           'collab-note-7': 'Acompañamiento diplomático',
           'collab-note-8': 'Experiencia forense',
           'tech-title': 'Teknolojíayoh tlen motequiti',
@@ -1362,6 +1350,7 @@ redirect_from:
 
       function setLanguage(lang) {
         const dict = translations[lang] || translations.en;
+
         Object.keys(dict).forEach(function(id) {
           const el = document.getElementById(id);
           if (el) el.innerHTML = dict[id];
@@ -1380,6 +1369,7 @@ redirect_from:
         let savedLang = null;
         try { savedLang = localStorage.getItem('found-lang'); } catch (e) {}
         const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
+
         setLanguage(initialLang);
 
         document.querySelectorAll('.lang-btn').forEach(function(btn) {
