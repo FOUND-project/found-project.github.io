@@ -864,7 +864,7 @@ redirect_from:
                    loading="lazy" class="loading" onload="this.classList.remove('loading')" />
             </div>
             <div class="collab-meta">
-              <div class="collab-name" id="collab-item-14">DTG</div>
+              <div class="collab-name" id="collab-item-14">DT-Global</div>
               <div class="collab-note" id="collab-note-14">Funding, technical expertise</div>
             </div>
           </div>
