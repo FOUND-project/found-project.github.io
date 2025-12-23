@@ -781,7 +781,7 @@ redirect_from:
         <!-- 7. Guerreros Buscadores -->
         <div class="collab-card">
           <div class="collab-logo">
-            <img src="https://github.com/FOUND-project/found-project.github.io/blob/b2323f813df618867a6227a87e7efb9e084fe75e/images/Final%20Guerreros%20Buscadores.png"
+            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/blob/b2323f813df618867a6227a87e7efb9e084fe75e/images/Final%20Guerreros%20Buscadores.png"
                  alt="Guerreros Buscadores de Jalisco logo"
                  loading="lazy" class="loading" onload="this.classList.remove('loading')">
           </div>
