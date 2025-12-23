@@ -956,14 +956,20 @@ redirect_from:
             </div>
           </div>
 
-          <!-- 4 (no logo provided) -->
+
+          <!-- 4 -->
           <div class="collab-card">
             <div class="collab-logo">
-              <div class="collab-fallback" aria-hidden="true"><span>UBPD</span></div>
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/blob/d7867dc147eb1b230142511fce739aa481c6177d/images/12%20logo%20ubpd_color_logo.svg"
+                alt="Unidad de Busqueda de Colombia"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
-              <div class="collab-name" id="collab-item-4">Colombian Search Unit</div>
-              <div class="collab-note" id="collab-note-4">Casework and technical exchange</div>
+              <div class="collab-name" id="collab-item-5">Mexico's National Search Commission</div>
+              <div class="collab-note" id="collab-note-5">National coordination</div>
             </div>
           </div>
 
