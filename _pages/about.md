@@ -1298,6 +1298,19 @@ redirect_from:
       <h2 class="section-title" id="social-title">Follow Our Journey</h2>
       <p class="section-subtitle" id="social-subtitle">Our latest findings, community stories, and collaborations</p>
 
+  <div class="social-embed">
+          <div class="iframe-container">
+            <iframe
+              src="https://www.linkedin.com/embed/feed/update/urn:li:share:7407705201647845376"
+              height="1170"
+              width="504"
+              frameborder="0"
+              allowfullscreen
+              title="FOUND Project LinkedIn update"
+              loading="lazy"></iframe>
+          </div>
+        </div>
+
       <div class="social-grid">
         <div class="social-embed twitter-embed">
           <blockquote class="twitter-tweet">
@@ -1311,33 +1324,7 @@ redirect_from:
           </blockquote>
         </div>
 
-        <div class="social-embed">
-          <div class="iframe-container">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624"
-              height="924"
-              width="504"
-              frameborder="0"
-              allowfullscreen
-              title="FCDO LinkedIn post about FOUND Project"
-              loading="lazy"></iframe>
-          </div>
-        </div>
-
-        <div class="social-embed">
-          <div class="iframe-container">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:share:7407705201647845376"
-              height="1170"
-              width="504"
-              frameborder="0"
-              allowfullscreen
-              title="FOUND Project LinkedIn update"
-              loading="lazy"></iframe>
-          </div>
-        </div>
-
-        <div class="social-embed">
+<div class="social-embed">
           <div class="iframe-container">
             <iframe
               src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
@@ -1351,6 +1338,19 @@ redirect_from:
         </div>
       </div>
     </div>
+
+        <div class="social-embed">
+          <div class="iframe-container">
+            <iframe
+              src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624"
+              height="924"
+              width="504"
+              frameborder="0"
+              allowfullscreen
+              title="FCDO LinkedIn post about FOUND Project"
+              loading="lazy"></iframe>
+          </div>
+        </div>
   </section>
 
   <!-- FOOTER -->
