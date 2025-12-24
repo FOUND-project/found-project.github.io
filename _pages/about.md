@@ -904,8 +904,8 @@ redirect_from:
       src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20logo%20IGeofisicaUNAM.png"
       alt="UNAM Geophysics Institute logo"
       loading="lazy"
-      class="loading"
-      onload="this.classList.remove('loading')">
+      onload="this.classList.remove('loading')"
+      style="filter: brightness(0) invert(0);">
   </div>
   <div class="collab-meta">
     <div class="collab-name" id="collab-item-unam-geo">UNAM – Geophysics</div>
