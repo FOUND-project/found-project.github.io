@@ -846,6 +846,37 @@ redirect_from:
       .word-carousel{min-width:200px;}
       .social-grid{grid-template-columns:1fr;}
     }
+  
+  /* =========================================================
+   Search Collectives card – make GIF fill all space above divider
+   ========================================================= */
+
+.collab-card-gif .collab-logo{
+  padding: 0 !important;
+  min-height: 0 !important;
+  height: 240px;              /* controls how tall the GIF area is */
+  display: block;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Override the global logo image constraints for THIS card */
+.collab-card-gif .collab-logo img{
+  max-height: none !important; /* IMPORTANT: overrides the 95px cap */
+  max-width: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center 25%; /* tweak this if needed */
+  display: block;
+  filter: none !important;
+  transform: scale(1.02);
+  transition: transform .8s var(--transition-smooth);
+}
+
+.collab-card-gif:hover .collab-logo img{
+  transform: scale(1.06);
+}
   </style>
 </head>
 
@@ -965,19 +996,17 @@ redirect_from:
 
 <!-- 7. Search Collectives -->
 <div class="collab-card collab-card-gif">
-  <div class="collab-logo gif-hero">
+  <div class="collab-logo">
     <img
       src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0bed7c6b4c906bc94116683368b679ba0bd80428/images/mothers%20walking.gif"
-      alt="Search Collectives"
+      alt="Search Collectives logo"
       loading="lazy"
       class="loading"
       onload="this.classList.remove('loading')">
   </div>
   <div class="collab-meta">
     <div class="collab-name" id="collab-item-7">Search Collectives</div>
-    <div class="collab-note" id="collab-note-7">
-      Families’ leadership and field expertise
-    </div>
+    <div class="collab-note" id="collab-note-7">Families’ leadership and field expertise</div>
   </div>
 </div>
 
