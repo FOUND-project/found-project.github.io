@@ -1006,7 +1006,7 @@ redirect_from:
   </div>
   <div class="collab-meta">
     <div class="collab-name" id="collab-item-7">Search Collectives</div>
-    <div class="collab-note" id="collab-note-7">Families’ leadership and field expertise</div>
+    <div class="collab-note" id="collab-note-7">Leadership and field expertise</div>
   </div>
 </div>
 
