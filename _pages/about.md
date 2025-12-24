@@ -917,6 +917,22 @@ redirect_from:
       <div class="collab-wrap" aria-label="Institutional partnerships logos">
         <div class="collab-grid">
 
+   <!-- 7. Search Collectives -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://github.com/FOUND-project/found-project.github.io/blob/0bed7c6b4c906bc94116683368b679ba0bd80428/images/mothers%20walking.gif"
+                alt="Search Collectives logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-7">Search Collectives</div>
+              <div class="collab-note" id="collab-note-7">Families’ leadership and field expertise</div>
+            </div>
+          </div>
+
           <!-- 1. UN -->
           <div class="collab-card">
             <div class="collab-logo">
@@ -992,22 +1008,6 @@ redirect_from:
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-6">Mexico’s National Search Commission</div>
               <div class="collab-note" id="collab-note-6">National coordination</div>
-            </div>
-          </div>
-
-          <!-- 7. Guerreros Buscadores -->
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b2323f813df618867a6227a87e7efb9e084fe75e/images/Final%20Guerreros%20Buscadores.png"
-                alt="Guerreros Buscadores de Jalisco logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-7">Guerreros Buscadores de Jalisco</div>
-              <div class="collab-note" id="collab-note-7">Families’ leadership and field expertise</div>
             </div>
           </div>
 
