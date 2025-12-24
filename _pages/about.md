@@ -618,19 +618,6 @@ redirect_from:
   background: #fff;
 }
 
-.collab-card-gif .gif-hero::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0) 60%,
-    rgba(255,255,255,.7) 85%,
-    #fff 100%
-  );
-  pointer-events:none;
-}
-
 .collab-card-gif .gif-hero img{
   width: 100%;
   height: 100%;
