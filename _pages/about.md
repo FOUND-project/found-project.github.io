@@ -611,57 +611,39 @@ redirect_from:
 /* =========================================================
    Search Collectives – special editorial card
    ========================================================= */
-
-.collab-card-gif{
-  border: 2px solid rgba(74,140,115,.35);
-  box-shadow: 0 12px 30px rgba(30,64,52,.18);
-  transform: translateY(-2px);
-}
-
-/* Hero GIF container */
 .collab-card-gif .gif-hero{
-  padding: 0;
-  height: 300px;                 /* taller = less crop */
+  height: 260px;                 /* balanced height */
   overflow: hidden;
   position: relative;
-  background: #fff;              /* ✅ white background */
+  background: #fff;
 }
 
-/* Soft gradient fade into content */
 .collab-card-gif .gif-hero::after{
   content:'';
   position:absolute;
   inset:0;
   background: linear-gradient(
     to bottom,
-    rgba(255,255,255,0) 55%,
-    rgba(255,255,255,.65) 80%,
+    rgba(255,255,255,0) 60%,
+    rgba(255,255,255,.7) 85%,
     #fff 100%
   );
   pointer-events:none;
 }
 
-/* GIF itself */
 .collab-card-gif .gif-hero img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 85%;   /* show more ground + people */
-  transform: scale(1.03);        /* very gentle zoom */
+  object-position: center 86%;
+  transform: scale(1.03);
   transition: transform .8s cubic-bezier(.4,0,.2,1);
-  filter: saturate(1.05) contrast(1.03);
 }
 
-/* Calm, premium hover */
 .collab-card-gif:hover .gif-hero img{
   transform: scale(1.08);
 }
 
-/* Make text feel intentional */
-.collab-card-gif .collab-meta{
-  background: #fff;
-  padding-top: 1.25rem;
-}
 
     
     
@@ -695,6 +677,17 @@ redirect_from:
       z-index:1;
     }
 
+/* =========================================================
+   Override logo spacing ONLY for Search Collectives card
+   ========================================================= */
+
+.collab-card-gif .collab-logo{
+  padding: 0;        /* remove default logo padding */
+  min-height: 0;     /* remove forced logo height */
+  height: auto;
+  display: block;    /* disable flex centring */
+}
+    
     .collab-logo img{
       max-width:100%;
       max-height:95px;
