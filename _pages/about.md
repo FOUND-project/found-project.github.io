@@ -1032,7 +1032,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-2">UK Foreign, Commonwealth &amp; Development Office (FCDO)</div>
-              <div class="collab-note" id="collab-note-2">Policy, funding, partnerships</div>
+              <div class="collab-note" id="collab-note-2">Policy, Funding, Partnerships</div>
             </div>
           </div>
 
