@@ -1045,24 +1045,6 @@ redirect_from:
     </div>
   </section>
 
-  <!-- PARTNERS (DOUBLE-CHECKED + UPDATED URLs) -->
-  <section class="partners-section" id="partners">
-    <div class="partners-container">
-      <h2 class="section-title" id="partners-title">Our Partners</h2>
-      <p class="partners-intro" id="partners-intro">
-        FOUND brings together a coalition of academic institutions, government bodies, civil society organisations, and international partners. Together, we seek to honour the memory of those who are missing and stand with families as they search for a form of closure.
-      </p>
-
-      <div class="partner-grid">
-        <div class="partner-logo">
-          <img src="https://github.com/FOUND-project/found-project.github.io/blob/9986ece075d5f98f97e04690298110f38ea02541/images/Beth.jpg" alt="Bath partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-        </div>
-        <div class="partner-logo">
-          <img src="https://github.com/FOUND-project/found-project.github.io/blob/5ea7b61d8c5c6467ad4253f2898109033aac13e7/images/OFOTA_COLOUR_WEB.jpg" alt="OFA partner logo" loading="lazy" class="loading" onload="this.classList.remove('loading')" />
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- FOOTER -->
   <footer class="footer">
