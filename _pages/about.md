@@ -1219,7 +1219,7 @@ redirect_from:
   <section class="social-section" id="social">
     <div class="social-container">
       <h2 class="section-title" id="social-title">Follow Our Journey</h2>
-      <p class="section-subtitle" id="social-subtitle">Stay connected with our latest findings, community stories, and collaborations</p>
+      <p class="section-subtitle" id="social-subtitle">Our latest findings, community stories, and collaborations</p>
 
       <div class="social-grid">
         <div class="social-embed twitter-embed">
