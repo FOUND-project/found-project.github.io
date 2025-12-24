@@ -608,6 +608,31 @@ redirect_from:
       justify-content:space-between;
     }
 
+/* === Hero-style GIF card (Search Collectives only) === */
+.collab-card-gif .gif-hero{
+  padding: 0;
+  min-height: 190px;
+  height: 200px;
+  overflow: hidden;
+  display: block;
+  background: var(--accent-green);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.collab-card-gif .gif-hero img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  transform: scale(1.25);
+  transition: transform .6s var(--transition-smooth);
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.collab-card-gif:hover .gif-hero img{
+  transform: scale(1.35);
+}
+    
     .collab-card::before{
       content:'';
       position:absolute;
@@ -917,14 +942,13 @@ redirect_from:
       <div class="collab-wrap" aria-label="Institutional partnerships logos">
         <div class="collab-grid">
 
- <!-- 7. Search Collectives -->
-<div class="collab-card">
-  <div class="collab-logo">
+<!-- 7. Search Collectives -->
+<div class="collab-card collab-card-gif">
+  <div class="collab-logo gif-hero">
     <img
       src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0bed7c6b4c906bc94116683368b679ba0bd80428/images/mothers%20walking.gif"
-      alt="Search Collectives logo"
+      alt="Search Collectives"
       loading="lazy"
-      class="loading"
       onload="this.classList.remove('loading')">
   </div>
   <div class="collab-meta">
