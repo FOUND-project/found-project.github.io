@@ -1006,7 +1006,7 @@ redirect_from:
   </div>
   <div class="collab-meta">
     <div class="collab-name" id="collab-item-7">Search Collectives</div>
-    <div class="collab-note" id="collab-note-7">Leadership and field expertise</div>
+    <div class="collab-note" id="collab-note-7">Leadership, field expertise</div>
   </div>
 </div>
 
@@ -1032,7 +1032,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-2">UK Foreign, Commonwealth &amp; Development Office (FCDO)</div>
-              <div class="collab-note" id="collab-note-2">Policy, funding, and partnerships</div>
+              <div class="collab-note" id="collab-note-2">Policy, funding, partnerships</div>
             </div>
           </div>
 
@@ -1045,7 +1045,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-3">CentroGeo</div>
-              <div class="collab-note" id="collab-note-3">Co-lead, technical expertise</div>
+              <div class="collab-note" id="collab-note-3">Co-lead, Technical expertise</div>
             </div>
           </div>
 
@@ -1058,7 +1058,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-4">University of Guadalajara (UdeG)</div>
-              <div class="collab-note" id="collab-note-4">Technical expertise, experimental sites</div>
+              <div class="collab-note" id="collab-note-4">Technical expertise, Experimental sites</div>
             </div>
           </div>
 
@@ -1071,7 +1071,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-5">Colombian Search Unit (UBPD)</div>
-              <div class="collab-note" id="collab-note-5">Casework and technical exchange</div>
+              <div class="collab-note" id="collab-note-5">Casework, Technical exchange</div>
             </div>
           </div>
 
@@ -1097,7 +1097,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-8">British Embassy in Mexico City</div>
-              <div class="collab-note" id="collab-note-8">Funding and coordination support</div>
+              <div class="collab-note" id="collab-note-8">Funding, Coordination support</div>
             </div>
           </div>
 
@@ -1123,7 +1123,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-10">University of Bath</div>
-              <div class="collab-note" id="collab-note-10">Technical expertise · Oxford Forum partner</div>
+              <div class="collab-note" id="collab-note-10">Technical expertise, Oxford Forum partner</div>
             </div>
           </div>
 
@@ -1155,7 +1155,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-jalisco">Comisión de Búsqueda de Jalisco</div>
-              <div class="collab-note" id="collab-note-jalisco">Technical expertise, coordination</div>
+              <div class="collab-note" id="collab-note-jalisco">Technical expertise, Coordination</div>
             </div>
           </div>
 
@@ -1171,7 +1171,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-oxford">University of Oxford</div>
-              <div class="collab-note" id="collab-note-oxford">Technical expertise</div>
+              <div class="collab-note" id="collab-note-oxford">Co-lead, Technical expertise</div>
             </div>
           </div>
 
@@ -1187,7 +1187,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-secihti">Mexico’s Science and Technology Secretariat</div>
-              <div class="collab-note" id="collab-note-secihti">Funding, policy impact</div>
+              <div class="collab-note" id="collab-note-secihti">Funding, Policy impact</div>
             </div>
           </div>
 
@@ -1235,7 +1235,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-fth">Frontier Tech Hub</div>
-              <div class="collab-note" id="collab-note-fth">Funding, technical expertise</div>
+              <div class="collab-note" id="collab-note-fth">Funding, Technical expertise</div>
             </div>
           </div>
 
@@ -1251,7 +1251,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-dtg">DT Global</div>
-              <div class="collab-note" id="collab-note-dtg">Funding, technical expertise</div>
+              <div class="collab-note" id="collab-note-dtg">Funding, Technical expertise</div>
             </div>
           </div>
 
@@ -1283,7 +1283,7 @@ redirect_from:
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-uwe">UWE Bristol</div>
-              <div class="collab-note" id="collab-note-uwe">Funding, technical expertise</div>
+              <div class="collab-note" id="collab-note-uwe">Funding, Technical expertise</div>
             </div>
           </div>
 
