@@ -854,7 +854,7 @@ redirect_from:
 .collab-card-gif .collab-logo{
   padding: 0 !important;
   min-height: 0 !important;
-  height: 163px;              /* controls how tall the GIF area is */
+  height: 164px;              /* controls how tall the GIF area is */
   display: block;
   overflow: hidden;
   background: #fff;
@@ -967,7 +967,7 @@ redirect_from:
           <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-12-02%20at%2018.42.17.jpeg?raw=true" alt="Search team in action" loading="lazy" class="loading" onload="this.classList.remove('loading')">
         </div>
         <div class="gallery-item">
-          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search methodology in practice" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/70206a6b5788f7204524bfdd4e1a6c365668b75d/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.44.jpeg" alt="Search methodology in practice" loading="lazy" class="loading" onload="this.classList.remove('loading')">
         </div>
       </div>
     </div>
