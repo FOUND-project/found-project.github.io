@@ -608,33 +608,62 @@ redirect_from:
       justify-content:space-between;
     }
 
-/* === Hero-style GIF card (Search Collectives only) === */
+/* =========================================================
+   Search Collectives – special editorial card
+   ========================================================= */
+
 .collab-card-gif{
-  overflow: hidden;
+  border: 2px solid rgba(74,140,115,.35);
+  box-shadow: 0 12px 30px rgba(30,64,52,.18);
+  transform: translateY(-2px);
 }
 
+/* Hero GIF container */
 .collab-card-gif .gif-hero{
   padding: 0;
-  height: 260px;                 /* key: taller = less crop */
+  height: 300px;                 /* taller = less crop */
   overflow: hidden;
   position: relative;
-  background: #000;
-  border-bottom: 1px solid rgba(0,0,0,.08);
+  background: #fff;              /* ✅ white background */
 }
 
+/* Soft gradient fade into content */
+.collab-card-gif .gif-hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0) 55%,
+    rgba(255,255,255,.65) 80%,
+    #fff 100%
+  );
+  pointer-events:none;
+}
+
+/* GIF itself */
 .collab-card-gif .gif-hero img{
   width: 100%;
   height: 100%;
-  object-fit: cover;             /* fills the whole top */
-  object-position: center 78%;   /* pushes focus DOWN */
-  transform: scale(1.06);        /* gentle zoom, not aggressive */
-  transition: transform .7s cubic-bezier(.4,0,.2,1);
+  object-fit: cover;
+  object-position: center 85%;   /* show more ground + people */
+  transform: scale(1.03);        /* very gentle zoom */
+  transition: transform .8s cubic-bezier(.4,0,.2,1);
+  filter: saturate(1.05) contrast(1.03);
 }
 
-/* Subtle hover motion */
+/* Calm, premium hover */
 .collab-card-gif:hover .gif-hero img{
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
+
+/* Make text feel intentional */
+.collab-card-gif .collab-meta{
+  background: #fff;
+  padding-top: 1.25rem;
+}
+
+    
     
     .collab-card::before{
       content:'';
