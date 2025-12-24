@@ -635,7 +635,7 @@ redirect_from:
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 35%;
+  object-position: center 25%;
   transform: scale(1.03);
   transition: transform .8s cubic-bezier(.4,0,.2,1);
 }
