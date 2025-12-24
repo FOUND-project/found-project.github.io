@@ -854,7 +854,7 @@ redirect_from:
 .collab-card-gif .collab-logo{
   padding: 0 !important;
   min-height: 0 !important;
-  height: 180px;              /* controls how tall the GIF area is */
+  height: 160px;              /* controls how tall the GIF area is */
   display: block;
   overflow: hidden;
   background: #fff;
