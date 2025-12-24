@@ -623,7 +623,7 @@ redirect_from:
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 100%;
+  object-position: center 75%;
   transform: scale(1.50);
   transition: transform .6s var(--transition-smooth);
   filter: saturate(1.05) contrast(1.02);
