@@ -815,26 +815,167 @@ redirect_from:
                  loading="lazy" class="loading" onload="this.classList.remove('loading')">
           </div>
           <div class="collab-meta">
-            <div class="collab-name" id="collab-item-9">OOxford Festival of the Arts</div>
+            <div class="collab-name" id="collab-item-9">Oxford Festival of the Arts</div>
             <div class="collab-note" id="collab-note-9">Oxford Forum partner</div>
           </div>
         </div>
 
-        <!-- 10. Beth (Oxford Forum) -->
+        <!-- 10. Bath (Oxford Forum) -->
         <div class="collab-card">
           <div class="collab-logo">
             <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b2323f813df618867a6227a87e7efb9e084fe75e/images/Beth.jpg"
-                 alt="Bath – Oxford Forum partner"
+                 alt="University of Bath – Oxford Forum partner"
                  loading="lazy" class="loading" onload="this.classList.remove('loading')">
           </div>
           <div class="collab-meta">
-            <div class="collab-name" id="collab-item-10">Bath</div>
+            <div class="collab-name" id="collab-item-10">University of Bath</div>
             <div class="collab-note" id="collab-note-10">Technical expertise · Oxford Forum partner</div>
           </div>
         </div>
 
+<!-- British Association for Forensic Anthropology -->
+<div class="collab-card">
+  <div class="collab-logo">
+    <img
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/11%20logo%20BAFAlogo_orig.png"
+      alt="British Association for Forensic Anthropology logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')">
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-bafa">British Association for Forensic Anthropology</div>
+    <div class="collab-note" id="collab-note-bafa">Forensic expertise</div>
+  </div>
+</div>
 
+<!-- Comisión de Búsqueda de Jalisco -->
+<div class="collab-card">
+  <div class="collab-logo">
+    <img
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/3%20Comisio%CC%81n%20de%20Bu%CC%81squeda%20de%20Jalisco.png"
+      alt="Comisión de Búsqueda de Jalisco logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')">
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-jalisco">Comisión de Búsqueda de Jalisco</div>
+    <div class="collab-note" id="collab-note-jalisco">Technical expertise, coordination</div>
+  </div>
+</div>
 
+<!-- University of Oxford -->
+<div class="collab-card">
+  <div class="collab-logo">
+    <img
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/4%20logo%20oxford-university-logo.png"
+      alt="University of Oxford logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')">
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-oxford">University of Oxford</div>
+    <div class="collab-note" id="collab-note-oxford">Technical expertise</div>
+  </div>
+</div>
+
+<!-- Mexico's Science and Technology Secretariat -->
+<div class="collab-card">
+  <div class="collab-logo">
+    <img
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20Logotipo_SECIHTI_2025-2030.svg"
+      alt="Mexico's Science and Technology Secretariat logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')">
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-secihti">Mexico’s Science and Technology Secretariat</div>
+    <div class="collab-note" id="collab-note-secihti">Funding, policy impact</div>
+  </div>
+</div>
+
+<!-- UNAM Geophysics -->
+<div class="collab-card">
+  <div class="collab-logo">
+    <img
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20logo%20IGeofisicaUNAM.png"
+      alt="UNAM Geophysics Institute logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')">
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-unam-geo">UNAM – Geophysics</div>
+    <div class="collab-note" id="collab-note-unam-geo">Technical expertise</div>
+  </div>
+</div>
+
+<!-- UNAM Engineering -->
+<div class="collab-card">
+  <div class="collab-logo">
+    <img
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/6%20logo%20Ingenieria%20UNAM.png"
+      alt="UNAM Engineering logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')">
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-unam-eng">UNAM – Engineering</div>
+    <div class="collab-note" id="collab-note-unam-eng">Technical expertise</div>
+  </div>
+</div>
+
+<!-- DT Global -->
+<div class="collab-card">
+  <div class="collab-logo">
+    <img
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20DTG_Logo_Screen_LRG-1.png"
+      alt="DT Global logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')">
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-dtg">DT Global</div>
+    <div class="collab-note" id="collab-note-dtg">Funding, technical expertise</div>
+  </div>
+</div>
+
+<!-- UPZMG -->
+<div class="collab-card">
+  <div class="collab-logo">
+    <img
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20logo%20UPZMG2.png"
+      alt="UPZMG logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')">
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-upzmg">UPZMG</div>
+    <div class="collab-note" id="collab-note-upzmg">Experimental site</div>
+  </div>
+</div>
+
+<!-- UWE Bristol -->
+<div class="collab-card">
+  <div class="collab-logo">
+    <img
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/9%20logo%20UWE%20Bristol.svg"
+      alt="UWE Bristol logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')">
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-uwe">UWE Bristol</div>
+    <div class="collab-note" id="collab-note-uwe">Funding, technical expertise</div>
+  </div>
+</div>
         <!-- Remaining academic & funding partners can follow here -->
 
       </div>
