@@ -609,26 +609,35 @@ redirect_from:
     }
 
 /* =========================================================
-   Search Collectives – special editorial card
+   Search Collectives – let GIF use all space above divider
    ========================================================= */
+
+.collab-card-gif .collab-logo{
+  padding: 0;            /* remove logo padding */
+  min-height: 0;         /* remove reserved height */
+  height: auto;
+  display: block;
+}
+
+/* GIF hero fills entire logo area */
 .collab-card-gif .gif-hero{
-  height: 260px;                 /* balanced height */
+  height: 230px;         /* fills space above divider */
   overflow: hidden;
-  position: relative;
   background: #fff;
 }
 
+/* GIF itself */
 .collab-card-gif .gif-hero img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
-  transform: scale(1.03);
-  transition: transform .8s cubic-bezier(.4,0,.2,1);
+  object-position: center 25%;   /* show more top */
+  transform: scale(1.02);
+  transition: transform .8s var(--transition-smooth);
 }
 
 .collab-card-gif:hover .gif-hero img{
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 
