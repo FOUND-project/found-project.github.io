@@ -682,13 +682,64 @@ redirect_from:
     </div>
   </section>
 
-  <!-- COMMUNITY -->
-  <section class="content-section" id="community">
+ <!-- Technologies Section -->
+  <section class="content-section" id="technologies">
     <div class="section-container">
-      <h2 id="community-title">Driven by Families and Research Communities</h2>
-      <p class="hero-description" id="community-text">
-        FOUND is guided and motivated by <strong>search collectives</strong> and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.
+      <h2 id="tech-title">Technologies in Action</h2>
+      <ul class="info-list">
+        <li id="tech-item-1">Multispectral &amp; Hyperspectral Imaging</li>
+        <li id="tech-item-2">Airborne LiDAR</li>
+        <li id="tech-item-3">Seismic Noise Interferometry (TIRSA)</li>
+        <li id="tech-item-4">Electrical Resistivity Tomography, Conductivimetry Measurements</li>
+        <li id="tech-item-5">Satellite Spectral Analysis</li>
+        <li id="tech-item-6">Forensic Entomology, Botany, Territorial Analysis, Soil Science</li>
+      </ul>
+
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 degree imaging technology in use" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="gallery-item">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Advanced field equipment setup" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="gallery-item">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/2.jpeg?raw=true" alt="Community collaboration in search efforts" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="gallery-item">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Specialized search tools and equipment" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="gallery-item">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/3.jpeg?raw=true" alt="Field research and data collection" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="gallery-item">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-07-30%20at%2021.40.57.jpeg?raw=true" alt="Team collaboration during field operations" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="gallery-item">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6.jpg?raw=true" alt="Technology deployment in field" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="gallery-item">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/IMG-20231204-WA0038.jpg?raw=true" alt="Field operations and search activities" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="gallery-item">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-12-02%20at%2018.42.17.jpeg?raw=true" alt="Search team in action" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+        <div class="gallery-item">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47.jpeg?raw=true" alt="Search methodology in practice" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Buscadoras Section -->
+  <section class="buscadoras-section" id="buscadoras">
+    <div class="buscadoras-content">
+      <h2 id="buscadoras-title">The Role of Buscadoras</h2>
+      <p class="hero-description" id="buscadoras-text">
+        Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.
       </p>
+      <div class="buscadoras-image">
+        <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Buscadoras hands with plants symbolizing hope and remembrance" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+      </div>
     </div>
   </section>
 
