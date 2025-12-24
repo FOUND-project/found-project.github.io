@@ -929,6 +929,22 @@ redirect_from:
   </div>
 </div>
 
+<!-- Frontier Tech Hub -->
+<div class="collab-card">
+  <div class="collab-logo">
+    <img
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4dc9341c21cbe08685242e48c8241a1a51ad3151/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
+      alt="Frontier Tech Hub logo"
+      loading="lazy"
+      onload="this.classList.remove('loading')"
+      style="filter: brightness(0) invert(0);">
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-fth">Frontier Tech Hub</div>
+    <div class="collab-note" id="collab-note-fth">Funding, technical expertise</div>
+  </div>
+</div>
+
 <!-- DT Global -->
 <div class="collab-card">
   <div class="collab-logo">
