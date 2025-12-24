@@ -609,28 +609,31 @@ redirect_from:
     }
 
 /* === Hero-style GIF card (Search Collectives only) === */
+.collab-card-gif{
+  overflow: hidden;
+}
+
 .collab-card-gif .gif-hero{
   padding: 0;
-  min-height: 190px;
-  height: 200px;
+  height: 260px;                 /* key: taller = less crop */
   overflow: hidden;
-  display: block;
-  background: var(--accent-green);
+  position: relative;
+  background: #000;
   border-bottom: 1px solid rgba(0,0,0,.08);
 }
 
 .collab-card-gif .gif-hero img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 75%;
-  transform: scale(1.50);
-  transition: transform .6s var(--transition-smooth);
-  filter: saturate(1.05) contrast(1.02);
+  object-fit: cover;             /* fills the whole top */
+  object-position: center 78%;   /* pushes focus DOWN */
+  transform: scale(1.06);        /* gentle zoom, not aggressive */
+  transition: transform .7s cubic-bezier(.4,0,.2,1);
 }
 
+/* Subtle hover motion */
 .collab-card-gif:hover .gif-hero img{
-  transform: scale(1.35);
+  transform: scale(1.1);
 }
     
     .collab-card::before{
@@ -949,11 +952,14 @@ redirect_from:
       src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0bed7c6b4c906bc94116683368b679ba0bd80428/images/mothers%20walking.gif"
       alt="Search Collectives"
       loading="lazy"
+      class="loading"
       onload="this.classList.remove('loading')">
   </div>
   <div class="collab-meta">
     <div class="collab-name" id="collab-item-7">Search Collectives</div>
-    <div class="collab-note" id="collab-note-7">Families’ leadership and field expertise</div>
+    <div class="collab-note" id="collab-note-7">
+      Families’ leadership and field expertise
+    </div>
   </div>
 </div>
 
