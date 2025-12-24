@@ -275,6 +275,7 @@ redirect_from:
       padding:clamp(2.5rem,5vw,4rem) clamp(1rem,4vw,3rem);
       border-bottom:1px solid var(--border-light);
       scroll-margin-top:2rem;
+      position:relative;
     }
 
     .content-section:last-of-type{border-bottom:none;}
@@ -324,6 +325,7 @@ redirect_from:
       align-items:center;
       border-bottom:1px solid transparent;
       line-height:1.5;
+      border-radius:10px;
     }
 
     .info-list li:hover{
@@ -355,6 +357,232 @@ redirect_from:
       background:var(--light-green);
       color:#fff;
     }
+
+    /* =========================================================
+       ✅ ENHANCED DESIGN ONLY: TECHNOLOGIES + BUSCADORAS
+       (Text unchanged; only layout/visual polish)
+    ========================================================== */
+
+    /* Technologies: featured panel + stronger layout rhythm */
+    #technologies{
+      background:
+        radial-gradient(circle at 20% 15%, rgba(232,245,240,.75) 0%, transparent 52%),
+        radial-gradient(circle at 80% 0%, rgba(212,175,55,.10) 0%, transparent 55%),
+        linear-gradient(135deg,#f8fcfb 0%,#fff 60%);
+      overflow:hidden;
+    }
+
+    #technologies::before{
+      content:'';
+      position:absolute;
+      inset:-2px;
+      background:
+        linear-gradient(90deg, rgba(74,140,115,.12), transparent 35%, transparent 65%, rgba(74,140,115,.10));
+      opacity:.6;
+      pointer-events:none;
+      mask-image:linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+      -webkit-mask-image:linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
+    }
+
+    #technologies .section-container{
+      position:relative;
+    }
+
+    /* Tech list becomes a “card grid” feel without changing markup */
+    #technologies .info-list{
+      margin-top:1.75rem;
+      gap:1rem 2rem;
+    }
+
+    #technologies .info-list li{
+      background:rgba(255,255,255,.85);
+      border:1px solid rgba(45,95,77,.10);
+      box-shadow:var(--shadow-sm);
+      padding:.9rem 1rem .9rem 2.45rem;
+      backdrop-filter:blur(6px);
+      transition:transform .3s var(--transition-smooth), box-shadow .3s var(--transition-smooth), border-color .3s var(--transition-smooth);
+    }
+
+    #technologies .info-list li:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-md);
+      border-color:rgba(74,140,115,.45);
+      padding-left:2.55rem; /* preserve your existing hover feel */
+    }
+
+    /* Gallery: masonry-ish feel, hover depth, consistent aspect */
+    .image-gallery{
+      margin-top:2.25rem;
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:clamp(.75rem,1.4vw,1.15rem);
+    }
+
+    .gallery-item{
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:var(--shadow-md);
+      border:1px solid rgba(45,95,77,.10);
+      background:linear-gradient(180deg, rgba(232,245,240,.35) 0%, rgba(255,255,255,.9) 100%);
+      position:relative;
+      transform:translateY(0);
+      transition:transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth);
+      min-height:170px;
+    }
+
+    .gallery-item::after{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(212,175,55,.10) 0%, transparent 45%),
+        linear-gradient(180deg, rgba(0,0,0,.05) 0%, transparent 45%);
+      opacity:.0;
+      transition:opacity .35s var(--transition-smooth);
+      pointer-events:none;
+    }
+
+    .gallery-item:hover{
+      transform:translateY(-6px);
+      box-shadow:var(--shadow-lg);
+    }
+
+    .gallery-item:hover::after{opacity:1;}
+
+    .gallery-item img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform:scale(1.01);
+      transition:transform .6s var(--transition-smooth);
+    }
+
+    .gallery-item:hover img{transform:scale(1.06);}
+
+    /* Responsive mosaic (no markup changes) */
+    #technologies .image-gallery .gallery-item:nth-child(1){grid-column:span 4; min-height:220px;}
+    #technologies .image-gallery .gallery-item:nth-child(2){grid-column:span 4; min-height:220px;}
+    #technologies .image-gallery .gallery-item:nth-child(3){grid-column:span 4; min-height:220px;}
+    #technologies .image-gallery .gallery-item:nth-child(4){grid-column:span 3;}
+    #technologies .image-gallery .gallery-item:nth-child(5){grid-column:span 3;}
+    #technologies .image-gallery .gallery-item:nth-child(6){grid-column:span 3;}
+    #technologies .image-gallery .gallery-item:nth-child(7){grid-column:span 3;}
+    #technologies .image-gallery .gallery-item:nth-child(8){grid-column:span 4; min-height:200px;}
+    #technologies .image-gallery .gallery-item:nth-child(9){grid-column:span 4; min-height:200px;}
+    #technologies .image-gallery .gallery-item:nth-child(10){grid-column:span 4; min-height:200px;}
+
+    @media (max-width: 1100px){
+      .image-gallery{grid-template-columns:repeat(6,1fr);}
+      #technologies .image-gallery .gallery-item:nth-child(1),
+      #technologies .image-gallery .gallery-item:nth-child(2),
+      #technologies .image-gallery .gallery-item:nth-child(3){grid-column:span 6;}
+      #technologies .image-gallery .gallery-item:nth-child(4),
+      #technologies .image-gallery .gallery-item:nth-child(5),
+      #technologies .image-gallery .gallery-item:nth-child(6),
+      #technologies .image-gallery .gallery-item:nth-child(7){grid-column:span 3;}
+      #technologies .image-gallery .gallery-item:nth-child(8),
+      #technologies .image-gallery .gallery-item:nth-child(9),
+      #technologies .image-gallery .gallery-item:nth-child(10){grid-column:span 6;}
+    }
+
+    @media (max-width: 700px){
+      .image-gallery{grid-template-columns:repeat(2,1fr);}
+      #technologies .image-gallery .gallery-item{grid-column:span 2; min-height:210px;}
+    }
+
+    /* Buscadoras: elegant “feature card” treatment */
+    #buscadoras{
+      position:relative;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(212,175,55,.10) 0%, transparent 52%),
+        radial-gradient(circle at 85% 0%, rgba(232,245,240,.55) 0%, transparent 60%),
+        linear-gradient(135deg,#fff8f5 0%,#fff 55%);
+      border-top:1px solid rgba(0,0,0,.04);
+      border-bottom:1px solid rgba(0,0,0,.04);
+    }
+
+    #buscadoras::before{
+      content:'';
+      position:absolute;
+      left:-120px;
+      top:15%;
+      width:320px;
+      height:320px;
+      background:radial-gradient(circle, rgba(74,140,115,.18) 0%, transparent 65%);
+      filter:blur(2px);
+      opacity:.55;
+      pointer-events:none;
+    }
+
+    #buscadoras .buscadoras-content{
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(45,95,77,.12);
+      border-radius:26px;
+      box-shadow:var(--shadow-lg);
+      padding:clamp(1.75rem,3vw,2.75rem);
+      backdrop-filter:blur(10px);
+      position:relative;
+    }
+
+    #buscadoras .buscadoras-content::after{
+      content:'';
+      position:absolute;
+      inset:0;
+      border-radius:26px;
+      background:
+        linear-gradient(135deg, rgba(232,245,240,.35) 0%, transparent 35%),
+        radial-gradient(circle at 85% 15%, rgba(212,175,55,.10) 0%, transparent 55%);
+      opacity:.9;
+      pointer-events:none;
+      z-index:0;
+    }
+
+    #buscadoras .buscadoras-content > *{
+      position:relative;
+      z-index:1;
+    }
+
+    #buscadoras .hero-description{
+      margin-bottom:2rem; /* tighter rhythm */
+    }
+
+    #buscadoras .buscadoras-image{
+      border-radius:24px;
+      box-shadow:var(--shadow-lg);
+      border:1px solid rgba(45,95,77,.12);
+      overflow:hidden;
+      margin:2.5rem auto 0;
+      max-width:720px;
+      position:relative;
+      transform:translateY(0);
+      transition:transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth);
+    }
+
+    #buscadoras .buscadoras-image::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,.08) 0%, transparent 45%);
+      opacity:.35;
+      pointer-events:none;
+      z-index:1;
+    }
+
+    #buscadoras .buscadoras-image:hover{
+      transform:translateY(-6px);
+      box-shadow:var(--shadow-lg);
+    }
+
+    #buscadoras .buscadoras-image img{
+      width:100%;
+      height:auto;
+      display:block;
+      transform:scale(1.01);
+      transition:transform .7s var(--transition-smooth);
+    }
+
+    #buscadoras .buscadoras-image:hover img{transform:scale(1.05);}
 
     /* Institutional Partnerships (logos + labels) */
     .collab-wrap{margin-top:2rem;}
@@ -513,69 +741,7 @@ redirect_from:
 
     .iframe-container iframe{width:100%;border:0;display:block;}
 
-    /* Partners */
-    .partners-section{
-      background:linear-gradient(135deg,#f8fcfb 0%,#fff 100%);
-      padding:clamp(4rem,8vw,6rem) clamp(1rem,4vw,3rem);
-      position:relative;
-    }
-
-    .partners-container{max-width:1600px;margin:0 auto;}
-
-    .partners-intro{
-      text-align:center;
-      max-width:1000px;
-      margin:0 auto 4rem;
-      color:var(--text-medium);
-      font-size:clamp(1.1rem,2.5vw,1.3rem);
-      line-height:1.8;
-    }
-
-    .partner-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));
-      gap:clamp(2rem,4vw,3rem);
-      margin:4rem 0;
-    }
-
-    .partner-logo{
-      background:#fff;
-      padding:clamp(2rem,4vw,3rem);
-      border-radius:20px;
-      box-shadow:var(--shadow-md);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      transition:all .4s var(--transition-smooth);
-      border:2px solid transparent;
-      min-height:200px;
-      aspect-ratio:1.5;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .partner-logo:hover{
-      transform:translateY(-8px) scale(1.03);
-      box-shadow:var(--shadow-lg);
-      border-color:var(--light-green);
-    }
-
-    .partner-logo img{
-      max-width:100%;
-      max-height:100%;
-      width:auto;
-      height:auto;
-      object-fit:contain;
-      filter:grayscale(30%) brightness(1.1);
-      transition:all .4s var(--transition-smooth);
-      position:relative;
-      z-index:1;
-    }
-
-    .partner-logo img.loading{opacity:0;}
-    .partner-logo:hover img{filter:grayscale(0%) brightness(1);transform:scale(1.05);}
-
-    /* Buscadoras */
+    /* Buscadoras (base, retained; enhanced above with #buscadoras overrides) */
     .buscadoras-section{
       background:linear-gradient(135deg,#fff8f5 0%,#fff 100%);
       padding:clamp(4rem,8vw,6rem) clamp(1rem,4vw,3rem);
@@ -682,7 +848,7 @@ redirect_from:
     </div>
   </section>
 
- <!-- Technologies Section -->
+  <!-- Technologies Section (TEXT UNCHANGED) -->
   <section class="content-section" id="technologies">
     <div class="section-container">
       <h2 id="tech-title">Technologies in Action</h2>
@@ -730,7 +896,7 @@ redirect_from:
     </div>
   </section>
 
-   <!-- Buscadoras Section -->
+  <!-- Buscadoras Section (TEXT UNCHANGED) -->
   <section class="buscadoras-section" id="buscadoras">
     <div class="buscadoras-content">
       <h2 id="buscadoras-title">The Role of Buscadoras</h2>
@@ -743,314 +909,313 @@ redirect_from:
     </div>
   </section>
 
- <!-- INSTITUTIONAL PARTNERSHIPS -->
-<section class="content-section" id="collaborations">
-  <div class="section-container">
-    <h2 id="collab-title">Institutional Partnerships</h2>
+  <!-- INSTITUTIONAL PARTNERSHIPS -->
+  <section class="content-section" id="collaborations">
+    <div class="section-container">
+      <h2 id="collab-title">Institutional Partnerships</h2>
 
-    <div class="collab-wrap" aria-label="Institutional partnerships logos">
-      <div class="collab-grid">
+      <div class="collab-wrap" aria-label="Institutional partnerships logos">
+        <div class="collab-grid">
 
-        <!-- 1. UN -->
-        <div class="collab-card">
-          <div class="collab-logo">
-            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/1%20Executive%20Office%20of%20the%20UN%20Secretary-General.svg"
-                 alt="Executive Office of the UN Secretary-General logo"
-                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
+          <!-- 1. UN -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/1%20Executive%20Office%20of%20the%20UN%20Secretary-General.svg"
+                   alt="Executive Office of the UN Secretary-General logo"
+                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-1">Executive Office of the UN Secretary-General</div>
+              <div class="collab-note" id="collab-note-1">International collaboration</div>
+            </div>
           </div>
-          <div class="collab-meta">
-            <div class="collab-name" id="collab-item-1">Executive Office of the UN Secretary-General</div>
-            <div class="collab-note" id="collab-note-1">International collaboration</div>
+
+          <!-- 2. FCDO -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20UK's%20Foreign%2C%20Commonwealth%20%26%20Development%20Office%20(FCDO).png"
+                   alt="UK Foreign, Commonwealth & Development Office logo"
+                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-2">UK Foreign, Commonwealth &amp; Development Office (FCDO)</div>
+              <div class="collab-note" id="collab-note-2">Policy, funding, and partnerships</div>
+            </div>
           </div>
+
+          <!-- 3. CentroGeo -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20logo_centrogeo_wide.svg"
+                   alt="CentroGeo logo"
+                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-3">CentroGeo</div>
+              <div class="collab-note" id="collab-note-3">Co-lead, technical expertise</div>
+            </div>
+          </div>
+
+          <!-- 4. University of Guadalajara -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/26bd52ce350828b22814cfedc872786dd43de672/images/580141488dfc53bfdbde59fa6b043438.jpg"
+                   alt="University of Guadalajara logo"
+                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-4">University of Guadalajara (UdeG)</div>
+              <div class="collab-note" id="collab-note-4">Technical expertise, experimental sites</div>
+            </div>
+          </div>
+
+          <!-- 5. Colombian Search Unit -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg"
+                   alt="Colombian Search Unit logo"
+                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-5">Colombian Search Unit (UBPD)</div>
+              <div class="collab-note" id="collab-note-5">Casework and technical exchange</div>
+            </div>
+          </div>
+
+          <!-- 6. Mexico National Search Commission -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/4%20Comision%20Nacional%20de%20Busqueda.png"
+                   alt="Mexico National Search Commission logo"
+                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-6">Mexico’s National Search Commission</div>
+              <div class="collab-note" id="collab-note-6">National coordination</div>
+            </div>
+          </div>
+
+          <!-- 7. Guerreros Buscadores -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b2323f813df618867a6227a87e7efb9e084fe75e/images/Final%20Guerreros%20Buscadores.png"
+                alt="Guerreros Buscadores de Jalisco logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-7">Guerreros Buscadores de Jalisco</div>
+              <div class="collab-note" id="collab-note-7">Families’ leadership and field expertise</div>
+            </div>
+          </div>
+
+          <!-- 8. British Embassy -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/6%20British%20Embassy%20Mexico_Blue%20(ENG).png"
+                   alt="British Embassy Mexico City logo"
+                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-8">British Embassy in Mexico City</div>
+              <div class="collab-note" id="collab-note-8">Funding and coordination support</div>
+            </div>
+          </div>
+
+          <!-- 9. Oxford Forum (OFOTA) -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/5ea7b61d8c5c6467ad4253f2898109033aac13e7/images/OFOTA_COLOUR_WEB.jpg"
+                   alt="Oxford Festival of the Arts logo"
+                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-9">Oxford Festival of the Arts</div>
+              <div class="collab-note" id="collab-note-9">Oxford Forum partner</div>
+            </div>
+          </div>
+
+          <!-- 10. Bath (Oxford Forum) -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b2323f813df618867a6227a87e7efb9e084fe75e/images/Beth.jpg"
+                   alt="University of Bath – Oxford Forum partner"
+                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-10">University of Bath</div>
+              <div class="collab-note" id="collab-note-10">Technical expertise · Oxford Forum partner</div>
+            </div>
+          </div>
+
+          <!-- British Association for Forensic Anthropology -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/11%20logo%20BAFAlogo_orig.png"
+                alt="British Association for Forensic Anthropology logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-bafa">British Association for Forensic Anthropology</div>
+              <div class="collab-note" id="collab-note-bafa">Forensic expertise</div>
+            </div>
+          </div>
+
+          <!-- Comisión de Búsqueda de Jalisco -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/3%20Comisio%CC%81n%20de%20Bu%CC%81squeda%20de%20Jalisco.png"
+                alt="Comisión de Búsqueda de Jalisco logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-jalisco">Comisión de Búsqueda de Jalisco</div>
+              <div class="collab-note" id="collab-note-jalisco">Technical expertise, coordination</div>
+            </div>
+          </div>
+
+          <!-- University of Oxford -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/4%20logo%20oxford-university-logo.png"
+                alt="University of Oxford logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-oxford">University of Oxford</div>
+              <div class="collab-note" id="collab-note-oxford">Technical expertise</div>
+            </div>
+          </div>
+
+          <!-- Mexico's Science and Technology Secretariat -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20Logotipo_SECIHTI_2025-2030.svg"
+                alt="Mexico's Science and Technology Secretariat logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-secihti">Mexico’s Science and Technology Secretariat</div>
+              <div class="collab-note" id="collab-note-secihti">Funding, policy impact</div>
+            </div>
+          </div>
+
+          <!-- UNAM Geophysics -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20logo%20IGeofisicaUNAM.png"
+                alt="UNAM Geophysics Institute logo"
+                loading="lazy"
+                onload="this.classList.remove('loading')"
+                style="filter: brightness(0) invert(0);">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-unam-geo">UNAM – Geophysics</div>
+              <div class="collab-note" id="collab-note-unam-geo">Technical expertise</div>
+            </div>
+          </div>
+
+          <!-- UNAM Engineering -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/6%20logo%20Ingenieria%20UNAM.png"
+                alt="UNAM Engineering logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-unam-eng">UNAM – Engineering</div>
+              <div class="collab-note" id="collab-note-unam-eng">Technical expertise</div>
+            </div>
+          </div>
+
+          <!-- Frontier Tech Hub -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4dc9341c21cbe08685242e48c8241a1a51ad3151/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
+                alt="Frontier Tech Hub logo"
+                loading="lazy"
+                onload="this.classList.remove('loading')"
+                style="filter: brightness(0) invert(0);">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-fth">Frontier Tech Hub</div>
+              <div class="collab-note" id="collab-note-fth">Funding, technical expertise</div>
+            </div>
+          </div>
+
+          <!-- DT Global -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20DTG_Logo_Screen_LRG-1.png"
+                alt="DT Global logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-dtg">DT Global</div>
+              <div class="collab-note" id="collab-note-dtg">Funding, technical expertise</div>
+            </div>
+          </div>
+
+          <!-- UPZMG -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20logo%20UPZMG2.png"
+                alt="UPZMG logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-upzmg">UPZMG</div>
+              <div class="collab-note" id="collab-note-upzmg">Experimental site</div>
+            </div>
+          </div>
+
+          <!-- UWE Bristol -->
+          <div class="collab-card">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/9%20logo%20UWE%20Bristol.svg"
+                alt="UWE Bristol logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-uwe">UWE Bristol</div>
+              <div class="collab-note" id="collab-note-uwe">Funding, technical expertise</div>
+            </div>
+          </div>
+
         </div>
-
-        <!-- 2. FCDO -->
-        <div class="collab-card">
-          <div class="collab-logo">
-            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20UK's%20Foreign%2C%20Commonwealth%20%26%20Development%20Office%20(FCDO).png"
-                 alt="UK Foreign, Commonwealth & Development Office logo"
-                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
-          </div>
-          <div class="collab-meta">
-            <div class="collab-name" id="collab-item-2">UK Foreign, Commonwealth &amp; Development Office (FCDO)</div>
-            <div class="collab-note" id="collab-note-2">Policy, funding, and partnerships</div>
-          </div>
-        </div>
-
-        <!-- 3. CentroGeo -->
-        <div class="collab-card">
-          <div class="collab-logo">
-            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20logo_centrogeo_wide.svg"
-                 alt="CentroGeo logo"
-                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
-          </div>
-          <div class="collab-meta">
-            <div class="collab-name" id="collab-item-3">CentroGeo</div>
-            <div class="collab-note" id="collab-note-3">Co-lead, technical expertise</div>
-          </div>
-        </div>
-
-        <!-- 4. University of Guadalajara -->
-        <div class="collab-card">
-          <div class="collab-logo">
-            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/26bd52ce350828b22814cfedc872786dd43de672/images/580141488dfc53bfdbde59fa6b043438.jpg"
-                 alt="University of Guadalajara logo"
-                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
-          </div>
-          <div class="collab-meta">
-            <div class="collab-name" id="collab-item-4">University of Guadalajara (UdeG)</div>
-            <div class="collab-note" id="collab-note-4">Technical expertise, experimental sites</div>
-          </div>
-        </div>
-
-        <!-- 5. Colombian Search Unit -->
-        <div class="collab-card">
-          <div class="collab-logo">
-            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg"
-                 alt="Colombian Search Unit logo"
-                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
-          </div>
-          <div class="collab-meta">
-            <div class="collab-name" id="collab-item-5">Colombian Search Unit (UBPD)</div>
-            <div class="collab-note" id="collab-note-5">Casework and technical exchange</div>
-          </div>
-        </div>
-
-        <!-- 6. Mexico National Search Commission -->
-        <div class="collab-card">
-          <div class="collab-logo">
-            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/4%20Comision%20Nacional%20de%20Busqueda.png"
-                 alt="Mexico National Search Commission logo"
-                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
-          </div>
-          <div class="collab-meta">
-            <div class="collab-name" id="collab-item-6">Mexico’s National Search Commission</div>
-            <div class="collab-note" id="collab-note-6">National coordination</div>
-          </div>
-        </div>
-
-      <!-- 7. Guerreros Buscadores -->
-<div class="collab-card">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b2323f813df618867a6227a87e7efb9e084fe75e/images/Final%20Guerreros%20Buscadores.png"
-      alt="Guerreros Buscadores de Jalisco logo"
-      loading="lazy"
-      class="loading"
-      onload="this.classList.remove('loading')">
-  </div>
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-7">Guerreros Buscadores de Jalisco</div>
-    <div class="collab-note" id="collab-note-7">Families’ leadership and field expertise</div>
-  </div>
-</div>
-
-        <!-- 8. British Embassy -->
-        <div class="collab-card">
-          <div class="collab-logo">
-            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/6%20British%20Embassy%20Mexico_Blue%20(ENG).png"
-                 alt="British Embassy Mexico City logo"
-                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
-          </div>
-          <div class="collab-meta">
-            <div class="collab-name" id="collab-item-8">British Embassy in Mexico City</div>
-            <div class="collab-note" id="collab-note-8">Funding and coordination support</div>
-          </div>
-        </div>
-
-        <!-- 9. Oxford Forum (OFOTA) -->
-        <div class="collab-card">
-          <div class="collab-logo">
-            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/5ea7b61d8c5c6467ad4253f2898109033aac13e7/images/OFOTA_COLOUR_WEB.jpg"
-                 alt="Oxford Festival of the Arts logo"
-                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
-          </div>
-          <div class="collab-meta">
-            <div class="collab-name" id="collab-item-9">Oxford Festival of the Arts</div>
-            <div class="collab-note" id="collab-note-9">Oxford Forum partner</div>
-          </div>
-        </div>
-
-        <!-- 10. Bath (Oxford Forum) -->
-        <div class="collab-card">
-          <div class="collab-logo">
-            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b2323f813df618867a6227a87e7efb9e084fe75e/images/Beth.jpg"
-                 alt="University of Bath – Oxford Forum partner"
-                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
-          </div>
-          <div class="collab-meta">
-            <div class="collab-name" id="collab-item-10">University of Bath</div>
-            <div class="collab-note" id="collab-note-10">Technical expertise · Oxford Forum partner</div>
-          </div>
-        </div>
-
-<!-- British Association for Forensic Anthropology -->
-<div class="collab-card">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/11%20logo%20BAFAlogo_orig.png"
-      alt="British Association for Forensic Anthropology logo"
-      loading="lazy"
-      class="loading"
-      onload="this.classList.remove('loading')">
-  </div>
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-bafa">British Association for Forensic Anthropology</div>
-    <div class="collab-note" id="collab-note-bafa">Forensic expertise</div>
-  </div>
-</div>
-
-<!-- Comisión de Búsqueda de Jalisco -->
-<div class="collab-card">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/3%20Comisio%CC%81n%20de%20Bu%CC%81squeda%20de%20Jalisco.png"
-      alt="Comisión de Búsqueda de Jalisco logo"
-      loading="lazy"
-      class="loading"
-      onload="this.classList.remove('loading')">
-  </div>
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-jalisco">Comisión de Búsqueda de Jalisco</div>
-    <div class="collab-note" id="collab-note-jalisco">Technical expertise, coordination</div>
-  </div>
-</div>
-
-<!-- University of Oxford -->
-<div class="collab-card">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/4%20logo%20oxford-university-logo.png"
-      alt="University of Oxford logo"
-      loading="lazy"
-      class="loading"
-      onload="this.classList.remove('loading')">
-  </div>
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-oxford">University of Oxford</div>
-    <div class="collab-note" id="collab-note-oxford">Technical expertise</div>
-  </div>
-</div>
-
-<!-- Mexico's Science and Technology Secretariat -->
-<div class="collab-card">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20Logotipo_SECIHTI_2025-2030.svg"
-      alt="Mexico's Science and Technology Secretariat logo"
-      loading="lazy"
-      class="loading"
-      onload="this.classList.remove('loading')">
-  </div>
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-secihti">Mexico’s Science and Technology Secretariat</div>
-    <div class="collab-note" id="collab-note-secihti">Funding, policy impact</div>
-  </div>
-</div>
-
-<!-- UNAM Geophysics -->
-<div class="collab-card">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20logo%20IGeofisicaUNAM.png"
-      alt="UNAM Geophysics Institute logo"
-      loading="lazy"
-      onload="this.classList.remove('loading')"
-      style="filter: brightness(0) invert(0);">
-  </div>
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-unam-geo">UNAM – Geophysics</div>
-    <div class="collab-note" id="collab-note-unam-geo">Technical expertise</div>
-  </div>
-</div>
-
-<!-- UNAM Engineering -->
-<div class="collab-card">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/6%20logo%20Ingenieria%20UNAM.png"
-      alt="UNAM Engineering logo"
-      loading="lazy"
-      class="loading"
-      onload="this.classList.remove('loading')">
-  </div>
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-unam-eng">UNAM – Engineering</div>
-    <div class="collab-note" id="collab-note-unam-eng">Technical expertise</div>
-  </div>
-</div>
-
-<!-- Frontier Tech Hub -->
-<div class="collab-card">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4dc9341c21cbe08685242e48c8241a1a51ad3151/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
-      alt="Frontier Tech Hub logo"
-      loading="lazy"
-      onload="this.classList.remove('loading')"
-      style="filter: brightness(0) invert(0);">
-  </div>
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-fth">Frontier Tech Hub</div>
-    <div class="collab-note" id="collab-note-fth">Funding, technical expertise</div>
-  </div>
-</div>
-
-<!-- DT Global -->
-<div class="collab-card">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20DTG_Logo_Screen_LRG-1.png"
-      alt="DT Global logo"
-      loading="lazy"
-      class="loading"
-      onload="this.classList.remove('loading')">
-  </div>
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-dtg">DT Global</div>
-    <div class="collab-note" id="collab-note-dtg">Funding, technical expertise</div>
-  </div>
-</div>
-
-<!-- UPZMG -->
-<div class="collab-card">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20logo%20UPZMG2.png"
-      alt="UPZMG logo"
-      loading="lazy"
-      class="loading"
-      onload="this.classList.remove('loading')">
-  </div>
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-upzmg">UPZMG</div>
-    <div class="collab-note" id="collab-note-upzmg">Experimental site</div>
-  </div>
-</div>
-
-<!-- UWE Bristol -->
-<div class="collab-card">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/9%20logo%20UWE%20Bristol.svg"
-      alt="UWE Bristol logo"
-      loading="lazy"
-      class="loading"
-      onload="this.classList.remove('loading')">
-  </div>
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-uwe">UWE Bristol</div>
-    <div class="collab-note" id="collab-note-uwe">Funding, technical expertise</div>
-  </div>
-</div>
-        <!-- Remaining academic & funding partners can follow here -->
-
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- SOCIAL (3rd element fixed) -->
+  <!-- SOCIAL -->
   <section class="social-section" id="social">
     <div class="social-container">
       <h2 class="section-title" id="social-title">Follow Our Journey</h2>
@@ -1082,7 +1247,6 @@ redirect_from:
           </div>
         </div>
 
-        <!-- ✅ FIXED: your broken third iframe (missing quote + misplaced loading) -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
@@ -1111,7 +1275,6 @@ redirect_from:
       </div>
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer class="footer">
