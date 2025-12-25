@@ -1,7 +1,7 @@
 ---
 permalink: /
 title:
-author_profile: true
+author_profile: false
 redirect_from: 
   - /about/
   - /about.html
@@ -887,7 +887,7 @@ redirect_from:
 .page__content,
 .archive {
   max-width: none !important;
-  width: 80% !important;
+  width: 100% !important;
 }
 
 /* keep sensible side padding so content doesn't touch the edges */
