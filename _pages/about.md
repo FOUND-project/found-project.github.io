@@ -3,7 +3,7 @@ permalink: /
 title:
 author_profile: false
 classes: wide home-full
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
@@ -38,6 +38,10 @@ redirect_from:
       --radius-lg:22px;
       --radius-md:18px;
       --radius-sm:14px;
+
+      /* Rolling words */
+      --word-h: clamp(3rem,6vw,4.2rem);
+      --word-duration: 8.8s;
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -73,7 +77,7 @@ redirect_from:
     .page__content,
     .archive {
       max-width: none !important;
-      width: 106% !important;
+      width: 106% !important; /* keep as requested */
     }
 
     /* keep sensible side padding so content doesn't touch edges */
@@ -238,7 +242,6 @@ redirect_from:
       .hero-top{grid-template-columns:1fr;}
     }
 
-    /* Tagline “technological” treatment */
     .animated-tagline{
       font-size:clamp(2.05rem,5vw,3.6rem);
       font-weight:900;
@@ -274,8 +277,15 @@ redirect_from:
       flex:0 0 auto;
     }
 
+    /* --- Rolling words wrapper + sprout --- */
+    .rolling-wrap{
+      display:inline-flex;
+      align-items:center;
+      gap:.55rem;
+    }
+
     .word-carousel{
-      height:clamp(3rem,6vw,4.2rem);
+      height:var(--word-h);
       position:relative;
       display:inline-block;
       min-width:clamp(190px,30vw,320px);
@@ -285,6 +295,7 @@ redirect_from:
       background:linear-gradient(135deg, rgba(255,255,255,.72) 0%, rgba(232,245,240,.55) 100%);
       border:1px solid rgba(45,95,77,.14);
       box-shadow:var(--shadow-sm);
+      isolation:isolate;
     }
 
     .word-carousel::after{
@@ -296,21 +307,22 @@ redirect_from:
         radial-gradient(circle at 20% 30%, rgba(212,175,55,.14) 0%, transparent 45%),
         linear-gradient(180deg, rgba(0,0,0,.06) 0%, transparent 38%, transparent 62%, rgba(0,0,0,.04) 100%);
       opacity:.75;
+      z-index:0;
     }
 
+    /* ✅ FIX: remove height:100% (it was collapsing the list and breaking the scroll) */
     .word-list{
-       list-style:none;
-  margin:0;
-  padding:0 .65rem;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  will-change:transform;
-  animation:wordSlide 8.8s cubic-bezier(.4,0,.2,1) infinite;
-}
+      list-style:none;
+      margin:0;
+      padding:0 .65rem;
+      will-change:transform;
+      position:relative;
+      z-index:1;
+      animation:wordSlide var(--word-duration) cubic-bezier(.4,0,.2,1) infinite;
+    }
 
     .word-list li{
-      height:clamp(3rem,6vw,4.2rem);
+      height:var(--word-h);
       display:flex;
       align-items:center;
       color:var(--light-green);
@@ -318,22 +330,79 @@ redirect_from:
       font-size:clamp(2.05rem,5vw,3.6rem);
       letter-spacing:-.02em;
       text-shadow:0 10px 28px rgba(15,23,42,.10);
+      white-space:nowrap;
     }
 
-    /* Smooth, “tech” cadence (no harsh stops) */
+    /* Smooth cadence, correct distance for 4 items */
     @keyframes wordSlide{
-    0%   { transform: translateY(0%); }
-  22%  { transform: translateY(0%); }
+      0%   { transform: translateY(0%); }
+      20%  { transform: translateY(0%); }
 
-  30%  { transform: translateY(-25%); }
-  47%  { transform: translateY(-25%); }
+      28%  { transform: translateY(-25%); }
+      45%  { transform: translateY(-25%); }
 
-  55%  { transform: translateY(-50%); }
-  72%  { transform: translateY(-50%); }
+      53%  { transform: translateY(-50%); }
+      70%  { transform: translateY(-50%); }
 
-  80%  { transform: translateY(-75%); }
-  100% { transform: translateY(-75%); }
-}
+      78%  { transform: translateY(-75%); }
+      100% { transform: translateY(-75%); }
+    }
+
+    /* ===== Sprout synced to the word animation (CSS-only, reliable in Jekyll) ===== */
+    .sprout{
+      width:20px;
+      height:20px;
+      position:relative;
+      flex:0 0 auto;
+      filter: drop-shadow(0 10px 18px rgba(15,23,42,.14));
+      opacity:.95;
+      animation:sproutPulse var(--word-duration) cubic-bezier(.4,0,.2,1) infinite;
+    }
+
+    .sprout::before{
+      content:'';
+      position:absolute;
+      left:50%;
+      bottom:2px;
+      width:3px;
+      height:12px;
+      background: linear-gradient(180deg, rgba(74,140,115,1), rgba(45,95,77,1));
+      border-radius:999px;
+      transform:translateX(-50%) scaleY(.55);
+      transform-origin:bottom;
+    }
+
+    .sprout::after{
+      content:'';
+      position:absolute;
+      left:50%;
+      bottom:10px;
+      width:14px;
+      height:10px;
+      transform:translateX(-50%) scale(.6);
+      transform-origin:bottom center;
+      background:
+        radial-gradient(circle at 25% 70%, rgba(74,140,115,1) 0 55%, transparent 56%),
+        radial-gradient(circle at 75% 70%, rgba(74,140,115,1) 0 55%, transparent 56%);
+      border-radius:999px;
+      opacity:.95;
+    }
+
+    @keyframes sproutPulse{
+      0%, 19%   { transform: scale(.88); }
+      21%       { transform: scale(1.15); }
+      24%       { transform: scale(.92); }
+
+      45%, 51%  { transform: scale(.88); }
+      53%       { transform: scale(1.15); }
+      56%       { transform: scale(.92); }
+
+      70%, 76%  { transform: scale(.88); }
+      78%       { transform: scale(1.15); }
+      81%       { transform: scale(.92); }
+
+      98%, 100% { transform: scale(.88); }
+    }
 
     .hero-description{
       font-size:clamp(1.08rem,2.4vw,1.25rem);
@@ -362,7 +431,7 @@ redirect_from:
       box-shadow:var(--shadow-md);
       transform:translateY(0);
       transition:transform .45s var(--transition-smooth), box-shadow .45s var(--transition-smooth);
-      max-width:520px;  /* makes it “card-sized” */
+      max-width:520px;
       margin-left:auto;
     }
 
@@ -504,7 +573,7 @@ redirect_from:
     }
 
     /* =========================================================
-       Technologies: pro polish + smaller images (card scale)
+       Technologies: smaller images + partnership-card feel
     ========================================================== */
     #technologies{
       background:
@@ -533,7 +602,7 @@ redirect_from:
       gap:clamp(.75rem,1.25vw,1.05rem);
     }
 
-    /* Smaller, more “partnership-card” feel */
+    /* Smaller, uniform “card media” */
     .gallery-item{
       grid-column:span 3;
       border-radius:18px;
@@ -544,7 +613,8 @@ redirect_from:
       position:relative;
       transform:translateY(0);
       transition:transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth);
-      min-height:150px;
+      aspect-ratio: 4 / 3; /* ✅ smaller + consistent */
+      min-height:0;        /* ✅ remove “too tall” feel */
     }
 
     .gallery-item::after{
@@ -584,11 +654,11 @@ redirect_from:
 
     @media (max-width: 700px){
       .image-gallery{grid-template-columns:repeat(2,1fr);}
-      .gallery-item{grid-column:span 2; min-height:190px;}
+      .gallery-item{grid-column:span 2; aspect-ratio: 16 / 10;}
     }
 
     /* =========================================================
-       Buscadoras: refined feature card
+       Buscadoras
     ========================================================== */
     .buscadoras-section{
       background:
@@ -640,7 +710,7 @@ redirect_from:
       border:1px solid rgba(45,95,77,.12);
       overflow:hidden;
       margin:2.1rem auto 0;
-      max-width:520px;   /* smaller, card-like */
+      max-width:520px;
       position:relative;
       transform:translateY(0);
       transition:transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth);
@@ -909,74 +979,18 @@ redirect_from:
       .social-grid{grid-template-columns:1fr;}
       .hero-media{margin-left:0;}
     }
- 
-  
 
-    /* ===== Sprout (grows each time a new word appears) ===== */
-.rolling-wrap{
-  display:inline-flex;
-  align-items:center;
-  gap:.55rem;
-}
 
-.sprout{
-  width:20px;
-  height:20px;
-  position:relative;
-  flex:0 0 auto;
-  filter: drop-shadow(0 10px 18px rgba(15,23,42,.14));
-}
 
-.sprout::before{
-  /* stem */
-  content:'';
-  position:absolute;
-  left:50%;
-  bottom:2px;
-  width:3px;
-  height:12px;
-  background: linear-gradient(180deg, rgba(74,140,115,1), rgba(45,95,77,1));
-  border-radius:999px;
-  transform:translateX(-50%) scaleY(.35);
-  transform-origin:bottom;
-}
+/* Keep your 106% on desktop, but prevent phone overflow */
+@media (max-width: 768px){
+  .page, #main, .initial-content, .page__inner-wrap, .page__content, .archive{
+    width: 100% !important;
+  }
 
-.sprout::after{
-  /* leaf pair */
-  content:'';
-  position:absolute;
-  left:50%;
-  bottom:10px;
-  width:14px;
-  height:10px;
-  transform:translateX(-50%) scale(.35);
-  transform-origin:bottom center;
-  background:
-    radial-gradient(circle at 25% 70%, rgba(74,140,115,1) 0 55%, transparent 56%),
-    radial-gradient(circle at 75% 70%, rgba(74,140,115,1) 0 55%, transparent 56%);
-  border-radius:999px;
-  opacity:.95;
-}
-
-    
-.sprout.is-sprouting::before{
-  animation:sproutStem .55s cubic-bezier(.2,.9,.2,1) both;
-}
-
-.sprout.is-sprouting::after{
-  animation:sproutLeaves .55s cubic-bezier(.2,.9,.2,1) both;
-}
-
-@keyframes sproutStem{
-  0%   { transform:translateX(-50%) scaleY(.25); }
-  70%  { transform:translateX(-50%) scaleY(1.05); }
-  100% { transform:translateX(-50%) scaleY(.95); }
-}
-
-@keyframes sproutLeaves{
-  0%   { transform:translateX(-50%) scale(.2) rotate(-6deg); opacity:.0; }
-  55%  { transform:translateX(-50%) scale(1.05) rotate(6deg); opacity:1; }
-  100% { transform:translateX(-50%) scale(.95) rotate(0deg); opacity:1; }
+  /* Allow long rotating words to fit on small screens */
+  .word-carousel{ min-width: 0; width: 100%; max-width: 520px; }
+  .word-list li{ white-space: normal; }
 }
     
   </style>
@@ -1003,13 +1017,18 @@ redirect_from:
         <div>
           <div class="animated-tagline">
             <span class="tagline-chip"><span id="hero-tagline-static">Using technology to&nbsp;</span></span>
-            <div class="word-carousel" role="text" aria-label="Rotating tagline">
-              <ul class="word-list">
-                <li id="word-1">dignify.</li>
-                <li id="word-2">remember.</li>
-                <li id="word-3">search.</li>
-                <li id="word-4">bring closure.</li>
-              </ul>
+
+            <!-- ✅ Rolling words + sprout -->
+            <div class="rolling-wrap" aria-label="Rotating tagline">
+              <div class="word-carousel" role="text">
+                <ul class="word-list">
+                  <li id="word-1">dignify.</li>
+                  <li id="word-2">remember.</li>
+                  <li id="word-3">search.</li>
+                  <li id="word-4">bring closure.</li>
+                </ul>
+              </div>
+              <span class="sprout" aria-hidden="true"></span>
             </div>
           </div>
 
@@ -1516,7 +1535,7 @@ redirect_from:
           'word-2': 'quilnamictia.',
           'word-3': 'temoa.',
           'word-4': 'yolpakilistli quimacatia.',
-          'hero-main-text': '124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia teknolojíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
+          'hero-main-text': '124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia tehnologíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
           'community-title': 'In familias huan tlamachtianimeh quinyecana',
           'community-text': 'FOUND quinyecanah huan quinyolchicahua <strong>colectivos de búsqueda</strong> huan tlamachtianimeh de CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge huan Universidades Autónomas de Zacatecas huan San Luis Potosí.',
           'collab-title': 'Tlen tlatlanecuiltilis nemilistli (alianzas institucionales)',
