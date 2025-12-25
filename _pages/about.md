@@ -336,15 +336,15 @@ redirect_from:
     /* Smooth cadence, correct distance for 4 items */
     @keyframes wordSlide{
       0%   { transform: translateY(0%); }
-      20%  { transform: translateY(0%); }
+      25%  { transform: translateY(0%); }
 
-      28%  { transform: translateY(-25%); }
-      45%  { transform: translateY(-25%); }
+      26%  { transform: translateY(-25%); }
+      50%  { transform: translateY(-25%); }
 
-      53%  { transform: translateY(-50%); }
-      70%  { transform: translateY(-50%); }
+      51%  { transform: translateY(-50%); }
+      75%  { transform: translateY(-50%); }
 
-      78%  { transform: translateY(-75%); }
+      76%  { transform: translateY(-75%); }
       100% { transform: translateY(-75%); }
     }
 
