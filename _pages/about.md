@@ -335,17 +335,17 @@ redirect_from:
 
     /* Smooth cadence, correct distance for 4 items */
     @keyframes wordSlide{
-      0%   { transform: translateY(0%); }
-      25%  { transform: translateY(0%); }
+  0%   { transform: translateY(0%); }
+  25%  { transform: translateY(0%); }
 
-      26%  { transform: translateY(-25%); }
-      50%  { transform: translateY(-25%); }
+  30%  { transform: translateY(-25%); }
+  45%  { transform: translateY(-25%); }
 
-      51%  { transform: translateY(-50%); }
-      75%  { transform: translateY(-50%); }
+  50%  { transform: translateY(-50%); }
+  75%  { transform: translateY(-50%); }
 
-      76%  { transform: translateY(-75%); }
-      100% { transform: translateY(-75%); }
+  80%  { transform: translateY(-75%); }
+  100% { transform: translateY(-75%); }
     }
 
     /* ===== Sprout synced to the word animation (CSS-only, reliable in Jekyll) ===== */
