@@ -880,20 +880,13 @@ redirect_from:
 }
 
 
-    
-    /* HOME PAGE: allow sections to use the full available width */
-:root{ --maxw: 100%; }
-
-/* remove max-width caps that create the right-side blank area */
-.section-container,
-.hero-content,
-.footer-content{
+/* Minimal Mistakes: make THIS page use full width */
+.home-full .page__inner-wrap,
+.home-full .page__content,
+.home-full .archive,
+.home-full .initial-content{
   max-width: none !important;
-}
-
-/* also remove the hero image cap so it can expand */
-.hero-image-container{
-  max-width: none !important;
+  width: 100% !important;
 }
     
   </style>
