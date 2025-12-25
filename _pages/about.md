@@ -888,7 +888,7 @@ redirect_from:
 .page__content,
 .archive {
   max-width: none !important;
-  width: 106% !important;
+  width: 108% !important;
 }
 
 /* keep sensible side padding so content doesn't touch the edges */
