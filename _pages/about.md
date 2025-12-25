@@ -299,16 +299,15 @@ redirect_from:
     }
 
     .word-list{
-      list-style:none;
-      margin:0;
-      padding:0 .65rem;
-      height:100%;
-      display:flex;
-      flex-direction:column;
-      justify-content:flex-start;
-      will-change:transform;
-      animation:wordSlide 8.8s var(--transition-smooth) infinite;
-    }
+       list-style:none;
+  margin:0;
+  padding:0 .65rem;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  will-change:transform;
+  animation:wordSlide 8.8s cubic-bezier(.4,0,.2,1) infinite;
+}
 
     .word-list li{
       height:clamp(3rem,6vw,4.2rem);
@@ -323,16 +322,18 @@ redirect_from:
 
     /* Smooth, “tech” cadence (no harsh stops) */
     @keyframes wordSlide{
-      0%{transform:translateY(0);}
-      20%{transform:translateY(0);}
-      30%{transform:translateY(-25%);}
-      45%{transform:translateY(-25%);}
-      55%{transform:translateY(-50%);}
-      70%{transform:translateY(-50%);}
-      80%{transform:translateY(-75%);}
-      95%{transform:translateY(-75%);}
-      100%{transform:translateY(-100%);}
-    }
+    0%   { transform: translateY(0%); }
+  22%  { transform: translateY(0%); }
+
+  30%  { transform: translateY(-25%); }
+  47%  { transform: translateY(-25%); }
+
+  55%  { transform: translateY(-50%); }
+  72%  { transform: translateY(-50%); }
+
+  80%  { transform: translateY(-75%); }
+  100% { transform: translateY(-75%); }
+}
 
     .hero-description{
       font-size:clamp(1.08rem,2.4vw,1.25rem);
@@ -908,6 +909,76 @@ redirect_from:
       .social-grid{grid-template-columns:1fr;}
       .hero-media{margin-left:0;}
     }
+ 
+  
+
+    /* ===== Sprout (grows each time a new word appears) ===== */
+.rolling-wrap{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+}
+
+.sprout{
+  width:20px;
+  height:20px;
+  position:relative;
+  flex:0 0 auto;
+  filter: drop-shadow(0 10px 18px rgba(15,23,42,.14));
+}
+
+.sprout::before{
+  /* stem */
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:2px;
+  width:3px;
+  height:12px;
+  background: linear-gradient(180deg, rgba(74,140,115,1), rgba(45,95,77,1));
+  border-radius:999px;
+  transform:translateX(-50%) scaleY(.35);
+  transform-origin:bottom;
+}
+
+.sprout::after{
+  /* leaf pair */
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:10px;
+  width:14px;
+  height:10px;
+  transform:translateX(-50%) scale(.35);
+  transform-origin:bottom center;
+  background:
+    radial-gradient(circle at 25% 70%, rgba(74,140,115,1) 0 55%, transparent 56%),
+    radial-gradient(circle at 75% 70%, rgba(74,140,115,1) 0 55%, transparent 56%);
+  border-radius:999px;
+  opacity:.95;
+}
+
+    
+.sprout.is-sprouting::before{
+  animation:sproutStem .55s cubic-bezier(.2,.9,.2,1) both;
+}
+
+.sprout.is-sprouting::after{
+  animation:sproutLeaves .55s cubic-bezier(.2,.9,.2,1) both;
+}
+
+@keyframes sproutStem{
+  0%   { transform:translateX(-50%) scaleY(.25); }
+  70%  { transform:translateX(-50%) scaleY(1.05); }
+  100% { transform:translateX(-50%) scaleY(.95); }
+}
+
+@keyframes sproutLeaves{
+  0%   { transform:translateX(-50%) scale(.2) rotate(-6deg); opacity:.0; }
+  55%  { transform:translateX(-50%) scale(1.05) rotate(6deg); opacity:1; }
+  100% { transform:translateX(-50%) scale(.95) rotate(0deg); opacity:1; }
+}
+    
   </style>
 </head>
 
