@@ -877,6 +877,24 @@ redirect_from:
 .collab-card-gif:hover .collab-logo img{
   transform: scale(1.06);
 }
+
+
+    
+    /* HOME PAGE: allow sections to use the full available width */
+:root{ --maxw: 100%; }
+
+/* remove max-width caps that create the right-side blank area */
+.section-container,
+.hero-content,
+.footer-content{
+  max-width: none !important;
+}
+
+/* also remove the hero image cap so it can expand */
+.hero-image-container{
+  max-width: none !important;
+}
+    
   </style>
 </head>
 
