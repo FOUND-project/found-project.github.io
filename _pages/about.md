@@ -880,13 +880,20 @@ redirect_from:
 }
 
 
-/* Minimal Mistakes: make THIS page use full width */
-.home-full .page__inner-wrap,
-.home-full .page__content,
-.home-full .archive,
-.home-full .initial-content{
+/* ==== FORCE Minimal Mistakes wrappers to full width (homepage) ==== */
+.page,
+#main,
+.initial-content,
+.page__inner-wrap,
+.page__content,
+.archive {
   max-width: none !important;
   width: 100% !important;
+}
+
+/* keep sensible side padding so content doesn't touch the edges */
+.page__content {
+  padding-right: clamp(1rem, 4vw, 3rem) !important;
 }
     
   </style>
