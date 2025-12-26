@@ -1022,11 +1022,11 @@ redirect_from:
             <div class="rolling-wrap" aria-label="Rotating tagline">
               <div class="word-carousel" role="text">
                 <ul class="word-list">
-                  <li id="word-3">search.</li>
+                  <li id="word-1">search.</li>
                   <li id="word-2">remember.</li>
-                  <li id="word-1">dignify.</li>
-                  <li id="word-3">find</li>
-                  <li id="word-4">bring closure.</li>
+                  <li id="word-3">dignify.</li>
+                  <li id="word-4">find</li>
+                  <li id="word-5">bring closure.</li>
                 </ul>
               </div>
               <span class="sprout" aria-hidden="true"></span>
