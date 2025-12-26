@@ -41,7 +41,7 @@ redirect_from:
 
       /* Rolling words */
       --word-h: clamp(3rem,6vw,4.2rem);
-      --word-duration: 8.8s;
+      --word-duration: 10.5s; /* ✅ adjusted for 5 words */
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -310,7 +310,6 @@ redirect_from:
       z-index:0;
     }
 
-    /* ✅ FIX: remove height:100% (it was collapsing the list and breaking the scroll) */
     .word-list{
       list-style:none;
       margin:0;
@@ -333,75 +332,88 @@ redirect_from:
       white-space:nowrap;
     }
 
-    /* Smooth cadence, correct distance for 4 items */
+    /* ✅ 5 items => 20% steps */
     @keyframes wordSlide{
-  0%   { transform: translateY(0%); }
-  22%  { transform: translateY(0%); }
+      0%   { transform: translateY(0%); }
+      16%  { transform: translateY(0%); }
 
-  30%  { transform: translateY(-25%); }
-  47%  { transform: translateY(-25%); }
+      20%  { transform: translateY(-20%); }
+      36%  { transform: translateY(-20%); }
 
-  55%  { transform: translateY(-50%); }
-  72%  { transform: translateY(-50%); }
+      40%  { transform: translateY(-40%); }
+      56%  { transform: translateY(-40%); }
 
-  80%  { transform: translateY(-75%); }
-  100% { transform: translateY(-75%); }
+      60%  { transform: translateY(-60%); }
+      76%  { transform: translateY(-60%); }
+
+      80%  { transform: translateY(-80%); }
+      100% { transform: translateY(-80%); }
     }
 
-    /* ===== Sprout synced to the word animation (CSS-only, reliable in Jekyll) ===== */
+    /* ===== Sprout (improved) synced to the word animation (CSS-only) ===== */
     .sprout{
-      width:20px;
-      height:20px;
+      width:22px;
+      height:22px;
       position:relative;
       flex:0 0 auto;
-      filter: drop-shadow(0 10px 18px rgba(15,23,42,.14));
-      opacity:.95;
-      animation:sproutPulse var(--word-duration) cubic-bezier(.4,0,.2,1) infinite;
+      opacity:.98;
+      filter: drop-shadow(0 12px 18px rgba(15,23,42,.14));
+      animation:sproutBeat var(--word-duration) cubic-bezier(.4,0,.2,1) infinite;
+      transform-origin: bottom center;
     }
 
+    /* stem */
     .sprout::before{
       content:'';
       position:absolute;
       left:50%;
       bottom:2px;
-      width:3px;
-      height:12px;
-      background: linear-gradient(180deg, rgba(74,140,115,1), rgba(45,95,77,1));
+      width:4px;
+      height:14px;
+      transform:translateX(-50%);
       border-radius:999px;
-      transform:translateX(-50%) scaleY(.55);
-      transform-origin:bottom;
+      background:linear-gradient(180deg, rgba(74,140,115,1) 0%, rgba(45,95,77,1) 90%);
+      box-shadow:0 0 0 1px rgba(255,255,255,.25) inset;
     }
 
+    /* leaves + bud */
     .sprout::after{
       content:'';
       position:absolute;
       left:50%;
-      bottom:10px;
-      width:14px;
-      height:10px;
-      transform:translateX(-50%) scale(.6);
-      transform-origin:bottom center;
+      bottom:9px;
+      width:18px;
+      height:14px;
+      transform:translateX(-50%);
       background:
-        radial-gradient(circle at 25% 70%, rgba(74,140,115,1) 0 55%, transparent 56%),
-        radial-gradient(circle at 75% 70%, rgba(74,140,115,1) 0 55%, transparent 56%);
+        radial-gradient(circle at 50% 0%, rgba(212,175,55,.55) 0 18%, transparent 19%), /* tiny bud */
+        radial-gradient(ellipse at 30% 70%, rgba(74,140,115,1) 0 58%, transparent 59%),
+        radial-gradient(ellipse at 70% 70%, rgba(74,140,115,1) 0 58%, transparent 59%),
+        radial-gradient(circle at 30% 70%, rgba(255,255,255,.35) 0 35%, transparent 36%),
+        radial-gradient(circle at 70% 70%, rgba(255,255,255,.35) 0 35%, transparent 36%);
       border-radius:999px;
-      opacity:.95;
+      opacity:.98;
     }
 
-    @keyframes sproutPulse{
-      0%, 19%   { transform: scale(.88); }
-      21%       { transform: scale(1.15); }
-      24%       { transform: scale(.92); }
+    /* 5 “pops” aligned to the word holds */
+    @keyframes sproutBeat{
+      0%, 15%   { transform: rotate(-6deg) scale(.92); }
+      18%       { transform: rotate(2deg)  scale(1.10); }
+      22%       { transform: rotate(-3deg) scale(.96); }
 
-      45%, 51%  { transform: scale(.88); }
-      53%       { transform: scale(1.15); }
-      56%       { transform: scale(.92); }
+      35%       { transform: rotate(-6deg) scale(.92); }
+      38%       { transform: rotate(2deg)  scale(1.10); }
+      42%       { transform: rotate(-3deg) scale(.96); }
 
-      70%, 76%  { transform: scale(.88); }
-      78%       { transform: scale(1.15); }
-      81%       { transform: scale(.92); }
+      55%       { transform: rotate(-6deg) scale(.92); }
+      58%       { transform: rotate(2deg)  scale(1.10); }
+      62%       { transform: rotate(-3deg) scale(.96); }
 
-      98%, 100% { transform: scale(.88); }
+      75%       { transform: rotate(-6deg) scale(.92); }
+      78%       { transform: rotate(2deg)  scale(1.10); }
+      82%       { transform: rotate(-3deg) scale(.96); }
+
+      95%, 100% { transform: rotate(-6deg) scale(.92); }
     }
 
     .hero-description{
@@ -602,7 +614,6 @@ redirect_from:
       gap:clamp(.75rem,1.25vw,1.05rem);
     }
 
-    /* Smaller, uniform “card media” */
     .gallery-item{
       grid-column:span 3;
       border-radius:18px;
@@ -613,8 +624,8 @@ redirect_from:
       position:relative;
       transform:translateY(0);
       transition:transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth);
-      aspect-ratio: 4 / 3; /* ✅ smaller + consistent */
-      min-height:0;        /* ✅ remove “too tall” feel */
+      aspect-ratio: 4 / 3;
+      min-height:0;
     }
 
     .gallery-item::after{
@@ -980,19 +991,14 @@ redirect_from:
       .hero-media{margin-left:0;}
     }
 
-
-
-/* Keep your 106% on desktop, but prevent phone overflow */
-@media (max-width: 768px){
-  .page, #main, .initial-content, .page__inner-wrap, .page__content, .archive{
-    width: 100% !important;
-  }
-
-  /* Allow long rotating words to fit on small screens */
-  .word-carousel{ min-width: 0; width: 100%; max-width: 520px; }
-  .word-list li{ white-space: normal; }
-}
-    
+    /* Keep your 106% on desktop, but prevent phone overflow */
+    @media (max-width: 768px){
+      .page, #main, .initial-content, .page__inner-wrap, .page__content, .archive{
+        width: 100% !important;
+      }
+      .word-carousel{ min-width: 0; width: 100%; max-width: 520px; }
+      .word-list li{ white-space: normal; }
+    }
   </style>
 </head>
 
@@ -1018,14 +1024,14 @@ redirect_from:
           <div class="animated-tagline">
             <span class="tagline-chip"><span id="hero-tagline-static">Using technology to&nbsp;</span></span>
 
-            <!-- ✅ Rolling words + sprout -->
+            <!-- Rolling words + sprout -->
             <div class="rolling-wrap" aria-label="Rotating tagline">
               <div class="word-carousel" role="text">
                 <ul class="word-list">
                   <li id="word-1">search.</li>
                   <li id="word-2">remember.</li>
                   <li id="word-3">dignify.</li>
-                  <li id="word-4">find</li>
+                  <li id="word-4">find.</li>
                   <li id="word-5">bring closure.</li>
                 </ul>
               </div>
@@ -1051,7 +1057,7 @@ redirect_from:
     </div>
   </section>
 
-  <!-- Technologies Section (TEXT UNCHANGED) -->
+  <!-- Technologies Section -->
   <section class="content-section" id="technologies">
     <div class="section-container">
       <h2 id="tech-title">Technologies in Action</h2>
@@ -1075,7 +1081,7 @@ redirect_from:
           <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/2.jpeg?raw=true" alt="Community collaboration in search efforts" loading="lazy" class="loading" onload="this.classList.remove('loading')">
         </div>
         <div class="gallery-item">
-          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Specialized search tools and equipment" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+          <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Specialised search tools and equipment" loading="lazy" class="loading" onload="this.classList.remove('loading')">
         </div>
         <div class="gallery-item">
           <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/3.jpeg?raw=true" alt="Field research and data collection" loading="lazy" class="loading" onload="this.classList.remove('loading')">
@@ -1099,7 +1105,7 @@ redirect_from:
     </div>
   </section>
 
-  <!-- Buscadoras Section (TEXT UNCHANGED) -->
+  <!-- Buscadoras Section -->
   <section class="buscadoras-section" id="buscadoras">
     <div class="buscadoras-content">
       <h2 id="buscadoras-title">The Role of Buscadoras</h2>
@@ -1107,7 +1113,7 @@ redirect_from:
         Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.
       </p>
       <div class="buscadoras-image">
-        <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Buscadoras hands with plants symbolizing hope and remembrance" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+        <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Buscadoras hands with plants symbolising hope and remembrance" loading="lazy" class="loading" onload="this.classList.remove('loading')">
       </div>
     </div>
   </section>
@@ -1240,7 +1246,7 @@ redirect_from:
             </div>
           </div>
 
-          <!-- 10. Bath (Oxford Forum) -->
+          <!-- 10. Bath -->
           <div class="collab-card">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b2323f813df618867a6227a87e7efb9e084fe75e/images/Beth.jpg"
@@ -1301,7 +1307,7 @@ redirect_from:
             </div>
           </div>
 
-          <!-- Mexico's Science and Technology Secretariat -->
+          <!-- Mexico’s Science and Technology Secretariat -->
           <div class="collab-card">
             <div class="collab-logo">
               <img
@@ -1494,59 +1500,68 @@ redirect_from:
       const translations = {
         en: {
           'hero-tagline-static': 'Using technology to&nbsp;',
-          'word-1': 'dignify.',
+          'word-1': 'search.',
           'word-2': 'remember.',
-          'word-3': 'search.',
-          'word-4': 'bring closure.',
+          'word-3': 'dignify.',
+          'word-4': 'find.',
+          'word-5': 'bring closure.',
           'hero-main-text': '124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.',
-          'community-title': 'Driven by Families and Research Communities',
-          'community-text': 'FOUND is guided and motivated by <strong>search collectives</strong> and researchers from CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.',
           'collab-title': 'Institutional Partnerships',
           'tech-title': 'Technologies in Action',
+          'tech-item-1': 'Multispectral &amp; Hyperspectral Imaging',
+          'tech-item-2': 'Airborne LiDAR',
+          'tech-item-3': 'Seismic Noise Interferometry (TIRSA)',
+          'tech-item-4': 'Electrical Resistivity Tomography, Conductivimetry Measurements',
+          'tech-item-5': 'Satellite Spectral Analysis',
+          'tech-item-6': 'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
           'buscadoras-title': 'The Role of Buscadoras',
           'buscadoras-text': 'Women-led collectives are at the heart of FOUND\'s work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.',
           'social-title': 'Follow Our Journey',
           'social-subtitle': 'Stay connected with our latest findings, community stories, and collaborations',
-          'partners-title': 'Our Partners',
-          'partners-intro': 'FOUND brings together a coalition of academic institutions, government bodies, civil society organisations, and international partners. Together, we seek to honour the memory of those who are missing and stand with families as they search for a form of closure.',
           'footer-text': 'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
         },
         es: {
           'hero-tagline-static': 'Usando tecnología para&nbsp;',
-          'word-1': 'dignificar.',
+          'word-1': 'buscar.',
           'word-2': 'recordar.',
-          'word-3': 'buscar.',
-          'word-4': 'dar cierre.',
-          'hero-main-text': '124,354 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de familias buscadoras para buscar, localizar y promover cambios sistémicos.',
-          'community-title': 'Impulsado por familias y comunidades de investigación',
-          'community-text': 'FOUND está guiado e impulsado por <strong>colectivos de búsqueda</strong> y personas investigadoras de CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge y las Universidades Autónomas de Zacatecas y San Luis Potosí.',
+          'word-3': 'dignificar.',
+          'word-4': 'encontrar.',
+          'word-5': 'dar cierre.',
+          'hero-main-text': '124,354 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de familias buscadoras para aprender del campo, localizar y promover cambios sistémicos.',
           'collab-title': 'Alianzas institucionales',
           'tech-title': 'Tecnologías en acción',
+          'tech-item-1': 'Imágenes multiespectrales e hiperespectrales',
+          'tech-item-2': 'LiDAR aerotransportado',
+          'tech-item-3': 'Interferometría de ruido sísmico (TIRSA)',
+          'tech-item-4': 'Tomografía de resistividad eléctrica y mediciones de conductividad',
+          'tech-item-5': 'Análisis espectral satelital',
+          'tech-item-6': 'Entomología forense, botánica, análisis territorial y ciencia del suelo',
           'buscadoras-title': 'El papel de las buscadoras',
-          'buscadoras-text': 'Los colectivos de búsqueda están en el corazón del trabajo de FOUND. Estas familias han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.',
+          'buscadoras-text': 'Los colectivos liderados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.',
           'social-title': 'Sigue nuestro camino',
           'social-subtitle': 'Mantente al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.',
-          'partners-title': 'Nuestras alianzas',
-          'partners-intro': 'FOUND reúne una coalición de instituciones académicas, instancias gubernamentales, organizaciones de la sociedad civil y aliados internacionales. Trabajamos con un objetivo común: honrar la memoria de quienes nos faltan y acompañar a las familias en la búsqueda de una forma de cierre.',
           'footer-text': 'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
         },
         nah: {
           'hero-tagline-static': 'Teknolojíayoh ika&nbsp;',
-          'word-1': 'tlatepanita.',
+          'word-1': 'temoa.',
           'word-2': 'quilnamictia.',
-          'word-3': 'temoa.',
-          'word-4': 'yolpakilistli quimacatia.',
+          'word-3': 'tlatepanita.',
+          'word-4': 'quipantlalia.',
+          'word-5': 'yolpakilistli quimacatia.',
           'hero-main-text': '124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia tehnologíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
-          'community-title': 'In familias huan tlamachtianimeh quinyecana',
-          'community-text': 'FOUND quinyecanah huan quinyolchicahua <strong>colectivos de búsqueda</strong> huan tlamachtianimeh de CentroGeo, IPN, UNAM, UdeG, Oxford, Bristol, Bath, Cambridge huan Universidades Autónomas de Zacatecas huan San Luis Potosí.',
           'collab-title': 'Tlen tlatlanecuiltilis nemilistli (alianzas institucionales)',
           'tech-title': 'Teknolojíayoh tlen motequiti',
+          'tech-item-1': 'Multispectral &amp; Hyperspectral Imaging',
+          'tech-item-2': 'Airborne LiDAR',
+          'tech-item-3': 'Seismic Noise Interferometry (TIRSA)',
+          'tech-item-4': 'Electrical Resistivity Tomography, Conductivimetry Measurements',
+          'tech-item-5': 'Satellite Spectral Analysis',
+          'tech-item-6': 'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
           'buscadoras-title': 'In papel in buscadoras',
           'buscadoras-text': 'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan país tlen polihuiliztli huan tlayectlaliz justice. Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknológicoh tequitl.',
           'social-title': 'Xiquito in totlanejmachtiliz',
           'social-subtitle': 'Ximoyetkixtia inin tlen tipantlaliah, tlen tlanechicoliztli in comunidades huan inin tlen timocoyonaltiah san sejco.',
-          'partners-title': 'Tochan tlacamachtiloyan huan tocnihhuan',
-          'partners-intro': 'FOUND quitlalia san sejco tlacamachtiloyan, tlatocayotl tlen gobierno, organizaciones de la sociedad civil huan tocnihhuan internacionales. San sejco titequitiyah para tlachihua tlatlepanittacayotl in aquin polihuihqueh huan para timochicahualtia in familias tlen quitemoah se tlayolpakilistli.',
           'footer-text': 'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
         }
       };
