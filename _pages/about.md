@@ -997,6 +997,154 @@ redirect_from:
       .word-carousel{ min-width: 0; width: 100%; max-width: 520px; }
       .word-list li{ white-space: normal; }
     }
+
+/* ==========================
+   Award Highlight Card
+   ========================== */
+.award-highlight{
+  margin: 1.5rem 0 2.25rem;
+}
+
+.award-card{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  gap:1.25rem;
+  padding:1.35rem 1.6rem;
+  border-radius:20px;
+  background:
+    radial-gradient(circle at 5% 0%, rgba(212,175,55,.18) 0%, transparent 55%),
+    linear-gradient(135deg, #fff9ec 0%, #fffdf7 45%, #ffffff 100%);
+  border:1px solid rgba(212,175,55,.35);
+  box-shadow:0 18px 40px rgba(15,23,42,.14);
+  text-decoration:none;
+  color:var(--text-dark);
+  position:relative;
+  overflow:hidden;
+  transition:
+    transform .3s var(--transition-smooth),
+    box-shadow .3s var(--transition-smooth),
+    border-color .3s var(--transition-smooth),
+    background .3s var(--transition-smooth);
+}
+
+.award-card::before{
+  content:'';
+  position:absolute;
+  inset:-1px;
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.45), transparent 40%, transparent 60%, rgba(212,175,55,.25));
+  mix-blend-mode:soft-light;
+  opacity:.9;
+  pointer-events:none;
+}
+
+.award-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 24px 55px rgba(15,23,42,.20);
+  border-color:rgba(212,175,55,.65);
+}
+
+/* small “glow dot” instead of an emoji */
+.award-icon{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 30% 30%, #fff 0%, #fff6d9 30%, #d4af37 60%, #8a6c18 100%);
+  box-shadow:
+    0 0 0 4px rgba(212,175,55,.25),
+    0 16px 30px rgba(15,23,42,.28);
+  flex:0 0 auto;
+  position:relative;
+}
+
+.award-icon::after{
+  content:'★';
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.1rem;
+  color:#fffdf2;
+  text-shadow:0 1px 3px rgba(0,0,0,.35);
+}
+
+.award-text{
+  flex:1 1 220px;
+  position:relative;
+  z-index:1;
+}
+
+.award-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  padding:.18rem .65rem;
+  border-radius:999px;
+  font-size:.75rem;
+  font-weight:750;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  background:rgba(27,77,62,.08);
+  color:var(--dark-green);
+  border:1px solid rgba(27,77,62,.18);
+  margin-bottom:.45rem;
+}
+
+.award-pill::before{
+  content:'';
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:radial-gradient(circle, var(--gold-accent) 0%, rgba(212,175,55,.2) 70%);
+}
+
+.award-title{
+  font-size:clamp(1.1rem,2.2vw,1.35rem);
+  font-weight:800;
+  letter-spacing:-.02em;
+  color:var(--dark-green);
+  margin-bottom:.3rem;
+}
+
+.award-meta{
+  font-size:.9rem;
+  color:var(--text-light);
+  margin-bottom:.4rem;
+}
+
+.award-summary{
+  font-size:.95rem;
+  color:var(--text-medium);
+  line-height:1.6;
+}
+
+.award-summary strong{
+  color:var(--dark-green);
+  font-weight:700;
+}
+
+/* small arrow on hover */
+.award-card .award-title span.arrow{
+  display:inline-block;
+  font-size:.95rem;
+  transform:translateX(0);
+  transition:transform .25s var(--transition-smooth);
+}
+
+.award-card:hover .award-title span.arrow{
+  transform:translateX(4px);
+}
+
+@media (max-width:600px){
+  .award-card{
+    padding:1.1rem 1.2rem;
+  }
+}
+
+    
   </style>
 </head>
 
@@ -1042,6 +1190,25 @@ redirect_from:
             <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.
           </p>
         </div>
+
+<div class="award-highlight">
+  <a href="/news/#mariela-award" class="award-card">
+    <div class="award-icon" aria-hidden="true"></div>
+    <div class="award-text">
+      <div class="award-pill">Recognition</div>
+      <div class="award-title">
+        FOUND’s FCDO pioneer recognised with the Sir Nicholas Browne Policy and Expertise Award
+        <span class="arrow">↗</span>
+      </div>
+      <div class="award-meta">
+        Selected from over 200 nominations across the UK Foreign, Commonwealth &amp; Development Office.
+      </div>
+      <p class="award-summary">
+        <strong>Mariela Garfias</strong> was recognised for her role in shaping FOUND’s impact: locating victims of disappearance in Mexico, supporting families on their path to answers, and helping embed our work with authorities in Mexico, Colombia, and the UN system.
+      </p>
+    </div>
+  </a>
+</div>
 
         <div class="hero-media skeleton" aria-label="Hero media">
           <img
