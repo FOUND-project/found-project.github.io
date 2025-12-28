@@ -277,79 +277,82 @@ redirect_from:
       flex:0 0 auto;
     }
 
-    /* --- Rolling words wrapper + sprout --- */
-    .rolling-wrap{
-      display:inline-flex;
-      align-items:center;
-      gap:.55rem;
-    }
+/* --- Rolling words wrapper + sprout --- */
+.rolling-wrap{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+}
 
-    .word-carousel{
-      height:var(--word-h);
-      position:relative;
-      display:inline-block;
-      min-width:clamp(190px,30vw,320px);
-      padding:0 .05rem;
-      overflow:hidden;
-      border-radius:14px;
-      background:linear-gradient(135deg, rgba(255,255,255,.72) 0%, rgba(232,245,240,.55) 100%);
-      border:1px solid rgba(45,95,77,.14);
-      box-shadow:var(--shadow-sm);
-      isolation:isolate;
-    }
+.word-carousel{
+  height:var(--word-h);
+  position:relative;
+  display:inline-block;
+  min-width:clamp(190px,30vw,320px);
+  padding:0 .05rem;
+  overflow:hidden;
+  border-radius:14px;
+  background:linear-gradient(135deg, rgba(255,255,255,.72) 0%, rgba(232,245,240,.55) 100%);
+  border:1px solid rgba(45,95,77,.14);
+  box-shadow:var(--shadow-sm);
+  isolation:isolate;
+  /* Center content vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    .word-carousel::after{
-      content:'';
-      position:absolute;
-      inset:0;
-      pointer-events:none;
-      background:
-        radial-gradient(circle at 20% 30%, rgba(212,175,55,.14) 0%, transparent 45%),
-        linear-gradient(180deg, rgba(0,0,0,.06) 0%, transparent 38%, transparent 62%, rgba(0,0,0,.04) 100%);
-      opacity:.75;
-      z-index:0;
-    }
+.word-carousel::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(212,175,55,.14) 0%, transparent 45%),
+    linear-gradient(180deg, rgba(0,0,0,.06) 0%, transparent 38%, transparent 62%, rgba(0,0,0,.04) 100%);
+  opacity:.75;
+  z-index:0;
+}
 
-    .word-list{
-      list-style:none;
-      margin:0;
-      padding:0 .65rem;
-      will-change:transform;
-      position:relative;
-      z-index:1;
-      animation:wordSlide var(--word-duration) cubic-bezier(.4,0,.2,1) infinite;
-    }
+.word-list{
+  list-style:none;
+  margin:0;
+  padding:0 .65rem;
+  will-change:transform;
+  position:relative;
+  z-index:1;
+  animation:wordSlide var(--word-duration) cubic-bezier(.4,0,.2,1) infinite;
+  /* Ensure list takes full height */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
-    .word-list li{
-      height:var(--word-h);
-      display:flex;
-      align-items:center;
-      color:var(--light-green);
-      font-weight:900;
-      font-size:clamp(2.05rem,5vw,3.6rem);
-      letter-spacing:-.02em;
-      text-shadow:0 10px 28px rgba(15,23,42,.10);
-      white-space:nowrap;
-    }
+.word-list li{
+  height:var(--word-h);
+  display:flex;
+  align-items:center;
+  color:var(--light-green);
+  font-weight:900;
+  font-size:clamp(2.05rem,5vw,3.6rem);
+  letter-spacing:-.02em;
+  text-shadow:0 10px 28px rgba(15,23,42,.10);
+  white-space:nowrap;
+  /* Ensure perfect vertical centering */
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
 
-    /* ✅ 5 items => 20% steps */
-    @keyframes wordSlide{
-  0%   { transform: translateY(0); }
-  15%  { transform: translateY(0); }
-  
-  20%  { transform: translateY(-20%); }
-  35%  { transform: translateY(-20%); }
-  
-  40%  { transform: translateY(-40%); }
-  55%  { transform: translateY(-40%); }
-  
-  60%  { transform: translateY(-60%); }
-  75%  { transform: translateY(-60%); }
-  
-  80%  { transform: translateY(-80%); }
-  95%  { transform: translateY(-80%); }
-  
-  100% { transform: translateY(0); }
+/* ✅ 5 items => 20% steps, adjusted for perfect centering */
+@keyframes wordSlide{
+  0%, 15.99%   { transform: translateY(0%); }
+  16%, 35.99%  { transform: translateY(-20%); }
+  36%, 55.99%  { transform: translateY(-40%); }
+  56%, 75.99%  { transform: translateY(-60%); }
+  76%, 100%    { transform: translateY(-80%); }
 }
 
     /* ===== Sprout (improved) synced to the word animation (CSS-only) ===== */
