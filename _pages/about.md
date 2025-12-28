@@ -1467,7 +1467,8 @@ redirect_from:
             <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a>
           </blockquote>
         </div>
-</div>
+      </div>
+
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
@@ -1495,6 +1496,7 @@ redirect_from:
         </div>
       </div>
     </div>
+       </div>
   </section>
 
   <!-- FOOTER -->
