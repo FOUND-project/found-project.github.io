@@ -1078,6 +1078,21 @@ redirect_from:
   }
 }
 
+
+ <!-- NDAI5 section -->    
+.hero-media-small{
+  max-width: 340px;          /* smaller by default */
+  transition: transform .45s cubic-bezier(.4,0,.2,1),
+              box-shadow .45s cubic-bezier(.4,0,.2,1),
+              max-width .45s cubic-bezier(.4,0,.2,1);
+  cursor: zoom-in;
+}
+
+.hero-media-small:hover{
+  max-width: 520px;          /* grows */
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.18);
+}
     
   </style>
 </head>
@@ -1141,16 +1156,14 @@ redirect_from:
   </a>
 </div>
 
-        <div class="hero-media skeleton" aria-label="Hero media">
-          <img
-            src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/NDAI5.gif?raw=true"
-            alt="FOUND Project team using advanced technology in field search operations"
-            class="hero-image loading"
-            loading="lazy"
-            onload="this.classList.remove('loading'); this.parentElement.classList.remove('skeleton')" />
-        </div>
-      </div>
-    </div>
+       <div class="hero-media hero-media-small skeleton" aria-label="Hero media">
+  <img
+    src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/NDAI5.gif"
+    alt="FOUND Project team using advanced technology in field search operations"
+    class="hero-image loading"
+    loading="lazy"
+    onload="this.classList.remove('loading'); this.parentElement.classList.remove('skeleton')" />
+</div>
   </section>
 
   <!-- Technologies Section -->
