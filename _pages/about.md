@@ -349,16 +349,16 @@ redirect_from:
 }
 
     /* ===== Sprout (improved) synced to the word animation (CSS-only) ===== */
-    .sprout{
-      width:22px;
-      height:22px;
-      position:relative;
-      flex:0 0 auto;
-      opacity:.98;
-      filter: drop-shadow(0 12px 18px rgba(15,23,42,.14));
-      animation:sproutBeat var(--word-duration) cubic-bezier(.4,0,.2,1) infinite;
-      transform-origin: bottom center;
-    }
+  .sprout{
+  width:26px;
+  height:26px;
+  position:relative;
+  flex:0 0 auto;
+  opacity:.98;
+  filter: drop-shadow(0 12px 18px rgba(15,23,42,.14));
+  animation:sproutBeat var(--word-duration) cubic-bezier(.4,0,.2,1) infinite;
+  transform-origin: bottom center;
+}
 
     /* stem */
     .sprout::before{
@@ -380,8 +380,8 @@ redirect_from:
       position:absolute;
       left:50%;
       bottom:9px;
-      width:18px;
-      height:14px;
+      width:20px;
+      height:16px;
       transform:translateX(-50%);
       background:
         radial-gradient(circle at 50% 0%, rgba(212,175,55,.55) 0 18%, transparent 19%), /* tiny bud */
