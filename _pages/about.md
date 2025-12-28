@@ -348,72 +348,6 @@ redirect_from:
   76%, 100%    { transform: translateY(-80%); }
 }
 
-    /* ===== Sprout (improved) synced to the word animation (CSS-only) ===== */
-  .sprout{
-  width:26px;
-  height:26px;
-  position:relative;
-  flex:0 0 auto;
-  opacity:.98;
-  filter: drop-shadow(0 12px 18px rgba(15,23,42,.14));
-  animation:sproutBeat var(--word-duration) cubic-bezier(.4,0,.2,1) infinite;
-  transform-origin: bottom center;
-}
-
-    /* stem */
-    .sprout::before{
-      content:'';
-      position:absolute;
-      left:50%;
-      bottom:2px;
-      width:4px;
-      height:14px;
-      transform:translateX(-50%);
-      border-radius:999px;
-      background:linear-gradient(180deg, rgba(74,140,115,1) 0%, rgba(45,95,77,1) 90%);
-      box-shadow:0 0 0 1px rgba(255,255,255,.25) inset;
-    }
-
-    /* leaves + bud */
-    .sprout::after{
-      content:'';
-      position:absolute;
-      left:50%;
-      bottom:9px;
-      width:20px;
-      height:16px;
-      transform:translateX(-50%);
-      background:
-        radial-gradient(circle at 50% 0%, rgba(212,175,55,.55) 0 18%, transparent 19%), /* tiny bud */
-        radial-gradient(ellipse at 30% 70%, rgba(74,140,115,1) 0 58%, transparent 59%),
-        radial-gradient(ellipse at 70% 70%, rgba(74,140,115,1) 0 58%, transparent 59%),
-        radial-gradient(circle at 30% 70%, rgba(255,255,255,.35) 0 35%, transparent 36%),
-        radial-gradient(circle at 70% 70%, rgba(255,255,255,.35) 0 35%, transparent 36%);
-      border-radius:999px;
-      opacity:.98;
-    }
-
-    /* 5 “pops” aligned to the word holds */
-    @keyframes sproutBeat{
-      0%, 15%   { transform: rotate(-6deg) scale(.92); }
-      18%       { transform: rotate(2deg)  scale(1.10); }
-      22%       { transform: rotate(-3deg) scale(.96); }
-
-      35%       { transform: rotate(-6deg) scale(.92); }
-      38%       { transform: rotate(2deg)  scale(1.10); }
-      42%       { transform: rotate(-3deg) scale(.96); }
-
-      55%       { transform: rotate(-6deg) scale(.92); }
-      58%       { transform: rotate(2deg)  scale(1.10); }
-      62%       { transform: rotate(-3deg) scale(.96); }
-
-      75%       { transform: rotate(-6deg) scale(.92); }
-      78%       { transform: rotate(2deg)  scale(1.10); }
-      82%       { transform: rotate(-3deg) scale(.96); }
-
-      95%, 100% { transform: rotate(-6deg) scale(.92); }
-    }
-
     .hero-description{
       font-size:clamp(1.08rem,2.4vw,1.25rem);
       color:var(--text-medium);
@@ -1181,9 +1115,18 @@ redirect_from:
                   <li id="word-5">bring closure.</li>
                 </ul>
               </div>
-              <span class="sprout" aria-hidden="true"></span>
+              <span class="sprout-emoji" aria-hidden="true">🌱</span>
             </div>
           </div>
+
+.sprout-emoji{
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,.12));
+}
 
           <p class="hero-description" id="hero-main-text">
             124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
