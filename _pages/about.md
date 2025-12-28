@@ -1092,6 +1092,26 @@ redirect_from:
   transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(0,0,0,.18);
 }
+
+
+/* === Technologies + Buscadoras side-by-side only === */
+.dual-sections-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);
+  gap:clamp(2rem,4vw,3rem);
+  align-items:stretch;
+}
+
+.dual-column{
+  min-width:0;
+}
+
+/* Make them stack on smaller screens */
+@media (max-width: 900px){
+  .dual-sections-grid{
+    grid-template-columns:1fr;
+  }
+}
     
   </style>
 </head>
@@ -1155,34 +1175,17 @@ redirect_from:
   </a>
 </div>
 
-       <div class="hero-media hero-media-small skeleton" aria-label="Hero media">
-  <img
-    src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/NDAI5.gif"
-    alt="FOUND Project team using advanced technology in field search operations"
-    class="hero-image loading"
-    loading="lazy"
-    onload="this.classList.remove('loading'); this.parentElement.classList.remove('skeleton')" />
-</div>
+              <div class="hero-media hero-media-small skeleton" aria-label="Hero media">
+          <img
+            src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/NDAI5.gif"
+            alt="FOUND Project team using advanced technology in field search operations"
+            class="hero-image loading"
+            loading="lazy"
+            onload="this.classList.remove('loading'); this.parentElement.classList.remove('skeleton')" />
+        </div>
+      </div> <!-- end .hero-top -->
+    </div>   <!-- end .hero-content -->
   </section>
-
-/* === Technologies + Buscadoras side-by-side only === */
-.dual-sections-grid{
-  display:grid;
-  grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);
-  gap:clamp(2rem,4vw,3rem);
-  align-items:stretch;
-}
-
-.dual-column{
-  min-width:0;
-}
-
-/* Make them stack on smaller screens */
-@media (max-width: 900px){
-  .dual-sections-grid{
-    grid-template-columns:1fr;
-  }
-}
 
   <!-- Technologies + Buscadoras side by side -->
   <section class="content-section">
