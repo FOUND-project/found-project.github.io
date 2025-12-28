@@ -334,21 +334,23 @@ redirect_from:
 
     /* ✅ 5 items => 20% steps */
     @keyframes wordSlide{
-      0%   { transform: translateY(0%); }
-      16%  { transform: translateY(0%); }
-
-      20%  { transform: translateY(-20%); }
-      36%  { transform: translateY(-20%); }
-
-      40%  { transform: translateY(-40%); }
-      56%  { transform: translateY(-40%); }
-
-      60%  { transform: translateY(-60%); }
-      76%  { transform: translateY(-60%); }
-
-      80%  { transform: translateY(-80%); }
-      100% { transform: translateY(-80%); }
-    }
+  0%   { transform: translateY(0); }
+  15%  { transform: translateY(0); }
+  
+  20%  { transform: translateY(-20%); }
+  35%  { transform: translateY(-20%); }
+  
+  40%  { transform: translateY(-40%); }
+  55%  { transform: translateY(-40%); }
+  
+  60%  { transform: translateY(-60%); }
+  75%  { transform: translateY(-60%); }
+  
+  80%  { transform: translateY(-80%); }
+  95%  { transform: translateY(-80%); }
+  
+  100% { transform: translateY(0); }
+}
 
     /* ===== Sprout (improved) synced to the word animation (CSS-only) ===== */
     .sprout{
