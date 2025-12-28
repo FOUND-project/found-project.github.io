@@ -88,7 +88,6 @@ author_profile: true
       margin-bottom: 1rem;
     }
 
-    /* Hide checkbox */
     .expand-toggle {
       display: none;
     }
@@ -137,7 +136,6 @@ author_profile: true
       content: '−';
     }
 
-    /* Content expansion */
     .card-content {
       max-height: 0;
       overflow: hidden;
@@ -188,54 +186,6 @@ author_profile: true
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     }
 
-    .share-wrapper {
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 2px solid rgba(27, 77, 62, 0.1);
-    }
-
-    .share-label {
-      font-weight: 700;
-      color: #1b4d3e;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    .share-buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .share-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 0.75rem 1rem;
-      background: #f8f9fa;
-      border-radius: 10px;
-      color: #1b4d3e;
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(0, 0, 0, 0.06);
-    }
-
-    .share-item:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(27, 77, 62, 0.15);
-      background: white;
-    }
-
-    .share-item .icon {
-      font-size: 1.5rem;
-    }
-
     @media (max-width: 768px) {
       body {
         padding: 1.5rem 1rem;
@@ -273,6 +223,25 @@ author_profile: true
     </div>
 
     <div class="news-grid">
+    
+      <!-- Card 0 -->
+      <div class="news-card">
+        <span class="card-emoji">🎖️</span>
+        <input type="checkbox" id="card0" class="expand-toggle">
+        <label for="card0" class="card-header">
+          <span class="card-title">FOUND's Prioneer wins UK FCDO's Sir Nicholas Browne Policy and Expertise Award</span>
+          <span class="expand-icon"></span>
+        </label>
+        <div class="card-content">
+          <p>We are proud to share that <strong>Mariela Garfias</strong> has been awarded the <strong>Sir Nicholas Browne Policy and Expertise Award</strong>, a UK FCDO award recognising excellence in delivering policy objectives, selected from 200+ nominations.</p>
+          <p>Mariela is FOUND’s FCDO pioneer and one of the people most responsible for the project’s impact.</p>
+          <p>Through FOUND, and with the support of incredible partners, we have located 27 people who were victims of disappearance in <strong>Mexico</strong>, allowing families move towards answers, and a form of closure. Our work is now being embedded with local and national authorities, and has expanded to collaboration with the <strong>Colombian Search Unit</strong> and the Executive Office of the <strong>UN Secretary-General</strong>.</p>
+          <p>In her acceptance speech, Mariela shared words that capture the spirit of FOUND: “From my decomposed body, flowers shall grow, and I am in them. That is eternity.” — Edvard Munch.</p>
+          <p>When searching for clandestine graves using technologies, nature often bears witness — through subtle changes in soil and vegetation. Memory persists. Our responsibility is to find it.</p>
+          <p>Mariela thanked those who carry this work with us: the British Embassy Mexico City Embassy in Mexico City, our mentor Martin Johnston, the Frontier Tech Hub team, and above all the searching mothers, whose knowledge and strength remain our compass.</p>
+        </div>
+      </div>
+
       <!-- Card 1 -->
       <div class="news-card">
         <span class="card-emoji">🇨🇴🇲🇽</span>
@@ -283,32 +252,10 @@ author_profile: true
         </label>
         <div class="card-content">
           <p>We are deeply grateful to <strong>CVM Cyber</strong> and <strong>Ciaran Martin</strong> for their generous support in making this visit possible.</p>
-          
           <p>We welcomed <strong>Héctor Javier Gómez</strong>, geophysicist from Colombia's <em>Unidad de Búsqueda de Personas Dadas por Desaparecidas (UBPD)</em>, for a joint field deployment to FOUND's experimental sites in Jalisco.</p>
-          
           <p>This visit focused on the gathering and processing of drone-based hyperspectral imagery across all five of FOUND's experimental sites — marking only the second time this cutting-edge technology has been used in Mexico for humanitarian purposes.</p>
-          
           <p>It follows the October 2025 visit by <strong>Dr Julián Arias</strong>, Director of Prospection, Recovery and Identification at UBPD, which formally launched our collaboration on search and identification methodologies.</p>
-          
           <p>During this second visit, the UBPD offered key technical recommendations to enhance FOUND's detection strategies for clandestine graves. The collaboration will continue in January 2026, when the FOUND team will visit UBPD's team in Colombia to exchange experiences and integrate UBPD methodologies across FOUND's partner states in Mexico.</p>
-          
-          <div class="share-wrapper">
-            <span class="share-label">Share this update:</span>
-            <div class="share-buttons">
-              <a class="share-item" href="https://www.linkedin.com/shareArticle?mini=true&url=https://found-project.github.io/news/#ubpd-visit" target="_blank">
-                <span class="icon">🔗</span>
-                <span>LinkedIn</span>
-              </a>
-              <a class="share-item" href="https://twitter.com/intent/tweet?url=https://found-project.github.io/news/#ubpd-visit" target="_blank">
-                <span class="icon">🐦</span>
-                <span>Twitter</span>
-              </a>
-              <a class="share-item" href="https://wa.me/?text=https://found-project.github.io/news/#ubpd-visit" target="_blank">
-                <span class="icon">💬</span>
-                <span>WhatsApp</span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -321,29 +268,9 @@ author_profile: true
           <span class="expand-icon"></span>
         </label>
         <div class="card-content">
-          <p>This piece is the result of more than six months of email conversations, WhatsApp messages, and the journalist's in-person visit to our experimental sites in Jalisco, Mexico. We are deeply grateful for the care, depth and commitment brought to this story after months spent listening to families, researchers and officials.</p>
-          
-          <p><a href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" target="_blank">📖 Read the article here</a></p>
-          
           <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_theGuardian.jpeg?raw=true" alt="FOUND in The Guardian">
-          
-          <div class="share-wrapper">
-            <span class="share-label">Share this update:</span>
-            <div class="share-buttons">
-              <a class="share-item" href="https://www.linkedin.com/shareArticle?mini=true&url=https://found-project.github.io/news/#guardian" target="_blank">
-                <span class="icon">🔗</span>
-                <span>LinkedIn</span>
-              </a>
-              <a class="share-item" href="https://twitter.com/intent/tweet?url=https://found-project.github.io/news/#guardian" target="_blank">
-                <span class="icon">🐦</span>
-                <span>Twitter</span>
-              </a>
-              <a class="share-item" href="https://wa.me/?text=https://found-project.github.io/news/#guardian" target="_blank">
-                <span class="icon">💬</span>
-                <span>WhatsApp</span>
-              </a>
-            </div>
-          </div>
+          <p>This piece is the result of more than six months of email conversations, WhatsApp messages, and the journalist's in-person visit to our experimental sites in Jalisco, Mexico. We are deeply grateful for the care, depth and commitment brought to this story after months spent listening to families, researchers and officials.</p>
+          <p><a href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" target="_blank">📖 Read the article here</a></p>
         </div>
       </div>
 
@@ -357,10 +284,7 @@ author_profile: true
         </label>
         <div class="card-content">
           <p>In the pitch, our team showcased FOUND's impact to date, and we were awarded funding that will enable us to scale our mission: to drive systemic change in how missing persons are searched for in Mexico, Colombia, and beyond.</p>
-          
-          <p><strong>🌱 Driven by families and research communities</strong><br>
-          FOUND is guided and motivated by mothers' search groups and researchers from CentroGeo, UNAM, IPN, UdeG, ITESO, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.</p>
-          
+          <p><strong>🌱 Driven by families and research communities</strong><br>FOUND is guided and motivated by mothers' search groups and researchers from CentroGeo, UNAM, IPN, UdeG, ITESO, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.</p>
           <p><strong>🔍 We are now working directly with:</strong></p>
           <ul>
             <li>Executive Office of the UN Secretary-General</li>
@@ -372,29 +296,8 @@ author_profile: true
             <li>British Embassy in Mexico City</li>
             <li>British Association for Forensic Anthropology</li>
           </ul>
-          
-          <p><strong>🛰️ Technology for memory, dignity, and closure</strong><br>
-          We will continue developing — and embedding in official protocols — new ways to locate missing persons using advanced tools such as machine learning models, hyperspectral cameras, seismic instruments, and electrical resistivity.</p>
-          
+          <p><strong>🛰️ Technology for memory, dignity, and closure</strong><br>We will continue developing — and embedding in official protocols — new ways to locate missing persons using advanced tools such as machine learning models, hyperspectral cameras, seismic instruments, and electrical resistivity.</p>
           <p><em>FOUND: Interpreting Nature to Locate Those We Are Missing</em></p>
-          
-          <div class="share-wrapper">
-            <span class="share-label">Share this update:</span>
-            <div class="share-buttons">
-              <a class="share-item" href="https://www.linkedin.com/shareArticle?mini=true&url=https://found-project.github.io/news/#fcdo" target="_blank">
-                <span class="icon">🔗</span>
-                <span>LinkedIn</span>
-              </a>
-              <a class="share-item" href="https://twitter.com/intent/tweet?url=https://found-project.github.io/news/#fcdo" target="_blank">
-                <span class="icon">🐦</span>
-                <span>Twitter</span>
-              </a>
-              <a class="share-item" href="https://wa.me/?text=https://found-project.github.io/news/#fcdo" target="_blank">
-                <span class="icon">💬</span>
-                <span>WhatsApp</span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -414,28 +317,10 @@ author_profile: true
             <li><strong>VICE:</strong> <a href="https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/" target="_blank">Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims</a></li>
             <li><strong>NBC:</strong> <a href="https://www.nbcnews.com/news/amp/rcna221791" target="_blank">Clothed pigs are buried in Mexico as scientists use them in search of missing</a></li>
           </ul>
-          
-          <div class="share-wrapper">
-            <span class="share-label">Share this update:</span>
-            <div class="share-buttons">
-              <a class="share-item" href="https://www.linkedin.com/shareArticle?mini=true&url=https://found-project.github.io/news/#media-coverage" target="_blank">
-                <span class="icon">🔗</span>
-                <span>LinkedIn</span>
-              </a>
-              <a class="share-item" href="https://twitter.com/intent/tweet?url=https://found-project.github.io/news/#media-coverage" target="_blank">
-                <span class="icon">🐦</span>
-                <span>Twitter</span>
-              </a>
-              <a class="share-item" href="https://wa.me/?text=https://found-project.github.io/news/#media-coverage" target="_blank">
-                <span class="icon">💬</span>
-                <span>WhatsApp</span>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
+
     </div>
   </div>
 </body>
 </html>
-
