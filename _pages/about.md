@@ -1197,7 +1197,7 @@ redirect_from:
     <div class="award-text">
       <div class="award-pill">Award</div>
       <div class="award-title">
-        FOUND recognised with the Sir Nicholas Browne Policy and Expertise Award
+        FOUND's pioneer recognised with the Sir Nicholas Browne Policy and Expertise Award
         <span class="arrow">↗</span>
       </div>
       <div class="award-meta">
@@ -1317,18 +1317,26 @@ redirect_from:
             </div>
           </div>
 
-          <!-- 2. FCDO -->
-          <div class="collab-card">
-            <div class="collab-logo">
-              <img src="https://github.com/FOUND-project/found-project.github.io/blob/bd3ef3bd33596258b2738274017f51a2e2c05186/images/FCDO_logo_960x640.png"
-                   alt="UK Foreign, Commonwealth & Development Office logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-2">UK Foreign, Commonwealth &amp; Development Office (FCDO)</div>
-              <div class="collab-note" id="collab-note-2">Policy, Funding, Partnerships</div>
-            </div>
-          </div>
+         <!-- 2. FCDO -->
+<div class="collab-card">
+  <div class="collab-logo">
+    <img
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/bd3ef3bd33596258b2738274017f51a2e2c05186/images/FCDO_logo_960x640.png"
+      alt="UK Foreign, Commonwealth & Development Office logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')">
+  </div>
+
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-2">
+      UK Foreign, Commonwealth &amp; Development Office (FCDO)
+    </div>
+    <div class="collab-note" id="collab-note-2">
+      Policy, Funding, Partnerships
+    </div>
+  </div>
+</div>
 
           <!-- 3. CentroGeo -->
           <div class="collab-card">
