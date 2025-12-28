@@ -225,13 +225,17 @@ author_profile: true
     <div class="news-grid">
     
       <!-- Card 0 -->
-      <div class="news-card">
-        <span class="card-emoji">🎖️</span>
-        <input type="checkbox" id="card0" class="expand-toggle">
-        <label for="card0" class="card-header">
-          <span class="card-title">FOUND's Prioneer wins UK FCDO's Sir Nicholas Browne Policy and Expertise Award</span>
-          <span class="expand-icon"></span>
-        </label>
+    <div class="news-card" id="mariela-award">
+  <span class="card-emoji">🎖️</span>
+
+  <input type="checkbox" id="card0" class="expand-toggle">
+
+  <label for="card0" class="card-header">
+    <span class="card-title">
+      FOUND’s Pioneer wins UK FCDO’s Sir Nicholas Browne Policy and Expertise Award
+    </span>
+    <span class="expand-icon"></span>
+  </label>
         <div class="card-content">
           <p>We are proud to share that <strong>Mariela Garfias</strong> has been awarded the <strong>Sir Nicholas Browne Policy and Expertise Award</strong>, a UK FCDO award recognising excellence in delivering policy objectives, selected from 200+ nominations.</p>
           <p>Mariela is FOUND’s FCDO pioneer and one of the people most responsible for the project’s impact.</p>
