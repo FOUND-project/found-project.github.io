@@ -1430,6 +1430,20 @@ redirect_from:
       <h2 class="section-title" id="social-title">Follow Our Journey</h2>
       <p class="section-subtitle" id="social-subtitle">Our latest findings, community stories, and collaborations</p>
 
+<div class="social-grid">
+        <div class="social-embed">
+          <div class="iframe-container">
+            <iframe
+              src="https://www.linkedin.com/embed/feed/update/urn:li:share:7405294962692595712"
+              height="880"
+              width="504"
+              frameborder="0"
+              allowfullscreen
+              title="FOUND Project LinkedIn update"
+              loading="lazy"></iframe>
+          </div>
+        </div>
+
       <div class="social-grid">
         <div class="social-embed">
           <div class="iframe-container">
