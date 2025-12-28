@@ -1078,8 +1078,7 @@ redirect_from:
   }
 }
 
-
- <!-- NDAI5 section -->    
+    
 .hero-media-small{
   max-width: 340px;          /* smaller by default */
   transition: transform .45s cubic-bezier(.4,0,.2,1),
