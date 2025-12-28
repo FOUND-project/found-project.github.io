@@ -1156,7 +1156,7 @@ redirect_from:
           <!-- 2. FCDO -->
           <div class="collab-card">
             <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20UK's%20Foreign%2C%20Commonwealth%20%26%20Development%20Office%20(FCDO).png"
+              <img src="https://github.com/FOUND-project/found-project.github.io/blob/bd3ef3bd33596258b2738274017f51a2e2c05186/images/FCDO_logo_960x640.png"
                    alt="UK Foreign, Commonwealth & Development Office logo"
                    loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
