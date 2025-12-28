@@ -1682,7 +1682,7 @@ redirect_from:
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
-      <em id="footer-text">FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>
+      <em id="footer-text">FOUND: Interpreting Nature to Find Those We Are Missing</em>
     </div>
   </footer>
 
