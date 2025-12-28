@@ -1195,17 +1195,14 @@ redirect_from:
   <a href="/news/#mariela-award" class="award-card">
     <div class="award-icon" aria-hidden="true"></div>
     <div class="award-text">
-      <div class="award-pill">Recognition</div>
+      <div class="award-pill">Award</div>
       <div class="award-title">
-        FOUND’s FCDO pioneer recognised with the Sir Nicholas Browne Policy and Expertise Award
+        FOUND recognised with the Sir Nicholas Browne Policy and Expertise Award
         <span class="arrow">↗</span>
       </div>
       <div class="award-meta">
         Selected from over 200 nominations across the UK Foreign, Commonwealth &amp; Development Office.
       </div>
-      <p class="award-summary">
-        <strong>Mariela Garfias</strong> was recognised for her role in shaping FOUND’s impact: locating victims of disappearance in Mexico, supporting families on their path to answers, and helping embed our work with authorities in Mexico, Colombia, and the UN system.
-      </p>
     </div>
   </a>
 </div>
