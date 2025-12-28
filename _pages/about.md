@@ -1115,18 +1115,9 @@ redirect_from:
                   <li id="word-5">bring closure.</li>
                 </ul>
               </div>
-              <span class="sprout-emoji" aria-hidden="true">🌱</span>
+              <span class="sprout-emoji" aria-hidden="true"></span>
             </div>
           </div>
-
-.sprout-emoji{
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  line-height: 1;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,.12));
-}
 
           <p class="hero-description" id="hero-main-text">
             124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
