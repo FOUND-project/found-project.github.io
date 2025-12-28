@@ -296,10 +296,7 @@ redirect_from:
   border:1px solid rgba(45,95,77,.14);
   box-shadow:var(--shadow-sm);
   isolation:isolate;
-  /* Center content vertically */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* IMPORTANT: no flex here – it must act as a "mask window" */
 }
 
 .word-carousel::after{
@@ -322,31 +319,27 @@ redirect_from:
   position:relative;
   z-index:1;
   animation:wordSlide var(--word-duration) cubic-bezier(.4,0,.2,1) infinite;
-  /* Ensure list takes full height */
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  /* IMPORTANT: no flex + no height: 100% */
 }
 
 .word-list li{
   height:var(--word-h);
   display:flex;
   align-items:center;
+  justify-content:center;
   color:var(--light-green);
   font-weight:900;
   font-size:clamp(2.05rem,5vw,3.6rem);
   letter-spacing:-.02em;
   text-shadow:0 10px 28px rgba(15,23,42,.10);
   white-space:nowrap;
-  /* Ensure perfect vertical centering */
-  justify-content: center;
-  flex-shrink: 0;
-  line-height: 1;
-  margin: 0;
-  padding: 0;
+  flex-shrink:0;
+  line-height:1;
+  margin:0;
+  padding:0;
 }
 
-/* ✅ 5 items => 20% steps, adjusted for perfect centering */
+/* ✅ 5 items => 20% steps */
 @keyframes wordSlide{
   0%, 15.99%   { transform: translateY(0%); }
   16%, 35.99%  { transform: translateY(-20%); }
