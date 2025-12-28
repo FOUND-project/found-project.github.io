@@ -243,6 +243,17 @@ author_profile: true
           <p>In her acceptance speech, Mariela shared words that capture the spirit of FOUND: “From my decomposed body, flowers shall grow, and I am in them. That is eternity.” — Edvard Munch.</p>
           <p>When searching for clandestine graves using technologies, nature often bears witness — through subtle changes in soil and vegetation. Memory persists. Our responsibility is to find it.</p>
           <p>Mariela thanked those who carry this work with us: the British Embassy Mexico City Embassy in Mexico City, our mentor Martin Johnston, the Frontier Tech Hub team, and above all the searching mothers, whose knowledge and strength remain our compass.</p>
+          <p>Mariela thanked those who carry this work with us: the British Embassy Mexico City Embassy in Mexico City, our mentor Martin Johnston, the Frontier Tech Hub team, and above all the searching mothers, whose knowledge and strength remain our compass.</p>
+<p>
+  <a
+    href="https://www.linkedin.com/posts/found-project_mexico-colombian-activity-7405294966266044416-2-bh?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="card-link"
+  >
+    Read the full post on LinkedIn ↗
+  </a>
+</p>
         </div>
       </div>
 
