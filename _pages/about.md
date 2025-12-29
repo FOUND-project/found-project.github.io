@@ -43,8 +43,8 @@ redirect_from:
       --radius-md:18px;
       --radius-sm:14px;
 
-      /* Rolling words – slightly taller to avoid clipping */
-      --word-h:clamp(3.4rem,6.4vw,4.6rem);
+      /* Rolling words – tuned a bit smaller to avoid clipping everywhere */
+      --word-h:clamp(2.6rem,5vw,3.4rem);
       --word-duration:10.5s;
     }
 
@@ -261,6 +261,7 @@ redirect_from:
       font-weight:900;
       display:flex;
       align-items:flex-start;
+      justify-content:flex-start;
       color:var(--dark-green);
       flex-wrap:wrap;
       gap:.75rem;
@@ -268,30 +269,40 @@ redirect_from:
       line-height:1.08;
     }
 
+    /* PILL: now two lines stacked inside */
     .tagline-pill{
       display:inline-flex;
-      align-items:center;
-      gap:.55rem;
+      flex-direction:column;
+      align-items:flex-start;
+      justify-content:flex-start;
       padding:.6rem 1.1rem;
       border-radius:999px;
       background:linear-gradient(135deg, rgba(255,255,255,.9) 0%, rgba(232,245,240,.8) 100%);
       border:1px solid rgba(45,95,77,.16);
       box-shadow:var(--shadow-sm);
-      white-space:nowrap;
+      white-space:normal;
     }
 
+    /* Line 1: static text */
     .tagline-pill span#hero-tagline-static{
-      font-size:clamp(2.05rem,5vw,3.6rem);
+      display:block;
+      width:100%;
+      font-size:clamp(1.9rem,4.4vw,3rem);
       font-weight:900;
       color:var(--dark-green);
       letter-spacing:-.03em;
+      line-height:1.1;
+      text-align:left;
     }
 
+    /* Line 2: scrolling words below, centred */
     .word-carousel{
+      margin-top:.15rem;
       height:var(--word-h);
       position:relative;
-      display:inline-flex;
+      display:flex;
       align-items:center;
+      justify-content:center;
       padding:0 .05rem;
       overflow:hidden;
       border-radius:0;
@@ -299,17 +310,21 @@ redirect_from:
       border:none;
       box-shadow:none;
       isolation:isolate;
-      min-width:auto;
+      width:100%;
     }
 
     .word-list{
       list-style:none;
       margin:0;
-      padding:0 .65rem;
+      padding:0 .4rem;
       will-change:transform;
       position:relative;
       z-index:1;
       animation:wordSlide var(--word-duration) cubic-bezier(.4,0,.2,1) infinite;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      width:100%;
     }
 
     .word-list li{
@@ -317,14 +332,16 @@ redirect_from:
       display:flex;
       align-items:center;
       justify-content:center;
+      width:100%;
       color:var(--light-green);
       font-weight:900;
-      font-size:clamp(2.05rem,5vw,3.6rem);
+      font-size:clamp(1.9rem,4.4vw,3rem);
       letter-spacing:-.02em;
       text-shadow:0 10px 28px rgba(15,23,42,.10);
       white-space:nowrap;
       flex-shrink:0;
       line-height:1.05;
+      text-align:center;
     }
 
     /* 5 items => 20% steps */
@@ -1103,6 +1120,10 @@ redirect_from:
     }
 
     @media (max-width:768px){
+      :root{
+        --word-h:2.4rem;
+      }
+
       .page,
       #main,
       .initial-content,
@@ -1124,31 +1145,30 @@ redirect_from:
         max-width:100%;
       }
 
-      /* Rolling words: keep animation but adjust sizes so they stay centred and visible */
-      :root{
-        --word-h:3rem;
-      }
-
+      /* Tagline layout on phones: stack and centre */
       .animated-tagline{
         flex-direction:column;
-        align-items:flex-start;
+        align-items:center;
         gap:.45rem;
       }
 
       .tagline-pill{
         padding:.45rem .8rem;
         max-width:100%;
-        white-space:normal;
-        align-items:flex-start;
+        align-items:center;
+        text-align:center;
       }
 
       .tagline-pill span#hero-tagline-static{
         font-size:clamp(1.6rem,6vw,2rem);
+        text-align:center;
       }
 
       .word-carousel{
         height:var(--word-h);
         min-width:0;
+        justify-content:center;
+        align-items:center;
       }
 
       .word-list{
@@ -1275,7 +1295,9 @@ redirect_from:
         <div class="hero-text">
           <div class="animated-tagline">
             <div class="tagline-pill" aria-label="FOUND tagline">
-              <span id="hero-tagline-static">Using technology to&nbsp;</span>
+              <!-- Line 1 -->
+              <span id="hero-tagline-static">Using technology to</span>
+              <!-- Line 2 (scrolling) -->
               <div class="word-carousel" role="text">
                 <ul class="word-list">
                   <li id="word-1">search.</li>
@@ -1807,7 +1829,7 @@ redirect_from:
     (function(){
       const translations = {
         en:{
-          'hero-tagline-static':'Using technology to&nbsp;',
+          'hero-tagline-static':'Using technology to',
           'word-1':'search.',
           'word-2':'remember.',
           'word-3':'dignify.',
@@ -1829,7 +1851,7 @@ redirect_from:
           'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
         },
         es:{
-          'hero-tagline-static':'Usando tecnología para&nbsp;',
+          'hero-tagline-static':'Usando tecnología para',
           'word-1':'buscar.',
           'word-2':'recordar.',
           'word-3':'dignificar.',
@@ -1851,7 +1873,7 @@ redirect_from:
           'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
         },
         nah:{
-          'hero-tagline-static':'Teknolojíayoh ika&nbsp;',
+          'hero-tagline-static':'Teknolojíayoh ika',
           'word-1':'temoa.',
           'word-2':'quilnamictia.',
           'word-3':'tlatepanita.',
