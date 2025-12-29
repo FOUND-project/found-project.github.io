@@ -42,10 +42,6 @@ redirect_from:
       --radius-lg:22px;
       --radius-md:18px;
       --radius-sm:14px;
-
-      /* Rolling words – height tuned so words never clip */
-      --word-h:clamp(3.1rem,5vw,4.1rem);
-      --word-duration:10.5s;
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -268,7 +264,7 @@ redirect_from:
       line-height:1.08;
     }
 
-    /* PILL: text line + scrolling words stacked */
+    /* Tagline pill: first line + rotating word line stacked */
     .tagline-pill{
       display:inline-flex;
       flex-direction:column;
@@ -295,59 +291,23 @@ redirect_from:
 
     .word-carousel{
       margin-top:.15rem;
-      height:var(--word-h);
-      position:relative;
+      width:100%;
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:0 .05rem;
-      overflow:hidden;
-      border-radius:0;
-      background:transparent;
-      border:none;
-      box-shadow:none;
-      isolation:isolate;
-      width:100%;
     }
 
-    .word-list{
-      list-style:none;
-      margin:0;
-      padding:0 .4rem;
-      will-change:transform;
-      position:relative;
-      z-index:1;
-      animation:wordSlide var(--word-duration) cubic-bezier(.4,0,.2,1) infinite;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      width:100%;
-    }
-
-    .word-list li{
-      height:var(--word-h);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      width:100%;
-      color:var(--light-green);
-      font-weight:900;
+    .hero-word{
+      display:block;
       font-size:clamp(1.9rem,4.4vw,3rem);
+      font-weight:900;
       letter-spacing:-.02em;
+      color:var(--light-green);
       text-shadow:0 10px 28px rgba(15,23,42,.10);
       white-space:nowrap;
-      flex-shrink:0;
-      line-height:1.05;
       text-align:center;
-    }
-
-    /* 5 items => 20% steps */
-    @keyframes wordSlide{
-      0%,15.99%{transform:translateY(0%);}
-      16%,35.99%{transform:translateY(-20%);}
-      36%,55.99%{transform:translateY(-40%);}
-      56%,75.99%{transform:translateY(-60%);}
-      76%,100%{transform:translateY(-80%);}
+      transition:opacity .28s var(--transition-smooth);
+      opacity:1;
     }
 
     .hero-description{
@@ -366,12 +326,13 @@ redirect_from:
       border-radius:6px;
     }
 
-    /* Wrap for main paragraph + award */
-    .hero-main-and-award{
+    /* Right-hand column (image + award, award pushed down) */
+    .hero-side{
       display:flex;
       flex-direction:column;
-      gap:.9rem;
-      margin-top:.3rem;
+      gap:1rem;
+      align-items:stretch;
+      min-height:100%;
     }
 
     .hero-media{
@@ -384,9 +345,8 @@ redirect_from:
       transform:translateY(0);
       transition:
         transform .45s var(--transition-smooth),
-        box-shadow .45s var(--transition-smooth),
-        max-width .45s var(--transition-smooth);
-      max-width:420px;
+        box-shadow .45s var(--transition-smooth);
+      max-width:100%;
       margin-left:auto;
     }
 
@@ -423,7 +383,6 @@ redirect_from:
     .hero-media:hover{
       transform:translateY(-6px);
       box-shadow:var(--shadow-lg);
-      max-width:480px;
     }
 
     .hero-media:hover .hero-image{
@@ -434,7 +393,7 @@ redirect_from:
        Award highlight
     =========================== */
     .award-highlight{
-      margin:.5rem 0 0;
+      margin-top:auto; /* push award down to use right-hand space */
     }
 
     .award-card{
@@ -1122,21 +1081,9 @@ redirect_from:
         margin:1rem auto 0;
         max-width:520px;
       }
-    }
-
-    @media (min-width:1024px){
-      /* Put award to the right of the paragraph on larger screens */
-      .hero-main-and-award{
-        flex-direction:row;
-        align-items:stretch;
-        gap:1.75rem;
-      }
-      .hero-description{
-        flex:1.4;
-      }
-      .award-highlight{
-        flex:1;
-        margin-top:0;
+      .hero-side{
+        max-width:520px;
+        margin:0 auto;
       }
     }
 
@@ -1148,10 +1095,6 @@ redirect_from:
       .page__content,
       .archive{
         width:100% !important;
-      }
-
-      :root{
-        --word-h:2.7rem;
       }
 
       .lang-toggle{
@@ -1166,7 +1109,6 @@ redirect_from:
         max-width:100%;
       }
 
-      /* Tagline layout on phones: stack + centre */
       .animated-tagline{
         flex-direction:column;
         align-items:center;
@@ -1185,12 +1127,7 @@ redirect_from:
         text-align:center;
       }
 
-      .word-carousel{
-        justify-content:center;
-        align-items:center;
-      }
-
-      .word-list li{
+      .hero-word{
         font-size:clamp(1.7rem,6vw,2.2rem);
       }
 
@@ -1198,7 +1135,6 @@ redirect_from:
         margin-top:.6rem;
       }
 
-      /* Hero media as shallow card */
       .hero-media{
         max-width:100%;
         box-shadow:var(--shadow-sm);
@@ -1214,7 +1150,6 @@ redirect_from:
         max-width:100%;
       }
 
-      /* Image galleries as smaller cards */
       .image-gallery{
         grid-template-columns:repeat(2,1fr);
       }
@@ -1232,7 +1167,6 @@ redirect_from:
         box-shadow:var(--shadow-sm);
       }
 
-      /* Smaller Institutional Partnerships cards on phones */
       .collab-card{
         min-height:auto;
         box-shadow:var(--shadow-sm);
@@ -1306,56 +1240,51 @@ redirect_from:
   <section class="hero">
     <div class="hero-content">
       <div class="hero-top">
+        <!-- LEFT: tagline + paragraph -->
         <div class="hero-text">
           <div class="animated-tagline">
             <div class="tagline-pill" aria-label="FOUND tagline">
               <!-- Line 1 -->
               <span id="hero-tagline-static">Using technology to</span>
-              <!-- Line 2 (scrolling words) -->
+              <!-- Line 2 (rotating word) -->
               <div class="word-carousel" role="text">
-                <ul class="word-list">
-                  <li id="word-1">search.</li>
-                  <li id="word-2">remember.</li>
-                  <li id="word-3">dignify.</li>
-                  <li id="word-4">find.</li>
-                  <li id="word-5">bring closure.</li>
-                </ul>
+                <span id="hero-word" class="hero-word">search.</span>
               </div>
             </div>
           </div>
 
-          <!-- Paragraph + award together -->
-          <div class="hero-main-and-award">
-            <p class="hero-description" id="hero-main-text">
-              124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
-              <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.
-            </p>
-
-            <div class="award-highlight">
-              <a href="/news/#mariela-award" class="award-card">
-                <div class="award-icon" aria-hidden="true"></div>
-                <div class="award-text">
-                  <div class="award-pill">Award</div>
-                  <div class="award-title">
-                    FOUND's pioneer recognised with the Sir Nicholas Browne Policy and Expertise Award
-                    <span class="arrow">↗</span>
-                  </div>
-                  <div class="award-meta">
-                    Selected from over 200 nominations across the UK Foreign, Commonwealth &amp; Development Office.
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
+          <p class="hero-description" id="hero-main-text">
+            124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
+            <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.
+          </p>
         </div>
 
-        <div class="hero-media skeleton" aria-label="Hero media">
-          <img
-            src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/NDAI5.gif"
-            alt="FOUND Project team using advanced technology in field search operations"
-            class="hero-image loading"
-            loading="lazy"
-            onload="this.classList.remove('loading'); this.parentElement.classList.remove('skeleton')" />
+        <!-- RIGHT: image + award, award pushed down -->
+        <div class="hero-side">
+          <div class="hero-media skeleton" aria-label="Hero media">
+            <img
+              src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/NDAI5.gif"
+              alt="FOUND Project team using advanced technology in field search operations"
+              class="hero-image loading"
+              loading="lazy"
+              onload="this.classList.remove('loading'); this.parentElement.classList.remove('skeleton')" />
+          </div>
+
+          <div class="award-highlight">
+            <a href="/news/#mariela-award" class="award-card">
+              <div class="award-icon" aria-hidden="true"></div>
+              <div class="award-text">
+                <div class="award-pill">Award</div>
+                <div class="award-title">
+                  FOUND's pioneer recognised with the Sir Nicholas Browne Policy and Expertise Award
+                  <span class="arrow">↗</span>
+                </div>
+                <div class="award-meta">
+                  Selected from over 200 nominations across the UK Foreign, Commonwealth &amp; Development Office.
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -1841,7 +1770,7 @@ redirect_from:
 
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <!-- LANGUAGE TOGGLE -->
+  <!-- LANGUAGE TOGGLE + WORD ROTATION -->
   <script>
     (function(){
       const translations = {
@@ -1913,6 +1842,37 @@ redirect_from:
         }
       };
 
+      let currentLang = 'en';
+      let heroWords = [];
+      let wordIndex = 0;
+      let wordInterval = null;
+
+      function buildHeroWords(lang){
+        const dict = translations[lang] || translations.en;
+        const keys = ['word-1','word-2','word-3','word-4','word-5'];
+        heroWords = keys.map(k => dict[k]).filter(Boolean);
+        wordIndex = 0;
+        const span = document.getElementById('hero-word');
+        if(span && heroWords.length){
+          span.textContent = heroWords[0];
+        }
+      }
+
+      function startWordRotation(){
+        const span = document.getElementById('hero-word');
+        if(wordInterval) clearInterval(wordInterval);
+        if(!span || heroWords.length < 2) return;
+
+        wordInterval = setInterval(function(){
+          span.style.opacity = '0';
+          setTimeout(function(){
+            wordIndex = (wordIndex + 1) % heroWords.length;
+            span.textContent = heroWords[wordIndex];
+            span.style.opacity = '1';
+          },180);
+        },2300);
+      }
+
       function setLanguage(lang){
         const dict = translations[lang] || translations.en;
 
@@ -1930,7 +1890,11 @@ redirect_from:
           btn.classList.toggle('active', btn.dataset.lang === lang);
         });
 
+        currentLang = lang;
         try{ localStorage.setItem('found-lang', lang); }catch(e){}
+
+        buildHeroWords(lang);
+        startWordRotation();
       }
 
       document.addEventListener('DOMContentLoaded', function(){
