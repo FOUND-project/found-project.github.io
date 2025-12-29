@@ -43,8 +43,8 @@ redirect_from:
       --radius-md:18px;
       --radius-sm:14px;
 
-      /* Rolling words – tuned a bit smaller to avoid clipping everywhere */
-      --word-h:clamp(2.6rem,5vw,3.4rem);
+      /* Rolling words – height tuned so words never clip */
+      --word-h:clamp(3.1rem,5vw,4.1rem);
       --word-duration:10.5s;
     }
 
@@ -261,7 +261,6 @@ redirect_from:
       font-weight:900;
       display:flex;
       align-items:flex-start;
-      justify-content:flex-start;
       color:var(--dark-green);
       flex-wrap:wrap;
       gap:.75rem;
@@ -269,13 +268,13 @@ redirect_from:
       line-height:1.08;
     }
 
-    /* PILL: now two lines stacked inside */
+    /* PILL: text line + scrolling words stacked */
     .tagline-pill{
       display:inline-flex;
       flex-direction:column;
       align-items:flex-start;
       justify-content:flex-start;
-      padding:.6rem 1.1rem;
+      padding:.7rem 1.4rem;
       border-radius:999px;
       background:linear-gradient(135deg, rgba(255,255,255,.9) 0%, rgba(232,245,240,.8) 100%);
       border:1px solid rgba(45,95,77,.16);
@@ -283,11 +282,10 @@ redirect_from:
       white-space:normal;
     }
 
-    /* Line 1: static text */
     .tagline-pill span#hero-tagline-static{
       display:block;
       width:100%;
-      font-size:clamp(1.9rem,4.4vw,3rem);
+      font-size:clamp(2rem,4.5vw,3.2rem);
       font-weight:900;
       color:var(--dark-green);
       letter-spacing:-.03em;
@@ -295,7 +293,6 @@ redirect_from:
       text-align:left;
     }
 
-    /* Line 2: scrolling words below, centred */
     .word-carousel{
       margin-top:.15rem;
       height:var(--word-h);
@@ -367,6 +364,14 @@ redirect_from:
       background:linear-gradient(120deg, rgba(232,245,240,.95) 0%, transparent 100%);
       padding:.08rem .32rem;
       border-radius:6px;
+    }
+
+    /* Wrap for main paragraph + award */
+    .hero-main-and-award{
+      display:flex;
+      flex-direction:column;
+      gap:.9rem;
+      margin-top:.3rem;
     }
 
     .hero-media{
@@ -908,7 +913,7 @@ redirect_from:
       height:auto;
       object-fit:contain;
       filter:grayscale(25%) brightness(1.06);
-      transition:transform .35s var(--transition-smooth), filter .35s var(--transition-smooth), opacity .3s.ease;
+      transition:transform .35s var(--transition-smooth), filter .35s var(--transition-smooth), opacity .3s ease;
     }
 
     .collab-logo img.loading{
@@ -1119,11 +1124,23 @@ redirect_from:
       }
     }
 
-    @media (max-width:768px){
-      :root{
-        --word-h:2.4rem;
+    @media (min-width:1024px){
+      /* Put award to the right of the paragraph on larger screens */
+      .hero-main-and-award{
+        flex-direction:row;
+        align-items:stretch;
+        gap:1.75rem;
       }
+      .hero-description{
+        flex:1.4;
+      }
+      .award-highlight{
+        flex:1;
+        margin-top:0;
+      }
+    }
 
+    @media (max-width:768px){
       .page,
       #main,
       .initial-content,
@@ -1131,6 +1148,10 @@ redirect_from:
       .page__content,
       .archive{
         width:100% !important;
+      }
+
+      :root{
+        --word-h:2.7rem;
       }
 
       .lang-toggle{
@@ -1145,7 +1166,7 @@ redirect_from:
         max-width:100%;
       }
 
-      /* Tagline layout on phones: stack and centre */
+      /* Tagline layout on phones: stack + centre */
       .animated-tagline{
         flex-direction:column;
         align-items:center;
@@ -1153,7 +1174,7 @@ redirect_from:
       }
 
       .tagline-pill{
-        padding:.45rem .8rem;
+        padding:.55rem 1rem;
         max-width:100%;
         align-items:center;
         text-align:center;
@@ -1165,21 +1186,14 @@ redirect_from:
       }
 
       .word-carousel{
-        height:var(--word-h);
-        min-width:0;
         justify-content:center;
         align-items:center;
-      }
-
-      .word-list{
-        padding:0 .4rem;
       }
 
       .word-list li{
         font-size:clamp(1.7rem,6vw,2.2rem);
       }
 
-      /* Keep award close and fully visible */
       .award-highlight{
         margin-top:.6rem;
       }
@@ -1200,7 +1214,7 @@ redirect_from:
         max-width:100%;
       }
 
-      /* Image galleries as small cards */
+      /* Image galleries as smaller cards */
       .image-gallery{
         grid-template-columns:repeat(2,1fr);
       }
@@ -1297,7 +1311,7 @@ redirect_from:
             <div class="tagline-pill" aria-label="FOUND tagline">
               <!-- Line 1 -->
               <span id="hero-tagline-static">Using technology to</span>
-              <!-- Line 2 (scrolling) -->
+              <!-- Line 2 (scrolling words) -->
               <div class="word-carousel" role="text">
                 <ul class="word-list">
                   <li id="word-1">search.</li>
@@ -1310,25 +1324,28 @@ redirect_from:
             </div>
           </div>
 
-          <p class="hero-description" id="hero-main-text">
-            124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
-            <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.
-          </p>
+          <!-- Paragraph + award together -->
+          <div class="hero-main-and-award">
+            <p class="hero-description" id="hero-main-text">
+              124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
+              <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.
+            </p>
 
-          <div class="award-highlight">
-            <a href="/news/#mariela-award" class="award-card">
-              <div class="award-icon" aria-hidden="true"></div>
-              <div class="award-text">
-                <div class="award-pill">Award</div>
-                <div class="award-title">
-                  FOUND's pioneer recognised with the Sir Nicholas Browne Policy and Expertise Award
-                  <span class="arrow">↗</span>
+            <div class="award-highlight">
+              <a href="/news/#mariela-award" class="award-card">
+                <div class="award-icon" aria-hidden="true"></div>
+                <div class="award-text">
+                  <div class="award-pill">Award</div>
+                  <div class="award-title">
+                    FOUND's pioneer recognised with the Sir Nicholas Browne Policy and Expertise Award
+                    <span class="arrow">↗</span>
+                  </div>
+                  <div class="award-meta">
+                    Selected from over 200 nominations across the UK Foreign, Commonwealth &amp; Development Office.
+                  </div>
                 </div>
-                <div class="award-meta">
-                  Selected from over 200 nominations across the UK Foreign, Commonwealth &amp; Development Office.
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
 
