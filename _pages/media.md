@@ -5,8 +5,6 @@ permalink: /media/
 author_profile: true
 ---
 
-{% raw %}
-<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -1218,4 +1216,3 @@ author_profile: true
   </script>
 </body>
 </html>
-{% endraw %}
