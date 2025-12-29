@@ -255,6 +255,25 @@ redirect_from:
       margin-bottom:1.25rem;
     }
 
+.tagline-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  padding:.6rem 1.1rem;
+  border-radius:999px;
+  background:linear-gradient(135deg, rgba(255,255,255,.9) 0%, rgba(232,245,240,.8) 100%);
+  border:1px solid rgba(45,95,77,.16);
+  box-shadow:var(--shadow-sm);
+  white-space:nowrap;
+}
+
+.tagline-pill span#hero-tagline-static{
+  font-size:clamp(2.05rem,5vw,3.6rem);
+  font-weight:900;
+  color:var(--dark-green);
+  letter-spacing:-.03em;
+}
+    
     .tagline-chip{
       display:inline-flex;
       align-items:center;
@@ -288,15 +307,14 @@ redirect_from:
   height:var(--word-h);
   position:relative;
   display:inline-block;
-  min-width:clamp(190px,30vw,320px);
   padding:0 .05rem;
   overflow:hidden;
-  border-radius:14px;
-  background:linear-gradient(135deg, rgba(255,255,255,.72) 0%, rgba(232,245,240,.55) 100%);
-  border:1px solid rgba(45,95,77,.14);
-  box-shadow:var(--shadow-sm);
+  /* visually merge with parent pill */
+  border-radius:0;
+  background:transparent;
+  border:none;
+  box-shadow:none;
   isolation:isolate;
-  /* IMPORTANT: no flex here – it must act as a "mask window" */
 }
 
 .word-carousel::after{
@@ -304,13 +322,13 @@ redirect_from:
   position:absolute;
   inset:0;
   pointer-events:none;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(212,175,55,.14) 0%, transparent 45%),
-    linear-gradient(180deg, rgba(0,0,0,.06) 0%, transparent 38%, transparent 62%, rgba(0,0,0,.04) 100%);
-  opacity:.75;
-  z-index:0;
+  background:none;
 }
 
+ .word-carousel{
+  min-width:auto;
+}   
+    
 .word-list{
   list-style:none;
   margin:0;
@@ -1135,23 +1153,58 @@ redirect_from:
     <div class="hero-content">
       <div class="hero-top">
         <div>
-          <div class="animated-tagline">
-            <span class="tagline-chip"><span id="hero-tagline-static">Using technology to&nbsp;</span></span>
 
-            <!-- Rolling words + sprout -->
-            <div class="rolling-wrap" aria-label="Rotating tagline">
-              <div class="word-carousel" role="text">
-                <ul class="word-list">
-                  <li id="word-1">search.</li>
-                  <li id="word-2">remember.</li>
-                  <li id="word-3">dignify.</li>
-                  <li id="word-4">find.</li>
-                  <li id="word-5">bring closure.</li>
-                </ul>
-              </div>
-              <span class="sprout-emoji" aria-hidden="true"></span>
-            </div>
-          </div>
+        <div class="animated-tagline">
+  <div class="tagline-pill" aria-label="FOUND tagline">
+    <span id="hero-tagline-static">Using technology to&nbsp;</span>
+    <div class="word-carousel" role="text">
+      <ul class="word-list">
+        <li id="word-1">search.</li>
+        <li id="word-2">remember.</li>
+        <li id="word-3">dignify.</li>
+        <li id="word-4">find.</li>
+        <li id="word-5">bring closure.</li>
+      </ul>
+    </div>
+    <span class="sprout-emoji" aria-hidden="true"></span>
+  </div>
+</div>
+
+.sprout-emoji{
+  position:relative;
+  width:18px;
+  height:18px;
+  border-radius:999px;
+  background:
+    radial-gradient(circle at 30% 30%, #fff 0%, #fff6e0 35%, #d4af37 70%, #8c6a18 100%);
+  box-shadow:
+    0 0 0 3px rgba(212,175,55,.18),
+    0 8px 16px rgba(0,0,0,.18);
+  flex:0 0 auto;
+}
+
+.sprout-emoji::before,
+.sprout-emoji::after{
+  content:'';
+  position:absolute;
+  width:10px;
+  height:6px;
+  border-radius:10px 10px 10px 0;
+  background:var(--light-green);
+  top:-4px;
+  left:50%;
+  transform-origin:0 100%;
+}
+
+.sprout-emoji::before{
+  transform:rotate(-35deg) translateX(-40%);
+  opacity:.85;
+}
+
+.sprout-emoji::after{
+  transform:rotate(25deg) translateX(-70%);
+  opacity:.7;
+}
 
           <p class="hero-description" id="hero-main-text">
             124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
