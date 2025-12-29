@@ -11,9 +11,7 @@ author_profile: true
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FOUND — Media & Talks</title>
   <meta name="description" content="Media coverage and talks about FOUND's work in using technology to search for Mexico's disappeared.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
+
   <style>
     :root {
       /* Primary green palette - inspired by foliage */
@@ -660,14 +658,14 @@ author_profile: true
     <div class="header-controls">
       <div class="theme-toggle">
         <button class="theme-btn active" data-theme="light">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 7a5 5 0 1 0 5 5 5 5 0 0 0-5-5z"/>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
           </svg>
           Light
         </button>
         <button class="theme-btn" data-theme="dark">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9z"/>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9z"></path>
           </svg>
           Dark
         </button>
@@ -708,7 +706,7 @@ author_profile: true
 
     <!-- Media grid -->
     <div class="media-grid" id="media-grid">
-      <!-- Cards will be populated by JavaScript -->
+      <!-- Cards populated by JavaScript -->
     </div>
 
     <!-- Talks section -->
@@ -718,7 +716,7 @@ author_profile: true
       </div>
       
       <div class="talks-grid" id="talks-grid">
-        <!-- Talks will be populated by JavaScript -->
+        <!-- Talks populated by JavaScript -->
       </div>
     </section>
 
@@ -726,15 +724,15 @@ author_profile: true
     <footer class="page-footer">
       <p>FOUND — Using technology to search, remember, dignify, find, and bring closure.</p>
       <div class="footer-links">
-        <a href="https://found-project.org" class="footer-link">Home</a>
-        <a href="https://github.com/found-project" class="footer-link">GitHub</a>
+        <a href="/" class="footer-link">Home</a>
+        <a href="https://github.com/FOUND-project" class="footer-link">GitHub</a>
         <a href="mailto:contact@found-project.org" class="footer-link">Contact</a>
       </div>
     </footer>
   </div>
 
   <script>
-    // Data layer - separating content from presentation
+    // Text + translations
     const mediaData = {
       en: {
         header: {
@@ -764,23 +762,23 @@ author_profile: true
       es: {
         header: {
           category: 'MEDIOS • COBERTURA • CHARLAS',
-          title: 'Cobertura en Medios',
-          subtitle: 'Nuestro trabajo de investigación y humanitario ha sido destacado en publicaciones internacionales líderes, resaltando la intersección entre tecnología y derechos humanos en la búsqueda de desaparecidos en México.'
+          title: 'Cobertura en medios',
+          subtitle: 'Nuestro trabajo de investigación y humanitario ha sido destacado en publicaciones internacionales líderes, resaltando la intersección entre tecnología y derechos humanos en la búsqueda de personas desaparecidas en México.'
         },
         filters: {
           all: 'Todos',
           international: 'Internacional',
-          mexican: 'Medios Mexicanos',
+          mexican: 'Medios mexicanos',
           academic: 'Académico'
         },
         tags: {
           article: 'Artículo',
-          tv: 'Segmento TV',
+          tv: 'Segmento de TV',
           opinion: 'Opinión',
-          social: 'Redes Sociales'
+          social: 'Redes sociales'
         },
         talks: {
-          title: 'Charlas y Presentaciones'
+          title: 'Charlas y presentaciones'
         },
         footer: {
           text: 'FOUND — Usando tecnología para buscar, recordar, dignificar, encontrar y dar cierre.'
@@ -789,30 +787,31 @@ author_profile: true
       nah: {
         header: {
           category: 'MEDIOS • TLAYEKOLIZTLI • TLAHTOLMEH',
-          title: 'Tlayekoliztli ipan Medios',
-          subtitle: 'Tonemilistli huan totlatequi yokinextijkeh ipan miek medios tlen weyi tlaltikpak, kitemokaua in teknoloia huan tlakamikilistli ipan temoliztli tlen miktlantekitkeh ipan Mexico.'
+          title: 'Tlayekoliztli ipan medios',
+          subtitle: 'Tonemilistli huan totlatequi yokinextijkeh ipan miek medios tlen weyi tlaltikpak, kitemokaua in teknoloia huan tlakamikilistli ipan temoliztli tlen miktlantekitkeh ipan México.'
         },
         filters: {
           all: 'Nochi',
           international: 'Internacional',
-          mexican: 'Medios Mexicanos',
+          mexican: 'Medios mexicanos',
           academic: 'Tlamachtiloyan'
         },
         tags: {
           article: 'Tlahtolli',
-          tv: 'TV Sektsiōn',
+          tv: 'Sektsiōn TV',
           opinion: 'Tlamachtiliztli',
-          social: 'Redes Sociales'
+          social: 'Redes sociales'
         },
         talks: {
-          title: 'Tlahtolmeh huan Presentaciones'
+          title: 'Tlahtolmeh huan presentaciones'
         },
         footer: {
-          text: 'FOUND — Teknoloia para temoa, ilnamikia, tenamiktilia, kiteki huan patlamiki.'
+          text: 'FOUND — Teknoloia para temoa, ilnamikia, tenamiktilia, kiteki huan kitemitia se cierre.'
         }
       }
     };
 
+    // Articles (El País ES moved to "international")
     const articles = [
       {
         id: 1,
@@ -841,63 +840,6 @@ author_profile: true
         category: 'international',
         language: 'es',
         date: '2025-07-29'
-      },
-      {
-        id: 4,
-        outlet: 'Science',
-        title: 'Satellites could reveal the secret burial grounds of Mexico\'s murder victims',
-        url: 'https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims',
-        tags: ['article'],
-        category: 'academic',
-        date: '2024-03-28'
-      },
-      {
-        id: 5,
-        outlet: 'El País',
-        title: 'Mexico\'s Izaguirre ranch: "High concentrations of ash" suggest the presence of clandestine crematoriums',
-        url: 'https://english.elpais.com/international/2025-03-28/mexicos-izaguirre-ranch-high-concentrations-of-ash-suggest-the-presence-of-clandestine-crematoriums.html',
-        tags: ['article'],
-        category: 'international',
-        date: '2025-03-28'
-      },
-      {
-        id: 6,
-        outlet: 'El País',
-        title: '"Altas concentraciones de ceniza" y humo de gasolina: los indicios que apuntan a que en el rancho de Teuchitlán hubo crematorios clandestinos',
-        url: 'https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html',
-        tags: ['article'],
-        category: 'international',
-        language: 'es',
-        date: '2025-03-28'
-      },
-      {
-        id: 7,
-        outlet: 'Animal Político',
-        title: 'Con tecnología y drones, investigadores y familias de desaparecidos encuentran fosas clandestinas en Jalisco',
-        url: 'https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia',
-        tags: ['article'],
-        category: 'mexican',
-        language: 'es',
-        date: '2024-12-18'
-      },
-      {
-        id: 8,
-        outlet: 'TV Azteca',
-        title: 'Tecnología contra las desapariciones en México',
-        url: 'https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas',
-        tags: ['tv'],
-        category: 'mexican',
-        language: 'es',
-        date: '2024-11-15'
-      },
-      {
-        id: 9,
-        outlet: 'Reuters',
-        title: 'In Mexico, mothers of the missing turn to drones to look for unmarked graves',
-        url: 'https://www.reuters.com/world/americas/mexico-mothers-missing-turn-drones-look-unmarked-graves-2024-01-26/',
-        tags: ['article'],
-        category: 'international',
-        date: '2024-01-26'
       },
       {
         id: 10,
@@ -936,6 +878,43 @@ author_profile: true
         date: '2025-08-05'
       },
       {
+        id: 5,
+        outlet: 'El País (EN)',
+        title: 'Mexico\'s Izaguirre ranch: "High concentrations of ash" suggest the presence of clandestine crematoriums',
+        url: 'https://english.elpais.com/international/2025-03-28/mexicos-izaguirre-ranch-high-concentrations-of-ash-suggest-the-presence-of-clandestine-crematoriums.html',
+        tags: ['article'],
+        category: 'international',
+        date: '2025-03-28'
+      },
+      {
+        id: 6,
+        outlet: 'El País',
+        title: '"Altas concentraciones de ceniza" y humo de gasolina: los indicios que apuntan a que en el rancho de Teuchitlán hubo crematorios clandestinos',
+        url: 'https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html',
+        tags: ['article'],
+        category: 'international',      // ← moved here
+        language: 'es',
+        date: '2025-03-28'
+      },
+      {
+        id: 4,
+        outlet: 'Science',
+        title: 'Satellites could reveal the secret burial grounds of Mexico\'s murder victims',
+        url: 'https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims',
+        tags: ['article'],
+        category: 'academic',
+        date: '2024-03-28'
+      },
+      {
+        id: 9,
+        outlet: 'Reuters',
+        title: 'In Mexico, mothers of the missing turn to drones to look for unmarked graves',
+        url: 'https://www.reuters.com/world/americas/mexico-mothers-missing-turn-drones-look-unmarked-graves-2024-01-26/',
+        tags: ['article'],
+        category: 'international',
+        date: '2024-01-26'
+      },
+      {
         id: 14,
         outlet: 'WIRED',
         title: 'Cómo la tecnología geoespacial expone el horror de las fosas clandestinas en México',
@@ -946,6 +925,36 @@ author_profile: true
         date: '2024-04-22'
       },
       {
+        id: 16,
+        outlet: 'CGTN America',
+        title: 'Jalisco mothers search for hidden graves with drones',
+        url: 'https://twitter.com/cgtnamerica/status/1751362286118150555',
+        tags: ['social'],
+        category: 'international',
+        date: '2024-01-26'
+      },
+      /* Mexican media */
+      {
+        id: 7,
+        outlet: 'Animal Político',
+        title: 'Con tecnología y drones, investigadores y familias de desaparecidos encuentran fosas clandestinas en Jalisco',
+        url: 'https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia',
+        tags: ['article'],
+        category: 'mexican',
+        language: 'es',
+        date: '2024-12-18'
+      },
+      {
+        id: 8,
+        outlet: 'TV Azteca',
+        title: 'Tecnología contra las desapariciones en México',
+        url: 'https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas',
+        tags: ['tv'],
+        category: 'mexican',
+        language: 'es',
+        date: '2024-11-15'
+      },
+      {
         id: 15,
         outlet: 'Animal Político',
         title: 'Interpretar la naturaleza para encontrar a quienes nos faltan',
@@ -954,15 +963,6 @@ author_profile: true
         category: 'mexican',
         language: 'es',
         date: '2024-11-30'
-      },
-      {
-        id: 16,
-        outlet: 'CGTN America',
-        title: 'Jalisco mothers search for hidden graves with drones',
-        url: 'https://twitter.com/cgtnamerica/status/1751362286118150555',
-        tags: ['social'],
-        category: 'international',
-        date: '2024-01-26'
       },
       {
         id: 17,
@@ -1020,44 +1020,50 @@ author_profile: true
       }
 
       init() {
-        this.setupEventListeners();
         this.loadPreferences();
-        this.renderPage();
+        this.setupEventListeners();
+        this.setTheme(this.currentTheme);
+        this.setLanguage(this.currentLang);
+        this.setFilter(this.currentFilter);
       }
 
       setupEventListeners() {
-        // Theme toggle
-        document.querySelectorAll('[data-theme]').forEach(btn => {
+        // Theme buttons
+        document.querySelectorAll('.theme-btn').forEach(btn => {
           btn.addEventListener('click', (e) => {
-            this.setTheme(e.target.dataset.theme);
+            const button = e.currentTarget;
+            const theme = button.dataset.theme;
+            if (theme) this.setTheme(theme);
           });
         });
 
-        // Language toggle
-        document.querySelectorAll('[data-lang]').forEach(btn => {
+        // Language buttons
+        document.querySelectorAll('.lang-btn').forEach(btn => {
           btn.addEventListener('click', (e) => {
-            this.setLanguage(e.target.dataset.lang);
+            const button = e.currentTarget;
+            const lang = button.dataset.lang;
+            if (lang) this.setLanguage(lang);
           });
         });
 
         // Filter buttons
-        document.querySelectorAll('[data-filter]').forEach(btn => {
+        document.querySelectorAll('.filter-btn').forEach(btn => {
           btn.addEventListener('click', (e) => {
-            this.setFilter(e.target.dataset.filter);
+            const button = e.currentTarget;
+            const filter = button.dataset.filter;
+            if (filter) this.setFilter(filter);
           });
         });
       }
 
       loadPreferences() {
-        // Load saved preferences
         try {
           const savedLang = localStorage.getItem('found-lang-media');
           const savedTheme = localStorage.getItem('found-theme');
-          
+
           if (savedLang && ['en', 'es', 'nah'].includes(savedLang)) {
             this.currentLang = savedLang;
           }
-          
           if (savedTheme && ['light', 'dark'].includes(savedTheme)) {
             this.currentTheme = savedTheme;
           }
@@ -1067,47 +1073,50 @@ author_profile: true
       }
 
       setTheme(theme) {
-        this.currentTheme = theme;
-        document.documentElement.setAttribute('data-theme', theme);
-        
-        // Update button states
-        document.querySelectorAll('[data-theme]').forEach(btn => {
-          btn.classList.toggle('active', btn.dataset.theme === theme);
+        const finalTheme = ['light', 'dark'].includes(theme) ? theme : 'light';
+        this.currentTheme = finalTheme;
+        document.documentElement.setAttribute('data-theme', finalTheme);
+
+        // Update active state
+        document.querySelectorAll('.theme-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.theme === finalTheme);
         });
-        
-        // Save preference
+
         try {
-          localStorage.setItem('found-theme', theme);
+          localStorage.setItem('found-theme', finalTheme);
         } catch (e) {
           console.log('Could not save theme preference:', e);
         }
       }
 
       setLanguage(lang) {
-        this.currentLang = lang;
-        this.renderPage();
-        
-        // Update button states
-        document.querySelectorAll('[data-lang]').forEach(btn => {
-          btn.classList.toggle('active', btn.dataset.lang === lang);
+        const finalLang = ['en', 'es', 'nah'].includes(lang) ? lang : 'en';
+        this.currentLang = finalLang;
+
+        // Update active state
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.lang === finalLang);
         });
-        
-        // Save preference
+
         try {
-          localStorage.setItem('found-lang-media', lang);
+          localStorage.setItem('found-lang-media', finalLang);
         } catch (e) {
           console.log('Could not save language preference:', e);
         }
+
+        this.renderPage();
       }
 
       setFilter(filter) {
-        this.currentFilter = filter;
-        this.renderArticles();
-        
-        // Update button states
-        document.querySelectorAll('[data-filter]').forEach(btn => {
-          btn.classList.toggle('active', btn.dataset.filter === filter);
+        const allowed = ['all', 'international', 'mexican', 'academic'];
+        const finalFilter = allowed.includes(filter) ? filter : 'all';
+        this.currentFilter = finalFilter;
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.filter === finalFilter);
         });
+
+        this.renderArticles();
       }
 
       renderPage() {
@@ -1119,16 +1128,22 @@ author_profile: true
 
       renderHeader() {
         const langData = mediaData[this.currentLang];
-        
-        document.getElementById('media-pill').textContent = langData.header.category;
-        document.getElementById('media-title').textContent = langData.header.title;
-        document.getElementById('media-intro').textContent = langData.header.subtitle;
-        document.getElementById('talks-title').textContent = langData.talks.title;
-        
-        // Update filter buttons
-        document.querySelectorAll('[data-filter]').forEach(btn => {
+        if (!langData) return;
+
+        const pill = document.getElementById('media-pill');
+        const title = document.getElementById('media-title');
+        const intro = document.getElementById('media-intro');
+        const talksTitle = document.getElementById('talks-title');
+
+        if (pill) pill.textContent = langData.header.category;
+        if (title) title.textContent = langData.header.title;
+        if (intro) intro.textContent = langData.header.subtitle;
+        if (talksTitle) talksTitle.textContent = langData.talks.title;
+
+        // Update filter labels
+        document.querySelectorAll('.filter-btn').forEach(btn => {
           const filter = btn.dataset.filter;
-          if (langData.filters[filter]) {
+          if (filter && langData.filters[filter]) {
             btn.textContent = langData.filters[filter];
           }
         });
@@ -1136,40 +1151,45 @@ author_profile: true
 
       renderArticles() {
         const grid = document.getElementById('media-grid');
+        if (!grid) return;
+
         const langData = mediaData[this.currentLang];
-        
-        // Filter articles
-        const filteredArticles = this.currentFilter === 'all' 
-          ? articles 
-          : articles.filter(article => article.category === this.currentFilter);
-        
-        // Sort by date (newest first)
-        filteredArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
-        
-        grid.innerHTML = filteredArticles.map(article => `
-          <article class="media-card" data-category="${article.category}">
-            <a class="media-link" href="${article.url}" target="_blank" rel="noopener noreferrer">
-              <div class="card-content">
-                <div class="media-outlet">${article.outlet}</div>
-                <h3 class="media-title">${article.title}</h3>
-                <div class="card-footer">
-                  <span class="media-tag">${langData.tags[article.tags[0]] || langData.tags.article}</span>
-                  <span class="external-link">→</span>
+        if (!langData) return;
+
+        const filtered = this.currentFilter === 'all'
+          ? [...articles]
+          : articles.filter(a => a.category === this.currentFilter);
+
+        filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        grid.innerHTML = filtered.map(article => {
+          const tagKey = article.tags && article.tags[0] ? article.tags[0] : 'article';
+          const tagLabel = langData.tags[tagKey] || langData.tags.article;
+
+          return `
+            <article class="media-card" data-category="${article.category}">
+              <a class="media-link" href="${article.url}" target="_blank" rel="noopener noreferrer">
+                <div class="card-content">
+                  <div class="media-outlet">${article.outlet}</div>
+                  <h3 class="media-title">${article.title}</h3>
+                  <div class="card-footer">
+                    <span class="media-tag">${tagLabel}</span>
+                    <span class="external-link" aria-hidden="true">→</span>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </article>
-        `).join('');
+              </a>
+            </article>
+          `;
+        }).join('');
       }
 
       renderTalks() {
         const grid = document.getElementById('talks-grid');
-        const langData = mediaData[this.currentLang];
-        
-        // Sort talks by date (newest first)
-        const sortedTalks = [...talks].sort((a, b) => new Date(b.date) - new Date(a.date));
-        
-        grid.innerHTML = sortedTalks.map(talk => `
+        if (!grid) return;
+
+        const sorted = [...talks].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        grid.innerHTML = sorted.map(talk => `
           <article class="talk-card">
             <a class="talk-link" href="${talk.url}" target="_blank" rel="noopener noreferrer">
               <div class="talk-meta">${talk.venue}</div>
@@ -1184,32 +1204,21 @@ author_profile: true
 
       renderFooter() {
         const langData = mediaData[this.currentLang];
-        const footer = document.querySelector('.page-footer p');
-        if (footer) {
-          footer.textContent = langData.footer.text;
+        if (!langData) return;
+        const footerText = document.querySelector('.page-footer p');
+        if (footerText) {
+          footerText.textContent = langData.footer.text;
         }
       }
 
       formatDate(dateString, lang) {
         const date = new Date(dateString);
-        const options = { 
-          year: 'numeric', 
-          month: 'long', 
-          day: 'numeric' 
-        };
-        
-        if (lang === 'es') {
-          return date.toLocaleDateString('es-ES', options);
-        } else if (lang === 'nah') {
-          // Simple fallback for Nahuatl
-          return date.toLocaleDateString('en-US', options);
-        }
-        
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        if (lang === 'es') return date.toLocaleDateString('es-ES', options);
         return date.toLocaleDateString('en-US', options);
       }
     }
 
-    // Initialize the page when DOM is loaded
     document.addEventListener('DOMContentLoaded', () => {
       new MediaPage();
     });
