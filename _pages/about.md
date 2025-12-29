@@ -1154,7 +1154,7 @@ redirect_from:
       <div class="hero-top">
         <div>
 
-        <div class="animated-tagline">
+      <div class="animated-tagline">
   <div class="tagline-pill" aria-label="FOUND tagline">
     <span id="hero-tagline-static">Using technology to&nbsp;</span>
     <div class="word-carousel" role="text">
@@ -1166,45 +1166,8 @@ redirect_from:
         <li id="word-5">bring closure.</li>
       </ul>
     </div>
-    <span class="sprout-emoji" aria-hidden="true"></span>
   </div>
 </div>
-
-.sprout-emoji{
-  position:relative;
-  width:18px;
-  height:18px;
-  border-radius:999px;
-  background:
-    radial-gradient(circle at 30% 30%, #fff 0%, #fff6e0 35%, #d4af37 70%, #8c6a18 100%);
-  box-shadow:
-    0 0 0 3px rgba(212,175,55,.18),
-    0 8px 16px rgba(0,0,0,.18);
-  flex:0 0 auto;
-}
-
-.sprout-emoji::before,
-.sprout-emoji::after{
-  content:'';
-  position:absolute;
-  width:10px;
-  height:6px;
-  border-radius:10px 10px 10px 0;
-  background:var(--light-green);
-  top:-4px;
-  left:50%;
-  transform-origin:0 100%;
-}
-
-.sprout-emoji::before{
-  transform:rotate(-35deg) translateX(-40%);
-  opacity:.85;
-}
-
-.sprout-emoji::after{
-  transform:rotate(25deg) translateX(-70%);
-  opacity:.7;
-}
 
           <p class="hero-description" id="hero-main-text">
             124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
