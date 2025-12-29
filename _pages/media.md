@@ -177,6 +177,13 @@ author_profile: true
       line-height:1.8;
     }
 
+    .section-intro{
+      font-size:clamp(1rem,1.3vw,1.15rem);
+      color:var(--text-medium);
+      max-width:800px;
+      line-height:1.8;
+    }
+
     .media-grid{
       margin-top:2.2rem;
       display:grid;
@@ -701,7 +708,7 @@ author_profile: true
           'talks-title':'Charlas y conversatorios',
           tags:{
             article:'Artículo',
-            tv:'Capsula de TV',
+            tv:'Cápsula de TV',
             'tv-social':'TV / Redes sociales',
             opinion:'Opinión'
           }
