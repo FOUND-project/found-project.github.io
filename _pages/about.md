@@ -43,8 +43,8 @@ redirect_from:
       --radius-md:18px;
       --radius-sm:14px;
 
-      /* Rolling words */
-      --word-h:clamp(3rem,6vw,4.2rem);
+      /* Rolling words – slightly taller to avoid clipping */
+      --word-h:clamp(3.4rem,6.4vw,4.6rem);
       --word-duration:10.5s;
     }
 
@@ -290,7 +290,8 @@ redirect_from:
     .word-carousel{
       height:var(--word-h);
       position:relative;
-      display:inline-block;
+      display:inline-flex;
+      align-items:center;
       padding:0 .05rem;
       overflow:hidden;
       border-radius:0;
@@ -323,9 +324,10 @@ redirect_from:
       text-shadow:0 10px 28px rgba(15,23,42,.10);
       white-space:nowrap;
       flex-shrink:0;
-      line-height:1;
+      line-height:1.05;
     }
 
+    /* 5 items => 20% steps */
     @keyframes wordSlide{
       0%,15.99%{transform:translateY(0%);}
       16%,35.99%{transform:translateY(-20%);}
@@ -1122,7 +1124,11 @@ redirect_from:
         max-width:100%;
       }
 
-      /* Rolling words: turn into multi-line static chips on phones */
+      /* Rolling words: keep animation but adjust sizes so they stay centred and visible */
+      :root{
+        --word-h:3rem;
+      }
+
       .animated-tagline{
         flex-direction:column;
         align-items:flex-start;
@@ -1133,6 +1139,7 @@ redirect_from:
         padding:.45rem .8rem;
         max-width:100%;
         white-space:normal;
+        align-items:flex-start;
       }
 
       .tagline-pill span#hero-tagline-static{
@@ -1140,24 +1147,16 @@ redirect_from:
       }
 
       .word-carousel{
-        height:auto;
-        overflow:visible;
-        width:100%;
-        max-width:100%;
+        height:var(--word-h);
+        min-width:0;
       }
 
       .word-list{
-        animation:none;
-        display:flex;
-        flex-wrap:wrap;
-        gap:.25rem .4rem;
-        padding:0;
+        padding:0 .4rem;
       }
 
       .word-list li{
-        height:auto;
-        font-size:clamp(1.6rem,6vw,2rem);
-        white-space:normal;
+        font-size:clamp(1.7rem,6vw,2.2rem);
       }
 
       /* Keep award close and fully visible */
@@ -1165,10 +1164,9 @@ redirect_from:
         margin-top:.6rem;
       }
 
-      /* Make hero media a shallow card */
+      /* Hero media as shallow card */
       .hero-media{
         max-width:100%;
-        cursor:default;
         box-shadow:var(--shadow-sm);
       }
 
@@ -1200,14 +1198,31 @@ redirect_from:
         box-shadow:var(--shadow-sm);
       }
 
+      /* Smaller Institutional Partnerships cards on phones */
       .collab-card{
         min-height:auto;
         box-shadow:var(--shadow-sm);
       }
 
       .collab-logo{
-        min-height:90px;
-        padding:.9rem;
+        min-height:70px;
+        padding:.7rem;
+      }
+
+      .collab-logo img{
+        max-height:60px;
+      }
+
+      .collab-meta{
+        padding:.6rem .8rem .8rem;
+      }
+
+      .collab-name{
+        font-size:.96rem;
+      }
+
+      .collab-note{
+        font-size:.85rem;
       }
 
       .social-grid{
@@ -1842,7 +1857,7 @@ redirect_from:
           'word-3':'tlatepanita.',
           'word-4':'quipantlalia.',
           'word-5':'yolpakilistli quimacatia.',
-          'hero-main-text':'124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia teknolojíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
+          'hero-main-text':'124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia tehnologíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
           'collab-title':'Tlen tlatlanecuiltilis nemilistli (alianzas institucionales)',
           'tech-title':'Teknolojíayoh tlen motequiti',
           'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
