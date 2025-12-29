@@ -889,7 +889,7 @@ redirect_from:
       height:auto;
       object-fit:contain;
       filter:grayscale(25%) brightness(1.06);
-      transition:transform .35s var(--transition-smooth), filter .35s var(--transition-smooth), opacity .3s ease;
+      transition:transform .35s var(--transition-smooth), filter .35s var(--transition-smooth), opacity .3s.ease;
     }
 
     .collab-logo img.loading{
@@ -1114,22 +1114,6 @@ redirect_from:
         top:.9rem;
       }
 
-      .animated-tagline{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:.6rem;
-      }
-
-      .word-carousel{
-        min-width:0;
-        width:100%;
-        max-width:520px;
-      }
-
-      .word-list li{
-        white-space:normal;
-      }
-
       .hero{
         padding:1.25rem 0 1.75rem;
       }
@@ -1138,19 +1122,101 @@ redirect_from:
         max-width:100%;
       }
 
+      /* Rolling words: turn into multi-line static chips on phones */
+      .animated-tagline{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:.45rem;
+      }
+
+      .tagline-pill{
+        padding:.45rem .8rem;
+        max-width:100%;
+        white-space:normal;
+      }
+
+      .tagline-pill span#hero-tagline-static{
+        font-size:clamp(1.6rem,6vw,2rem);
+      }
+
+      .word-carousel{
+        height:auto;
+        overflow:visible;
+        width:100%;
+        max-width:100%;
+      }
+
+      .word-list{
+        animation:none;
+        display:flex;
+        flex-wrap:wrap;
+        gap:.25rem .4rem;
+        padding:0;
+      }
+
+      .word-list li{
+        height:auto;
+        font-size:clamp(1.6rem,6vw,2rem);
+        white-space:normal;
+      }
+
+      /* Keep award close and fully visible */
+      .award-highlight{
+        margin-top:.6rem;
+      }
+
+      /* Make hero media a shallow card */
       .hero-media{
         max-width:100%;
         cursor:default;
+        box-shadow:var(--shadow-sm);
+      }
+
+      .hero-media::before{
+        padding-top:52%;
       }
 
       .hero-media:hover{
         transform:none;
-        box-shadow:var(--shadow-md);
+        box-shadow:var(--shadow-sm);
         max-width:100%;
+      }
+
+      /* Image galleries as small cards */
+      .image-gallery{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .gallery-item{
+        grid-column:span 2;
+        aspect-ratio:16/10;
+        max-height:160px;
+        box-shadow:var(--shadow-sm);
+      }
+
+      .buscadoras-image{
+        max-width:100%;
+        margin-top:1.2rem;
+        box-shadow:var(--shadow-sm);
+      }
+
+      .collab-card{
+        min-height:auto;
+        box-shadow:var(--shadow-sm);
+      }
+
+      .collab-logo{
+        min-height:90px;
+        padding:.9rem;
       }
 
       .social-grid{
         grid-template-columns:1fr;
+      }
+
+      .social-embed{
+        min-height:auto;
+        box-shadow:var(--shadow-sm);
       }
 
       .iframe-container iframe{
@@ -1160,13 +1226,14 @@ redirect_from:
       .award-card{
         padding:1.1rem 1.2rem;
       }
+    }
 
-      .image-gallery{
-        grid-template-columns:repeat(2,1fr);
-      }
+    @media (max-width:480px){
       .gallery-item{
-        grid-column:span 2;
-        aspect-ratio:16/10;
+        max-height:140px;
+      }
+      .iframe-container iframe{
+        height:430px;
       }
     }
   </style>
@@ -1800,7 +1867,8 @@ redirect_from:
           if(el) el.innerHTML = dict[id];
         });
 
-        document.documentElement.setAttribute('lang',
+        document.documentElement.setAttribute(
+          'lang',
           lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
         );
 
