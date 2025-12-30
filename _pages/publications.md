@@ -352,6 +352,8 @@ author_profile: true
 
 <script>
 (function(){
+  const STORAGE_KEY = 'found-lang';
+
   const translations = {
     en: {
       'pill-book':'BOOK',
@@ -387,7 +389,7 @@ author_profile: true
     es: {
       'pill-book':'LIBRO',
       'title-book':'El libro',
-      'book-badge':'Monografía',
+      'book-badge':'Libro',
       'book-desc':'Este volumen reúne ciencias biológicas, físicas y de la Tierra para diseñar y probar métodos de detección de fosas clandestinas. La traducción al inglés está en proceso.',
 
       'pill-articles':'ARTÍCULOS',
@@ -457,28 +459,41 @@ author_profile: true
     'b1-title','b1-meta','b2-title','b2-meta','b3-title','b3-meta'
   ];
 
-  function setLanguage(lang){
+  function setLanguage(lang, save){
     const dict = translations[lang] || translations.en;
 
-    ids.forEach(id=>{
-      const el = document.getElementById(id);
-      if(el && dict[id] !== undefined){
+    ids.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && Object.prototype.hasOwnProperty.call(dict, id)){
         el.innerHTML = dict[id];
       }
     });
 
-    document.querySelectorAll('.lang-btn').forEach(btn=>{
+    document.querySelectorAll('.lang-btn').forEach(function(btn){
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
+
+    if(save){
+      try{
+        localStorage.setItem(STORAGE_KEY, lang);
+      }catch(e){}
+    }
   }
 
-  document.addEventListener('DOMContentLoaded', function(){
-    setLanguage('en'); // default
+  // INITIALISE
+  var initial = 'en';
+  try{
+    var saved = localStorage.getItem(STORAGE_KEY);
+    if(saved === 'es' || saved === 'nah' || saved === 'en'){
+      initial = saved;
+    }
+  }catch(e){}
 
-    document.querySelectorAll('.lang-btn').forEach(btn=>{
-      btn.addEventListener('click', function(){
-        setLanguage(this.dataset.lang);
-      });
+  setLanguage(initial, false);
+
+  document.querySelectorAll('.lang-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      setLanguage(this.dataset.lang, true);
     });
   });
 })();
