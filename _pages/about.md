@@ -1343,26 +1343,11 @@ redirect_from:
       }
     }
 
-/* Re-tint Frontier Tech Hub logo to dark */
-.collab-img.fth {
-  filter: brightness(0) saturate(100%) invert(9%) sepia(6%) saturate(512%)
-          hue-rotate(94deg) brightness(95%) contrast(96%);
-}
-
-.labco-logo-wrap{
-  background: linear-gradient(180deg,#f3f6f8 0%,#eef3f1 100%);
-  border: 1px solid rgba(0,0,0,.06);
-  border-radius: 14px;
-  padding: 18px 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.labco-logo-wrap img{
-  max-height: 70px;
-  width: auto;
-  object-fit: contain;
+/* Re-tint LABCO logo to dark */
+.collab-img.labco{
+  filter: brightness(0) saturate(100%) invert(9%) sepia(6%)
+          saturate(512%) hue-rotate(94deg)
+          brightness(95%) contrast(96%);
 }
     
     
@@ -1832,23 +1817,20 @@ redirect_from:
           </div>
 
 <!-- LABCO -->
-<div class="collab-card touch-zoomable labco-card">
-  <div class="collab-logo labco-logo-wrap">
+<div class="collab-card touch-zoomable">
+  <div class="collab-logo">
     <img
-      src="https://github.com/FOUND-project/found-project.github.io/blob/d47bacb6b575270e7b5453c8ebc5b13bcec70a2f/images/dark-non-retina-labco.png?raw=true"
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d47bacb6b575270e7b5453c8ebc5b13bcec70a2f/images/dark-non-retina-labco.png"
       alt="LABCO logo"
       loading="lazy"
-      class="collab-img"
+      class="collab-img labco"
     >
   </div>
 
   <div class="collab-meta">
-    <div class="collab-name" id="collab-item-labco">
-      LABCO
-    </div>
-
+    <div class="collab-name" id="collab-item-labco">LABCO</div>
     <div class="collab-note" id="collab-note-labco">
-      Exploring AI to locate and identify
+      Exploring together AI to locate and identify
     </div>
   </div>
 </div>
