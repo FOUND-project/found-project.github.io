@@ -1864,7 +1864,7 @@ redirect_from:
     (function(){
       const translations = {
         en:{
-          'project-subtitle':'<span class="title-accent">Interpreting Nature</span> to Locate Whose We are Missing',
+          'project-subtitle':'<span class="title-accent">Interpreting Nature</span> To Locate Those Who We Are Missing',
           'hero-tagline-static':'Using technology to',
           'word-1':'search.',
           'word-2':'remember.',
