@@ -1813,6 +1813,49 @@ redirect_from:
               <div class="collab-note" id="collab-note-uwe">Funding, Technical expertise</div>
             </div>
           </div>
+
+<!-- LABCO -->
+<div class="collab-card touch-zoomable">
+  <div class="collab-logo">
+    <img
+      src="https://github.com/FOUND-project/found-project.github.io/blob/d47bacb6b575270e7b5453c8ebc5b13bcec70a2f/images/dark-non-retina-labco.png?raw=true"
+      alt="LABCO logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')"
+    >
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-labco">
+      LABCO
+    </div>
+    <div class="collab-note" id="collab-note-labco">
+      Exploring together AI to locate and identify
+    </div>
+  </div>
+</div>
+
+<!-- Argentine Forensic Anthropology Team (EAAF) -->
+<div class="collab-card touch-zoomable">
+  <div class="collab-logo">
+    <img
+      src="https://github.com/FOUND-project/found-project.github.io/blob/82b303cdf26fa6a25e9845ff0d5fc10e070d94e6/images/logo_eaaf_rd.png?raw=true"
+      alt="Argentine Forensic Anthropology Team (EAAF) logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')"
+    >
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-eaaf">
+      Argentine Forensic Anthropology Team (EAAF)
+    </div>
+    <div class="collab-note" id="collab-note-eaaf">
+      Luis Fondebrider, FOUND’s advisor
+    </div>
+  </div>
+</div>
+       
         </div>
       </div>
     </div>
@@ -1919,6 +1962,10 @@ redirect_from:
   (function(){
     const translations = {
       en:{
+        'collab-item-labco':'LABCO',
+        'collab-note-labco':'Exploring together AI to locate and identify',
+        'collab-item-eaaf':'Argentine Forensic Anthropology Team (EAAF)',
+        'collab-note-eaaf':"Luis Fondebrider, FOUND's advisor",
         'project-subtitle':'<span class="title-accent">Interpreting Nature</span> To Locate Those Who We Are Missing',
         'hero-tagline-static':'Using technology to',
         'word-1':'search.',
@@ -1942,6 +1989,10 @@ redirect_from:
         'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
       },
       es:{
+        'collab-item-labco':'LABCO',
+        'collab-note-labco':'Explorando juntos el uso de IA para localizar e identificar',
+        'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
+        'collab-note-eaaf':'Luis Fondebrider, asesor de FOUND',
         'project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan',
         'hero-tagline-static':'Usando tecnología para',
         'word-1':'buscar.',
@@ -1965,6 +2016,10 @@ redirect_from:
         'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
       },
       nah:{
+        'collab-item-labco':'LABCO',
+        'collab-note-labco':'Tlen momachtia IA para temoa huan quixmati',
+        'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
+        'collab-note-eaaf':'Luis Fondebrider, consejero FOUND',
         'project-subtitle':'<span class="title-accent">In Naturaleza titlatlajtolti</span> para tipantlaltiah in aquimeh techpoloa',
         'hero-tagline-static':'Teknolojíayoh ika',
         'word-1':'temoa.',
