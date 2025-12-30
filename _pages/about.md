@@ -18,6 +18,23 @@ redirect_from:
   <meta property="og:type" content="website" />
   <title>FOUND Project - Using Technology to Search and Remember</title>
 
+
+  <!-- HSTS Header - Tells browsers to always use HTTPS -->
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+
+  <!-- Upgrade insecure requests -->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <!-- Prevent MIME type sniffing -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  
+  <!-- Prevent clickjacking -->
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  
+  <!-- Control referrer information -->
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <!-- ========== END SECURITY HEADERS ========== -->
+
   <!-- FIXED: No-loop redirect -->
   <script>
     (function() {
