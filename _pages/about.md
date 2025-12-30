@@ -18,7 +18,6 @@ redirect_from:
   <meta property="og:type" content="website" />
   <title>FOUND Project - Using Technology to Search and Remember</title>
 
-
   <!-- HSTS Header - Tells browsers to always use HTTPS -->
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
 
@@ -38,29 +37,23 @@ redirect_from:
   <!-- FIXED: No-loop redirect -->
   <script>
     (function() {
-      // Only redirect if we're on HTTP AND not already in a redirect
       if (window.location.protocol === 'http:' && 
           window.location.hostname === 'found-project.org' &&
           !sessionStorage.getItem('redirecting_to_https')) {
         
-        // Set flag to prevent loops
         sessionStorage.setItem('redirecting_to_https', 'true');
         
-        // Redirect to HTTPS
         var httpsUrl = 'https://found-project.org' + 
                       window.location.pathname + 
                       window.location.search + 
                       window.location.hash;
         
-        // Use replace to avoid history entry
         window.location.replace(httpsUrl);
         
-        // Clear flag after 2 seconds (in case of failure)
         setTimeout(function() {
           sessionStorage.removeItem('redirecting_to_https');
         }, 2000);
       } else {
-        // If we're on HTTPS or flag is set, clear the flag
         sessionStorage.removeItem('redirecting_to_https');
       }
     })();
@@ -192,7 +185,6 @@ redirect_from:
         linear-gradient(135deg,#0b1c16 0%, #123126 38%, var(--dark-green) 62%, var(--primary-green) 100%);
       position:relative;
       overflow:hidden;
-      text-align:center;
       margin-bottom:2rem;
       box-shadow:var(--shadow-lg);
       isolation:isolate;
@@ -226,16 +218,44 @@ redirect_from:
       z-index:0;
     }
 
+    .title-inner{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 clamp(1rem,4vw,3rem);
+      position:relative;
+      z-index:1;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:1.4rem;
+    }
+
+    .title-brand{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:1.1rem;
+    }
+
+    .project-logo{
+      width:70px;
+      height:auto;
+      border-radius:18px;
+      box-shadow:0 14px 32px rgba(0,0,0,.45);
+      border:1px solid rgba(255,255,255,.75);
+      background:rgba(255,255,255,.06);
+      padding:6px;
+      flex-shrink:0;
+    }
+
     .project-title{
       font-size:clamp(2.6rem,6vw,4.7rem);
       font-weight:900;
       color:#fff;
-      margin-bottom:1.2rem;
       letter-spacing:-.03em;
       line-height:1.06;
       text-shadow:0 10px 30px rgba(0,0,0,.28);
-      position:relative;
-      z-index:1;
     }
 
     .project-subtitle{
@@ -247,8 +267,7 @@ redirect_from:
       line-height:1.55;
       max-width:980px;
       margin:0 auto;
-      position:relative;
-      z-index:1;
+      text-align:center;
       text-shadow:0 6px 18px rgba(0,0,0,.22);
       padding:0 clamp(1rem,4vw,3rem);
     }
@@ -312,7 +331,6 @@ redirect_from:
       line-height:1.08;
     }
 
-    /* Tagline pill: first line + rotating word line stacked */
     .tagline-pill{
       display:inline-flex;
       flex-direction:column;
@@ -374,7 +392,6 @@ redirect_from:
       border-radius:6px;
     }
 
-    /* Right-hand column (image + award, award pushed down) */
     .hero-side{
       display:flex;
       flex-direction:column;
@@ -411,7 +428,7 @@ redirect_from:
       height:100%;
       object-fit:cover;
       transform:scale(1.01);
-      transition:transform .8s var(--transition-smooth), filter .8s var(--transition-smooth);
+      transition:transform .8s var(--transition-smooth), filter .8s var(--transition-smooth), opacity .4s ease;
       filter:saturate(1.02) contrast(1.03);
     }
 
@@ -441,7 +458,7 @@ redirect_from:
        Award highlight
     =========================== */
     .award-highlight{
-      margin-top:auto; /* push award down to use right-hand space */
+      margin-top:auto;
     }
 
     .award-card{
@@ -749,7 +766,11 @@ redirect_from:
       object-fit:cover;
       display:block;
       transform:scale(1.01);
-      transition:transform .65s var(--transition-smooth);
+      transition:transform .65s var(--transition-smooth), opacity .4s ease;
+    }
+
+    .gallery-item img.loading{
+      opacity:0;
     }
 
     .gallery-item:hover{
@@ -839,7 +860,11 @@ redirect_from:
       height:auto;
       display:block;
       transform:scale(1.01);
-      transition:transform .7s var(--transition-smooth);
+      transition:transform .7s var(--transition-smooth), opacity .4s ease;
+    }
+
+    .buscadoras-image img.loading{
+      opacity:0;
     }
 
     .buscadoras-image:hover{
@@ -974,7 +999,11 @@ redirect_from:
       display:block;
       filter:none !important;
       transform:scale(1.02);
-      transition:transform .8s var(--transition-smooth);
+      transition:transform .8s var(--transition-smooth), opacity .4s ease;
+    }
+
+    .collab-card-gif .collab-logo img.loading{
+      opacity:0;
     }
 
     .collab-card-gif:hover .collab-logo img{
@@ -1257,6 +1286,10 @@ redirect_from:
       .award-card{
         padding:1.1rem 1.2rem;
       }
+
+      .project-logo{
+        width:60px;
+      }
     }
 
     @media (max-width:480px){
@@ -1278,10 +1311,20 @@ redirect_from:
       <button type="button" class="lang-btn" data-lang="es">ES</button>
       <button type="button" class="lang-btn" data-lang="nah">NÁHUATL</button>
     </div>
-    <h1 class="project-title">FOUND</h1>
-    <p class="project-subtitle">
-      <span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan
-    </p>
+
+    <div class="title-inner">
+      <div class="title-brand">
+        <img
+          src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/9466ebc27c9487e8bfbff1d1dd904f4f9e6df81d/images/logo_FOUND_white.png"
+          alt="FOUND logo"
+          class="project-logo"
+        />
+        <h1 class="project-title">FOUND</h1>
+      </div>
+      <p class="project-subtitle" id="project-subtitle">
+        <span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan
+      </p>
+    </div>
   </section>
 
   <!-- HERO -->
@@ -1292,9 +1335,7 @@ redirect_from:
         <div class="hero-text">
           <div class="animated-tagline">
             <div class="tagline-pill" aria-label="FOUND tagline">
-              <!-- Line 1 -->
               <span id="hero-tagline-static">Using technology to</span>
-              <!-- Line 2 (rotating word) -->
               <div class="word-carousel" role="text">
                 <span id="hero-word" class="hero-word">search.</span>
               </div>
@@ -1812,7 +1853,7 @@ redirect_from:
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-content">
-      <em id="footer-text">FOUND: Interpreting Nature to Find Those We Are Missing</em>
+      <em id="footer-text">FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>
     </div>
   </footer>
 
@@ -1823,6 +1864,7 @@ redirect_from:
     (function(){
       const translations = {
         en:{
+          'project-subtitle':'<span class="title-accent">Interpreting Nature</span> to Locate Whose We are Missing',
           'hero-tagline-static':'Using technology to',
           'word-1':'search.',
           'word-2':'remember.',
@@ -1845,6 +1887,7 @@ redirect_from:
           'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
         },
         es:{
+          'project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan',
           'hero-tagline-static':'Usando tecnología para',
           'word-1':'buscar.',
           'word-2':'recordar.',
@@ -1867,6 +1910,7 @@ redirect_from:
           'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
         },
         nah:{
+          'project-subtitle':'<span class="title-accent">In Naturaleza titlatlajtolti</span> para tipantlaltiah in aquimeh techpoloa',
           'hero-tagline-static':'Teknolojíayoh ika',
           'word-1':'temoa.',
           'word-2':'quilnamictia.',
