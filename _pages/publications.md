@@ -9,9 +9,9 @@ author_profile: true
 
   <!-- LANGUAGE TOGGLE -->
   <div class="lang-toggle" aria-label="Language selection">
-    <button class="lang-btn active" data-lang="en">EN</button>
-    <button class="lang-btn" data-lang="es">ES</button>
-    <button class="lang-btn" data-lang="nah">NÁHUATL</button>
+    <button type="button" class="lang-btn active" data-lang="en">EN</button>
+    <button type="button" class="lang-btn" data-lang="es">ES</button>
+    <button type="button" class="lang-btn" data-lang="nah">NÁHUATL</button>
   </div>
 
   <!-- BOOK -->
@@ -168,16 +168,15 @@ author_profile: true
 </div>
 
 <style>
-/* match full-width behaviour of other custom pages */
 .page,#main,.initial-content,.page__inner-wrap,.page__content,.archive{
   max-width:none!important;
   width:100%!important;
 }
 
-/* shell aligned like Media / News */
+/* move content a bit right so it clears the round logo */
 .pub-shell{
   max-width:1100px;
-  margin:0 auto 3rem 5.6rem;
+  margin:0 auto 3rem 6.8rem; /* was 5.6rem */
   padding:1.5rem 0 3rem;
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
 }
@@ -336,10 +335,10 @@ author_profile: true
   line-height:1.6;
 }
 
-/* keep "desktop-like" behaviour on phone as requested */
+/* keep layout closer to desktop feel on phone */
 @media (max-width:900px){
   .pub-shell{
-    margin-left:5.6rem; /* aligned with profile card */
+    margin-left:6.8rem;
     padding-right:1.5rem;
   }
   .pub-card-inner{
@@ -471,28 +470,15 @@ author_profile: true
     document.querySelectorAll('.lang-btn').forEach(btn=>{
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
-
-    // sync with other pages’ keys so language feels global
-    try{
-      localStorage.setItem('found-pubs-lang', lang);
-      localStorage.setItem('found-lang-news', lang);
-      localStorage.setItem('found-lang-media', lang);
-    }catch(e){}
   }
 
   document.addEventListener('DOMContentLoaded', function(){
-    let saved = null;
-    try{
-      saved = localStorage.getItem('found-pubs-lang')
-           || localStorage.getItem('found-lang-news')
-           || localStorage.getItem('found-lang-media');
-    }catch(e){}
-
-    const initial = (saved === 'es' || saved === 'nah' || saved === 'en') ? saved : 'en';
-    setLanguage(initial);
+    setLanguage('en'); // default
 
     document.querySelectorAll('.lang-btn').forEach(btn=>{
-      btn.addEventListener('click', ()=> setLanguage(btn.dataset.lang));
+      btn.addEventListener('click', function(){
+        setLanguage(this.dataset.lang);
+      });
     });
   });
 })();
