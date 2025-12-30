@@ -34,7 +34,8 @@ redirect_from:
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <!-- ========== END SECURITY HEADERS ========== -->
 
-  <!-- FIXED: No-loop redirect -->
+  
+   <!-- FIXED: No-loop redirect -->
   <script>
     (function() {
       if (window.location.protocol === 'http:' && 
@@ -59,89 +60,90 @@ redirect_from:
     })();
   </script>
 
-// Automated disappeared persons counter
-(function() {
-  // Target element where you want to show the number
-  const counterElement = document.querySelector('.hero-description strong');
-  if (!counterElement) return;
-  
-  // Original text as fallback
-  const originalText = counterElement.textContent;
-  const originalNumber = '124,354';
-  
-  // Function to update the counter
-  function updateCounter(newNumber) {
-    const text = counterElement.textContent;
-    counterElement.textContent = text.replace(originalNumber, newNumber);
+  <!-- Automated disappeared persons counter -->
+  <script>
+  (function() {
+    // Target element where you want to show the number
+    const counterElement = document.querySelector('.hero-description strong');
+    if (!counterElement) return;
     
-    // Also update in any other places with the same number
-    document.querySelectorAll('*').forEach(el => {
-      if (el.textContent && el.textContent.includes(originalNumber)) {
-        el.textContent = el.textContent.replace(originalNumber, newNumber);
-      }
-    });
-  }
-  
-  // Fetch from the Mexican government site via CORS proxy
-  async function fetchDisappearedCount() {
-    try {
-      // Using a CORS proxy to bypass cross-origin restrictions
-      const proxyUrl = 'https://corsproxy.io/?';
-      const targetUrl = 'https://versionpublicarnpdno.segob.gob.mx/Dashboard/ContextoGeneral';
+    // Original text as fallback
+    const originalNumber = '124,354';
+    
+    // Function to update the counter
+    function updateCounter(newNumber) {
+      const text = counterElement.textContent;
+      counterElement.textContent = text.replace(originalNumber, newNumber);
       
-      const response = await fetch(proxyUrl + encodeURIComponent(targetUrl));
-      const html = await response.text();
-      
-      // Parse the HTML to find the number
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      
-      // Look for the element containing "Personas desaparecidas"
-      const elements = doc.querySelectorAll('span.card-global-title-sm.block');
-      let foundNumber = null;
-      
-      elements.forEach(el => {
-        if (el.textContent.includes('Personas desaparecidas')) {
-          const parent = el.closest('.card-global');
-          if (parent) {
-            // Look for the number in nearby elements
-            const numberEl = parent.querySelector('.card-global-content h1') || 
-                            parent.querySelector('.card-global-data') ||
-                            parent.nextElementSibling;
-            if (numberEl) {
-              foundNumber = numberEl.textContent.trim().replace(/\D/g, '');
-            }
-          }
+      // Also update in any other places with the same number
+      document.querySelectorAll('*').forEach(el => {
+        if (el.textContent && el.textContent.includes(originalNumber)) {
+          el.textContent = el.textContent.replace(originalNumber, newNumber);
         }
       });
-      
-      if (foundNumber && foundNumber.length > 3) {
-        // Format with commas: 123456 → 123,456
-        const formatted = parseInt(foundNumber).toLocaleString('en-US');
-        updateCounter(formatted);
-        console.log('Updated disappeared count to:', formatted);
+    }
+    
+    // Fetch from the Mexican government site via CORS proxy
+    async function fetchDisappearedCount() {
+      try {
+        // Using a CORS proxy to bypass cross-origin restrictions
+        const proxyUrl = 'https://corsproxy.io/?';
+        const targetUrl = 'https://versionpublicarnpdno.segob.gob.mx/Dashboard/ContextoGeneral';
         
-        // Store in localStorage with timestamp (update daily)
-        localStorage.setItem('disappearedCount', formatted);
-        localStorage.setItem('disappearedCountTimestamp', Date.now());
-      }
-    } catch (error) {
-      console.log('Could not fetch updated count:', error);
-      
-      // Try localStorage cache
-      const cached = localStorage.getItem('disappearedCount');
-      const timestamp = localStorage.getItem('disappearedCountTimestamp');
-      const oneDay = 24 * 60 * 60 * 1000;
-      
-      if (cached && timestamp && (Date.now() - timestamp < oneDay)) {
-        updateCounter(cached);
+        const response = await fetch(proxyUrl + encodeURIComponent(targetUrl));
+        const html = await response.text();
+        
+        // Parse the HTML to find the number
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        
+        // Look for the element containing "Personas desaparecidas"
+        const elements = doc.querySelectorAll('span.card-global-title-sm.block');
+        let foundNumber = null;
+        
+        elements.forEach(el => {
+          if (el.textContent.includes('Personas desaparecidas')) {
+            const parent = el.closest('.card-global');
+            if (parent) {
+              // Look for the number in nearby elements
+              const numberEl = parent.querySelector('.card-global-content h1') || 
+                              parent.querySelector('.card-global-data') ||
+                              parent.nextElementSibling;
+              if (numberEl) {
+                foundNumber = numberEl.textContent.trim().replace(/\D/g, '');
+              }
+            }
+          }
+        });
+        
+        if (foundNumber && foundNumber.length > 3) {
+          // Format with commas: 123456 → 123,456
+          const formatted = parseInt(foundNumber).toLocaleString('en-US');
+          updateCounter(formatted);
+          console.log('Updated disappeared count to:', formatted);
+          
+          // Store in localStorage with timestamp (update daily)
+          localStorage.setItem('disappearedCount', formatted);
+          localStorage.setItem('disappearedCountTimestamp', Date.now());
+        }
+      } catch (error) {
+        console.log('Could not fetch updated count:', error);
+        
+        // Try localStorage cache
+        const cached = localStorage.getItem('disappearedCount');
+        const timestamp = localStorage.getItem('disappearedCountTimestamp');
+        const oneDay = 24 * 60 * 60 * 1000;
+        
+        if (cached && timestamp && (Date.now() - timestamp < oneDay)) {
+          updateCounter(cached);
+        }
       }
     }
-  }
-  
-  // Fetch on page load
-  setTimeout(fetchDisappearedCount, 1000);
-})();
+    
+    // Fetch on page load
+    setTimeout(fetchDisappearedCount, 1000);
+  })();
+  </script>
 
   <style>
     *{
@@ -1417,6 +1419,7 @@ redirect_from:
         height:430px;
       }
     }
+  
   </style>
 </head>
 
