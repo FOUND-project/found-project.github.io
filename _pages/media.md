@@ -81,6 +81,8 @@ author_profile: true
       max-width:1300px;
       margin:0 auto;
       position:relative;
+      /* push main content right so it does not sit over the author logos */
+      padding-left:clamp(13rem, 18vw, 16rem);
     }
 
     /* Language toggle (same style as NEWS) */
@@ -126,7 +128,7 @@ author_profile: true
       border-color:var(--dark-green);
     }
 
-    /* Header – mirrored from NEWS, but greener */
+    /* Header */
     .media-header{
       background:
         radial-gradient(circle at 8% 0%, rgba(45,95,77,.20) 0%, transparent 55%),
@@ -219,7 +221,7 @@ author_profile: true
       line-height:1.8;
     }
 
-    /* MEDIA GRID – visually aligned with NEWS cards */
+    /* MEDIA GRID */
     .media-grid{
       margin-top:0;
       display:grid;
@@ -342,7 +344,7 @@ author_profile: true
       transform:translateX(2px);
     }
 
-    /* TALKS – styled to sit as a companion block */
+    /* TALKS */
     .talks-section{
       margin-top:0;
       padding:1.9rem 1.9rem 1.3rem;
@@ -425,6 +427,12 @@ author_profile: true
 
     .talk-link:hover{
       color:var(--dark-green);
+    }
+
+    @media (max-width:1100px){
+      .media-shell{
+        padding-left:0; /* remove offset on tablet/mobile so it uses full width */
+      }
     }
 
     @media (max-width:900px){
@@ -767,178 +775,91 @@ author_profile: true
     </section>
   </div>
 
-  <!-- LANGUAGE SCRIPT (unchanged, just wired to the same IDs & data-key tags) -->
+  <!-- LANGUAGE SCRIPT -->
   <script>
-    en:{
-        'news-pill':'NEWS • IMPACT • MEDIA',
-        'news-title':'FOUND — News &amp; Updates',
-        'news-subtitle':'Latest developments on our work across Mexico, Colombia, and beyond.',
-        'card0-badge':'Award',
-        'card0-title':'FOUND’s pioneer wins the UK FCDO’s Sir Nicholas Browne Policy and Expertise Award',
-        'card0-p1':'We are proud to share that <strong>Mariela Garfias</strong> has been awarded the <strong>Sir Nicholas Browne Policy and Expertise Award</strong>, a UK FCDO award recognising excellence in delivering policy objectives, selected from more than 200 nominations.',
-        'card0-p2':'Mariela is FOUND’s FCDO pioneer and one of the people most responsible for the project’s impact.',
-        'card0-p3':'Through FOUND, and with the support of incredible partners, we have located <strong>27 people</strong> who were victims of disappearance in Mexico, allowing families to move towards answers and a form of closure. Our work is now being embedded with local and national authorities, and has expanded to collaboration with the <strong>Colombian Search Unit</strong> and the Executive Office of the <strong>UN Secretary-General</strong>.',
-        'card0-p4':'In her acceptance speech, Mariela shared words that capture the spirit of FOUND: “From my decomposed body, flowers shall grow, and I am in them. That is eternity.” — Edvard Munch.',
-        'card0-p5':'When searching for clandestine graves using technologies, nature often bears witness — through subtle changes in soil and vegetation. Memory persists. Our responsibility is to find it.',
-        'card0-p6':'Mariela thanked those who carry this work with us: the British Embassy in Mexico City, our mentor <strong>Martin Johnston</strong>, the Frontier Tech Hub team, and above all the searching mothers, whose knowledge and strength remain our compass.',
-        'card0-link':'Read the full post on LinkedIn ↗',
-
-        'card1-badge':'Field visit',
-        'card1-title':'Second visit of Colombia’s Search Unit for Missing Persons (UBPD) to FOUND’s experimental sites in Jalisco',
-        'card1-p1':'We are deeply grateful to <strong>CVM Cyber</strong> and <strong>Ciaran Martin</strong> for their generous support in making this visit possible.',
-        'card1-p2':'We welcomed <strong>Héctor Javier Gómez</strong>, geophysicist from Colombia’s <em>Unidad de Búsqueda de Personas Dadas por Desaparecidas (UBPD)</em>, for a joint field deployment to FOUND’s experimental sites in Jalisco.',
-        'card1-p3':'This visit focused on the gathering and processing of drone-based hyperspectral imagery across all five of FOUND’s experimental sites — marking only the second time this cutting-edge technology has been used in Mexico for humanitarian purposes.',
-        'card1-p4':'It follows the October 2025 visit by <strong>Dr Julián Arias</strong>, Director of Prospection, Recovery and Identification at UBPD, which formally launched our collaboration on search and identification methodologies.',
-        'card1-p5':'During this second visit, the UBPD offered key technical recommendations to enhance FOUND’s detection strategies for clandestine graves. The collaboration will continue in January 2026, when the FOUND team will visit UBPD’s team in Colombia to exchange experiences and integrate UBPD methodologies across FOUND’s partner states in Mexico.',
-
-        'card2-badge':'Media',
-        'card2-title':'FOUND in The Guardian',
-        'card2-p1':'This piece is the result of more than six months of email conversations, WhatsApp messages, and the journalist’s in-person visit to our experimental sites in Jalisco, Mexico.',
-        'card2-p2':'We are deeply grateful for the care, depth, and commitment brought to this story after months spent listening to families, researchers, and officials.',
-        'card2-link':'Read the article in The Guardian ↗',
-
-        'card3-badge':'Funding',
-        'card3-title':'FOUND receives new support from the UK’s FCDO through the Frontier Tech Hub',
-        'card3-p1':'In the pitch, our team showcased FOUND’s impact to date, and we were awarded funding that will enable us to scale our mission: to drive systemic change in how missing persons are searched for in Mexico, Colombia, and beyond.',
-        'card3-p2':'<strong>🌱 Driven by families and research communities</strong><br>FOUND is guided and motivated by mothers’ search groups and researchers from CentroGeo, UNAM, IPN, UdeG, ITESO, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.',
-        'card3-p3':'<strong>🔍 We are now working directly with:</strong>',
-        'card3-list':'<li>Executive Office of the UN Secretary-General</li><li>UK’s Foreign, Commonwealth &amp; Development Office (FCDO)</li><li>Local Search Commissions and Attorney’s Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)</li><li>Colombian Search Unit</li><li>Mexico’s National Search Commission</li><li>Mexican Science and Technology Secretariat</li><li>British Embassy in Mexico City</li><li>British Association for Forensic Anthropology</li>',
-        'card3-p4':'<strong>🛰️ Technology for memory, dignity, and closure</strong><br>We will continue developing — and embedding in official protocols — new ways to locate missing persons using advanced tools such as machine-learning models, hyperspectral cameras, seismic instruments, and electrical resistivity.',
-        'card3-p5':'<em>FOUND: Interpreting Nature to Locate Those We Are Missing.</em>',
-
-        'card4-badge':'Coverage',
-        'card4-title':'FOUND featured by Associated Press, The Independent, LA Times, VICE, and NBC',
-        'card4-list':'<li><strong>Associated Press:</strong> <a href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank" rel="noopener noreferrer">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li><li><strong>The Independent:</strong> <a href="https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html" target="_blank" rel="noopener noreferrer">How pigs could help find missing Mexican drug cartel victims</a></li><li><strong>LA Times:</strong> <a href="https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico" target="_blank" rel="noopener noreferrer">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li><li><strong>VICE:</strong> <a href="https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/" target="_blank" rel="noopener noreferrer">Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims</a></li><li><strong>NBC:</strong> <a href="https://www.nbcnews.com/news/amp/rcna221791" target="_blank" rel="noopener noreferrer">Clothed pigs are buried in Mexico as scientists use them in search of the missing</a></li>'
-      },
-
-      es:{
-        'news-pill':'NOTICIAS • IMPACTO • MEDIOS',
-        'news-title':'FOUND — Noticias y Actualizaciones',
-        'news-subtitle':'Las novedades más recientes sobre nuestro trabajo en México, Colombia y más allá.',
-        'card0-badge':'Reconocimiento',
-        'card0-title':'La pionera de FOUND recibe el Premio Sir Nicholas Browne de Política y Pericia del FCDO británico',
-        'card0-p1':'Nos enorgullece compartir que <strong>Mariela Garfias</strong> ha recibido el <strong>Premio Sir Nicholas Browne de Política y Pericia</strong>, un reconocimiento del FCDO británico a la excelencia en la implementación de objetivos de política, seleccionado entre más de 200 nominaciones.',
-        'card0-p2':'Mariela es la pionera de FOUND dentro del FCDO y una de las personas más responsables del impacto del proyecto.',
-        'card0-p3':'A través de FOUND, y con el apoyo de aliadas y aliados extraordinarios, hemos localizado a <strong>27 personas</strong> víctimas de desaparición en México, permitiendo que sus familias avancen hacia respuestas y alguna forma de cierre. Nuestro trabajo se está incorporando a autoridades locales y nacionales, y se ha ampliado a una colaboración con la <strong>Unidad de Búsqueda de Personas dadas por Desaparecidas de Colombia</strong> y con la Oficina Ejecutiva del <strong>Secretario General de la ONU</strong>.',
-        'card0-p4':'En su discurso de aceptación, Mariela compartió unas palabras que capturan el espíritu de FOUND: “De mi cuerpo descompuesto crecerán flores, y yo estoy en ellas. Eso es la eternidad”. — Edvard Munch.',
-        'card0-p5':'Al buscar fosas clandestinas con tecnologías, la naturaleza suele dar testimonio — a través de cambios sutiles en el suelo y la vegetación. La memoria persiste. Nuestra responsabilidad es encontrarla.',
-        'card0-p6':'Mariela agradeció a quienes sostienen este trabajo con nosotras y nosotros: la Embajada Británica en Ciudad de México, nuestro mentor <strong>Martin Johnston</strong>, el equipo de Frontier Tech Hub y, sobre todo, las madres buscadoras, cuyo conocimiento y fuerza siguen siendo nuestra brújula.',
-        'card0-link':'Leer la publicación completa en LinkedIn ↗',
-
-        'card1-badge':'Visita de campo',
-        'card1-title':'Segunda visita de la Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD) de Colombia a los sitios experimentales de FOUND en Jalisco',
-        'card1-p1':'Agradecemos profundamente a <strong>CVM Cyber</strong> y a <strong>Ciaran Martin</strong> por su apoyo para hacer posible esta visita.',
-        'card1-p2':'Recibimos a <strong>Héctor Javier Gómez</strong>, geofísico de la <em>Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD)</em> de Colombia, para un despliegue conjunto en los sitios experimentales de FOUND en Jalisco.',
-        'card1-p3':'La visita se centró en la obtención y el procesamiento de imágenes hiperespectrales mediante dron en los cinco sitios experimentales de FOUND — apenas la segunda vez que esta tecnología se utiliza en México con fines humanitarios.',
-        'card1-p4':'Se trata de la continuación de la visita de octubre de 2025 de <strong>el Dr. Julián Arias</strong>, Director de Prospección, Recuperación e Identificación de la UBPD, que marcó el inicio formal de nuestra colaboración en metodologías de búsqueda e identificación.',
-        'card1-p5':'Durante esta segunda visita, la UBPD compartió recomendaciones técnicas clave para reforzar las estrategias de FOUND para detectar fosas clandestinas. La colaboración continuará en enero de 2026, cuando el equipo de FOUND visitará a la UBPD en Colombia para intercambiar experiencias e integrar sus metodologías en los estados aliados de FOUND en México.',
-
-        'card2-badge':'Medios',
-        'card2-title':'FOUND en The Guardian',
-        'card2-p1':'Este reportaje es el resultado de más de seis meses de correos electrónicos, mensajes de WhatsApp y la visita en terreno de la periodista a nuestros sitios experimentales en Jalisco, México.',
-        'card2-p2':'Agradecemos profundamente el cuidado, la profundidad y el compromiso con el que se trabajó esta historia, tras meses escuchando a familias, personas investigadoras y autoridades.',
-        'card2-link':'Leer el reportaje en The Guardian ↗',
-
-        'card3-badge':'Financiamiento',
-        'card3-title':'FOUND recibe nuevo apoyo del FCDO del Reino Unido a través de Frontier Tech Hub',
-        'card3-p1':'En la presentación, nuestro equipo mostró el impacto alcanzado por FOUND hasta la fecha, y recibimos una financiación que nos permitirá escalar nuestra misión: impulsar cambios sistémicos en la forma de buscar a las personas desaparecidas en México, Colombia y más allá.',
-        'card3-p2':'<strong>🌱 Impulsado por familias y comunidades de investigación</strong><br>FOUND está guiado y motivado por colectivos de madres buscadoras y por personas investigadoras de CentroGeo, UNAM, IPN, UdeG, ITESO, Oxford, Bristol, Bath, Cambridge y las Universidades Autónomas de Zacatecas y San Luis Potosí.',
-        'card3-p3':'<strong>🔍 Actualmente trabajamos directamente con:</strong>',
-        'card3-list':'<li>Oficina Ejecutiva del Secretario General de la ONU</li><li>Foreign, Commonwealth &amp; Development Office (FCDO) del Reino Unido</li><li>Comisiones y Fiscalías de Búsqueda de Jalisco, Zacatecas, San Luis Potosí y Chihuahua (México)</li><li>Unidad de Búsqueda de Personas dadas por Desaparecidas de Colombia</li><li>Comisión Nacional de Búsqueda de Personas de México</li><li>Secretaría de Ciencia y Tecnología de México</li><li>Embajada Británica en México</li><li>British Association for Forensic Anthropology</li>',
-        'card3-p4':'<strong>🛰️ Tecnología para la memoria, la dignidad y el cierre</strong><br>Continuaremos desarrollando — y ayudando a incorporar en los protocolos oficiales — nuevas formas de localizar a personas desaparecidas mediante herramientas como modelos de aprendizaje automático, cámaras hiperespectrales, instrumentos sísmicos y tomografía eléctrica.',
-        'card3-p5':'<em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>',
-
-        'card4-badge':'Cobertura',
-        'card4-title':'FOUND en Associated Press, The Independent, LA Times, VICE y NBC',
-        'card4-list':'<li><strong>Associated Press:</strong> <a href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank" rel="noopener noreferrer">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li><li><strong>The Independent:</strong> <a href="https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html" target="_blank" rel="noopener noreferrer">How pigs could help find missing Mexican drug cartel victims</a></li><li><strong>LA Times:</strong> <a href="https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico" target="_blank" rel="noopener noreferrer">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li><li><strong>VICE:</strong> <a href="https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/" target="_blank" rel="noopener noreferrer">Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims</a></li><li><strong>NBC:</strong> <a href="https://www.nbcnews.com/news/amp/rcna221791" target="_blank" rel="noopener noreferrer">Clothed pigs are buried in Mexico as scientists use them in search of the missing</a></li>'
-      },
-
-      nah:{
-        'news-pill':'TLATLAHCUILOLLI • TLAKAMEH • MEDIOS',
-        'news-title':'FOUND — Tlen mochihua huan tlen pano',
-        'news-subtitle':'Nuevas tlamantli tlen totlatequi ipan Mēxihco, Colombia huan oksekan.',
-        'card0-badge':'Tlatlepanitaliztli',
-        'card0-title':'In pionera de FOUND kiseli in Premio Sir Nicholas Browne de Política huan Pericia (FCDO)',
-        'card0-p1':'Tiquinechpoua ika pakilistli ke <strong>Mariela Garfias</strong> okiseli in <strong>Premio Sir Nicholas Browne de Política y Pericia</strong>, tlatlepanitaliztli de in FCDO británico tlen kixnextia kualli tequitl ipan políticas, tlaxtlahuilli tlen más de 200 propuestah.',
-        'card0-p2':'Mariela yeto in pionera de FOUND dentro de in FCDO huan se de in tlacameh tlen okitmaka hueyi tlakameh inin proyecto.',
-        'card0-p3':'Ika FOUND, huan ika tlatlapalehuiliztli de miek toknihuan, yotiknextijkeh kan okatkah <strong>27 tlācameh</strong> tlen polihuitkeh ipan Mēxihco, tlen kimpalehuiah in familias kiseliskeh tlanemilistli huan se tipo de cierre. In tequitl yotemosewia kan autoridades locales huan nacionales, huan yopanok ika sekolaboración ika <strong>Unidad de Búsqueda de Personas dadas por Desaparecidas de Colombia</strong> huan ika Oficina Ejecutiva del <strong>Secretario General de la ONU</strong>.',
-        'card0-p4':'Ipan in tlajtohketl de kiselis in premio, Mariela okijtoua tlahtolli tlen kixkopina in espíritu de FOUND: “De mi cuerpo descompuesto crecerán flores, y yo estoy en ellas. Eso es la eternidad”. — Edvard Munch.',
-        'card0-p5':'Ijkuak tiktlatemohuah fosas clandestinas ika tecnologías, in tlalli huan xihuitl miek wel kitenextiah — ika tlapeyaliztli tlen tzintla o ipan xihuitl. In memoria amo polihui. Totekipano in tikajsikilis.',
-        'card0-p6':'Mariela okimotlajkamat in tlen kualkanin kinyeknekiltiah nin tequitl: Embajada Británica ipan Ciudad de México, in tomentor <strong>Martin Johnston</strong>, in equipo de Frontier Tech Hub, huan, achtoyan, in nananmeh buscadoras, tlen inintlamatiliztli huan yolchikahualiztli mochipa yetos tocompás.',
-        'card0-link':'Xikmotlajkolti in tlatlatol ipan LinkedIn ↗',
-
-        'card1-badge':'Tlayekoliztli ipan tlalli',
-        'card1-title':'Ome visita de in Unidad de Búsqueda de Colombia (UBPD) kan sitios experimentales de FOUND ipan Jalisco',
-        'card1-p1':'Timitztlajkamatih miek ika <strong>CVM Cyber</strong> huan <strong>Ciaran Martin</strong> por ininpalehuiliztli para nikchihuase nin visita.',
-        'card1-p2':'Otikweltaskeh <strong>Héctor Javier Gómez</strong>, geofísico de in <em>Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD)</em> de Colombia, para se tlatskayotl tlayekoliztli ipan sitios experimentales de FOUND ipan Jalisco.',
-        'card1-p3':'In visita omochi para tiknotsaskeh huan tiktlaxtlawaskeh imágenes hiperespectrales ika dron ipan makuil sitios experimentales de FOUND — san ome welta okitekuitilijkeh nin tecnología ipan Mēxihco ika propósito humanitario.',
-        'card1-p4':'Nin tlayekoliztli hualpehua desde in visita de octubre 2025 de <strong>Dr. Julián Arias</strong>, Director de Prospección, Recuperación e Identificación de la UBPD, tlen okitlapolwi oficialmente in sekolaboración ipan metodologías de búsqueda e identificación.',
-        'card1-p5':'Ipan nin ompa visita, UBPD okimakak tlanawatilistli teknikah para okachi tikchikawaseh estrategias de FOUND para tlamiktiloyan tlatemohuiliztli. In sekolaboración yas okachi wejkapa ipan enero 2026, ijkuak in equipo FOUND yas Colombia para motla’ahxilis huan kinekitsas metodologías de UBPD ipan estados compañero de FOUND ipan Mēxihco.',
-
-        'card2-badge':'Medios',
-        'card2-title':'FOUND ipan The Guardian',
-        'card2-p1':'Nin reportaje omochi ika más de chikuasen metztli de correos, mensajes de WhatsApp huan visita de in periodista kan sitios experimentales de Jalisco, Mēxihco.',
-        'card2-p2':'Titlajkamatih miek por in cuidado, hueyikan tlamachilistli huan compromiso tlen okitemitijkeh nin historia, satepan de miek metztli okikakiah familias, investigadores huan autoridades.',
-        'card2-link':'Xikmotlajkolti in reportaje ipan The Guardian ↗',
-
-        'card3-badge':'Financiamiento',
-        'card3-title':'FOUND kiselia yankuik tlapalehuiliztli de in FCDO británico ika Frontier Tech Hub',
-        'card3-p1':'Ipan in presentación, inin equipo okixnexti in tlakameh tlen FOUND okichi, huan otikselijkeh se financiamiento tlen techpalehuis para tikueskaltis in misión: xikpatla se modo sistémico de kenik tiktlatemohuah personas desaparecidas ipan Mēxihco, Colombia huan oksekan.',
-        'card3-p2':'<strong>🌱 Tlatekitilistli tlen petlani desde familias huan comunidades de investigación</strong><br>FOUND kinyeknemilia nananmeh buscadoras huan investigadores de CentroGeo, UNAM, IPN, UdeG, ITESO, Oxford, Bristol, Bath, Cambridge huan Universidades Autónomas de Zacatecas huan San Luis Potosí.',
-        'card3-p3':'<strong>🔍 Axkan titekitih san sejco ika:</strong>',
-        'card3-list':'<li>Oficina Ejecutiva del Secretario General de la ONU</li><li>Foreign, Commonwealth &amp; Development Office (FCDO) de Reino Unido</li><li>Comisiones de Búsqueda huan Fiscalías de Jalisco, Zacatecas, San Luis Potosí huan Chihuahua (Mēxihco)</li><li>Unidad de Búsqueda de Personas dadas por Desaparecidas de Colombia</li><li>Comisión Nacional de Búsqueda de Personas de México</li><li>Secretaría de Ciencia y Tecnología de México</li><li>Embajada Británica ipan México</li><li>British Association for Forensic Anthropology</li>',
-        'card3-p4':'<strong>🛰️ Teknolojía para memoria, tlatepanitaliztli huan cierre</strong><br>Tikchiwaseh okse yankuik ojtli para tiktlatemohuah personas desaparecidas ika modelos de machine learning, cámaras hiperespectrales, instrumentos sísmicos huan tomografía eléctrica, huan tikneki se tlamantli momanah inin ipan protocolos oficiales.',
-        'card3-p5':'<em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>',
-
-        'card4-badge':'Tlayekoliztli ipan medios',
-        'card4-title':'FOUND ipan Associated Press, The Independent, LA Times, VICE huan NBC',
-        'card4-list':'<li><strong>Associated Press:</strong> <a href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank" rel="noopener noreferrer">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li><li><strong>The Independent:</strong> <a href="https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html" target="_blank" rel="noopener noreferrer">How pigs could help find missing Mexican drug cartel victims</a></li><li><strong>LA Times:</strong> <a href="https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico" target="_blank" rel="noopener noreferrer">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li><li><strong>VICE:</strong> <a href="https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/" target="_blank" rel="noopener noreferrer">Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims</a></li><li><strong>NBC:</strong> <a href="https://www.nbcnews.com/news/amp/rcna221791" target="_blank" rel="noopener noreferrer">Clothed pigs are buried in Mexico as scientists use them in search of the missing</a></li>'
-      }
-    };
-
-    const ids = [
-      'news-pill','news-title','news-subtitle',
-      'card0-badge','card0-title','card0-p1','card0-p2','card0-p3','card0-p4','card0-p5','card0-p6','card0-link',
-      'card1-badge','card1-title','card1-p1','card1-p2','card1-p3','card1-p4','card1-p5',
-      'card2-badge','card2-title','card2-p1','card2-p2','card2-link',
-      'card3-badge','card3-title','card3-p1','card3-p2','card3-p3','card3-list','card3-p4','card3-p5',
-      'card4-badge','card4-title','card4-list'
-    ];
-
-    function setLanguage(lang){
-      const dict = translations[lang] || translations.en;
-
-      ids.forEach(id=>{
-        const el = document.getElementById(id);
-        if(el && dict[id] !== undefined){
-          el.innerHTML = dict[id];
+    (function(){
+      const translations = {
+        en:{
+          'media-pill':'MEDIA • COVERAGE • TALKS',
+          'media-title':'Media Coverage',
+          'media-intro':'Our research and work has been featured in leading international publications.',
+          'talks-title':'Talks'
+        },
+        es:{
+          'media-pill':'MEDIOS • COBERTURA • CHARLAS',
+          'media-title':'Cobertura en medios',
+          'media-intro':'Nuestras investigaciones y trabajo han aparecido en medios internacionales de referencia.',
+          'talks-title':'Charlas'
+        },
+        nah:{
+          'media-pill':'MEDIOS • TLAYEKOLOLLO • TLAHTOLMEH',
+          'media-title':'Tlayekoliztli ipan medios',
+          'media-intro':'Totlatequi huan totlatlamachtiliztli yopanok ipan medios internacionales tlen hueyi tlanechicoliztli.',
+          'talks-title':'Tlatlahtolmeh'
         }
+      };
+
+      const tagLabels = {
+        en:{
+          article:'Article',
+          tv:'TV segment',
+          'tv-social':'TV / Social',
+          opinion:'Opinion'
+        },
+        es:{
+          article:'Artículo',
+          tv:'Segmento TV',
+          'tv-social':'TV / Redes',
+          opinion:'Opinión'
+        },
+        nah:{
+          article:'Tlatlaquiliztli',
+          tv:'Segmento TV',
+          'tv-social':'TV / Social',
+          opinion:'Tlaixkomati'
+        }
+      };
+
+      function setLanguage(lang){
+        const dict = translations[lang] || translations.en;
+
+        Object.keys(dict).forEach(id => {
+          const el = document.getElementById(id);
+          if(el) el.innerHTML = dict[id];
+        });
+
+        // update tag chips
+        const tagMap = tagLabels[lang] || tagLabels.en;
+        document.querySelectorAll('.media-tag').forEach(el=>{
+          const key = el.dataset.key;
+          if(key && tagMap[key]){
+            el.textContent = tagMap[key];
+          }
+        });
+
+        document.documentElement.setAttribute(
+          'lang',
+          lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
+        );
+
+        document.querySelectorAll('.lang-btn').forEach(btn=>{
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+
+        try{ localStorage.setItem('found-lang-media', lang); }catch(e){}
+      }
+
+      document.addEventListener('DOMContentLoaded', function(){
+        let savedLang = null;
+        try{ savedLang = localStorage.getItem('found-lang-media'); }catch(e){}
+        const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
+        setLanguage(initialLang);
+
+        document.querySelectorAll('.lang-btn').forEach(btn=>{
+          btn.addEventListener('click', ()=> setLanguage(btn.dataset.lang));
+        });
       });
-
-      document.documentElement.setAttribute(
-        'lang',
-        lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
-      );
-
-      document.querySelectorAll('.lang-btn').forEach(btn=>{
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-      });
-
-      try{ localStorage.setItem('found-lang-news', lang); }catch(e){}
-    }
-
-    document.addEventListener('DOMContentLoaded', function(){
-      let savedLang = null;
-      try{ savedLang = localStorage.getItem('found-lang-news'); }catch(e){}
-      const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
-      setLanguage(initialLang);
-
-      document.querySelectorAll('.lang-btn').forEach(btn=>{
-        btn.addEventListener('click', ()=> setLanguage(btn.dataset.lang));
-      });
-    });
-  })();
-</script>
+    })();
   </script>
 </body>
 </html>
