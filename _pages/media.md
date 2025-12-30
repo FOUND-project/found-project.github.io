@@ -77,13 +77,14 @@ author_profile: true
       border-radius:10px;
     }
 
-    .media-shell{
-      max-width:1300px;
-      margin:0 auto;
-      position:relative;
-      /* offset so the header doesn’t cover the left author/logo column */
-      padding-left:clamp(13rem,18vw,16rem);
-    }
+   .media-shell{
+  max-width:none;               /* full width like News */
+  width:100%;
+  margin:0;
+  position:relative;
+  padding-left:clamp(10rem, 14vw, 13rem);   /* closer to sidebar */
+  padding-right:2rem;
+}
 
     /* Language toggle */
     .lang-toggle{
