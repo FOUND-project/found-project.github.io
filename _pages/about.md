@@ -946,24 +946,13 @@ redirect_from:
       transition:transform .35s var(--transition-smooth), filter .35s var(--transition-smooth), opacity .3s ease;
     }
 
-    /* Frontier Tech Hub – make the light logo stand out */
-    .collab-card-fth .collab-logo{
-      background:linear-gradient(145deg,#dff7f4 0%,#ffffff 45%, #d7f0ea 100%);
-    }
-
-    .collab-img{
-      max-height:72px;
-      width:auto;
-      object-fit:contain;
-      padding:10px 16px;
-      background:rgba(45,95,77,.08);
-      border-radius:14px;
-      box-shadow:0 6px 18px rgba(15,23,42,.12);
-    }
-
-    .collab-card-fth .collab-meta{
-      background:linear-gradient(180deg,#f2fbf8 0%,#ffffff 100%);
-    }
+/* Frontier Tech Hub logo – very subtle separation only */
+.collab-img{
+  max-height:80px;
+  width:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 0 1px rgba(0,0,0,.18));
+}
             
     .collab-logo img.loading{
       opacity:0;
@@ -1750,7 +1739,7 @@ redirect_from:
           </div>
 
 <!-- Frontier Tech Hub -->
-<div class="collab-card collab-card-fth touch-zoomable">
+<div class="collab-card touch-zoomable">
   <div class="collab-logo">
     <img
       src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
@@ -1764,7 +1753,6 @@ redirect_from:
     <div class="collab-name" id="collab-item-fth">
       Frontier Tech Hub
     </div>
-
     <div class="collab-note" id="collab-note-fth">
       Funding • Technical expertise
     </div>
