@@ -18,16 +18,36 @@ redirect_from:
   <meta property="og:type" content="website" />
   <title>FOUND Project - Using Technology to Search and Remember</title>
 
-  <!-- HTTP to HTTPS redirect -->
-  <meta http-equiv="refresh" content="0; url=https://found-project.org">
+  <!-- FIXED: No-loop redirect -->
   <script>
-    // Immediate JavaScript redirect
-    if (window.location.hostname === 'found-project.org' && 
-        window.location.protocol === 'http:') {
-      window.location.href = 'https://' + window.location.host + window.location.pathname + window.location.search + window.location.hash;
-    }
+    (function() {
+      // Only redirect if we're on HTTP AND not already in a redirect
+      if (window.location.protocol === 'http:' && 
+          window.location.hostname === 'found-project.org' &&
+          !sessionStorage.getItem('redirecting_to_https')) {
+        
+        // Set flag to prevent loops
+        sessionStorage.setItem('redirecting_to_https', 'true');
+        
+        // Redirect to HTTPS
+        var httpsUrl = 'https://found-project.org' + 
+                      window.location.pathname + 
+                      window.location.search + 
+                      window.location.hash;
+        
+        // Use replace to avoid history entry
+        window.location.replace(httpsUrl);
+        
+        // Clear flag after 2 seconds (in case of failure)
+        setTimeout(function() {
+          sessionStorage.removeItem('redirecting_to_https');
+        }, 2000);
+      } else {
+        // If we're on HTTPS or flag is set, clear the flag
+        sessionStorage.removeItem('redirecting_to_https');
+      }
+    })();
   </script>
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
   <style>
     *{
