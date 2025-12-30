@@ -8,7 +8,7 @@ author_profile: true
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1200">
+<meta name="viewport" content="width=1200">
   <title>FOUND — Media & Talks</title>
 
   <style>
@@ -77,16 +77,16 @@ author_profile: true
       border-radius:10px;
     }
 
-    .media-shell{
-      max-width:none;
-      width:100%;
-      margin:0;
-      position:relative;
-      padding-left:clamp(10rem, 14vw, 13rem);
-      padding-right:2rem;
-    }
+   .media-shell{
+  max-width:none;               /* full width like News */
+  width:100%;
+  margin:0;
+  position:relative;
+  padding-left:clamp(10rem, 14vw, 13rem);   /* closer to sidebar */
+  padding-right:2rem;
+}
 
-    /* Language toggle – tucked inside header area */
+ /* Language toggle – tucked inside header area */
     .lang-toggle{
       position:absolute;
       top:1.1rem;
@@ -135,7 +135,7 @@ author_profile: true
         radial-gradient(circle at 8% 0%, rgba(45,95,77,.20) 0%, transparent 55%),
         linear-gradient(135deg,#ffffff 0%,#f6faf8 40%,#ffffff 100%);
       border-radius:var(--radius-lg);
-      padding:clamp(1.9rem,3.3vw,2.6rem);
+      padding:clamp(1.75rem,3vw,2.4rem);
       margin:1.75rem 0 2.8rem;
       display:flex;
       align-items:center;
@@ -222,19 +222,19 @@ author_profile: true
       line-height:1.8;
     }
 
-    /* MEDIA GRID – 5 cards per row on desktop */
+    /* MEDIA GRID */
     .media-grid{
       margin-top:0;
       display:grid;
-      grid-template-columns:repeat(5,minmax(0,1fr));
-      gap:1.6rem;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:clamp(1.7rem,2.5vw,2.3rem);
       margin-bottom:2.4rem;
     }
 
     .media-card{
       background:#ffffff;
       border-radius:var(--radius-md);
-      padding:1.4rem 1.4rem 1.5rem;
+      padding:1.6rem 1.6rem 1.7rem;
       box-shadow:var(--shadow-sm);
       border:1px solid rgba(15,23,42,.06);
       position:relative;
@@ -281,7 +281,7 @@ author_profile: true
       height:100%;
     }
 
-    /* Outlet pill – green-ish highlight */
+ /* Outlet pill – green-ish highlight */
     .media-outlet{
       font-size:.74rem;
       text-transform:uppercase;
@@ -308,10 +308,10 @@ author_profile: true
     }
 
     .media-title{
-      font-size:1.02rem;
+      font-size:1.06rem;
       font-weight:660;
       color:var(--text-dark);
-      margin:0 0 1.05rem 0;
+      margin:0 0 1.15rem 0;
       line-height:1.5;
       letter-spacing:-.01em;
     }
@@ -517,10 +517,226 @@ author_profile: true
 
     <!-- MEDIA GRID -->
     <section class="media-grid">
-      <!-- cards unchanged -->
-      <!-- ... your articles exactly as before ... -->
-      <!-- (keep all the <article class="media-card"> blocks you already have) -->
-      <!-- I didn’t edit any of their content, just the CSS above. -->
+      <!-- The Guardian -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">The Guardian</div>
+            <h3 class="media-title">
+              How dead pigs are helping in the search for missing victims of Mexico's drug wars
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Associated Press (EN) -->
+      <article class="media-card">
+        <a class="media-link" href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Associated Press</div>
+            <h3 class="media-title">
+              Why are scientists dressing pigs in clothes and burying them in Mexico?
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Associated Press (ES) -->
+      <article class="media-card">
+        <a class="media-link" href="https://apnews.com/article/mexico-desaparecidos-busqueda-ciencia-tecnologia-dron-92f74132a9a5035b73795181a1023d1e" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Associated Press</div>
+            <h3 class="media-title">
+              Ciencia, tecnología y cerdos. México experimenta nuevas formas de buscar a los desaparecidos
+            </h3>
+            <span class="media-tag" data-key="article">Artículo</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Independent -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">The Independent</div>
+            <h3 class="media-title">
+              How pigs could help find missing Mexican drug cartel victims
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- VICE -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">VICE</div>
+            <h3 class="media-title">
+              Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Los Angeles Times -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Los Angeles Times</div>
+            <h3 class="media-title">
+              Why are scientists dressing pigs in clothes and burying them in Mexico?
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- NBC News -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.nbcnews.com/news/amp/rcna221791" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">NBC News</div>
+            <h3 class="media-title">
+              Clothed pigs are buried in Mexico as scientists use them in search of missing
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Animal Político -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Animal Político</div>
+            <h3 class="media-title">
+              Con tecnología y drones, investigadores y familias de desaparecidos encuentran fosas clandestinas en Jalisco
+            </h3>
+            <span class="media-tag" data-key="article">Artículo</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Science -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Science</div>
+            <h3 class="media-title">
+              Satellites could reveal the secret burial grounds of Mexico's murder victims
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- WIRED -->
+      <article class="media-card">
+        <a class="media-link" href="https://es.wired.com/articulos/tecnologia-geoespacial-expone-el-horror-de-las-fosas-clandestinas-en-mexico" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">WIRED (ES)</div>
+            <h3 class="media-title">
+              Cómo la tecnología geoespacial expone el horror de las fosas clandestinas en México
+            </h3>
+            <span class="media-tag" data-key="article">Artículo</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- El País (EN) -->
+      <article class="media-card">
+        <a class="media-link" href="https://english.elpais.com/international/2025-03-28/mexicos-izaguirre-ranch-high-concentrations-of-ash-suggest-the-presence-of-clandestine-crematoriums.html" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">El País (EN)</div>
+            <h3 class="media-title">
+              Mexico's Izaguirre ranch: “High concentrations of ash” suggest the presence of clandestine crematoriums
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- El País (ES) -->
+      <article class="media-card">
+        <a class="media-link" href="https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">El País</div>
+            <h3 class="media-title">
+              "Altas concentraciones de ceniza" y humo de gasolina: los indicios que apuntan a que en el rancho de Teuchitlán hubo crematorios clandestinos
+            </h3>
+            <span class="media-tag" data-key="article">Artículo</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- TV Azteca -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">TV Azteca</div>
+            <h3 class="media-title">
+              Tecnología contra las desapariciones en México
+            </h3>
+            <span class="media-tag" data-key="tv">TV segment</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Animal Político (opinion) -->
+      <article class="media-card">
+        <a class="media-link" href="https://animalpolitico.com/analisis/invitades/libro-madres-buscadoras-fil" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Animal Político</div>
+            <h3 class="media-title">
+              Interpretar la naturaleza para encontrar a quienes nos faltan
+            </h3>
+            <span class="media-tag" data-key="opinion">Opinion</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Reuters -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.reuters.com/world/americas/mexico-mothers-missing-turn-drones-look-unmarked-graves-2024-01-26/" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Reuters</div>
+            <h3 class="media-title">
+              In Mexico, mothers of the missing turn to drones to look for unmarked graves
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- CGTN America -->
+      <article class="media-card">
+        <a class="media-link" href="https://twitter.com/cgtnamerica/status/1751362286118150555" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">CGTN America</div>
+            <h3 class="media-title">
+              Jalisco mothers search for hidden graves with drones
+            </h3>
+            <span class="media-tag" data-key="tv-social">TV / Social</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- SinEmbargo -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.sinembargo.mx/18-12-2023/4440515" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">SinEmbargo</div>
+            <h3 class="media-title">
+              Tecnología para hallarlos
+            </h3>
+            <span class="media-tag" data-key="article">Artículo</span>
+          </div>
+        </a>
+      </article>
     </section>
 
     <!-- TALKS -->
