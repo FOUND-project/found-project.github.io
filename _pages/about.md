@@ -1730,21 +1730,22 @@ redirect_from:
             </div>
           </div>
 
-          <!-- Frontier Tech Hub -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://github.com/FOUND-project/found-project.github.io/blob/60555aad7eada5f774446dbd86c71bf76915ca17/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
-                alt="Frontier Tech Hub logo"
-                loading="lazy"
-                onload="this.classList.remove('loading')"
-                style="filter: brightness(0) invert(0);">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-fth">Frontier Tech Hub</div>
-              <div class="collab-note" id="collab-note-fth">Funding, Technical expertise</div>
-            </div>
-          </div>
+         <!-- Frontier Tech Hub -->
+<div class="collab-card touch-zoomable">
+  <div class="collab-logo">
+    <img
+      src="https://github.com/FOUND-project/found-project.github.io/blob/60555aad7eada5f774446dbd86c71bf76915ca17/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
+      alt="Frontier Tech Hub logo"
+      loading="lazy"
+      class="loading"
+      onload="this.classList.remove('loading')"
+      style="filter: drop-shadow(0 0 1px rgba(0,0,0,0.3)) drop-shadow(0 0 2px rgba(0,0,0,0.2));">
+  </div>
+  <div class="collab-meta">
+    <div class="collab-name" id="collab-item-fth">Frontier Tech Hub</div>
+    <div class="collab-note" id="collab-note-fth">Funding, Technical expertise</div>
+  </div>
+</div>
 
           <!-- DT Global -->
           <div class="collab-card touch-zoomable">
