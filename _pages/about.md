@@ -946,11 +946,13 @@ redirect_from:
       transition:transform .35s var(--transition-smooth), filter .35s var(--transition-smooth), opacity .3s ease;
     }
 
-/* Re-tint Frontier Tech Hub logo to dark */
-.collab-img.fth{
-  filter: brightness(0) saturate(100%) invert(9%) sepia(6%)
-          saturate(512%) hue-rotate(94deg)
-          brightness(95%) contrast(96%);
+/* Frontier Tech Hub logo – very subtle separation only */
+.collab-img{
+  max-height:80px;
+  width:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 0 1px rgba(0,0,0,.18));
+}
             
     .collab-logo img.loading{
       opacity:0;
