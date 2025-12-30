@@ -1343,6 +1343,13 @@ redirect_from:
       }
     }
 
+/* Re-tint Frontier Tech Hub logo to dark */
+.collab-img.fth{
+  filter: brightness(0) saturate(100%) invert(9%) sepia(6%)
+          saturate(512%) hue-rotate(94deg)
+          brightness(95%) contrast(96%);
+}
+    
 /* Re-tint LABCO logo to dark */
 .collab-img.labco{
   filter: brightness(0) saturate(100%) invert(9%) sepia(6%)
