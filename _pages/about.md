@@ -1996,7 +1996,7 @@ redirect_from:
           span.textContent = heroWords[wordIndex];
           span.style.opacity = '1';
         },180);
-      },2300);
+      },1250);
     }
 
     function setLanguage(lang){
