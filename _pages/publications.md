@@ -168,7 +168,6 @@ author_profile: true
 </div>
 
 <style>
-/* ==== BASE STYLES ==== */
 :root {
   --primary-green: #1b4d3e;
   --primary-green-rgb: 27, 77, 62;
@@ -196,10 +195,10 @@ author_profile: true
   width: 100% !important;
 }
 
-/* ==== CONTAINER ==== */
+/* shift right so we clear the round logo */
 .pub-shell {
   max-width: 1400px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 4rem 6.8rem;
   padding: 2rem clamp(1.5rem, 4vw, 3rem);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
   background: linear-gradient(135deg, var(--gray-50) 0%, var(--off-white) 100%);
@@ -215,14 +214,14 @@ author_profile: true
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(circle at 10% 20%, rgba(var(--primary-green-rgb), 0.04) 0%, transparent 50%),
     radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
   pointer-events: none;
   z-index: -1;
 }
 
-/* ==== LANGUAGE TOGGLE ==== */
+/* LANGUAGE TOGGLE */
 .lang-toggle {
   display: flex;
   justify-content: flex-end;
@@ -258,7 +257,7 @@ author_profile: true
   box-shadow: var(--shadow-sm);
 }
 
-/* ==== SECTION HEADERS ==== */
+/* SECTION HEADERS */
 .pub-section {
   margin-bottom: 3.5rem;
   position: relative;
@@ -317,7 +316,7 @@ author_profile: true
   border-radius: 9999px;
 }
 
-/* ==== GRID & CARDS ==== */
+/* GRID & CARDS */
 .pub-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
@@ -386,7 +385,7 @@ author_profile: true
   align-items: start;
 }
 
-/* ==== CARD CONTENT ==== */
+/* CARD CONTENT */
 .pub-card-topline {
   display: flex;
   align-items: center;
@@ -469,7 +468,7 @@ author_profile: true
   flex: 1;
 }
 
-/* ==== MEDIA ==== */
+/* MEDIA */
 .pub-card-media {
   position: relative;
   border-radius: 16px;
@@ -494,7 +493,7 @@ author_profile: true
   transform: scale(1.05);
 }
 
-/* ==== LOADING STATES ==== */
+/* LOADING STATES */
 .loading {
   opacity: 0;
 }
@@ -510,13 +509,13 @@ author_profile: true
   100% { background-position: -200% 0; }
 }
 
-/* ==== RESPONSIVE ==== */
+/* RESPONSIVE (kept, but layout still looks close to desktop) */
 @media (max-width: 1024px) {
   .pub-card-inner {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .pub-card-media {
     width: 100%;
     height: 200px;
@@ -527,28 +526,29 @@ author_profile: true
 @media (max-width: 768px) {
   .pub-shell {
     padding: 1.5rem 1.25rem 3rem;
+    margin-left: 6.8rem;
   }
-  
+
   .pub-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .lang-toggle {
     justify-content: center;
     margin-bottom: 2rem;
   }
-  
+
   .pub-section-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
   }
-  
+
   .pub-card {
     padding: 1.5rem;
   }
-  
+
   .pub-card-featured {
     padding: 1.5rem;
   }
@@ -558,12 +558,12 @@ author_profile: true
   .pub-card-media {
     height: 180px;
   }
-  
+
   .pub-pill {
     font-size: 0.7rem;
     padding: 0.3rem 0.8rem;
   }
-  
+
   .pub-title {
     font-size: 1.5rem;
   }
@@ -572,7 +572,8 @@ author_profile: true
 
 <script>
 (function() {
-  // ====== FIXED TRANSLATIONS SCRIPT ======
+  const STORAGE_KEY = 'found-lang-news'; // shared with News page
+
   const translations = {
     en: {
       'pill-book': 'BOOK',
@@ -660,7 +661,6 @@ author_profile: true
     }
   };
 
-  // All translatable element IDs
   const elementIds = [
     'pill-book', 'title-book', 'book-badge', 'book-desc',
     'pill-articles', 'title-articles',
@@ -673,61 +673,54 @@ author_profile: true
 
   function setLanguage(lang) {
     const dict = translations[lang] || translations.en;
-    
-    // Update all translatable elements
+
     elementIds.forEach(id => {
       const element = document.getElementById(id);
-      if (element && dict[id]) {
+      if (element && dict[id] !== undefined) {
         element.innerHTML = dict[id];
       }
     });
-    
-    // Update active button state
+
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
-    
-    // Save preference
+
     try {
-      localStorage.setItem('found-lang-pubs', lang);
+      localStorage.setItem(STORAGE_KEY, lang);
     } catch (e) {}
-    
-    // Update HTML lang attribute
+
     document.documentElement.setAttribute(
       'lang',
       lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
     );
   }
 
-  // Initialize when page loads
   document.addEventListener('DOMContentLoaded', function() {
-    // Load saved language or default to English
     let savedLang = 'en';
     try {
-      const stored = localStorage.getItem('found-lang-pubs');
+      const stored = localStorage.getItem(STORAGE_KEY);
       if (stored && ['en', 'es', 'nah'].includes(stored)) {
         savedLang = stored;
       }
     } catch (e) {}
-    
-    // Set initial language
+
     setLanguage(savedLang);
-    
-    // Add click handlers to language buttons
+
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.addEventListener('click', function() {
         setLanguage(this.getAttribute('data-lang'));
       });
     });
-    
-    // Add loading animations to images
+
+    // simple loading skeleton for images
     document.querySelectorAll('img').forEach(img => {
       if (!img.complete) {
         img.classList.add('loading');
-        img.parentElement?.classList.add('skeleton');
+        if (img.parentElement) {
+          img.parentElement.classList.add('skeleton');
+        }
       }
     });
   });
-
 })();
 </script>
