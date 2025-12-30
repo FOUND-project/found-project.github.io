@@ -1734,7 +1734,7 @@ redirect_from:
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4dc9341a21cbe08685242e48c8241a1a51ad3151/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
+                src="https://github.com/FOUND-project/found-project.github.io/blob/60555aad7eada5f774446dbd86c71bf76915ca17/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
                 alt="Frontier Tech Hub logo"
                 loading="lazy"
                 onload="this.classList.remove('loading')"
