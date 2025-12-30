@@ -1387,7 +1387,7 @@ redirect_from:
         <div class="hero-side">
           <div class="hero-media skeleton touch-zoomable" aria-label="Hero media">
             <img
-              src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/NDAI5.gif"
+              src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/1047db9c85ff842e083e9fb45c0bdf05213da88a/images/NDAI5.gif"
               alt="FOUND Project team using advanced technology in field search operations"
               class="hero-image loading"
               loading="lazy"
