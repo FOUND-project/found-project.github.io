@@ -81,11 +81,11 @@ author_profile: true
       max-width:1300px;
       margin:0 auto;
       position:relative;
-      /* push main content right so it does not sit over the author logos */
-      padding-left:clamp(13rem, 18vw, 16rem);
+      /* offset so the header doesn’t cover the left author/logo column */
+      padding-left:clamp(13rem,18vw,16rem);
     }
 
-    /* Language toggle (same style as NEWS) */
+    /* Language toggle */
     .lang-toggle{
       position:absolute;
       top:0.25rem;
@@ -431,7 +431,7 @@ author_profile: true
 
     @media (max-width:1100px){
       .media-shell{
-        padding-left:0; /* remove offset on tablet/mobile so it uses full width */
+        padding-left:0;
       }
     }
 
@@ -828,7 +828,6 @@ author_profile: true
           if(el) el.innerHTML = dict[id];
         });
 
-        // update tag chips
         const tagMap = tagLabels[lang] || tagLabels.en;
         document.querySelectorAll('.media-tag').forEach(el=>{
           const key = el.dataset.key;
@@ -856,7 +855,7 @@ author_profile: true
         setLanguage(initialLang);
 
         document.querySelectorAll('.lang-btn').forEach(btn=>{
-          btn.addEventListener('click', ()=> setLanguage(btn.dataset.lang));
+          btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
         });
       });
     })();
