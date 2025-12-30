@@ -104,6 +104,10 @@ redirect_from:
       overflow-x:hidden;
     }
 
+    body.zoom-active{
+      overflow:hidden;
+    }
+
     html{scroll-behavior:smooth;}
 
     *:focus-visible{
@@ -239,13 +243,13 @@ redirect_from:
     }
 
     .project-logo{
-      width:70px;
+      width:110px;
       height:auto;
       border-radius:18px;
       box-shadow:0 14px 32px rgba(0,0,0,.45);
       border:1px solid rgba(255,255,255,.75);
       background:rgba(255,255,255,.06);
-      padding:6px;
+      padding:8px;
       flex-shrink:0;
     }
 
@@ -513,16 +517,9 @@ redirect_from:
       position:relative;
     }
 
+    /* Star removed, keep golden circle */
     .award-icon::after{
-      content:'★';
-      position:absolute;
-      inset:0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:1.1rem;
-      color:#fffdf2;
-      text-shadow:0 1px 3px rgba(0,0,0,.35);
+      content:'';
     }
 
     .award-text{
@@ -1136,6 +1133,42 @@ redirect_from:
     }
 
     /* =========================
+       Touch zoom (small-screen gallery)
+    ========================== */
+    @media (max-width:768px){
+      .touch-zoomable{
+        cursor:zoom-in;
+      }
+
+      .touch-zoomable.is-expanded{
+        position:fixed;
+        inset:0;
+        margin:0 !important;
+        width:100vw !important;
+        height:100vh !important;
+        max-width:none !important;
+        max-height:none !important;
+        z-index:9999;
+        background:rgba(0,0,0,.9);
+        border-radius:0 !important;
+        box-shadow:none !important;
+        padding:0 !important;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+
+      .touch-zoomable.is-expanded img,
+      .touch-zoomable.is-expanded .hero-image{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+        transform:none !important;
+        box-shadow:none !important;
+      }
+    }
+
+    /* =========================
        Responsive tweaks
     ========================== */
     @media (max-width:1100px){
@@ -1288,7 +1321,7 @@ redirect_from:
       }
 
       .project-logo{
-        width:60px;
+        width:80px;
       }
     }
 
@@ -1350,7 +1383,7 @@ redirect_from:
 
         <!-- RIGHT: image + award, award pushed down -->
         <div class="hero-side">
-          <div class="hero-media skeleton" aria-label="Hero media">
+          <div class="hero-media skeleton touch-zoomable" aria-label="Hero media">
             <img
               src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/NDAI5.gif"
               alt="FOUND Project team using advanced technology in field search operations"
@@ -1396,34 +1429,34 @@ redirect_from:
           </ul>
 
           <div class="image-gallery">
-            <div class="gallery-item">
+            <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 degree imaging technology in use" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Advanced field equipment setup" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/2.jpeg?raw=true" alt="Community collaboration in search efforts" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.47%20(3).jpeg?raw=true" alt="Specialised search tools and equipment" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/3.jpeg?raw=true" alt="Field research and data collection" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-07-30%20at%2021.40.57.jpeg?raw=true" alt="Team collaboration during field operations" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6.jpg?raw=true" alt="Technology deployment in field" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/IMG-20231204-WA0038.jpg?raw=true" alt="Field operations and search activities" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-12-02%20at%2018.42.17.jpeg?raw=true" alt="Search team in action" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item touch-zoomable">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/70206a6b5788f7204524bfdd4e1a6c365668b75d/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.44.jpeg" alt="Search methodology in practice" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
           </div>
@@ -1442,7 +1475,7 @@ redirect_from:
                 incorporates their methods into our technological efforts.
               </p>
             </div>
-            <div class="buscadoras-image">
+            <div class="buscadoras-image touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/plant%20hands.jpeg?raw=true" alt="Buscadoras hands with plants symbolising hope and remembrance" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
           </div>
@@ -1459,7 +1492,7 @@ redirect_from:
       <div class="collab-wrap" aria-label="Institutional partnerships logos">
         <div class="collab-grid">
           <!-- 7. Search Collectives -->
-          <div class="collab-card collab-card-gif">
+          <div class="collab-card collab-card-gif touch-zoomable">
             <div class="collab-logo">
               <img
                 src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0bed7c6b4c906bc94116683368b679ba0bd80428/images/mothers%20walking.gif"
@@ -1475,7 +1508,7 @@ redirect_from:
           </div>
 
           <!-- 1. UN -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/1%20Executive%20Office%20of%20the%20UN%20Secretary-General.svg"
                    alt="Executive Office of the UN Secretary-General logo"
@@ -1488,7 +1521,7 @@ redirect_from:
           </div>
 
           <!-- 2. FCDO -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
                 src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/bd3ef3bd33596258b2738274017f51a2e2c05186/images/FCDO_logo_960x640.png"
@@ -1509,7 +1542,7 @@ redirect_from:
           </div>
 
           <!-- 3. CentroGeo -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20logo_centrogeo_wide.svg"
                    alt="CentroGeo logo"
@@ -1522,7 +1555,7 @@ redirect_from:
           </div>
 
           <!-- 4. University of Guadalajara -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/26bd52ce350828b22814cfedc872786dd43de672/images/580141488dfc53bfdbde59fa6b043438.jpg"
                    alt="University of Guadalajara logo"
@@ -1535,7 +1568,7 @@ redirect_from:
           </div>
 
           <!-- 5. Colombian Search Unit -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg"
                    alt="Colombian Search Unit logo"
@@ -1548,7 +1581,7 @@ redirect_from:
           </div>
 
           <!-- 6. Mexico National Search Commission -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/4%20Comision%20Nacional%20de%20Busqueda.png"
                    alt="Mexico National Search Commission logo"
@@ -1561,7 +1594,7 @@ redirect_from:
           </div>
 
           <!-- 8. British Embassy -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/6%20British%20Embassy%20Mexico_Blue%20(ENG).png"
                    alt="British Embassy Mexico City logo"
@@ -1574,7 +1607,7 @@ redirect_from:
           </div>
 
           <!-- 9. Oxford Festival of the Arts -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/5ea7b61d8c5c6467ad4253f2898109033aac13e7/images/OFOTA_COLOUR_WEB.jpg"
                    alt="Oxford Festival of the Arts logo"
@@ -1587,7 +1620,7 @@ redirect_from:
           </div>
 
           <!-- 10. University of Bath -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b2323f813df618867a6227a87e7efb9e084fe75e/images/Beth.jpg"
                    alt="University of Bath – Oxford Forum partner"
@@ -1600,7 +1633,7 @@ redirect_from:
           </div>
 
           <!-- British Association for Forensic Anthropology -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
                 src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/11%20logo%20BAFAlogo_orig.png"
@@ -1616,7 +1649,7 @@ redirect_from:
           </div>
 
           <!-- Comisión de Búsqueda de Jalisco -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
                 src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/3%20Comisio%CC%81n%20de%20Bu%CC%81squeda%20de%20Jalisco.png"
@@ -1632,7 +1665,7 @@ redirect_from:
           </div>
 
           <!-- University of Oxford -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
                 src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/4%20logo%20oxford-university-logo.png"
@@ -1648,7 +1681,7 @@ redirect_from:
           </div>
 
           <!-- Mexico’s Science and Technology Secretariat -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
                 src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20Logotipo_SECIHTI_2025-2030.svg"
@@ -1664,7 +1697,7 @@ redirect_from:
           </div>
 
           <!-- UNAM Geophysics -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
                 src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20logo%20IGeofisicaUNAM.png"
@@ -1680,7 +1713,7 @@ redirect_from:
           </div>
 
           <!-- UNAM Engineering -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
                 src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/6%20logo%20Ingenieria%20UNAM.png"
@@ -1696,10 +1729,10 @@ redirect_from:
           </div>
 
           <!-- Frontier Tech Hub -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4dc9341c21cbe08685242e48c8241a1a51ad3151/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4dc9341a21cbe08685242e48c8241a1a51ad3151/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
                 alt="Frontier Tech Hub logo"
                 loading="lazy"
                 onload="this.classList.remove('loading')"
@@ -1712,7 +1745,7 @@ redirect_from:
           </div>
 
           <!-- DT Global -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
                 src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20DTG_Logo_Screen_LRG-1.png"
@@ -1728,7 +1761,7 @@ redirect_from:
           </div>
 
           <!-- UPZMG -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
                 src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20logo%20UPZMG2.png"
@@ -1744,7 +1777,7 @@ redirect_from:
           </div>
 
           <!-- UWE Bristol -->
-          <div class="collab-card">
+          <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
                 src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/9%20logo%20UWE%20Bristol.svg"
@@ -1859,7 +1892,7 @@ redirect_from:
 
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <!-- LANGUAGE TOGGLE + WORD ROTATION -->
+  <!-- LANGUAGE TOGGLE + WORD ROTATION + TOUCH ZOOM -->
   <script>
     (function(){
       const translations = {
@@ -1917,7 +1950,7 @@ redirect_from:
           'word-3':'tlatepanita.',
           'word-4':'quipantlalia.',
           'word-5':'yolpakilistli quimacatia.',
-          'hero-main-text':'124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia tehnologíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
+          'hero-main-text':'124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia teknolojíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
           'collab-title':'Tlen tlatlanecuiltilis nemilistli (alianzas institucionales)',
           'tech-title':'Teknolojíayoh tlen motequiti',
           'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
@@ -1934,7 +1967,6 @@ redirect_from:
         }
       };
 
-      let currentLang = 'en';
       let heroWords = [];
       let wordIndex = 0;
       let wordInterval = null;
@@ -1982,11 +2014,49 @@ redirect_from:
           btn.classList.toggle('active', btn.dataset.lang === lang);
         });
 
-        currentLang = lang;
         try{ localStorage.setItem('found-lang', lang); }catch(e){}
 
         buildHeroWords(lang);
         startWordRotation();
+      }
+
+      function setupTouchZoom(){
+        const zoomables = document.querySelectorAll('.touch-zoomable');
+        if(!zoomables.length) return;
+
+        function toggleZoom(el){
+          const isExpanded = el.classList.contains('is-expanded');
+          if(isExpanded){
+            el.classList.remove('is-expanded');
+            document.body.classList.remove('zoom-active');
+          }else{
+            document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
+              openEl.classList.remove('is-expanded');
+            });
+            el.classList.add('is-expanded');
+            document.body.classList.add('zoom-active');
+          }
+        }
+
+        zoomables.forEach(function(el){
+          el.addEventListener('click', function(e){
+            if(window.matchMedia && window.matchMedia('(max-width: 768px)').matches){
+              e.preventDefault();
+              e.stopPropagation();
+              toggleZoom(el);
+            }
+          });
+        });
+
+        // Close zoom on ESC
+        document.addEventListener('keydown', function(e){
+          if(e.key === 'Escape'){
+            document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
+              openEl.classList.remove('is-expanded');
+            });
+            document.body.classList.remove('zoom-active');
+          }
+        });
       }
 
       document.addEventListener('DOMContentLoaded', function(){
@@ -2000,6 +2070,8 @@ redirect_from:
             setLanguage(btn.dataset.lang);
           });
         });
+
+        setupTouchZoom();
       });
     })();
   </script>
