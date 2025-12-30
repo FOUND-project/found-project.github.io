@@ -19,26 +19,19 @@ author_profile: true
     }
 
     :root{
-      /* Match ABOUT / Technologies in Action palette */
       --primary-green:#2d5f4d;
       --dark-green:#1e4034;
       --light-green:#4a8c73;
-      --accent-green:#e8f5f0;
       --gold-accent:#d4af37;
-
-      --bg-soft:#f8fcfb;
-      --bg-soft-alt:#fdfaf5;
-
+      --bg-soft:#f4faf7;
       --text-dark:#121212;
       --text-medium:#3f3f3f;
       --text-light:#6b6b6b;
-
-      --shadow-sm:0 4px 16px rgba(15,23,42,.06);
-      --shadow-md:0 10px 28px rgba(15,23,42,.10);
-      --shadow-lg:0 20px 50px rgba(15,23,42,.16);
-
+      --shadow-sm:0 4px 16px rgba(15,23,42,.08);
+      --shadow-md:0 10px 28px rgba(15,23,42,.12);
+      --shadow-lg:0 20px 50px rgba(15,23,42,.18);
       --radius-lg:22px;
-      --radius-md:16px;
+      --radius-md:18px;
       --radius-pill:999px;
       --transition-smooth:cubic-bezier(.4,0,.2,1);
     }
@@ -55,11 +48,11 @@ author_profile: true
     html{scroll-behavior:smooth;}
 
     body{
-      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
       background:
-        radial-gradient(1200px 600px at 15% 0%, rgba(232,245,240,.90) 0%, transparent 55%),
-        radial-gradient(900px 520px at 85% 5%, rgba(212,175,55,.10) 0%, transparent 60%),
-        linear-gradient(145deg,#f8fcfb 0%,#ffffff 55%,#fdfaf5 100%);
+        radial-gradient(1200px 600px at 10% 0%, rgba(45,95,77,.12) 0%, transparent 55%),
+        radial-gradient(900px 520px at 80% 0%, rgba(232,245,240,.92) 0%, transparent 60%),
+        linear-gradient(135deg,#f7fbfa 0%,#eef4f1 40%,#f9fbff 100%);
       min-height:100vh;
       color:var(--text-dark);
       -webkit-font-smoothing:antialiased;
@@ -90,168 +83,156 @@ author_profile: true
       position:relative;
     }
 
-    .media-shell::before{
-      content:'';
-      position:absolute;
-      inset:-40px;
-      background:
-        radial-gradient(circle at 0% 0%, rgba(45,95,77,.08) 0%, transparent 55%),
-        radial-gradient(circle at 100% 100%, rgba(232,245,240,.70) 0%, transparent 55%);
-      opacity:.5;
-      pointer-events:none;
-      z-index:-1;
-    }
-
-    /* Language toggle */
+    /* Language toggle (same style as NEWS) */
     .lang-toggle{
       position:absolute;
-      top:0;
+      top:0.25rem;
       right:0;
       display:inline-flex;
       gap:.5rem;
       z-index:10;
-      padding:.15rem;
-      border-radius:var(--radius-pill);
-      background:rgba(248,252,251,.92);
-      backdrop-filter:blur(16px);
-      border:1px solid rgba(15,23,42,.06);
-      box-shadow:0 10px 25px rgba(15,23,42,.10);
     }
 
     .lang-btn{
-      border:1px solid transparent;
-      background:transparent;
+      border:1px solid rgba(15,23,42,.08);
+      background:rgba(255,255,255,.9);
       color:var(--dark-green);
-      padding:.28rem .9rem;
+      padding:.3rem .8rem;
       border-radius:var(--radius-pill);
       font-size:.78rem;
       font-weight:700;
       letter-spacing:.08em;
       text-transform:uppercase;
       cursor:pointer;
+      backdrop-filter:blur(10px);
+      box-shadow:0 4px 14px rgba(15,23,42,.08);
       transition:
-        transform .18s var(--transition-smooth),
-        background .18s var(--transition-smooth),
-        box-shadow .18s var(--transition-smooth),
-        border-color .18s var(--transition-smooth),
-        color .18s var(--transition-smooth);
+        transform .2s var(--transition-smooth),
+        background .2s var(--transition-smooth),
+        box-shadow .2s var(--transition-smooth),
+        border-color .2s var(--transition-smooth),
+        color .2s var(--transition-smooth);
     }
 
     .lang-btn:hover{
-      background:rgba(255,255,255,.98);
+      background:#fff;
       transform:translateY(-1px);
-      box-shadow:0 7px 18px rgba(15,23,42,.14);
+      box-shadow:0 8px 22px rgba(15,23,42,.16);
     }
 
     .lang-btn.active{
       background:var(--dark-green);
       color:#fff;
-      border-color:rgba(255,255,255,.7);
-      box-shadow:0 8px 20px rgba(15,23,42,.35);
+      border-color:var(--dark-green);
     }
 
-    /* Header / container */
-    .media-container{
+    /* Header – mirrored from NEWS, but greener */
+    .media-header{
       background:
-        radial-gradient(circle at 20% 15%, rgba(232,245,240,.95) 0%, transparent 55%),
-        radial-gradient(circle at 90% 0%, rgba(212,175,55,.10) 0%, transparent 60%),
-        linear-gradient(140deg,#ffffff 0%,#f8fcfb 45%,#ffffff 100%);
+        radial-gradient(circle at 8% 0%, rgba(45,95,77,.20) 0%, transparent 55%),
+        linear-gradient(135deg,#ffffff 0%,#f6faf8 40%,#ffffff 100%);
       border-radius:var(--radius-lg);
-      padding:clamp(1.8rem,3vw,2.8rem);
-      margin-top:2.2rem;
-      margin-bottom:2.5rem;
+      padding:clamp(1.75rem,3vw,2.4rem);
+      margin:1.75rem 0 2.8rem;
+      display:flex;
+      align-items:center;
+      gap:clamp(1.4rem,3vw,2.4rem);
       box-shadow:var(--shadow-md);
-      border:1px solid rgba(15,23,42,.05);
+      border:1px solid rgba(15,23,42,.06);
       position:relative;
       overflow:hidden;
     }
 
-    .media-container::before{
+    .media-header::before{
       content:'';
       position:absolute;
-      right:-90px;
-      top:-90px;
-      width:210px;
-      height:210px;
-      background:radial-gradient(circle, rgba(232,245,240,.85) 0%, transparent 65%);
-      opacity:.9;
+      inset:-1px;
+      background:linear-gradient(
+        120deg,
+        rgba(255,255,255,.7),
+        transparent 35%,
+        transparent 65%,
+        rgba(45,95,77,.22)
+      );
+      opacity:.85;
       pointer-events:none;
+    }
+
+    .media-logo-wrap{
+      flex:0 0 auto;
+      position:relative;
+      z-index:1;
+    }
+
+    .media-header img{
+      width:90px;
+      height:90px;
+      border-radius:20px;
+      object-fit:cover;
+      box-shadow:0 14px 30px rgba(15,23,42,.22);
+      border:2px solid rgba(255,255,255,.9);
+      background:#fff;
+    }
+
+    .media-header-main{
+      position:relative;
+      z-index:1;
+      flex:1;
     }
 
     .media-header-pill{
       display:inline-flex;
       align-items:center;
-      gap:.35rem;
-      padding:.2rem .9rem;
+      gap:.4rem;
+      padding:.2rem .75rem;
       border-radius:var(--radius-pill);
-      background:rgba(45,95,77,.08);
-      border:1px solid rgba(45,95,77,.22);
+      background:rgba(27,77,62,.08);
+      border:1px solid rgba(27,77,62,.22);
       font-size:.78rem;
       font-weight:750;
       letter-spacing:.16em;
       text-transform:uppercase;
       color:var(--dark-green);
-      margin-bottom:.9rem;
-    }
-
-    .media-header-pill::before{
-      content:'●';
-      font-size:.46rem;
-    }
-
-    .media-header-main{
-      display:flex;
-      align-items:flex-start;
-      gap:1.75rem;
-      flex-wrap:wrap;
-    }
-
-    .media-logo{
-      width:86px;
-      height:auto;
-      border-radius:18px;
-      box-shadow:0 10px 26px rgba(15,23,42,.25);
-      border:2px solid rgba(255,255,255,.9);
-      background:#fff;
-      object-fit:cover;
-    }
-
-    #media-title{
-      font-size:clamp(2.1rem,3.2vw,2.7rem);
-      font-weight:900;
-      color:var(--dark-green);
-      letter-spacing:-.035em;
       margin-bottom:.55rem;
     }
 
+    .media-header-pill::before{
+      content:'';
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:radial-gradient(circle,var(--primary-green) 0%,rgba(45,95,77,.18) 70%);
+    }
+
+    #media-title{
+      font-size:clamp(1.9rem,3.2vw,2.4rem);
+      color:var(--dark-green);
+      font-weight:900;
+      letter-spacing:-.03em;
+      margin-bottom:.45rem;
+    }
+
     #media-intro{
-      font-size:clamp(1rem,1.3vw,1.12rem);
+      font-size:clamp(1rem,1.4vw,1.15rem);
       color:var(--text-medium);
       max-width:780px;
       line-height:1.8;
     }
 
-    .section-intro{
-      font-size:clamp(1rem,1.3vw,1.12rem);
-      color:var(--text-medium);
-      max-width:800px;
-      line-height:1.8;
-    }
-
+    /* MEDIA GRID – visually aligned with NEWS cards */
     .media-grid{
-      margin-top:2.3rem;
+      margin-top:0;
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
       gap:clamp(1.7rem,2.5vw,2.3rem);
+      margin-bottom:2.4rem;
     }
 
     .media-card{
-      background:linear-gradient(145deg,#ffffff 0%,#f9fcfb 100%);
+      background:#ffffff;
       border-radius:var(--radius-md);
+      padding:1.6rem 1.6rem 1.7rem;
       box-shadow:var(--shadow-sm);
-      padding:1.75rem 1.7rem 1.75rem;
-      display:flex;
-      flex-direction:column;
       border:1px solid rgba(15,23,42,.06);
       position:relative;
       overflow:hidden;
@@ -261,36 +242,44 @@ author_profile: true
         border-color .25s var(--transition-smooth),
         background .25s var(--transition-smooth),
         filter .25s var(--transition-smooth);
+      display:flex;
+      flex-direction:column;
+      min-height:0;
     }
 
     .media-card::before{
       content:'';
       position:absolute;
-      left:0;
-      top:0;
-      bottom:0;
-      width:4px;
-      background:linear-gradient(180deg,var(--light-green) 0%,var(--primary-green) 100%);
-      transform:scaleY(0);
-      transform-origin:bottom;
-      transition:transform .3s var(--transition-smooth);
+      inset:0;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(232,245,240,.85) 0%, transparent 55%),
+        radial-gradient(circle at 100% 0%, rgba(45,95,77,.16) 0%, transparent 55%);
+      opacity:0;
+      pointer-events:none;
+      transition:opacity .25s var(--transition-smooth);
     }
 
     .media-card:hover{
-      transform:translateY(-5px);
+      transform:translateY(-4px);
       box-shadow:var(--shadow-lg);
-      border-color:rgba(45,95,77,.24);
-      background:linear-gradient(150deg,#ffffff 0%,#f0f7f4 55%,#ffffff 100%);
-      filter:saturate(1.02);
+      border-color:rgba(45,95,77,.28);
+      background:#ffffff;
+      filter:saturate(1.03);
     }
 
     .media-card:hover::before{
-      transform:scaleY(1);
-      transform-origin:top;
+      opacity:1;
+    }
+
+    .media-link{
+      text-decoration:none;
+      color:inherit;
+      display:block;
+      height:100%;
     }
 
     .media-outlet{
-      font-size:.72rem;
+      font-size:.74rem;
       text-transform:uppercase;
       letter-spacing:.12em;
       font-weight:760;
@@ -307,23 +296,16 @@ author_profile: true
       height:7px;
       border-radius:50%;
       background:linear-gradient(135deg,var(--light-green),var(--primary-green));
-      box-shadow:0 0 0 2px rgba(45,95,77,.16);
+      box-shadow:0 0 0 2px rgba(27,77,62,.15);
     }
 
     .media-title{
       font-size:1.06rem;
       font-weight:660;
       color:var(--text-dark);
-      margin:0 0 1.1rem 0;
+      margin:0 0 1.15rem 0;
       line-height:1.5;
       letter-spacing:-.01em;
-    }
-
-    .media-link{
-      text-decoration:none;
-      color:inherit;
-      display:block;
-      height:100%;
     }
 
     .media-link:hover .media-title{
@@ -340,10 +322,13 @@ author_profile: true
       letter-spacing:.08em;
       font-weight:650;
       padding:.38rem .9rem;
-      border-radius:999px;
-      background:rgba(45,95,77,.08);
+      border-radius:var(--radius-pill);
+      background:rgba(27,77,62,.08);
       color:var(--dark-green);
-      transition:background .2s var(--transition-smooth), color .2s var(--transition-smooth), transform .2s var(--transition-smooth);
+      transition:
+        background .2s var(--transition-smooth),
+        color .2s var(--transition-smooth),
+        transform .2s var(--transition-smooth);
     }
 
     .media-tag::after{
@@ -353,18 +338,18 @@ author_profile: true
     }
 
     .media-card:hover .media-tag{
-      background:rgba(45,95,77,.14);
+      background:rgba(27,77,62,.14);
       transform:translateX(2px);
     }
 
-    /* Talks */
+    /* TALKS – styled to sit as a companion block */
     .talks-section{
-      margin-top:2.8rem;
+      margin-top:0;
       padding:1.9rem 1.9rem 1.3rem;
       border-radius:var(--radius-lg);
       background:
-        radial-gradient(circle at 6% 0%, rgba(232,245,240,.95) 0%, transparent 55%),
-        linear-gradient(135deg,#ffffff 0%,#f8fcfb 65%,#ffffff 100%);
+        radial-gradient(circle at 6% 0%, rgba(208,239,224,.95) 0%, transparent 55%),
+        linear-gradient(135deg,#ffffff 0%,#f4fbf7 65%,#ffffff 100%);
       box-shadow:var(--shadow-sm);
       border:1px solid rgba(15,23,42,.06);
     }
@@ -378,8 +363,8 @@ author_profile: true
     }
 
     .talk-card{
-      background:linear-gradient(135deg,#ffffff 0%,#f9fcfb 100%);
-      padding:1.3rem 1.5rem;
+      background:linear-gradient(135deg,#ffffff 0%,#f7fbf9 100%);
+      padding:1.25rem 1.5rem;
       border-radius:14px;
       box-shadow:0 1px 3px rgba(0,0,0,.05);
       border:1px solid rgba(0,0,0,.06);
@@ -400,7 +385,7 @@ author_profile: true
       top:0;
       bottom:0;
       width:4px;
-      background:linear-gradient(180deg,var(--light-green) 0%,var(--primary-green) 100%);
+      background:linear-gradient(180deg,var(--dark-green) 0%,var(--light-green) 100%);
       transform:scaleY(0);
       transform-origin:bottom;
       transition:transform .3s var(--transition-smooth);
@@ -409,8 +394,8 @@ author_profile: true
     .talk-card:hover{
       transform:translateX(4px);
       box-shadow:0 8px 24px rgba(0,0,0,.12);
-      border-color:rgba(45,95,77,.25);
-      background:linear-gradient(145deg,#ffffff 0%,#edf6f2 100%);
+      border-color:rgba(27,77,62,.25);
+      background:linear-gradient(145deg,#ffffff 0%,#ebf6f1 100%);
     }
 
     .talk-card:hover::before{
@@ -419,7 +404,7 @@ author_profile: true
     }
 
     .talk-title{
-      font-size:.8rem;
+      font-size:.82rem;
       font-weight:750;
       text-transform:uppercase;
       letter-spacing:.08em;
@@ -451,19 +436,20 @@ author_profile: true
         margin-left:auto;
         margin-bottom:.4rem;
       }
-      .media-container{
-        padding:1.6rem 1.3rem 1.9rem;
-        margin-top:1.4rem;
-      }
-      .media-header-main{
-        flex-direction:row;
+      .media-header{
+        flex-direction:column;
         align-items:flex-start;
+        margin-top:.5rem;
       }
-      .media-logo{
-        width:72px;
+      .media-logo-wrap{
+        order:-1;
+      }
+      .media-header img{
+        width:80px;
+        height:80px;
       }
       #media-title{
-        font-size:1.9rem;
+        font-size:1.7rem;
       }
       .media-grid{
         grid-template-columns:1fr;
@@ -473,25 +459,15 @@ author_profile: true
       }
     }
 
-    @media (max-width:600px){
-      .media-header-main{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-    }
-
     @media (max-width:480px){
+      .media-header{
+        padding:1.3rem 1.1rem;
+      }
       .media-card{
-        padding:1.4rem 1.25rem 1.5rem;
-      }
-      .talk-card{
-        padding:1.1rem 1.3rem;
-      }
-      #media-title{
-        font-size:1.7rem;
+        padding:1.35rem 1.2rem 1.5rem;
       }
       #talks-title{
-        font-size:1.5rem;
+        font-size:1.55rem;
       }
     }
   </style>
@@ -506,373 +482,463 @@ author_profile: true
       <button type="button" class="lang-btn" data-lang="nah">NÁHUATL</button>
     </div>
 
-    <section class="media-container">
-      <header>
+    <!-- HEADER -->
+    <header class="media-header">
+      <div class="media-logo-wrap">
+        <img
+          src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/Found_logo.jpg"
+          alt="FOUND logo"
+        >
+      </div>
+      <div class="media-header-main">
         <div class="media-header-pill" id="media-pill">
           MEDIA • COVERAGE • TALKS
         </div>
+        <h1 id="media-title">Media Coverage</h1>
+        <p id="media-intro">
+          Our research and work has been featured in leading international publications.
+        </p>
+      </div>
+    </header>
 
-        <div class="media-header-main">
-          <img
-            src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/Found_logo.jpg"
-            alt="FOUND logo"
-            class="media-logo"
-          >
+    <!-- MEDIA GRID -->
+    <section class="media-grid">
+      <!-- The Guardian -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" target="_blank" rel="noopener">
           <div>
-            <h1 id="media-title">Media Coverage</h1>
-            <p class="section-intro" id="media-intro">
-              Our research and work has been featured in leading international publications.
-            </p>
+            <div class="media-outlet">The Guardian</div>
+            <h3 class="media-title">
+              How dead pigs are helping in the search for missing victims of Mexico's drug wars
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
           </div>
+        </a>
+      </article>
+
+      <!-- Associated Press (EN) -->
+      <article class="media-card">
+        <a class="media-link" href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Associated Press</div>
+            <h3 class="media-title">
+              Why are scientists dressing pigs in clothes and burying them in Mexico?
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Associated Press (ES) -->
+      <article class="media-card">
+        <a class="media-link" href="https://apnews.com/article/mexico-desaparecidos-busqueda-ciencia-tecnologia-dron-92f74132a9a5035b73795181a1023d1e" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Associated Press</div>
+            <h3 class="media-title">
+              Ciencia, tecnología y cerdos. México experimenta nuevas formas de buscar a los desaparecidos
+            </h3>
+            <span class="media-tag" data-key="article">Artículo</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Independent -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">The Independent</div>
+            <h3 class="media-title">
+              How pigs could help find missing Mexican drug cartel victims
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- VICE -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">VICE</div>
+            <h3 class="media-title">
+              Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Los Angeles Times -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Los Angeles Times</div>
+            <h3 class="media-title">
+              Why are scientists dressing pigs in clothes and burying them in Mexico?
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- NBC News -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.nbcnews.com/news/amp/rcna221791" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">NBC News</div>
+            <h3 class="media-title">
+              Clothed pigs are buried in Mexico as scientists use them in search of missing
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Animal Político -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Animal Político</div>
+            <h3 class="media-title">
+              Con tecnología y drones, investigadores y familias de desaparecidos encuentran fosas clandestinas en Jalisco
+            </h3>
+            <span class="media-tag" data-key="article">Artículo</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Science -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Science</div>
+            <h3 class="media-title">
+              Satellites could reveal the secret burial grounds of Mexico's murder victims
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- WIRED -->
+      <article class="media-card">
+        <a class="media-link" href="https://es.wired.com/articulos/tecnologia-geoespacial-expone-el-horror-de-las-fosas-clandestinas-en-mexico" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">WIRED (ES)</div>
+            <h3 class="media-title">
+              Cómo la tecnología geoespacial expone el horror de las fosas clandestinas en México
+            </h3>
+            <span class="media-tag" data-key="article">Artículo</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- El País (EN) -->
+      <article class="media-card">
+        <a class="media-link" href="https://english.elpais.com/international/2025-03-28/mexicos-izaguirre-ranch-high-concentrations-of-ash-suggest-the-presence-of-clandestine-crematoriums.html" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">El País (EN)</div>
+            <h3 class="media-title">
+              Mexico's Izaguirre ranch: “High concentrations of ash” suggest the presence of clandestine crematoriums
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- El País (ES) -->
+      <article class="media-card">
+        <a class="media-link" href="https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">El País</div>
+            <h3 class="media-title">
+              "Altas concentraciones de ceniza" y humo de gasolina: los indicios que apuntan a que en el rancho de Teuchitlán hubo crematorios clandestinos
+            </h3>
+            <span class="media-tag" data-key="article">Artículo</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- TV Azteca -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">TV Azteca</div>
+            <h3 class="media-title">
+              Tecnología contra las desapariciones en México
+            </h3>
+            <span class="media-tag" data-key="tv">TV segment</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Animal Político (opinion) -->
+      <article class="media-card">
+        <a class="media-link" href="https://animalpolitico.com/analisis/invitades/libro-madres-buscadoras-fil" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Animal Político</div>
+            <h3 class="media-title">
+              Interpretar la naturaleza para encontrar a quienes nos faltan
+            </h3>
+            <span class="media-tag" data-key="opinion">Opinion</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- Reuters -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.reuters.com/world/americas/mexico-mothers-missing-turn-drones-look-unmarked-graves-2024-01-26/" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">Reuters</div>
+            <h3 class="media-title">
+              In Mexico, mothers of the missing turn to drones to look for unmarked graves
+            </h3>
+            <span class="media-tag" data-key="article">Article</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- CGTN America -->
+      <article class="media-card">
+        <a class="media-link" href="https://twitter.com/cgtnamerica/status/1751362286118150555" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">CGTN America</div>
+            <h3 class="media-title">
+              Jalisco mothers search for hidden graves with drones
+            </h3>
+            <span class="media-tag" data-key="tv-social">TV / Social</span>
+          </div>
+        </a>
+      </article>
+
+      <!-- SinEmbargo -->
+      <article class="media-card">
+        <a class="media-link" href="https://www.sinembargo.mx/18-12-2023/4440515" target="_blank" rel="noopener">
+          <div>
+            <div class="media-outlet">SinEmbargo</div>
+            <h3 class="media-title">
+              Tecnología para hallarlos
+            </h3>
+            <span class="media-tag" data-key="article">Artículo</span>
+          </div>
+        </a>
+      </article>
+    </section>
+
+    <!-- TALKS -->
+    <section class="talks-section">
+      <h2 id="talks-title">Talks</h2>
+
+      <div class="talk-card">
+        <div class="talk-title">
+          University of Oxford / Oxford Festival of the Arts
         </div>
-      </header>
-
-      <!-- MEDIA GRID -->
-      <div class="media-grid">
-        <!-- The Guardian -->
-        <article class="media-card">
-          <a class="media-link" href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">The Guardian</div>
-              <h3 class="media-title">
-                How dead pigs are helping in the search for missing victims of Mexico's drug wars
-              </h3>
-              <span class="media-tag" data-key="article">Article</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- Associated Press (EN) -->
-        <article class="media-card">
-          <a class="media-link" href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">Associated Press</div>
-              <h3 class="media-title">
-                Why are scientists dressing pigs in clothes and burying them in Mexico?
-              </h3>
-              <span class="media-tag" data-key="article">Article</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- Associated Press (ES) -->
-        <article class="media-card">
-          <a class="media-link" href="https://apnews.com/article/mexico-desaparecidos-busqueda-ciencia-tecnologia-dron-92f74132a9a5035b73795181a1023d1e" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">Associated Press</div>
-              <h3 class="media-title">
-                Ciencia, tecnología y cerdos. México experimenta nuevas formas de buscar a los desaparecidos
-              </h3>
-              <span class="media-tag" data-key="article">Artículo</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- Independent -->
-        <article class="media-card">
-          <a class="media-link" href="https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">The Independent</div>
-              <h3 class="media-title">
-                How pigs could help find missing Mexican drug cartel victims
-              </h3>
-              <span class="media-tag" data-key="article">Article</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- VICE -->
-        <article class="media-card">
-          <a class="media-link" href="https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">VICE</div>
-              <h3 class="media-title">
-                Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims
-              </h3>
-              <span class="media-tag" data-key="article">Article</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- Los Angeles Times -->
-        <article class="media-card">
-          <a class="media-link" href="https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">Los Angeles Times</div>
-              <h3 class="media-title">
-                Why are scientists dressing pigs in clothes and burying them in Mexico?
-              </h3>
-              <span class="media-tag" data-key="article">Article</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- NBC News -->
-        <article class="media-card">
-          <a class="media-link" href="https://www.nbcnews.com/news/amp/rcna221791" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">NBC News</div>
-              <h3 class="media-title">
-                Clothed pigs are buried in Mexico as scientists use them in search of missing
-              </h3>
-              <span class="media-tag" data-key="article">Article</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- Animal Político -->
-        <article class="media-card">
-          <a class="media-link" href="https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">Animal Político</div>
-              <h3 class="media-title">
-                Con tecnología y drones, investigadores y familias de desaparecidos encuentran fosas clandestinas en Jalisco
-              </h3>
-              <span class="media-tag" data-key="article">Artículo</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- Science -->
-        <article class="media-card">
-          <a class="media-link" href="https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">Science</div>
-              <h3 class="media-title">
-                Satellites could reveal the secret burial grounds of Mexico's murder victims
-              </h3>
-              <span class="media-tag" data-key="article">Article</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- WIRED -->
-        <article class="media-card">
-          <a class="media-link" href="https://es.wired.com/articulos/tecnologia-geoespacial-expone-el-horror-de-las-fosas-clandestinas-en-mexico" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">WIRED (ES)</div>
-              <h3 class="media-title">
-                Cómo la tecnología geoespacial expone el horror de las fosas clandestinas en México
-              </h3>
-              <span class="media-tag" data-key="article">Artículo</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- El País (EN) -->
-        <article class="media-card">
-          <a class="media-link" href="https://english.elpais.com/international/2025-03-28/mexicos-izaguirre-ranch-high-concentrations-of-ash-suggest-the-presence-of-clandestine-crematoriums.html" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">El País (EN)</div>
-              <h3 class="media-title">
-                Mexico's Izaguirre ranch: “High concentrations of ash” suggest the presence of clandestine crematoriums
-              </h3>
-              <span class="media-tag" data-key="article">Article</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- El País (ES) -->
-        <article class="media-card">
-          <a class="media-link" href="https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">El País</div>
-              <h3 class="media-title">
-                "Altas concentraciones de ceniza" y humo de gasolina: los indicios que apuntan a que en el rancho de Teuchitlán hubo crematorios clandestinos
-              </h3>
-              <span class="media-tag" data-key="article">Artículo</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- TV Azteca -->
-        <article class="media-card">
-          <a class="media-link" href="https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">TV Azteca</div>
-              <h3 class="media-title">
-                Tecnología contra las desapariciones en México
-              </h3>
-              <span class="media-tag" data-key="tv">TV segment</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- Animal Político (opinion) -->
-        <article class="media-card">
-          <a class="media-link" href="https://animalpolitico.com/analisis/invitades/libro-madres-buscadoras-fil" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">Animal Político</div>
-              <h3 class="media-title">
-                Interpretar la naturaleza para encontrar a quienes nos faltan
-              </h3>
-              <span class="media-tag" data-key="opinion">Opinion</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- Reuters -->
-        <article class="media-card">
-          <a class="media-link" href="https://www.reuters.com/world/americas/mexico-mothers-missing-turn-drones-look-unmarked-graves-2024-01-26/" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">Reuters</div>
-              <h3 class="media-title">
-                In Mexico, mothers of the missing turn to drones to look for unmarked graves
-              </h3>
-              <span class="media-tag" data-key="article">Article</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- CGTN America -->
-        <article class="media-card">
-          <a class="media-link" href="https://twitter.com/cgtnamerica/status/1751362286118150555" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">CGTN America</div>
-              <h3 class="media-title">
-                Jalisco mothers search for hidden graves with drones
-              </h3>
-              <span class="media-tag" data-key="tv-social">TV / Social</span>
-            </div>
-          </a>
-        </article>
-
-        <!-- SinEmbargo -->
-        <article class="media-card">
-          <a class="media-link" href="https://www.sinembargo.mx/18-12-2023/4440515" target="_blank" rel="noopener">
-            <div>
-              <div class="media-outlet">SinEmbargo</div>
-              <h3 class="media-title">
-                Tecnología para hallarlos
-              </h3>
-              <span class="media-tag" data-key="article">Artículo</span>
-            </div>
-          </a>
-        </article>
+        <a class="talk-link" href="https://www.ox.ac.uk/event/technological-responses-disappearance" target="_blank" rel="noopener">
+          Disappearance of Worlds | Art Exhibition &amp; Dialogues on Disappearance
+        </a>
       </div>
 
-      <!-- TALKS -->
-      <section class="talks-section">
-        <h2 id="talks-title">Talks</h2>
-
-        <div class="talk-card">
-          <div class="talk-title">
-            University of Oxford / Oxford Festival of the Arts
-          </div>
-          <a class="talk-link" href="https://www.ox.ac.uk/event/technological-responses-disappearance" target="_blank" rel="noopener">
-            Disappearance of Worlds | Art Exhibition &amp; Dialogues on Disappearance
-          </a>
+      <div class="talk-card">
+        <div class="talk-title">
+          British Association for Forensic Anthropology (BAFA)
         </div>
+        <a class="talk-link" href="https://bafauk.weebly.com/winter-conference--agm-2024.html" target="_blank" rel="noopener">
+          Interpreting nature to locate the disappeared: influencing search practices in Jalisco, Mexico
+        </a>
+      </div>
 
-        <div class="talk-card">
-          <div class="talk-title">
-            British Association for Forensic Anthropology (BAFA)
-          </div>
-          <a class="talk-link" href="https://bafauk.weebly.com/winter-conference--agm-2024.html" target="_blank" rel="noopener">
-            Interpreting nature to locate the disappeared: influencing search practices in Jalisco, Mexico
-          </a>
+      <div class="talk-card">
+        <div class="talk-title">
+          Guadalajara International Book Fair (FIL)
         </div>
+        <a class="talk-link" href="https://jalisco.quadratin.com.mx/principal/presentan-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/" target="_blank" rel="noopener">
+          Presentan Interpretar la naturaleza para encontrar a quienes nos faltan
+        </a>
+      </div>
 
-        <div class="talk-card">
-          <div class="talk-title">
-            Guadalajara International Book Fair (FIL)
-          </div>
-          <a class="talk-link" href="https://jalisco.quadratin.com.mx/principal/presentan-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/" target="_blank" rel="noopener">
-            Presentan Interpretar la naturaleza para encontrar a quienes nos faltan
-          </a>
+      <div class="talk-card">
+        <div class="talk-title">
+          University of Oxford
         </div>
-
-        <div class="talk-card">
-          <div class="talk-title">
-            University of Oxford
-          </div>
-          <a class="talk-link" href="https://www.ox.ac.uk/event/mexicos-missing-how-families-and-technology-are-working-together" target="_blank" rel="noopener">
-            Mexico's Missing: How families and technology are working together
-          </a>
-        </div>
-      </section>
+        <a class="talk-link" href="https://www.ox.ac.uk/event/mexicos-missing-how-families-and-technology-are-working-together" target="_blank" rel="noopener">
+          Mexico's Missing: How families and technology are working together
+        </a>
+      </div>
     </section>
   </div>
 
-  <!-- LANGUAGE SCRIPT -->
+  <!-- LANGUAGE SCRIPT (unchanged, just wired to the same IDs & data-key tags) -->
   <script>
-    (function(){
-      const translations = {
-        en:{
-          'media-pill':'MEDIA • COVERAGE • TALKS',
-          'media-title':'Media Coverage',
-          'media-intro':'Our research and work has been featured in leading international publications.',
-          'talks-title':'Talks',
-          tags:{
-            article:'Article',
-            tv:'TV segment',
-            'tv-social':'TV / Social',
-            opinion:'Opinion'
-          }
-        },
-        es:{
-          'media-pill':'MEDIOS • COBERTURA • CHARLAS',
-          'media-title':'Cobertura en medios',
-          'media-intro':'Nuestro trabajo y nuestras investigaciones han sido destacados en medios nacionales e internacionales.',
-          'talks-title':'Charlas y conversatorios',
-          tags:{
-            article:'Artículo',
-            tv:'Cápsula de TV',
-            'tv-social':'TV / Redes sociales',
-            opinion:'Opinión'
-          }
-        },
-        nah:{
-          'media-pill':'MEDIOS • TLAYEKOLIZTLI • TLAHTOLMEH',
-          'media-title':'Tlayekoliztli ipan medios',
-          'media-intro':'Totlatequi huan tonemilistli yokinextijkeh ipan miek medios tlen weyi tlaltikpak.',
-          'talks-title':'Tlahtolmeh / Charlas',
-          tags:{
-            article:'Tlahtolli',
-            tv:'Sektsiōn TV',
-            'tv-social':'TV / Redes',
-            opinion:'Tlamachtiliztli'
-          }
-        }
-      };
+    en:{
+        'news-pill':'NEWS • IMPACT • MEDIA',
+        'news-title':'FOUND — News &amp; Updates',
+        'news-subtitle':'Latest developments on our work across Mexico, Colombia, and beyond.',
+        'card0-badge':'Award',
+        'card0-title':'FOUND’s pioneer wins the UK FCDO’s Sir Nicholas Browne Policy and Expertise Award',
+        'card0-p1':'We are proud to share that <strong>Mariela Garfias</strong> has been awarded the <strong>Sir Nicholas Browne Policy and Expertise Award</strong>, a UK FCDO award recognising excellence in delivering policy objectives, selected from more than 200 nominations.',
+        'card0-p2':'Mariela is FOUND’s FCDO pioneer and one of the people most responsible for the project’s impact.',
+        'card0-p3':'Through FOUND, and with the support of incredible partners, we have located <strong>27 people</strong> who were victims of disappearance in Mexico, allowing families to move towards answers and a form of closure. Our work is now being embedded with local and national authorities, and has expanded to collaboration with the <strong>Colombian Search Unit</strong> and the Executive Office of the <strong>UN Secretary-General</strong>.',
+        'card0-p4':'In her acceptance speech, Mariela shared words that capture the spirit of FOUND: “From my decomposed body, flowers shall grow, and I am in them. That is eternity.” — Edvard Munch.',
+        'card0-p5':'When searching for clandestine graves using technologies, nature often bears witness — through subtle changes in soil and vegetation. Memory persists. Our responsibility is to find it.',
+        'card0-p6':'Mariela thanked those who carry this work with us: the British Embassy in Mexico City, our mentor <strong>Martin Johnston</strong>, the Frontier Tech Hub team, and above all the searching mothers, whose knowledge and strength remain our compass.',
+        'card0-link':'Read the full post on LinkedIn ↗',
 
-      function setLanguage(lang){
-        const dict = translations[lang] || translations.en;
+        'card1-badge':'Field visit',
+        'card1-title':'Second visit of Colombia’s Search Unit for Missing Persons (UBPD) to FOUND’s experimental sites in Jalisco',
+        'card1-p1':'We are deeply grateful to <strong>CVM Cyber</strong> and <strong>Ciaran Martin</strong> for their generous support in making this visit possible.',
+        'card1-p2':'We welcomed <strong>Héctor Javier Gómez</strong>, geophysicist from Colombia’s <em>Unidad de Búsqueda de Personas Dadas por Desaparecidas (UBPD)</em>, for a joint field deployment to FOUND’s experimental sites in Jalisco.',
+        'card1-p3':'This visit focused on the gathering and processing of drone-based hyperspectral imagery across all five of FOUND’s experimental sites — marking only the second time this cutting-edge technology has been used in Mexico for humanitarian purposes.',
+        'card1-p4':'It follows the October 2025 visit by <strong>Dr Julián Arias</strong>, Director of Prospection, Recovery and Identification at UBPD, which formally launched our collaboration on search and identification methodologies.',
+        'card1-p5':'During this second visit, the UBPD offered key technical recommendations to enhance FOUND’s detection strategies for clandestine graves. The collaboration will continue in January 2026, when the FOUND team will visit UBPD’s team in Colombia to exchange experiences and integrate UBPD methodologies across FOUND’s partner states in Mexico.',
 
-        ['media-pill','media-title','media-intro','talks-title'].forEach(id=>{
-          const el = document.getElementById(id);
-          if(el && dict[id]) el.textContent = dict[id];
-        });
+        'card2-badge':'Media',
+        'card2-title':'FOUND in The Guardian',
+        'card2-p1':'This piece is the result of more than six months of email conversations, WhatsApp messages, and the journalist’s in-person visit to our experimental sites in Jalisco, Mexico.',
+        'card2-p2':'We are deeply grateful for the care, depth, and commitment brought to this story after months spent listening to families, researchers, and officials.',
+        'card2-link':'Read the article in The Guardian ↗',
 
-        const tagMap = dict.tags || translations.en.tags;
-        document.querySelectorAll('.media-tag').forEach(tag=>{
-          const key = tag.getAttribute('data-key');
-          if(key && tagMap[key]) tag.textContent = tagMap[key];
-        });
+        'card3-badge':'Funding',
+        'card3-title':'FOUND receives new support from the UK’s FCDO through the Frontier Tech Hub',
+        'card3-p1':'In the pitch, our team showcased FOUND’s impact to date, and we were awarded funding that will enable us to scale our mission: to drive systemic change in how missing persons are searched for in Mexico, Colombia, and beyond.',
+        'card3-p2':'<strong>🌱 Driven by families and research communities</strong><br>FOUND is guided and motivated by mothers’ search groups and researchers from CentroGeo, UNAM, IPN, UdeG, ITESO, Oxford, Bristol, Bath, Cambridge, and the Autonomous Universities of Zacatecas and San Luis Potosí.',
+        'card3-p3':'<strong>🔍 We are now working directly with:</strong>',
+        'card3-list':'<li>Executive Office of the UN Secretary-General</li><li>UK’s Foreign, Commonwealth &amp; Development Office (FCDO)</li><li>Local Search Commissions and Attorney’s Offices of Jalisco, Zacatecas, San Luis Potosí, and Chihuahua (Mexico)</li><li>Colombian Search Unit</li><li>Mexico’s National Search Commission</li><li>Mexican Science and Technology Secretariat</li><li>British Embassy in Mexico City</li><li>British Association for Forensic Anthropology</li>',
+        'card3-p4':'<strong>🛰️ Technology for memory, dignity, and closure</strong><br>We will continue developing — and embedding in official protocols — new ways to locate missing persons using advanced tools such as machine-learning models, hyperspectral cameras, seismic instruments, and electrical resistivity.',
+        'card3-p5':'<em>FOUND: Interpreting Nature to Locate Those We Are Missing.</em>',
 
-        document.documentElement.setAttribute(
-          'lang',
-          lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
-        );
+        'card4-badge':'Coverage',
+        'card4-title':'FOUND featured by Associated Press, The Independent, LA Times, VICE, and NBC',
+        'card4-list':'<li><strong>Associated Press:</strong> <a href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank" rel="noopener noreferrer">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li><li><strong>The Independent:</strong> <a href="https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html" target="_blank" rel="noopener noreferrer">How pigs could help find missing Mexican drug cartel victims</a></li><li><strong>LA Times:</strong> <a href="https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico" target="_blank" rel="noopener noreferrer">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li><li><strong>VICE:</strong> <a href="https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/" target="_blank" rel="noopener noreferrer">Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims</a></li><li><strong>NBC:</strong> <a href="https://www.nbcnews.com/news/amp/rcna221791" target="_blank" rel="noopener noreferrer">Clothed pigs are buried in Mexico as scientists use them in search of the missing</a></li>'
+      },
 
-        document.querySelectorAll('.lang-btn').forEach(btn=>{
-          btn.classList.toggle('active', btn.dataset.lang === lang);
-        });
+      es:{
+        'news-pill':'NOTICIAS • IMPACTO • MEDIOS',
+        'news-title':'FOUND — Noticias y Actualizaciones',
+        'news-subtitle':'Las novedades más recientes sobre nuestro trabajo en México, Colombia y más allá.',
+        'card0-badge':'Reconocimiento',
+        'card0-title':'La pionera de FOUND recibe el Premio Sir Nicholas Browne de Política y Pericia del FCDO británico',
+        'card0-p1':'Nos enorgullece compartir que <strong>Mariela Garfias</strong> ha recibido el <strong>Premio Sir Nicholas Browne de Política y Pericia</strong>, un reconocimiento del FCDO británico a la excelencia en la implementación de objetivos de política, seleccionado entre más de 200 nominaciones.',
+        'card0-p2':'Mariela es la pionera de FOUND dentro del FCDO y una de las personas más responsables del impacto del proyecto.',
+        'card0-p3':'A través de FOUND, y con el apoyo de aliadas y aliados extraordinarios, hemos localizado a <strong>27 personas</strong> víctimas de desaparición en México, permitiendo que sus familias avancen hacia respuestas y alguna forma de cierre. Nuestro trabajo se está incorporando a autoridades locales y nacionales, y se ha ampliado a una colaboración con la <strong>Unidad de Búsqueda de Personas dadas por Desaparecidas de Colombia</strong> y con la Oficina Ejecutiva del <strong>Secretario General de la ONU</strong>.',
+        'card0-p4':'En su discurso de aceptación, Mariela compartió unas palabras que capturan el espíritu de FOUND: “De mi cuerpo descompuesto crecerán flores, y yo estoy en ellas. Eso es la eternidad”. — Edvard Munch.',
+        'card0-p5':'Al buscar fosas clandestinas con tecnologías, la naturaleza suele dar testimonio — a través de cambios sutiles en el suelo y la vegetación. La memoria persiste. Nuestra responsabilidad es encontrarla.',
+        'card0-p6':'Mariela agradeció a quienes sostienen este trabajo con nosotras y nosotros: la Embajada Británica en Ciudad de México, nuestro mentor <strong>Martin Johnston</strong>, el equipo de Frontier Tech Hub y, sobre todo, las madres buscadoras, cuyo conocimiento y fuerza siguen siendo nuestra brújula.',
+        'card0-link':'Leer la publicación completa en LinkedIn ↗',
 
-        try{ localStorage.setItem('found-lang-media', lang); }catch(e){}
+        'card1-badge':'Visita de campo',
+        'card1-title':'Segunda visita de la Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD) de Colombia a los sitios experimentales de FOUND en Jalisco',
+        'card1-p1':'Agradecemos profundamente a <strong>CVM Cyber</strong> y a <strong>Ciaran Martin</strong> por su apoyo para hacer posible esta visita.',
+        'card1-p2':'Recibimos a <strong>Héctor Javier Gómez</strong>, geofísico de la <em>Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD)</em> de Colombia, para un despliegue conjunto en los sitios experimentales de FOUND en Jalisco.',
+        'card1-p3':'La visita se centró en la obtención y el procesamiento de imágenes hiperespectrales mediante dron en los cinco sitios experimentales de FOUND — apenas la segunda vez que esta tecnología se utiliza en México con fines humanitarios.',
+        'card1-p4':'Se trata de la continuación de la visita de octubre de 2025 de <strong>el Dr. Julián Arias</strong>, Director de Prospección, Recuperación e Identificación de la UBPD, que marcó el inicio formal de nuestra colaboración en metodologías de búsqueda e identificación.',
+        'card1-p5':'Durante esta segunda visita, la UBPD compartió recomendaciones técnicas clave para reforzar las estrategias de FOUND para detectar fosas clandestinas. La colaboración continuará en enero de 2026, cuando el equipo de FOUND visitará a la UBPD en Colombia para intercambiar experiencias e integrar sus metodologías en los estados aliados de FOUND en México.',
+
+        'card2-badge':'Medios',
+        'card2-title':'FOUND en The Guardian',
+        'card2-p1':'Este reportaje es el resultado de más de seis meses de correos electrónicos, mensajes de WhatsApp y la visita en terreno de la periodista a nuestros sitios experimentales en Jalisco, México.',
+        'card2-p2':'Agradecemos profundamente el cuidado, la profundidad y el compromiso con el que se trabajó esta historia, tras meses escuchando a familias, personas investigadoras y autoridades.',
+        'card2-link':'Leer el reportaje en The Guardian ↗',
+
+        'card3-badge':'Financiamiento',
+        'card3-title':'FOUND recibe nuevo apoyo del FCDO del Reino Unido a través de Frontier Tech Hub',
+        'card3-p1':'En la presentación, nuestro equipo mostró el impacto alcanzado por FOUND hasta la fecha, y recibimos una financiación que nos permitirá escalar nuestra misión: impulsar cambios sistémicos en la forma de buscar a las personas desaparecidas en México, Colombia y más allá.',
+        'card3-p2':'<strong>🌱 Impulsado por familias y comunidades de investigación</strong><br>FOUND está guiado y motivado por colectivos de madres buscadoras y por personas investigadoras de CentroGeo, UNAM, IPN, UdeG, ITESO, Oxford, Bristol, Bath, Cambridge y las Universidades Autónomas de Zacatecas y San Luis Potosí.',
+        'card3-p3':'<strong>🔍 Actualmente trabajamos directamente con:</strong>',
+        'card3-list':'<li>Oficina Ejecutiva del Secretario General de la ONU</li><li>Foreign, Commonwealth &amp; Development Office (FCDO) del Reino Unido</li><li>Comisiones y Fiscalías de Búsqueda de Jalisco, Zacatecas, San Luis Potosí y Chihuahua (México)</li><li>Unidad de Búsqueda de Personas dadas por Desaparecidas de Colombia</li><li>Comisión Nacional de Búsqueda de Personas de México</li><li>Secretaría de Ciencia y Tecnología de México</li><li>Embajada Británica en México</li><li>British Association for Forensic Anthropology</li>',
+        'card3-p4':'<strong>🛰️ Tecnología para la memoria, la dignidad y el cierre</strong><br>Continuaremos desarrollando — y ayudando a incorporar en los protocolos oficiales — nuevas formas de localizar a personas desaparecidas mediante herramientas como modelos de aprendizaje automático, cámaras hiperespectrales, instrumentos sísmicos y tomografía eléctrica.',
+        'card3-p5':'<em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>',
+
+        'card4-badge':'Cobertura',
+        'card4-title':'FOUND en Associated Press, The Independent, LA Times, VICE y NBC',
+        'card4-list':'<li><strong>Associated Press:</strong> <a href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank" rel="noopener noreferrer">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li><li><strong>The Independent:</strong> <a href="https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html" target="_blank" rel="noopener noreferrer">How pigs could help find missing Mexican drug cartel victims</a></li><li><strong>LA Times:</strong> <a href="https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico" target="_blank" rel="noopener noreferrer">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li><li><strong>VICE:</strong> <a href="https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/" target="_blank" rel="noopener noreferrer">Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims</a></li><li><strong>NBC:</strong> <a href="https://www.nbcnews.com/news/amp/rcna221791" target="_blank" rel="noopener noreferrer">Clothed pigs are buried in Mexico as scientists use them in search of the missing</a></li>'
+      },
+
+      nah:{
+        'news-pill':'TLATLAHCUILOLLI • TLAKAMEH • MEDIOS',
+        'news-title':'FOUND — Tlen mochihua huan tlen pano',
+        'news-subtitle':'Nuevas tlamantli tlen totlatequi ipan Mēxihco, Colombia huan oksekan.',
+        'card0-badge':'Tlatlepanitaliztli',
+        'card0-title':'In pionera de FOUND kiseli in Premio Sir Nicholas Browne de Política huan Pericia (FCDO)',
+        'card0-p1':'Tiquinechpoua ika pakilistli ke <strong>Mariela Garfias</strong> okiseli in <strong>Premio Sir Nicholas Browne de Política y Pericia</strong>, tlatlepanitaliztli de in FCDO británico tlen kixnextia kualli tequitl ipan políticas, tlaxtlahuilli tlen más de 200 propuestah.',
+        'card0-p2':'Mariela yeto in pionera de FOUND dentro de in FCDO huan se de in tlacameh tlen okitmaka hueyi tlakameh inin proyecto.',
+        'card0-p3':'Ika FOUND, huan ika tlatlapalehuiliztli de miek toknihuan, yotiknextijkeh kan okatkah <strong>27 tlācameh</strong> tlen polihuitkeh ipan Mēxihco, tlen kimpalehuiah in familias kiseliskeh tlanemilistli huan se tipo de cierre. In tequitl yotemosewia kan autoridades locales huan nacionales, huan yopanok ika sekolaboración ika <strong>Unidad de Búsqueda de Personas dadas por Desaparecidas de Colombia</strong> huan ika Oficina Ejecutiva del <strong>Secretario General de la ONU</strong>.',
+        'card0-p4':'Ipan in tlajtohketl de kiselis in premio, Mariela okijtoua tlahtolli tlen kixkopina in espíritu de FOUND: “De mi cuerpo descompuesto crecerán flores, y yo estoy en ellas. Eso es la eternidad”. — Edvard Munch.',
+        'card0-p5':'Ijkuak tiktlatemohuah fosas clandestinas ika tecnologías, in tlalli huan xihuitl miek wel kitenextiah — ika tlapeyaliztli tlen tzintla o ipan xihuitl. In memoria amo polihui. Totekipano in tikajsikilis.',
+        'card0-p6':'Mariela okimotlajkamat in tlen kualkanin kinyeknekiltiah nin tequitl: Embajada Británica ipan Ciudad de México, in tomentor <strong>Martin Johnston</strong>, in equipo de Frontier Tech Hub, huan, achtoyan, in nananmeh buscadoras, tlen inintlamatiliztli huan yolchikahualiztli mochipa yetos tocompás.',
+        'card0-link':'Xikmotlajkolti in tlatlatol ipan LinkedIn ↗',
+
+        'card1-badge':'Tlayekoliztli ipan tlalli',
+        'card1-title':'Ome visita de in Unidad de Búsqueda de Colombia (UBPD) kan sitios experimentales de FOUND ipan Jalisco',
+        'card1-p1':'Timitztlajkamatih miek ika <strong>CVM Cyber</strong> huan <strong>Ciaran Martin</strong> por ininpalehuiliztli para nikchihuase nin visita.',
+        'card1-p2':'Otikweltaskeh <strong>Héctor Javier Gómez</strong>, geofísico de in <em>Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD)</em> de Colombia, para se tlatskayotl tlayekoliztli ipan sitios experimentales de FOUND ipan Jalisco.',
+        'card1-p3':'In visita omochi para tiknotsaskeh huan tiktlaxtlawaskeh imágenes hiperespectrales ika dron ipan makuil sitios experimentales de FOUND — san ome welta okitekuitilijkeh nin tecnología ipan Mēxihco ika propósito humanitario.',
+        'card1-p4':'Nin tlayekoliztli hualpehua desde in visita de octubre 2025 de <strong>Dr. Julián Arias</strong>, Director de Prospección, Recuperación e Identificación de la UBPD, tlen okitlapolwi oficialmente in sekolaboración ipan metodologías de búsqueda e identificación.',
+        'card1-p5':'Ipan nin ompa visita, UBPD okimakak tlanawatilistli teknikah para okachi tikchikawaseh estrategias de FOUND para tlamiktiloyan tlatemohuiliztli. In sekolaboración yas okachi wejkapa ipan enero 2026, ijkuak in equipo FOUND yas Colombia para motla’ahxilis huan kinekitsas metodologías de UBPD ipan estados compañero de FOUND ipan Mēxihco.',
+
+        'card2-badge':'Medios',
+        'card2-title':'FOUND ipan The Guardian',
+        'card2-p1':'Nin reportaje omochi ika más de chikuasen metztli de correos, mensajes de WhatsApp huan visita de in periodista kan sitios experimentales de Jalisco, Mēxihco.',
+        'card2-p2':'Titlajkamatih miek por in cuidado, hueyikan tlamachilistli huan compromiso tlen okitemitijkeh nin historia, satepan de miek metztli okikakiah familias, investigadores huan autoridades.',
+        'card2-link':'Xikmotlajkolti in reportaje ipan The Guardian ↗',
+
+        'card3-badge':'Financiamiento',
+        'card3-title':'FOUND kiselia yankuik tlapalehuiliztli de in FCDO británico ika Frontier Tech Hub',
+        'card3-p1':'Ipan in presentación, inin equipo okixnexti in tlakameh tlen FOUND okichi, huan otikselijkeh se financiamiento tlen techpalehuis para tikueskaltis in misión: xikpatla se modo sistémico de kenik tiktlatemohuah personas desaparecidas ipan Mēxihco, Colombia huan oksekan.',
+        'card3-p2':'<strong>🌱 Tlatekitilistli tlen petlani desde familias huan comunidades de investigación</strong><br>FOUND kinyeknemilia nananmeh buscadoras huan investigadores de CentroGeo, UNAM, IPN, UdeG, ITESO, Oxford, Bristol, Bath, Cambridge huan Universidades Autónomas de Zacatecas huan San Luis Potosí.',
+        'card3-p3':'<strong>🔍 Axkan titekitih san sejco ika:</strong>',
+        'card3-list':'<li>Oficina Ejecutiva del Secretario General de la ONU</li><li>Foreign, Commonwealth &amp; Development Office (FCDO) de Reino Unido</li><li>Comisiones de Búsqueda huan Fiscalías de Jalisco, Zacatecas, San Luis Potosí huan Chihuahua (Mēxihco)</li><li>Unidad de Búsqueda de Personas dadas por Desaparecidas de Colombia</li><li>Comisión Nacional de Búsqueda de Personas de México</li><li>Secretaría de Ciencia y Tecnología de México</li><li>Embajada Británica ipan México</li><li>British Association for Forensic Anthropology</li>',
+        'card3-p4':'<strong>🛰️ Teknolojía para memoria, tlatepanitaliztli huan cierre</strong><br>Tikchiwaseh okse yankuik ojtli para tiktlatemohuah personas desaparecidas ika modelos de machine learning, cámaras hiperespectrales, instrumentos sísmicos huan tomografía eléctrica, huan tikneki se tlamantli momanah inin ipan protocolos oficiales.',
+        'card3-p5':'<em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em>',
+
+        'card4-badge':'Tlayekoliztli ipan medios',
+        'card4-title':'FOUND ipan Associated Press, The Independent, LA Times, VICE huan NBC',
+        'card4-list':'<li><strong>Associated Press:</strong> <a href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank" rel="noopener noreferrer">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li><li><strong>The Independent:</strong> <a href="https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html" target="_blank" rel="noopener noreferrer">How pigs could help find missing Mexican drug cartel victims</a></li><li><strong>LA Times:</strong> <a href="https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico" target="_blank" rel="noopener noreferrer">Why are scientists dressing pigs in clothes and burying them in Mexico?</a></li><li><strong>VICE:</strong> <a href="https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/" target="_blank" rel="noopener noreferrer">Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims</a></li><li><strong>NBC:</strong> <a href="https://www.nbcnews.com/news/amp/rcna221791" target="_blank" rel="noopener noreferrer">Clothed pigs are buried in Mexico as scientists use them in search of the missing</a></li>'
       }
+    };
 
-      document.addEventListener('DOMContentLoaded', function(){
-        let savedLang = null;
-        try{ savedLang = localStorage.getItem('found-lang-media'); }catch(e){}
-        const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
-        setLanguage(initialLang);
+    const ids = [
+      'news-pill','news-title','news-subtitle',
+      'card0-badge','card0-title','card0-p1','card0-p2','card0-p3','card0-p4','card0-p5','card0-p6','card0-link',
+      'card1-badge','card1-title','card1-p1','card1-p2','card1-p3','card1-p4','card1-p5',
+      'card2-badge','card2-title','card2-p1','card2-p2','card2-link',
+      'card3-badge','card3-title','card3-p1','card3-p2','card3-p3','card3-list','card3-p4','card3-p5',
+      'card4-badge','card4-title','card4-list'
+    ];
 
-        document.querySelectorAll('.lang-btn').forEach(btn=>{
-          btn.addEventListener('click', ()=> setLanguage(btn.dataset.lang));
-        });
+    function setLanguage(lang){
+      const dict = translations[lang] || translations.en;
+
+      ids.forEach(id=>{
+        const el = document.getElementById(id);
+        if(el && dict[id] !== undefined){
+          el.innerHTML = dict[id];
+        }
       });
-    })();
+
+      document.documentElement.setAttribute(
+        'lang',
+        lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
+      );
+
+      document.querySelectorAll('.lang-btn').forEach(btn=>{
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+
+      try{ localStorage.setItem('found-lang-news', lang); }catch(e){}
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+      let savedLang = null;
+      try{ savedLang = localStorage.getItem('found-lang-news'); }catch(e){}
+      const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
+      setLanguage(initialLang);
+
+      document.querySelectorAll('.lang-btn').forEach(btn=>{
+        btn.addEventListener('click', ()=> setLanguage(btn.dataset.lang));
+      });
+    });
+  })();
+</script>
   </script>
 </body>
 </html>
