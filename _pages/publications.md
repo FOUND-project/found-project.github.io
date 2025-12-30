@@ -46,17 +46,17 @@ author_profile: true
     }
 
     /* nuevo título encima del logo, como en News */
-    .pub-sidebar-title{
-      position:absolute;
-      top:28px;
-      left:86px;
-      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
-      font-size:1.9rem;
-      font-weight:800;
-      letter-spacing:-0.03em;
-      color:#111827;
-      z-index:30;
-    }
+  .pub-sidebar-title{
+  position:absolute;
+  top:72px;    /* moved down */
+  left:86px;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+  font-size:1.9rem;
+  font-weight:800;
+  letter-spacing:-0.03em;
+  color:#111827;
+  z-index:30;
+}
 
     /* CONTENEDOR PRINCIPAL */
     .pub-shell {
