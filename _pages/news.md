@@ -8,6 +8,7 @@ author_profile: true
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Keep desktop layout on all screens -->
   <meta name="viewport" content="width=1200">
   <title>FOUND — News & Updates</title>
 
@@ -77,14 +78,14 @@ author_profile: true
       border-radius:10px;
     }
 
-    /* Shift content to the right (like Media) */
+    /* SHIFT WHOLE NEWS AREA TO THE RIGHT (like Media) */
     .news-shell{
       max-width:1300px;
-      margin:0 0 0 auto; /* right-aligned on desktop */
+      margin:0 auto 0 5.6rem; /* space for the circular logo on the left */
       position:relative;
     }
 
-    /* Language toggle */
+    /* Language toggle (same style as home / media) */
     .lang-toggle{
       position:absolute;
       top:0.25rem;
@@ -134,7 +135,7 @@ author_profile: true
         linear-gradient(135deg,#ffffff 0%,#f6faf8 40%,#ffffff 100%);
       border-radius:var(--radius-lg);
       padding:clamp(1.75rem,3vw,2.4rem);
-      margin:1.75rem 0 2.4rem;
+      margin:1.75rem 0 2.8rem;
       display:flex;
       align-items:center;
       gap:clamp(1.4rem,3vw,2.4rem);
@@ -184,10 +185,10 @@ author_profile: true
     }
 
     #news-subtitle{
-      font-size:clamp(.95rem,1.3vw,1.05rem);
+      font-size:clamp(1rem,1.4vw,1.15rem);
       color:var(--text-medium);
       max-width:720px;
-      line-height:1.7;
+      line-height:1.75;
     }
 
     .news-tagline-pill{
@@ -214,18 +215,18 @@ author_profile: true
       background:radial-gradient(circle,var(--gold-accent) 0%,rgba(212,175,55,.18) 70%);
     }
 
-    /* Grid of cards – slightly narrower & tighter */
+    /* Grid of cards – slightly smaller */
     .news-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:clamp(1.3rem,2vw,1.8rem);
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); /* was 280px */
+      gap:clamp(1.3rem,2.1vw,2rem); /* a bit tighter */
       margin-bottom:2rem;
     }
 
     .news-card{
       background:#ffffff;
       border-radius:var(--radius-md);
-      padding:1.3rem 1.3rem 1.6rem; /* reduced padding */
+      padding:1.4rem 1.5rem 1.6rem; /* smaller padding */
       box-shadow:var(--shadow-sm);
       border:1px solid rgba(15,23,42,.06);
       position:relative;
@@ -276,8 +277,8 @@ author_profile: true
     }
 
     .card-emoji{
-      font-size:1.8rem; /* smaller */
-      margin-bottom:.5rem;
+      font-size:2rem; /* slightly smaller */
+      margin-bottom:.55rem;
     }
 
     .card-badge{
@@ -309,15 +310,15 @@ author_profile: true
       display:flex;
       justify-content:space-between;
       align-items:flex-start;
-      gap:.9rem;
+      gap:1rem;
       cursor:pointer;
     }
 
     .card-title{
-      font-size:1.08rem; /* slightly smaller */
+      font-size:1.12rem; /* a bit smaller than before */
       font-weight:800;
       color:var(--dark-green);
-      line-height:1.35;
+      line-height:1.4;
       flex:1;
       letter-spacing:-.01em;
     }
@@ -360,17 +361,17 @@ author_profile: true
       overflow:hidden;
       transition:max-height .5s var(--transition-smooth), margin-top .4s var(--transition-smooth);
       color:var(--text-medium);
-      line-height:1.6;
+      line-height:1.7;
     }
 
     .expand-toggle:checked ~ .card-header + .card-content{
       max-height:5000px;
-      margin-top:.85rem;
+      margin-top:.9rem;
     }
 
     .card-content p{
-      margin-bottom:.75rem;
-      font-size:.94rem; /* smaller text */
+      margin-bottom:.85rem;
+      font-size:.96rem;
     }
 
     .card-content strong{
@@ -393,34 +394,28 @@ author_profile: true
     }
 
     .card-content ul{
-      margin:.9rem 0;
-      padding-left:1.2rem;
-      font-size:.94rem;
+      margin:1rem 0;
+      padding-left:1.25rem;
     }
 
     .card-content ul li{
-      margin-bottom:.4rem;
+      margin-bottom:.45rem;
     }
 
     .card-content img{
       width:100%;
       border-radius:16px;
-      margin:1.2rem 0 .9rem;
+      margin:1.3rem 0 1rem;
       box-shadow:0 14px 30px rgba(15,23,42,.22);
       border:1px solid rgba(255,255,255,.9);
     }
 
-    /* MOBILE OVERRIDES */
+    /* These mobile rules won't trigger while viewport is fixed at 1200,
+       but keeping them is harmless if you ever switch back */
     @media (max-width:900px){
       body{
         padding:1.4rem 1rem;
       }
-
-      /* centre content again on small screens */
-      .news-shell{
-        margin:0 auto;
-      }
-
       .lang-toggle{
         position:static;
         margin-left:auto;
@@ -452,10 +447,10 @@ author_profile: true
         padding:1.3rem 1.1rem;
       }
       .news-card{
-        padding:1.15rem 1.05rem 1.4rem;
+        padding:1.3rem 1.1rem 1.45rem;
       }
       .card-title{
-        font-size:1.02rem;
+        font-size:1.04rem;
       }
     }
   </style>
