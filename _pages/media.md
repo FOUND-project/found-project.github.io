@@ -19,18 +19,24 @@ author_profile: true
     }
 
     :root{
-      --primary-green:#1b5e3e;
-      --dark-green:#0f3a26;
+      /* Match ABOUT / Technologies in Action palette */
+      --primary-green:#2d5f4d;
+      --dark-green:#1e4034;
       --light-green:#4a8c73;
-      --mint-green:#dff4ea;
-      --bg-soft:#f3fbf7;
-      --bg-soft-alt:#e7f3ec;
+      --accent-green:#e8f5f0;
+      --gold-accent:#d4af37;
+
+      --bg-soft:#f8fcfb;
+      --bg-soft-alt:#fdfaf5;
+
       --text-dark:#121212;
       --text-medium:#3f3f3f;
       --text-light:#6b6b6b;
-      --shadow-sm:0 4px 16px rgba(11,36,25,.08);
-      --shadow-md:0 10px 28px rgba(11,36,25,.14);
-      --shadow-lg:0 20px 50px rgba(11,36,25,.18);
+
+      --shadow-sm:0 4px 16px rgba(15,23,42,.06);
+      --shadow-md:0 10px 28px rgba(15,23,42,.10);
+      --shadow-lg:0 20px 50px rgba(15,23,42,.16);
+
       --radius-lg:22px;
       --radius-md:16px;
       --radius-pill:999px;
@@ -51,9 +57,9 @@ author_profile: true
     body{
       font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
       background:
-        radial-gradient(1200px 600px at 10% 0%, rgba(27,94,62,.10) 0%, transparent 55%),
-        radial-gradient(900px 520px at 85% 5%, rgba(74,140,115,.16) 0%, transparent 60%),
-        linear-gradient(145deg,#f5fbf8 0%,#e6f2eb 45%,#f7fbf9 100%);
+        radial-gradient(1200px 600px at 15% 0%, rgba(232,245,240,.90) 0%, transparent 55%),
+        radial-gradient(900px 520px at 85% 5%, rgba(212,175,55,.10) 0%, transparent 60%),
+        linear-gradient(145deg,#f8fcfb 0%,#ffffff 55%,#fdfaf5 100%);
       min-height:100vh;
       color:var(--text-dark);
       -webkit-font-smoothing:antialiased;
@@ -89,9 +95,9 @@ author_profile: true
       position:absolute;
       inset:-40px;
       background:
-        radial-gradient(circle at 0% 0%, rgba(27,94,62,.08) 0%, transparent 55%),
-        radial-gradient(circle at 100% 100%, rgba(223,244,234,.6) 0%, transparent 55%);
-      opacity:.4;
+        radial-gradient(circle at 0% 0%, rgba(45,95,77,.08) 0%, transparent 55%),
+        radial-gradient(circle at 100% 100%, rgba(232,245,240,.70) 0%, transparent 55%);
+      opacity:.5;
       pointer-events:none;
       z-index:-1;
     }
@@ -106,10 +112,10 @@ author_profile: true
       z-index:10;
       padding:.15rem;
       border-radius:var(--radius-pill);
-      background:rgba(243,251,247,.85);
+      background:rgba(248,252,251,.92);
       backdrop-filter:blur(16px);
       border:1px solid rgba(15,23,42,.06);
-      box-shadow:0 10px 25px rgba(11,36,25,.12);
+      box-shadow:0 10px 25px rgba(15,23,42,.10);
     }
 
     .lang-btn{
@@ -132,23 +138,24 @@ author_profile: true
     }
 
     .lang-btn:hover{
-      background:rgba(255,255,255,.95);
+      background:rgba(255,255,255,.98);
       transform:translateY(-1px);
-      box-shadow:0 7px 18px rgba(15,23,42,.12);
+      box-shadow:0 7px 18px rgba(15,23,42,.14);
     }
 
     .lang-btn.active{
       background:var(--dark-green);
       color:#fff;
       border-color:rgba(255,255,255,.7);
-      box-shadow:0 8px 20px rgba(11,36,25,.35);
+      box-shadow:0 8px 20px rgba(15,23,42,.35);
     }
 
     /* Header / container */
     .media-container{
       background:
-        radial-gradient(circle at 10% 0%, rgba(223,244,234,.95) 0%, transparent 60%),
-        linear-gradient(140deg,#ffffff 0%,#f3fbf7 40%,#ffffff 100%);
+        radial-gradient(circle at 20% 15%, rgba(232,245,240,.95) 0%, transparent 55%),
+        radial-gradient(circle at 90% 0%, rgba(212,175,55,.10) 0%, transparent 60%),
+        linear-gradient(140deg,#ffffff 0%,#f8fcfb 45%,#ffffff 100%);
       border-radius:var(--radius-lg);
       padding:clamp(1.8rem,3vw,2.8rem);
       margin-top:2.2rem;
@@ -166,8 +173,8 @@ author_profile: true
       top:-90px;
       width:210px;
       height:210px;
-      background:radial-gradient(circle, rgba(27,94,62,.14) 0%, transparent 65%);
-      opacity:.7;
+      background:radial-gradient(circle, rgba(232,245,240,.85) 0%, transparent 65%);
+      opacity:.9;
       pointer-events:none;
     }
 
@@ -177,8 +184,8 @@ author_profile: true
       gap:.35rem;
       padding:.2rem .9rem;
       border-radius:var(--radius-pill);
-      background:rgba(27,77,62,.08);
-      border:1px solid rgba(27,77,62,.22);
+      background:rgba(45,95,77,.08);
+      border:1px solid rgba(45,95,77,.22);
       font-size:.78rem;
       font-weight:750;
       letter-spacing:.16em;
@@ -203,7 +210,7 @@ author_profile: true
       width:86px;
       height:auto;
       border-radius:18px;
-      box-shadow:0 10px 26px rgba(11,36,25,.25);
+      box-shadow:0 10px 26px rgba(15,23,42,.25);
       border:2px solid rgba(255,255,255,.9);
       background:#fff;
       object-fit:cover;
@@ -239,7 +246,7 @@ author_profile: true
     }
 
     .media-card{
-      background:linear-gradient(145deg,#ffffff 0%,#f6fbf8 100%);
+      background:linear-gradient(145deg,#ffffff 0%,#f9fcfb 100%);
       border-radius:var(--radius-md);
       box-shadow:var(--shadow-sm);
       padding:1.75rem 1.7rem 1.75rem;
@@ -263,7 +270,7 @@ author_profile: true
       top:0;
       bottom:0;
       width:4px;
-      background:linear-gradient(180deg,var(--dark-green) 0%,var(--light-green) 100%);
+      background:linear-gradient(180deg,var(--light-green) 0%,var(--primary-green) 100%);
       transform:scaleY(0);
       transform-origin:bottom;
       transition:transform .3s var(--transition-smooth);
@@ -272,8 +279,8 @@ author_profile: true
     .media-card:hover{
       transform:translateY(-5px);
       box-shadow:var(--shadow-lg);
-      border-color:rgba(27,77,62,.24);
-      background:linear-gradient(150deg,#ffffff 0%,#ecf7f1 55%,#ffffff 100%);
+      border-color:rgba(45,95,77,.24);
+      background:linear-gradient(150deg,#ffffff 0%,#f0f7f4 55%,#ffffff 100%);
       filter:saturate(1.02);
     }
 
@@ -300,7 +307,7 @@ author_profile: true
       height:7px;
       border-radius:50%;
       background:linear-gradient(135deg,var(--light-green),var(--primary-green));
-      box-shadow:0 0 0 2px rgba(27,77,62,.12);
+      box-shadow:0 0 0 2px rgba(45,95,77,.16);
     }
 
     .media-title{
@@ -334,7 +341,7 @@ author_profile: true
       font-weight:650;
       padding:.38rem .9rem;
       border-radius:999px;
-      background:rgba(27,77,62,.08);
+      background:rgba(45,95,77,.08);
       color:var(--dark-green);
       transition:background .2s var(--transition-smooth), color .2s var(--transition-smooth), transform .2s var(--transition-smooth);
     }
@@ -346,7 +353,7 @@ author_profile: true
     }
 
     .media-card:hover .media-tag{
-      background:rgba(27,77,62,.14);
+      background:rgba(45,95,77,.14);
       transform:translateX(2px);
     }
 
@@ -356,8 +363,8 @@ author_profile: true
       padding:1.9rem 1.9rem 1.3rem;
       border-radius:var(--radius-lg);
       background:
-        radial-gradient(circle at 6% 0%, rgba(208,239,224,.95) 0%, transparent 55%),
-        linear-gradient(135deg,#ffffff 0%,#f4fbf7 65%,#ffffff 100%);
+        radial-gradient(circle at 6% 0%, rgba(232,245,240,.95) 0%, transparent 55%),
+        linear-gradient(135deg,#ffffff 0%,#f8fcfb 65%,#ffffff 100%);
       box-shadow:var(--shadow-sm);
       border:1px solid rgba(15,23,42,.06);
     }
@@ -371,7 +378,7 @@ author_profile: true
     }
 
     .talk-card{
-      background:linear-gradient(135deg,#ffffff 0%,#f7fbf9 100%);
+      background:linear-gradient(135deg,#ffffff 0%,#f9fcfb 100%);
       padding:1.3rem 1.5rem;
       border-radius:14px;
       box-shadow:0 1px 3px rgba(0,0,0,.05);
@@ -393,7 +400,7 @@ author_profile: true
       top:0;
       bottom:0;
       width:4px;
-      background:linear-gradient(180deg,var(--dark-green) 0%,var(--light-green) 100%);
+      background:linear-gradient(180deg,var(--light-green) 0%,var(--primary-green) 100%);
       transform:scaleY(0);
       transform-origin:bottom;
       transition:transform .3s var(--transition-smooth);
@@ -402,8 +409,8 @@ author_profile: true
     .talk-card:hover{
       transform:translateX(4px);
       box-shadow:0 8px 24px rgba(0,0,0,.12);
-      border-color:rgba(27,77,62,.25);
-      background:linear-gradient(145deg,#ffffff 0%,#ebf6f1 100%);
+      border-color:rgba(45,95,77,.25);
+      background:linear-gradient(145deg,#ffffff 0%,#edf6f2 100%);
     }
 
     .talk-card:hover::before{
