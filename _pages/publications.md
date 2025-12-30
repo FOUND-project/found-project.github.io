@@ -46,7 +46,11 @@ author_profile: true
           </div>
 
           <div class="pub-card-media">
-            <img src="/images/the%20book.png" alt="FOUND book cover" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+            <img src="/images/the%20book.png"
+                 alt="FOUND book cover"
+                 loading="lazy"
+                 class="loading"
+                 onload="this.classList.remove('loading'); this.parentElement && this.parentElement.classList.remove('skeleton');">
           </div>
         </div>
       </article>
@@ -67,7 +71,10 @@ author_profile: true
           <span class="pub-badge" id="a1-badge">Peer-reviewed</span>
         </div>
         <h3 class="pub-item-title">
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S2352938525002289" target="_blank" rel="noopener noreferrer" id="a1-title">
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S2352938525002289"
+             target="_blank"
+             rel="noopener noreferrer"
+             id="a1-title">
             Design of spectral indices for the detection of soil pollutants associated with the disappearance of persons
           </a>
         </h3>
@@ -82,7 +89,10 @@ author_profile: true
           <span class="pub-badge" id="a2-badge">Peer-reviewed</span>
         </div>
         <h3 class="pub-item-title">
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0379073824001956" target="_blank" rel="noopener noreferrer" id="a2-title">
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0379073824001956"
+             target="_blank"
+             rel="noopener noreferrer"
+             id="a2-title">
             Assessing Geospatial Models to Explain the Occurrence of Clandestine Graves in Mexico
           </a>
         </h3>
@@ -97,7 +107,10 @@ author_profile: true
           <span class="pub-badge" id="a3-badge">Book chapter</span>
         </div>
         <h3 class="pub-item-title">
-          <a href="https://link.springer.com/chapter/10.1007/978-3-031-61440-8_14" target="_blank" rel="noopener noreferrer" id="a3-title">
+          <a href="https://link.springer.com/chapter/10.1007/978-3-031-61440-8_14"
+             target="_blank"
+             rel="noopener noreferrer"
+             id="a3-title">
             Espacio Clandestino: A Nationwide Platform to Support Clandestine Graves Search in Mexico
           </a>
         </h3>
@@ -123,7 +136,10 @@ author_profile: true
           <span class="pub-badge" id="b1-badge">Blog</span>
         </div>
         <h3 class="pub-item-title">
-          <a href="https://www.frontiertechhub.org/insights/technological-responses-to-disappearance" target="_blank" rel="noopener noreferrer" id="b1-title">
+          <a href="https://www.frontiertechhub.org/insights/technological-responses-to-disappearance"
+             target="_blank"
+             rel="noopener noreferrer"
+             id="b1-title">
             On the Frontier of Finding Peace
           </a>
         </h3>
@@ -138,7 +154,10 @@ author_profile: true
           <span class="pub-badge" id="b2-badge">News story</span>
         </div>
         <h3 class="pub-item-title">
-          <a href="https://www.uwe.ac.uk/news/mexico-project" target="_blank" rel="noopener noreferrer" id="b2-title">
+          <a href="https://www.uwe.ac.uk/news/mexico-project"
+             target="_blank"
+             rel="noopener noreferrer"
+             id="b2-title">
             Academic playing role in project to find hidden graves in Mexico using drone technology
           </a>
         </h3>
@@ -153,7 +172,10 @@ author_profile: true
           <span class="pub-badge" id="b3-badge">Op-ed</span>
         </div>
         <h3 class="pub-item-title">
-          <a href="https://www.justsecurity.org/105181/drones-graves-mexicos-disappeared/" target="_blank" rel="noopener noreferrer" id="b3-title">
+          <a href="https://www.justsecurity.org/105181/drones-graves-mexicos-disappeared/"
+             target="_blank"
+             rel="noopener noreferrer"
+             id="b3-title">
             Camera-Fitted Drones May Help Locate Graves of Mexico's Disappeared
           </a>
         </h3>
@@ -190,21 +212,29 @@ author_profile: true
   --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.page, #main, .initial-content, .page__inner-wrap, .page__content, .archive {
+/* Make page full-width in Minimal Mistakes */
+.page,
+#main,
+.initial-content,
+.page__inner-wrap,
+.page__content,
+.archive {
   max-width: none !important;
   width: 100% !important;
 }
 
-/* shift right so we clear the round logo */
+/* Shift right so we clear the round logo (like News) */
 .pub-shell {
   max-width: 1400px;
-  margin: 0 auto 4rem 6.8rem;
+  margin: 0 auto 4rem;
   padding: 2rem clamp(1.5rem, 4vw, 3rem);
+  padding-left: calc(2rem + 5.6rem); /* pushes whole block right */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
   background: linear-gradient(135deg, var(--gray-50) 0%, var(--off-white) 100%);
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .pub-shell::before {
@@ -509,7 +539,7 @@ author_profile: true
   100% { background-position: -200% 0; }
 }
 
-/* RESPONSIVE (kept, but layout still looks close to desktop) */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
   .pub-card-inner {
     grid-template-columns: 1fr;
@@ -526,7 +556,7 @@ author_profile: true
 @media (max-width: 768px) {
   .pub-shell {
     padding: 1.5rem 1.25rem 3rem;
-    margin-left: 6.8rem;
+    padding-left: clamp(1rem, 4vw, 1.75rem); /* reduce offset on very small screens */
   }
 
   .pub-grid {
@@ -572,7 +602,7 @@ author_profile: true
 
 <script>
 (function() {
-  const STORAGE_KEY = 'found-lang-news'; // shared with News page
+  const STORAGE_KEY = 'found-lang-news'; // shared with News, so choice carries across
 
   const translations = {
     en: {
@@ -600,7 +630,7 @@ author_profile: true
       'b1-meta': 'Mariela Garfias & Frontier Tech Hub (2025)',
       'b2-title': 'Academic playing role in project to find hidden graves in Mexico using drone technology',
       'b2-meta': 'University of the West of England – Bristol (2025)',
-      'b3-title': 'Camera-Fitted Drones May Help Locate Graves of Mexico\'s Disappeared',
+      'b3-title': "Camera-Fitted Drones May Help Locate Graves of Mexico's Disappeared",
       'b3-meta': 'Karina García-Reyes & Miguel Moctezuma (2024)'
     },
     es: {
@@ -675,14 +705,14 @@ author_profile: true
     const dict = translations[lang] || translations.en;
 
     elementIds.forEach(id => {
-      const element = document.getElementById(id);
-      if (element && dict[id] !== undefined) {
-        element.innerHTML = dict[id];
+      const el = document.getElementById(id);
+      if (el && Object.prototype.hasOwnProperty.call(dict, id)) {
+        el.innerHTML = dict[id];
       }
     });
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      btn.classList.toggle('active', btn.dataset.lang === lang);
     });
 
     try {
@@ -695,32 +725,31 @@ author_profile: true
     );
   }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    let savedLang = 'en';
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored && ['en', 'es', 'nah'].includes(stored)) {
-        savedLang = stored;
-      }
-    } catch (e) {}
+  // Run immediately (script is at the bottom, DOM already exists)
+  let initial = 'en';
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === 'es' || saved === 'nah' || saved === 'en') {
+      initial = saved;
+    }
+  } catch (e) {}
 
-    setLanguage(savedLang);
+  setLanguage(initial);
 
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
-        setLanguage(this.getAttribute('data-lang'));
-      });
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      setLanguage(this.dataset.lang);
     });
+  });
 
-    // simple loading skeleton for images
-    document.querySelectorAll('img').forEach(img => {
-      if (!img.complete) {
-        img.classList.add('loading');
-        if (img.parentElement) {
-          img.parentElement.classList.add('skeleton');
-        }
+  // simple loading skeleton for images
+  document.querySelectorAll('img').forEach(img => {
+    if (!img.complete) {
+      img.classList.add('loading');
+      if (img.parentElement) {
+        img.parentElement.classList.add('skeleton');
       }
-    });
+    }
   });
 })();
 </script>
