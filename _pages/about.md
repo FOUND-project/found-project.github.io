@@ -18,47 +18,16 @@ redirect_from:
   <meta property="og:type" content="website" />
   <title>FOUND Project - Using Technology to Search and Remember</title>
 
-  <!-- ======== HTTP TO HTTPS REDIRECT ======== -->
+  <!-- HTTP to HTTPS redirect -->
+  <meta http-equiv="refresh" content="0; url=https://found-project.org">
   <script>
-  (function() {
-      // Only redirect if we're on HTTP version of our domain
-      if (window.location.hostname === 'found-project.org' && 
-          window.location.protocol === 'http:') {
-          
-          // Preserve the full URL path (any page they're trying to access)
-          var newUrl = 'https://found-project.org' + 
-                      window.location.pathname + 
-                      window.location.search + 
-                      window.location.hash;
-          
-          // Use replace() to avoid back button issues
-          window.location.replace(newUrl);
-      }
-  })();
+    // Immediate JavaScript redirect
+    if (window.location.hostname === 'found-project.org' && 
+        window.location.protocol === 'http:') {
+      window.location.href = 'https://' + window.location.host + window.location.pathname + window.location.search + window.location.hash;
+    }
   </script>
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <!-- ======== END REDIRECT ======== -->
-
-  <!-- ======== HTTP TO HTTPS REDIRECT ======== -->
-  <script>
-  (function() {
-      // Only redirect if we're on HTTP version of our domain
-      if (window.location.hostname === 'found-project.org' && 
-          window.location.protocol === 'http:') {
-          
-          // Preserve the full URL path (any page they're trying to access)
-          var newUrl = 'https://found-project.org' + 
-                      window.location.pathname + 
-                      window.location.search + 
-                      window.location.hash;
-          
-          // Use replace() to avoid back button issues
-          window.location.replace(newUrl);
-      }
-  })();
-  </script>
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <!-- ======== END REDIRECT ======== -->
 
   <style>
     *{
