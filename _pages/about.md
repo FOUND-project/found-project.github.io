@@ -1342,7 +1342,13 @@ redirect_from:
         height:430px;
       }
     }
-  
+
+/* Re-tint Frontier Tech Hub logo to dark */
+.collab-img.fth {
+  filter: brightness(0) saturate(100%) invert(9%) sepia(6%) saturate(512%)
+          hue-rotate(94deg) brightness(95%) contrast(96%);
+}
+    
   </style>
 </head>
 
@@ -1745,7 +1751,7 @@ redirect_from:
       src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
       alt="Frontier Tech Hub logo"
       loading="lazy"
-      class="collab-img"
+      class="collab-img fth"
     >
   </div>
 
@@ -1753,6 +1759,7 @@ redirect_from:
     <div class="collab-name" id="collab-item-fth">
       Frontier Tech Hub
     </div>
+
     <div class="collab-note" id="collab-note-fth">
       Funding • Technical expertise
     </div>
