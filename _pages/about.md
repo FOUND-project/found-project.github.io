@@ -1394,7 +1394,7 @@ redirect_from:
 
           <div class="award-highlight">
             <a href="/news/#mariela-award" class="award-card">
-              <div class="award-icon" aria-hidden="true"></div>
+             
               <div class="award-text">
                 <div class="award-pill">Award</div>
                 <div class="award-title">
