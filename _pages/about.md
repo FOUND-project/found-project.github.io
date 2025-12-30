@@ -1895,187 +1895,187 @@ redirect_from:
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   <!-- LANGUAGE TOGGLE + WORD ROTATION + TOUCH ZOOM -->
-  <script>
-    (function(){
-      const translations = {
-        en:{
-          'project-subtitle':'<span class="title-accent">Interpreting Nature</span> To Locate Those Who We Are Missing',
-          'hero-tagline-static':'Using technology to',
-          'word-1':'search.',
-          'word-2':'remember.',
-          'word-3':'dignify.',
-          'word-4':'find.',
-          'word-5':'bring closure.',
-          'hero-main-text':'124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.',
-          'collab-title':'Institutional Partnerships',
-          'tech-title':'Technologies in Action',
-          'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
-          'tech-item-2':'Airborne LiDAR',
-          'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
-          'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry Measurements',
-          'tech-item-5':'Satellite Spectral Analysis',
-          'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
-          'buscadoras-title':'The Role of Buscadoras',
-          'buscadoras-text':'Women-led collectives are at the heart of FOUND\'s work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.',
-          'social-title':'Follow Our Journey',
-          'social-subtitle':'Stay connected with our latest findings, community stories, and collaborations',
-          'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
-        },
-        es:{
-          'project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan',
-          'hero-tagline-static':'Usando tecnología para',
-          'word-1':'buscar.',
-          'word-2':'recordar.',
-          'word-3':'dignificar.',
-          'word-4':'encontrar.',
-          'word-5':'dar cierre.',
-          'hero-main-text':'124,354 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de familias buscadoras para aprender del campo, localizar y promover cambios sistémicos.',
-          'collab-title':'Alianzas institucionales',
-          'tech-title':'Tecnologías en acción',
-          'tech-item-1':'Imágenes multiespectrales e hiperespectrales',
-          'tech-item-2':'LiDAR aerotransportado',
-          'tech-item-3':'Interferometría de ruido sísmico (TIRSA)',
-          'tech-item-4':'Tomografía de resistividad eléctrica y mediciones de conductividad',
-          'tech-item-5':'Análisis espectral satelital',
-          'tech-item-6':'Entomología forense, botánica, análisis territorial y ciencia del suelo',
-          'buscadoras-title':'El papel de las buscadoras',
-          'buscadoras-text':'Los colectivos liderados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.',
-          'social-title':'Sigue nuestro camino',
-          'social-subtitle':'Mantente al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.',
-          'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
-        },
-        nah:{
-          'project-subtitle':'<span class="title-accent">In Naturaleza titlatlajtolti</span> para tipantlaltiah in aquimeh techpoloa',
-          'hero-tagline-static':'Teknolojíayoh ika',
-          'word-1':'temoa.',
-          'word-2':'quilnamictia.',
-          'word-3':'tlatepanita.',
-          'word-4':'quipantlalia.',
-          'word-5':'yolpakilistli quimacatia.',
-          'hero-main-text':'124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia teknolojíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
-          'collab-title':'Tlen tlatlanecuiltilis nemilistli (alianzas institucionales)',
-          'tech-title':'Teknolojíayoh tlen motequiti',
-          'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
-          'tech-item-2':'Airborne LiDAR',
-          'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
-          'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry Measurements',
-          'tech-item-5':'Satellite Spectral Analysis',
-          'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
-          'buscadoras-title':'In papel in buscadoras',
-          'buscadoras-text':'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan país tlen polihuiliztli huan tlayectlaliz justice. Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknológicoh tequitl.',
-          'social-title':'Xiquito in totlanejmachtiliz',
-          'social-subtitle':'Ximoyetkixtia inin tlen tipantlaliah, tlen tlanechicoliztli in comunidades huan inin tlen timocoyonaltiah san sejco.',
-          'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
-        }
-      };
-
-      let heroWords = [];
-      let wordIndex = 0;
-      let wordInterval = null;
-
-      function buildHeroWords(lang){
-        const dict = translations[lang] || translations.en;
-        const keys = ['word-1','word-2','word-3','word-4','word-5'];
-        heroWords = keys.map(k => dict[k]).filter(Boolean);
-        wordIndex = 0;
-        const span = document.getElementById('hero-word');
-        if(span && heroWords.length){
-          span.textContent = heroWords[0];
-        }
+<script>
+  (function(){
+    const translations = {
+      en:{
+        'project-subtitle':'<span class="title-accent">Interpreting Nature</span> To Locate Those Who We Are Missing',
+        'hero-tagline-static':'Using technology to',
+        'word-1':'search.',
+        'word-2':'remember.',
+        'word-3':'dignify.',
+        'word-4':'find.',
+        'word-5':'bring closure.',
+        'hero-main-text':'124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.',
+        'collab-title':'Institutional Partnerships',
+        'tech-title':'Technologies in Action',
+        'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
+        'tech-item-2':'Airborne LiDAR',
+        'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
+        'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry Measurements',
+        'tech-item-5':'Satellite Spectral Analysis',
+        'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
+        'buscadoras-title':'The Role of Buscadoras',
+        'buscadoras-text':"Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.",
+        'social-title':'Follow Our Journey',
+        'social-subtitle':'Stay connected with our latest findings, community stories, and collaborations',
+        'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
+      },
+      es:{
+        'project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan',
+        'hero-tagline-static':'Usando tecnología para',
+        'word-1':'buscar.',
+        'word-2':'recordar.',
+        'word-3':'dignificar.',
+        'word-4':'encontrar.',
+        'word-5':'dar cierre.',
+        'hero-main-text':'124,354 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de familias buscadoras para aprender del campo, localizar y promover cambios sistémicos.',
+        'collab-title':'Alianzas institucionales',
+        'tech-title':'Tecnologías en acción',
+        'tech-item-1':'Imágenes multiespectrales e hiperespectrales',
+        'tech-item-2':'LiDAR aerotransportado',
+        'tech-item-3':'Interferometría de ruido sísmico (TIRSA)',
+        'tech-item-4':'Tomografía de resistividad eléctrica y mediciones de conductividad',
+        'tech-item-5':'Análisis espectral satelital',
+        'tech-item-6':'Entomología forense, botánica, análisis territorial y ciencia del suelo',
+        'buscadoras-title':'El papel de las buscadoras',
+        'buscadoras-text':'Los colectivos liderados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.',
+        'social-title':'Sigue nuestro camino',
+        'social-subtitle':'Mantente al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.',
+        'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
+      },
+      nah:{
+        'project-subtitle':'<span class="title-accent">In Naturaleza titlatlajtolti</span> para tipantlaltiah in aquimeh techpoloa',
+        'hero-tagline-static':'Teknolojíayoh ika',
+        'word-1':'temoa.',
+        'word-2':'quilnamictia.',
+        'word-3':'tlatepanita.',
+        'word-4':'quipantlalia.',
+        'word-5':'yolpakilistli quimacatia.',
+        'hero-main-text':'124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia tehnologíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
+        'collab-title':'Tlen tlatlanecuiltilis nemilistli (alianzas institucionales)',
+        'tech-title':'Teknolojíayoh tlen motequiti',
+        'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
+        'tech-item-2':'Airborne LiDAR',
+        'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
+        'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry Measurements',
+        'tech-item-5':'Satellite Spectral Analysis',
+        'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
+        'buscadoras-title':'In papel in buscadoras',
+        'buscadoras-text':'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan país tlen polihuiliztli huan tlayectlaliz justice. Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknológicoh tequitl.',
+        'social-title':'Xiquito in totlanejmachtiliz',
+        'social-subtitle':'Ximoyetkixtia inin tlen tipantlaliah, tlen tlanechicoliztli in comunidades huan inin tlen timocoyonaltiah san sejco.',
+        'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
       }
+    };
 
-      function startWordRotation(){
-        const span = document.getElementById('hero-word');
-        if(wordInterval) clearInterval(wordInterval);
-        if(!span || heroWords.length < 2) return;
+    let heroWords = [];
+    let wordIndex = 0;
+    let wordInterval = null;
 
-        wordInterval = setInterval(function(){
-          span.style.opacity = '0';
-          setTimeout(function(){
-            wordIndex = (wordIndex + 1) % heroWords.length;
-            span.textContent = heroWords[wordIndex];
-            span.style.opacity = '1';
-          },180);
-        },2300);
+    function buildHeroWords(lang){
+      const dict = translations[lang] || translations.en;
+      const keys = ['word-1','word-2','word-3','word-4','word-5'];
+      heroWords = keys.map(k => dict[k]).filter(Boolean);
+      wordIndex = 0;
+      const span = document.getElementById('hero-word');
+      if(span && heroWords.length){
+        span.textContent = heroWords[0];
       }
+    }
 
-      function setLanguage(lang){
-        const dict = translations[lang] || translations.en;
+    function startWordRotation(){
+      const span = document.getElementById('hero-word');
+      if(wordInterval) clearInterval(wordInterval);
+      if(!span || heroWords.length < 2) return;
 
-        Object.keys(dict).forEach(function(id){
-          const el = document.getElementById(id);
-          if(el) el.innerHTML = dict[id];
-        });
+      wordInterval = setInterval(function(){
+        span.style.opacity = '0';
+        setTimeout(function(){
+          wordIndex = (wordIndex + 1) % heroWords.length;
+          span.textContent = heroWords[wordIndex];
+          span.style.opacity = '1';
+        },180);
+      },2300);
+    }
 
-        document.documentElement.setAttribute(
-          'lang',
-          lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
-        );
+    function setLanguage(lang){
+      const dict = translations[lang] || translations.en;
 
-        document.querySelectorAll('.lang-btn').forEach(function(btn){
-          btn.classList.toggle('active', btn.dataset.lang === lang);
-        });
-
-        try{ localStorage.setItem('found-lang', lang); }catch(e){}
-
-        buildHeroWords(lang);
-        startWordRotation();
-      }
-
-      function setupTouchZoom(){
-        const zoomables = document.querySelectorAll('.touch-zoomable');
-        if(!zoomables.length) return;
-
-        function toggleZoom(el){
-          const isExpanded = el.classList.contains('is-expanded');
-          if(isExpanded){
-            el.classList.remove('is-expanded');
-            document.body.classList.remove('zoom-active');
-          }else{
-            document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
-              openEl.classList.remove('is-expanded');
-            });
-            el.classList.add('is-expanded');
-            document.body.classList.add('zoom-active');
-          }
-        }
-
-        zoomables.forEach(function(el){
-          el.addEventListener('click', function(e){
-            if(window.matchMedia && window.matchMedia('(max-width: 768px)').matches){
-              e.preventDefault();
-              e.stopPropagation();
-              toggleZoom(el);
-            }
-          });
-        });
-
-        // Close zoom on ESC
-        document.addEventListener('keydown', function(e){
-          if(e.key === 'Escape'){
-            document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
-              openEl.classList.remove('is-expanded');
-            });
-            document.body.classList.remove('zoom-active');
-          }
-        });
-      }
-
-      document.addEventListener('DOMContentLoaded', function(){
-        let savedLang = null;
-        try{ savedLang = localStorage.getItem('found-lang'); }catch(e){}
-        const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
-        setLanguage(initialLang);
-
-        document.querySelectorAll('.lang-btn').forEach(function(btn){
-          btn.addEventListener('click', function(){
-            setLanguage(btn.dataset.lang);
-          });
-        });
-
-        setupTouchZoom();
+      Object.keys(dict).forEach(function(id){
+        const el = document.getElementById(id);
+        if(el) el.innerHTML = dict[id];
       });
-    })();
-  </script>
+
+      document.documentElement.setAttribute(
+        'lang',
+        lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
+      );
+
+      document.querySelectorAll('.lang-btn').forEach(function(btn){
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+
+      try{ localStorage.setItem('found-lang', lang); }catch(e){}
+
+      buildHeroWords(lang);
+      startWordRotation();
+    }
+
+    function setupTouchZoom(){
+      const zoomables = document.querySelectorAll('.touch-zoomable');
+      if(!zoomables.length) return;
+
+      function toggleZoom(el){
+        const isExpanded = el.classList.contains('is-expanded');
+        if(isExpanded){
+          el.classList.remove('is-expanded');
+          document.body.classList.remove('zoom-active');
+        }else{
+          document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
+            openEl.classList.remove('is-expanded');
+          });
+          el.classList.add('is-expanded');
+          document.body.classList.add('zoom-active');
+        }
+      }
+
+      zoomables.forEach(function(el){
+        el.addEventListener('click', function(e){
+          if(window.matchMedia && window.matchMedia('(max-width: 768px)').matches){
+            e.preventDefault();
+            e.stopPropagation();
+            toggleZoom(el);
+          }
+        });
+      });
+
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape'){
+          document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
+            openEl.classList.remove('is-expanded');
+          });
+          document.body.classList.remove('zoom-active');
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+      let savedLang = null;
+      try{ savedLang = localStorage.getItem('found-lang'); }catch(e){}
+      const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
+      setLanguage(initialLang);
+
+      document.querySelectorAll('.lang-btn').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          setLanguage(btn.dataset.lang);
+        });
+      });
+
+      setupTouchZoom();
+    });
+  })();
+</script>
+
 </body>
 </html>
