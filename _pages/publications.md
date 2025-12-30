@@ -27,7 +27,7 @@ author_profile: true
           <div class="pub-card-text">
             <div class="pub-card-topline">
               <span class="pub-emoji">📘</span>
-              <span class="pub-badge" id="book-badge">Monograph</span>
+              <span class="pub-badge" id="book-badge">Peer-reviewed chapters</span>
             </div>
 
             <h3 class="pub-item-title" id="book-title">
@@ -46,7 +46,7 @@ author_profile: true
           </div>
 
           <div class="pub-card-media">
-            <img src="/images/the%20book.png" alt="FOUND book cover">
+            <img src="/images/the%20book.png" alt="FOUND book cover" loading="lazy" class="loading" onload="this.classList.remove('loading')">
           </div>
         </div>
       </article>
@@ -168,191 +168,411 @@ author_profile: true
 </div>
 
 <style>
-.page,#main,.initial-content,.page__inner-wrap,.page__content,.archive{
-  max-width:none!important;
-  width:100%!important;
+/* ==== BASE STYLES ==== */
+:root {
+  --primary-green: #1b4d3e;
+  --primary-green-rgb: 27, 77, 62;
+  --primary-green-dark: #0f3a26;
+  --primary-green-light: #2d7a52;
+  --primary-green-soft: #e8f5ef;
+  --secondary-green: #4a8c73;
+  --accent-green: #6bbf9a;
+  --gold-accent: #d4af37;
+  --white: #ffffff;
+  --off-white: #fafdfa;
+  --gray-50: #f8faf9;
+  --gray-100: #f1f5f3;
+  --gray-200: #e5ece8;
+  --gray-700: #37423d;
+  --gray-900: #121615;
+  --shadow-sm: 0 2px 8px rgba(15, 41, 31, 0.08);
+  --shadow-md: 0 6px 20px rgba(15, 41, 31, 0.12);
+  --shadow-lg: 0 12px 32px rgba(15, 41, 31, 0.18);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* move content a bit right so it clears the round logo */
-.pub-shell{
-  max-width:1100px;
-  margin:0 auto 3rem 6.8rem; /* was 5.6rem */
-  padding:1.5rem 0 3rem;
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+.page, #main, .initial-content, .page__inner-wrap, .page__content, .archive {
+  max-width: none !important;
+  width: 100% !important;
 }
 
-/* language toggle */
-.lang-toggle{
-  display:flex;
-  justify-content:flex-end;
-  gap:.5rem;
-  margin-bottom:1.5rem;
+/* ==== CONTAINER ==== */
+.pub-shell {
+  max-width: 1400px;
+  margin: 0 auto 4rem;
+  padding: 2rem clamp(1.5rem, 4vw, 3rem);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--off-white) 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 }
 
-.lang-btn{
-  padding:.35rem .9rem;
-  border-radius:999px;
-  border:1px solid rgba(15,23,42,.12);
-  background:#ffffff;
-  cursor:pointer;
-  font-size:.78rem;
-  font-weight:700;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  box-shadow:0 4px 14px rgba(15,23,42,.08);
+.pub-shell::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(var(--primary-green-rgb), 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
 }
 
-.lang-btn.active{
-  background:#1b4d3e;
-  color:#fff;
-  border-color:#1b4d3e;
+/* ==== LANGUAGE TOGGLE ==== */
+.lang-toggle {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
 }
 
-/* sections */
-.pub-section{
-  margin-bottom:2.5rem;
+.lang-btn {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-700);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.pub-section-header{
-  display:flex;
-  align-items:center;
-  gap:.75rem;
-  margin-bottom:1.1rem;
+.lang-btn:hover {
+  background: var(--gray-100);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
 }
 
-.pub-pill{
-  display:inline-flex;
-  align-items:center;
-  gap:.3rem;
-  padding:.15rem .7rem;
-  border-radius:999px;
-  border:1px solid rgba(27,77,62,.25);
-  background:rgba(27,77,62,.06);
-  font-size:.72rem;
-  font-weight:750;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  color:#1b4d3e;
+.lang-btn.active {
+  background: var(--primary-green);
+  color: var(--white);
+  border-color: var(--primary-green);
+  box-shadow: var(--shadow-sm);
 }
 
-.pub-title{
-  font-size:1.4rem;
-  font-weight:800;
-  letter-spacing:-.02em;
-  color:#1b4d3e;
+/* ==== SECTION HEADERS ==== */
+.pub-section {
+  margin-bottom: 3.5rem;
+  position: relative;
 }
 
-/* grid + cards */
-.pub-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:1.4rem;
+.pub-section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  position: relative;
 }
 
-.pub-card{
-  background:#ffffff;
-  border-radius:16px;
-  padding:1.2rem 1.3rem 1.4rem;
-  border:1px solid rgba(15,23,42,.06);
-  box-shadow:0 4px 16px rgba(15,23,42,.06);
-  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease;
+.pub-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(27, 77, 62, 0.3);
+  background: rgba(27, 77, 62, 0.1);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-green);
+  backdrop-filter: blur(8px);
 }
 
-.pub-card-featured{
-  grid-column:1 / -1;
-  padding:1.6rem 1.8rem;
-  border-left:4px solid #d4af37;
+.pub-pill::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-green);
 }
 
-.pub-card-inner{
-  display:flex;
-  gap:1.6rem;
-  align-items:flex-start;
+.pub-title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--primary-green-dark);
+  line-height: 1.2;
+  position: relative;
+  padding-bottom: 0.75rem;
 }
 
-.pub-card-media img{
-  max-width:180px;
-  border-radius:12px;
-  box-shadow:0 8px 22px rgba(15,23,42,.22);
+.pub-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-green) 0%, var(--accent-green) 100%);
+  border-radius: 9999px;
 }
 
-.pub-card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 16px 40px rgba(15,23,42,.15);
-  border-color:rgba(27,77,62,.25);
+/* ==== GRID & CARDS ==== */
+.pub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
+  gap: 2rem;
 }
 
-/* content */
-.pub-card-topline{
-  display:flex;
-  align-items:center;
-  gap:.45rem;
-  margin-bottom:.4rem;
+.pub-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 1.75rem;
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.pub-emoji{
-  font-size:1.3rem;
+.pub-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-green) 0%, var(--accent-green) 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
 }
 
-.pub-badge{
-  font-size:.72rem;
-  font-weight:750;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  padding:.12rem .6rem;
-  border-radius:999px;
-  border:1px solid rgba(27,77,62,.22);
-  background:rgba(27,77,62,.06);
-  color:#1b4d3e;
+.pub-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-green-light);
 }
 
-.pub-item-title{
-  margin:0 0 .25rem;
-  font-size:1.02rem;
-  font-weight:750;
-  letter-spacing:-.01em;
+.pub-card:hover::before {
+  transform: scaleX(1);
 }
 
-.pub-item-title a{
-  color:#1b4d3e;
-  text-decoration:none;
+.pub-card-featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(232, 245, 239, 0.5) 0%, rgba(255, 255, 255, 0.9) 100%);
+  border: 1px solid rgba(27, 77, 62, 0.15);
+  position: relative;
 }
 
-.pub-item-title a:hover{
-  text-decoration:underline;
+.pub-card-featured::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.45), transparent 40%, transparent 60%, rgba(212, 175, 55, 0.25));
+  mix-blend-mode: soft-light;
+  opacity: 0.9;
+  pointer-events: none;
+  border-radius: 20px;
 }
 
-.pub-meta{
-  font-size:.86rem;
-  color:#666;
-  margin:0;
+.pub-card-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.5rem;
+  align-items: start;
 }
 
-.pub-desc{
-  margin-top:.7rem;
-  font-size:.93rem;
-  color:#444;
-  line-height:1.6;
+/* ==== CARD CONTENT ==== */
+.pub-card-topline {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-/* keep layout closer to desktop feel on phone */
-@media (max-width:900px){
-  .pub-shell{
-    margin-left:6.8rem;
-    padding-right:1.5rem;
+.pub-emoji {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.pub-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.375rem 0.875rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(27, 77, 62, 0.25);
+  background: rgba(27, 77, 62, 0.08);
+  color: var(--primary-green);
+  transition: all var(--transition-base);
+}
+
+.pub-card:hover .pub-badge {
+  background: rgba(27, 77, 62, 0.12);
+  transform: scale(1.05);
+}
+
+.pub-item-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--gray-900);
+  flex: 1;
+}
+
+.pub-item-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-base);
+  position: relative;
+}
+
+.pub-item-title a:hover {
+  color: var(--primary-green);
+}
+
+.pub-item-title a::after {
+  content: '↗';
+  position: absolute;
+  top: -2px;
+  right: -20px;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all var(--transition-base);
+  color: var(--primary-green);
+  font-size: 0.9em;
+}
+
+.pub-item-title a:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.pub-meta {
+  font-size: 0.875rem;
+  color: var(--gray-700);
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+.pub-desc {
+  font-size: 0.9375rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+  margin: 0.5rem 0 0;
+  flex: 1;
+}
+
+/* ==== MEDIA ==== */
+.pub-card-media {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(27, 77, 62, 0.1);
+  background: var(--white);
+  width: 200px;
+  height: 280px;
+  flex-shrink: 0;
+}
+
+.pub-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pub-card:hover .pub-card-media img {
+  transform: scale(1.05);
+}
+
+/* ==== LOADING STATES ==== */
+.loading {
+  opacity: 0;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8f5f0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 1024px) {
+  .pub-card-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  .pub-card-inner{
-    flex-direction:column;
+  
+  .pub-card-media {
+    width: 100%;
+    height: 200px;
+    order: -1;
   }
-  .pub-card-media img{
-    max-width:140px;
+}
+
+@media (max-width: 768px) {
+  .pub-shell {
+    padding: 1.5rem 1.25rem 3rem;
+  }
+  
+  .pub-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .lang-toggle {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .pub-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .pub-card {
+    padding: 1.5rem;
+  }
+  
+  .pub-card-featured {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pub-card-media {
+    height: 180px;
+  }
+  
+  .pub-pill {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+  }
+  
+  .pub-title {
+    font-size: 1.5rem;
   }
 }
 </style>
 
 <script>
 (function() {
-  // FIXED TRANSLATIONS SCRIPT - Single consolidated version
+  // ====== FIXED TRANSLATIONS SCRIPT ======
   const translations = {
     en: {
       'pill-book': 'BOOK',
@@ -376,11 +596,11 @@ author_profile: true
       'b2-badge': 'News story',
       'b3-badge': 'Op-ed',
       'b1-title': 'On the Frontier of Finding Peace',
-      'b1-meta': 'Mariela Garfias &amp; Frontier Tech Hub (2025)',
+      'b1-meta': 'Mariela Garfias & Frontier Tech Hub (2025)',
       'b2-title': 'Academic playing role in project to find hidden graves in Mexico using drone technology',
       'b2-meta': 'University of the West of England – Bristol (2025)',
       'b3-title': 'Camera-Fitted Drones May Help Locate Graves of Mexico\'s Disappeared',
-      'b3-meta': 'Karina García-Reyes &amp; Miguel Moctezuma (2024)'
+      'b3-meta': 'Karina García-Reyes & Miguel Moctezuma (2024)'
     },
     es: {
       'pill-book': 'LIBRO',
@@ -404,11 +624,11 @@ author_profile: true
       'b2-badge': 'Nota informativa',
       'b3-badge': 'Artículo de opinión',
       'b1-title': 'En la frontera de encontrar la paz',
-      'b1-meta': 'Mariela Garfias &amp; Frontier Tech Hub (2025)',
+      'b1-meta': 'Mariela Garfias & Frontier Tech Hub (2025)',
       'b2-title': 'Académica participa en proyecto para encontrar fosas ocultas en México mediante tecnología de drones',
       'b2-meta': 'University of the West of England – Bristol (2025)',
       'b3-title': 'Drones con cámara pueden ayudar a localizar fosas de personas desaparecidas en México',
-      'b3-meta': 'Karina García-Reyes &amp; Miguel Moctezuma (2024)'
+      'b3-meta': 'Karina García-Reyes & Miguel Moctezuma (2024)'
     },
     nah: {
       'pill-book': 'AMATLAHCUILOLLI',
@@ -432,11 +652,11 @@ author_profile: true
       'b2-badge': 'Noticia',
       'b3-badge': 'Op-ed',
       'b1-title': 'Ipan frontera para kajsikamatilistli yolsewilia',
-      'b1-meta': 'Mariela Garfias &amp; Frontier Tech Hub (2025)',
+      'b1-meta': 'Mariela Garfias & Frontier Tech Hub (2025)',
       'b2-title': 'Tlamachtij ipan universidad kimpalehui proyekto para tiktlatemohua fosas tlatsentlalka ipan Mēxihco ika drones',
       'b2-meta': 'University of the West of England – Bristol (2025)',
       'b3-title': 'Drones ika cámara welis kimpalehuiah tiktlatemohua fosas de tlācameh tlen polihuitkeh ipan Mēxihco',
-      'b3-meta': 'Karina García-Reyes &amp; Miguel Moctezuma (2024)'
+      'b3-meta': 'Karina García-Reyes & Miguel Moctezuma (2024)'
     }
   };
 
@@ -471,6 +691,12 @@ author_profile: true
     try {
       localStorage.setItem('found-lang-pubs', lang);
     } catch (e) {}
+    
+    // Update HTML lang attribute
+    document.documentElement.setAttribute(
+      'lang',
+      lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
+    );
   }
 
   // Initialize when page loads
@@ -492,6 +718,14 @@ author_profile: true
       btn.addEventListener('click', function() {
         setLanguage(this.getAttribute('data-lang'));
       });
+    });
+    
+    // Add loading animations to images
+    document.querySelectorAll('img').forEach(img => {
+      if (!img.complete) {
+        img.classList.add('loading');
+        img.parentElement?.classList.add('skeleton');
+      }
     });
   });
 
