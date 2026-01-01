@@ -1836,7 +1836,7 @@ redirect_from:
   <div class="collab-meta">
     <div class="collab-name" id="collab-item-labco">LABCO</div>
     <div class="collab-note" id="collab-note-labco">
-      Exploring together AI to locate and identify
+      Exploring AI together to locate and identify
     </div>
   </div>
 </div>
