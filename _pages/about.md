@@ -1450,6 +1450,7 @@ redirect_from:
             <li id="tech-item-3">Seismic Noise Interferometry (TIRSA)</li>
             <li id="tech-item-4">Electrical Resistivity Tomography, Conductivimetry Measurements</li>
             <li id="tech-item-5">Satellite Spectral Analysis</li>
+            <li>Machine Learning</li>
             <li id="tech-item-6">Forensic Entomology, Botany, Territorial Analysis, Soil Science</li>
           </ul>
 
