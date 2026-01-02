@@ -242,73 +242,6 @@ redirect_from:
       flex-wrap:wrap;
       gap:1.1rem;
     }
-
-/* Title: logo + text + small tech GIF */
-.title-inner{
-  position:relative;
-}
-
-.title-tech-gif{
-  position:absolute;
-  right:clamp(1rem,3vw,2.5rem);
-  top:clamp(1.2rem,3vw,2.2rem);
-  width:clamp(64px,6vw,92px);
-  aspect-ratio:1/1;
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,.28);
-  background:rgba(0,0,0,.22);
-  box-shadow:
-    0 18px 42px rgba(0,0,0,.35),
-    0 0 0 1px rgba(74,140,115,.25);
-  backdrop-filter:blur(10px);
-  pointer-events:none; /* decorative */
-  z-index:2;
-}
-
-.title-tech-gif::before{
-  content:'';
-  position:absolute;
-  inset:-1px;
-  background:
-    radial-gradient(circle at 25% 25%, rgba(212,175,55,.18) 0%, transparent 55%),
-    linear-gradient(135deg, rgba(74,140,115,.22), transparent 55%);
-  opacity:.9;
-  pointer-events:none;
-}
-
-.title-tech-gif img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:grayscale(25%) contrast(1.08) saturate(1.05);
-  mix-blend-mode:screen;
-  opacity:.95;
-  transform:scale(1.05);
-}
-
-/* Optional: subtle scanline effect */
-.title-tech-gif::after{
-  content:'';
-  position:absolute;
-  inset:0;
-  background:repeating-linear-gradient(
-    to bottom,
-    rgba(255,255,255,.07) 0px,
-    rgba(255,255,255,.07) 1px,
-    transparent 2px,
-    transparent 6px
-  );
-  opacity:.18;
-  pointer-events:none;
-}
-
-/* Hide on small screens to keep it clean */
-@media (max-width:768px){
-  .title-tech-gif{ display:none; }
-}
-
-
     
     .project-logo{
       width:110px;
@@ -1451,18 +1384,6 @@ redirect_from:
       </p>
     </div>
   </section>
-
-
-
-<div class="title-tech-gif" aria-hidden="true">
-  <img
-    src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/3e7d48737e2a9704533ac132a9605e5774670ccf/images/NDAI5.gif"
-    alt=""
-    loading="lazy"
-  />
-</div>
-
-
 
   <!-- HERO -->
   <section class="hero">
