@@ -459,6 +459,58 @@ redirect_from:
       transform:scale(1.06);
     }
 
+
+
+/* ===== Pill + docked GIF (synced to carousel) ===== */
+:root{
+  --carousel-ms: 1250ms; /* will be set by JS too */
+}
+
+.tagline-pill{
+  position:relative;
+  /* make room for the gif chip on the right */
+  padding-right:5.15rem;
+}
+
+/* the "chip" on the right */
+.pill-gif{
+  position:absolute;
+  right:.65rem;
+  top:50%;
+  transform:translateY(-50%);
+  width:52px;
+  height:52px;
+  border-radius:999px;
+  overflow:hidden;
+  background:rgba(255,255,255,.7);
+  border:1px solid rgba(45,95,77,.18);
+  box-shadow:0 10px 22px rgba(15,23,42,.10);
+  isolation:isolate;
+}
+
+/* crop + zoom into the GIF (tune transform-origin to pick the area you want) */
+.pill-gif img{
+  width:120%;
+  height:120%;
+  object-fit:cover;
+  transform:scale(1.55);
+  transform-origin:65% 38%; /* <— key control: move this to change the zoomed area */
+  filter:saturate(1.05) contrast(1.05);
+}
+
+/* sync pulse (we animate the container, not the GIF frames) */
+.pill-gif.sync{
+  animation:pillPulse var(--carousel-ms) var(--transition-smooth) 1;
+}
+
+@keyframes pillPulse{
+  0%   { transform:translateY(-50%) scale(1);   box-shadow:0 10px 22px rgba(15,23,42,.10); }
+  35%  { transform:translateY(-50%) scale(1.06); box-shadow:0 16px 34px rgba(15,23,42,.14); }
+  100% { transform:translateY(-50%) scale(1);   box-shadow:0 10px 22px rgba(15,23,42,.10); }
+}
+    
+    
+    
     /* ==========================
        Award highlight
     =========================== */
@@ -1385,20 +1437,22 @@ redirect_from:
     </div>
   </section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-top">
-        <!-- LEFT: tagline + paragraph -->
-        <div class="hero-text">
-          <div class="animated-tagline">
-            <div class="tagline-pill" aria-label="FOUND tagline">
-              <span id="hero-tagline-static">Using technology to</span>
-              <div class="word-carousel" role="text">
-                <span id="hero-word" class="hero-word">search.</span>
-              </div>
-            </div>
-          </div>
+<div class="tagline-pill" aria-label="FOUND tagline">
+  <span id="hero-tagline-static">Using technology to</span>
+
+  <div class="word-carousel" role="text">
+    <span id="hero-word" class="hero-word">search.</span>
+  </div>
+
+  <!-- GIF chip docked inside the pill (right) -->
+  <div class="pill-gif" id="pill-gif" aria-hidden="true">
+    <img
+      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/1047db9c85ff842e083e9fb45c0bdf05213da88a/images/NDAI5.gif"
+      alt=""
+      loading="lazy"
+    />
+  </div>
+</div>
 
           <p class="hero-description" id="hero-main-text">
             124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
@@ -2065,20 +2119,40 @@ redirect_from:
       }
     }
 
-    function startWordRotation(){
-      const span = document.getElementById('hero-word');
-      if(wordInterval) clearInterval(wordInterval);
-      if(!span || heroWords.length < 2) return;
 
-      wordInterval = setInterval(function(){
-        span.style.opacity = '0';
-        setTimeout(function(){
-          wordIndex = (wordIndex + 1) % heroWords.length;
-          span.textContent = heroWords[wordIndex];
-          span.style.opacity = '1';
-        },180);
-      },1250);
-    }
+
+function syncPillGif(){
+  const el = document.getElementById('pill-gif');
+  if(!el) return;
+  el.classList.remove('sync');
+  // force reflow to restart animation
+  void el.offsetWidth;
+  el.classList.add('sync');
+}
+    
+
+    
+  function startWordRotation(){
+  const span = document.getElementById('hero-word');
+  if(wordInterval) clearInterval(wordInterval);
+  if(!span || heroWords.length < 2) return;
+
+  // Use the carousel's own timing to drive the GIF pulse
+  document.documentElement.style.setProperty('--carousel-ms', '1250ms');
+  syncPillGif();
+
+  wordInterval = setInterval(function(){
+    // pulse the gif at the same moment the word transitions
+    syncPillGif();
+
+    span.style.opacity = '0';
+    setTimeout(function(){
+      wordIndex = (wordIndex + 1) % heroWords.length;
+      span.textContent = heroWords[wordIndex];
+      span.style.opacity = '1';
+    },180);
+  },1250);
+}
 
     function setLanguage(lang){
       const dict = translations[lang] || translations.en;
