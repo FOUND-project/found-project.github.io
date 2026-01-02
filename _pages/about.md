@@ -1437,22 +1437,30 @@ redirect_from:
     </div>
   </section>
 
-<div class="tagline-pill" aria-label="FOUND tagline">
-  <span id="hero-tagline-static">Using technology to</span>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-top">
+        <!-- LEFT -->
+        <div class="hero-text">
+          <div class="animated-tagline">
+            <div class="tagline-pill" aria-label="FOUND tagline">
+              <span id="hero-tagline-static">Using technology to</span>
 
-  <div class="word-carousel" role="text">
-    <span id="hero-word" class="hero-word">search.</span>
-  </div>
+              <div class="word-carousel" role="text">
+                <span id="hero-word" class="hero-word">search.</span>
+              </div>
 
-  <!-- GIF chip docked inside the pill (right) -->
-  <div class="pill-gif" id="pill-gif" aria-hidden="true">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/1047db9c85ff842e083e9fb45c0bdf05213da88a/images/NDAI5.gif"
-      alt=""
-      loading="lazy"
-    />
-  </div>
-</div>
+              <!-- GIF chip docked inside the pill (right) -->
+              <div class="pill-gif" id="pill-gif" aria-hidden="true">
+                <img
+                  src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/1047db9c85ff842e083e9fb45c0bdf05213da88a/images/NDAI5.gif"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
 
           <p class="hero-description" id="hero-main-text">
             124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
@@ -1460,7 +1468,7 @@ redirect_from:
           </p>
         </div>
 
-        <!-- RIGHT: image + award, award pushed down -->
+        <!-- RIGHT -->
         <div class="hero-side">
           <div class="hero-media skeleton touch-zoomable" aria-label="Hero media">
             <img
@@ -1473,7 +1481,6 @@ redirect_from:
 
           <div class="award-highlight">
             <a href="/news/#mariela-award" class="award-card">
-             
               <div class="award-text">
                 <div class="award-pill">Award</div>
                 <div class="award-title">
@@ -1487,6 +1494,7 @@ redirect_from:
             </a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
