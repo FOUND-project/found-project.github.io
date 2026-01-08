@@ -1474,7 +1474,7 @@ redirect_from:
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-07-30%20at%2021.40.57.jpeg?raw=true" alt="Team collaboration during field operations" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="gallery-item touch-zoomable">
-              <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/6.jpg?raw=true" alt="Technology deployment in field" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+              <img src="https://github.com/FOUND-project/found-project.github.io/614290768f1fee5018f5d628757c575b1f65134d/images/layers.jpg" alt="Technology deployment in field" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/IMG-20231204-WA0038.jpg?raw=true" alt="Field operations and search activities" loading="lazy" class="loading" onload="this.classList.remove('loading')">
