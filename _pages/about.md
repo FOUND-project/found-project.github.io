@@ -11,7 +11,7 @@ redirect_from:
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=1200">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="FOUND combines technology and grassroots knowledge to search for disappeared persons in Mexico, bringing dignity and closure to families." />
   <meta property="og:title" content="FOUND Project - Using Technology to Search and Remember" />
   <meta property="og:description" content="124,354 persons are reported as disappeared in Mexico. Behind each case, there is a family searching for answers. FOUND combines technology with the knowledge of searching families to learn, locate, and drive systemic change." />
@@ -73,6 +73,11 @@ redirect_from:
       --light-green:#4a8c73;
       --accent-green:#e8f5f0;
       --gold-accent:#d4af37;
+      --circuit-green:#3a7a5f;
+      --circuit-light:#5da085;
+      --circuit-glow:#8bdec2;
+      --earth-brown:#8b6b4d;
+      --earth-light:#c2a78a;
       --text-dark:#121212;
       --text-medium:#3f3f3f;
       --text-light:#6b6b6b;
@@ -103,6 +108,7 @@ redirect_from:
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       overflow-x:hidden;
+      position: relative;
     }
 
     body.zoom-active{
@@ -115,6 +121,136 @@ redirect_from:
       outline:3px solid rgba(74,140,115,.55);
       outline-offset:2px;
       border-radius:10px;
+    }
+
+    /* =========================
+       ANIMATED BACKGROUND LAYERS
+    ========================== */
+    .background-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .circuit-paths-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .circuit-path {
+      position: absolute;
+      stroke-width: 2;
+      stroke: var(--circuit-green);
+      fill: none;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      opacity: 0;
+      filter: drop-shadow(0 0 3px rgba(91, 218, 175, 0.3));
+    }
+
+    .circuit-node {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--circuit-light);
+      z-index: 0;
+      opacity: 0;
+      box-shadow: 0 0 8px rgba(91, 218, 175, 0.5);
+      transform: scale(0);
+    }
+
+    .organic-shape {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(139, 107, 77, 0.05) 0%, transparent 70%);
+      z-index: -2;
+      opacity: 0;
+    }
+
+    /* =========================
+       ENHANCED LOGO WITH ANIMATION
+    ========================== */
+    .logo-circuit-container {
+      position: relative;
+      display: inline-block;
+      width: 110px;
+      height: auto;
+    }
+
+    .logo-circuit-container .project-logo {
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: 0 14px 32px rgba(0,0,0,.45);
+      border: 1px solid rgba(255,255,255,.75);
+      background: rgba(255,255,255,.06);
+      padding: 8px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo-circuit-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      animation: logoCircuitPulse 4s ease-in-out infinite;
+    }
+
+    @keyframes logoCircuitPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+
+    /* =========================
+       SECTIONS WITH CONNECTION POINTS
+    ========================== */
+    .content-section {
+      position: relative;
+    }
+
+    .section-connection {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(232, 245, 240, 0.9);
+      border: 2px solid var(--circuit-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.5s var(--transition-smooth);
+      z-index: 1;
+    }
+
+    .section-connection::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--circuit-green);
+    }
+
+    .section-connection.active {
+      opacity: 1;
+      transform: scale(1);
     }
 
     /* Minimal Mistakes wrappers full width on desktop */
@@ -243,17 +379,6 @@ redirect_from:
       gap:1.1rem;
     }
     
-    .project-logo{
-      width:110px;
-      height:auto;
-      border-radius:18px;
-      box-shadow:0 14px 32px rgba(0,0,0,.45);
-      border:1px solid rgba(255,255,255,.75);
-      background:rgba(255,255,255,.06);
-      padding:8px;
-      flex-shrink:0;
-    }
-
     .project-title{
       font-size:clamp(2.6rem,6vw,4.7rem);
       font-weight:900;
@@ -1204,6 +1329,9 @@ redirect_from:
         max-width:520px;
         margin:0 auto;
       }
+      .circuit-paths-container {
+        display: none; /* Hide complex animations on mobile */
+      }
     }
 
     @media (max-width:768px){
@@ -1329,8 +1457,8 @@ redirect_from:
         padding:1.1rem 1.2rem;
       }
 
-      .project-logo{
-        width:80px;
+      .logo-circuit-container {
+        width: 80px;
       }
     }
 
@@ -1357,11 +1485,20 @@ redirect_from:
           brightness(95%) contrast(96%);
 }
     
-    
   </style>
 </head>
 
 <body>
+  <!-- ANIMATED BACKGROUND CANVAS -->
+  <canvas class="background-canvas" id="backgroundCanvas"></canvas>
+  <div class="circuit-paths-container" id="circuitPaths"></div>
+
+  <!-- CONNECTION POINTS FOR KEY SECTIONS -->
+  <div class="section-connection" id="connection1" style="top: 20%; left: 10%;"></div>
+  <div class="section-connection" id="connection2" style="top: 40%; right: 15%;"></div>
+  <div class="section-connection" id="connection3" style="top: 60%; left: 12%;"></div>
+  <div class="section-connection" id="connection4" style="top: 80%; right: 8%;"></div>
+
   <!-- TITLE SECTION -->
   <section class="title-section">
     <div class="lang-toggle" aria-label="Language selection">
@@ -1372,11 +1509,14 @@ redirect_from:
 
     <div class="title-inner">
       <div class="title-brand">
-        <img
-          src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/9466ebc27c9487e8bfbff1d1dd904f4f9e6df81d/images/logo_FOUND_white.png"
-          alt="FOUND logo"
-          class="project-logo"
-        />
+        <div class="logo-circuit-container">
+          <div class="logo-circuit-overlay"></div>
+          <img
+            src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/9466ebc27c9487e8bfbff1d1dd904f4f9e6df81d/images/logo_FOUND_white.png"
+            alt="FOUND logo"
+            class="project-logo"
+          />
+        </div>
         <h1 class="project-title">FOUND</h1>
       </div>
       <p class="project-subtitle" id="project-subtitle">
@@ -1419,7 +1559,6 @@ redirect_from:
 
           <div class="award-highlight">
             <a href="/news/#mariela-award" class="award-card">
-             
               <div class="award-text">
                 <div class="award-pill">Award</div>
                 <div class="award-title">
@@ -1633,7 +1772,7 @@ redirect_from:
                    loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
-              <div class="collab-name" id="collab-item-6">Mexico’s National Search Commission</div>
+              <div class="collab-name" id="collab-item-6">Mexico's National Search Commission</div>
               <div class="collab-note" id="collab-note-6">National coordination</div>
             </div>
           </div>
@@ -1697,7 +1836,7 @@ redirect_from:
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/3%20Comisio%CC%81n%20de%20Bu%CC%81squeda%20de%20Jalisco.png"
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/3%20Comisión%20de%20Búsqueda%20de%20Jalisco.png"
                 alt="Comisión de Búsqueda de Jalisco logo"
                 loading="lazy"
                 class="loading"
@@ -1725,7 +1864,7 @@ redirect_from:
             </div>
           </div>
 
-          <!-- Mexico’s Science and Technology Secretariat -->
+          <!-- Mexico's Science and Technology Secretariat -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
@@ -1736,7 +1875,7 @@ redirect_from:
                 onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
-              <div class="collab-name" id="collab-item-secihti">Mexico’s Science and Technology Secretariat</div>
+              <div class="collab-name" id="collab-item-secihti">Mexico's Science and Technology Secretariat</div>
               <div class="collab-note" id="collab-note-secihti">Funding, Policy impact</div>
             </div>
           </div>
@@ -1877,7 +2016,7 @@ redirect_from:
       Argentine Forensic Anthropology Team (EAAF)
     </div>
     <div class="collab-note" id="collab-note-eaaf">
-      Luis Fondebrider, FOUND’s advisor
+      Luis Fondebrider, FOUND's advisor
     </div>
   </div>
 </div>
@@ -1983,7 +2122,7 @@ redirect_from:
 
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <!-- LANGUAGE TOGGLE + WORD ROTATION + TOUCH ZOOM -->
+  <!-- LANGUAGE TOGGLE + WORD ROTATION + TOUCH ZOOM + ANIMATIONS -->
 <script>
   (function(){
     const translations = {
@@ -2161,6 +2300,198 @@ redirect_from:
       });
     }
 
+    // ============================
+    // ENHANCED ANIMATIONS SYSTEM
+    // ============================
+    function initCircuitAnimations() {
+      const canvas = document.getElementById('backgroundCanvas');
+      const ctx = canvas.getContext('2d');
+      const container = document.getElementById('circuitPaths');
+      
+      if (!canvas || !ctx || !container) return;
+      
+      // Set canvas size
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+      
+      // Create organic shapes
+      for (let i = 0; i < 8; i++) {
+        const shape = document.createElement('div');
+        shape.className = 'organic-shape';
+        const size = 100 + Math.random() * 300;
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+        shape.style.width = `${size}px`;
+        shape.style.height = `${size}px`;
+        shape.style.left = `${x}%`;
+        shape.style.top = `${y}%`;
+        container.appendChild(shape);
+        
+        // Animate in
+        setTimeout(() => {
+          shape.style.opacity = '0.4';
+          shape.style.transform = `scale(${0.8 + Math.random() * 0.4})`;
+        }, i * 300);
+      }
+      
+      // Create circuit nodes
+      const sections = [
+        { id: 'technologies', x: 25, y: 40 },
+        { id: 'buscadoras', x: 75, y: 45 },
+        { id: 'collaborations', x: 35, y: 65 },
+        { id: 'social', x: 65, y: 70 }
+      ];
+      
+      sections.forEach((section, index) => {
+        const node = document.createElement('div');
+        node.className = 'circuit-node';
+        node.style.left = `${section.x}%`;
+        node.style.top = `${section.y}%`;
+        node.dataset.section = section.id;
+        container.appendChild(node);
+        
+        // Animate node in with delay
+        setTimeout(() => {
+          node.style.opacity = '1';
+          node.style.transform = 'scale(1)';
+        }, 800 + index * 400);
+      });
+      
+      // Draw animated circuit paths
+      function drawCircuitPaths() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw subtle grid
+        ctx.strokeStyle = 'rgba(74, 140, 115, 0.05)';
+        ctx.lineWidth = 1;
+        const gridSize = 50;
+        
+        for (let x = 0; x < canvas.width; x += gridSize) {
+          ctx.beginPath();
+          ctx.moveTo(x, 0);
+          ctx.lineTo(x, canvas.height);
+          ctx.stroke();
+        }
+        
+        for (let y = 0; y < canvas.height; y += gridSize) {
+          ctx.beginPath();
+          ctx.moveTo(0, y);
+          ctx.lineTo(canvas.width, y);
+          ctx.stroke();
+        }
+        
+        // Draw main circuit path
+        const time = Date.now() * 0.001;
+        ctx.strokeStyle = 'rgba(91, 218, 175, 0.15)';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        
+        const startX = canvas.width * 0.1;
+        const startY = canvas.height * 0.2;
+        ctx.moveTo(startX, startY);
+        
+        // Create organic circuit-like path
+        for (let i = 0; i < 5; i++) {
+          const x = startX + (i * canvas.width * 0.2);
+          const y = startY + Math.sin(time + i) * 50 + (i * canvas.height * 0.15);
+          
+          if (i === 0) {
+            ctx.lineTo(x, y);
+          } else {
+            const cp1x = x - canvas.width * 0.1;
+            const cp1y = y - 50;
+            const cp2x = x - canvas.width * 0.05;
+            const cp2y = y + 50;
+            ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y);
+          }
+          
+          // Draw node at each point
+          ctx.fillStyle = 'rgba(74, 140, 115, 0.3)';
+          ctx.beginPath();
+          ctx.arc(x, y, 4, 0, Math.PI * 2);
+          ctx.fill();
+          
+          // Draw glow
+          ctx.fillStyle = 'rgba(139, 218, 175, 0.1)';
+          ctx.beginPath();
+          ctx.arc(x, y, 8, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        
+        ctx.stroke();
+        
+        requestAnimationFrame(drawCircuitPaths);
+      }
+      
+      drawCircuitPaths();
+      
+      // Animate circuit paths on scroll
+      function animateOnScroll() {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        
+        // Calculate progress
+        const scrollProgress = scrollY / (documentHeight - windowHeight);
+        
+        // Animate connection points
+        const connections = document.querySelectorAll('.section-connection');
+        connections.forEach((conn, index) => {
+          const sectionTop = document.getElementById(sections[index]?.id)?.offsetTop || 0;
+          const sectionHeight = document.getElementById(sections[index]?.id)?.offsetHeight || 0;
+          
+          if (scrollY + windowHeight * 0.7 > sectionTop && scrollY < sectionTop + sectionHeight) {
+            conn.classList.add('active');
+          } else {
+            conn.classList.remove('active');
+          }
+        });
+        
+        // Animate circuit nodes
+        const nodes = document.querySelectorAll('.circuit-node');
+        nodes.forEach((node, index) => {
+          const pulse = Math.sin(Date.now() * 0.002 + index) * 0.2 + 0.8;
+          node.style.transform = `scale(${pulse})`;
+          node.style.boxShadow = `0 0 ${8 + pulse * 4}px rgba(91, 218, 175, ${0.3 + pulse * 0.2})`;
+        });
+      }
+      
+      window.addEventListener('scroll', animateOnScroll);
+      animateOnScroll(); // Initial call
+    }
+    
+    // Enhanced hover effects for info list items
+    function enhanceInfoListHover() {
+      const infoItems = document.querySelectorAll('.info-list li');
+      
+      infoItems.forEach((item, index) => {
+        item.addEventListener('mouseenter', function() {
+          // Create a subtle circuit connection effect
+          const rect = this.getBoundingClientRect();
+          const x = rect.left + rect.width / 2;
+          const y = rect.top + rect.height / 2;
+          
+          // Find nearest connection point
+          const connections = document.querySelectorAll('.section-connection');
+          if (connections.length > 0) {
+            const nearest = connections[Math.min(index, connections.length - 1)];
+            nearest.style.boxShadow = '0 0 20px rgba(91, 218, 175, 0.6)';
+            nearest.style.transform = 'scale(1.2)';
+            
+            setTimeout(() => {
+              nearest.style.boxShadow = '';
+              nearest.style.transform = 'scale(1)';
+            }, 1000);
+          }
+        });
+      });
+    }
+
     document.addEventListener('DOMContentLoaded', function(){
       let savedLang = null;
       try{ savedLang = localStorage.getItem('found-lang'); }catch(e){}
@@ -2174,6 +2505,16 @@ redirect_from:
       });
 
       setupTouchZoom();
+      initCircuitAnimations();
+      enhanceInfoListHover();
+      
+      // Animate logo circuit overlay
+      const logoOverlay = document.querySelector('.logo-circuit-overlay');
+      if (logoOverlay) {
+        setTimeout(() => {
+          logoOverlay.style.opacity = '0.3';
+        }, 1000);
+      }
     });
   })();
 </script>
