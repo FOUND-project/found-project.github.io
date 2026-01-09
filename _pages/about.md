@@ -1646,38 +1646,6 @@ redirect_from:
       <div class="collab-wrap" aria-label="Institutional partnerships logos">
         <div class="collab-grid">
 
-          <!-- ✅ NEW: Oxford Robotics Institute -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/a8209a23c303b55bda756d5a55b2c572ac2540a9/images/ori_logo_square_2024_150_inverted.png"
-                alt="Oxford Robotics Institute logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-ori">Oxford Robotics Institute</div>
-              <div class="collab-note" id="collab-note-ori">Partnership, technical expertise</div>
-            </div>
-          </div>
-
-          <!-- ✅ NEW: Instituto Politécnico Nacional -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b9419b5a0b9d80c6ae96d16642771d6c1d66cdf3/images/logo-ipn-guinda.svg"
-                alt="Instituto Politécnico Nacional logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-ipn">Instituto Politécnico Nacional</div>
-              <div class="collab-note" id="collab-note-ipn">Technical expertise, Technology</div>
-            </div>
-          </div>
-
           <!-- 7. Search Collectives -->
           <div class="collab-card collab-card-gif touch-zoomable">
             <div class="collab-logo">
@@ -2021,6 +1989,38 @@ redirect_from:
               <div class="collab-note" id="collab-note-eaaf">
                 Luis Fondebrider, FOUND’s advisor
               </div>
+            </div>
+          </div>
+
+  <!-- ✅ NEW: Oxford Robotics Institute -->
+          <div class="collab-card touch-zoomable">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/a8209a23c303b55bda756d5a55b2c572ac2540a9/images/ori_logo_square_2024_150_inverted.png"
+                alt="Oxford Robotics Institute logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-ori">Oxford Robotics Institute</div>
+              <div class="collab-note" id="collab-note-ori">Partnership, technical expertise</div>
+            </div>
+          </div>
+
+          <!-- ✅ NEW: Instituto Politécnico Nacional -->
+          <div class="collab-card touch-zoomable">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b9419b5a0b9d80c6ae96d16642771d6c1d66cdf3/images/logo-ipn-guinda.svg"
+                alt="Instituto Politécnico Nacional logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-ipn">Instituto Politécnico Nacional</div>
+              <div class="collab-note" id="collab-note-ipn">Technical expertise, Technology</div>
             </div>
           </div>
        
