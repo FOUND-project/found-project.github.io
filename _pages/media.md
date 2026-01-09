@@ -530,6 +530,19 @@ author_profile: true
         </a>
       </article>
 
+<!-- BBC Mundo -->
+<article class="media-card">
+  <a class="media-link" href="https://www.bbc.com/mundo/articles/c4gv9r1120mo" target="_blank" rel="noopener">
+    <div>
+      <div class="media-outlet">BBC Mundo</div>
+      <h3 class="media-title">
+        Los cerdos y los insectos que están ayudando a encontrar a los desaparecidos en México
+      </h3>
+      <span class="media-tag" data-key="article">Article</span>
+    </div>
+  </a>
+</article>
+
       <!-- Associated Press (EN) -->
       <article class="media-card">
         <a class="media-link" href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank" rel="noopener">
