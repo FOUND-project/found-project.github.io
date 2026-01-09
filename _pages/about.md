@@ -34,8 +34,7 @@ redirect_from:
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <!-- ========== END SECURITY HEADERS ========== -->
 
-  
-   <!-- FIXED: No-loop redirect -->
+  <!-- FIXED: No-loop redirect -->
   <script>
     (function() {
       if (window.location.protocol === 'http:' && 
@@ -518,7 +517,6 @@ redirect_from:
       position:relative;
     }
 
-    /* Star removed, keep golden circle */
     .award-icon::after{
       content:'';
     }
@@ -575,6 +573,113 @@ redirect_from:
     .award-meta{
       font-size:.9rem;
       color:var(--text-light);
+    }
+
+    /* =========================
+       Signature Visual Strip (SPECIAL PLACE FOR NDAI5.gif)
+    ========================== */
+    .signature-visual{
+      padding:clamp(1.4rem,3vw,2.4rem) 0;
+      position:relative;
+      overflow:hidden;
+      border-top:1px solid var(--border-light);
+      border-bottom:1px solid var(--border-light);
+      background:
+        radial-gradient(900px 520px at 15% 10%, rgba(232,245,240,.85) 0%, transparent 55%),
+        radial-gradient(820px 520px at 85% 0%, rgba(212,175,55,.10) 0%, transparent 60%),
+        linear-gradient(135deg,#f8fcfb 0%, #ffffff 65%);
+      isolation:isolate;
+    }
+
+    /* Subtle "circuits" layer */
+    .signature-visual::before{
+      content:'';
+      position:absolute;
+      inset:-2px;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(45,95,77,.10) 0px,
+          rgba(45,95,77,.10) 1px,
+          transparent 1px,
+          transparent 18px
+        ),
+        repeating-linear-gradient(
+          0deg,
+          rgba(74,140,115,.08) 0px,
+          rgba(74,140,115,.08) 1px,
+          transparent 1px,
+          transparent 22px
+        );
+      opacity:.22;
+      pointer-events:none;
+      mask-image:radial-gradient(circle at 60% 50%, black 0%, black 55%, transparent 78%);
+      -webkit-mask-image:radial-gradient(circle at 60% 50%, black 0%, black 55%, transparent 78%);
+      z-index:0;
+      animation:circuitDrift 14s linear infinite;
+    }
+
+    .signature-visual::after{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(600px 320px at 70% 50%, rgba(74,140,115,.18) 0%, transparent 60%),
+        radial-gradient(520px 280px at 30% 70%, rgba(212,175,55,.12) 0%, transparent 62%);
+      opacity:.55;
+      pointer-events:none;
+      z-index:0;
+    }
+
+    @keyframes circuitDrift{
+      0%{ transform:translate3d(0,0,0); }
+      100%{ transform:translate3d(-40px, 18px, 0); }
+    }
+
+    .signature-container{
+      max-width:1400px;
+      margin:0 auto;
+      padding:0 clamp(1rem,4vw,3rem);
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:minmax(0,1fr);
+      align-items:center;
+    }
+
+    /* The "special" frame */
+    .signature-frame{
+      width:min(1200px, 100%);
+      margin:0 auto;
+      border-radius:28px;
+      overflow:hidden;
+      border:1px solid rgba(45,95,77,.14);
+      box-shadow:var(--shadow-lg);
+      background:linear-gradient(135deg, rgba(255,255,255,.88) 0%, rgba(232,245,240,.75) 100%);
+      position:relative;
+    }
+
+    .signature-frame::before{
+      content:'';
+      display:block;
+      padding-top:38%; /* banner-like aspect ratio */
+    }
+
+    /* Crop to right 2/3 of the GIF using object-position */
+    .signature-gif{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:66% center; /* right-leaning crop */
+      transform:scale(1.01);
+      filter:saturate(1.03) contrast(1.02);
+    }
+
+    .signature-frame:hover .signature-gif{
+      transform:scale(1.04);
+      transition:transform .8s var(--transition-smooth);
     }
 
     /* =========================
@@ -946,14 +1051,14 @@ redirect_from:
       transition:transform .35s var(--transition-smooth), filter .35s var(--transition-smooth), opacity .3s ease;
     }
 
-/* Frontier Tech Hub logo – very subtle separation only */
-.collab-img{
-  max-height:80px;
-  width:auto;
-  object-fit:contain;
-  filter:drop-shadow(0 0 1px rgba(0,0,0,.18));
-}
-            
+    /* Frontier Tech Hub logo – very subtle separation only */
+    .collab-img{
+      max-height:80px;
+      width:auto;
+      object-fit:contain;
+      filter:drop-shadow(0 0 1px rgba(0,0,0,.18));
+    }
+                
     .collab-logo img.loading{
       opacity:0;
     }
@@ -1204,6 +1309,10 @@ redirect_from:
         max-width:520px;
         margin:0 auto;
       }
+
+      .signature-frame::before{
+        padding-top:52%;
+      }
     }
 
     @media (max-width:768px){
@@ -1342,23 +1451,20 @@ redirect_from:
         height:430px;
       }
     }
-    
-    
-/* Re-tint Frontier Tech Hub logo to dark */
-.collab-img.fth{
-  filter: brightness(0) saturate(100%) invert(9%) sepia(6%)
-          saturate(512%) hue-rotate(94deg)
-          brightness(95%) contrast(96%);
-}
-    
-/* Re-tint LABCO logo to dark */
-.collab-img.labco{
-  filter: brightness(0) saturate(100%) invert(9%) sepia(6%)
-          saturate(512%) hue-rotate(94deg)
-          brightness(95%) contrast(96%);
-}
-    
-    
+
+    /* Re-tint Frontier Tech Hub logo to dark */
+    .collab-img.fth{
+      filter: brightness(0) saturate(100%) invert(9%) sepia(6%)
+              saturate(512%) hue-rotate(94deg)
+              brightness(95%) contrast(96%);
+    }
+        
+    /* Re-tint LABCO logo to dark */
+    .collab-img.labco{
+      filter: brightness(0) saturate(100%) invert(9%) sepia(6%)
+              saturate(512%) hue-rotate(94deg)
+              brightness(95%) contrast(96%);
+    }
   </style>
 </head>
 
@@ -1420,7 +1526,6 @@ redirect_from:
 
           <div class="award-highlight">
             <a href="/news/#mariela-award" class="award-card">
-             
               <div class="award-text">
                 <div class="award-pill">Award</div>
                 <div class="award-title">
@@ -1434,6 +1539,20 @@ redirect_from:
             </a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL PLACE: NDAI5.gif (RIGHT 2/3 ONLY) -->
+  <section class="signature-visual" aria-label="FOUND in motion">
+    <div class="signature-container">
+      <div class="signature-frame touch-zoomable">
+        <img
+          class="signature-gif"
+          src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/1047db9c85ff842e083e9fb45c0bdf05213da88a/images/NDAI5.gif"
+          alt="FOUND field work and technology in motion"
+          loading="lazy"
+        />
       </div>
     </div>
   </section>
@@ -1474,13 +1593,13 @@ redirect_from:
             <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-07-30%20at%2021.40.57.jpeg?raw=true" alt="Team collaboration during field operations" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
-           <div class="gallery-item touch-zoomable">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/c88e3807678629fcd59ad91baff20b6ec7a34f66/images/layers.jpg?raw=true"
-       alt="Technology deployment in field"
-       loading="lazy"
-       class="loading"
-       onload="this.classList.remove('loading')">
-</div>
+            <div class="gallery-item touch-zoomable">
+              <img src="https://github.com/FOUND-project/found-project.github.io/blob/c88e3807678629fcd59ad91baff20b6ec7a34f66/images/layers.jpg?raw=true"
+                   alt="Technology deployment in field"
+                   loading="lazy"
+                   class="loading"
+                   onload="this.classList.remove('loading')">
+            </div>
             <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/IMG-20231204-WA0038.jpg?raw=true" alt="Field operations and search activities" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
@@ -1490,21 +1609,21 @@ redirect_from:
             <div class="gallery-item touch-zoomable">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/70206a6b5788f7204524bfdd4e1a6c365668b75d/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.44.jpeg" alt="Search methodology in practice" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
-<div class="gallery-item touch-zoomable">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/51a35a3f1915699b8fe9835270ddfe6f3c5c0946/images/hyperspectral%20from%20presentation.png?raw=true"
-       alt="Hyperspectral analysis output used in FOUND field validation"
-       loading="lazy"
-       class="loading"
-       onload="this.classList.remove('loading')">
-</div>
+            <div class="gallery-item touch-zoomable">
+              <img src="https://github.com/FOUND-project/found-project.github.io/blob/51a35a3f1915699b8fe9835270ddfe6f3c5c0946/images/hyperspectral%20from%20presentation.png?raw=true"
+                   alt="Hyperspectral analysis output used in FOUND field validation"
+                   loading="lazy"
+                   class="loading"
+                   onload="this.classList.remove('loading')">
+            </div>
 
-<div class="gallery-item touch-zoomable">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/51a35a3f1915699b8fe9835270ddfe6f3c5c0946/images/pigs_aerial.jpg?raw=true"
-       alt="Aerial view of experimental calibration site using animal proxies"
-       loading="lazy"
-       class="loading"
-       onload="this.classList.remove('loading')">
-</div>  
+            <div class="gallery-item touch-zoomable">
+              <img src="https://github.com/FOUND-project/found-project.github.io/blob/51a35a3f1915699b8fe9835270ddfe6f3c5c0946/images/pigs_aerial.jpg?raw=true"
+                   alt="Aerial view of experimental calibration site using animal proxies"
+                   loading="lazy"
+                   class="loading"
+                   onload="this.classList.remove('loading')">
+            </div>  
           </div>
         </section>
       </div>
@@ -1774,26 +1893,26 @@ redirect_from:
             </div>
           </div>
 
-<!-- Frontier Tech Hub -->
-<div class="collab-card touch-zoomable">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
-      alt="Frontier Tech Hub logo"
-      loading="lazy"
-      class="collab-img fth"
-    >
-  </div>
+          <!-- Frontier Tech Hub -->
+          <div class="collab-card touch-zoomable">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
+                alt="Frontier Tech Hub logo"
+                loading="lazy"
+                class="collab-img fth"
+              >
+            </div>
 
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-fth">
-      Frontier Tech Hub
-    </div>
-    <div class="collab-note" id="collab-note-fth">
-      Funding • Technical expertise
-    </div>
-  </div>
-</div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-fth">
+                Frontier Tech Hub
+              </div>
+              <div class="collab-note" id="collab-note-fth">
+                Funding • Technical expertise
+              </div>
+            </div>
+          </div>
 
           <!-- DT Global -->
           <div class="collab-card touch-zoomable">
@@ -1843,45 +1962,45 @@ redirect_from:
             </div>
           </div>
 
-<!-- LABCO -->
-<div class="collab-card touch-zoomable">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d47bacb6b575270e7b5453c8ebc5b13bcec70a2f/images/dark-non-retina-labco.png"
-      alt="LABCO logo"
-      loading="lazy"
-      class="collab-img labco"
-    >
-  </div>
+          <!-- LABCO -->
+          <div class="collab-card touch-zoomable">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d47bacb6b575270e7b5453c8ebc5b13bcec70a2f/images/dark-non-retina-labco.png"
+                alt="LABCO logo"
+                loading="lazy"
+                class="collab-img labco"
+              >
+            </div>
 
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-labco">LABCO</div>
-    <div class="collab-note" id="collab-note-labco">
-      Exploring AI together to locate and identify
-    </div>
-  </div>
-</div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-labco">LABCO</div>
+              <div class="collab-note" id="collab-note-labco">
+                Exploring AI together to locate and identify
+              </div>
+            </div>
+          </div>
 
-<!-- Argentine Forensic Anthropology Team (EAAF) -->
-<div class="collab-card touch-zoomable">
-  <div class="collab-logo">
-    <img
-      src="https://github.com/FOUND-project/found-project.github.io/blob/82b303cdf26fa6a25e9845ff0d5fc10e070d94e6/images/logo_eaaf_rd.png?raw=true"
-      alt="Argentine Forensic Anthropology Team (EAAF) logo"
-      loading="lazy"
-      class="loading"
-      onload="this.classList.remove('loading')"
-    >
-  </div>
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-eaaf">
-      Argentine Forensic Anthropology Team (EAAF)
-    </div>
-    <div class="collab-note" id="collab-note-eaaf">
-      Luis Fondebrider, FOUND’s advisor
-    </div>
-  </div>
-</div>
+          <!-- Argentine Forensic Anthropology Team (EAAF) -->
+          <div class="collab-card touch-zoomable">
+            <div class="collab-logo">
+              <img
+                src="https://github.com/FOUND-project/found-project.github.io/blob/82b303cdf26fa6a25e9845ff0d5fc10e070d94e6/images/logo_eaaf_rd.png?raw=true"
+                alt="Argentine Forensic Anthropology Team (EAAF) logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')"
+              >
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-eaaf">
+                Argentine Forensic Anthropology Team (EAAF)
+              </div>
+              <div class="collab-note" id="collab-note-eaaf">
+                Luis Fondebrider, FOUND’s advisor
+              </div>
+            </div>
+          </div>
        
         </div>
       </div>
@@ -1944,21 +2063,21 @@ redirect_from:
           </div>
         </div>
 
-<!-- BBC Mundo tweet -->
-<div class="social-embed twitter-embed">
-  <div class="iframe-container">
-    <blockquote class="twitter-tweet">
-      <p lang="es" dir="ltr">
-        Cómo los cerdos y los insectos están ayudando a encontrar a los desaparecidos en México
-        <a href="https://t.co/sJC3oaNLGL">https://t.co/sJC3oaNLGL</a>
-      </p>
-      &mdash; BBC News Mundo (@bbcmundo)
-      <a href="https://twitter.com/bbcmundo/status/1973352689867063513?ref_src=twsrc%5Etfw">
-        October 1, 2025
-      </a>
-    </blockquote>
-  </div>
-</div>
+        <!-- BBC Mundo tweet -->
+        <div class="social-embed twitter-embed">
+          <div class="iframe-container">
+            <blockquote class="twitter-tweet">
+              <p lang="es" dir="ltr">
+                Cómo los cerdos y los insectos están ayudando a encontrar a los desaparecidos en México
+                <a href="https://t.co/sJC3oaNLGL">https://t.co/sJC3oaNLGL</a>
+              </p>
+              &mdash; BBC News Mundo (@bbcmundo)
+              <a href="https://twitter.com/bbcmundo/status/1973352689867063513?ref_src=twsrc%5Etfw">
+                October 1, 2025
+              </a>
+            </blockquote>
+          </div>
+        </div>
 
         <!-- Card 3 -->
         <div class="social-embed">
@@ -2001,200 +2120,199 @@ redirect_from:
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   <!-- LANGUAGE TOGGLE + WORD ROTATION + TOUCH ZOOM -->
-<script>
-  (function(){
-    const translations = {
-      en:{
-        'collab-item-labco':'LABCO',
-        'collab-note-labco':'Exploring together AI to locate and identify',
-        'collab-item-eaaf':'Argentine Forensic Anthropology Team (EAAF)',
-        'collab-note-eaaf':"Luis Fondebrider, FOUND's advisor",
-        'project-subtitle':'<span class="title-accent">Interpreting Nature</span> To Locate Those Who We Are Missing',
-        'hero-tagline-static':'Using technology to',
-        'word-1':'search.',
-        'word-2':'remember.',
-        'word-3':'dignify.',
-        'word-4':'find.',
-        'word-5':'bring closure.',
-        'hero-main-text':'124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.',
-        'collab-title':'Institutional Partnerships',
-        'tech-title':'Technologies in Action',
-        'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
-        'tech-item-2':'Airborne LiDAR',
-        'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
-        'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry',
-        'tech-item-5':'Satellite Spectral Analysis',
-        'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
-        'buscadoras-title':'The Role of Buscadoras',
-        'buscadoras-text':"Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.",
-        'social-title':'Follow Our Journey',
-        'social-subtitle':'Stay connected with our latest findings, community stories, and collaborations',
-        'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
-      },
-      es:{
-        'collab-item-labco':'LABCO',
-        'collab-note-labco':'Explorando juntos el uso de IA para localizar e identificar',
-        'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
-        'collab-note-eaaf':'Luis Fondebrider, asesor de FOUND',
-        'project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan',
-        'hero-tagline-static':'Usando tecnología para',
-        'word-1':'buscar.',
-        'word-2':'recordar.',
-        'word-3':'dignificar.',
-        'word-4':'encontrar.',
-        'word-5':'dar cierre.',
-        'hero-main-text':'124,354 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de familias buscadoras para aprender del campo, localizar y promover cambios sistémicos.',
-        'collab-title':'Alianzas institucionales',
-        'tech-title':'Tecnologías en acción',
-        'tech-item-1':'Imágenes multiespectrales e hiperespectrales',
-        'tech-item-2':'LiDAR aerotransportado',
-        'tech-item-3':'Interferometría de ruido sísmico (TIRSA)',
-        'tech-item-4':'Tomografía de resistividad eléctrica y mediciones de conductividad',
-        'tech-item-5':'Análisis espectral satelital',
-        'tech-item-6':'Entomología forense, botánica, análisis territorial y ciencia del suelo',
-        'buscadoras-title':'El papel de las buscadoras',
-        'buscadoras-text':'Los colectivos liderados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.',
-        'social-title':'Sigue nuestro camino',
-        'social-subtitle':'Mantente al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.',
-        'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
-      },
-      nah:{
-        'collab-item-labco':'LABCO',
-        'collab-note-labco':'Tlen momachtia IA para temoa huan quixmati',
-        'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
-        'collab-note-eaaf':'Luis Fondebrider, consejero FOUND',
-        'project-subtitle':'<span class="title-accent">In Naturaleza titlatlajtolti</span> para tipantlaltiah in aquimeh techpoloa',
-        'hero-tagline-static':'Teknolojíayoh ika',
-        'word-1':'temoa.',
-        'word-2':'quilnamictia.',
-        'word-3':'tlatepanita.',
-        'word-4':'quipantlalia.',
-        'word-5':'yolpakilistli quimacatia.',
-        'hero-main-text':'124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia tehnologíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
-        'collab-title':'Tlen tlatlanecuiltilis nemilistli (alianzas institucionales)',
-        'tech-title':'Teknolojíayoh tlen motequiti',
-        'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
-        'tech-item-2':'Airborne LiDAR',
-        'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
-        'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry',
-        'tech-item-5':'Satellite Spectral Analysis',
-        'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
-        'buscadoras-title':'In papel in buscadoras',
-        'buscadoras-text':'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan país tlen polihuiliztli huan tlayectlaliz justice. Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknológicoh tequitl.',
-        'social-title':'Xiquito in totlanejmachtiliz',
-        'social-subtitle':'Ximoyetkixtia inin tlen tipantlaliah, tlen tlanechicoliztli in comunidades huan inin tlen timocoyonaltiah san sejco.',
-        'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
-      }
-    };
+  <script>
+    (function(){
+      const translations = {
+        en:{
+          'collab-item-labco':'LABCO',
+          'collab-note-labco':'Exploring together AI to locate and identify',
+          'collab-item-eaaf':'Argentine Forensic Anthropology Team (EAAF)',
+          'collab-note-eaaf':"Luis Fondebrider, FOUND's advisor",
+          'project-subtitle':'<span class="title-accent">Interpreting Nature</span> To Locate Those Who We Are Missing',
+          'hero-tagline-static':'Using technology to',
+          'word-1':'search.',
+          'word-2':'remember.',
+          'word-3':'dignify.',
+          'word-4':'find.',
+          'word-5':'bring closure.',
+          'hero-main-text':'124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.',
+          'collab-title':'Institutional Partnerships',
+          'tech-title':'Technologies in Action',
+          'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
+          'tech-item-2':'Airborne LiDAR',
+          'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
+          'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry',
+          'tech-item-5':'Satellite Spectral Analysis',
+          'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
+          'buscadoras-title':'The Role of Buscadoras',
+          'buscadoras-text':"Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.",
+          'social-title':'Follow Our Journey',
+          'social-subtitle':'Stay connected with our latest findings, community stories, and collaborations',
+          'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
+        },
+        es:{
+          'collab-item-labco':'LABCO',
+          'collab-note-labco':'Explorando juntos el uso de IA para localizar e identificar',
+          'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
+          'collab-note-eaaf':'Luis Fondebrider, asesor de FOUND',
+          'project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan',
+          'hero-tagline-static':'Usando tecnología para',
+          'word-1':'buscar.',
+          'word-2':'recordar.',
+          'word-3':'dignificar.',
+          'word-4':'encontrar.',
+          'word-5':'dar cierre.',
+          'hero-main-text':'124,354 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de familias buscadoras para aprender del campo, localizar y promover cambios sistémicos.',
+          'collab-title':'Alianzas institucionales',
+          'tech-title':'Tecnologías en acción',
+          'tech-item-1':'Imágenes multiespectrales e hiperespectrales',
+          'tech-item-2':'LiDAR aerotransportado',
+          'tech-item-3':'Interferometría de ruido sísmico (TIRSA)',
+          'tech-item-4':'Tomografía de resistividad eléctrica y mediciones de conductividad',
+          'tech-item-5':'Análisis espectral satelital',
+          'tech-item-6':'Entomología forense, botánica, análisis territorial y ciencia del suelo',
+          'buscadoras-title':'El papel de las buscadoras',
+          'buscadoras-text':'Los colectivos liderados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.',
+          'social-title':'Sigue nuestro camino',
+          'social-subtitle':'Mantente al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.',
+          'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
+        },
+        nah:{
+          'collab-item-labco':'LABCO',
+          'collab-note-labco':'Tlen momachtia IA para temoa huan quixmati',
+          'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
+          'collab-note-eaaf':'Luis Fondebrider, consejero FOUND',
+          'project-subtitle':'<span class="title-accent">In Naturaleza titlatlajtolti</span> para tipantlaltiah in aquimeh techpoloa',
+          'hero-tagline-static':'Teknolojíayoh ika',
+          'word-1':'temoa.',
+          'word-2':'quilnamictia.',
+          'word-3':'tlatepanita.',
+          'word-4':'quipantlalia.',
+          'word-5':'yolpakilistli quimacatia.',
+          'hero-main-text':'124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia tehnologíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
+          'collab-title':'Tlen tlatlanecuiltilis nemilistli (alianzas institucionales)',
+          'tech-title':'Teknolojíayoh tlen motequiti',
+          'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
+          'tech-item-2':'Airborne LiDAR',
+          'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
+          'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry',
+          'tech-item-5':'Satellite Spectral Analysis',
+          'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
+          'buscadoras-title':'In papel in buscadoras',
+          'buscadoras-text':'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan país tlen polihuiliztli huan tlayectlaliz justice. Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknológicoh tequitl.',
+          'social-title':'Xiquito in totlanejmachtiliz',
+          'social-subtitle':'Ximoyetkixtia inin tlen tipantlaliah, tlen tlanechicoliztli in comunidades huan inin tlen timocoyonaltiah san sejco.',
+          'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
+        }
+      };
 
-    let heroWords = [];
-    let wordIndex = 0;
-    let wordInterval = null;
+      let heroWords = [];
+      let wordIndex = 0;
+      let wordInterval = null;
 
-    function buildHeroWords(lang){
-      const dict = translations[lang] || translations.en;
-      const keys = ['word-1','word-2','word-3','word-4','word-5'];
-      heroWords = keys.map(k => dict[k]).filter(Boolean);
-      wordIndex = 0;
-      const span = document.getElementById('hero-word');
-      if(span && heroWords.length){
-        span.textContent = heroWords[0];
-      }
-    }
-
-    function startWordRotation(){
-      const span = document.getElementById('hero-word');
-      if(wordInterval) clearInterval(wordInterval);
-      if(!span || heroWords.length < 2) return;
-
-      wordInterval = setInterval(function(){
-        span.style.opacity = '0';
-        setTimeout(function(){
-          wordIndex = (wordIndex + 1) % heroWords.length;
-          span.textContent = heroWords[wordIndex];
-          span.style.opacity = '1';
-        },180);
-      },1250);
-    }
-
-    function setLanguage(lang){
-      const dict = translations[lang] || translations.en;
-
-      Object.keys(dict).forEach(function(id){
-        const el = document.getElementById(id);
-        if(el) el.innerHTML = dict[id];
-      });
-
-      document.documentElement.setAttribute(
-        'lang',
-        lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
-      );
-
-      document.querySelectorAll('.lang-btn').forEach(function(btn){
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-      });
-
-      try{ localStorage.setItem('found-lang', lang); }catch(e){}
-
-      buildHeroWords(lang);
-      startWordRotation();
-    }
-
-    function setupTouchZoom(){
-      const zoomables = document.querySelectorAll('.touch-zoomable');
-      if(!zoomables.length) return;
-
-      function toggleZoom(el){
-        const isExpanded = el.classList.contains('is-expanded');
-        if(isExpanded){
-          el.classList.remove('is-expanded');
-          document.body.classList.remove('zoom-active');
-        }else{
-          document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
-            openEl.classList.remove('is-expanded');
-          });
-          el.classList.add('is-expanded');
-          document.body.classList.add('zoom-active');
+      function buildHeroWords(lang){
+        const dict = translations[lang] || translations.en;
+        const keys = ['word-1','word-2','word-3','word-4','word-5'];
+        heroWords = keys.map(k => dict[k]).filter(Boolean);
+        wordIndex = 0;
+        const span = document.getElementById('hero-word');
+        if(span && heroWords.length){
+          span.textContent = heroWords[0];
         }
       }
 
-      zoomables.forEach(function(el){
-        el.addEventListener('click', function(e){
-          if(window.matchMedia && window.matchMedia('(max-width: 768px)').matches){
-            e.preventDefault();
-            e.stopPropagation();
-            toggleZoom(el);
+      function startWordRotation(){
+        const span = document.getElementById('hero-word');
+        if(wordInterval) clearInterval(wordInterval);
+        if(!span || heroWords.length < 2) return;
+
+        wordInterval = setInterval(function(){
+          span.style.opacity = '0';
+          setTimeout(function(){
+            wordIndex = (wordIndex + 1) % heroWords.length;
+            span.textContent = heroWords[wordIndex];
+            span.style.opacity = '1';
+          },180);
+        },1250);
+      }
+
+      function setLanguage(lang){
+        const dict = translations[lang] || translations.en;
+
+        Object.keys(dict).forEach(function(id){
+          const el = document.getElementById(id);
+          if(el) el.innerHTML = dict[id];
+        });
+
+        document.documentElement.setAttribute(
+          'lang',
+          lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
+        );
+
+        document.querySelectorAll('.lang-btn').forEach(function(btn){
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+
+        try{ localStorage.setItem('found-lang', lang); }catch(e){}
+
+        buildHeroWords(lang);
+        startWordRotation();
+      }
+
+      function setupTouchZoom(){
+        const zoomables = document.querySelectorAll('.touch-zoomable');
+        if(!zoomables.length) return;
+
+        function toggleZoom(el){
+          const isExpanded = el.classList.contains('is-expanded');
+          if(isExpanded){
+            el.classList.remove('is-expanded');
+            document.body.classList.remove('zoom-active');
+          }else{
+            document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
+              openEl.classList.remove('is-expanded');
+            });
+            el.classList.add('is-expanded');
+            document.body.classList.add('zoom-active');
+          }
+        }
+
+        zoomables.forEach(function(el){
+          el.addEventListener('click', function(e){
+            if(window.matchMedia && window.matchMedia('(max-width: 768px)').matches){
+              e.preventDefault();
+              e.stopPropagation();
+              toggleZoom(el);
+            }
+          });
+        });
+
+        document.addEventListener('keydown', function(e){
+          if(e.key === 'Escape'){
+            document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
+              openEl.classList.remove('is-expanded');
+            });
+            document.body.classList.remove('zoom-active');
           }
         });
-      });
+      }
 
-      document.addEventListener('keydown', function(e){
-        if(e.key === 'Escape'){
-          document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
-            openEl.classList.remove('is-expanded');
+      document.addEventListener('DOMContentLoaded', function(){
+        let savedLang = null;
+        try{ savedLang = localStorage.getItem('found-lang'); }catch(e){}
+        const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
+        setLanguage(initialLang);
+
+        document.querySelectorAll('.lang-btn').forEach(function(btn){
+          btn.addEventListener('click', function(){
+            setLanguage(btn.dataset.lang);
           });
-          document.body.classList.remove('zoom-active');
-        }
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', function(){
-      let savedLang = null;
-      try{ savedLang = localStorage.getItem('found-lang'); }catch(e){}
-      const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
-      setLanguage(initialLang);
-
-      document.querySelectorAll('.lang-btn').forEach(function(btn){
-        btn.addEventListener('click', function(){
-          setLanguage(btn.dataset.lang);
         });
-      });
 
-      setupTouchZoom();
-    });
-  })();
-</script>
+        setupTouchZoom();
+      });
+    })();
+  </script>
 
 </body>
 </html>
-
