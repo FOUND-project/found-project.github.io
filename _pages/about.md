@@ -381,6 +381,37 @@ redirect_from:
       opacity:1;
     }
 
+    /* ✅ NEW: pill overlaid on the right 2/3 of the GIF, and pill width matches the text */
+    .hero-pill-overlay{
+      position:absolute;
+      top:12%;
+      right:0;
+      width:66.666%;
+      padding:0 1rem;
+      z-index:2;
+      pointer-events:none;
+      display:flex;
+      justify-content:flex-start;
+    }
+
+    .hero-pill-overlay .tagline-pill{
+      width:100%;
+      max-width:none;
+      background:linear-gradient(135deg, rgba(255,255,255,.92) 0%, rgba(232,245,240,.86) 100%);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      box-shadow:0 14px 34px rgba(15,23,42,.12);
+    }
+
+    .hero-pill-overlay .word-carousel{
+      justify-content:flex-start;
+    }
+
+    .hero-pill-overlay .hero-word{
+      width:100%;
+      text-align:left;
+    }
+
     .hero-description{
       font-size:clamp(1.05rem,2.4vw,1.25rem);
       color:var(--text-medium);
@@ -1175,8 +1206,44 @@ redirect_from:
         transform:none !important;
         box-shadow:none !important;
       }
+
+      /* ✅ Mobile: make overlay pill full width and centred a bit lower */
+      .hero-pill-overlay{
+        top:10%;
+        right:0;
+        left:0;
+        width:100%;
+        padding:0 .85rem;
+        justify-content:center;
+      }
+
+      .hero-pill-overlay .tagline-pill{
+        border-radius:22px;
+      }
+
+      .hero-pill-overlay .tagline-pill span#hero-tagline-static,
+      .hero-pill-overlay .hero-word{
+        text-align:center;
+      }
+
+      .hero-pill-overlay .word-carousel{
+        justify-content:center;
+      }
     }
 
+/* Ensure the pill sits ABOVE the hero image */
+.hero-media { position: relative; }
+
+.hero-image{
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* image layer */
+}
+
+.hero-pill-overlay{
+  z-index: 2; /* pill layer (above image) */
+}
+    
     /* =========================
        Responsive tweaks
     ========================== */
@@ -1389,26 +1456,27 @@ redirect_from:
   <section class="hero">
     <div class="hero-content">
       <div class="hero-top">
-        <!-- LEFT: tagline + paragraph -->
+        <!-- LEFT: paragraph (tagline pill moved to GIF) -->
         <div class="hero-text">
-          <div class="animated-tagline">
-            <div class="tagline-pill" aria-label="FOUND tagline">
-              <span id="hero-tagline-static">Using technology to</span>
-              <div class="word-carousel" role="text">
-                <span id="hero-word" class="hero-word">search.</span>
-              </div>
-            </div>
-          </div>
-
           <p class="hero-description" id="hero-main-text">
             124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
             <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.
           </p>
         </div>
 
-        <!-- RIGHT: image + award, award pushed down -->
+        <!-- RIGHT: image + overlay pill + award -->
         <div class="hero-side">
           <div class="hero-media skeleton touch-zoomable" aria-label="Hero media">
+            <!-- ✅ pill overlay on right 2/3 of the GIF -->
+            <div class="hero-pill-overlay" aria-hidden="true">
+              <div class="tagline-pill" aria-label="FOUND tagline">
+                <span id="hero-tagline-static">Using technology to</span>
+                <div class="word-carousel" role="text">
+                  <span id="hero-word" class="hero-word">search.</span>
+                </div>
+              </div>
+            </div>
+
             <img
               src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/1047db9c85ff842e083e9fb45c0bdf05213da88a/images/NDAI5.gif"
               alt="FOUND Project team using advanced technology in field search operations"
