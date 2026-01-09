@@ -1943,6 +1943,22 @@ redirect_from:
           </div>
         </div>
 
+<!-- BBC Mundo tweet -->
+<div class="social-embed twitter-embed">
+  <div class="iframe-container">
+    <blockquote class="twitter-tweet">
+      <p lang="es" dir="ltr">
+        Cómo los cerdos y los insectos están ayudando a encontrar a los desaparecidos en México
+        <a href="https://t.co/sJC3oaNLGL">https://t.co/sJC3oaNLGL</a>
+      </p>
+      &mdash; BBC News Mundo (@bbcmundo)
+      <a href="https://twitter.com/bbcmundo/status/1973352689867063513?ref_src=twsrc%5Etfw">
+        October 1, 2025
+      </a>
+    </blockquote>
+  </div>
+</div>
+
         <!-- Card 3 -->
         <div class="social-embed">
           <div class="iframe-container">
