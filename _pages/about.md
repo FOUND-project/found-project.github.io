@@ -252,61 +252,7 @@ redirect_from:
       background:rgba(255,255,255,.06);
       padding:8px;
       flex-shrink:0;
-     position: relative;  /* ADD THIS LINE */
     }
-
-    /* ADD ALL THE NEW CODE BELOW, right after .project-logo */
-    
-    .project-logo::before {
-      content: '';
-      position: absolute;
-      inset: -10px;
-      background: 
-        radial-gradient(circle at 30% 30%, rgba(74, 140, 115, 0.4) 0%, transparent 50%),
-        radial-gradient(circle at 70% 70%, rgba(74, 140, 115, 0.3) 0%, transparent 50%);
-      animation: circuitPulse 2.5s ease-in-out infinite;
-      pointer-events: none;
-      border-radius: inherit;
-      z-index: -1;
-      mix-blend-mode: screen;
-    }
-
-    .project-logo::after {
-      content: '';
-      position: absolute;
-      inset: -10px;
-      background: radial-gradient(circle at 50% 40%, rgba(46, 213, 115, 0.5) 0%, transparent 60%);
-      animation: leafGlow 3s ease-in-out infinite;
-      pointer-events: none;
-      border-radius: inherit;
-      z-index: -1;
-      mix-blend-mode: screen;
-    }
-
-    @keyframes circuitPulse {
-      0%, 100% {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(1.05);
-      }
-    }
-
-    @keyframes leafGlow {
-      0%, 100% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 0.8;
-      }
-    }  
-
-
-
-
-    
 
     .project-title{
       font-size:clamp(2.6rem,6vw,4.7rem);
@@ -1397,6 +1343,116 @@ redirect_from:
       }
     }
 
+
+
+
+/* =========================
+   Logo Animation - Pulse Circuits & Green Leaf
+   ========================== */
+.project-logo {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Pulse animation for the circuits */
+@keyframes pulseCircuit {
+    0% {
+        filter: 
+            drop-shadow(0 0 3px rgba(74, 140, 115, 0.4))
+            drop-shadow(0 0 0px rgba(212, 175, 55, 0));
+    }
+    50% {
+        filter: 
+            drop-shadow(0 0 8px rgba(74, 140, 115, 0.8))
+            drop-shadow(0 0 12px rgba(212, 175, 55, 0.4));
+    }
+    100% {
+        filter: 
+            drop-shadow(0 0 3px rgba(74, 140, 115, 0.4))
+            drop-shadow(0 0 0px rgba(212, 175, 55, 0));
+    }
+}
+
+/* Leaf turning green animation */
+@keyframes leafGreen {
+    0% {
+        filter: 
+            brightness(1)
+            sepia(0.2)
+            hue-rotate(0deg)
+            saturate(1.2);
+    }
+    100% {
+        filter: 
+            brightness(1.15)
+            sepia(0.5)
+            hue-rotate(100deg)
+            saturate(1.8);
+    }
+}
+
+/* Apply animations to logo image */
+.project-logo img {
+    animation: 
+        pulseCircuit 3s ease-in-out infinite,
+        leafGreen 4s ease-in-out infinite alternate;
+    transition: all 0.5s ease;
+}
+
+/* Enhanced hover effect */
+.project-logo:hover img {
+    animation: 
+        pulseCircuit 1.5s ease-in-out infinite,
+        leafGreen 2s ease-in-out infinite alternate;
+    transform: scale(1.02);
+}
+
+/* Subtle background glow */
+.project-logo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 18px;
+    background: 
+        radial-gradient(
+            circle at center,
+            rgba(74, 140, 115, 0.15) 0%,
+            transparent 70%
+        );
+    z-index: -1;
+    opacity: 0;
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.5; }
+}
+
+.project-logo:hover::after {
+    opacity: 0.6;
+    animation: glowPulse 1.5s ease-in-out infinite;
+}
+
+/* For reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .project-logo img {
+        animation: none;
+    }
+    .project-logo::after {
+        animation: none;
+        opacity: 0.3;
+    }
+}
+
+    
+
+    
+    
 /* Re-tint Frontier Tech Hub logo to dark */
 .collab-img.fth{
   filter: brightness(0) saturate(100%) invert(9%) sepia(6%)
