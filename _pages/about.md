@@ -517,10 +517,6 @@ redirect_from:
       position:relative;
     }
 
-    .award-icon::after{
-      content:'';
-    }
-
     .award-text{
       flex:1 1 220px;
       position:relative;
@@ -591,7 +587,6 @@ redirect_from:
       isolation:isolate;
     }
 
-    /* Subtle "circuits" layer */
     .signature-visual::before{
       content:'';
       position:absolute;
@@ -647,7 +642,6 @@ redirect_from:
       align-items:center;
     }
 
-    /* The "special" frame */
     .signature-frame{
       width:min(1200px, 100%);
       margin:0 auto;
@@ -662,17 +656,16 @@ redirect_from:
     .signature-frame::before{
       content:'';
       display:block;
-      padding-top:38%; /* banner-like aspect ratio */
+      padding-top:38%;
     }
 
-    /* Crop to right 2/3 of the GIF using object-position */
     .signature-gif{
       position:absolute;
       inset:0;
       width:100%;
       height:100%;
       object-fit:cover;
-      object-position:66% center; /* right-leaning crop */
+      object-position:66% center;
       transform:scale(1.01);
       filter:saturate(1.03) contrast(1.02);
     }
@@ -1496,7 +1489,6 @@ redirect_from:
   <section class="hero">
     <div class="hero-content">
       <div class="hero-top">
-        <!-- LEFT: tagline + paragraph -->
         <div class="hero-text">
           <div class="animated-tagline">
             <div class="tagline-pill" aria-label="FOUND tagline">
@@ -1513,7 +1505,6 @@ redirect_from:
           </p>
         </div>
 
-        <!-- RIGHT: image + award, award pushed down -->
         <div class="hero-side">
           <div class="hero-media skeleton touch-zoomable" aria-label="Hero media">
             <img
@@ -1560,7 +1551,6 @@ redirect_from:
   <!-- TECHNOLOGIES + BUSCADORAS -->
   <section class="content-section">
     <div class="section-container dual-sections-grid">
-      <!-- Technologies -->
       <div class="dual-column">
         <section id="technologies">
           <h2 id="tech-title">Technologies in Action</h2>
@@ -1570,7 +1560,7 @@ redirect_from:
             <li id="tech-item-3">Seismic Noise Interferometry (TIRSA)</li>
             <li id="tech-item-4">Electrical Resistivity Tomography, Conductivimetry</li>
             <li id="tech-item-5">Satellite Spectral Analysis</li>
-            <li>Machine Learning</li>
+            <li id="tech-item-ml">Machine Learning</li>
             <li id="tech-item-6">Forensic Entomology, Botany, Territorial Analysis, Soil Science</li>
           </ul>
 
@@ -1628,7 +1618,6 @@ redirect_from:
         </section>
       </div>
 
-      <!-- Buscadoras -->
       <div class="dual-column">
         <section class="buscadoras-section" id="buscadoras">
           <div class="buscadoras-content">
@@ -1656,6 +1645,39 @@ redirect_from:
 
       <div class="collab-wrap" aria-label="Institutional partnerships logos">
         <div class="collab-grid">
+
+          <!-- ✅ NEW: Oxford Robotics Institute -->
+          <div class="collab-card touch-zoomable">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/a8209a23c303b55bda756d5a55b2c572ac2540a9/images/ori_logo_square_2024_150_inverted.png"
+                alt="Oxford Robotics Institute logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-ori">Oxford Robotics Institute</div>
+              <div class="collab-note" id="collab-note-ori">Partnership, technical expertise</div>
+            </div>
+          </div>
+
+          <!-- ✅ NEW: Instituto Politécnico Nacional -->
+          <div class="collab-card touch-zoomable">
+            <div class="collab-logo">
+              <img
+                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b9419b5a0b9d80c6ae96d16642771d6c1d66cdf3/images/logo-ipn-guinda.svg"
+                alt="Instituto Politécnico Nacional logo"
+                loading="lazy"
+                class="loading"
+                onload="this.classList.remove('loading')">
+            </div>
+            <div class="collab-meta">
+              <div class="collab-name" id="collab-item-ipn">Instituto Politécnico Nacional</div>
+              <div class="collab-note" id="collab-note-ipn">Technical expertise, Technology</div>
+            </div>
+          </div>
+
           <!-- 7. Search Collectives -->
           <div class="collab-card collab-card-gif touch-zoomable">
             <div class="collab-logo">
@@ -2016,7 +2038,6 @@ redirect_from:
       </p>
 
       <div class="social-grid">
-        <!-- Card 1 -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
@@ -2030,7 +2051,6 @@ redirect_from:
           </div>
         </div>
 
-        <!-- Card 2 -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
@@ -2044,7 +2064,6 @@ redirect_from:
           </div>
         </div>
 
-        <!-- Guardian tweet -->
         <div class="social-embed twitter-embed">
           <div class="iframe-container">
             <blockquote class="twitter-tweet">
@@ -2063,7 +2082,6 @@ redirect_from:
           </div>
         </div>
 
-        <!-- BBC Mundo tweet -->
         <div class="social-embed twitter-embed">
           <div class="iframe-container">
             <blockquote class="twitter-tweet">
@@ -2079,7 +2097,6 @@ redirect_from:
           </div>
         </div>
 
-        <!-- Card 3 -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
@@ -2093,7 +2110,6 @@ redirect_from:
           </div>
         </div>
 
-        <!-- Card 4 -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
@@ -2128,6 +2144,13 @@ redirect_from:
           'collab-note-labco':'Exploring together AI to locate and identify',
           'collab-item-eaaf':'Argentine Forensic Anthropology Team (EAAF)',
           'collab-note-eaaf':"Luis Fondebrider, FOUND's advisor",
+
+          /* ✅ NEW */
+          'collab-item-ori':'Oxford Robotics Institute',
+          'collab-note-ori':'Partnership, technical expertise',
+          'collab-item-ipn':'Instituto Politécnico Nacional',
+          'collab-note-ipn':'Technical expertise, Technology',
+
           'project-subtitle':'<span class="title-accent">Interpreting Nature</span> To Locate Those Who We Are Missing',
           'hero-tagline-static':'Using technology to',
           'word-1':'search.',
@@ -2143,6 +2166,7 @@ redirect_from:
           'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
           'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry',
           'tech-item-5':'Satellite Spectral Analysis',
+          'tech-item-ml':'Machine Learning',
           'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
           'buscadoras-title':'The Role of Buscadoras',
           'buscadoras-text':"Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.",
@@ -2155,6 +2179,13 @@ redirect_from:
           'collab-note-labco':'Explorando juntos el uso de IA para localizar e identificar',
           'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
           'collab-note-eaaf':'Luis Fondebrider, asesor de FOUND',
+
+          /* ✅ NEW (translated) */
+          'collab-item-ori':'Oxford Robotics Institute',
+          'collab-note-ori':'Alianza, experiencia técnica',
+          'collab-item-ipn':'Instituto Politécnico Nacional',
+          'collab-note-ipn':'Experiencia técnica, desarrollo tecnológico',
+
           'project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan',
           'hero-tagline-static':'Usando tecnología para',
           'word-1':'buscar.',
@@ -2170,6 +2201,7 @@ redirect_from:
           'tech-item-3':'Interferometría de ruido sísmico (TIRSA)',
           'tech-item-4':'Tomografía de resistividad eléctrica y mediciones de conductividad',
           'tech-item-5':'Análisis espectral satelital',
+          'tech-item-ml':'Aprendizaje automático',
           'tech-item-6':'Entomología forense, botánica, análisis territorial y ciencia del suelo',
           'buscadoras-title':'El papel de las buscadoras',
           'buscadoras-text':'Los colectivos liderados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.',
@@ -2179,27 +2211,35 @@ redirect_from:
         },
         nah:{
           'collab-item-labco':'LABCO',
-          'collab-note-labco':'Tlen momachtia IA para temoa huan quixmati',
+          'collab-note-labco':'Timoitayoh ika IA para titemoa huan tiquixmati',
           'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
-          'collab-note-eaaf':'Luis Fondebrider, consejero FOUND',
-          'project-subtitle':'<span class="title-accent">In Naturaleza titlatlajtolti</span> para tipantlaltiah in aquimeh techpoloa',
+          'collab-note-eaaf':'Luis Fondebrider, ixcuitlali (asesor) FOUND',
+
+          /* ✅ NEW (translated lightly; names kept) */
+          'collab-item-ori':'Oxford Robotics Institute',
+          'collab-note-ori':'Tlaneltiliztli (alianza), teknikoh tlamatiliztli',
+          'collab-item-ipn':'Instituto Politécnico Nacional',
+          'collab-note-ipn':'Teknikoh tlamatiliztli, teknolojíayoh tlatequipanoliztli',
+
+          'project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan',
           'hero-tagline-static':'Teknolojíayoh ika',
           'word-1':'temoa.',
           'word-2':'quilnamictia.',
           'word-3':'tlatepanita.',
           'word-4':'quipantlalia.',
           'word-5':'yolpakilistli quimacatia.',
-          'hero-main-text':'124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia tehnologíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
-          'collab-title':'Tlen tlatlanecuiltilis nemilistli (alianzas institucionales)',
+          'hero-main-text':'124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia tehnologíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia yancuic tlanemilistli ipan sistema.',
+          'collab-title':'Alianzas institucionales',
           'tech-title':'Teknolojíayoh tlen motequiti',
           'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
           'tech-item-2':'Airborne LiDAR',
           'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
           'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry',
           'tech-item-5':'Satellite Spectral Analysis',
+          'tech-item-ml':'Machine Learning',
           'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
           'buscadoras-title':'In papel in buscadoras',
-          'buscadoras-text':'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan país tlen polihuiliztli huan tlayectlaliz justice. Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknológicoh tequitl.',
+          'buscadoras-text':'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan país tlen polihuiliztli huan tlayectlaliz (justicia). Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknológicoh tequitl.',
           'social-title':'Xiquito in totlanejmachtiliz',
           'social-subtitle':'Ximoyetkixtia inin tlen tipantlaliah, tlen tlanechicoliztli in comunidades huan inin tlen timocoyonaltiah san sejco.',
           'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
