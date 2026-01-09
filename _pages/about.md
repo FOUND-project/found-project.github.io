@@ -20,37 +20,32 @@ redirect_from:
 
   <!-- HSTS Header - Tells browsers to always use HTTPS -->
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-
   <!-- Upgrade insecure requests -->
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
   <!-- Prevent MIME type sniffing -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  
   <!-- Prevent clickjacking -->
   <meta http-equiv="X-Frame-Options" content="DENY">
-  
   <!-- Control referrer information -->
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <!-- ========== END SECURITY HEADERS ========== -->
 
-  
-   <!-- FIXED: No-loop redirect -->
+  <!-- FIXED: No-loop redirect -->
   <script>
     (function() {
-      if (window.location.protocol === 'http:' && 
+      if (window.location.protocol === 'http:' &&
           window.location.hostname === 'found-project.org' &&
           !sessionStorage.getItem('redirecting_to_https')) {
-        
+
         sessionStorage.setItem('redirecting_to_https', 'true');
-        
-        var httpsUrl = 'https://found-project.org' + 
-                      window.location.pathname + 
-                      window.location.search + 
+
+        var httpsUrl = 'https://found-project.org' +
+                      window.location.pathname +
+                      window.location.search +
                       window.location.hash;
-        
+
         window.location.replace(httpsUrl);
-        
+
         setTimeout(function() {
           sessionStorage.removeItem('redirecting_to_https');
         }, 2000);
@@ -61,12 +56,7 @@ redirect_from:
   </script>
 
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
+    *{margin:0;padding:0;box-sizing:border-box;}
     :root{
       --primary-green:#2d5f4d;
       --dark-green:#1e4034;
@@ -85,16 +75,10 @@ redirect_from:
       --radius-md:18px;
       --radius-sm:14px;
     }
-
     @media (prefers-reduced-motion: reduce){
-      *,*::before,*::after{
-        animation-duration:.01ms!important;
-        animation-iteration-count:1!important;
-        transition-duration:.01ms!important;
-      }
+      *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
       html{scroll-behavior:auto!important;}
     }
-
     body{
       font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
       color:var(--text-dark);
@@ -103,1265 +87,324 @@ redirect_from:
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       overflow-x:hidden;
+      position:relative;
     }
-
-    body.zoom-active{
-      overflow:hidden;
-    }
-
+    body.zoom-active{overflow:hidden;}
     html{scroll-behavior:smooth;}
+    *:focus-visible{outline:3px solid rgba(74,140,115,.55);outline-offset:2px;border-radius:10px;}
 
-    *:focus-visible{
-      outline:3px solid rgba(74,140,115,.55);
-      outline-offset:2px;
-      border-radius:10px;
-    }
+    .page,#main,.initial-content,.page__inner-wrap,.page__content,.archive{max-width:none!important;width:106%!important;}
+    .page__content{padding-left:clamp(1rem,4vw,3rem)!important;padding-right:clamp(1rem,4vw,3rem)!important;}
 
-    /* Minimal Mistakes wrappers full width on desktop */
-    .page,
-    #main,
-    .initial-content,
-    .page__inner-wrap,
-    .page__content,
-    .archive{
-      max-width:none!important;
-      width:106% !important;
-    }
-
-    .page__content{
-      padding-left:clamp(1rem,4vw,3rem) !important;
-      padding-right:clamp(1rem,4vw,3rem) !important;
-    }
-
-    /* =========================
-       Language toggle
-    ========================== */
-    .lang-toggle{
+    /* ===== Moving circuits background ===== */
+    .circuit-bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+    .circuit-bg::before{
+      content:'';
       position:absolute;
-      top:1.4rem;
-      right:clamp(1rem,4vw,3rem);
-      display:inline-flex;
-      gap:.55rem;
-      z-index:3;
+      inset:-10%;
+      background:
+        radial-gradient(1200px 600px at 10% 20%, rgba(232,245,240,.55) 0%, transparent 58%),
+        radial-gradient(900px 540px at 90% 10%, rgba(212,175,55,.12) 0%, transparent 60%),
+        radial-gradient(900px 520px at 70% 85%, rgba(74,140,115,.10) 0%, transparent 55%);
+      opacity:.9;
+      transform:translateZ(0);
     }
+    .circuit-particles{
+      position:absolute;inset:0;opacity:.35;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(74,140,115,.55) 0 1px, transparent 2px),
+        radial-gradient(circle at 30% 70%, rgba(212,175,55,.50) 0 1px, transparent 2px),
+        radial-gradient(circle at 70% 30%, rgba(74,140,115,.35) 0 1px, transparent 2px),
+        radial-gradient(circle at 85% 75%, rgba(232,245,240,.9) 0 1px, transparent 2px),
+        radial-gradient(circle at 55% 55%, rgba(45,95,77,.25) 0 1px, transparent 2px);
+      background-size:320px 320px;
+      animation:particles-drift 22s linear infinite;
+      transform:translateZ(0);
+    }
+    @keyframes particles-drift{0%{transform:translate3d(0,0,0);}100%{transform:translate3d(-160px,90px,0);}}
+    .circuit-svg{position:absolute;inset:-6%;width:112%;height:112%;opacity:.55;filter:drop-shadow(0 10px 24px rgba(15,23,42,.06));animation:circuit-pan 38s linear infinite;}
+    @keyframes circuit-pan{0%{transform:translate3d(0,0,0);}100%{transform:translate3d(-120px,80px,0);}}
+    .circuit-line{fill:none;stroke:rgba(45,95,77,.35);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:7 10;animation:dash 8.5s linear infinite;opacity:.7;}
+    .circuit-line.alt{stroke:rgba(74,140,115,.30);stroke-width:1.1;stroke-dasharray:4 12;animation-duration:10.5s;opacity:.55;}
+    .circuit-line.gold{stroke:rgba(212,175,55,.26);stroke-width:1.25;stroke-dasharray:10 18;animation-duration:12.5s;opacity:.55;}
+    @keyframes dash{to{stroke-dashoffset:-220;}}
+    .circuit-node{fill:rgba(232,245,240,.9);stroke:rgba(45,95,77,.35);stroke-width:1;opacity:.85;animation:node-pulse 3.6s ease-in-out infinite;transform-origin:center;}
+    .circuit-node.gold{fill:rgba(255,248,225,.95);stroke:rgba(212,175,55,.35);animation-duration:4.4s;}
+    @keyframes node-pulse{0%,100%{transform:scale(1);opacity:.72;}50%{transform:scale(1.08);opacity:1;}}
 
+    /* Keep content above bg */
+    body>*{position:relative;z-index:1;}
+
+    /* ===== Language toggle ===== */
+    .lang-toggle{position:absolute;top:1.4rem;right:clamp(1rem,4vw,3rem);display:inline-flex;gap:.55rem;z-index:3;}
     .lang-btn{
       border:1px solid rgba(255,255,255,.75);
       background:rgba(0,0,0,.18);
-      color:#fff;
-      padding:.35rem .85rem;
-      border-radius:999px;
-      font-size:.82rem;
-      font-weight:700;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      cursor:pointer;
-      backdrop-filter:blur(10px);
-      transition:
-        transform .2s var(--transition-smooth),
-        background .2s var(--transition-smooth),
-        box-shadow .2s var(--transition-smooth),
-        border-color .2s var(--transition-smooth);
+      color:#fff;padding:.35rem .85rem;border-radius:999px;
+      font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+      cursor:pointer;backdrop-filter:blur(10px);
+      transition:transform .2s var(--transition-smooth),background .2s var(--transition-smooth),box-shadow .2s var(--transition-smooth),border-color .2s var(--transition-smooth);
     }
+    .lang-btn:hover{background:rgba(0,0,0,.28);transform:translateY(-1px);box-shadow:0 8px 22px rgba(0,0,0,.18);border-color:rgba(255,255,255,.9);}
+    .lang-btn.active{background:#fff;color:var(--dark-green);border-color:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.08),0 10px 26px rgba(0,0,0,.12);transform:translateY(-1px);}
 
-    .lang-btn:hover{
-      background:rgba(0,0,0,.28);
-      transform:translateY(-1px);
-      box-shadow:0 8px 22px rgba(0,0,0,.18);
-      border-color:rgba(255,255,255,.9);
-    }
-
-    .lang-btn.active{
-      background:#fff;
-      color:var(--dark-green);
-      border-color:#fff;
-      box-shadow:0 0 0 1px rgba(0,0,0,.08), 0 10px 26px rgba(0,0,0,.12);
-      transform:translateY(-1px);
-    }
-
-    /* =========================
-       Title section
-    ========================== */
+    /* ===== Title ===== */
     .title-section{
       padding:clamp(3.25rem,7vw,5rem) 0 clamp(2rem,5vw,3.5rem);
       background:
         radial-gradient(1200px 600px at 15% 35%, rgba(212,175,55,.14) 0%, transparent 55%),
         radial-gradient(900px 520px at 85% 20%, rgba(232,245,240,.10) 0%, transparent 60%),
         linear-gradient(135deg,#0b1c16 0%, #123126 38%, var(--dark-green) 62%, var(--primary-green) 100%);
-      position:relative;
-      overflow:hidden;
-      margin-bottom:2rem;
-      box-shadow:var(--shadow-lg);
-      isolation:isolate;
+      position:relative;overflow:hidden;margin-bottom:2rem;box-shadow:var(--shadow-lg);isolation:isolate;
     }
-
     .title-section::before{
-      content:'';
-      position:absolute;
-      inset:-2px;
-      background:
-        linear-gradient(90deg, rgba(74,140,115,.14), transparent 35%, transparent 65%, rgba(74,140,115,.12));
-      opacity:.85;
-      pointer-events:none;
+      content:'';position:absolute;inset:-2px;
+      background:linear-gradient(90deg, rgba(74,140,115,.14), transparent 35%, transparent 65%, rgba(74,140,115,.12));
+      opacity:.85;pointer-events:none;
       mask-image:linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
       -webkit-mask-image:linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
       z-index:0;
     }
-
     .title-section::after{
-      content:'';
-      position:absolute;
-      left:50%;
-      top:-120px;
-      width:720px;
-      height:720px;
-      transform:translateX(-50%);
+      content:'';position:absolute;left:50%;top:-120px;width:720px;height:720px;transform:translateX(-50%);
       background:radial-gradient(circle, rgba(255,255,255,.08) 0%, transparent 55%);
-      filter:blur(1px);
-      opacity:.55;
-      pointer-events:none;
-      z-index:0;
+      opacity:.55;pointer-events:none;z-index:0;
     }
-
-    .title-inner{
-      max-width:1200px;
-      margin:0 auto;
-      padding:0 clamp(1rem,4vw,3rem);
-      position:relative;
-      z-index:1;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:1.4rem;
-    }
-
-    .title-brand{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex-wrap:wrap;
-      gap:1.1rem;
-    }
-    
-    .project-logo{
-      width:110px;
-      height:auto;
-      border-radius:18px;
-      box-shadow:0 14px 32px rgba(0,0,0,.45);
-      border:1px solid rgba(255,255,255,.75);
-      background:rgba(255,255,255,.06);
-      padding:8px;
-      flex-shrink:0;
-    }
-
-    .project-title{
-      font-size:clamp(2.6rem,6vw,4.7rem);
-      font-weight:900;
-      color:#fff;
-      letter-spacing:-.03em;
-      line-height:1.06;
-      text-shadow:0 10px 30px rgba(0,0,0,.28);
-    }
-
+    .title-inner{max-width:1200px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem);position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:1.4rem;}
+    .title-brand{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:1.1rem;}
+    .project-logo{width:110px;height:auto;border-radius:18px;box-shadow:0 14px 32px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.75);background:rgba(255,255,255,.06);padding:8px;flex-shrink:0;}
+    .project-title{font-size:clamp(2.6rem,6vw,4.7rem);font-weight:900;color:#fff;letter-spacing:-.03em;line-height:1.06;text-shadow:0 10px 30px rgba(0,0,0,.28);}
     .project-subtitle{
-      font-size:clamp(1.25rem,3vw,1.85rem);
-      font-weight:500;
-      color:rgba(232,245,240,.92);
-      font-style:italic;
-      letter-spacing:.02em;
-      line-height:1.55;
-      max-width:980px;
-      margin:0 auto;
-      text-align:center;
-      text-shadow:0 6px 18px rgba(0,0,0,.22);
-      padding:0 clamp(1rem,4vw,3rem);
+      font-size:clamp(1.25rem,3vw,1.85rem);font-weight:500;color:rgba(232,245,240,.92);font-style:italic;letter-spacing:.02em;line-height:1.55;
+      max-width:980px;margin:0 auto;text-align:center;text-shadow:0 6px 18px rgba(0,0,0,.22);padding:0 clamp(1rem,4vw,3rem);
     }
+    .title-accent{color:var(--gold-accent);font-weight:800;}
 
-    .title-accent{
-      color:var(--gold-accent);
-      font-weight:800;
-    }
-
-    /* =========================
-       Hero
-    ========================== */
-    .hero{
-      padding:clamp(1.75rem,4vw,3rem) 0;
-      position:relative;
-      overflow:hidden;
-    }
-
+    /* ===== Hero ===== */
+    .hero{padding:clamp(1.75rem,4vw,3rem) 0;position:relative;overflow:hidden;}
     .hero::before{
-      content:'';
-      position:absolute;
-      inset:0;
+      content:'';position:absolute;inset:0;
       background:
         radial-gradient(800px 420px at 12% 20%, rgba(232,245,240,.70) 0%, transparent 55%),
         radial-gradient(780px 420px at 86% 0%, rgba(212,175,55,.12) 0%, transparent 60%),
         linear-gradient(135deg,#f7fbfa 0%, #ffffff 60%);
       z-index:0;
     }
-
-    .hero-content{
-      position:relative;
-      z-index:1;
-      max-width:1400px;
-      margin:0 auto;
-      padding:0 clamp(1rem,4vw,3rem);
-    }
-
-    .hero-top{
-      display:grid;
-      grid-template-columns: minmax(0,1.1fr) minmax(0,.9fr);
-      gap:clamp(1.25rem,3vw,2.5rem);
-      align-items:start;
-    }
-
-    .hero-text{
-      display:flex;
-      flex-direction:column;
-      gap:1rem;
-      max-width:720px;
-    }
-
-    .animated-tagline{
-      font-size:clamp(2.05rem,5vw,3.6rem);
-      font-weight:900;
-      display:flex;
-      align-items:flex-start;
-      color:var(--dark-green);
-      flex-wrap:wrap;
-      gap:.75rem;
-      letter-spacing:-.03em;
-      line-height:1.08;
-    }
-
+    .hero-content{position:relative;z-index:1;max-width:1400px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem);}
+    .hero-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(1.25rem,3vw,2.5rem);align-items:start;}
+    .hero-text{display:flex;flex-direction:column;gap:1rem;max-width:720px;}
+    .animated-tagline{font-size:clamp(2.05rem,5vw,3.6rem);font-weight:900;display:flex;align-items:flex-start;color:var(--dark-green);flex-wrap:wrap;gap:.75rem;letter-spacing:-.03em;line-height:1.08;}
     .tagline-pill{
-      display:inline-flex;
-      flex-direction:column;
-      align-items:flex-start;
-      justify-content:flex-start;
-      padding:.7rem 1.4rem;
-      border-radius:999px;
+      display:inline-flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;
+      padding:.7rem 1.4rem;border-radius:999px;
       background:linear-gradient(135deg, rgba(255,255,255,.9) 0%, rgba(232,245,240,.8) 100%);
-      border:1px solid rgba(45,95,77,.16);
-      box-shadow:var(--shadow-sm);
-      white-space:normal;
+      border:1px solid rgba(45,95,77,.16);box-shadow:var(--shadow-sm);
     }
-
-    .tagline-pill span#hero-tagline-static{
-      display:block;
-      width:100%;
-      font-size:clamp(2rem,4.5vw,3.2rem);
-      font-weight:900;
-      color:var(--dark-green);
-      letter-spacing:-.03em;
-      line-height:1.1;
-      text-align:left;
-    }
-
-    .word-carousel{
-      margin-top:.15rem;
-      width:100%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-
-    .hero-word{
-      display:block;
-      font-size:clamp(1.9rem,4.4vw,3rem);
-      font-weight:900;
-      letter-spacing:-.02em;
-      color:var(--light-green);
-      text-shadow:0 10px 28px rgba(15,23,42,.10);
-      white-space:nowrap;
-      text-align:center;
-      transition:opacity .28s var(--transition-smooth);
-      opacity:1;
-    }
-
-    .hero-description{
-      font-size:clamp(1.05rem,2.4vw,1.25rem);
-      color:var(--text-medium);
-      max-width:900px;
-      line-height:1.85;
-      font-weight:450;
-    }
-
-    .hero-description strong{
-      color:var(--primary-green);
-      font-weight:750;
-      background:linear-gradient(120deg, rgba(232,245,240,.95) 0%, transparent 100%);
-      padding:.08rem .32rem;
-      border-radius:6px;
-    }
-
-    .hero-side{
-      display:flex;
-      flex-direction:column;
-      gap:1rem;
-      align-items:stretch;
-      min-height:100%;
-    }
-
+    .tagline-pill span#hero-tagline-static{display:block;width:100%;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;color:var(--dark-green);letter-spacing:-.03em;line-height:1.1;text-align:left;}
+    .word-carousel{margin-top:.15rem;width:100%;display:flex;align-items:center;justify-content:center;}
+    .hero-word{display:block;font-size:clamp(1.9rem,4.4vw,3rem);font-weight:900;letter-spacing:-.02em;color:var(--light-green);text-shadow:0 10px 28px rgba(15,23,42,.10);white-space:nowrap;text-align:center;transition:opacity .28s var(--transition-smooth);opacity:1;}
+    .hero-description{font-size:clamp(1.05rem,2.4vw,1.25rem);color:var(--text-medium);max-width:900px;line-height:1.85;font-weight:450;}
+    .hero-description strong{color:var(--primary-green);font-weight:750;background:linear-gradient(120deg, rgba(232,245,240,.95) 0%, transparent 100%);padding:.08rem .32rem;border-radius:6px;}
+    .hero-side{display:flex;flex-direction:column;gap:1rem;align-items:stretch;min-height:100%;}
     .hero-media{
-      position:relative;
-      border-radius:var(--radius-lg);
-      overflow:hidden;
-      border:1px solid rgba(45,95,77,.14);
+      position:relative;border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(45,95,77,.14);
       background:linear-gradient(135deg, rgba(232,245,240,.8) 0%, rgba(255,255,255,.9) 100%);
       box-shadow:var(--shadow-md);
-      transform:translateY(0);
-      transition:
-        transform .45s var(--transition-smooth),
-        box-shadow .45s var(--transition-smooth);
-      max-width:100%;
-      margin-left:auto;
+      transition:transform .45s var(--transition-smooth), box-shadow .45s var(--transition-smooth);
+      max-width:100%;margin-left:auto;
     }
-
-    .hero-media::before{
-      content:'';
-      display:block;
-      padding-top:62%;
-    }
-
-    .hero-image{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      transform:scale(1.01);
-      transition:transform .8s var(--transition-smooth), filter .8s var(--transition-smooth), opacity .4s ease;
-      filter:saturate(1.02) contrast(1.03);
-    }
-
-    .skeleton{
-      background:linear-gradient(90deg,#f0f0f0 25%,#e8f5f0 50%,#f0f0f0 75%);
-      background-size:200% 100%;
-      animation:loading 1.5s ease-in-out infinite;
-    }
-
-    @keyframes loading{
-      0%{background-position:200% 0;}
-      100%{background-position:-200% 0;}
-    }
-
+    .hero-media::before{content:'';display:block;padding-top:62%;}
+    .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.01);transition:transform .8s var(--transition-smooth), filter .8s var(--transition-smooth), opacity .4s ease;filter:saturate(1.02) contrast(1.03);}
+    .skeleton{background:linear-gradient(90deg,#f0f0f0 25%,#e8f5f0 50%,#f0f0f0 75%);background-size:200% 100%;animation:loading 1.5s ease-in-out infinite;}
+    @keyframes loading{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
     .hero-image.loading{opacity:0;}
+    .hero-media:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+    .hero-media:hover .hero-image{transform:scale(1.06);}
 
-    .hero-media:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow-lg);
-    }
-
-    .hero-media:hover .hero-image{
-      transform:scale(1.06);
-    }
-
-    /* ==========================
-       Award highlight
-    =========================== */
-    .award-highlight{
-      margin-top:auto;
-    }
-
+    /* ===== Award card ===== */
+    .award-highlight{margin-top:auto;}
     .award-card{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:flex-start;
-      gap:1.1rem;
-      padding:1.25rem 1.5rem;
-      border-radius:20px;
-      background:
-        radial-gradient(circle at 5% 0%, rgba(212,175,55,.18) 0%, transparent 55%),
-        linear-gradient(135deg, #fff9ec 0%, #fffdf7 45%, #ffffff 100%);
+      display:flex;flex-wrap:wrap;align-items:flex-start;gap:1.1rem;
+      padding:1.25rem 1.5rem;border-radius:20px;
+      background:radial-gradient(circle at 5% 0%, rgba(212,175,55,.18) 0%, transparent 55%),
+                 linear-gradient(135deg, #fff9ec 0%, #fffdf7 45%, #ffffff 100%);
       border:1px solid rgba(212,175,55,.35);
       box-shadow:0 18px 40px rgba(15,23,42,.14);
-      text-decoration:none;
-      color:var(--text-dark);
-      position:relative;
-      overflow:hidden;
-      transition:
-        transform .3s var(--transition-smooth),
-        box-shadow .3s var(--transition-smooth),
-        border-color .3s var(--transition-smooth),
-        background .3s var(--transition-smooth);
+      text-decoration:none;color:var(--text-dark);
+      position:relative;overflow:hidden;
+      transition:transform .3s var(--transition-smooth), box-shadow .3s var(--transition-smooth), border-color .3s var(--transition-smooth);
     }
+    .award-card:hover{transform:translateY(-4px);box-shadow:0 24px 55px rgba(15,23,42,.20);border-color:rgba(212,175,55,.65);}
+    .award-pill{display:inline-flex;align-items:center;gap:.4rem;padding:.18rem .65rem;border-radius:999px;font-size:.75rem;font-weight:750;letter-spacing:.12em;text-transform:uppercase;background:rgba(27,77,62,.08);color:var(--dark-green);border:1px solid rgba(27,77,62,.18);margin-bottom:.45rem;}
+    .award-title{font-size:clamp(1.1rem,2.2vw,1.35rem);font-weight:800;letter-spacing:-.02em;color:var(--dark-green);margin-bottom:.3rem;}
+    .award-meta{font-size:.9rem;color:var(--text-light);}
 
-    .award-card::before{
-      content:'';
-      position:absolute;
-      inset:-1px;
-      background:linear-gradient(120deg, rgba(255,255,255,.45), transparent 40%, transparent 60%, rgba(212,175,55,.25));
-      mix-blend-mode:soft-light;
-      opacity:.9;
-      pointer-events:none;
-    }
+    /* ===== Sections ===== */
+    .content-section{padding:clamp(2.5rem,5vw,4.25rem) 0;border-bottom:1px solid var(--border-light);position:relative;scroll-margin-top:2rem;}
+    .content-section:last-of-type{border-bottom:none;}
+    .section-container{max-width:1400px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem);}
+    h2{font-size:clamp(1.85rem,4vw,2.85rem);font-weight:900;color:var(--dark-green);margin-bottom:1.35rem;letter-spacing:-.02em;position:relative;padding-bottom:1rem;line-height:1.25;}
+    h2::after{content:'';position:absolute;bottom:0;left:0;width:88px;height:4px;background:linear-gradient(90deg,var(--light-green),var(--primary-green));border-radius:999px;}
 
-    .award-card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 24px 55px rgba(15,23,42,.20);
-      border-color:rgba(212,175,55,.65);
-    }
-
-    .award-icon{
-      width:40px;
-      height:40px;
-      border-radius:50%;
-      background:
-        radial-gradient(circle at 30% 30%, #fff 0%, #fff6d9 30%, #d4af37 60%, #8a6c18 100%);
-      box-shadow:
-        0 0 0 4px rgba(212,175,55,.25),
-        0 16px 30px rgba(15,23,42,.28);
-      flex:0 0 auto;
-      position:relative;
-    }
-
-    /* Star removed, keep golden circle */
-    .award-icon::after{
-      content:'';
-    }
-
-    .award-text{
-      flex:1 1 220px;
-      position:relative;
-      z-index:1;
-    }
-
-    .award-pill{
-      display:inline-flex;
-      align-items:center;
-      gap:.4rem;
-      padding:.18rem .65rem;
-      border-radius:999px;
-      font-size:.75rem;
-      font-weight:750;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      background:rgba(27,77,62,.08);
-      color:var(--dark-green);
-      border:1px solid rgba(27,77,62,.18);
-      margin-bottom:.45rem;
-    }
-
-    .award-pill::before{
-      content:'';
-      width:6px;
-      height:6px;
-      border-radius:50%;
-      background:radial-gradient(circle, var(--gold-accent) 0%, rgba(212,175,55,.2) 70%);
-    }
-
-    .award-title{
-      font-size:clamp(1.1rem,2.2vw,1.35rem);
-      font-weight:800;
-      letter-spacing:-.02em;
-      color:var(--dark-green);
-      margin-bottom:.3rem;
-    }
-
-    .award-title span.arrow{
-      display:inline-block;
-      font-size:.95rem;
-      transform:translateX(0);
-      transition:transform .25s var(--transition-smooth);
-    }
-
-    .award-card:hover .award-title span.arrow{
-      transform:translateX(4px);
-    }
-
-    .award-meta{
-      font-size:.9rem;
-      color:var(--text-light);
-    }
-
-    /* =========================
-       Generic sections
-    ========================== */
-    .content-section{
-      padding:clamp(2.5rem,5vw,4.25rem) 0;
-      border-bottom:1px solid var(--border-light);
-      position:relative;
-      scroll-margin-top:2rem;
-    }
-
-    .content-section:last-of-type{
-      border-bottom:none;
-    }
-
-    .section-container{
-      max-width:1400px;
-      margin:0 auto;
-      padding:0 clamp(1rem,4vw,3rem);
-    }
-
-    h2{
-      font-size:clamp(1.85rem,4vw,2.85rem);
-      font-weight:900;
-      color:var(--dark-green);
-      margin-bottom:1.35rem;
-      letter-spacing:-.02em;
-      position:relative;
-      padding-bottom:1rem;
-      line-height:1.25;
-    }
-
-    h2::after{
-      content:'';
-      position:absolute;
-      bottom:0;
-      left:0;
-      width:88px;
-      height:4px;
-      background:linear-gradient(90deg,var(--light-green),var(--primary-green));
-      border-radius:999px;
-    }
-
-    /* =========================
-       Technologies & Buscadoras
-    ========================== */
-    .dual-sections-grid{
-      display:grid;
-      grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);
-      gap:clamp(2rem,4vw,3rem);
-      align-items:stretch;
-    }
-
-    .dual-column{
-      min-width:0;
-    }
+    /* ===== Tech + Buscadoras ===== */
+    .dual-sections-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(2rem,4vw,3rem);align-items:stretch;}
+    .dual-column{min-width:0;}
 
     #technologies{
-      background:
-        radial-gradient(circle at 20% 15%, rgba(232,245,240,.75) 0%, transparent 52%),
-        radial-gradient(circle at 80% 0%, rgba(212,175,55,.10) 0%, transparent 55%),
-        linear-gradient(135deg,#f8fcfb 0%,#fff 60%);
-      border-radius:26px;
-      padding:clamp(1.75rem,3vw,2.5rem);
-      border:1px solid rgba(45,95,77,.10);
-      box-shadow:var(--shadow-md);
-      position:relative;
-      overflow:hidden;
+      background:radial-gradient(circle at 20% 15%, rgba(232,245,240,.75) 0%, transparent 52%),
+                 radial-gradient(circle at 80% 0%, rgba(212,175,55,.10) 0%, transparent 55%),
+                 linear-gradient(135deg,#f8fcfb 0%,#fff 60%);
+      border-radius:26px;padding:clamp(1.75rem,3vw,2.5rem);
+      border:1px solid rgba(45,95,77,.10);box-shadow:var(--shadow-md);
+      position:relative;overflow:hidden;
     }
-
-    #technologies::before{
-      content:'';
-      position:absolute;
-      inset:-2px;
-      background:linear-gradient(90deg, rgba(74,140,115,.12), transparent 35%, transparent 65%, rgba(74,140,115,.10));
-      opacity:.6;
-      pointer-events:none;
-      mask-image:linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
-      -webkit-mask-image:linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
-    }
-
-    .info-list{
-      list-style:none;
-      padding-left:0;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));
-      gap:1rem 1.75rem;
-      margin-top:1.25rem;
-    }
-
+    .info-list{list-style:none;padding-left:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1rem 1.75rem;margin-top:1.25rem;}
     .info-list li{
-      padding:.9rem 1rem .9rem 2.55rem;
-      position:relative;
-      color:var(--text-medium);
-      font-size:clamp(.98rem,2.25vw,1.05rem);
-      min-height:46px;
-      display:flex;
-      align-items:center;
-      line-height:1.5;
-      border-radius:var(--radius-sm);
-      background:rgba(255,255,255,.7);
-      border:1px solid rgba(45,95,77,.10);
-      box-shadow:var(--shadow-sm);
-      backdrop-filter:blur(8px);
-      transition:
-        transform .25s var(--transition-smooth),
-        box-shadow .25s var(--transition-smooth),
-        border-color .25s var(--transition-smooth),
-        background .25s var(--transition-smooth),
-        color .25s var(--transition-smooth);
+      padding:.9rem 1rem .9rem 2.55rem;position:relative;color:var(--text-medium);
+      font-size:clamp(.98rem,2.25vw,1.05rem);min-height:46px;display:flex;align-items:center;line-height:1.5;
+      border-radius:var(--radius-sm);background:rgba(255,255,255,.7);
+      border:1px solid rgba(45,95,77,.10);box-shadow:var(--shadow-sm);backdrop-filter:blur(8px);
+      transition:transform .25s var(--transition-smooth), box-shadow .25s var(--transition-smooth), border-color .25s var(--transition-smooth), background .25s var(--transition-smooth), color .25s var(--transition-smooth);
     }
-
     .info-list li::before{
-      content:"✓";
-      position:absolute;
-      left:.75rem;
-      top:50%;
-      transform:translateY(-50%);
-      color:var(--light-green);
-      font-weight:900;
-      font-size:1.05rem;
-      background:rgba(232,245,240,.95);
-      width:28px;
-      height:28px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      content:"✓";position:absolute;left:.75rem;top:50%;transform:translateY(-50%);
+      color:var(--light-green);font-weight:900;font-size:1.05rem;background:rgba(232,245,240,.95);
+      width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;
       box-shadow:0 8px 22px rgba(15,23,42,.08);
-      transition:
-        transform .25s var(--transition-smooth),
-        background .25s var(--transition-smooth),
-        color .25s var(--transition-smooth);
     }
-
-    .info-list li:hover{
-      color:var(--primary-green);
-      transform:translateY(-3px);
-      box-shadow:var(--shadow-md);
-      border-color:rgba(74,140,115,.45);
-      background:#fff;
-    }
-
-    .info-list li:hover::before{
-      transform:translateY(-50%) scale(1.08);
-      background:var(--light-green);
-      color:#fff;
-    }
-
-    .image-gallery{
-      margin-top:2.15rem;
-      display:grid;
-      grid-template-columns:repeat(12,1fr);
-      gap:clamp(.75rem,1.25vw,1.05rem);
-    }
-
-    .gallery-item{
-      grid-column:span 3;
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:var(--shadow-md);
-      border:1px solid rgba(45,95,77,.10);
-      background:linear-gradient(180deg, rgba(232,245,240,.35) 0%, rgba(255,255,255,.9) 100%);
-      position:relative;
-      transform:translateY(0);
-      transition:transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth);
-      aspect-ratio:4/3;
-      min-height:0;
-    }
-
-    .gallery-item::after{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(212,175,55,.12) 0%, transparent 45%),
-        linear-gradient(180deg, rgba(0,0,0,.06) 0%, transparent 45%);
-      opacity:0;
-      transition:opacity .35s var(--transition-smooth);
-      pointer-events:none;
-    }
-
-    .gallery-item img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-      transform:scale(1.01);
-      transition:transform .65s var(--transition-smooth), opacity .4s ease;
-    }
-
-    .gallery-item img.loading{
-      opacity:0;
-    }
-
-    .gallery-item:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow-lg);
-    }
-
-    .gallery-item:hover::after{
-      opacity:1;
-    }
-
-    .gallery-item:hover img{
-      transform:scale(1.06);
-    }
+    .image-gallery{margin-top:2.15rem;display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(.75rem,1.25vw,1.05rem);}
+    .gallery-item{grid-column:span 3;border-radius:18px;overflow:hidden;box-shadow:var(--shadow-md);border:1px solid rgba(45,95,77,.10);background:#fff;position:relative;aspect-ratio:4/3;}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .4s ease;}
+    .gallery-item img.loading{opacity:0;}
 
     .buscadoras-section{
-      background:
-        radial-gradient(circle at 15% 20%, rgba(212,175,55,.10) 0%, transparent 52%),
-        radial-gradient(circle at 85% 0%, rgba(232,245,240,.55) 0%, transparent 60%),
-        linear-gradient(135deg,#fff8f5 0%,#fff 55%);
-      border-radius:26px;
-      padding:clamp(1.75rem,3vw,2.5rem);
-      border:1px solid rgba(45,95,77,.10);
-      box-shadow:var(--shadow-md);
-      position:relative;
-      overflow:hidden;
-      display:flex;
-      align-items:stretch;
+      background:radial-gradient(circle at 15% 20%, rgba(212,175,55,.10) 0%, transparent 52%),
+                 radial-gradient(circle at 85% 0%, rgba(232,245,240,.55) 0%, transparent 60%),
+                 linear-gradient(135deg,#fff8f5 0%,#fff 55%);
+      border-radius:26px;padding:clamp(1.75rem,3vw,2.5rem);
+      border:1px solid rgba(45,95,77,.10);box-shadow:var(--shadow-md);
+      position:relative;overflow:hidden;display:flex;align-items:stretch;
     }
-
     .buscadoras-content{
-      max-width:100%;
-      margin:0 auto;
-      text-align:center;
-      padding:0 clamp(.5rem,3vw,1.25rem);
-      background:rgba(255,255,255,.72);
-      border-radius:22px;
-      box-shadow:var(--shadow-sm);
-      backdrop-filter:blur(10px);
-      position:relative;
-      isolation:isolate;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
+      max-width:100%;margin:0 auto;text-align:center;padding:0 clamp(.5rem,3vw,1.25rem);
+      background:rgba(255,255,255,.72);border-radius:22px;box-shadow:var(--shadow-sm);
+      backdrop-filter:blur(10px);display:flex;flex-direction:column;justify-content:space-between;
     }
+    .buscadoras-text{font-size:clamp(1.02rem,2.2vw,1.18rem);color:var(--text-medium);line-height:1.8;margin-top:.4rem;}
+    .buscadoras-image{border-radius:24px;box-shadow:var(--shadow-lg);border:1px solid rgba(45,95,77,.12);overflow:hidden;margin:1.75rem auto .1rem;max-width:520px;background:#fff;}
+    .buscadoras-image img{width:100%;height:auto;display:block;transition:opacity .4s ease;}
+    .buscadoras-image img.loading{opacity:0;}
 
-    .buscadoras-content::after{
-      content:'';
-      position:absolute;
-      inset:0;
-      border-radius:22px;
-      background:
-        linear-gradient(135deg, rgba(232,245,240,.35) 0%, transparent 35%),
-        radial-gradient(circle at 85% 15%, rgba(212,175,55,.10) 0%, transparent 55%);
-      opacity:.9;
-      pointer-events:none;
-      z-index:0;
-    }
+    /* ===== Partnerships ===== */
+    .collab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:clamp(1.1rem,2.2vw,1.8rem);margin-top:1.5rem;}
+    .collab-card{background:#fff;border-radius:18px;box-shadow:var(--shadow-md);border:1px solid rgba(45,95,77,.10);overflow:hidden;transition:transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth);min-height:220px;display:flex;flex-direction:column;justify-content:space-between;}
+    .collab-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);}
+    .collab-logo{padding:1.15rem 1.15rem .65rem;display:flex;align-items:center;justify-content:center;min-height:140px;}
+    .collab-logo img{max-width:100%;max-height:95px;width:auto;height:auto;object-fit:contain;transition:opacity .3s ease;}
+    .collab-logo img.loading{opacity:0;}
+    .collab-meta{padding:.85rem 1.15rem 1.15rem;border-top:1px solid rgba(0,0,0,.06);background:linear-gradient(180deg, rgba(232,245,240,.25) 0%, rgba(255,255,255,.92) 100%);}
+    .collab-name{font-weight:850;color:var(--dark-green);font-size:1.02rem;line-height:1.35;letter-spacing:-.01em;}
+    .collab-note{margin-top:.35rem;color:var(--text-light);font-size:.92rem;line-height:1.45;}
 
-    .buscadoras-content > *{
-      position:relative;
-      z-index:1;
-    }
+    .collab-card-gif .collab-logo{padding:0!important;min-height:0!important;height:168px;display:block;overflow:hidden;background:#fff;}
+    .collab-card-gif .collab-logo img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 25%;display:block;filter:none!important;transform:scale(1.02);transition:transform .8s var(--transition-smooth), opacity .4s ease;}
+    .collab-card-gif .collab-logo img.loading{opacity:0;}
+    .collab-card-gif:hover .collab-logo img{transform:scale(1.06);}
 
-    .buscadoras-text{
-      font-size:clamp(1.02rem,2.2vw,1.18rem);
-      color:var(--text-medium);
-      line-height:1.8;
-      margin-top:.4rem;
-    }
-
-    .buscadoras-image{
-      border-radius:24px;
-      box-shadow:var(--shadow-lg);
-      border:1px solid rgba(45,95,77,.12);
-      overflow:hidden;
-      margin:1.75rem auto .1rem;
-      max-width:520px;
-      position:relative;
-      transform:translateY(0);
-      transition:transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth);
-      background:#fff;
-    }
-
-    .buscadoras-image img{
-      width:100%;
-      height:auto;
-      display:block;
-      transform:scale(1.01);
-      transition:transform .7s var(--transition-smooth), opacity .4s ease;
-    }
-
-    .buscadoras-image img.loading{
-      opacity:0;
-    }
-
-    .buscadoras-image:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow-lg);
-    }
-
-    .buscadoras-image:hover img{
-      transform:scale(1.05);
-    }
-
-    /* =========================
-       Institutional partnerships
-    ========================== */
-    .collab-wrap{
-      margin-top:2rem;
-    }
-
-    .collab-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));
-      gap:clamp(1.1rem,2.2vw,1.8rem);
-      margin-top:1.5rem;
-    }
-
-    .collab-card{
-      background:#fff;
-      border-radius:18px;
-      box-shadow:var(--shadow-md);
-      border:1px solid rgba(45,95,77,.10);
-      overflow:hidden;
-      position:relative;
-      transition:transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth), border-color .35s var(--transition-smooth);
-      min-height:220px;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      isolation:isolate;
-    }
-
-    .collab-card::before{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(circle at 15% 10%, rgba(232,245,240,.85) 0%, transparent 55%),
-        radial-gradient(circle at 85% 0%, rgba(212,175,55,.12) 0%, transparent 60%);
-      opacity:0;
-      transition:opacity .35s ease;
-      pointer-events:none;
-      z-index:0;
-    }
-
-    .collab-card:hover{
-      transform:translateY(-8px);
-      box-shadow:var(--shadow-lg);
-      border-color:rgba(74,140,115,.55);
-    }
-
-    .collab-card:hover::before{
-      opacity:1;
-    }
-
-    .collab-logo{
-      padding:1.15rem 1.15rem .65rem;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:140px;
-      position:relative;
-      z-index:1;
-    }
-
-    .collab-logo img{
-      max-width:100%;
-      max-height:95px;
-      width:auto;
-      height:auto;
-      object-fit:contain;
-      filter:grayscale(25%) brightness(1.06);
-      transition:transform .35s var(--transition-smooth), filter .35s var(--transition-smooth), opacity .3s ease;
-    }
-
-/* Frontier Tech Hub logo – very subtle separation only */
-.collab-img{
-  max-height:80px;
-  width:auto;
-  object-fit:contain;
-  filter:drop-shadow(0 0 1px rgba(0,0,0,.18));
-}
-            
-    .collab-logo img.loading{
-      opacity:0;
-    }
-
-    .collab-card:hover .collab-logo img{
-      filter:grayscale(0%) brightness(1);
-      transform:scale(1.04);
-    }
-
-    .collab-meta{
-      padding:.85rem 1.15rem 1.15rem;
-      border-top:1px solid rgba(0,0,0,.06);
-      background:linear-gradient(180deg, rgba(232,245,240,.25) 0%, rgba(255,255,255,.92) 100%);
-      position:relative;
-      z-index:1;
-    }
-
-    .collab-name{
-      font-weight:850;
-      color:var(--dark-green);
-      font-size:1.02rem;
-      line-height:1.35;
-      letter-spacing:-.01em;
-    }
-
-    .collab-note{
-      margin-top:.35rem;
-      color:var(--text-light);
-      font-size:.92rem;
-      line-height:1.45;
-    }
-
-    .collab-card-gif .collab-logo{
-      padding:0 !important;
-      min-height:0 !important;
-      height:168px;
-      display:block;
-      overflow:hidden;
-      background:#fff;
-    }
-
-    .collab-card-gif .collab-logo img{
-      max-height:none !important;
-      max-width:none !important;
-      width:100% !important;
-      height:100% !important;
-      object-fit:cover !important;
-      object-position:center 25%;
-      display:block;
-      filter:none !important;
-      transform:scale(1.02);
-      transition:transform .8s var(--transition-smooth), opacity .4s ease;
-    }
-
-    .collab-card-gif .collab-logo img.loading{
-      opacity:0;
-    }
-
-    .collab-card-gif:hover .collab-logo img{
-      transform:scale(1.06);
-    }
-
-    /* =========================
-       Social
-    ========================== */
+    /* ===== Social ===== */
     .social-section{
-      background:
-        radial-gradient(900px 520px at 20% 0%, rgba(232,245,240,.75) 0%, transparent 55%),
-        linear-gradient(135deg, rgba(232,245,240,.65) 0%, #fff 68%);
-      padding:clamp(3rem,6vw,5rem) 0;
-      margin:0;
-      position:relative;
-      overflow:hidden;
+      background:radial-gradient(900px 520px at 20% 0%, rgba(232,245,240,.75) 0%, transparent 55%),
+                 linear-gradient(135deg, rgba(232,245,240,.65) 0%, #fff 68%);
+      padding:clamp(3rem,6vw,5rem) 0;position:relative;overflow:hidden;
     }
+    .social-container{max-width:1600px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem);}
+    .section-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:var(--dark-green);margin-bottom:1rem;text-align:center;letter-spacing:-.03em;line-height:1.15;}
+    .section-subtitle{font-size:clamp(1.1rem,2.5vw,1.3rem);color:var(--text-medium);text-align:center;margin-bottom:3rem;max-width:900px;margin-left:auto;margin-right:auto;line-height:1.7;}
+    .social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(1.25rem,2.6vw,2.25rem);align-items:start;}
+    .social-embed{background:#fff;border-radius:20px;padding:1.25rem;box-shadow:var(--shadow-lg);display:flex;align-items:center;justify-content:center;min-height:420px;border:1px solid rgba(45,95,77,.12);overflow:hidden;transition:transform .35s var(--transition-smooth);}
+    .social-embed:hover{transform:translateY(-6px);}
+    .iframe-container{position:relative;width:100%;max-width:560px;overflow:hidden;border-radius:16px;border:1px solid rgba(15,23,42,.08);box-shadow:0 10px 30px rgba(15,23,42,.08);}
+    .iframe-container iframe{width:100%;border:0;display:block;height:880px;}
 
-    .social-container{
-      max-width:1600px;
-      margin:0 auto;
-      padding:0 clamp(1rem,4vw,3rem);
-    }
-
-    .section-title{
-      font-size:clamp(2rem,5vw,3.2rem);
-      font-weight:900;
-      color:var(--dark-green);
-      margin-bottom:1rem;
-      text-align:center;
-      letter-spacing:-.03em;
-      line-height:1.15;
-    }
-
-    .section-subtitle{
-      font-size:clamp(1.1rem,2.5vw,1.3rem);
-      color:var(--text-medium);
-      text-align:center;
-      margin-bottom:3rem;
-      max-width:900px;
-      margin-left:auto;
-      margin-right:auto;
-      line-height:1.7;
-    }
-
-    .social-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));
-      gap:clamp(1.25rem,2.6vw,2.25rem);
-      align-items:start;
-    }
-
-    .social-embed{
-      background:#fff;
-      border-radius:20px;
-      padding:1.25rem;
-      box-shadow:var(--shadow-lg);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:420px;
-      border:1px solid rgba(45,95,77,.12);
-      overflow:hidden;
-      position:relative;
-      transition:
-        transform .35s var(--transition-smooth),
-        box-shadow .35s var(--transition-smooth),
-        border-color .35s var(--transition-smooth);
-    }
-
-    .social-embed:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow-lg);
-      border-color:rgba(74,140,115,.50);
-    }
-
-    .iframe-container{
-      position:relative;
-      width:100%;
-      max-width:560px;
-      overflow:hidden;
-      border-radius:16px;
-      border:1px solid rgba(15,23,42,.08);
-      box-shadow:0 10px 30px rgba(15,23,42,.08);
-    }
-
-    .iframe-container iframe{
-      width:100%;
-      border:0;
-      display:block;
-      height:880px;
-    }
-
-    /* =========================
-       Footer
-    ========================== */
+    /* ===== Footer ===== */
     .footer{
-      text-align:center;
-      padding:clamp(3.5rem,7vw,5.5rem) 0;
-      margin-top:0;
-      border-top:1px solid var(--border-light);
-      background:
-        radial-gradient(900px 520px at 80% 0%, rgba(232,245,240,.75) 0%, transparent 55%),
-        linear-gradient(135deg,#f8fcfb 0%,#fff 72%);
-      position:relative;
-      overflow:hidden;
+      text-align:center;padding:clamp(3.5rem,7vw,5.5rem) 0;border-top:1px solid var(--border-light);
+      background:radial-gradient(900px 520px at 80% 0%, rgba(232,245,240,.75) 0%, transparent 55%),
+                 linear-gradient(135deg,#f8fcfb 0%,#fff 72%);
+      position:relative;overflow:hidden;
     }
+    .footer-content{max-width:1400px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem);}
+    .footer em{font-size:clamp(1.22rem,3vw,1.65rem);color:var(--dark-green);font-weight:850;font-style:italic;letter-spacing:.02em;line-height:1.6;display:inline-block;padding:.95rem 1.35rem;border-radius:16px;background:linear-gradient(135deg, rgba(232,245,240,.95) 0%, transparent 100%);border:1px solid rgba(45,95,77,.10);box-shadow:var(--shadow-sm);}
 
-    .footer-content{
-      max-width:1400px;
-      margin:0 auto;
-      padding:0 clamp(1rem,4vw,3rem);
-    }
-
-    .footer em{
-      font-size:clamp(1.22rem,3vw,1.65rem);
-      color:var(--dark-green);
-      font-weight:850;
-      font-style:italic;
-      letter-spacing:.02em;
-      line-height:1.6;
-      display:inline-block;
-      max-width:100%;
-      padding:.95rem 1.35rem;
-      border-radius:16px;
-      background:linear-gradient(135deg, rgba(232,245,240,.95) 0%, transparent 100%);
-      border:1px solid rgba(45,95,77,.10);
-      box-shadow:var(--shadow-sm);
-    }
-
-    /* =========================
-       Touch zoom (small-screen gallery)
-    ========================== */
+    /* ===== Touch zoom (mobile) ===== */
     @media (max-width:768px){
-      .touch-zoomable{
-        cursor:zoom-in;
-      }
-
+      .touch-zoomable{cursor:zoom-in;}
       .touch-zoomable.is-expanded{
-        position:fixed;
-        inset:0;
-        margin:0 !important;
-        width:100vw !important;
-        height:100vh !important;
-        max-width:none !important;
-        max-height:none !important;
-        z-index:9999;
-        background:rgba(0,0,0,.9);
-        border-radius:0 !important;
-        box-shadow:none !important;
-        padding:0 !important;
-        display:flex;
-        align-items:center;
-        justify-content:center;
+        position:fixed;inset:0;margin:0!important;width:100vw!important;height:100vh!important;z-index:9999;
+        background:rgba(0,0,0,.9);border-radius:0!important;box-shadow:none!important;padding:0!important;
+        display:flex;align-items:center;justify-content:center;
       }
-
-      .touch-zoomable.is-expanded img,
-      .touch-zoomable.is-expanded .hero-image{
-        width:100%;
-        height:100%;
-        object-fit:contain;
-        transform:none !important;
-        box-shadow:none !important;
-      }
+      .touch-zoomable.is-expanded img,.touch-zoomable.is-expanded .hero-image{width:100%;height:100%;object-fit:contain;transform:none!important;box-shadow:none!important;}
     }
 
-    /* =========================
-       Responsive tweaks
-    ========================== */
-    @media (max-width:1100px){
-      .image-gallery{
-        grid-template-columns:repeat(6,1fr);
-      }
-      .gallery-item{
-        grid-column:span 3;
-      }
-    }
-
+    /* ===== Responsive ===== */
+    @media (max-width:1100px){.image-gallery{grid-template-columns:repeat(6,1fr);} .gallery-item{grid-column:span 3;}}
     @media (max-width:900px){
-      .dual-sections-grid{
-        grid-template-columns:1fr;
-      }
-      .hero-top{
-        grid-template-columns:1fr;
-      }
-      .hero-media{
-        margin:1rem auto 0;
-        max-width:520px;
-      }
-      .hero-side{
-        max-width:520px;
-        margin:0 auto;
-      }
+      .dual-sections-grid{grid-template-columns:1fr;}
+      .hero-top{grid-template-columns:1fr;}
+      .hero-media{margin:1rem auto 0;max-width:520px;}
+      .hero-side{max-width:520px;margin:0 auto;}
     }
-
     @media (max-width:768px){
-      .page,
-      #main,
-      .initial-content,
-      .page__inner-wrap,
-      .page__content,
-      .archive{
-        width:100% !important;
-      }
-
-      .lang-toggle{
-        top:.9rem;
-      }
-
-      .hero{
-        padding:1.25rem 0 1.75rem;
-      }
-
-      .hero-text{
-        max-width:100%;
-      }
-
-      .animated-tagline{
-        flex-direction:column;
-        align-items:center;
-        gap:.45rem;
-      }
-
-      .tagline-pill{
-        padding:.55rem 1rem;
-        max-width:100%;
-        align-items:center;
-        text-align:center;
-      }
-
-      .tagline-pill span#hero-tagline-static{
-        font-size:clamp(1.6rem,6vw,2rem);
-        text-align:center;
-      }
-
-      .hero-word{
-        font-size:clamp(1.7rem,6vw,2.2rem);
-      }
-
-      .award-highlight{
-        margin-top:.6rem;
-      }
-
-      .hero-media{
-        max-width:100%;
-        box-shadow:var(--shadow-sm);
-      }
-
-      .hero-media::before{
-        padding-top:52%;
-      }
-
-      .hero-media:hover{
-        transform:none;
-        box-shadow:var(--shadow-sm);
-        max-width:100%;
-      }
-
-      .image-gallery{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .gallery-item{
-        grid-column:span 2;
-        aspect-ratio:16/10;
-        max-height:160px;
-        box-shadow:var(--shadow-sm);
-      }
-
-      .buscadoras-image{
-        max-width:100%;
-        margin-top:1.2rem;
-        box-shadow:var(--shadow-sm);
-      }
-
-      .collab-card{
-        min-height:auto;
-        box-shadow:var(--shadow-sm);
-      }
-
-      .collab-logo{
-        min-height:70px;
-        padding:.7rem;
-      }
-
-      .collab-logo img{
-        max-height:60px;
-      }
-
-      .collab-meta{
-        padding:.6rem .8rem .8rem;
-      }
-
-      .collab-name{
-        font-size:.96rem;
-      }
-
-      .collab-note{
-        font-size:.85rem;
-      }
-
-      .social-grid{
-        grid-template-columns:1fr;
-      }
-
-      .social-embed{
-        min-height:auto;
-        box-shadow:var(--shadow-sm);
-      }
-
-      .iframe-container iframe{
-        height:520px;
-      }
-
-      .award-card{
-        padding:1.1rem 1.2rem;
-      }
-
-      .project-logo{
-        width:80px;
-      }
+      .page,#main,.initial-content,.page__inner-wrap,.page__content,.archive{width:100%!important;}
+      .lang-toggle{top:.9rem;}
+      .hero{padding:1.25rem 0 1.75rem;}
+      .animated-tagline{flex-direction:column;align-items:center;gap:.45rem;}
+      .tagline-pill{padding:.55rem 1rem;max-width:100%;align-items:center;text-align:center;}
+      .tagline-pill span#hero-tagline-static{font-size:clamp(1.6rem,6vw,2rem);text-align:center;}
+      .hero-word{font-size:clamp(1.7rem,6vw,2.2rem);}
+      .hero-media::before{padding-top:52%;}
+      .image-gallery{grid-template-columns:repeat(2,1fr);}
+      .gallery-item{grid-column:span 2;aspect-ratio:16/10;max-height:160px;box-shadow:var(--shadow-sm);}
+      .buscadoras-image{max-width:100%;margin-top:1.2rem;box-shadow:var(--shadow-sm);}
+      .social-grid{grid-template-columns:1fr;}
+      .iframe-container iframe{height:520px;}
     }
-
-    @media (max-width:480px){
-      .gallery-item{
-        max-height:140px;
-      }
-      .iframe-container iframe{
-        height:430px;
-      }
-    }
-
-/* Re-tint Frontier Tech Hub logo to dark */
-.collab-img.fth{
-  filter: brightness(0) saturate(100%) invert(9%) sepia(6%)
-          saturate(512%) hue-rotate(94deg)
-          brightness(95%) contrast(96%);
-}
-    
-/* Re-tint LABCO logo to dark */
-.collab-img.labco{
-  filter: brightness(0) saturate(100%) invert(9%) sepia(6%)
-          saturate(512%) hue-rotate(94deg)
-          brightness(95%) contrast(96%);
-}
-    
-    
+    @media (max-width:480px){.gallery-item{max-height:140px;} .iframe-container iframe{height:430px;}}
   </style>
 </head>
 
 <body>
+  <!-- GLOBAL MOVING CIRCUITS BACKGROUND -->
+  <div class="circuit-bg" aria-hidden="true">
+    <div class="circuit-particles"></div>
+    <svg class="circuit-svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+      <path class="circuit-line" d="M40 120 H260 V220 H420 V140 H560 V260 H760 V180 H940 V320 H1120" />
+      <path class="circuit-line alt" d="M80 680 H240 V560 H420 V640 H610 V520 H780 V600 H980 V480 H1140" />
+      <path class="circuit-line gold" d="M120 320 H320 V420 H520 V340 H700 V460 H920 V390 H1080 V540" />
+      <path class="circuit-line" d="M180 60 V180 H320 V80 H520 V210 H680 V120 H860 V260 H1040 V140" />
+      <path class="circuit-line alt" d="M200 740 V620 H360 V740 H520 V610 H700 V720 H900 V610 H1080 V700" />
+      <path class="circuit-line gold" d="M60 460 H200 V520 H340 V450 H520 V560 H680 V500 H860 V620 H1040 V560" />
+      <circle class="circuit-node" cx="260" cy="120" r="6"/>
+      <circle class="circuit-node" cx="420" cy="220" r="6"/>
+      <circle class="circuit-node gold" cx="560" cy="260" r="6"/>
+      <circle class="circuit-node" cx="760" cy="180" r="6"/>
+      <circle class="circuit-node gold" cx="940" cy="320" r="6"/>
+      <circle class="circuit-node" cx="240" cy="560" r="6"/>
+      <circle class="circuit-node gold" cx="610" cy="520" r="6"/>
+      <circle class="circuit-node" cx="980" cy="480" r="6"/>
+      <circle class="circuit-node" cx="320" cy="420" r="6"/>
+      <circle class="circuit-node gold" cx="700" cy="460" r="6"/>
+      <circle class="circuit-node" cx="1080" cy="540" r="6"/>
+      <circle class="circuit-node" cx="520" cy="80" r="6"/>
+      <circle class="circuit-node gold" cx="860" cy="260" r="6"/>
+      <circle class="circuit-node" cx="360" cy="740" r="6"/>
+      <circle class="circuit-node gold" cx="900" cy="610" r="6"/>
+      <circle class="circuit-node" cx="520" cy="560" r="6"/>
+      <circle class="circuit-node gold" cx="1040" cy="560" r="6"/>
+    </svg>
+  </div>
+
   <!-- TITLE SECTION -->
   <section class="title-section">
     <div class="lang-toggle" aria-label="Language selection">
@@ -1389,7 +432,6 @@ redirect_from:
   <section class="hero">
     <div class="hero-content">
       <div class="hero-top">
-        <!-- LEFT: tagline + paragraph -->
         <div class="hero-text">
           <div class="animated-tagline">
             <div class="tagline-pill" aria-label="FOUND tagline">
@@ -1406,7 +448,6 @@ redirect_from:
           </p>
         </div>
 
-        <!-- RIGHT: image + award, award pushed down -->
         <div class="hero-side">
           <div class="hero-media skeleton touch-zoomable" aria-label="Hero media">
             <img
@@ -1419,12 +460,10 @@ redirect_from:
 
           <div class="award-highlight">
             <a href="/news/#mariela-award" class="award-card">
-             
               <div class="award-text">
                 <div class="award-pill">Award</div>
                 <div class="award-title">
-                  FOUND's pioneer recognised with the Sir Nicholas Browne Policy and Expertise Award
-                  <span class="arrow">↗</span>
+                  FOUND's pioneer recognised with the Sir Nicholas Browne Policy and Expertise Award ↗
                 </div>
                 <div class="award-meta">
                   Selected from over 200 nominations across the UK Foreign, Commonwealth &amp; Development Office.
@@ -1440,7 +479,6 @@ redirect_from:
   <!-- TECHNOLOGIES + BUSCADORAS -->
   <section class="content-section">
     <div class="section-container dual-sections-grid">
-      <!-- Technologies -->
       <div class="dual-column">
         <section id="technologies">
           <h2 id="tech-title">Technologies in Action</h2>
@@ -1473,13 +511,9 @@ redirect_from:
             <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/WhatsApp%20Image%202024-07-30%20at%2021.40.57.jpeg?raw=true" alt="Team collaboration during field operations" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
-           <div class="gallery-item touch-zoomable">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/c88e3807678629fcd59ad91baff20b6ec7a34f66/images/layers.jpg?raw=true"
-       alt="Technology deployment in field"
-       loading="lazy"
-       class="loading"
-       onload="this.classList.remove('loading')">
-</div>
+            <div class="gallery-item touch-zoomable">
+              <img src="https://github.com/FOUND-project/found-project.github.io/blob/c88e3807678629fcd59ad91baff20b6ec7a34f66/images/layers.jpg?raw=true" alt="Technology deployment in field" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+            </div>
             <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/IMG-20231204-WA0038.jpg?raw=true" alt="Field operations and search activities" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
@@ -1489,26 +523,16 @@ redirect_from:
             <div class="gallery-item touch-zoomable">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/70206a6b5788f7204524bfdd4e1a6c365668b75d/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.44.jpeg" alt="Search methodology in practice" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
-<div class="gallery-item touch-zoomable">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/51a35a3f1915699b8fe9835270ddfe6f3c5c0946/images/hyperspectral%20from%20presentation.png?raw=true"
-       alt="Hyperspectral analysis output used in FOUND field validation"
-       loading="lazy"
-       class="loading"
-       onload="this.classList.remove('loading')">
-</div>
-
-<div class="gallery-item touch-zoomable">
-  <img src="https://github.com/FOUND-project/found-project.github.io/blob/51a35a3f1915699b8fe9835270ddfe6f3c5c0946/images/pigs_aerial.jpg?raw=true"
-       alt="Aerial view of experimental calibration site using animal proxies"
-       loading="lazy"
-       class="loading"
-       onload="this.classList.remove('loading')">
-</div>  
+            <div class="gallery-item touch-zoomable">
+              <img src="https://github.com/FOUND-project/found-project.github.io/blob/51a35a3f1915699b8fe9835270ddfe6f3c5c0946/images/hyperspectral%20from%20presentation.png?raw=true" alt="Hyperspectral analysis output used in FOUND field validation" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+            </div>
+            <div class="gallery-item touch-zoomable">
+              <img src="https://github.com/FOUND-project/found-project.github.io/blob/51a35a3f1915699b8fe9835270ddfe6f3c5c0946/images/pigs_aerial.jpg?raw=true" alt="Aerial view of experimental calibration site using animal proxies" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+            </div>
           </div>
         </section>
       </div>
 
-      <!-- Buscadoras -->
       <div class="dual-column">
         <section class="buscadoras-section" id="buscadoras">
           <div class="buscadoras-content">
@@ -1534,354 +558,91 @@ redirect_from:
     <div class="section-container">
       <h2 id="collab-title">Institutional Partnerships</h2>
 
-      <div class="collab-wrap" aria-label="Institutional partnerships logos">
-        <div class="collab-grid">
-          <!-- 7. Search Collectives -->
-          <div class="collab-card collab-card-gif touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0bed7c6b4c906bc94116683368b679ba0bd80428/images/mothers%20walking.gif"
-                alt="Search Collectives logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-7">Search Collectives</div>
-              <div class="collab-note" id="collab-note-7">Leadership, field expertise</div>
-            </div>
+      <div class="collab-grid">
+        <div class="collab-card collab-card-gif touch-zoomable">
+          <div class="collab-logo">
+            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0bed7c6b4c906bc94116683368b679ba0bd80428/images/mothers%20walking.gif"
+                 alt="Search Collectives"
+                 loading="lazy"
+                 class="loading"
+                 onload="this.classList.remove('loading')">
           </div>
-
-          <!-- 1. UN -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/1%20Executive%20Office%20of%20the%20UN%20Secretary-General.svg"
-                   alt="Executive Office of the UN Secretary-General logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-1">Executive Office of the UN Secretary-General</div>
-              <div class="collab-note" id="collab-note-1">International collaboration</div>
-            </div>
+          <div class="collab-meta">
+            <div class="collab-name" id="collab-item-7">Search Collectives</div>
+            <div class="collab-note" id="collab-note-7">Leadership, field expertise</div>
           </div>
+        </div>
 
-          <!-- 2. FCDO -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/bd3ef3bd33596258b2738274017f51a2e2c05186/images/FCDO_logo_960x640.png"
-                alt="UK Foreign, Commonwealth & Development Office logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
-            </div>
-
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-2">
-                UK Foreign, Commonwealth &amp; Development Office (FCDO)
-              </div>
-              <div class="collab-note" id="collab-note-2">
-                Policy, Funding, Partnerships
-              </div>
-            </div>
+        <div class="collab-card touch-zoomable">
+          <div class="collab-logo">
+            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/1%20Executive%20Office%20of%20the%20UN%20Secretary-General.svg"
+                 alt="Executive Office of the UN Secretary-General"
+                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
           </div>
-
-          <!-- 3. CentroGeo -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20logo_centrogeo_wide.svg"
-                   alt="CentroGeo logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-3">CentroGeo</div>
-              <div class="collab-note" id="collab-note-3">Co-lead, Technical expertise</div>
-            </div>
+          <div class="collab-meta">
+            <div class="collab-name" id="collab-item-1">Executive Office of the UN Secretary-General</div>
+            <div class="collab-note" id="collab-note-1">International collaboration</div>
           </div>
+        </div>
 
-          <!-- 4. University of Guadalajara -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/26bd52ce350828b22814cfedc872786dd43de672/images/580141488dfc53bfdbde59fa6b043438.jpg"
-                   alt="University of Guadalajara logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-4">University of Guadalajara (UdeG)</div>
-              <div class="collab-note" id="collab-note-4">Technical expertise, Experimental sites</div>
-            </div>
+        <div class="collab-card touch-zoomable">
+          <div class="collab-logo">
+            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/bd3ef3bd33596258b2738274017f51a2e2c05186/images/FCDO_logo_960x640.png"
+                 alt="UK Foreign, Commonwealth & Development Office"
+                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
           </div>
-
-          <!-- 5. Colombian Search Unit -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg"
-                   alt="Colombian Search Unit logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-5">Colombian Search Unit (UBPD)</div>
-              <div class="collab-note" id="collab-note-5">Casework, Technical exchange</div>
-            </div>
+          <div class="collab-meta">
+            <div class="collab-name" id="collab-item-2">UK Foreign, Commonwealth &amp; Development Office (FCDO)</div>
+            <div class="collab-note" id="collab-note-2">Policy, Funding, Partnerships</div>
           </div>
+        </div>
 
-          <!-- 6. Mexico National Search Commission -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/4%20Comision%20Nacional%20de%20Busqueda.png"
-                   alt="Mexico National Search Commission logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-6">Mexico’s National Search Commission</div>
-              <div class="collab-note" id="collab-note-6">National coordination</div>
-            </div>
+        <div class="collab-card touch-zoomable">
+          <div class="collab-logo">
+            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20logo_centrogeo_wide.svg"
+                 alt="CentroGeo"
+                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
           </div>
-
-          <!-- 8. British Embassy -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/6%20British%20Embassy%20Mexico_Blue%20(ENG).png"
-                   alt="British Embassy Mexico City logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-8">British Embassy in Mexico City</div>
-              <div class="collab-note" id="collab-note-8">Funding, Coordination support</div>
-            </div>
+          <div class="collab-meta">
+            <div class="collab-name" id="collab-item-3">CentroGeo</div>
+            <div class="collab-note" id="collab-note-3">Co-lead, Technical expertise</div>
           </div>
+        </div>
 
-          <!-- 9. Oxford Festival of the Arts -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/5ea7b61d8c5c6467ad4253f2898109033aac13e7/images/OFOTA_COLOUR_WEB.jpg"
-                   alt="Oxford Festival of the Arts logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-9">Oxford Festival of the Arts</div>
-              <div class="collab-note" id="collab-note-9">Oxford Forum partner</div>
-            </div>
+        <div class="collab-card touch-zoomable">
+          <div class="collab-logo">
+            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/26bd52ce350828b22814cfedc872786dd43de672/images/580141488dfc53bfdbde59fa6b043438.jpg"
+                 alt="University of Guadalajara"
+                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
           </div>
-
-          <!-- 10. University of Bath -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b2323f813df618867a6227a87e7efb9e084fe75e/images/Beth.jpg"
-                   alt="University of Bath – Oxford Forum partner"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-10">University of Bath</div>
-              <div class="collab-note" id="collab-note-10">Technical expertise, Oxford Forum partner</div>
-            </div>
+          <div class="collab-meta">
+            <div class="collab-name" id="collab-item-4">University of Guadalajara (UdeG)</div>
+            <div class="collab-note" id="collab-note-4">Technical expertise, Experimental sites</div>
           </div>
+        </div>
 
-          <!-- British Association for Forensic Anthropology -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/11%20logo%20BAFAlogo_orig.png"
-                alt="British Association for Forensic Anthropology logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-bafa">British Association for Forensic Anthropology</div>
-              <div class="collab-note" id="collab-note-bafa">Forensic expertise</div>
-            </div>
+        <div class="collab-card touch-zoomable">
+          <div class="collab-logo">
+            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg"
+                 alt="Colombian Search Unit"
+                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
           </div>
-
-          <!-- Comisión de Búsqueda de Jalisco -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/3%20Comisio%CC%81n%20de%20Bu%CC%81squeda%20de%20Jalisco.png"
-                alt="Comisión de Búsqueda de Jalisco logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-jalisco">Comisión de Búsqueda de Jalisco</div>
-              <div class="collab-note" id="collab-note-jalisco">Technical expertise, Coordination</div>
-            </div>
+          <div class="collab-meta">
+            <div class="collab-name" id="collab-item-5">Colombian Search Unit (UBPD)</div>
+            <div class="collab-note" id="collab-note-5">Casework, Technical exchange</div>
           </div>
+        </div>
 
-          <!-- University of Oxford -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/4%20logo%20oxford-university-logo.png"
-                alt="University of Oxford logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-oxford">University of Oxford</div>
-              <div class="collab-note" id="collab-note-oxford">Co-lead, Technical expertise</div>
-            </div>
+        <div class="collab-card touch-zoomable">
+          <div class="collab-logo">
+            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/4%20Comision%20Nacional%20de%20Busqueda.png"
+                 alt="Mexico National Search Commission"
+                 loading="lazy" class="loading" onload="this.classList.remove('loading')">
           </div>
-
-          <!-- Mexico’s Science and Technology Secretariat -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20Logotipo_SECIHTI_2025-2030.svg"
-                alt="Mexico's Science and Technology Secretariat logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-secihti">Mexico’s Science and Technology Secretariat</div>
-              <div class="collab-note" id="collab-note-secihti">Funding, Policy impact</div>
-            </div>
+          <div class="collab-meta">
+            <div class="collab-name" id="collab-item-6">Mexico’s National Search Commission</div>
+            <div class="collab-note" id="collab-note-6">National coordination</div>
           </div>
-
-          <!-- UNAM Geophysics -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20logo%20IGeofisicaUNAM.png"
-                alt="UNAM Geophysics Institute logo"
-                loading="lazy"
-                onload="this.classList.remove('loading')"
-                style="filter: brightness(0) invert(0);">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-unam-geo">UNAM – Geophysics</div>
-              <div class="collab-note" id="collab-note-unam-geo">Technical expertise</div>
-            </div>
-          </div>
-
-          <!-- UNAM Engineering -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/6%20logo%20Ingenieria%20UNAM.png"
-                alt="UNAM Engineering logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-unam-eng">UNAM – Engineering</div>
-              <div class="collab-note" id="collab-note-unam-eng">Technical expertise</div>
-            </div>
-          </div>
-
-<!-- Frontier Tech Hub -->
-<div class="collab-card touch-zoomable">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
-      alt="Frontier Tech Hub logo"
-      loading="lazy"
-      class="collab-img fth"
-    >
-  </div>
-
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-fth">
-      Frontier Tech Hub
-    </div>
-    <div class="collab-note" id="collab-note-fth">
-      Funding • Technical expertise
-    </div>
-  </div>
-</div>
-
-          <!-- DT Global -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20DTG_Logo_Screen_LRG-1.png"
-                alt="DT Global logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-dtg">DT Global</div>
-              <div class="collab-note" id="collab-note-dtg">Funding, Technical expertise</div>
-            </div>
-          </div>
-
-          <!-- UPZMG -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20logo%20UPZMG2.png"
-                alt="UPZMG logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-upzmg">UPZMG</div>
-              <div class="collab-note" id="collab-note-upzmg">Experimental site</div>
-            </div>
-          </div>
-
-          <!-- UWE Bristol -->
-          <div class="collab-card touch-zoomable">
-            <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/9%20logo%20UWE%20Bristol.svg"
-                alt="UWE Bristol logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
-            </div>
-            <div class="collab-meta">
-              <div class="collab-name" id="collab-item-uwe">UWE Bristol</div>
-              <div class="collab-note" id="collab-note-uwe">Funding, Technical expertise</div>
-            </div>
-          </div>
-
-<!-- LABCO -->
-<div class="collab-card touch-zoomable">
-  <div class="collab-logo">
-    <img
-      src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d47bacb6b575270e7b5453c8ebc5b13bcec70a2f/images/dark-non-retina-labco.png"
-      alt="LABCO logo"
-      loading="lazy"
-      class="collab-img labco"
-    >
-  </div>
-
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-labco">LABCO</div>
-    <div class="collab-note" id="collab-note-labco">
-      Exploring AI together to locate and identify
-    </div>
-  </div>
-</div>
-
-<!-- Argentine Forensic Anthropology Team (EAAF) -->
-<div class="collab-card touch-zoomable">
-  <div class="collab-logo">
-    <img
-      src="https://github.com/FOUND-project/found-project.github.io/blob/82b303cdf26fa6a25e9845ff0d5fc10e070d94e6/images/logo_eaaf_rd.png?raw=true"
-      alt="Argentine Forensic Anthropology Team (EAAF) logo"
-      loading="lazy"
-      class="loading"
-      onload="this.classList.remove('loading')"
-    >
-  </div>
-  <div class="collab-meta">
-    <div class="collab-name" id="collab-item-eaaf">
-      Argentine Forensic Anthropology Team (EAAF)
-    </div>
-    <div class="collab-note" id="collab-note-eaaf">
-      Luis Fondebrider, FOUND’s advisor
-    </div>
-  </div>
-</div>
-       
         </div>
       </div>
     </div>
@@ -1891,18 +652,13 @@ redirect_from:
   <section class="social-section" id="social">
     <div class="social-container">
       <h2 class="section-title" id="social-title">Follow Our Journey</h2>
-      <p class="section-subtitle" id="social-subtitle">
-        Our latest findings, community stories, and collaborations
-      </p>
+      <p class="section-subtitle" id="social-subtitle">Our latest findings, community stories, and collaborations</p>
 
       <div class="social-grid">
-        <!-- Card 1 -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
               src="https://www.linkedin.com/embed/feed/update/urn:li:share:7405294962692595712"
-              height="880"
-              width="504"
               frameborder="0"
               allowfullscreen
               title="FOUND Project LinkedIn update"
@@ -1910,13 +666,10 @@ redirect_from:
           </div>
         </div>
 
-        <!-- Card 2 -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
               src="https://www.linkedin.com/embed/feed/update/urn:li:share:7407705201647845376"
-              height="880"
-              width="504"
               frameborder="0"
               allowfullscreen
               title="FOUND Project LinkedIn update"
@@ -1924,7 +677,6 @@ redirect_from:
           </div>
         </div>
 
-        <!-- Guardian tweet -->
         <div class="social-embed twitter-embed">
           <div class="iframe-container">
             <blockquote class="twitter-tweet">
@@ -1943,13 +695,10 @@ redirect_from:
           </div>
         </div>
 
-        <!-- Card 3 -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
               src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
-              height="880"
-              width="504"
               frameborder="0"
               allowfullscreen
               title="FOUND Project community engagement"
@@ -1957,13 +706,10 @@ redirect_from:
           </div>
         </div>
 
-        <!-- Card 4 -->
         <div class="social-embed">
           <div class="iframe-container">
             <iframe
               src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624"
-              height="880"
-              width="504"
               frameborder="0"
               allowfullscreen
               title="FCDO LinkedIn post about FOUND Project"
@@ -1984,199 +730,181 @@ redirect_from:
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   <!-- LANGUAGE TOGGLE + WORD ROTATION + TOUCH ZOOM -->
-<script>
-  (function(){
-    const translations = {
-      en:{
-        'collab-item-labco':'LABCO',
-        'collab-note-labco':'Exploring together AI to locate and identify',
-        'collab-item-eaaf':'Argentine Forensic Anthropology Team (EAAF)',
-        'collab-note-eaaf':"Luis Fondebrider, FOUND's advisor",
-        'project-subtitle':'<span class="title-accent">Interpreting Nature</span> To Locate Those Who We Are Missing',
-        'hero-tagline-static':'Using technology to',
-        'word-1':'search.',
-        'word-2':'remember.',
-        'word-3':'dignify.',
-        'word-4':'find.',
-        'word-5':'bring closure.',
-        'hero-main-text':'124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.',
-        'collab-title':'Institutional Partnerships',
-        'tech-title':'Technologies in Action',
-        'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
-        'tech-item-2':'Airborne LiDAR',
-        'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
-        'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry',
-        'tech-item-5':'Satellite Spectral Analysis',
-        'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
-        'buscadoras-title':'The Role of Buscadoras',
-        'buscadoras-text':"Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.",
-        'social-title':'Follow Our Journey',
-        'social-subtitle':'Stay connected with our latest findings, community stories, and collaborations',
-        'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
-      },
-      es:{
-        'collab-item-labco':'LABCO',
-        'collab-note-labco':'Explorando juntos el uso de IA para localizar e identificar',
-        'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
-        'collab-note-eaaf':'Luis Fondebrider, asesor de FOUND',
-        'project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan',
-        'hero-tagline-static':'Usando tecnología para',
-        'word-1':'buscar.',
-        'word-2':'recordar.',
-        'word-3':'dignificar.',
-        'word-4':'encontrar.',
-        'word-5':'dar cierre.',
-        'hero-main-text':'124,354 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de familias buscadoras para aprender del campo, localizar y promover cambios sistémicos.',
-        'collab-title':'Alianzas institucionales',
-        'tech-title':'Tecnologías en acción',
-        'tech-item-1':'Imágenes multiespectrales e hiperespectrales',
-        'tech-item-2':'LiDAR aerotransportado',
-        'tech-item-3':'Interferometría de ruido sísmico (TIRSA)',
-        'tech-item-4':'Tomografía de resistividad eléctrica y mediciones de conductividad',
-        'tech-item-5':'Análisis espectral satelital',
-        'tech-item-6':'Entomología forense, botánica, análisis territorial y ciencia del suelo',
-        'buscadoras-title':'El papel de las buscadoras',
-        'buscadoras-text':'Los colectivos liderados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.',
-        'social-title':'Sigue nuestro camino',
-        'social-subtitle':'Mantente al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.',
-        'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
-      },
-      nah:{
-        'collab-item-labco':'LABCO',
-        'collab-note-labco':'Tlen momachtia IA para temoa huan quixmati',
-        'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
-        'collab-note-eaaf':'Luis Fondebrider, consejero FOUND',
-        'project-subtitle':'<span class="title-accent">In Naturaleza titlatlajtolti</span> para tipantlaltiah in aquimeh techpoloa',
-        'hero-tagline-static':'Teknolojíayoh ika',
-        'word-1':'temoa.',
-        'word-2':'quilnamictia.',
-        'word-3':'tlatepanita.',
-        'word-4':'quipantlalia.',
-        'word-5':'yolpakilistli quimacatia.',
-        'hero-main-text':'124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia tehnologíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
-        'collab-title':'Tlen tlatlanecuiltilis nemilistli (alianzas institucionales)',
-        'tech-title':'Teknolojíayoh tlen motequiti',
-        'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
-        'tech-item-2':'Airborne LiDAR',
-        'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
-        'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry',
-        'tech-item-5':'Satellite Spectral Analysis',
-        'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
-        'buscadoras-title':'In papel in buscadoras',
-        'buscadoras-text':'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan país tlen polihuiliztli huan tlayectlaliz justice. Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknológicoh tequitl.',
-        'social-title':'Xiquito in totlanejmachtiliz',
-        'social-subtitle':'Ximoyetkixtia inin tlen tipantlaliah, tlen tlanechicoliztli in comunidades huan inin tlen timocoyonaltiah san sejco.',
-        'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
-      }
-    };
-
-    let heroWords = [];
-    let wordIndex = 0;
-    let wordInterval = null;
-
-    function buildHeroWords(lang){
-      const dict = translations[lang] || translations.en;
-      const keys = ['word-1','word-2','word-3','word-4','word-5'];
-      heroWords = keys.map(k => dict[k]).filter(Boolean);
-      wordIndex = 0;
-      const span = document.getElementById('hero-word');
-      if(span && heroWords.length){
-        span.textContent = heroWords[0];
-      }
-    }
-
-    function startWordRotation(){
-      const span = document.getElementById('hero-word');
-      if(wordInterval) clearInterval(wordInterval);
-      if(!span || heroWords.length < 2) return;
-
-      wordInterval = setInterval(function(){
-        span.style.opacity = '0';
-        setTimeout(function(){
-          wordIndex = (wordIndex + 1) % heroWords.length;
-          span.textContent = heroWords[wordIndex];
-          span.style.opacity = '1';
-        },180);
-      },1250);
-    }
-
-    function setLanguage(lang){
-      const dict = translations[lang] || translations.en;
-
-      Object.keys(dict).forEach(function(id){
-        const el = document.getElementById(id);
-        if(el) el.innerHTML = dict[id];
-      });
-
-      document.documentElement.setAttribute(
-        'lang',
-        lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
-      );
-
-      document.querySelectorAll('.lang-btn').forEach(function(btn){
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-      });
-
-      try{ localStorage.setItem('found-lang', lang); }catch(e){}
-
-      buildHeroWords(lang);
-      startWordRotation();
-    }
-
-    function setupTouchZoom(){
-      const zoomables = document.querySelectorAll('.touch-zoomable');
-      if(!zoomables.length) return;
-
-      function toggleZoom(el){
-        const isExpanded = el.classList.contains('is-expanded');
-        if(isExpanded){
-          el.classList.remove('is-expanded');
-          document.body.classList.remove('zoom-active');
-        }else{
-          document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
-            openEl.classList.remove('is-expanded');
-          });
-          el.classList.add('is-expanded');
-          document.body.classList.add('zoom-active');
+  <script>
+    (function(){
+      const translations = {
+        en:{
+          'project-subtitle':'<span class="title-accent">Interpreting Nature</span> To Locate Those Who We Are Missing',
+          'hero-tagline-static':'Using technology to',
+          'word-1':'search.',
+          'word-2':'remember.',
+          'word-3':'dignify.',
+          'word-4':'find.',
+          'word-5':'bring closure.',
+          'hero-main-text':'124,354 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> combines technology with the knowledge of searching families to learn, locate, and drive systemic change.',
+          'collab-title':'Institutional Partnerships',
+          'tech-title':'Technologies in Action',
+          'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
+          'tech-item-2':'Airborne LiDAR',
+          'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
+          'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry',
+          'tech-item-5':'Satellite Spectral Analysis',
+          'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
+          'buscadoras-title':'The Role of Buscadoras',
+          'buscadoras-text':"Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.",
+          'social-title':'Follow Our Journey',
+          'social-subtitle':'Stay connected with our latest findings, community stories, and collaborations',
+          'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
+        },
+        es:{
+          'project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan',
+          'hero-tagline-static':'Usando tecnología para',
+          'word-1':'buscar.',
+          'word-2':'recordar.',
+          'word-3':'dignificar.',
+          'word-4':'encontrar.',
+          'word-5':'dar cierre.',
+          'hero-main-text':'124,354 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de familias buscadoras para aprender del campo, localizar y promover cambios sistémicos.',
+          'collab-title':'Alianzas institucionales',
+          'tech-title':'Tecnologías en acción',
+          'tech-item-1':'Imágenes multiespectrales e hiperespectrales',
+          'tech-item-2':'LiDAR aerotransportado',
+          'tech-item-3':'Interferometría de ruido sísmico (TIRSA)',
+          'tech-item-4':'Tomografía de resistividad eléctrica y mediciones de conductividad',
+          'tech-item-5':'Análisis espectral satelital',
+          'tech-item-6':'Entomología forense, botánica, análisis territorial y ciencia del suelo',
+          'buscadoras-title':'El papel de las buscadoras',
+          'buscadoras-text':'Los colectivos liderados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.',
+          'social-title':'Sigue nuestro camino',
+          'social-subtitle':'Mantente al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.',
+          'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
+        },
+        nah:{
+          'project-subtitle':'<span class="title-accent">In Naturaleza titlatlajtolti</span> para tipantlaltiah in aquimeh techpoloa',
+          'hero-tagline-static':'Teknolojíayoh ika',
+          'word-1':'temoa.',
+          'word-2':'quilnamictia.',
+          'word-3':'tlatepanita.',
+          'word-4':'quipantlalia.',
+          'word-5':'yolpakilistli quimacatia.',
+          'hero-main-text':'124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia tehnologíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia tlanemilistli yancuic ipan sistema.',
+          'collab-title':'Tlen tlatlanecuiltilis nemilistli (alianzas institucionales)',
+          'tech-title':'Teknolojíayoh tlen motequiti',
+          'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
+          'tech-item-2':'Airborne LiDAR',
+          'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
+          'tech-item-4':'Electrical Resistivity Tomography, Conductivimetry',
+          'tech-item-5':'Satellite Spectral Analysis',
+          'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
+          'buscadoras-title':'In papel in buscadoras',
+          'buscadoras-text':'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan país tlen polihuiliztli huan tlayectlaliz justice. Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknológicoh tequitl.',
+          'social-title':'Xiquito in totlanejmachtiliz',
+          'social-subtitle':'Ximoyetkixtia inin tlen tipantlaliah, tlen tlanechicoliztli in comunidades huan inin tlen timocoyonaltiah san sejco.',
+          'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
         }
+      };
+
+      let heroWords = [];
+      let wordIndex = 0;
+      let wordInterval = null;
+
+      function buildHeroWords(lang){
+        const dict = translations[lang] || translations.en;
+        const keys = ['word-1','word-2','word-3','word-4','word-5'];
+        heroWords = keys.map(k => dict[k]).filter(Boolean);
+        wordIndex = 0;
+        const span = document.getElementById('hero-word');
+        if(span && heroWords.length){ span.textContent = heroWords[0]; }
       }
 
-      zoomables.forEach(function(el){
-        el.addEventListener('click', function(e){
-          if(window.matchMedia && window.matchMedia('(max-width: 768px)').matches){
-            e.preventDefault();
-            e.stopPropagation();
-            toggleZoom(el);
+      function startWordRotation(){
+        const span = document.getElementById('hero-word');
+        if(wordInterval) clearInterval(wordInterval);
+        if(!span || heroWords.length < 2) return;
+
+        wordInterval = setInterval(function(){
+          span.style.opacity = '0';
+          setTimeout(function(){
+            wordIndex = (wordIndex + 1) % heroWords.length;
+            span.textContent = heroWords[wordIndex];
+            span.style.opacity = '1';
+          },180);
+        },1250);
+      }
+
+      function setLanguage(lang){
+        const dict = translations[lang] || translations.en;
+
+        Object.keys(dict).forEach(function(id){
+          const el = document.getElementById(id);
+          if(el) el.innerHTML = dict[id];
+        });
+
+        document.documentElement.setAttribute('lang', lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en'));
+
+        document.querySelectorAll('.lang-btn').forEach(function(btn){
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+
+        try{ localStorage.setItem('found-lang', lang); }catch(e){}
+
+        buildHeroWords(lang);
+        startWordRotation();
+      }
+
+      function setupTouchZoom(){
+        const zoomables = document.querySelectorAll('.touch-zoomable');
+        if(!zoomables.length) return;
+
+        function toggleZoom(el){
+          const isExpanded = el.classList.contains('is-expanded');
+          if(isExpanded){
+            el.classList.remove('is-expanded');
+            document.body.classList.remove('zoom-active');
+          }else{
+            document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
+              openEl.classList.remove('is-expanded');
+            });
+            el.classList.add('is-expanded');
+            document.body.classList.add('zoom-active');
+          }
+        }
+
+        zoomables.forEach(function(el){
+          el.addEventListener('click', function(e){
+            if(window.matchMedia && window.matchMedia('(max-width: 768px)').matches){
+              e.preventDefault();
+              e.stopPropagation();
+              toggleZoom(el);
+            }
+          });
+        });
+
+        document.addEventListener('keydown', function(e){
+          if(e.key === 'Escape'){
+            document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
+              openEl.classList.remove('is-expanded');
+            });
+            document.body.classList.remove('zoom-active');
           }
         });
-      });
+      }
 
-      document.addEventListener('keydown', function(e){
-        if(e.key === 'Escape'){
-          document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
-            openEl.classList.remove('is-expanded');
-          });
-          document.body.classList.remove('zoom-active');
-        }
-      });
-    }
+      document.addEventListener('DOMContentLoaded', function(){
+        let savedLang = null;
+        try{ savedLang = localStorage.getItem('found-lang'); }catch(e){}
+        const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
+        setLanguage(initialLang);
 
-    document.addEventListener('DOMContentLoaded', function(){
-      let savedLang = null;
-      try{ savedLang = localStorage.getItem('found-lang'); }catch(e){}
-      const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
-      setLanguage(initialLang);
-
-      document.querySelectorAll('.lang-btn').forEach(function(btn){
-        btn.addEventListener('click', function(){
-          setLanguage(btn.dataset.lang);
+        document.querySelectorAll('.lang-btn').forEach(function(btn){
+          btn.addEventListener('click', function(){ setLanguage(btn.dataset.lang); });
         });
+
+        setupTouchZoom();
+        buildHeroWords(initialLang);
+        startWordRotation();
       });
-
-      setupTouchZoom();
-    });
-  })();
-</script>
-
+    })();
+  </script>
 </body>
 </html>
