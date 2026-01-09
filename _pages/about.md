@@ -252,7 +252,61 @@ redirect_from:
       background:rgba(255,255,255,.06);
       padding:8px;
       flex-shrink:0;
+     position: relative;  /* ADD THIS LINE */
     }
+
+    /* ADD ALL THE NEW CODE BELOW, right after .project-logo */
+    
+    .project-logo::before {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(74, 140, 115, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(74, 140, 115, 0.3) 0%, transparent 50%);
+      animation: circuitPulse 2.5s ease-in-out infinite;
+      pointer-events: none;
+      border-radius: inherit;
+      z-index: -1;
+      mix-blend-mode: screen;
+    }
+
+    .project-logo::after {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      background: radial-gradient(circle at 50% 40%, rgba(46, 213, 115, 0.5) 0%, transparent 60%);
+      animation: leafGlow 3s ease-in-out infinite;
+      pointer-events: none;
+      border-radius: inherit;
+      z-index: -1;
+      mix-blend-mode: screen;
+    }
+
+    @keyframes circuitPulse {
+      0%, 100% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    }
+
+    @keyframes leafGlow {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.8;
+      }
+    }  
+
+
+
+
+    
 
     .project-title{
       font-size:clamp(2.6rem,6vw,4.7rem);
