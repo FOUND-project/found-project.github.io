@@ -322,6 +322,15 @@ body::before{
       overflow:hidden;
     }
 
+
+/* Allow global FOUND background (roots → circuits) to show through */
+.title-section,
+.hero{
+  background-color:transparent;
+}
+
+    
+    
     .hero::before{
       content:'';
       position:absolute;
