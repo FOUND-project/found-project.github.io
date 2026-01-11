@@ -108,6 +108,38 @@ redirect_from:
       overflow:hidden;
     }
 
+
+
+
+/* =========================
+   FOUND site-wide background (roots → circuits)
+   Add: images/found-bg.svg
+========================= */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;            /* sits behind everything */
+  pointer-events:none;
+  background-image:
+    radial-gradient(900px 520px at 18% 18%, rgba(232,245,240,.55) 0%, transparent 60%),
+    radial-gradient(820px 520px at 82% 10%, rgba(212,175,55,.10) 0%, transparent 62%),
+    url("/images/found-bg.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  opacity:0.14;          /* tweak 0.10–0.18 */
+  transform:translateZ(0);
+}
+
+@media (prefers-reduced-motion: reduce){
+  body::before{ transform:none; }
+}
+
+    
+
+    
+    
     html{scroll-behavior:smooth;}
 
     *:focus-visible{
