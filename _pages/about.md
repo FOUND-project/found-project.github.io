@@ -98,44 +98,49 @@ redirect_from:
       font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
       color:var(--text-dark);
       line-height:1.7;
-      background:transparent; /* CHANGED: allow global background layer to be visible */
-      position:relative;      /* CHANGED */
+      background:#fff;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       overflow-x:hidden;
     }
 
-    /* CHANGED: keep the page canvas white */
-    html{ background:#fff; scroll-behavior:smooth; }
-
     body.zoom-active{
       overflow:hidden;
     }
 
-    /* =========================
-       FOUND site-wide background (roots → circuits)
-       Add: images/found-bg.svg
-    ========================= */
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      z-index:0;            /* CHANGED: was -1 */
-      pointer-events:none;
-      background-image:
-        radial-gradient(900px 520px at 18% 18%, rgba(232,245,240,.55) 0%, transparent 60%),
-        radial-gradient(820px 520px at 82% 10%, rgba(212,175,55,.10) 0%, transparent 62%),
-        url("{{ '/images/found-bg.svg' | relative_url }}");
-      background-repeat:no-repeat;
-      background-size:cover;
-      background-position:center;
-      opacity:0.14;          /* tweak 0.10–0.18 */
-      transform:translateZ(0);
-    }
 
-    @media (prefers-reduced-motion: reduce){
-      body::before{ transform:none; }
-    }
+
+
+/* =========================
+   FOUND site-wide background (roots → circuits)
+   Add: images/found-bg.svg
+========================= */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;            /* sits behind everything */
+  pointer-events:none;
+  background-image:
+    radial-gradient(900px 520px at 18% 18%, rgba(232,245,240,.55) 0%, transparent 60%),
+    radial-gradient(820px 520px at 82% 10%, rgba(212,175,55,.10) 0%, transparent 62%),
+    url("/images/found-bg.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  opacity:0.14;          /* tweak 0.10–0.18 */
+  transform:translateZ(0);
+}
+
+@media (prefers-reduced-motion: reduce){
+  body::before{ transform:none; }
+}
+
+    
+
+    
+    
+    html{scroll-behavior:smooth;}
 
     *:focus-visible{
       outline:3px solid rgba(74,140,115,.55);
@@ -152,8 +157,6 @@ redirect_from:
     .archive{
       max-width:none!important;
       width:106% !important;
-      position:relative;   /* CHANGED */
-      z-index:1;           /* CHANGED */
     }
 
     .page__content{
@@ -318,6 +321,15 @@ redirect_from:
       position:relative;
       overflow:hidden;
     }
+
+
+/* Allow global FOUND background (roots → circuits) to show through */
+.title-section,
+.hero{
+  background-color:transparent;
+}
+
+    
     
     .hero::before{
       content:'';
@@ -1487,25 +1499,6 @@ redirect_from:
               saturate(512%) hue-rotate(94deg)
               brightness(95%) contrast(96%);
     }
-
-    /* =========================
-       CHANGED: Let global background show through Title + Hero
-       (must be late in the stylesheet to win)
-    ========================== */
-    .title-section{
-      background:transparent !important;
-    }
-    .title-section::before,
-    .title-section::after{
-      display:none !important;
-    }
-
-    .hero{
-      background:transparent !important;
-    }
-    .hero::before{
-      background:none !important;
-    }
   </style>
 </head>
 
@@ -2267,7 +2260,7 @@ redirect_from:
           'collab-item-ori':'Oxford Robotics Institute',
           'collab-note-ori':'Tlaneltiliztli (alianza), teknikoh tlamatiliztli',
           'collab-item-ipn':'Instituto Politécnico Nacional',
-          'collab-note-ipn':'Teknikoh tlamatiliztli, tehnologíayoh tlatequipanoliztli',
+          'collab-note-ipn':'Teknikoh tlamatiliztli, teknolojíayoh tlatequipanoliztli',
 
           'project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan',
           'hero-tagline-static':'Teknolojíayoh ika',
