@@ -2192,7 +2192,7 @@ body::before{
           'collab-item-ipn':'Instituto Politécnico Nacional',
           'collab-note-ipn':'Technical expertise, Technology',
 
-          'project-subtitle':'<span class="title-accent">Interpreting Nature</span> To Locate Those Who We Are Missing',
+          'project-subtitle':'<span class="title-accent">Technologies</span> To Locate Those Who We Are Missing',
           'hero-tagline-static':'Using technology to',
           'word-1':'search.',
           'word-2':'remember.',
@@ -2213,7 +2213,7 @@ body::before{
           'buscadoras-text':"Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.",
           'social-title':'Follow Our Journey',
           'social-subtitle':'Stay connected with our latest findings, community stories, and collaborations',
-          'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
+          'footer-text':'FOUND: Tecnologías para Encontrar a Quienes nos Faltan.'
         },
         es:{
           'collab-item-labco':'LABCO',
@@ -2227,7 +2227,7 @@ body::before{
           'collab-item-ipn':'Instituto Politécnico Nacional',
           'collab-note-ipn':'Experiencia técnica, desarrollo tecnológico',
 
-          'project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan',
+          'project-subtitle':'<span class="title-accent">Tecnologías</span> para Encontrar a Quienes nos Faltan',
           'hero-tagline-static':'Usando tecnología para',
           'word-1':'buscar.',
           'word-2':'recordar.',
@@ -2262,7 +2262,7 @@ body::before{
           'collab-item-ipn':'Instituto Politécnico Nacional',
           'collab-note-ipn':'Teknikoh tlamatiliztli, teknolojíayoh tlatequipanoliztli',
 
-          'project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan',
+          'project-subtitle':'<span class="title-accent">Tecnologías</span> para Encontrar a Quienes nos Faltan',
           'hero-tagline-static':'Teknolojíayoh ika',
           'word-1':'temoa.',
           'word-2':'quilnamictia.',
