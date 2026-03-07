@@ -1561,7 +1561,7 @@ body::before{
               <div class="award-text">
                 <div class="award-pill">Award</div>
                 <div class="award-title">
-                  FOUND's pioneer recognised with the Sir Nicholas Browne Policy and Expertise Award
+                  FOUND recognised with the Sir Nicholas Browne Policy and Expertise Award
                   <span class="arrow">↗</span>
                 </div>
                 <div class="award-meta">
