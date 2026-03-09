@@ -468,124 +468,7 @@ redirect_from:
       transform:scale(1.06);
     }
 
-    /* =========================
-       GIF Collage (hero)
-    ========================== */
-    .gif-collage {
-      display: grid;
-      grid-template-columns: 1.55fr 1fr;
-      gap: .55rem;
-      border-radius: var(--radius-lg);
-      overflow: visible;
-      position: relative;
-    }
 
-    .gif-main {
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid rgba(45,95,77,.14);
-      box-shadow: var(--shadow-md);
-      position: relative;
-      background: linear-gradient(135deg, rgba(232,245,240,.8), rgba(255,255,255,.9));
-      transform: translateY(0);
-      transition: transform .4s var(--transition-smooth), box-shadow .4s var(--transition-smooth);
-      aspect-ratio: 4/3;
-    }
-
-    .gif-main::before {
-      content: attr(data-label);
-      position: absolute;
-      bottom: .65rem; left: .65rem;
-      z-index: 2;
-      font-size: .7rem; font-weight: 700;
-      letter-spacing: .10em; text-transform: uppercase;
-      color: #fff;
-      background: rgba(14,40,30,.62);
-      backdrop-filter: blur(8px);
-      padding: .22rem .65rem; border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.22);
-      opacity: 0; transform: translateY(4px);
-      transition: opacity .3s ease, transform .3s ease;
-      pointer-events: none;
-    }
-    .gif-main:hover::before { opacity:1; transform:translateY(0); }
-    .gif-main:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
-    .gif-main img {
-      width:100%; height:100%; object-fit:cover; display:block;
-      transform:scale(1.01);
-      transition:transform .75s var(--transition-smooth), opacity .4s ease;
-    }
-    .gif-main img.loading { opacity:0; }
-    .gif-main:hover img { transform:scale(1.06); }
-
-    .gif-stack { display:flex; flex-direction:column; gap:.55rem; }
-
-    .gif-thumb {
-      flex: 1;
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      border: 1px solid rgba(45,95,77,.12);
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      background: linear-gradient(135deg, rgba(232,245,240,.7), rgba(255,255,255,.9));
-      transform: translateY(0);
-      transition: transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth);
-      min-height: 0;
-    }
-
-    .gif-thumb::before {
-      content: attr(data-label);
-      position: absolute;
-      bottom: .5rem; left: .5rem;
-      z-index: 2;
-      font-size: .65rem; font-weight: 700;
-      letter-spacing: .10em; text-transform: uppercase;
-      color: #fff;
-      background: rgba(14,40,30,.62);
-      backdrop-filter: blur(8px);
-      padding: .18rem .55rem; border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.22);
-      opacity: 0; transform: translateY(3px);
-      transition: opacity .28s ease, transform .28s ease;
-      pointer-events: none;
-      white-space: nowrap;
-      max-width: calc(100% - 1rem);
-      overflow: hidden; text-overflow: ellipsis;
-    }
-    .gif-thumb:hover::before { opacity:1; transform:translateY(0); }
-    .gif-thumb:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
-    .gif-thumb img {
-      width:100%; height:100%; object-fit:cover; display:block;
-      transform:scale(1.01);
-      transition:transform .7s var(--transition-smooth), opacity .4s ease;
-    }
-    .gif-thumb img.loading { opacity:0; }
-    .gif-thumb:hover img { transform:scale(1.07); }
-
-    .gif-thumb::after {
-      content:'';
-      position:absolute; top:.55rem; right:.55rem;
-      width:8px; height:8px;
-      background:var(--gold-accent);
-      border-radius:50%;
-      box-shadow:0 0 0 2px rgba(255,255,255,.55);
-      animation:livePulse 2.2s ease-in-out infinite;
-      z-index:2;
-    }
-    @keyframes livePulse {
-      0%,100%{ opacity:1; transform:scale(1); }
-      50%    { opacity:.55; transform:scale(1.35); }
-    }
-
-    @media (max-width:600px){
-      .gif-collage{ grid-template-columns:1fr; gap:.45rem; }
-      .gif-main{ aspect-ratio:16/9; }
-      .gif-stack{ flex-direction:row; height:130px; }
-      .gif-thumb{ flex:1; height:100%; }
-    }
-    @media (min-width:601px) and (max-width:900px){
-      .gif-main{ aspect-ratio:16/9; }
-    }
 
     /* ==========================
        Award highlight
@@ -1586,6 +1469,98 @@ redirect_from:
               saturate(512%) hue-rotate(94deg)
               brightness(95%) contrast(96%);
     }
+
+    /* =========================
+       GIF Strip (full-width, 3 panels)
+    ========================== */
+    .gif-strip{
+      padding:clamp(1.4rem,3vw,2.4rem) 0;
+      position:relative; overflow:hidden;
+      border-top:1px solid var(--border-light);
+      border-bottom:1px solid var(--border-light);
+      background:
+        radial-gradient(900px 520px at 15% 10%, rgba(232,245,240,.85) 0%, transparent 55%),
+        radial-gradient(820px 520px at 85% 0%, rgba(212,175,55,.10) 0%, transparent 60%),
+        linear-gradient(135deg,#f8fcfb 0%, #ffffff 65%);
+      isolation:isolate;
+    }
+    .gif-strip::before{
+      content:'';
+      position:absolute; inset:-2px;
+      background:
+        repeating-linear-gradient(90deg, rgba(45,95,77,.10) 0px, rgba(45,95,77,.10) 1px, transparent 1px, transparent 18px),
+        repeating-linear-gradient(0deg,  rgba(74,140,115,.08) 0px, rgba(74,140,115,.08) 1px, transparent 1px, transparent 22px);
+      opacity:.22; pointer-events:none;
+      mask-image:radial-gradient(circle at 60% 50%, black 0%, black 55%, transparent 78%);
+      -webkit-mask-image:radial-gradient(circle at 60% 50%, black 0%, black 55%, transparent 78%);
+      z-index:0; animation:circuitDrift 14s linear infinite;
+    }
+    .gif-strip::after{
+      content:''; position:absolute; inset:0;
+      background:
+        radial-gradient(600px 320px at 70% 50%, rgba(74,140,115,.18) 0%, transparent 60%),
+        radial-gradient(520px 280px at 30% 70%, rgba(212,175,55,.12) 0%, transparent 62%);
+      opacity:.55; pointer-events:none; z-index:0;
+    }
+    .gif-strip-inner{
+      max-width:1400px; margin:0 auto;
+      padding:0 clamp(1rem,4vw,3rem);
+      position:relative; z-index:1;
+      display:grid;
+      grid-template-columns: 1.55fr 1fr 1fr;
+      gap:clamp(.55rem,1.2vw,.9rem);
+      align-items:stretch;
+    }
+    .gs-panel{
+      border-radius:var(--radius-md); overflow:hidden;
+      border:1px solid rgba(45,95,77,.14); box-shadow:var(--shadow-md);
+      position:relative;
+      background:linear-gradient(135deg, rgba(232,245,240,.8), rgba(255,255,255,.9));
+      transform:translateY(0);
+      transition: transform .4s var(--transition-smooth), box-shadow .4s var(--transition-smooth);
+    }
+    .gs-panel-main { aspect-ratio:16/9; }
+    .gs-panel-side { aspect-ratio:4/3; }
+    .gs-panel::before{
+      content:attr(data-label);
+      position:absolute; bottom:.65rem; left:.65rem; z-index:2;
+      font-size:.7rem; font-weight:700; letter-spacing:.10em; text-transform:uppercase;
+      color:#fff; background:rgba(14,40,30,.62); backdrop-filter:blur(8px);
+      padding:.22rem .65rem; border-radius:999px;
+      border:1px solid rgba(255,255,255,.22);
+      opacity:0; transform:translateY(4px);
+      transition:opacity .3s ease, transform .3s ease; pointer-events:none;
+    }
+    .gs-panel:hover::before{ opacity:1; transform:translateY(0); }
+    .gs-panel:hover{ transform:translateY(-5px); box-shadow:var(--shadow-lg); }
+    .gs-panel img{
+      position:absolute; inset:0; width:100%; height:100%;
+      object-fit:cover; display:block; transform:scale(1.01);
+      transition:transform .75s var(--transition-smooth), opacity .4s ease;
+    }
+    .gs-panel img.loading{ opacity:0; }
+    .gs-panel:hover img{ transform:scale(1.05); }
+    .gs-panel-side::after{
+      content:''; position:absolute; top:.55rem; right:.55rem;
+      width:8px; height:8px; background:var(--gold-accent); border-radius:50%;
+      box-shadow:0 0 0 2px rgba(255,255,255,.55);
+      animation:livePulse 2.2s ease-in-out infinite; z-index:2;
+    }
+    @keyframes livePulse{
+      0%,100%{ opacity:1; transform:scale(1); }
+      50%    { opacity:.55; transform:scale(1.35); }
+    }
+    @media (max-width:700px){
+      .gif-strip-inner{ grid-template-columns:1fr; }
+      .gs-panel-main, .gs-panel-side{ aspect-ratio:16/9; }
+    }
+    @media (min-width:701px) and (max-width:1050px){
+      .gif-strip-inner{ grid-template-columns:1fr 1fr; grid-template-rows:auto auto; }
+      .gs-panel-main{ grid-column:1; grid-row:1/3; aspect-ratio:unset; min-height:220px; }
+      .gs-panel-side:nth-child(2){ grid-column:2; grid-row:1; }
+      .gs-panel-side:nth-child(3){ grid-column:2; grid-row:2; }
+    }
+
   </style>
 </head>
 
@@ -1634,49 +1609,13 @@ redirect_from:
         </div>
 
         <div class="hero-side">
-          <div class="gif-collage">
-
-            <!-- Main: NDAI5 -->
-            <div class="gif-main touch-zoomable" data-label="Field operations">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/1047db9c85ff842e083e9fb45c0bdf05213da88a/images/NDAI5.gif"
-                alt="FOUND Project team using advanced technology in field search operations"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')" />
-            </div>
-
-            <!-- Stack: two smaller GIFs -->
-            <div class="gif-stack">
-
-              <div class="gif-thumb touch-zoomable" data-label="Satellite analysis">
-                <img
-                  src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/9b9df755f7129ba10ee53479d528d42d14e5648a/images/Areas_de_busqueda_2.gif"
-                  alt="Satellite spectral time-series analysis of search areas"
-                  loading="lazy"
-                  class="loading"
-                  onload="this.classList.remove('loading')" />
-              </div>
-
-              <div class="gif-thumb touch-zoomable" data-label="Clandestine site detection">
-                <img
-                  src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/9b9df755f7129ba10ee53479d528d42d14e5648a/images/ClandestineSpace.gif"
-                  alt="Spectral detection of clandestine sites using satellite imagery"
-                  loading="lazy"
-                  class="loading"
-                  onload="this.classList.remove('loading')" />
-              </div>
-
-            </div>
-          </div>
-
           <div class="award-highlight">
             <a href="/news/#mariela-award" class="award-card">
               <div class="award-text">
                 <div class="award-pill">Award</div>
                 <div class="award-title">
                   FOUND recognised with the Sir Nicholas Browne Policy and Expertise Award
-                  <span class="arrow">↗</span>
+                  <span class="arrow">&#x2197;</span>
                 </div>
                 <div class="award-meta">
                   Selected from over 200 nominations across the UK Foreign, Commonwealth &amp; Development Office.
@@ -1687,19 +1626,31 @@ redirect_from:
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SPECIAL PLACE: NDAI5.gif (RIGHT 2/3 ONLY) -->
-  <section class="signature-visual" aria-label="FOUND in motion">
-    <div class="signature-container">
-      <div class="signature-frame touch-zoomable">
-        <img
-          class="signature-gif"
-          src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/1047db9c85ff842e083e9fb45c0bdf05213da88a/images/NDAI5.gif"
-          alt="FOUND field work and technology in motion"
-          loading="lazy"
-        />
+  <!-- GIF STRIP — full-width, three panels -->
+  <section class="gif-strip" aria-label="FOUND in action">
+    <div class="gif-strip-inner">
+
+      <div class="gs-panel gs-panel-main touch-zoomable" data-label="Field operations">
+        <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/1047db9c85ff842e083e9fb45c0bdf05213da88a/images/NDAI5.gif"
+             alt="FOUND Project team using advanced technology in field search operations"
+             loading="lazy" class="loading" onload="this.classList.remove('loading')" />
       </div>
+
+      <div class="gs-panel gs-panel-side touch-zoomable" data-label="Satellite analysis">
+        <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/9b9df755f7129ba10ee53479d528d42d14e5648a/images/Areas_de_busqueda_2.gif"
+             alt="Satellite spectral time-series analysis of search areas"
+             loading="lazy" class="loading" onload="this.classList.remove('loading')" />
+      </div>
+
+      <div class="gs-panel gs-panel-side touch-zoomable" data-label="Clandestine site detection">
+        <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/9b9df755f7129ba10ee53479d528d42d14e5648a/images/ClandestineSpace.gif"
+             alt="Spectral detection of clandestine sites using satellite imagery"
+             loading="lazy" class="loading" onload="this.classList.remove('loading')" />
+      </div>
+
     </div>
   </section>
 
