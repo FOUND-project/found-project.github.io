@@ -1640,7 +1640,7 @@ redirect_from:
       </div>
 
       <div class="gs-panel gs-panel-side touch-zoomable" data-label="Satellite analysis">
-        <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/9b9df755f7129ba10ee53479d528d42d14e5648a/images/Areas_de_busqueda_2.gif"
+        <img src="https://github.com/FOUND-project/found-project.github.io/blob/33b2627b6b245e9632f59abf0a02f5ad58956bf4/images/Areas_de_busqueda_3.gif"
              alt="Satellite spectral time-series analysis of search areas"
              loading="lazy" class="loading" onload="this.classList.remove('loading')" />
       </div>
