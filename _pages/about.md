@@ -59,124 +59,6 @@ redirect_from:
     })();
   </script>
 
-/* =========================
-       GIF Collage (hero)
-    ========================= */
-    .gif-collage {
-      display: grid;
-      grid-template-columns: 1.55fr 1fr;
-      gap: .55rem;
-      border-radius: var(--radius-lg);
-      overflow: visible;
-      position: relative;
-    }
-
-    .gif-main {
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid rgba(45,95,77,.14);
-      box-shadow: var(--shadow-md);
-      position: relative;
-      background: linear-gradient(135deg, rgba(232,245,240,.8), rgba(255,255,255,.9));
-      transform: translateY(0);
-      transition: transform .4s var(--transition-smooth), box-shadow .4s var(--transition-smooth);
-      aspect-ratio: 4/3;
-    }
-    .gif-main::before {
-      content: attr(data-label);
-      position: absolute;
-      bottom: .65rem; left: .65rem;
-      z-index: 2;
-      font-size: .7rem; font-weight: 700;
-      letter-spacing: .10em; text-transform: uppercase;
-      color: #fff;
-      background: rgba(14,40,30,.62);
-      backdrop-filter: blur(8px);
-      padding: .22rem .65rem; border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.22);
-      opacity: 0; transform: translateY(4px);
-      transition: opacity .3s ease, transform .3s ease;
-      pointer-events: none;
-    }
-    .gif-main:hover::before { opacity:1; transform:translateY(0); }
-    .gif-main:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
-    .gif-main img {
-      width:100%; height:100%; object-fit:cover; display:block;
-      transform:scale(1.01);
-      transition:transform .75s var(--transition-smooth), opacity .4s ease;
-    }
-    .gif-main img.loading { opacity:0; }
-    .gif-main:hover img { transform:scale(1.06); }
-
-    .gif-stack { display:flex; flex-direction:column; gap:.55rem; }
-
-    .gif-thumb {
-      flex:1;
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      border: 1px solid rgba(45,95,77,.12);
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      background: linear-gradient(135deg, rgba(232,245,240,.7), rgba(255,255,255,.9));
-      transform: translateY(0);
-      transition: transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth);
-      min-height: 0;
-    }
-    .gif-thumb::before {
-      content: attr(data-label);
-      position: absolute;
-      bottom: .5rem; left: .5rem;
-      z-index: 2;
-      font-size: .65rem; font-weight: 700;
-      letter-spacing: .10em; text-transform: uppercase;
-      color: #fff;
-      background: rgba(14,40,30,.62);
-      backdrop-filter: blur(8px);
-      padding: .18rem .55rem; border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.22);
-      opacity: 0; transform: translateY(3px);
-      transition: opacity .28s ease, transform .28s ease;
-      pointer-events: none;
-      white-space: nowrap;
-      max-width: calc(100% - 1rem);
-      overflow: hidden; text-overflow: ellipsis;
-    }
-    .gif-thumb:hover::before { opacity:1; transform:translateY(0); }
-    .gif-thumb:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
-    .gif-thumb img {
-      width:100%; height:100%; object-fit:cover; display:block;
-      transform:scale(1.01);
-      transition:transform .7s var(--transition-smooth), opacity .4s ease;
-    }
-    .gif-thumb img.loading { opacity:0; }
-    .gif-thumb:hover img { transform:scale(1.07); }
-
-    /* animated gold dot — signals live/animated content */
-    .gif-thumb::after {
-      content:'';
-      position:absolute; top:.55rem; right:.55rem;
-      width:8px; height:8px;
-      background:var(--gold-accent);
-      border-radius:50%;
-      box-shadow:0 0 0 2px rgba(255,255,255,.55);
-      animation:livePulse 2.2s ease-in-out infinite;
-      z-index:2;
-    }
-    @keyframes livePulse {
-      0%,100%{ opacity:1; transform:scale(1); }
-      50%    { opacity:.55; transform:scale(1.35); }
-    }
-
-    /* Mobile */
-    @media (max-width:600px){
-      .gif-collage{ grid-template-columns:1fr; gap:.45rem; }
-      .gif-main{ aspect-ratio:16/9; }
-      .gif-stack{ flex-direction:row; height:130px; }
-      .gif-thumb{ flex:1; height:100%; }
-    }
-    @media (min-width:601px) and (max-width:900px){
-      .gif-main{ aspect-ratio:16/9; }
-    }
 
   <style>
     *{
@@ -1618,6 +1500,127 @@ body::before{
               saturate(512%) hue-rotate(94deg)
               brightness(95%) contrast(96%);
     }
+
+
+/* =========================
+       GIF Collage (hero)
+    ========================= */
+    .gif-collage {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: .55rem;
+      border-radius: var(--radius-lg);
+      overflow: visible;
+      position: relative;
+    }
+
+    .gif-main {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(45,95,77,.14);
+      box-shadow: var(--shadow-md);
+      position: relative;
+      background: linear-gradient(135deg, rgba(232,245,240,.8), rgba(255,255,255,.9));
+      transform: translateY(0);
+      transition: transform .4s var(--transition-smooth), box-shadow .4s var(--transition-smooth);
+      aspect-ratio: 4/3;
+    }
+    .gif-main::before {
+      content: attr(data-label);
+      position: absolute;
+      bottom: .65rem; left: .65rem;
+      z-index: 2;
+      font-size: .7rem; font-weight: 700;
+      letter-spacing: .10em; text-transform: uppercase;
+      color: #fff;
+      background: rgba(14,40,30,.62);
+      backdrop-filter: blur(8px);
+      padding: .22rem .65rem; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.22);
+      opacity: 0; transform: translateY(4px);
+      transition: opacity .3s ease, transform .3s ease;
+      pointer-events: none;
+    }
+    .gif-main:hover::before { opacity:1; transform:translateY(0); }
+    .gif-main:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
+    .gif-main img {
+      width:100%; height:100%; object-fit:cover; display:block;
+      transform:scale(1.01);
+      transition:transform .75s var(--transition-smooth), opacity .4s ease;
+    }
+    .gif-main img.loading { opacity:0; }
+    .gif-main:hover img { transform:scale(1.06); }
+
+    .gif-stack { display:flex; flex-direction:column; gap:.55rem; }
+
+    .gif-thumb {
+      flex:1;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid rgba(45,95,77,.12);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      background: linear-gradient(135deg, rgba(232,245,240,.7), rgba(255,255,255,.9));
+      transform: translateY(0);
+      transition: transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth);
+      min-height: 0;
+    }
+    .gif-thumb::before {
+      content: attr(data-label);
+      position: absolute;
+      bottom: .5rem; left: .5rem;
+      z-index: 2;
+      font-size: .65rem; font-weight: 700;
+      letter-spacing: .10em; text-transform: uppercase;
+      color: #fff;
+      background: rgba(14,40,30,.62);
+      backdrop-filter: blur(8px);
+      padding: .18rem .55rem; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.22);
+      opacity: 0; transform: translateY(3px);
+      transition: opacity .28s ease, transform .28s ease;
+      pointer-events: none;
+      white-space: nowrap;
+      max-width: calc(100% - 1rem);
+      overflow: hidden; text-overflow: ellipsis;
+    }
+    .gif-thumb:hover::before { opacity:1; transform:translateY(0); }
+    .gif-thumb:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+    .gif-thumb img {
+      width:100%; height:100%; object-fit:cover; display:block;
+      transform:scale(1.01);
+      transition:transform .7s var(--transition-smooth), opacity .4s ease;
+    }
+    .gif-thumb img.loading { opacity:0; }
+    .gif-thumb:hover img { transform:scale(1.07); }
+
+    /* animated gold dot — signals live/animated content */
+    .gif-thumb::after {
+      content:'';
+      position:absolute; top:.55rem; right:.55rem;
+      width:8px; height:8px;
+      background:var(--gold-accent);
+      border-radius:50%;
+      box-shadow:0 0 0 2px rgba(255,255,255,.55);
+      animation:livePulse 2.2s ease-in-out infinite;
+      z-index:2;
+    }
+    @keyframes livePulse {
+      0%,100%{ opacity:1; transform:scale(1); }
+      50%    { opacity:.55; transform:scale(1.35); }
+    }
+
+    /* Mobile */
+    @media (max-width:600px){
+      .gif-collage{ grid-template-columns:1fr; gap:.45rem; }
+      .gif-main{ aspect-ratio:16/9; }
+      .gif-stack{ flex-direction:row; height:130px; }
+      .gif-thumb{ flex:1; height:100%; }
+    }
+    @media (min-width:601px) and (max-width:900px){
+      .gif-main{ aspect-ratio:16/9; }
+    }
+    
   </style>
 </head>
 
