@@ -18,38 +18,23 @@ redirect_from:
   <meta property="og:type" content="website" />
   <title>FOUND Project - Using Technology to Search and Remember</title>
 
-  <!-- HSTS Header - Tells browsers to always use HTTPS -->
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-
-  <!-- Upgrade insecure requests -->
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  
-  <!-- Prevent MIME type sniffing -->
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  
-  <!-- Prevent clickjacking -->
   <meta http-equiv="X-Frame-Options" content="DENY">
-  
-  <!-- Control referrer information -->
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <!-- ========== END SECURITY HEADERS ========== -->
 
-  <!-- FIXED: No-loop redirect -->
   <script>
     (function() {
       if (window.location.protocol === 'http:' && 
           window.location.hostname === 'found-project.org' &&
           !sessionStorage.getItem('redirecting_to_https')) {
-        
         sessionStorage.setItem('redirecting_to_https', 'true');
-        
         var httpsUrl = 'https://found-project.org' + 
                       window.location.pathname + 
                       window.location.search + 
                       window.location.hash;
-        
         window.location.replace(httpsUrl);
-        
         setTimeout(function() {
           sessionStorage.removeItem('redirecting_to_https');
         }, 2000);
@@ -58,7 +43,6 @@ redirect_from:
       }
     })();
   </script>
-
 
   <style>
     *{
@@ -109,38 +93,27 @@ redirect_from:
       overflow:hidden;
     }
 
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-1;
+      pointer-events:none;
+      background-image:
+        radial-gradient(900px 520px at 18% 18%, rgba(232,245,240,.55) 0%, transparent 60%),
+        radial-gradient(820px 520px at 82% 10%, rgba(212,175,55,.10) 0%, transparent 62%),
+        url("/images/found-bg.svg");
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-position:center;
+      opacity:0.14;
+      transform:translateZ(0);
+    }
 
+    @media (prefers-reduced-motion: reduce){
+      body::before{ transform:none; }
+    }
 
-
-/* =========================
-   FOUND site-wide background (roots → circuits)
-   Add: images/found-bg.svg
-========================= */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:-1;            /* sits behind everything */
-  pointer-events:none;
-  background-image:
-    radial-gradient(900px 520px at 18% 18%, rgba(232,245,240,.55) 0%, transparent 60%),
-    radial-gradient(820px 520px at 82% 10%, rgba(212,175,55,.10) 0%, transparent 62%),
-    url("/images/found-bg.svg");
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position:center;
-  opacity:0.14;          /* tweak 0.10–0.18 */
-  transform:translateZ(0);
-}
-
-@media (prefers-reduced-motion: reduce){
-  body::before{ transform:none; }
-}
-
-    
-
-    
-    
     html{scroll-behavior:smooth;}
 
     *:focus-visible{
@@ -149,7 +122,6 @@ body::before{
       border-radius:10px;
     }
 
-    /* Minimal Mistakes wrappers full width on desktop */
     .page,
     #main,
     .initial-content,
@@ -323,15 +295,11 @@ body::before{
       overflow:hidden;
     }
 
+    .title-section,
+    .hero{
+      background-color:transparent;
+    }
 
-/* Allow global FOUND background (roots → circuits) to show through */
-.title-section,
-.hero{
-  background-color:transparent;
-}
-
-    
-    
     .hero::before{
       content:'';
       position:absolute;
@@ -500,6 +468,125 @@ body::before{
       transform:scale(1.06);
     }
 
+    /* =========================
+       GIF Collage (hero)
+    ========================== */
+    .gif-collage {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: .55rem;
+      border-radius: var(--radius-lg);
+      overflow: visible;
+      position: relative;
+    }
+
+    .gif-main {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid rgba(45,95,77,.14);
+      box-shadow: var(--shadow-md);
+      position: relative;
+      background: linear-gradient(135deg, rgba(232,245,240,.8), rgba(255,255,255,.9));
+      transform: translateY(0);
+      transition: transform .4s var(--transition-smooth), box-shadow .4s var(--transition-smooth);
+      aspect-ratio: 4/3;
+    }
+
+    .gif-main::before {
+      content: attr(data-label);
+      position: absolute;
+      bottom: .65rem; left: .65rem;
+      z-index: 2;
+      font-size: .7rem; font-weight: 700;
+      letter-spacing: .10em; text-transform: uppercase;
+      color: #fff;
+      background: rgba(14,40,30,.62);
+      backdrop-filter: blur(8px);
+      padding: .22rem .65rem; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.22);
+      opacity: 0; transform: translateY(4px);
+      transition: opacity .3s ease, transform .3s ease;
+      pointer-events: none;
+    }
+    .gif-main:hover::before { opacity:1; transform:translateY(0); }
+    .gif-main:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
+    .gif-main img {
+      width:100%; height:100%; object-fit:cover; display:block;
+      transform:scale(1.01);
+      transition:transform .75s var(--transition-smooth), opacity .4s ease;
+    }
+    .gif-main img.loading { opacity:0; }
+    .gif-main:hover img { transform:scale(1.06); }
+
+    .gif-stack { display:flex; flex-direction:column; gap:.55rem; }
+
+    .gif-thumb {
+      flex: 1;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid rgba(45,95,77,.12);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      background: linear-gradient(135deg, rgba(232,245,240,.7), rgba(255,255,255,.9));
+      transform: translateY(0);
+      transition: transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth);
+      min-height: 0;
+    }
+
+    .gif-thumb::before {
+      content: attr(data-label);
+      position: absolute;
+      bottom: .5rem; left: .5rem;
+      z-index: 2;
+      font-size: .65rem; font-weight: 700;
+      letter-spacing: .10em; text-transform: uppercase;
+      color: #fff;
+      background: rgba(14,40,30,.62);
+      backdrop-filter: blur(8px);
+      padding: .18rem .55rem; border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.22);
+      opacity: 0; transform: translateY(3px);
+      transition: opacity .28s ease, transform .28s ease;
+      pointer-events: none;
+      white-space: nowrap;
+      max-width: calc(100% - 1rem);
+      overflow: hidden; text-overflow: ellipsis;
+    }
+    .gif-thumb:hover::before { opacity:1; transform:translateY(0); }
+    .gif-thumb:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+    .gif-thumb img {
+      width:100%; height:100%; object-fit:cover; display:block;
+      transform:scale(1.01);
+      transition:transform .7s var(--transition-smooth), opacity .4s ease;
+    }
+    .gif-thumb img.loading { opacity:0; }
+    .gif-thumb:hover img { transform:scale(1.07); }
+
+    .gif-thumb::after {
+      content:'';
+      position:absolute; top:.55rem; right:.55rem;
+      width:8px; height:8px;
+      background:var(--gold-accent);
+      border-radius:50%;
+      box-shadow:0 0 0 2px rgba(255,255,255,.55);
+      animation:livePulse 2.2s ease-in-out infinite;
+      z-index:2;
+    }
+    @keyframes livePulse {
+      0%,100%{ opacity:1; transform:scale(1); }
+      50%    { opacity:.55; transform:scale(1.35); }
+    }
+
+    @media (max-width:600px){
+      .gif-collage{ grid-template-columns:1fr; gap:.45rem; }
+      .gif-main{ aspect-ratio:16/9; }
+      .gif-stack{ flex-direction:row; height:130px; }
+      .gif-thumb{ flex:1; height:100%; }
+    }
+    @media (min-width:601px) and (max-width:900px){
+      .gif-main{ aspect-ratio:16/9; }
+    }
+
     /* ==========================
        Award highlight
     =========================== */
@@ -614,7 +701,7 @@ body::before{
     }
 
     /* =========================
-       Signature Visual Strip (SPECIAL PLACE FOR NDAI5.gif)
+       Signature Visual Strip
     ========================== */
     .signature-visual{
       padding:clamp(1.4rem,3vw,2.4rem) 0;
@@ -1086,7 +1173,6 @@ body::before{
       transition:transform .35s var(--transition-smooth), filter .35s var(--transition-smooth), opacity .3s ease;
     }
 
-    /* Frontier Tech Hub logo – very subtle separation only */
     .collab-img{
       max-height:80px;
       width:auto;
@@ -1500,127 +1586,6 @@ body::before{
               saturate(512%) hue-rotate(94deg)
               brightness(95%) contrast(96%);
     }
-
-
-/* =========================
-       GIF Collage (hero)
-    ========================= */
-    .gif-collage {
-      display: grid;
-      grid-template-columns: 1.55fr 1fr;
-      gap: .55rem;
-      border-radius: var(--radius-lg);
-      overflow: visible;
-      position: relative;
-    }
-
-    .gif-main {
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      border: 1px solid rgba(45,95,77,.14);
-      box-shadow: var(--shadow-md);
-      position: relative;
-      background: linear-gradient(135deg, rgba(232,245,240,.8), rgba(255,255,255,.9));
-      transform: translateY(0);
-      transition: transform .4s var(--transition-smooth), box-shadow .4s var(--transition-smooth);
-      aspect-ratio: 4/3;
-    }
-    .gif-main::before {
-      content: attr(data-label);
-      position: absolute;
-      bottom: .65rem; left: .65rem;
-      z-index: 2;
-      font-size: .7rem; font-weight: 700;
-      letter-spacing: .10em; text-transform: uppercase;
-      color: #fff;
-      background: rgba(14,40,30,.62);
-      backdrop-filter: blur(8px);
-      padding: .22rem .65rem; border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.22);
-      opacity: 0; transform: translateY(4px);
-      transition: opacity .3s ease, transform .3s ease;
-      pointer-events: none;
-    }
-    .gif-main:hover::before { opacity:1; transform:translateY(0); }
-    .gif-main:hover { transform:translateY(-5px); box-shadow:var(--shadow-lg); }
-    .gif-main img {
-      width:100%; height:100%; object-fit:cover; display:block;
-      transform:scale(1.01);
-      transition:transform .75s var(--transition-smooth), opacity .4s ease;
-    }
-    .gif-main img.loading { opacity:0; }
-    .gif-main:hover img { transform:scale(1.06); }
-
-    .gif-stack { display:flex; flex-direction:column; gap:.55rem; }
-
-    .gif-thumb {
-      flex:1;
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      border: 1px solid rgba(45,95,77,.12);
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      background: linear-gradient(135deg, rgba(232,245,240,.7), rgba(255,255,255,.9));
-      transform: translateY(0);
-      transition: transform .35s var(--transition-smooth), box-shadow .35s var(--transition-smooth);
-      min-height: 0;
-    }
-    .gif-thumb::before {
-      content: attr(data-label);
-      position: absolute;
-      bottom: .5rem; left: .5rem;
-      z-index: 2;
-      font-size: .65rem; font-weight: 700;
-      letter-spacing: .10em; text-transform: uppercase;
-      color: #fff;
-      background: rgba(14,40,30,.62);
-      backdrop-filter: blur(8px);
-      padding: .18rem .55rem; border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.22);
-      opacity: 0; transform: translateY(3px);
-      transition: opacity .28s ease, transform .28s ease;
-      pointer-events: none;
-      white-space: nowrap;
-      max-width: calc(100% - 1rem);
-      overflow: hidden; text-overflow: ellipsis;
-    }
-    .gif-thumb:hover::before { opacity:1; transform:translateY(0); }
-    .gif-thumb:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
-    .gif-thumb img {
-      width:100%; height:100%; object-fit:cover; display:block;
-      transform:scale(1.01);
-      transition:transform .7s var(--transition-smooth), opacity .4s ease;
-    }
-    .gif-thumb img.loading { opacity:0; }
-    .gif-thumb:hover img { transform:scale(1.07); }
-
-    /* animated gold dot — signals live/animated content */
-    .gif-thumb::after {
-      content:'';
-      position:absolute; top:.55rem; right:.55rem;
-      width:8px; height:8px;
-      background:var(--gold-accent);
-      border-radius:50%;
-      box-shadow:0 0 0 2px rgba(255,255,255,.55);
-      animation:livePulse 2.2s ease-in-out infinite;
-      z-index:2;
-    }
-    @keyframes livePulse {
-      0%,100%{ opacity:1; transform:scale(1); }
-      50%    { opacity:.55; transform:scale(1.35); }
-    }
-
-    /* Mobile */
-    @media (max-width:600px){
-      .gif-collage{ grid-template-columns:1fr; gap:.45rem; }
-      .gif-main{ aspect-ratio:16/9; }
-      .gif-stack{ flex-direction:row; height:130px; }
-      .gif-thumb{ flex:1; height:100%; }
-    }
-    @media (min-width:601px) and (max-width:900px){
-      .gif-main{ aspect-ratio:16/9; }
-    }
-    
   </style>
 </head>
 
@@ -1668,7 +1633,8 @@ body::before{
           </p>
         </div>
 
-        <div class="gif-collage">
+        <div class="hero-side">
+          <div class="gif-collage">
 
             <!-- Main: NDAI5 -->
             <div class="gif-main touch-zoomable" data-label="Field operations">
@@ -1795,7 +1761,6 @@ body::before{
                    class="loading"
                    onload="this.classList.remove('loading')">
             </div>
-
             <div class="gallery-item touch-zoomable">
               <img src="https://github.com/FOUND-project/found-project.github.io/blob/51a35a3f1915699b8fe9835270ddfe6f3c5c0946/images/pigs_aerial.jpg?raw=true"
                    alt="Aerial view of experimental calibration site using animal proxies"
@@ -1874,7 +1839,6 @@ body::before{
                 class="loading"
                 onload="this.classList.remove('loading')">
             </div>
-
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-2">
                 UK Foreign, Commonwealth &amp; Development Office (FCDO)
@@ -1932,7 +1896,7 @@ body::before{
                    loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
-              <div class="collab-name" id="collab-item-6">Mexico’s National Search Commission</div>
+              <div class="collab-name" id="collab-item-6">Mexico's National Search Commission</div>
               <div class="collab-note" id="collab-note-6">National coordination</div>
             </div>
           </div>
@@ -2024,7 +1988,7 @@ body::before{
             </div>
           </div>
 
-          <!-- Mexico’s Science and Technology Secretariat -->
+          <!-- Mexico's Science and Technology Secretariat -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
@@ -2035,7 +1999,7 @@ body::before{
                 onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
-              <div class="collab-name" id="collab-item-secihti">Mexico’s Science and Technology Secretariat</div>
+              <div class="collab-name" id="collab-item-secihti">Mexico's Science and Technology Secretariat</div>
               <div class="collab-note" id="collab-note-secihti">Funding, Policy impact</div>
             </div>
           </div>
@@ -2082,14 +2046,9 @@ body::before{
                 class="collab-img fth"
               >
             </div>
-
             <div class="collab-meta">
-              <div class="collab-name" id="collab-item-fth">
-                Frontier Tech Hub
-              </div>
-              <div class="collab-note" id="collab-note-fth">
-                Funding • Technical expertise
-              </div>
+              <div class="collab-name" id="collab-item-fth">Frontier Tech Hub</div>
+              <div class="collab-note" id="collab-note-fth">Funding • Technical expertise</div>
             </div>
           </div>
 
@@ -2151,12 +2110,9 @@ body::before{
                 class="collab-img labco"
               >
             </div>
-
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-labco">LABCO</div>
-              <div class="collab-note" id="collab-note-labco">
-                Exploring AI together to locate and identify
-              </div>
+              <div class="collab-note" id="collab-note-labco">Exploring AI together to locate and identify</div>
             </div>
           </div>
 
@@ -2172,16 +2128,12 @@ body::before{
               >
             </div>
             <div class="collab-meta">
-              <div class="collab-name" id="collab-item-eaaf">
-                Argentine Forensic Anthropology Team (EAAF)
-              </div>
-              <div class="collab-note" id="collab-note-eaaf">
-                Luis Fondebrider, FOUND’s advisor
-              </div>
+              <div class="collab-name" id="collab-item-eaaf">Argentine Forensic Anthropology Team (EAAF)</div>
+              <div class="collab-note" id="collab-note-eaaf">Luis Fondebrider, FOUND's advisor</div>
             </div>
           </div>
 
-  <!-- ✅ NEW: Oxford Robotics Institute -->
+          <!-- Oxford Robotics Institute -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
@@ -2197,7 +2149,7 @@ body::before{
             </div>
           </div>
 
-          <!-- ✅ NEW: Instituto Politécnico Nacional -->
+          <!-- Instituto Politécnico Nacional -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img
@@ -2333,13 +2285,10 @@ body::before{
           'collab-note-labco':'Exploring together AI to locate and identify',
           'collab-item-eaaf':'Argentine Forensic Anthropology Team (EAAF)',
           'collab-note-eaaf':"Luis Fondebrider, FOUND's advisor",
-
-          /* ✅ NEW */
           'collab-item-ori':'Oxford Robotics Institute',
           'collab-note-ori':'Partnership, technical expertise',
           'collab-item-ipn':'Instituto Politécnico Nacional',
           'collab-note-ipn':'Technical expertise, Technology',
-
           'project-subtitle':'<span class="title-accent">Technologies</span> To Locate Those Who We Are Missing',
           'hero-tagline-static':'Using technology to',
           'word-1':'search.',
@@ -2368,13 +2317,10 @@ body::before{
           'collab-note-labco':'Explorando juntos el uso de IA para localizar e identificar',
           'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
           'collab-note-eaaf':'Luis Fondebrider, asesor de FOUND',
-
-          /* ✅ NEW (translated) */
           'collab-item-ori':'Oxford Robotics Institute',
           'collab-note-ori':'Alianza, experiencia técnica',
           'collab-item-ipn':'Instituto Politécnico Nacional',
           'collab-note-ipn':'Experiencia técnica, desarrollo tecnológico',
-
           'project-subtitle':'<span class="title-accent">Tecnologías</span> para Encontrar a Quienes nos Faltan',
           'hero-tagline-static':'Usando tecnología para',
           'word-1':'buscar.',
@@ -2403,13 +2349,10 @@ body::before{
           'collab-note-labco':'Timoitayoh ika IA para titemoa huan tiquixmati',
           'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
           'collab-note-eaaf':'Luis Fondebrider, ixcuitlali (asesor) FOUND',
-
-          /* ✅ NEW (translated lightly; names kept) */
           'collab-item-ori':'Oxford Robotics Institute',
           'collab-note-ori':'Tlaneltiliztli (alianza), teknikoh tlamatiliztli',
           'collab-item-ipn':'Instituto Politécnico Nacional',
           'collab-note-ipn':'Teknikoh tlamatiliztli, teknolojíayoh tlatequipanoliztli',
-
           'project-subtitle':'<span class="title-accent">Tecnologías</span> para Encontrar a Quienes nos Faltan',
           'hero-tagline-static':'Teknolojíayoh ika',
           'word-1':'temoa.',
