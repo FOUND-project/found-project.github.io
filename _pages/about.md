@@ -1633,7 +1633,7 @@ redirect_from:
   <section class="gif-strip" aria-label="FOUND in action">
     <div class="gif-strip-inner">
 
-      <div class="gs-panel gs-panel-main touch-zoomable" data-label="Field operations">
+      <div class="gs-panel gs-panel-main touch-zoomable" data-label="Spectral indices">
         <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/1047db9c85ff842e083e9fb45c0bdf05213da88a/images/NDAI5.gif"
              alt="FOUND Project team using advanced technology in field search operations"
              loading="lazy" class="loading" onload="this.classList.remove('loading')" />
