@@ -1633,19 +1633,19 @@ redirect_from:
   <section class="gif-strip" aria-label="FOUND in action">
     <div class="gif-strip-inner">
 
-      <div class="gs-panel gs-panel-main touch-zoomable" data-label="Spectral indices">
+      <div class="gs-panel gs-panel-main touch-zoomable" data-label="Spectral indices, clandestine crematoriums, substance detection">
         <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/1047db9c85ff842e083e9fb45c0bdf05213da88a/images/NDAI5.gif"
              alt="FOUND Project team using advanced technology in field search operations"
              loading="lazy" class="loading" onload="this.classList.remove('loading')" />
       </div>
 
-      <div class="gs-panel gs-panel-side touch-zoomable" data-label="Satellite analysis">
-        <img src="https://raw.ithubusercontent.com/FOUND-project/found-project.github.io/33b2627b6b245e9632f59abf0a02f5ad58956bf4/images/Areas_de_busqueda_3.gif"
+      <div class="gs-panel gs-panel-side touch-zoomable" data-label="Satellite analysis, time series">
+        <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/33b2627b6b245e9632f59abf0a02f5ad58956bf4/images/Areas_de_busqueda_3.gif"
              alt="Satellite spectral time-series analysis of search areas"
              loading="lazy" class="loading" onload="this.classList.remove('loading')" />
       </div>
 
-      <div class="gs-panel gs-panel-side touch-zoomable" data-label="Clandestine site detection">
+      <div class="gs-panel gs-panel-side touch-zoomable" data-label="Clandestine space detection">
         <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/9b9df755f7129ba10ee53479d528d42d14e5648a/images/ClandestineSpace.gif"
              alt="Spectral detection of clandestine sites using satellite imagery"
              loading="lazy" class="loading" onload="this.classList.remove('loading')" />
