@@ -1651,7 +1651,8 @@ redirect_from:
              loading="lazy" class="loading" onload="this.classList.remove('loading')" />
       </div>
     </div>
-Spectral detection. Identifying substances linked to disappearanaces via satellite and drone imagery — and when they were present.
+Spectral indices. Identifying substances linked to disappearanaces via satellite and drone imagery — and when they were present.
+
 Clandestine space location. AI that finds what was meant to stay hidden.
   </section>
 
