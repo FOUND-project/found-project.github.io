@@ -426,6 +426,22 @@ author_profile: true
         <h2 class="pub-title" id="title-articles">Articles</h2>
       </div>
 
+<div class="pub-grid">
+        <article class="pub-card">
+          <div class="pub-card-topline">
+            <span class="pub-emoji">📑</span>
+            <span class="pub-badge" id="a1-badge">Interview</span>
+          </div>
+          <h3 class="pub-item-title">
+            <a href="https://www.ifcc-research.org/_files/ugd/00540a_4f9ed0d5f6444a4badcd1c8cc110dea0.pdf" target="_blank" rel="noopener noreferrer" id="a1-title">
+              Interpreting the Earth: Technology, Testimony, and the Search for the Disappeared. Interview with Miguel Moctezuma for the Istituto Fiorentino di Critica Culturale.
+            </a>
+          </h3>
+          <p class="pub-meta" id="a1-meta">
+            Moctezuma, M. and Green, M. (2025) ‘Interpreting the Earth: Technology, Testimony, and the Search for the Disappeared’, Aesthetics of the Unseen, 1(3). Florence: Istituto Fiorentino di Critica Culturale (IFCC). DOI: 10.17605/OSF.IO/75KV4
+          </p>
+        </article>
+
       <div class="pub-grid">
         <article class="pub-card">
           <div class="pub-card-topline">
