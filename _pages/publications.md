@@ -442,7 +442,6 @@ author_profile: true
           </p>
         </article>
 
-      <div class="pub-grid">
         <article class="pub-card">
           <div class="pub-card-topline">
             <span class="pub-emoji">📑</span>
