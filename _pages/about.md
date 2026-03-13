@@ -1651,9 +1651,7 @@ redirect_from:
              loading="lazy" class="loading" onload="this.classList.remove('loading')" />
       </div>
     </div>
-CentroGeo{Platforms}
-Spectral indices. Identifying substances linked to disappearances via satellite and drone imagery — and when they were present.
-Clandestine space location. AI that finds what was meant to stay hidden.
+("CentroGeo{Platforms}") Spectral indices. Identifying substances linked to disappearances via satellite and drone imagery — and when they were present. Clandestine sites location. AI that finds what was meant to stay hidden.
   </section>
 
   <!-- TECHNOLOGIES + BUSCADORAS -->
