@@ -2213,19 +2213,6 @@ Our core team brings together the Jalisco and Zacatecas Search Collectives, Cent
           </div>
         </div>
 
-        <div class="social-embed">
-          <div class="iframe-container">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:share:7407705201647845376"
-              height="880"
-              width="504"
-              frameborder="0"
-              allowfullscreen
-              title="FOUND Project LinkedIn update"
-              loading="lazy"></iframe>
-          </div>
-        </div>
-
         <div class="social-embed twitter-embed">
           <div class="iframe-container">
             <blockquote class="twitter-tweet">
