@@ -1544,7 +1544,7 @@ redirect_from:
       <div class="hero-team-bar-inner">
         <span class="htb-label">FOUND<span class="htb-brace">{</span>Team<span class="htb-brace">}</span></span>
         <span class="htb-divider">·</span>
-        <span class="htb-text" id="hero-team-text">Our core team brings together <strong>collectives of families from Jalisco and Zacatecas searching for their missing loved ones</strong>, alongside CentroGeo, the University of Oxford, Jalisco's Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico's National Search Commission, LAB-Co, and Luis Fondebrider.</span>
+        <span class="htb-text" id="hero-team-text">Our core team brings together <strong>collectives of families from Jalisco, Zacatecas, and Colombia searching for their missing loved ones</strong>, alongside CentroGeo, the University of Oxford, Jalisco's Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico's National Search Commission, LAB-CO, and forensic anthropologist Luis Fondebrider.</span>
       </div>
     </div>
   </section>
