@@ -10,7 +10,6 @@ redirect_from:
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
   <meta name="viewport" content="width=1200">
   <meta name="description" content="FOUND combines technology and grassroots knowledge to search for disappeared persons in Mexico, bringing dignity and closure to families." />
   <meta property="og:title" content="FOUND Project - Using Technology to Search and Remember" />
@@ -1665,7 +1664,10 @@ Our core team brings together the Jalisco and Zacatecas Search Collectives, Cent
           <p class="hero-description" id="hero-main-text">
             Over 130,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
             <strong>FOUND</strong> works at the intersection of frontier technology and the lived knowledge of search groups, driving systemic change in how governments and institutions respond to disappearance.
-Our core team brings together the Jalisco and Zacatecas Search Collectives, CentroGeo, the University of Oxford, Jalisco's Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico's National Search Commission, LAB-Co, and Luis Fondebrider..
+</p>
+
+<p class="hero-description">
+Our core team brings together collectives of families from Jalisco and Zacatecas searching for their missing loved ones, CentroGeo, the University of Oxford, Jalisco's Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico's National Search Commission, LAB-Co, and Luis Fondebrider.
           </p>
         </div>
 
