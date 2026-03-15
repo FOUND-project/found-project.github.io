@@ -1561,6 +1561,65 @@ redirect_from:
       .gs-panel-side:nth-child(3){ grid-column:2; grid-row:2; }
     }
 
+
+    /* =========================
+   GIF Strip Caption Bar
+========================== */
+.gif-strip-caption {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: clamp(.55rem, 1.2vw, .85rem) clamp(1rem, 4vw, 3rem);
+  background: rgba(11, 28, 22, 0.82);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(74, 140, 115, .22);
+}
+
+.gif-caption-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .55rem 1.1rem;
+  font-size: clamp(.78rem, 1.5vw, .88rem);
+  color: rgba(232, 245, 240, .78);
+  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
+  line-height: 1.6;
+}
+
+.gif-caption-tag {
+  color: var(--gold-accent);
+  font-weight: 700;
+  letter-spacing: .04em;
+  font-size: clamp(.8rem, 1.6vw, .92rem);
+  white-space: nowrap;
+}
+
+.gif-caption-brace {
+  color: rgba(74, 140, 115, .9);
+  font-weight: 400;
+}
+
+.gif-caption-divider {
+  color: rgba(74, 140, 115, .5);
+  font-size: 1rem;
+  font-family: inherit;
+  flex-shrink: 0;
+}
+
+.gif-caption-item {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: clamp(.8rem, 1.5vw, .88rem);
+  color: rgba(232, 245, 240, .72);
+  letter-spacing: .01em;
+}
+
+.gif-caption-item strong {
+  color: rgba(232, 245, 240, .95);
+  font-weight: 650;
+}
+    
   </style>
 </head>
 
@@ -1651,7 +1710,17 @@ redirect_from:
              loading="lazy" class="loading" onload="this.classList.remove('loading')" />
       </div>
     </div>
-("CentroGeo{Platforms}") Spectral indices. Identifying substances linked to disappearances via satellite and drone imagery — and when they were present. Clandestine sites location. AI that finds what was meant to stay hidden.
+    
+<div class="gif-strip-caption">
+  <div class="gif-caption-inner">
+    <span class="gif-caption-tag">CentroGeo<span class="gif-caption-brace">{</span>Platforms<span class="gif-caption-brace">}</span></span>
+    <span class="gif-caption-divider">·</span>
+    <span class="gif-caption-item"><strong>Spectral indices</strong> — Identifying substances linked to disappearances via satellite and drone imagery, and when they were present.</span>
+    <span class="gif-caption-divider">·</span>
+    <span class="gif-caption-item"><strong>Clandestine sites location</strong> — AI that finds what was meant to stay hidden.</span>
+  </div>
+</div>
+
   </section>
 
   <!-- TECHNOLOGIES + BUSCADORAS -->
