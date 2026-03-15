@@ -14,7 +14,8 @@ redirect_from:
   <meta name="viewport" content="width=1200">
   <meta name="description" content="FOUND combines technology and grassroots knowledge to search for disappeared persons in Mexico, bringing dignity and closure to families." />
   <meta property="og:title" content="FOUND Project - Using Technology to Search and Remember" />
-  <meta property="og:description" content="124,354 persons are reported as disappeared in Mexico. Behind each case, there is a family searching for answers. FOUND combines technology with the knowledge of searching families to learn, locate, and drive systemic change." />
+  <meta property="og:description" content="Over 130,000 persons are reported as disappeared in Mexico. Behind each case, there is a family searching for answers. FOUND works at the intersection of frontier technology and the lived knowledge of search groups, driving systemic change in how governments and institutions respond to disappearance.
+Our core team brings together the Jalisco and Zacatecas Search Collectives, CentroGeo, the University of Oxford, Jalisco's Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico's National Search Commission, LAB-Co, and Luis Fondebrider." />
   <meta property="og:type" content="website" />
   <title>FOUND Project - Using Technology to Search and Remember</title>
 
