@@ -13,8 +13,7 @@ redirect_from:
   <meta name="viewport" content="width=1200">
   <meta name="description" content="FOUND combines technology and grassroots knowledge to search for disappeared persons in Mexico, bringing dignity and closure to families." />
   <meta property="og:title" content="FOUND Project - Using Technology to Search and Remember" />
-  <meta property="og:description" content="Over 130,000 persons are reported as disappeared in Mexico. Behind each case, there is a family searching for answers. FOUND works at the intersection of frontier technology and the lived knowledge of search groups, driving systemic change in how governments and institutions respond to disappearance.
-Our core team brings together the Jalisco and Zacatecas Search Collectives, CentroGeo, the University of Oxford, Jalisco's Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico's National Search Commission, LAB-Co, and Luis Fondebrider." />
+  <meta property="og:description" content="Over 130,000 persons are reported as disappeared in Mexico. Behind each case, there is a family searching for answers. FOUND works at the intersection of frontier technology and the lived knowledge of search groups, driving systemic change in how governments and institutions respond to disappearance." />
   <meta property="og:type" content="website" />
   <title>FOUND Project - Using Technology to Search and Remember</title>
 
@@ -414,67 +413,11 @@ Our core team brings together the Jalisco and Zacatecas Search Collectives, Cent
       min-height:100%;
     }
 
-    .hero-media{
-      position:relative;
-      border-radius:var(--radius-lg);
-      overflow:hidden;
-      border:1px solid rgba(45,95,77,.14);
-      background:linear-gradient(135deg, rgba(232,245,240,.8) 0%, rgba(255,255,255,.9) 100%);
-      box-shadow:var(--shadow-md);
-      transform:translateY(0);
-      transition:
-        transform .45s var(--transition-smooth),
-        box-shadow .45s var(--transition-smooth);
-      max-width:100%;
-      margin-left:auto;
-    }
-
-    .hero-media::before{
-      content:'';
-      display:block;
-      padding-top:62%;
-    }
-
-    .hero-image{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      transform:scale(1.01);
-      transition:transform .8s var(--transition-smooth), filter .8s var(--transition-smooth), opacity .4s ease;
-      filter:saturate(1.02) contrast(1.03);
-    }
-
-    .skeleton{
-      background:linear-gradient(90deg,#f0f0f0 25%,#e8f5f0 50%,#f0f0f0 75%);
-      background-size:200% 100%;
-      animation:loading 1.5s ease-in-out infinite;
-    }
-
-    @keyframes loading{
-      0%{background-position:200% 0;}
-      100%{background-position:-200% 0;}
-    }
-
-    .hero-image.loading{opacity:0;}
-
-    .hero-media:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow-lg);
-    }
-
-    .hero-media:hover .hero-image{
-      transform:scale(1.06);
-    }
-
-
-
     /* ==========================
        Award highlight
     =========================== */
     .award-highlight{
-      margin-top:auto;
+      margin-top:0;
     }
 
     .award-card{
@@ -514,19 +457,6 @@ Our core team brings together the Jalisco and Zacatecas Search Collectives, Cent
       transform:translateY(-4px);
       box-shadow:0 24px 55px rgba(15,23,42,.20);
       border-color:rgba(212,175,55,.65);
-    }
-
-    .award-icon{
-      width:40px;
-      height:40px;
-      border-radius:50%;
-      background:
-        radial-gradient(circle at 30% 30%, #fff 0%, #fff6d9 30%, #d4af37 60%, #8a6c18 100%);
-      box-shadow:
-        0 0 0 4px rgba(212,175,55,.25),
-        0 16px 30px rgba(15,23,42,.28);
-      flex:0 0 auto;
-      position:relative;
     }
 
     .award-text{
@@ -584,107 +514,61 @@ Our core team brings together the Jalisco and Zacatecas Search Collectives, Cent
     }
 
     /* =========================
-       Signature Visual Strip
+       Hero team bar (full-width second paragraph)
     ========================== */
-    .signature-visual{
-      padding:clamp(1.4rem,3vw,2.4rem) 0;
-      position:relative;
-      overflow:hidden;
-      border-top:1px solid var(--border-light);
-      border-bottom:1px solid var(--border-light);
-      background:
-        radial-gradient(900px 520px at 15% 10%, rgba(232,245,240,.85) 0%, transparent 55%),
-        radial-gradient(820px 520px at 85% 0%, rgba(212,175,55,.10) 0%, transparent 60%),
-        linear-gradient(135deg,#f8fcfb 0%, #ffffff 65%);
-      isolation:isolate;
-    }
-
-    .signature-visual::before{
-      content:'';
-      position:absolute;
-      inset:-2px;
-      background:
-        repeating-linear-gradient(
-          90deg,
-          rgba(45,95,77,.10) 0px,
-          rgba(45,95,77,.10) 1px,
-          transparent 1px,
-          transparent 18px
-        ),
-        repeating-linear-gradient(
-          0deg,
-          rgba(74,140,115,.08) 0px,
-          rgba(74,140,115,.08) 1px,
-          transparent 1px,
-          transparent 22px
-        );
-      opacity:.22;
-      pointer-events:none;
-      mask-image:radial-gradient(circle at 60% 50%, black 0%, black 55%, transparent 78%);
-      -webkit-mask-image:radial-gradient(circle at 60% 50%, black 0%, black 55%, transparent 78%);
-      z-index:0;
-      animation:circuitDrift 14s linear infinite;
-    }
-
-    .signature-visual::after{
-      content:'';
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(600px 320px at 70% 50%, rgba(74,140,115,.18) 0%, transparent 60%),
-        radial-gradient(520px 280px at 30% 70%, rgba(212,175,55,.12) 0%, transparent 62%);
-      opacity:.55;
-      pointer-events:none;
-      z-index:0;
-    }
-
-    @keyframes circuitDrift{
-      0%{ transform:translate3d(0,0,0); }
-      100%{ transform:translate3d(-40px, 18px, 0); }
-    }
-
-    .signature-container{
-      max-width:1400px;
-      margin:0 auto;
-      padding:0 clamp(1rem,4vw,3rem);
+    .hero-team-bar{
       position:relative;
       z-index:1;
-      display:grid;
-      grid-template-columns:minmax(0,1fr);
-      align-items:center;
+      margin-top:clamp(1.25rem,2.5vw,2rem);
+      padding:clamp(.75rem,1.5vw,1.1rem) clamp(1rem,4vw,3rem);
+      background:rgba(11,28,22,.82);
+      backdrop-filter:blur(12px);
+      border-top:1px solid rgba(74,140,115,.22);
+      border-bottom:1px solid rgba(74,140,115,.12);
     }
 
-    .signature-frame{
-      width:min(1200px, 100%);
+    .hero-team-bar-inner{
+      max-width:1400px;
       margin:0 auto;
-      border-radius:28px;
-      overflow:hidden;
-      border:1px solid rgba(45,95,77,.14);
-      box-shadow:var(--shadow-lg);
-      background:linear-gradient(135deg, rgba(255,255,255,.88) 0%, rgba(232,245,240,.75) 100%);
-      position:relative;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:baseline;
+      gap:.4rem 1rem;
+      font-size:clamp(.8rem,1.6vw,.92rem);
+      color:rgba(232,245,240,.78);
+      font-family:'SFMono-Regular','Consolas','Liberation Mono','Menlo',monospace;
+      line-height:1.65;
     }
 
-    .signature-frame::before{
-      content:'';
-      display:block;
-      padding-top:38%;
+    .htb-label{
+      color:var(--gold-accent);
+      font-weight:700;
+      letter-spacing:.04em;
+      white-space:nowrap;
+      flex-shrink:0;
     }
 
-    .signature-gif{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:66% center;
-      transform:scale(1.01);
-      filter:saturate(1.03) contrast(1.02);
+    .htb-brace{
+      color:rgba(74,140,115,.9);
+      font-weight:400;
     }
 
-    .signature-frame:hover .signature-gif{
-      transform:scale(1.04);
-      transition:transform .8s var(--transition-smooth);
+    .htb-divider{
+      color:rgba(74,140,115,.5);
+      font-size:1rem;
+      flex-shrink:0;
+    }
+
+    .htb-text{
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+      font-size:clamp(.82rem,1.6vw,.92rem);
+      color:rgba(232,245,240,.80);
+      letter-spacing:.01em;
+    }
+
+    .htb-text strong{
+      color:rgba(232,245,240,.97);
+      font-weight:650;
     }
 
     /* =========================
@@ -1305,17 +1189,9 @@ Our core team brings together the Jalisco and Zacatecas Search Collectives, Cent
       .hero-top{
         grid-template-columns:1fr;
       }
-      .hero-media{
-        margin:1rem auto 0;
-        max-width:520px;
-      }
       .hero-side{
         max-width:520px;
         margin:0 auto;
-      }
-
-      .signature-frame::before{
-        padding-top:52%;
       }
     }
 
@@ -1363,23 +1239,8 @@ Our core team brings together the Jalisco and Zacatecas Search Collectives, Cent
         font-size:clamp(1.7rem,6vw,2.2rem);
       }
 
-      .award-highlight{
-        margin-top:.6rem;
-      }
-
-      .hero-media{
-        max-width:100%;
-        box-shadow:var(--shadow-sm);
-      }
-
-      .hero-media::before{
-        padding-top:52%;
-      }
-
-      .hero-media:hover{
-        transform:none;
-        box-shadow:var(--shadow-sm);
-        max-width:100%;
+      .award-card{
+        padding:1.1rem 1.2rem;
       }
 
       .image-gallery{
@@ -1438,10 +1299,6 @@ Our core team brings together the Jalisco and Zacatecas Search Collectives, Cent
         height:520px;
       }
 
-      .award-card{
-        padding:1.1rem 1.2rem;
-      }
-
       .project-logo{
         width:80px;
       }
@@ -1474,10 +1331,9 @@ Our core team brings together the Jalisco and Zacatecas Search Collectives, Cent
        GIF Strip (full-width, 3 panels)
     ========================== */
     .gif-strip{
-      padding:clamp(1.4rem,3vw,2.4rem) 0;
+      padding:clamp(1.4rem,3vw,2.4rem) 0 0;
       position:relative; overflow:hidden;
       border-top:1px solid var(--border-light);
-      border-bottom:1px solid var(--border-light);
       background:
         radial-gradient(900px 520px at 15% 10%, rgba(232,245,240,.85) 0%, transparent 55%),
         radial-gradient(820px 520px at 85% 0%, rgba(212,175,55,.10) 0%, transparent 60%),
@@ -1550,6 +1406,62 @@ Our core team brings together the Jalisco and Zacatecas Search Collectives, Cent
       0%,100%{ opacity:1; transform:scale(1); }
       50%    { opacity:.55; transform:scale(1.35); }
     }
+
+    /* GIF Strip Caption Bar */
+    .gif-strip-caption {
+      position: relative;
+      z-index: 2;
+      margin: clamp(.55rem,1.2vw,.85rem) 0 0;
+      padding: clamp(.55rem, 1.2vw, .85rem) clamp(1rem, 4vw, 3rem);
+      background: rgba(11, 28, 22, 0.82);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(74, 140, 115, .22);
+    }
+    .gif-caption-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: .55rem 1.1rem;
+      font-size: clamp(.78rem, 1.5vw, .88rem);
+      color: rgba(232, 245, 240, .78);
+      font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
+      line-height: 1.6;
+    }
+    .gif-caption-tag {
+      color: var(--gold-accent);
+      font-weight: 700;
+      letter-spacing: .04em;
+      font-size: clamp(.8rem, 1.6vw, .92rem);
+      white-space: nowrap;
+    }
+    .gif-caption-brace {
+      color: rgba(74, 140, 115, .9);
+      font-weight: 400;
+    }
+    .gif-caption-divider {
+      color: rgba(74, 140, 115, .5);
+      font-size: 1rem;
+      font-family: inherit;
+      flex-shrink: 0;
+    }
+    .gif-caption-item {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: clamp(.8rem, 1.5vw, .88rem);
+      color: rgba(232, 245, 240, .72);
+      letter-spacing: .01em;
+    }
+    .gif-caption-item strong {
+      color: rgba(232, 245, 240, .95);
+      font-weight: 650;
+    }
+
+    @keyframes circuitDrift{
+      0%{ transform:translate3d(0,0,0); }
+      100%{ transform:translate3d(-40px, 18px, 0); }
+    }
+
     @media (max-width:700px){
       .gif-strip-inner{ grid-template-columns:1fr; }
       .gs-panel-main, .gs-panel-side{ aspect-ratio:16/9; }
@@ -1561,65 +1473,6 @@ Our core team brings together the Jalisco and Zacatecas Search Collectives, Cent
       .gs-panel-side:nth-child(3){ grid-column:2; grid-row:2; }
     }
 
-
-    /* =========================
-   GIF Strip Caption Bar
-========================== */
-.gif-strip-caption {
-  position: relative;
-  z-index: 2;
-  margin: 0;
-  padding: clamp(.55rem, 1.2vw, .85rem) clamp(1rem, 4vw, 3rem);
-  background: rgba(11, 28, 22, 0.82);
-  backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(74, 140, 115, .22);
-}
-
-.gif-caption-inner {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: .55rem 1.1rem;
-  font-size: clamp(.78rem, 1.5vw, .88rem);
-  color: rgba(232, 245, 240, .78);
-  font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
-  line-height: 1.6;
-}
-
-.gif-caption-tag {
-  color: var(--gold-accent);
-  font-weight: 700;
-  letter-spacing: .04em;
-  font-size: clamp(.8rem, 1.6vw, .92rem);
-  white-space: nowrap;
-}
-
-.gif-caption-brace {
-  color: rgba(74, 140, 115, .9);
-  font-weight: 400;
-}
-
-.gif-caption-divider {
-  color: rgba(74, 140, 115, .5);
-  font-size: 1rem;
-  font-family: inherit;
-  flex-shrink: 0;
-}
-
-.gif-caption-item {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: clamp(.8rem, 1.5vw, .88rem);
-  color: rgba(232, 245, 240, .72);
-  letter-spacing: .01em;
-}
-
-.gif-caption-item strong {
-  color: rgba(232, 245, 240, .95);
-  font-weight: 650;
-}
-    
   </style>
 </head>
 
@@ -1664,10 +1517,6 @@ Our core team brings together the Jalisco and Zacatecas Search Collectives, Cent
           <p class="hero-description" id="hero-main-text">
             Over 130,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
             <strong>FOUND</strong> works at the intersection of frontier technology and the lived knowledge of search groups, driving systemic change in how governments and institutions respond to disappearance.
-</p>
-
-<p class="hero-description">
-Our core team brings together collectives of families from Jalisco and Zacatecas searching for their missing loved ones, CentroGeo, the University of Oxford, Jalisco's Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico's National Search Commission, LAB-Co, and Luis Fondebrider.
           </p>
         </div>
 
@@ -1689,8 +1538,16 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
         </div>
       </div>
     </div>
-  </div>
-</section>
+
+    <!-- Full-width team bar sits inside .hero so it inherits the hero background -->
+    <div class="hero-team-bar">
+      <div class="hero-team-bar-inner">
+        <span class="htb-label">FOUND<span class="htb-brace">{</span>Team<span class="htb-brace">}</span></span>
+        <span class="htb-divider">·</span>
+        <span class="htb-text" id="hero-team-text">Our core team brings together <strong>collectives of families from Jalisco and Zacatecas searching for their missing loved ones</strong>, alongside CentroGeo, the University of Oxford, Jalisco's Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico's National Search Commission, LAB-Co, and Luis Fondebrider.</span>
+      </div>
+    </div>
+  </section>
 
   <!-- GIF STRIP — full-width, three panels -->
   <section class="gif-strip" aria-label="FOUND in action">
@@ -1714,17 +1571,16 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
              loading="lazy" class="loading" onload="this.classList.remove('loading')" />
       </div>
     </div>
-    
-<div class="gif-strip-caption">
-  <div class="gif-caption-inner">
-    <span class="gif-caption-tag">CentroGeo<span class="gif-caption-brace">{</span>Platforms<span class="gif-caption-brace">}</span></span>
-    <span class="gif-caption-divider">·</span>
-    <span class="gif-caption-item"><strong>Spectral indices</strong> — Identifying substances linked to disappearances via satellite and drone imagery, and when they were present.</span>
-    <span class="gif-caption-divider">·</span>
-    <span class="gif-caption-item"><strong>Clandestine sites location</strong> — AI that finds what was meant to stay hidden.</span>
-  </div>
-</div>
 
+    <div class="gif-strip-caption">
+      <div class="gif-caption-inner">
+        <span class="gif-caption-tag">CentroGeo<span class="gif-caption-brace">{</span>Platforms<span class="gif-caption-brace">}</span></span>
+        <span class="gif-caption-divider">·</span>
+        <span class="gif-caption-item"><strong>Spectral indices</strong> — Identifying substances linked to disappearances via satellite and drone imagery, and when they were present.</span>
+        <span class="gif-caption-divider">·</span>
+        <span class="gif-caption-item"><strong>Clandestine sites location</strong> — AI that finds what was meant to stay hidden.</span>
+      </div>
+    </div>
   </section>
 
   <!-- TECHNOLOGIES + BUSCADORAS -->
@@ -1824,15 +1680,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
       <div class="collab-wrap" aria-label="Institutional partnerships logos">
         <div class="collab-grid">
 
-          <!-- 7. Search Collectives -->
           <div class="collab-card collab-card-gif touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0bed7c6b4c906bc94116683368b679ba0bd80428/images/mothers%20walking.gif"
-                alt="Search Collectives logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0bed7c6b4c906bc94116683368b679ba0bd80428/images/mothers%20walking.gif"
+                alt="Search Collectives" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-7">Search Collectives</div>
@@ -1840,12 +1691,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- 1. UN -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/1%20Executive%20Office%20of%20the%20UN%20Secretary-General.svg"
-                   alt="Executive Office of the UN Secretary-General logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+                alt="Executive Office of the UN Secretary-General" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-1">Executive Office of the UN Secretary-General</div>
@@ -1853,32 +1702,21 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- 2. FCDO -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/bd3ef3bd33596258b2738274017f51a2e2c05186/images/FCDO_logo_960x640.png"
-                alt="UK Foreign, Commonwealth & Development Office logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/bd3ef3bd33596258b2738274017f51a2e2c05186/images/FCDO_logo_960x640.png"
+                alt="UK Foreign, Commonwealth & Development Office" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
-              <div class="collab-name" id="collab-item-2">
-                UK Foreign, Commonwealth &amp; Development Office (FCDO)
-              </div>
-              <div class="collab-note" id="collab-note-2">
-                Policy, Funding, Partnerships
-              </div>
+              <div class="collab-name" id="collab-item-2">UK Foreign, Commonwealth &amp; Development Office (FCDO)</div>
+              <div class="collab-note" id="collab-note-2">Policy, Funding, Partnerships</div>
             </div>
           </div>
 
-          <!-- 3. CentroGeo -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/2%20logo_centrogeo_wide.svg"
-                   alt="CentroGeo logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+                alt="CentroGeo" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-3">CentroGeo</div>
@@ -1886,12 +1724,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- 4. University of Guadalajara -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/26bd52ce350828b22814cfedc872786dd43de672/images/580141488dfc53bfdbde59fa6b043438.jpg"
-                   alt="University of Guadalajara logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+                alt="University of Guadalajara" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-4">University of Guadalajara (UdeG)</div>
@@ -1899,12 +1735,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- 5. Colombian Search Unit -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/4292155f0372a05a0900046966657f02b7e6e7c9/images/12%20logo%20ubpd_color_logo.svg"
-                   alt="Colombian Search Unit logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+                alt="Colombian Search Unit" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-5">Colombian Search Unit (UBPD)</div>
@@ -1912,12 +1746,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- 6. Mexico National Search Commission -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/4%20Comision%20Nacional%20de%20Busqueda.png"
-                   alt="Mexico National Search Commission logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+                alt="Mexico National Search Commission" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-6">Mexico's National Search Commission</div>
@@ -1925,12 +1757,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- 8. British Embassy -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d7867dc147eb1b230142511fce739aa481c6177d/images/6%20British%20Embassy%20Mexico_Blue%20(ENG).png"
-                   alt="British Embassy Mexico City logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+                alt="British Embassy Mexico City" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-8">British Embassy in Mexico City</div>
@@ -1938,12 +1768,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- 9. Oxford Festival of the Arts -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/5ea7b61d8c5c6467ad4253f2898109033aac13e7/images/OFOTA_COLOUR_WEB.jpg"
-                   alt="Oxford Festival of the Arts logo"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+                alt="Oxford Festival of the Arts" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-9">Oxford Festival of the Arts</div>
@@ -1951,12 +1779,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- 10. University of Bath -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
               <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b2323f813df618867a6227a87e7efb9e084fe75e/images/Beth.jpg"
-                   alt="University of Bath – Oxford Forum partner"
-                   loading="lazy" class="loading" onload="this.classList.remove('loading')">
+                alt="University of Bath" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-10">University of Bath</div>
@@ -1964,15 +1790,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- British Association for Forensic Anthropology -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/11%20logo%20BAFAlogo_orig.png"
-                alt="British Association for Forensic Anthropology logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/11%20logo%20BAFAlogo_orig.png"
+                alt="British Association for Forensic Anthropology" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-bafa">British Association for Forensic Anthropology</div>
@@ -1980,15 +1801,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- Comisión de Búsqueda de Jalisco -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/3%20Comisio%CC%81n%20de%20Bu%CC%81squeda%20de%20Jalisco.png"
-                alt="Comisión de Búsqueda de Jalisco logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/3%20Comisio%CC%81n%20de%20Bu%CC%81squeda%20de%20Jalisco.png"
+                alt="Comisión de Búsqueda de Jalisco" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-jalisco">Comisión de Búsqueda de Jalisco</div>
@@ -1996,15 +1812,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- University of Oxford -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/4%20logo%20oxford-university-logo.png"
-                alt="University of Oxford logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/4%20logo%20oxford-university-logo.png"
+                alt="University of Oxford" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-oxford">University of Oxford</div>
@@ -2012,15 +1823,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- Mexico's Science and Technology Secretariat -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20Logotipo_SECIHTI_2025-2030.svg"
-                alt="Mexico's Science and Technology Secretariat logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20Logotipo_SECIHTI_2025-2030.svg"
+                alt="Mexico's Science and Technology Secretariat" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-secihti">Mexico's Science and Technology Secretariat</div>
@@ -2028,14 +1834,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- UNAM Geophysics -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20logo%20IGeofisicaUNAM.png"
-                alt="UNAM Geophysics Institute logo"
-                loading="lazy"
-                onload="this.classList.remove('loading')"
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/5%20logo%20IGeofisicaUNAM.png"
+                alt="UNAM Geophysics Institute" loading="lazy" onload="this.classList.remove('loading')"
                 style="filter: brightness(0) invert(0);">
             </div>
             <div class="collab-meta">
@@ -2044,15 +1846,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- UNAM Engineering -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/6%20logo%20Ingenieria%20UNAM.png"
-                alt="UNAM Engineering logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/6%20logo%20Ingenieria%20UNAM.png"
+                alt="UNAM Engineering" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-unam-eng">UNAM – Engineering</div>
@@ -2060,31 +1857,21 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- Frontier Tech Hub -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
-                alt="Frontier Tech Hub logo"
-                loading="lazy"
-                class="collab-img fth"
-              >
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png"
+                alt="Frontier Tech Hub" loading="lazy" class="collab-img fth">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-fth">Frontier Tech Hub</div>
-              <div class="collab-note" id="collab-note-fth">Funding • Technical expertise</div>
+              <div class="collab-note" id="collab-note-fth">Funding, Technical expertise</div>
             </div>
           </div>
 
-          <!-- DT Global -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20DTG_Logo_Screen_LRG-1.png"
-                alt="DT Global logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20DTG_Logo_Screen_LRG-1.png"
+                alt="DT Global" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-dtg">DT Global</div>
@@ -2092,15 +1879,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- UPZMG -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20logo%20UPZMG2.png"
-                alt="UPZMG logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/8%20logo%20UPZMG2.png"
+                alt="UPZMG" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-upzmg">UPZMG</div>
@@ -2108,15 +1890,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- UWE Bristol -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/9%20logo%20UWE%20Bristol.svg"
-                alt="UWE Bristol logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/0ed8741a1541acc7269cded8a4eb5b46bf515ecd/images/9%20logo%20UWE%20Bristol.svg"
+                alt="UWE Bristol" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-uwe">UWE Bristol</div>
@@ -2124,15 +1901,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- LABCO -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d47bacb6b575270e7b5453c8ebc5b13bcec70a2f/images/dark-non-retina-labco.png"
-                alt="LABCO logo"
-                loading="lazy"
-                class="collab-img labco"
-              >
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d47bacb6b575270e7b5453c8ebc5b13bcec70a2f/images/dark-non-retina-labco.png"
+                alt="LABCO" loading="lazy" class="collab-img labco">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-labco">LABCO</div>
@@ -2140,16 +1912,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- Argentine Forensic Anthropology Team (EAAF) -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://github.com/FOUND-project/found-project.github.io/blob/82b303cdf26fa6a25e9845ff0d5fc10e070d94e6/images/logo_eaaf_rd.png?raw=true"
-                alt="Argentine Forensic Anthropology Team (EAAF) logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')"
-              >
+              <img src="https://github.com/FOUND-project/found-project.github.io/blob/82b303cdf26fa6a25e9845ff0d5fc10e070d94e6/images/logo_eaaf_rd.png?raw=true"
+                alt="Argentine Forensic Anthropology Team (EAAF)" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-eaaf">Argentine Forensic Anthropology Team (EAAF)</div>
@@ -2157,15 +1923,10 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- Oxford Robotics Institute -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/a8209a23c303b55bda756d5a55b2c572ac2540a9/images/ori_logo_square_2024_150_inverted.png"
-                alt="Oxford Robotics Institute logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/a8209a23c303b55bda756d5a55b2c572ac2540a9/images/ori_logo_square_2024_150_inverted.png"
+                alt="Oxford Robotics Institute" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-ori">Oxford Robotics Institute</div>
@@ -2173,22 +1934,17 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
             </div>
           </div>
 
-          <!-- Instituto Politécnico Nacional -->
           <div class="collab-card touch-zoomable">
             <div class="collab-logo">
-              <img
-                src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b9419b5a0b9d80c6ae96d16642771d6c1d66cdf3/images/logo-ipn-guinda.svg"
-                alt="Instituto Politécnico Nacional logo"
-                loading="lazy"
-                class="loading"
-                onload="this.classList.remove('loading')">
+              <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/b9419b5a0b9d80c6ae96d16642771d6c1d66cdf3/images/logo-ipn-guinda.svg"
+                alt="Instituto Politécnico Nacional" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
             <div class="collab-meta">
               <div class="collab-name" id="collab-item-ipn">Instituto Politécnico Nacional</div>
               <div class="collab-note" id="collab-note-ipn">Technical expertise, Technology</div>
             </div>
           </div>
-       
+
         </div>
       </div>
     </div>
@@ -2205,14 +1961,9 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
       <div class="social-grid">
         <div class="social-embed">
           <div class="iframe-container">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:share:7405294962692595712"
-              height="880"
-              width="504"
-              frameborder="0"
-              allowfullscreen
-              title="FOUND Project LinkedIn update"
-              loading="lazy"></iframe>
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7405294962692595712"
+              height="880" width="504" frameborder="0" allowfullscreen
+              title="FOUND Project LinkedIn update" loading="lazy"></iframe>
           </div>
         </div>
 
@@ -2227,9 +1978,7 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
                 <a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a>
               </p>
               &mdash; Suzanne Bearne (@sbearne)
-              <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">
-                November 21, 2025
-              </a>
+              <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a>
             </blockquote>
           </div>
         </div>
@@ -2242,36 +1991,24 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
                 <a href="https://t.co/sJC3oaNLGL">https://t.co/sJC3oaNLGL</a>
               </p>
               &mdash; BBC News Mundo (@bbcmundo)
-              <a href="https://twitter.com/bbcmundo/status/1973352689867063513?ref_src=twsrc%5Etfw">
-                October 1, 2025
-              </a>
+              <a href="https://twitter.com/bbcmundo/status/1973352689867063513?ref_src=twsrc%5Etfw">October 1, 2025</a>
             </blockquote>
           </div>
         </div>
 
         <div class="social-embed">
           <div class="iframe-container">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
-              height="880"
-              width="504"
-              frameborder="0"
-              allowfullscreen
-              title="FOUND Project community engagement"
-              loading="lazy"></iframe>
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398371958595145728"
+              height="880" width="504" frameborder="0" allowfullscreen
+              title="FOUND Project community engagement" loading="lazy"></iframe>
           </div>
         </div>
 
         <div class="social-embed">
           <div class="iframe-container">
-            <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624"
-              height="880"
-              width="504"
-              frameborder="0"
-              allowfullscreen
-              title="FCDO LinkedIn post about FOUND Project"
-              loading="lazy"></iframe>
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624"
+              height="880" width="504" frameborder="0" allowfullscreen
+              title="FCDO LinkedIn post about FOUND Project" loading="lazy"></iframe>
           </div>
         </div>
       </div>
@@ -2287,18 +2024,17 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
 
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <!-- LANGUAGE TOGGLE + WORD ROTATION + TOUCH ZOOM -->
   <script>
     (function(){
       const translations = {
         en:{
           'collab-item-labco':'LABCO',
-          'collab-note-labco':'Exploring together AI to locate and identify',
+          'collab-note-labco':'Exploring AI together to locate and identify',
           'collab-item-eaaf':'Argentine Forensic Anthropology Team (EAAF)',
           'collab-note-eaaf':"Luis Fondebrider, FOUND's advisor",
           'collab-item-ori':'Oxford Robotics Institute',
           'collab-note-ori':'Partnership, technical expertise',
-          'collab-item-ipn':'Instituto Politécnico Nacional',
+          'collab-item-ipn':'Instituto Polit\u00e9cnico Nacional',
           'collab-note-ipn':'Technical expertise, Technology',
           'project-subtitle':'<span class="title-accent">Technologies</span> To Locate Those Who We Are Missing',
           'hero-tagline-static':'Using technology to',
@@ -2307,8 +2043,8 @@ Our core team brings together collectives of families from Jalisco and Zacatecas
           'word-3':'dignify.',
           'word-4':'find.',
           'word-5':'bring closure.',
-          'hero-main-text':'Over 130,000 persons  are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> works at the intersection of frontier technology and the lived knowledge of search groups, driving systemic change in how governments and institutions respond to disappearance.
-Our core team brings together collectives of families searching for their missing loved ones, CentroGeo, the University of Oxford, Jalisco's Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico's National Search Commission, LAB-Co, and Luis Fondebrider.',
+          'hero-main-text':'Over 130,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> works at the intersection of frontier technology and the lived knowledge of search groups, driving systemic change in how governments and institutions respond to disappearance.',
+          'hero-team-text':'Our core team brings together <strong>collectives of families from Jalisco and Zacatecas searching for their missing loved ones</strong>, alongside CentroGeo, the University of Oxford, Jalisco\'s Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico\'s National Search Commission, LAB-Co, and Luis Fondebrider.',
           'collab-title':'Institutional Partnerships',
           'tech-title':'Technologies in Action',
           'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
@@ -2322,59 +2058,61 @@ Our core team brings together collectives of families searching for their missin
           'buscadoras-text':"Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.",
           'social-title':'Follow Our Journey',
           'social-subtitle':'Stay connected with our latest findings, community stories, and collaborations',
-          'footer-text':'FOUND: Tecnologías para Encontrar a Quienes nos Faltan.'
+          'footer-text':'FOUND: Tecnolog\u00edas para Encontrar a Quienes nos Faltan.'
         },
         es:{
           'collab-item-labco':'LABCO',
           'collab-note-labco':'Explorando juntos el uso de IA para localizar e identificar',
-          'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
+          'collab-item-eaaf':'Equipo Argentino de Antropolog\u00eda Forense (EAAF)',
           'collab-note-eaaf':'Luis Fondebrider, asesor de FOUND',
           'collab-item-ori':'Oxford Robotics Institute',
-          'collab-note-ori':'Alianza, experiencia técnica',
-          'collab-item-ipn':'Instituto Politécnico Nacional',
-          'collab-note-ipn':'Experiencia técnica, desarrollo tecnológico',
-          'project-subtitle':'<span class="title-accent">Tecnologías</span> para Encontrar a Quienes nos Faltan',
-          'hero-tagline-static':'Usando tecnología para',
+          'collab-note-ori':'Alianza, experiencia t\u00e9cnica',
+          'collab-item-ipn':'Instituto Polit\u00e9cnico Nacional',
+          'collab-note-ipn':'Experiencia t\u00e9cnica, desarrollo tecnol\u00f3gico',
+          'project-subtitle':'<span class="title-accent">Tecnolog\u00edas</span> para Encontrar a Quienes nos Faltan',
+          'hero-tagline-static':'Usando tecnolog\u00eda para',
           'word-1':'buscar.',
           'word-2':'recordar.',
           'word-3':'dignificar.',
           'word-4':'encontrar.',
           'word-5':'dar cierre.',
-          'hero-main-text':'124,354 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnología y saberes de familias buscadoras para aprender del campo, localizar y promover cambios sistémicos.',
+          'hero-main-text':'M\u00e1s de 130,000 personas est\u00e1n registradas como desaparecidas en M\u00e9xico. Detr\u00e1s de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnolog\u00eda y saberes de familias buscadoras para aprender del campo, localizar y promover cambios sist\u00e9micos.',
+          'hero-team-text':'Nuestro equipo central re\u00fane <strong>colectivos de familias de Jalisco y Zacatecas que buscan a sus seres queridos desaparecidos</strong>, junto a CentroGeo, la Universidad de Oxford, la Comisi\u00f3n de B\u00fasqueda de Jalisco, la Universidad Nacional Aut\u00f3noma de M\u00e9xico (UNAM) y la Universidad de Guadalajara. Trabajamos junto a socios estrat\u00e9gicos, entre ellos la Oficina para Asuntos Exteriores, de la Commonwealth y de Desarrollo del Reino Unido (FCDO), la Oficina Ejecutiva del Secretario General de la ONU, la Unidad de B\u00fasqueda de Personas dadas por Desaparecidas (UBPD) de Colombia, la Comisi\u00f3n Nacional de B\u00fasqueda de M\u00e9xico, LAB-Co y Luis Fondebrider.',
           'collab-title':'Alianzas institucionales',
-          'tech-title':'Tecnologías en acción',
-          'tech-item-1':'Imágenes multiespectrales e hiperespectrales',
+          'tech-title':'Tecnolog\u00edas en acci\u00f3n',
+          'tech-item-1':'Im\u00e1genes multiespectrales e hiperespectrales',
           'tech-item-2':'LiDAR aerotransportado',
-          'tech-item-3':'Interferometría de ruido sísmico (TIRSA)',
-          'tech-item-4':'Tomografía de resistividad eléctrica y mediciones de conductividad',
-          'tech-item-5':'Análisis espectral satelital',
-          'tech-item-ml':'Aprendizaje automático',
-          'tech-item-6':'Entomología forense, botánica, análisis territorial y ciencia del suelo',
+          'tech-item-3':'Interferometr\u00eda de ruido s\u00edsmico (TIRSA)',
+          'tech-item-4':'Tomograf\u00eda de resistividad el\u00e9ctrica y mediciones de conductividad',
+          'tech-item-5':'An\u00e1lisis espectral satelital',
+          'tech-item-ml':'Aprendizaje autom\u00e1tico',
+          'tech-item-6':'Entomolog\u00eda forense, bot\u00e1nica, an\u00e1lisis territorial y ciencia del suelo',
           'buscadoras-title':'El papel de las buscadoras',
-          'buscadoras-text':'Los colectivos liderados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.',
+          'buscadoras-text':'Los colectivos liderados por mujeres est\u00e1n en el coraz\u00f3n del trabajo de FOUND. Han transformado la conversaci\u00f3n nacional sobre desaparici\u00f3n y justicia. Sus pr\u00e1cticas de b\u00fasqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus m\u00e9todos en nuestros esfuerzos tecnol\u00f3gicos.',
           'social-title':'Sigue nuestro camino',
-          'social-subtitle':'Mantente al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.',
+          'social-subtitle':'Mant\u00e9nte al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.',
           'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
         },
         nah:{
           'collab-item-labco':'LABCO',
           'collab-note-labco':'Timoitayoh ika IA para titemoa huan tiquixmati',
-          'collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)',
+          'collab-item-eaaf':'Equipo Argentino de Antropolog\u00eda Forense (EAAF)',
           'collab-note-eaaf':'Luis Fondebrider, ixcuitlali (asesor) FOUND',
           'collab-item-ori':'Oxford Robotics Institute',
           'collab-note-ori':'Tlaneltiliztli (alianza), teknikoh tlamatiliztli',
-          'collab-item-ipn':'Instituto Politécnico Nacional',
-          'collab-note-ipn':'Teknikoh tlamatiliztli, teknolojíayoh tlatequipanoliztli',
-          'project-subtitle':'<span class="title-accent">Tecnologías</span> para Encontrar a Quienes nos Faltan',
-          'hero-tagline-static':'Teknolojíayoh ika',
+          'collab-item-ipn':'Instituto Polit\u00e9cnico Nacional',
+          'collab-note-ipn':'Teknikoh tlamatiliztli, teknoloj\u00edayoh tlatequipanoliztli',
+          'project-subtitle':'<span class="title-accent">Tecnolog\u00edas</span> para Encontrar a Quienes nos Faltan',
+          'hero-tagline-static':'Teknoloj\u00edayoh ika',
           'word-1':'temoa.',
           'word-2':'quilnamictia.',
           'word-3':'tlatepanita.',
           'word-4':'quipantlalia.',
           'word-5':'yolpakilistli quimacatia.',
-          'hero-main-text':'124,354 tlācameh tlahcuilōlmeh quen polīhuihqueh ipan Mēxihco. Ipan sesen inin caso cah se familia tlatehuía tlanemilistli. <strong>FOUND</strong> quimixnextia tehnologíayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia yancuic tlanemilistli ipan sistema.',
+          'hero-main-text':'124,354 tl\u0101cameh tlahcuil\u014dlmeh quen pol\u012bhuihqueh ipan M\u0113xihco. Ipan sesen inin caso cah se familia tlatehu\u00eda tlanemilistli. <strong>FOUND</strong> quimixnextia tehnolog\u00edayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia yancuic tlanemilistli ipan sistema.',
+          'hero-team-text':'In totequitlacauh quinnechicoa <strong>in colectivoh in familias tlen Jalisco huan Zacatecas tlen quitemoa in inpilhuan polihqueh</strong>, oc nochi CentroGeo, in Universidad de Oxford, in Comisi\u00f3n de B\u00fasqueda de Jalisco, in Universidad Nacional Aut\u00f3noma de M\u00e9xico (UNAM) huan in Universidad de Guadalajara. Timoitayoh ika in tlaneltililmeh tlen FCDO, in Oficina Ejecutiva del Secretario General de la ONU, UBPD, in Comisi\u00f3n Nacional de B\u00fasqueda, LAB-Co huan Luis Fondebrider.',
           'collab-title':'Alianzas institucionales',
-          'tech-title':'Teknolojíayoh tlen motequiti',
+          'tech-title':'Teknoloj\u00edayoh tlen motequiti',
           'tech-item-1':'Multispectral &amp; Hyperspectral Imaging',
           'tech-item-2':'Airborne LiDAR',
           'tech-item-3':'Seismic Noise Interferometry (TIRSA)',
@@ -2383,7 +2121,7 @@ Our core team brings together collectives of families searching for their missin
           'tech-item-ml':'Machine Learning',
           'tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science',
           'buscadoras-title':'In papel in buscadoras',
-          'buscadoras-text':'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan país tlen polihuiliztli huan tlayectlaliz (justicia). Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknológicoh tequitl.',
+          'buscadoras-text':'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan pa\u00eds tlen polihuiliztli huan tlayectlaliz (justicia). Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknol\u00f3gicoh tequitl.',
           'social-title':'Xiquito in totlanejmachtiliz',
           'social-subtitle':'Ximoyetkixtia inin tlen tipantlaliah, tlen tlanechicoliztli in comunidades huan inin tlen timocoyonaltiah san sejco.',
           'footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.'
@@ -2395,72 +2133,60 @@ Our core team brings together collectives of families searching for their missin
       let wordInterval = null;
 
       function buildHeroWords(lang){
-        const dict = translations[lang] || translations.en;
-        const keys = ['word-1','word-2','word-3','word-4','word-5'];
-        heroWords = keys.map(k => dict[k]).filter(Boolean);
+        var dict = translations[lang] || translations.en;
+        var keys = ['word-1','word-2','word-3','word-4','word-5'];
+        heroWords = keys.map(function(k){ return dict[k]; }).filter(Boolean);
         wordIndex = 0;
-        const span = document.getElementById('hero-word');
-        if(span && heroWords.length){
-          span.textContent = heroWords[0];
-        }
+        var span = document.getElementById('hero-word');
+        if(span && heroWords.length){ span.textContent = heroWords[0]; }
       }
 
       function startWordRotation(){
-        const span = document.getElementById('hero-word');
-        if(wordInterval) clearInterval(wordInterval);
-        if(!span || heroWords.length < 2) return;
-
+        var span = document.getElementById('hero-word');
+        if(wordInterval){ clearInterval(wordInterval); }
+        if(!span || heroWords.length < 2){ return; }
         wordInterval = setInterval(function(){
           span.style.opacity = '0';
           setTimeout(function(){
             wordIndex = (wordIndex + 1) % heroWords.length;
             span.textContent = heroWords[wordIndex];
             span.style.opacity = '1';
-          },180);
-        },1250);
+          }, 180);
+        }, 1250);
       }
 
       function setLanguage(lang){
-        const dict = translations[lang] || translations.en;
-
+        var dict = translations[lang] || translations.en;
         Object.keys(dict).forEach(function(id){
-          const el = document.getElementById(id);
-          if(el) el.innerHTML = dict[id];
+          var el = document.getElementById(id);
+          if(el){ el.innerHTML = dict[id]; }
         });
-
-        document.documentElement.setAttribute(
-          'lang',
-          lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
-        );
-
+        document.documentElement.setAttribute('lang',
+          lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en'));
         document.querySelectorAll('.lang-btn').forEach(function(btn){
           btn.classList.toggle('active', btn.dataset.lang === lang);
         });
-
         try{ localStorage.setItem('found-lang', lang); }catch(e){}
-
         buildHeroWords(lang);
         startWordRotation();
       }
 
       function setupTouchZoom(){
-        const zoomables = document.querySelectorAll('.touch-zoomable');
-        if(!zoomables.length) return;
-
+        var zoomables = document.querySelectorAll('.touch-zoomable');
+        if(!zoomables.length){ return; }
         function toggleZoom(el){
-          const isExpanded = el.classList.contains('is-expanded');
+          var isExpanded = el.classList.contains('is-expanded');
           if(isExpanded){
             el.classList.remove('is-expanded');
             document.body.classList.remove('zoom-active');
-          }else{
-            document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
-              openEl.classList.remove('is-expanded');
+          } else {
+            document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(o){
+              o.classList.remove('is-expanded');
             });
             el.classList.add('is-expanded');
             document.body.classList.add('zoom-active');
           }
         }
-
         zoomables.forEach(function(el){
           el.addEventListener('click', function(e){
             if(window.matchMedia && window.matchMedia('(max-width: 768px)').matches){
@@ -2470,11 +2196,10 @@ Our core team brings together collectives of families searching for their missin
             }
           });
         });
-
         document.addEventListener('keydown', function(e){
           if(e.key === 'Escape'){
-            document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(openEl){
-              openEl.classList.remove('is-expanded');
+            document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(o){
+              o.classList.remove('is-expanded');
             });
             document.body.classList.remove('zoom-active');
           }
@@ -2482,17 +2207,15 @@ Our core team brings together collectives of families searching for their missin
       }
 
       document.addEventListener('DOMContentLoaded', function(){
-        let savedLang = null;
+        var savedLang = null;
         try{ savedLang = localStorage.getItem('found-lang'); }catch(e){}
-        const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
+        var initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
         setLanguage(initialLang);
-
         document.querySelectorAll('.lang-btn').forEach(function(btn){
           btn.addEventListener('click', function(){
             setLanguage(btn.dataset.lang);
           });
         });
-
         setupTouchZoom();
       });
     })();
