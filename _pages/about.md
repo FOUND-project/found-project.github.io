@@ -1574,7 +1574,7 @@ redirect_from:
 
     <div class="gif-strip-caption">
       <div class="gif-caption-inner">
-        <span class="gif-caption-tag">CentroGeo<span class="gif-caption-brace">{</span>Platforms<span class="gif-caption-brace">}</span></span>
+        <span class="gif-caption-tag">Platforms<span class="gif-caption-brace">{</span>core member: CentroGeo<span class="gif-caption-brace">}</span></span>
         <span class="gif-caption-divider">·</span>
         <span class="gif-caption-item"><strong>Spectral indices</strong> — Identifying substances linked to disappearances via satellite and drone imagery, and when they were present.</span>
         <span class="gif-caption-divider">·</span>
