@@ -1516,7 +1516,7 @@ redirect_from:
 
           <p class="hero-description" id="hero-main-text">
             Over 130,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers.
-            <strong>FOUND</strong> works at the intersection of frontier technology and the lived knowledge of search groups, driving systemic change in how governments and institutions respond to disappearance.
+            <strong>FOUND</strong> builds the scientific and institutional capabilities needed to find and return missing persons to their families. Working at the intersection of frontier technology and the lived knowledge of search groups, we drive systemic change in how governments and institutions respond to disappearance.
           </p>
         </div>
 
