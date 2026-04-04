@@ -1297,7 +1297,7 @@ author_profile: true
        SHARE BUTTONS
        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
     document.getElementById('btn-copy').addEventListener('click', function() {
-      var url = BASE_URL + '#' + (activeCardId || '');
+      var url = BASE_URL + 'cards/' + (activeCardId || '');
       var btn = document.getElementById('btn-copy');
       var tip = document.getElementById('copy-tooltip');
       if (navigator.clipboard) {
