@@ -1267,7 +1267,7 @@ author_profile: true
       setMeta('og-title',       plainTitle);
       setMeta('og-description', plainTitle);
       setMeta('og-image',       card.image || LOGO);
-      setMeta('og-url',         BASE_URL + '#' + id);
+      setMeta('og-url',         BASE_URL + 'cards/' + id);
       setMeta('tw-title',       plainTitle);
       setMeta('tw-description', plainTitle);
       setMeta('tw-image',       card.image || LOGO);
