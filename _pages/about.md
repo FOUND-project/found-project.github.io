@@ -281,7 +281,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 <!-- STATS RIBBON -->
 <section class="stats-ribbon reveal" aria-label="Key statistics">
   <div class="stats-ribbon-inner">
-    <div class="stat-item"><div class="stat-number" id="stat-num-1">130,000<span class="stat-plus">+</span></div><div class="stat-label" id="stat-label-1">Persons disappeared</div></div>
+    <div class="stat-item"><div class="stat-number" id="stat-num-1">2<span class="stat-plus">Agreements</span></div><div class="stat-label" id="stat-label-1">Mexico and Colombia Search Units</div></div>
     <div class="stat-divider"></div>
     <div class="stat-item"><div class="stat-number" id="stat-num-2">7<span class="stat-plus">+</span></div><div class="stat-label" id="stat-label-2">Technologies deployed</div></div>
     <div class="stat-divider"></div>
