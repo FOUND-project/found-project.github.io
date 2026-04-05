@@ -4,844 +4,695 @@ title: "Media"
 permalink: /media/
 author_profile: true
 ---
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=1200">
+  <meta name="viewport" content="width=1200">
   <title>FOUND — Media & Talks</title>
-
   <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    /* ═══════════════════════════════════════════════════════
+       RESET & DESIGN TOKENS
+       ═══════════════════════════════════════════════════════ */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    :root {
+      --green-900: #0f2d22;
+      --green-800: #1e4034;
+      --green-700: #2d5f4d;
+      --green-500: #4a8c73;
+      --green-200: #c6e2d8;
+      --green-50:  #f4faf7;
+      --gold:      #d4af37;
+      --gold-pale: rgba(212,175,55,.12);
+      --text-dark:   #111827;
+      --text-medium: #374151;
+      --text-light:  #6b7280;
+      --white:     #ffffff;
+      --shadow-xs: 0 2px 8px  rgba(15,23,42,.06);
+      --shadow-sm: 0 4px 16px rgba(15,23,42,.08);
+      --shadow-md: 0 10px 28px rgba(15,23,42,.12);
+      --shadow-lg: 0 24px 56px rgba(15,23,42,.18);
+      --shadow-xl: 0 40px 80px rgba(15,23,42,.22);
+      --radius-xl: 26px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      --radius-pill: 999px;
+      --ease: cubic-bezier(.4,0,.2,1);
+      --ease-spring: cubic-bezier(.34,1.56,.64,1);
     }
 
-    :root{
-      --primary-green:#2d5f4d;
-      --dark-green:#1e4034;
-      --light-green:#4a8c73;
-      --gold-accent:#d4af37;
-      --bg-soft:#f4faf7;
-      --text-dark:#121212;
-      --text-medium:#3f3f3f;
-      --text-light:#6b6b6b;
-      --shadow-sm:0 4px 16px rgba(15,23,42,.08);
-      --shadow-md:0 10px 28px rgba(15,23,42,.12);
-      --shadow-lg:0 20px 50px rgba(15,23,42,.18);
-      --radius-lg:22px;
-      --radius-md:18px;
-      --radius-pill:999px;
-      --transition-smooth:cubic-bezier(.4,0,.2,1);
-    }
-
-    @media (prefers-reduced-motion: reduce){
-      *,*::before,*::after{
-        animation-duration:.01ms!important;
-        animation-iteration-count:1!important;
-        transition-duration:.01ms!important;
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
       }
-      html{scroll-behavior:auto!important;}
     }
 
-    html{scroll-behavior:smooth;}
+    html { scroll-behavior: smooth; }
 
-    body{
-      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
       background:
-        radial-gradient(1200px 600px at 10% 0%, rgba(45,95,77,.12) 0%, transparent 55%),
-        radial-gradient(900px 520px at 80% 0%, rgba(232,245,240,.92) 0%, transparent 60%),
-        linear-gradient(135deg,#f7fbfa 0%,#eef4f1 40%,#f9fbff 100%);
-      min-height:100vh;
-      color:var(--text-dark);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:clamp(1.5rem,3vw,2.5rem) clamp(1rem,4vw,3rem);
+        radial-gradient(ellipse 1400px 700px at 5% -5%,  rgba(212,175,55,.10) 0%, transparent 55%),
+        radial-gradient(ellipse 1000px 600px at 90% 10%, rgba(198,226,216,.60) 0%, transparent 55%),
+        linear-gradient(160deg, #f7fbfa 0%, #eef4f1 45%, #f9fbff 100%);
+      min-height: 100vh;
+      color: var(--text-dark);
+      -webkit-font-smoothing: antialiased;
+      padding: clamp(1.5rem,3vw,2.5rem) clamp(1rem,4vw,3rem);
     }
 
-    /* Make Minimal Mistakes wrappers full width */
-    .page,
-    #main,
-    .initial-content,
-    .page__inner-wrap,
-    .page__content,
-    .archive{
-      max-width:none!important;
-      width:100%!important;
+    /* Full-width override for Minimal Mistakes */
+    .page, #main, .initial-content, .page__inner-wrap, .page__content, .archive {
+      max-width: none !important;
+      width: 100% !important;
     }
 
-    *:focus-visible{
-      outline:3px solid rgba(74,140,115,.7);
-      outline-offset:3px;
-      border-radius:10px;
+    *:focus-visible {
+      outline: 3px solid rgba(74,140,115,.55);
+      outline-offset: 3px;
+      border-radius: var(--radius-sm);
     }
 
-   .media-shell{
-  max-width:none;               /* full width like News */
-  width:100%;
-  margin:0;
-  position:relative;
-  padding-left:clamp(10rem, 14vw, 13rem);   /* closer to sidebar */
-  padding-right:2rem;
-}
-
- /* Language toggle – tucked inside header area */
-    .lang-toggle{
-      position:absolute;
-      top:1.1rem;
-      right:2.4rem;
-      display:inline-flex;
-      gap:.5rem;
-      z-index:20;
+    /* ═══════════════════════════════════════════════════════
+       SHELL
+       ═══════════════════════════════════════════════════════ */
+    .media-shell {
+      max-width: 1320px;
+      margin: 0 auto 0 5.6rem;
+      position: relative;
     }
 
-    .lang-btn{
-      border:1px solid rgba(15,23,42,.08);
-      background:rgba(255,255,255,.9);
-      color:var(--dark-green);
-      padding:.3rem .8rem;
-      border-radius:var(--radius-pill);
-      font-size:.78rem;
-      font-weight:700;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      cursor:pointer;
-      backdrop-filter:blur(10px);
-      box-shadow:0 4px 14px rgba(15,23,42,.08);
-      transition:
-        transform .2s var(--transition-smooth),
-        background .2s var(--transition-smooth),
-        box-shadow .2s var(--transition-smooth),
-        border-color .2s var(--transition-smooth),
-        color .2s var(--transition-smooth);
+    /* ── Language toggle ── */
+    .lang-toggle {
+      position: absolute;
+      top: .25rem; right: 0;
+      display: inline-flex;
+      gap: .45rem;
+      z-index: 10;
+    }
+    .lang-btn {
+      border: 1px solid rgba(15,23,42,.09);
+      background: rgba(255,255,255,.88);
+      color: var(--green-800);
+      padding: .28rem .75rem;
+      border-radius: var(--radius-pill);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 3px 12px rgba(15,23,42,.07);
+      transition: transform .2s var(--ease), background .2s var(--ease),
+                  box-shadow .2s var(--ease), color .2s var(--ease),
+                  border-color .2s var(--ease);
+    }
+    .lang-btn:hover  { background:#fff; transform:translateY(-1px); box-shadow:0 7px 20px rgba(15,23,42,.14); }
+    .lang-btn.active { background:var(--green-800); color:#fff; border-color:var(--green-800); }
+
+    /* ═══════════════════════════════════════════════════════
+       PAGE HEADER — rich editorial banner
+       ═══════════════════════════════════════════════════════ */
+    .media-header {
+      position: relative;
+      margin: 1.75rem 0 3rem;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(15,23,42,.055);
+      display: flex;
+      align-items: stretch;
     }
 
-    .lang-btn:hover{
-      background:#fff;
-      transform:translateY(-1px);
-      box-shadow:0 8px 22px rgba(15,23,42,.16);
+    /* Gold left stripe */
+    .media-header::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 5px;
+      background: linear-gradient(180deg, var(--gold) 0%, rgba(212,175,55,.3) 100%);
+      border-radius: var(--radius-xl) 0 0 var(--radius-xl);
     }
 
-    .lang-btn.active{
-      background:var(--dark-green);
-      color:#fff;
-      border-color:var(--dark-green);
-    }
-
-    /* Header */
-    .media-header{
+    /* Radial glow */
+    .media-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
       background:
-        radial-gradient(circle at 8% 0%, rgba(45,95,77,.20) 0%, transparent 55%),
-        linear-gradient(135deg,#ffffff 0%,#f6faf8 40%,#ffffff 100%);
-      border-radius:var(--radius-lg);
-      padding:clamp(1.75rem,3vw,2.4rem);
-      margin:1.75rem 0 2.8rem;
-      display:flex;
-      align-items:center;
-      gap:clamp(1.4rem,3vw,2.4rem);
-      box-shadow:var(--shadow-md);
-      border:1px solid rgba(15,23,42,.06);
-      position:relative;
-      overflow:hidden;
+        radial-gradient(ellipse 600px 300px at -5% 0%, rgba(212,175,55,.13) 0%, transparent 60%),
+        radial-gradient(ellipse 500px 300px at 110% 100%, rgba(198,226,216,.5) 0%, transparent 60%);
+      pointer-events: none;
     }
 
-    .media-header::before{
-      content:'';
-      position:absolute;
-      inset:-1px;
-      background:linear-gradient(
-        120deg,
-        rgba(255,255,255,.7),
-        transparent 35%,
-        transparent 65%,
-        rgba(45,95,77,.22)
-      );
-      opacity:.85;
-      pointer-events:none;
+    .media-header-logo {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      padding: 2.2rem 2rem 2.2rem 2.8rem;
+      position: relative;
+      z-index: 1;
+    }
+    .media-header-logo img {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 12px 32px rgba(15,23,42,.22);
+      border: 3px solid rgba(255,255,255,.95);
+      background: #fff;
     }
 
-    .media-logo-wrap{
-      flex:0 0 auto;
-      position:relative;
-      z-index:1;
+    /* Subtle divider */
+    .media-header-divider {
+      width: 1px;
+      background: linear-gradient(180deg, transparent, rgba(15,23,42,.08), transparent);
+      margin: 2rem 0;
+      flex-shrink: 0;
     }
 
-    .media-header img{
-      width:90px;
-      height:90px;
-      border-radius:20px;
-      object-fit:cover;
-      box-shadow:0 14px 30px rgba(15,23,42,.22);
-      border:2px solid rgba(255,255,255,.9);
-      background:#fff;
+    .media-header-body {
+      flex: 1;
+      padding: 2.2rem 2.8rem 2.2rem 2.4rem;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    .media-header-main{
-      position:relative;
-      z-index:1;
-      flex:1;
+    .media-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      margin-bottom: .65rem;
+    }
+    .media-eyebrow-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 3px rgba(212,175,55,.2);
+    }
+    .media-eyebrow-text {
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--green-700);
     }
 
-    .media-header-pill{
-      display:inline-flex;
-      align-items:center;
-      gap:.4rem;
-      padding:.2rem .75rem;
-      border-radius:var(--radius-pill);
-      background:rgba(27,77,62,.08);
-      border:1px solid rgba(27,77,62,.22);
-      font-size:.78rem;
-      font-weight:750;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      color:var(--dark-green);
-      margin-bottom:.55rem;
+    #media-title {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 900;
+      color: var(--green-900);
+      letter-spacing: -.035em;
+      line-height: 1.15;
+      margin-bottom: .5rem;
+    }
+    #media-intro {
+      font-size: clamp(.95rem, 1.3vw, 1.1rem);
+      color: var(--text-medium);
+      line-height: 1.75;
+      max-width: 680px;
     }
 
-    .media-header-pill::before{
-      content:'';
-      width:6px;
-      height:6px;
-      border-radius:50%;
-      background:radial-gradient(circle,var(--primary-green) 0%,rgba(45,95,77,.18) 70%);
+    /* ═══════════════════════════════════════════════════════
+       MEDIA GRID
+       ═══════════════════════════════════════════════════════ */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: clamp(1.2rem, 2vw, 1.8rem);
+      margin-bottom: 3rem;
+      --stagger: 60ms;
     }
 
-    #media-title{
-      font-size:clamp(1.9rem,3.2vw,2.4rem);
-      color:var(--dark-green);
-      font-weight:900;
-      letter-spacing:-.03em;
-      margin-bottom:.45rem;
-    }
-
-    #media-intro{
-      font-size:clamp(1rem,1.4vw,1.15rem);
-      color:var(--text-medium);
-      max-width:780px;
-      line-height:1.8;
-    }
-
-    /* MEDIA GRID */
-    .media-grid{
-      margin-top:0;
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:clamp(1.7rem,2.5vw,2.3rem);
-      margin-bottom:2.4rem;
-    }
-
-    .media-card{
-      background:#ffffff;
-      border-radius:var(--radius-md);
-      padding:1.6rem 1.6rem 1.7rem;
-      box-shadow:var(--shadow-sm);
-      border:1px solid rgba(15,23,42,.06);
-      position:relative;
-      overflow:hidden;
+    /* ── Individual card ── */
+    .media-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(15,23,42,.055);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      text-decoration: none;
+      color: inherit;
       transition:
-        transform .25s var(--transition-smooth),
-        box-shadow .25s var(--transition-smooth),
-        border-color .25s var(--transition-smooth),
-        background .25s var(--transition-smooth),
-        filter .25s var(--transition-smooth);
-      display:flex;
-      flex-direction:column;
-      min-height:0;
+        transform   .28s var(--ease),
+        box-shadow  .28s var(--ease),
+        border-color .28s var(--ease);
+
+      /* Entrance animation */
+      animation: cardIn .55s var(--ease) both;
+    }
+    .media-card:nth-child(1) { animation-delay: calc(1 * var(--stagger)); }
+    .media-card:nth-child(2) { animation-delay: calc(2 * var(--stagger)); }
+    .media-card:nth-child(3) { animation-delay: calc(3 * var(--stagger)); }
+    .media-card:nth-child(4) { animation-delay: calc(4 * var(--stagger)); }
+    .media-card:nth-child(5) { animation-delay: calc(5 * var(--stagger)); }
+    .media-card:nth-child(6) { animation-delay: calc(6 * var(--stagger)); }
+    .media-card:nth-child(7) { animation-delay: calc(7 * var(--stagger)); }
+    .media-card:nth-child(8) { animation-delay: calc(8 * var(--stagger)); }
+
+    @keyframes cardIn {
+      from { opacity:0; transform:translateY(18px); }
+      to   { opacity:1; transform:translateY(0); }
     }
 
-    .media-card::before{
-      content:'';
-      position:absolute;
-      inset:0;
+    .media-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(45,95,77,.22);
+    }
+
+    /* ── Card inner ── */
+    .media-card-inner {
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: .4rem;
+    }
+
+    .media-outlet {
+      font-size: .68rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-weight: 800;
+      color: var(--green-800);
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      width: fit-content;
+    }
+    .media-outlet::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--green-700);
+      opacity: .8;
+    }
+
+    .media-title {
+      font-size: 1.06rem;
+      font-weight: 800;
+      color: var(--green-900);
+      line-height: 1.4;
+      letter-spacing: -.015em;
+      flex: 1;
+    }
+
+    .media-tag {
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-weight: 750;
+      padding: .2rem .65rem;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      width: fit-content;
+      background: rgba(45,95,77,.07);
+      color: var(--green-800);
+      border: 1px solid rgba(45,95,77,.14);
+      margin-top: .6rem;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       TALKS SECTION
+       ═══════════════════════════════════════════════════════ */
+    .talks-section {
+      margin-top: 2rem;
+      padding: 2.2rem 2.6rem;
+      border-radius: var(--radius-xl);
       background:
-        radial-gradient(circle at 10% 0%, rgba(232,245,240,.85) 0%, transparent 55%),
-        radial-gradient(circle at 100% 0%, rgba(45,95,77,.16) 0%, transparent 55%);
-      opacity:0;
-      pointer-events:none;
-      transition:opacity .25s var(--transition-smooth);
+        radial-gradient(ellipse 700px 400px at 0% -10%, rgba(212,175,55,.08) 0%, transparent 60%),
+        linear-gradient(135deg, #ffffff 0%, #f6fbf8 100%);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(15,23,42,.055);
+      position: relative;
+      overflow: hidden;
     }
 
-    .media-card:hover{
-      transform:translateY(-4px);
-      box-shadow:var(--shadow-lg);
-      border-color:rgba(45,95,77,.28);
-      background:#ffffff;
-      filter:saturate(1.03);
+    .talks-section::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--gold) 0%, rgba(212,175,55,.2) 100%);
     }
 
-    .media-card:hover::before{
-      opacity:1;
+    #talks-title {
+      font-size: clamp(1.5rem, 2.2vw, 2rem);
+      font-weight: 900;
+      color: var(--green-900);
+      letter-spacing: -.03em;
+      margin-bottom: 1.8rem;
+      padding-left: 1rem;
     }
 
-    .media-link{
-      text-decoration:none;
-      color:inherit;
-      display:block;
-      height:100%;
-    }
-
- /* Outlet pill – green-ish highlight */
-    .media-outlet{
-      font-size:.74rem;
-      text-transform:uppercase;
-      letter-spacing:.12em;
-      font-weight:760;
-      color:var(--dark-green);
-      margin-bottom:.75rem;
-      display:inline-flex;
-      align-items:center;
-      gap:.4rem;
-      padding:.35rem .9rem;
-      border-radius:var(--radius-pill);
-      background:rgba(45,95,77,.08);
-      border:1px solid rgba(45,95,77,.16);
-    }
-
-    .media-outlet::before{
-      content:'';
-      width:7px;
-      height:7px;
-      border-radius:50%;
-      background:linear-gradient(135deg,var(--light-green),var(--primary-green));
-      box-shadow:0 0 0 2px rgba(27,77,62,.15);
-    }
-
-    .media-title{
-      font-size:1.06rem;
-      font-weight:660;
-      color:var(--text-dark);
-      margin:0 0 1.15rem 0;
-      line-height:1.5;
-      letter-spacing:-.01em;
-    }
-
-    .media-link:hover .media-title{
-      color:var(--dark-green);
-    }
-
-    .media-tag{
-      display:inline-flex;
-      align-items:center;
-      gap:.35rem;
-      margin-top:auto;
-      font-size:.7rem;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      font-weight:650;
-      padding:.38rem .9rem;
-      border-radius:var(--radius-pill);
-      background:rgba(27,77,62,.08);
-      color:var(--dark-green);
+    .talk-card {
+      background: var(--white);
+      padding: 1.3rem 1.6rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-xs);
+      border: 1px solid rgba(15,23,42,.055);
+      position: relative;
+      overflow: hidden;
       transition:
-        background .2s var(--transition-smooth),
-        color .2s var(--transition-smooth),
-        transform .2s var(--transition-smooth);
+        transform .25s var(--ease),
+        box-shadow .25s var(--ease),
+        border-color .25s var(--ease);
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
     }
 
-    .media-tag::after{
-      content:'↗';
-      font-size:.78rem;
-      opacity:.7;
+    .talk-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--green-700);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform .3s var(--ease-spring);
     }
 
-    .media-card:hover .media-tag{
-      background:rgba(27,77,62,.14);
-      transform:translateX(2px);
+    .talk-card:hover {
+      transform: translateX(4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(45,95,77,.18);
     }
 
-    /* TALKS */
-    .talks-section{
-      margin-top:0;
-      padding:1.9rem 1.9rem 1.3rem;
-      border-radius:var(--radius-lg);
-      background:
-        radial-gradient(circle at 6% 0%, rgba(208,239,224,.95) 0%, transparent 55%),
-        linear-gradient(135deg,#ffffff 0%,#f4fbf7 65%,#ffffff 100%);
-      box-shadow:var(--shadow-sm);
-      border:1px solid rgba(15,23,42,.06);
+    .talk-card:hover::before {
+      transform: scaleY(1);
+      transform-origin: top;
     }
 
-    #talks-title{
-      font-size:1.8rem;
-      font-weight:860;
-      color:var(--dark-green);
-      margin-bottom:1.4rem;
-      letter-spacing:-.02em;
+    .talk-title {
+      font-size: .75rem;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--text-light);
     }
 
-    .talk-card{
-      background:linear-gradient(135deg,#ffffff 0%,#f7fbf9 100%);
-      padding:1.25rem 1.5rem;
-      border-radius:14px;
-      box-shadow:0 1px 3px rgba(0,0,0,.05);
-      border:1px solid rgba(0,0,0,.06);
-      position:relative;
-      overflow:hidden;
-      transition:
-        transform .25s var(--transition-smooth),
-        box-shadow .25s var(--transition-smooth),
-        border-color .25s var(--transition-smooth),
-        background .25s var(--transition-smooth);
-      margin-bottom:1.1rem;
+    .talk-link {
+      font-size: 1.04rem;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 700;
+      line-height: 1.45;
+      letter-spacing: -.01em;
+      transition: color .2s var(--ease);
+    }
+    .talk-link:hover {
+      color: var(--green-800);
     }
 
-    .talk-card::before{
-      content:'';
-      position:absolute;
-      left:0;
-      top:0;
-      bottom:0;
-      width:4px;
-      background:linear-gradient(180deg,var(--dark-green) 0%,var(--light-green) 100%);
-      transform:scaleY(0);
-      transform-origin:bottom;
-      transition:transform .3s var(--transition-smooth);
+    /* ═══════════════════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════════════════ */
+    @media (max-width: 900px) {
+      body { padding: 1.4rem 1rem; }
+      .media-shell { margin-left: 0; }
+      .lang-toggle { position: static; margin-bottom: .75rem; }
+      .media-header { flex-direction: column; }
+      .media-header-logo { padding: 1.6rem 1.6rem 0; }
+      .media-header-divider { display: none; }
+      .media-header-body { padding: 1rem 1.6rem 1.8rem; }
+      #media-title { font-size: 1.65rem; }
+      .media-grid { grid-template-columns: 1fr; }
+      .talks-section { padding: 1.8rem 1.6rem; }
+      #talks-title { padding-left: 1.5rem; }
     }
 
-    .talk-card:hover{
-      transform:translateX(4px);
-      box-shadow:0 8px 24px rgba(0,0,0,.12);
-      border-color:rgba(27,77,62,.25);
-      background:linear-gradient(145deg,#ffffff 0%,#ebf6f1 100%);
-    }
-
-    .talk-card:hover::before{
-      transform:scaleY(1);
-      transform-origin:top;
-    }
-
-    .talk-title{
-      font-size:.82rem;
-      font-weight:750;
-      text-transform:uppercase;
-      letter-spacing:.08em;
-      margin-bottom:.55rem;
-      color:var(--dark-green);
-    }
-
-    .talk-link{
-      font-size:1.03rem;
-      text-decoration:none;
-      color:var(--text-dark);
-      font-weight:600;
-      line-height:1.4;
-      letter-spacing:-.01em;
-      display:inline-block;
-      transition:color .2s var(--transition-smooth);
-    }
-
-    .talk-link:hover{
-      color:var(--dark-green);
-    }
-
-    @media (max-width:1100px){
-      .media-shell{
-        padding-left:0;
-      }
-    }
-
-    @media (max-width:900px){
-      body{
-        padding:1.4rem 1rem;
-      }
-      .lang-toggle{
-        position:static;
-        margin-left:auto;
-        margin-bottom:.4rem;
-      }
-      .media-header{
-        flex-direction:column;
-        align-items:flex-start;
-        margin-top:.5rem;
-      }
-      .media-logo-wrap{
-        order:-1;
-      }
-      .media-header img{
-        width:80px;
-        height:80px;
-      }
-      #media-title{
-        font-size:1.7rem;
-      }
-      .media-grid{
-        grid-template-columns:1fr;
-      }
-      .talks-section{
-        padding:1.5rem 1.3rem 1.1rem;
-      }
-    }
-
-    @media (max-width:480px){
-      .media-header{
-        padding:1.3rem 1.1rem;
-      }
-      .media-card{
-        padding:1.35rem 1.2rem 1.5rem;
-      }
-      #talks-title{
-        font-size:1.55rem;
-      }
+    @media (max-width: 480px) {
+      .media-header { padding: 1.3rem 1.1rem; }
+      .media-card-inner { padding: 1.1rem 1.1rem 1.3rem; }
+      #talks-title { font-size: 1.45rem; }
+      .talk-card { margin-left: .5rem; }
     }
   </style>
 </head>
-
 <body>
   <div class="media-shell">
-    <!-- Language toggle -->
+
+    <!-- LANGUAGE TOGGLE -->
     <div class="lang-toggle" aria-label="Language selection">
       <button type="button" class="lang-btn active" data-lang="en">EN</button>
       <button type="button" class="lang-btn" data-lang="es">ES</button>
       <button type="button" class="lang-btn" data-lang="nah">NÁHUATL</button>
     </div>
 
-    <!-- HEADER -->
+    <!-- PAGE HEADER -->
     <header class="media-header">
-      <div class="media-logo-wrap">
-        <img
-          src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/Found_logo.jpg"
-          alt="FOUND logo"
-        >
+      <div class="media-header-logo">
+        <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/Found_logo.jpg" alt="FOUND Logo">
       </div>
-      <div class="media-header-main">
-        <div class="media-header-pill" id="media-pill">
-          MEDIA • COVERAGE • TALKS
+      <div class="media-header-divider"></div>
+      <div class="media-header-body">
+        <div class="media-eyebrow">
+          <span class="media-eyebrow-dot"></span>
+          <span class="media-eyebrow-text" id="media-pill">MEDIA · COVERAGE · TALKS</span>
         </div>
         <h1 id="media-title">Media Coverage</h1>
-        <p id="media-intro">
-          Our research and work has been featured in leading international publications.
-        </p>
+        <p id="media-intro">Our research and work has been featured in leading international publications.</p>
       </div>
     </header>
 
     <!-- MEDIA GRID -->
     <section class="media-grid">
       <!-- The Guardian -->
-      <article class="media-card">
-        <a class="media-link" href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">The Guardian</div>
-            <h3 class="media-title">
-              How dead pigs are helping in the search for missing victims of Mexico's drug wars
-            </h3>
-            <span class="media-tag" data-key="article">Article</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">The Guardian</div>
+          <h3 class="media-title">How dead pigs are helping in the search for missing victims of Mexico's drug wars</h3>
+          <span class="media-tag" data-key="article">Article</span>
+        </div>
+      </a>
 
-<!-- BBC Mundo -->
-<article class="media-card">
-  <a class="media-link" href="https://www.bbc.com/mundo/articles/c4gv9r1120mo" target="_blank" rel="noopener">
-    <div>
-      <div class="media-outlet">BBC Mundo</div>
-      <h3 class="media-title">
-        Los cerdos y los insectos que están ayudando a encontrar a los desaparecidos en México
-      </h3>
-      <span class="media-tag" data-key="article">Article</span>
-    </div>
-  </a>
-</article>
+      <!-- BBC Mundo -->
+      <a class="media-card" href="https://www.bbc.com/mundo/articles/c4gv9r1120mo" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">BBC Mundo</div>
+          <h3 class="media-title">Los cerdos y los insectos que están ayudando a encontrar a los desaparecidos en México</h3>
+          <span class="media-tag" data-key="article">Article</span>
+        </div>
+      </a>
 
       <!-- Associated Press (EN) -->
-      <article class="media-card">
-        <a class="media-link" href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">Associated Press</div>
-            <h3 class="media-title">
-              Why are scientists dressing pigs in clothes and burying them in Mexico?
-            </h3>
-            <span class="media-tag" data-key="article">Article</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">Associated Press</div>
+          <h3 class="media-title">Why are scientists dressing pigs in clothes and burying them in Mexico?</h3>
+          <span class="media-tag" data-key="article">Article</span>
+        </div>
+      </a>
 
       <!-- Associated Press (ES) -->
-      <article class="media-card">
-        <a class="media-link" href="https://apnews.com/article/mexico-desaparecidos-busqueda-ciencia-tecnologia-dron-92f74132a9a5035b73795181a1023d1e" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">Associated Press</div>
-            <h3 class="media-title">
-              Ciencia, tecnología y cerdos. México experimenta nuevas formas de buscar a los desaparecidos
-            </h3>
-            <span class="media-tag" data-key="article">Artículo</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://apnews.com/article/mexico-desaparecidos-busqueda-ciencia-tecnologia-dron-92f74132a9a5035b73795181a1023d1e" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">Associated Press</div>
+          <h3 class="media-title">Ciencia, tecnología y cerdos. México experimenta nuevas formas de buscar a los desaparecidos</h3>
+          <span class="media-tag" data-key="article">Artículo</span>
+        </div>
+      </a>
 
-      <!-- Independent -->
-      <article class="media-card">
-        <a class="media-link" href="https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">The Independent</div>
-            <h3 class="media-title">
-              How pigs could help find missing Mexican drug cartel victims
-            </h3>
-            <span class="media-tag" data-key="article">Article</span>
-          </div>
-        </a>
-      </article>
+      <!-- The Independent -->
+      <a class="media-card" href="https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">The Independent</div>
+          <h3 class="media-title">How pigs could help find missing Mexican drug cartel victims</h3>
+          <span class="media-tag" data-key="article">Article</span>
+        </div>
+      </a>
 
       <!-- VICE -->
-      <article class="media-card">
-        <a class="media-link" href="https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">VICE</div>
-            <h3 class="media-title">
-              Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims
-            </h3>
-            <span class="media-tag" data-key="article">Article</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">VICE</div>
+          <h3 class="media-title">Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims</h3>
+          <span class="media-tag" data-key="article">Article</span>
+        </div>
+      </a>
 
       <!-- Los Angeles Times -->
-      <article class="media-card">
-        <a class="media-link" href="https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">Los Angeles Times</div>
-            <h3 class="media-title">
-              Why are scientists dressing pigs in clothes and burying them in Mexico?
-            </h3>
-            <span class="media-tag" data-key="article">Article</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">Los Angeles Times</div>
+          <h3 class="media-title">Why are scientists dressing pigs in clothes and burying them in Mexico?</h3>
+          <span class="media-tag" data-key="article">Article</span>
+        </div>
+      </a>
 
       <!-- NBC News -->
-      <article class="media-card">
-        <a class="media-link" href="https://www.nbcnews.com/news/amp/rcna221791" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">NBC News</div>
-            <h3 class="media-title">
-              Clothed pigs are buried in Mexico as scientists use them in search of missing
-            </h3>
-            <span class="media-tag" data-key="article">Article</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://www.nbcnews.com/news/amp/rcna221791" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">NBC News</div>
+          <h3 class="media-title">Clothed pigs are buried in Mexico as scientists use them in search of missing</h3>
+          <span class="media-tag" data-key="article">Article</span>
+        </div>
+      </a>
 
       <!-- Animal Político -->
-      <article class="media-card">
-        <a class="media-link" href="https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">Animal Político</div>
-            <h3 class="media-title">
-              Con tecnología y drones, investigadores y familias de desaparecidos encuentran fosas clandestinas en Jalisco
-            </h3>
-            <span class="media-tag" data-key="article">Artículo</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">Animal Político</div>
+          <h3 class="media-title">Con tecnología y drones, investigadores y familias de desaparecidos encuentran fosas clandestinas en Jalisco</h3>
+          <span class="media-tag" data-key="article">Artículo</span>
+        </div>
+      </a>
 
       <!-- Science -->
-      <article class="media-card">
-        <a class="media-link" href="https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">Science</div>
-            <h3 class="media-title">
-              Satellites could reveal the secret burial grounds of Mexico's murder victims
-            </h3>
-            <span class="media-tag" data-key="article">Article</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">Science</div>
+          <h3 class="media-title">Satellites could reveal the secret burial grounds of Mexico's murder victims</h3>
+          <span class="media-tag" data-key="article">Article</span>
+        </div>
+      </a>
 
       <!-- WIRED -->
-      <article class="media-card">
-        <a class="media-link" href="https://es.wired.com/articulos/tecnologia-geoespacial-expone-el-horror-de-las-fosas-clandestinas-en-mexico" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">WIRED (ES)</div>
-            <h3 class="media-title">
-              Cómo la tecnología geoespacial expone el horror de las fosas clandestinas en México
-            </h3>
-            <span class="media-tag" data-key="article">Artículo</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://es.wired.com/articulos/tecnologia-geoespacial-expone-el-horror-de-las-fosas-clandestinas-en-mexico" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">WIRED</div>
+          <h3 class="media-title">Cómo la tecnología geoespacial expone el horror de las fosas clandestinas en México</h3>
+          <span class="media-tag" data-key="article">Artículo</span>
+        </div>
+      </a>
 
       <!-- El País (EN) -->
-      <article class="media-card">
-        <a class="media-link" href="https://english.elpais.com/international/2025-03-28/mexicos-izaguirre-ranch-high-concentrations-of-ash-suggest-the-presence-of-clandestine-crematoriums.html" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">El País (EN)</div>
-            <h3 class="media-title">
-              Mexico's Izaguirre ranch: “High concentrations of ash” suggest the presence of clandestine crematoriums
-            </h3>
-            <span class="media-tag" data-key="article">Article</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://english.elpais.com/international/2025-03-28/mexicos-izaguirre-ranch-high-concentrations-of-ash-suggest-the-presence-of-clandestine-crematoriums.html" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">El País</div>
+          <h3 class="media-title">Mexico's Izaguirre ranch: high concentrations of ash suggest clandestine crematoriums</h3>
+          <span class="media-tag" data-key="article">Article</span>
+        </div>
+      </a>
 
       <!-- El País (ES) -->
-      <article class="media-card">
-        <a class="media-link" href="https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">El País</div>
-            <h3 class="media-title">
-              "Altas concentraciones de ceniza" y humo de gasolina: los indicios que apuntan a que en el rancho de Teuchitlán hubo crematorios clandestinos
-            </h3>
-            <span class="media-tag" data-key="article">Artículo</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">El País</div>
+          <h3 class="media-title">Altas concentraciones de ceniza y humo: indicios de crematorios clandestinos en Teuchitlán</h3>
+          <span class="media-tag" data-key="article">Artículo</span>
+        </div>
+      </a>
 
       <!-- TV Azteca -->
-      <article class="media-card">
-        <a class="media-link" href="https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">TV Azteca</div>
-            <h3 class="media-title">
-              Tecnología contra las desapariciones en México
-            </h3>
-            <span class="media-tag" data-key="tv">TV segment</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">TV Azteca</div>
+          <h3 class="media-title">Tecnología contra las desapariciones en México</h3>
+          <span class="media-tag" data-key="tv">TV Segment</span>
+        </div>
+      </a>
 
-      <!-- Animal Político (opinion) -->
-      <article class="media-card">
-        <a class="media-link" href="https://animalpolitico.com/analisis/invitades/libro-madres-buscadoras-fil" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">Animal Político</div>
-            <h3 class="media-title">
-              Interpretar la naturaleza para encontrar a quienes nos faltan
-            </h3>
-            <span class="media-tag" data-key="opinion">Opinion</span>
-          </div>
-        </a>
-      </article>
+      <!-- Animal Político (Opinion) -->
+      <a class="media-card" href="https://animalpolitico.com/analisis/invitades/libro-madres-buscadoras-fil" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">Animal Político</div>
+          <h3 class="media-title">Interpretar la naturaleza para encontrar a quienes nos faltan</h3>
+          <span class="media-tag" data-key="opinion">Opinion</span>
+        </div>
+      </a>
 
       <!-- Reuters -->
-      <article class="media-card">
-        <a class="media-link" href="https://www.reuters.com/world/americas/mexico-mothers-missing-turn-drones-look-unmarked-graves-2024-01-26/" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">Reuters</div>
-            <h3 class="media-title">
-              In Mexico, mothers of the missing turn to drones to look for unmarked graves
-            </h3>
-            <span class="media-tag" data-key="article">Article</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://www.reuters.com/world/americas/mexico-mothers-missing-turn-drones-look-unmarked-graves-2024-01-26/" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">Reuters</div>
+          <h3 class="media-title">In Mexico, mothers of the missing turn to drones to look for unmarked graves</h3>
+          <span class="media-tag" data-key="article">Article</span>
+        </div>
+      </a>
 
       <!-- CGTN America -->
-      <article class="media-card">
-        <a class="media-link" href="https://twitter.com/cgtnamerica/status/1751362286118150555" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">CGTN America</div>
-            <h3 class="media-title">
-              Jalisco mothers search for hidden graves with drones
-            </h3>
-            <span class="media-tag" data-key="tv-social">TV / Social</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://twitter.com/cgtnamerica/status/1751362286118150555" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">CGTN America</div>
+          <h3 class="media-title">Jalisco mothers search for hidden graves with drones</h3>
+          <span class="media-tag" data-key="tv-social">TV / Social</span>
+        </div>
+      </a>
 
       <!-- SinEmbargo -->
-      <article class="media-card">
-        <a class="media-link" href="https://www.sinembargo.mx/18-12-2023/4440515" target="_blank" rel="noopener">
-          <div>
-            <div class="media-outlet">SinEmbargo</div>
-            <h3 class="media-title">
-              Tecnología para hallarlos
-            </h3>
-            <span class="media-tag" data-key="article">Artículo</span>
-          </div>
-        </a>
-      </article>
+      <a class="media-card" href="https://www.sinembargo.mx/18-12-2023/4440515" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">SinEmbargo</div>
+          <h3 class="media-title">Tecnología para hallarlos</h3>
+          <span class="media-tag" data-key="article">Artículo</span>
+        </div>
+      </a>
     </section>
 
-    <!-- TALKS -->
+    <!-- TALKS SECTION -->
     <section class="talks-section">
       <h2 id="talks-title">Talks</h2>
 
-      <div class="talk-card">
-        <div class="talk-title">
-          University of Oxford / Oxford Festival of the Arts
-        </div>
-        <a class="talk-link" href="https://www.ox.ac.uk/event/technological-responses-disappearance" target="_blank" rel="noopener">
-          Disappearance of Worlds | Art Exhibition &amp; Dialogues on Disappearance
-        </a>
-      </div>
+      <a class="talk-card" href="https://www.ox.ac.uk/event/technological-responses-disappearance" target="_blank" rel="noopener">
+        <div class="talk-title">University of Oxford / Oxford Festival of the Arts</div>
+        <span class="talk-link">Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance</span>
+      </a>
 
-      <div class="talk-card">
-        <div class="talk-title">
-          British Association for Forensic Anthropology (BAFA)
-        </div>
-        <a class="talk-link" href="https://bafauk.weebly.com/winter-conference--agm-2024.html" target="_blank" rel="noopener">
-          Interpreting nature to locate the disappeared: influencing search practices in Jalisco, Mexico
-        </a>
-      </div>
+      <a class="talk-card" href="https://bafauk.weebly.com/winter-conference--agm-2024.html" target="_blank" rel="noopener">
+        <div class="talk-title">British Association for Forensic Anthropology</div>
+        <span class="talk-link">Interpreting nature to locate the disappeared: influencing search practices</span>
+      </a>
 
-      <div class="talk-card">
-        <div class="talk-title">
-          Guadalajara International Book Fair (FIL)
-        </div>
-        <a class="talk-link" href="https://jalisco.quadratin.com.mx/principal/presentan-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/" target="_blank" rel="noopener">
-          Presentan Interpretar la naturaleza para encontrar a quienes nos faltan
-        </a>
-      </div>
+      <a class="talk-card" href="https://jalisco.quadratin.com.mx/principal/presentan-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/" target="_blank" rel="noopener">
+        <div class="talk-title">Guadalajara International Book Fair</div>
+        <span class="talk-link">Presentan Interpretar la naturaleza para encontrar a quienes nos faltan</span>
+      </a>
 
-      <div class="talk-card">
-        <div class="talk-title">
-          University of Oxford
-        </div>
-        <a class="talk-link" href="https://www.ox.ac.uk/event/mexicos-missing-how-families-and-technology-are-working-together" target="_blank" rel="noopener">
-          Mexico's Missing: How families and technology are working together
-        </a>
-      </div>
+      <a class="talk-card" href="https://www.ox.ac.uk/event/mexicos-missing-how-families-and-technology-are-working-together" target="_blank" rel="noopener">
+        <div class="talk-title">University of Oxford</div>
+        <span class="talk-link">Mexico's Missing: How families and technology are working together</span>
+      </a>
     </section>
-  </div>
+
+  </div><!-- /media-shell -->
 
   <!-- LANGUAGE SCRIPT -->
   <script>
     (function(){
       const translations = {
         en:{
-          'media-pill':'MEDIA • COVERAGE • TALKS',
+          'media-pill':'MEDIA · COVERAGE · TALKS',
           'media-title':'Media Coverage',
           'media-intro':'Our research and work has been featured in leading international publications.',
           'talks-title':'Talks'
         },
         es:{
-          'media-pill':'MEDIOS • COBERTURA • CHARLAS',
+          'media-pill':'MEDIOS · COBERTURA · CHARLAS',
           'media-title':'Cobertura en medios',
           'media-intro':'Nuestras investigaciones y trabajo han aparecido en medios internacionales de referencia.',
           'talks-title':'Charlas'
         },
         nah:{
-          'media-pill':'MEDIOS • TLAYEKOLOLLO • TLAHTOLMEH',
+          'media-pill':'MEDIOS · TLAYEKOLOLLO · TLAHTOLMEH',
           'media-title':'Tlayekoliztli ipan medios',
-          'media-intro':'Totlatequi huan totlatlamachtiliztli yopanok ipan medios internacionales tlen hueyi tlanechicoliztli.',
+          'media-intro':'Totlatequi huan totlatlamachtiliztli yopanok ipan medios internacionales.',
           'talks-title':'Tlatlahtolmeh'
         }
       };
 
       const tagLabels = {
-        en:{
-          article:'Article',
-          tv:'TV segment',
-          'tv-social':'TV / Social',
-          opinion:'Opinion'
-        },
-        es:{
-          article:'Artículo',
-          tv:'Segmento TV',
-          'tv-social':'TV / Redes',
-          opinion:'Opinión'
-        },
-        nah:{
-          article:'Tlatlaquiliztli',
-          tv:'Segmento TV',
-          'tv-social':'TV / Social',
-          opinion:'Tlaixkomati'
-        }
+        en:{ article:'Article', tv:'TV Segment', 'tv-social':'TV / Social', opinion:'Opinion' },
+        es:{ article:'Artículo', tv:'Segmento TV', 'tv-social':'TV / Redes', opinion:'Opinión' },
+        nah:{ article:'Tlatlaquiliztli', tv:'Segmento TV', 'tv-social':'TV / Social', opinion:'Tlaixkomati' }
       };
 
       function setLanguage(lang){
         const dict = translations[lang] || translations.en;
-
         Object.keys(dict).forEach(id => {
           const el = document.getElementById(id);
           if(el) el.innerHTML = dict[id];
@@ -855,10 +706,7 @@ author_profile: true
           }
         });
 
-        document.documentElement.setAttribute(
-          'lang',
-          lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
-        );
+        document.documentElement.lang = lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en');
 
         document.querySelectorAll('.lang-btn').forEach(btn=>{
           btn.classList.toggle('active', btn.dataset.lang === lang);
