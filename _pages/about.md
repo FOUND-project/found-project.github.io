@@ -7,11 +7,9 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -35,17 +33,14 @@ html{scroll-behavior:smooth}
 *:focus-visible{outline:3px solid rgba(74,140,115,.55);outline-offset:2px;border-radius:10px}
 .page,#main,.initial-content,.page__inner-wrap,.page__content,.archive{max-width:none!important;width:106%!important}
 .page__content{padding-left:clamp(1rem,4vw,3rem)!important;padding-right:clamp(1rem,4vw,3rem)!important}
-
 /* Scroll reveal — safe: gated by JS class on body */
 body.reveal-ready .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s var(--transition-smooth),transform .6s var(--transition-smooth)}
 body.reveal-ready .reveal.is-visible{opacity:1;transform:translateY(0)}
 body.reveal-ready .reveal-delay-2{transition-delay:.18s}
-
 .lang-toggle{position:absolute;top:1.4rem;right:clamp(1rem,4vw,3rem);display:inline-flex;gap:.45rem;z-index:3}
 .lang-btn{border:1.5px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);color:rgba(255,255,255,.75);padding:.35rem .85rem;border-radius:999px;font-size:.78rem;font-weight:700;font-family:var(--font-mono);letter-spacing:.09em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(10px);transition:transform .2s var(--transition-smooth),background .2s var(--transition-smooth),box-shadow .2s var(--transition-smooth),border-color .2s var(--transition-smooth)}
 .lang-btn:hover{background:rgba(255,255,255,.16);transform:translateY(-1px);box-shadow:0 8px 22px rgba(0,0,0,.18);border-color:rgba(255,255,255,.7);color:#fff}
 .lang-btn.active{background:rgba(255,255,255,.95);color:var(--dark-green);border-color:rgba(255,255,255,.95);box-shadow:0 0 0 1px rgba(0,0,0,.08),0 10px 26px rgba(0,0,0,.12);transform:translateY(-1px)}
-
 .title-section{padding:clamp(3.5rem,7vw,5.5rem) 0 clamp(2rem,5vw,3.5rem);background:radial-gradient(1200px 600px at 15% 35%,rgba(212,175,55,.14) 0%,transparent 55%),radial-gradient(900px 520px at 85% 20%,rgba(232,245,240,.10) 0%,transparent 60%),linear-gradient(135deg,#0b1c16 0%,#123126 38%,var(--dark-green) 62%,var(--primary-green) 100%);position:relative;overflow:hidden;margin-bottom:2rem;box-shadow:var(--shadow-lg);isolation:isolate}
 .title-section::before{content:'';position:absolute;inset:-2px;background:linear-gradient(90deg,rgba(74,140,115,.14),transparent 35%,transparent 65%,rgba(74,140,115,.12));opacity:.85;pointer-events:none;mask-image:linear-gradient(to bottom,transparent,black 18%,black 82%,transparent);-webkit-mask-image:linear-gradient(to bottom,transparent,black 18%,black 82%,transparent);z-index:0}
 .title-section::after{content:'';position:absolute;left:50%;top:-120px;width:720px;height:720px;transform:translateX(-50%);background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 55%);filter:blur(1px);opacity:.55;pointer-events:none;z-index:0}
@@ -56,7 +51,6 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
 .project-subtitle{font-size:clamp(1.15rem,2.5vw,1.6rem);font-weight:400;color:rgba(232,245,240,.85);font-family:var(--font-display);font-style:italic;letter-spacing:.02em;line-height:1.55;max-width:980px;margin:0 auto;text-align:center;text-shadow:0 6px 18px rgba(0,0,0,.22);padding:0 clamp(1rem,4vw,3rem)}
 .title-accent{color:var(--gold-accent)}
 .title-divider{width:72px;height:1.5px;background:linear-gradient(90deg,transparent,var(--gold-accent),transparent);border:none;margin:.1rem auto 0;opacity:.55}
-
 .hero{padding:clamp(1.75rem,4vw,3rem) 0;position:relative;overflow:hidden}
 .title-section,.hero{background-color:transparent}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(800px 420px at 12% 20%,rgba(232,245,240,.70) 0%,transparent 55%),radial-gradient(780px 420px at 86% 0%,rgba(212,175,55,.12) 0%,transparent 60%),linear-gradient(135deg,#f7fbfa 0%,#ffffff 60%);z-index:0}
@@ -73,7 +67,6 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
 .hero-description{font-size:clamp(1.05rem,2.4vw,1.25rem);color:var(--text-medium);max-width:900px;line-height:1.85;font-weight:450}
 .hero-description strong{color:var(--primary-green);font-weight:750;background:linear-gradient(120deg,rgba(232,245,240,.95) 0%,transparent 100%);padding:.08rem .32rem;border-radius:6px}
 .hero-side{display:flex;flex-direction:column;gap:1rem;align-items:stretch;min-height:100%}
-
 .award-highlight{margin-top:0}
 .award-card{display:flex;flex-wrap:wrap;align-items:flex-start;gap:1.1rem;padding:1.25rem 1.5rem;border-radius:20px;background:radial-gradient(circle at 5% 0%,rgba(212,175,55,.18) 0%,transparent 55%),linear-gradient(135deg,#fff9ec 0%,#fffdf7 45%,#ffffff 100%);border:1px solid rgba(212,175,55,.35);box-shadow:0 18px 40px rgba(15,23,42,.14);text-decoration:none;color:var(--text-dark);position:relative;overflow:hidden;transition:transform .3s var(--transition-smooth),box-shadow .3s var(--transition-smooth),border-color .3s var(--transition-smooth),background .3s var(--transition-smooth)}
 .award-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,rgba(212,175,55,.3),var(--gold-accent),rgba(212,175,55,.3));opacity:.8;pointer-events:none}
@@ -85,7 +78,6 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
 .award-title span.arrow{display:inline-block;font-size:.95rem;transform:translateX(0);transition:transform .25s var(--transition-smooth)}
 .award-card:hover .award-title span.arrow{transform:translateX(4px)}
 .award-meta{font-size:.9rem;color:var(--text-light)}
-
 .hero-team-bar{position:relative;z-index:1;margin-top:clamp(1.25rem,2.5vw,2rem);padding:clamp(.75rem,1.5vw,1.1rem) clamp(1rem,4vw,3rem);background:rgba(11,28,22,.82);backdrop-filter:blur(12px);border-top:1px solid rgba(74,140,115,.22);border-bottom:1px solid rgba(74,140,115,.12)}
 .hero-team-bar-inner{max-width:1400px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem;font-size:clamp(.8rem,1.6vw,.92rem);color:rgba(232,245,240,.78);font-family:var(--font-mono);line-height:1.65}
 .htb-label{color:var(--gold-accent);font-weight:700;letter-spacing:.04em;white-space:nowrap;flex-shrink:0}
@@ -93,16 +85,13 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
 .htb-divider{color:rgba(74,140,115,.5);font-size:1rem;flex-shrink:0}
 .htb-text{font-family:var(--font-body);font-size:clamp(.82rem,1.6vw,.92rem);color:rgba(232,245,240,.80);letter-spacing:.01em}
 .htb-text strong{color:rgba(232,245,240,.97);font-weight:650}
-
 .content-section{padding:clamp(2.5rem,5vw,4.25rem) 0;border-bottom:1px solid var(--border-light);position:relative;scroll-margin-top:2rem}
 .content-section:last-of-type{border-bottom:none}
 .section-container{max-width:1400px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem)}
 .section-divider{max-width:1400px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem)}
 .section-divider hr{border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(45,95,77,.12),rgba(212,175,55,.08),rgba(45,95,77,.12),transparent)}
-
 h2{font-size:clamp(1.85rem,4vw,2.85rem);font-weight:400;font-family:var(--font-display);color:var(--dark-green);margin-bottom:1.35rem;letter-spacing:0;position:relative;padding-bottom:1rem;line-height:1.25}
 h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;background:linear-gradient(90deg,var(--gold-accent),rgba(212,175,55,.25));border-radius:999px}
-
 .dual-sections-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);gap:clamp(2rem,4vw,3rem);align-items:stretch}
 .dual-column{min-width:0}
 #technologies{background:radial-gradient(circle at 20% 15%,rgba(232,245,240,.75) 0%,transparent 52%),radial-gradient(circle at 80% 0%,rgba(212,175,55,.10) 0%,transparent 55%),linear-gradient(135deg,#f8fcfb 0%,#fff 60%);border-radius:26px;padding:clamp(1.75rem,3vw,2.5rem);border:1px solid rgba(45,95,77,.10);box-shadow:var(--shadow-md);position:relative;overflow:hidden}
@@ -130,7 +119,6 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 .buscadoras-image img.loading{opacity:0}
 .buscadoras-image:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
 .buscadoras-image:hover img{transform:scale(1.05)}
-
 .collab-wrap{margin-top:2rem}
 .collab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:clamp(1.1rem,2.2vw,1.8rem);margin-top:1.5rem}
 .collab-card{background:#fff;border-radius:18px;box-shadow:var(--shadow-md);border:1px solid rgba(45,95,77,.10);overflow:hidden;position:relative;transition:transform .35s var(--transition-smooth),box-shadow .35s var(--transition-smooth),border-color .35s var(--transition-smooth);min-height:220px;display:flex;flex-direction:column;justify-content:space-between;isolation:isolate}
@@ -149,7 +137,6 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 .collab-card-gif .collab-logo img{max-height:none!important;max-width:none!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 25%;display:block;filter:none!important;transform:scale(1.02);transition:transform .8s var(--transition-smooth),opacity .4s ease}
 .collab-card-gif .collab-logo img.loading{opacity:0}
 .collab-card-gif:hover .collab-logo img{transform:scale(1.06)}
-
 .social-section{background:radial-gradient(900px 520px at 20% 0%,rgba(232,245,240,.75) 0%,transparent 55%),linear-gradient(135deg,rgba(232,245,240,.65) 0%,#fff 68%);padding:clamp(3rem,6vw,5rem) 0;margin:0;position:relative;overflow:hidden}
 .social-container{max-width:1600px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem)}
 .section-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:400;font-family:var(--font-display);color:var(--dark-green);margin-bottom:1rem;text-align:center;letter-spacing:0;line-height:1.15}
@@ -159,12 +146,10 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 .social-embed:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(74,140,115,.50)}
 .iframe-container{position:relative;width:100%;max-width:560px;overflow:hidden;border-radius:16px;border:1px solid rgba(15,23,42,.08);box-shadow:0 10px 30px rgba(15,23,42,.08)}
 .iframe-container iframe{width:100%;border:0;display:block;height:880px}
-
 .footer{text-align:center;padding:clamp(3.5rem,7vw,5.5rem) 0;margin-top:0;border-top:none;background:radial-gradient(800px 400px at 50% 0%,rgba(74,140,115,.10) 0%,transparent 55%),linear-gradient(180deg,#0e2a1f 0%,#0b1c16 100%);position:relative;overflow:hidden}
 .footer-content{max-width:1400px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem)}
 .footer em{font-size:clamp(1.22rem,3vw,1.65rem);color:rgba(232,245,240,.82);font-weight:400;font-family:var(--font-display);font-style:italic;letter-spacing:.02em;line-height:1.6;display:inline-block;max-width:100%}
 .footer-line{width:60px;height:1.5px;background:linear-gradient(90deg,transparent,rgba(212,175,55,.45),transparent);border:none;margin:1.25rem auto 0}
-
 @media(max-width:768px){.touch-zoomable{cursor:zoom-in}.touch-zoomable.is-expanded{position:fixed;inset:0;margin:0!important;width:100vw!important;height:100vh!important;max-width:none!important;max-height:none!important;z-index:9999;background:rgba(0,0,0,.9);border-radius:0!important;box-shadow:none!important;padding:0!important;display:flex;align-items:center;justify-content:center}.touch-zoomable.is-expanded img,.touch-zoomable.is-expanded .hero-image{width:100%;height:100%;object-fit:contain;transform:none!important;box-shadow:none!important}}
 @media(max-width:1100px){.image-gallery{grid-template-columns:repeat(6,1fr)}.gallery-item{grid-column:span 3}}
 @media(max-width:900px){.dual-sections-grid{grid-template-columns:1fr}.hero-top{grid-template-columns:1fr}.hero-side{max-width:520px;margin:0 auto}}
@@ -172,7 +157,6 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 @media(max-width:480px){.gallery-item{max-height:140px}.iframe-container iframe{height:430px}}
 .collab-img.fth{filter:brightness(0) saturate(100%) invert(9%) sepia(6%) saturate(512%) hue-rotate(94deg) brightness(95%) contrast(96%)}
 .collab-img.labco{filter:brightness(0) saturate(100%) invert(9%) sepia(6%) saturate(512%) hue-rotate(94deg) brightness(95%) contrast(96%)}
-
 .gif-strip{padding:clamp(1.4rem,3vw,2.4rem) 0 0;position:relative;overflow:hidden;border-top:1px solid var(--border-light);background:radial-gradient(900px 520px at 15% 10%,rgba(232,245,240,.85) 0%,transparent 55%),radial-gradient(820px 520px at 85% 0%,rgba(212,175,55,.10) 0%,transparent 60%),linear-gradient(135deg,#f8fcfb 0%,#ffffff 65%);isolation:isolate}
 .gif-strip::before{content:'';position:absolute;inset:-2px;background:repeating-linear-gradient(90deg,rgba(45,95,77,.10) 0px,rgba(45,95,77,.10) 1px,transparent 1px,transparent 18px),repeating-linear-gradient(0deg,rgba(74,140,115,.08) 0px,rgba(74,140,115,.08) 1px,transparent 1px,transparent 22px);opacity:.22;pointer-events:none;mask-image:radial-gradient(circle at 60% 50%,black 0%,black 55%,transparent 78%);-webkit-mask-image:radial-gradient(circle at 60% 50%,black 0%,black 55%,transparent 78%);z-index:0;animation:circuitDrift 14s linear infinite}
 .gif-strip::after{content:'';position:absolute;inset:0;background:radial-gradient(600px 320px at 70% 50%,rgba(74,140,115,.18) 0%,transparent 60%),radial-gradient(520px 280px at 30% 70%,rgba(212,175,55,.12) 0%,transparent 62%);opacity:.55;pointer-events:none;z-index:0}
@@ -198,7 +182,6 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 @keyframes circuitDrift{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-40px,18px,0)}}
 @media(max-width:700px){.gif-strip-inner{grid-template-columns:1fr}.gs-panel-main,.gs-panel-side{aspect-ratio:16/9}}
 @media(min-width:701px) and (max-width:1050px){.gif-strip-inner{grid-template-columns:1fr 1fr;grid-template-rows:auto auto}.gs-panel-main{grid-column:1;grid-row:1/3;aspect-ratio:unset;min-height:220px}.gs-panel-side:nth-child(2){grid-column:2;grid-row:1}.gs-panel-side:nth-child(3){grid-column:2;grid-row:2}}
-
 /* Stats ribbon */
 .stats-ribbon{padding:clamp(1.5rem,3vw,2.2rem) 0;background:radial-gradient(700px 350px at 50% 50%,rgba(232,245,240,.45) 0%,transparent 60%),linear-gradient(180deg,#f7fbfa 0%,#fff 100%);position:relative}
 .stats-ribbon-inner{max-width:1400px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem);display:flex;justify-content:center;gap:clamp(2rem,5vw,5rem);flex-wrap:wrap}
@@ -208,8 +191,24 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 .stat-label{font-size:.72rem;color:var(--text-light);margin-top:.3rem;letter-spacing:.05em;text-transform:uppercase;font-weight:700;font-family:var(--font-mono)}
 .stat-divider{width:1px;background:linear-gradient(180deg,transparent,rgba(45,95,77,.15),transparent);align-self:stretch}
 @media(max-width:600px){.stats-ribbon-inner{gap:1.5rem 2rem}.stat-divider{display:none}}
+/* ===== DOCUMENTARY TRAILER SECTION ===== */
+.trailer-section{position:relative;overflow:hidden;padding:clamp(3rem,6vw,5rem) 0;background:radial-gradient(1000px 500px at 50% 40%,rgba(212,175,55,.10) 0%,transparent 55%),linear-gradient(180deg,#0e2a1f 0%,#0b1c16 50%,#0e2a1f 100%);isolation:isolate}
+.trailer-section::before{content:'';position:absolute;inset:0;background:radial-gradient(600px 300px at 20% 30%,rgba(74,140,115,.12) 0%,transparent 55%),radial-gradient(600px 300px at 80% 70%,rgba(212,175,55,.08) 0%,transparent 55%);pointer-events:none;z-index:0}
+.trailer-section::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 10%,rgba(212,175,55,.35),var(--gold-accent),rgba(212,175,55,.35),transparent 90%);opacity:.7;z-index:1}
+.trailer-container{max-width:1000px;margin:0 auto;padding:0 clamp(1rem,4vw,3rem);position:relative;z-index:1;text-align:center}
+.trailer-eyebrow{display:inline-flex;align-items:center;gap:.5rem;padding:.3rem .85rem;border-radius:999px;font-size:.72rem;font-weight:750;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-accent);background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.25);margin-bottom:1.2rem;font-family:var(--font-mono)}
+.trailer-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold-accent);box-shadow:0 0 8px rgba(212,175,55,.5)}
+.trailer-title{font-size:clamp(1.8rem,4.5vw,3rem);font-weight:400;font-family:var(--font-display);color:#fff;margin-bottom:.6rem;letter-spacing:0;line-height:1.2;text-shadow:0 8px 24px rgba(0,0,0,.3)}
+.trailer-subtitle{font-size:clamp(1rem,2.2vw,1.2rem);color:rgba(232,245,240,.65);margin-bottom:clamp(1.5rem,3vw,2.5rem);max-width:700px;margin-left:auto;margin-right:auto;line-height:1.7;font-weight:400}
+.trailer-embed-wrapper{position:relative;width:100%;max-width:900px;margin:0 auto;border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.08);border:1px solid rgba(74,140,115,.20);background:#000;transition:transform .4s var(--transition-smooth),box-shadow .4s var(--transition-smooth)}
+.trailer-embed-wrapper:hover{transform:translateY(-4px);box-shadow:0 32px 72px rgba(0,0,0,.55),0 0 0 1px rgba(212,175,55,.15)}
+.trailer-embed-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.trailer-embed-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.trailer-caption{margin-top:1.4rem;display:flex;align-items:center;justify-content:center;gap:.8rem;flex-wrap:wrap}
+.trailer-caption-text{font-size:clamp(.82rem,1.6vw,.92rem);color:rgba(232,245,240,.55);font-family:var(--font-mono);letter-spacing:.03em}
+.trailer-caption-divider{width:28px;height:1px;background:linear-gradient(90deg,transparent,rgba(212,175,55,.4),transparent)}
+@media(max-width:768px){.trailer-section{padding:clamp(2rem,5vw,3.5rem) 0}.trailer-embed-wrapper{border-radius:var(--radius-md)}}
 </style>
-
 <!-- TITLE SECTION -->
 <section class="title-section">
   <div class="lang-toggle" aria-label="Language selection">
@@ -226,7 +225,6 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     <p class="project-subtitle" id="project-subtitle"><span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes nos Faltan</p>
   </div>
 </section>
-
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
@@ -261,7 +259,6 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     </div>
   </div>
 </section>
-
 <!-- GIF STRIP -->
 <section class="gif-strip" aria-label="FOUND in action">
   <div class="gif-strip-inner">
@@ -277,7 +274,6 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     <span class="gif-caption-item"><strong>Clandestine sites location</strong> — AI that finds what was meant to stay hidden.</span>
   </div></div>
 </section>
-
 <!-- STATS RIBBON -->
 <section class="stats-ribbon reveal" aria-label="Key statistics">
   <div class="stats-ribbon-inner">
@@ -288,7 +284,25 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     <div class="stat-item"><div class="stat-number" id="stat-num-3">3</div><div class="stat-label" id="stat-label-3">Countries</div></div>
   </div>
 </section>
-
+<!-- ===== DOCUMENTARY TRAILER ===== -->
+<section class="trailer-section reveal" id="documentary" aria-label="FOUND documentary trailer">
+  <div class="trailer-container">
+    <div class="trailer-eyebrow" id="trailer-eyebrow">Documentary</div>
+    <h2 class="trailer-title" id="trailer-title" style="color:#fff;padding-bottom:0;margin-bottom:.6rem">Watch the Trailer</h2>
+    <h2 style="display:none"><!-- override h2::after for this section --></h2>
+    <p class="trailer-subtitle" id="trailer-subtitle">The story of families, science, and the search for those who are missing.</p>
+    <div class="trailer-embed-wrapper">
+      <div class="trailer-embed-responsive">
+        <iframe src="https://www.youtube.com/embed/hbo9H4yj1VQ?si=0o_D0HgsLp2pMjW5" title="FOUND Documentary Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="trailer-caption">
+      <span class="trailer-caption-text" id="trailer-caption-text">FOUND Documentary</span>
+      <span class="trailer-caption-divider"></span>
+      <span class="trailer-caption-text">2026</span>
+    </div>
+  </div>
+</section>
 <!-- TECHNOLOGIES + BUSCADORAS -->
 <section class="content-section">
   <div class="section-container dual-sections-grid">
@@ -333,9 +347,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     </div>
   </div>
 </section>
-
 <div class="section-divider"><hr/></div>
-
 <!-- INSTITUTIONAL PARTNERSHIPS -->
 <section class="content-section" id="collaborations">
   <div class="section-container">
@@ -370,7 +382,6 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     </div>
   </div>
 </section>
-
 <!-- SOCIAL -->
 <section class="social-section" id="social">
   <div class="social-container">
@@ -385,7 +396,6 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-content">
@@ -393,12 +403,10 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     <hr class="footer-line" />
   </div>
 </footer>
-
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <script>
 (function(){
-  var translations={en:{'collab-item-labco':'LABCO','collab-note-labco':'Exploring AI together to locate and identify','collab-item-eaaf':'Argentine Forensic Anthropology Team (EAAF)','collab-note-eaaf':"Luis Fondebrider, FOUND's advisor",'collab-item-ori':'Oxford Robotics Institute','collab-note-ori':'Partnership, technical expertise','collab-item-ipn':'Instituto Polit\u00e9cnico Nacional','collab-note-ipn':'Technical expertise, Technology','project-subtitle':'<span class="title-accent">Technologies</span> To Locate Those Who We Are Missing','hero-tagline-static':'Using technology to','word-1':'search.','word-2':'remember.','word-3':'dignify.','word-4':'find.','word-5':'bring closure.','hero-main-text':'Over 130,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> works at the intersection of frontier technology and the lived knowledge of search groups, driving systemic change and building institutional capacity to improve how governments respond to disappearance.','hero-team-text':'Our core team brings together <strong>collectives of families from Jalisco and Zacatecas searching for their missing loved ones</strong>, alongside CentroGeo, the University of Oxford, Jalisco\'s Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico\'s National Search Commission, LAB-CO, and forensic anthropologist Luis Fondebrider.','collab-title':'Institutional Partnerships','tech-title':'Technologies in Action','tech-item-1':'Multispectral &amp; Hyperspectral Imaging','tech-item-2':'Airborne LiDAR','tech-item-3':'Seismic Noise Interferometry (TIRSA)','tech-item-4':'Electrical Resistivity Tomography, Conductivimetry','tech-item-5':'Satellite Spectral Analysis','tech-item-ml':'Machine Learning','tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science','buscadoras-title':'The Role of Buscadoras','buscadoras-text':"Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.",'social-title':'Follow Our Journey','social-subtitle':'Stay connected with our latest findings, community stories, and collaborations','footer-text':'FOUND: Tecnolog\u00edas para Encontrar a Quienes nos Faltan.','stat-label-1':'Technologies deployed','stat-label-2':'Institutional partners','stat-label-3':'Countries'},es:{'collab-item-labco':'LABCO','collab-note-labco':'Explorando juntos el uso de IA para localizar e identificar','collab-item-eaaf':'Equipo Argentino de Antropolog\u00eda Forense (EAAF)','collab-note-eaaf':'Luis Fondebrider, asesor de FOUND','collab-item-ori':'Oxford Robotics Institute','collab-note-ori':'Alianza, experiencia t\u00e9cnica','collab-item-ipn':'Instituto Polit\u00e9cnico Nacional','collab-note-ipn':'Experiencia t\u00e9cnica, desarrollo tecnol\u00f3gico','project-subtitle':'<span class="title-accent">Tecnolog\u00edas</span> para Encontrar a Quienes nos Faltan','hero-tagline-static':'Usando tecnolog\u00eda para','word-1':'buscar.','word-2':'recordar.','word-3':'dignificar.','word-4':'encontrar.','word-5':'dar cierre.','hero-main-text':'M\u00e1s de 130,000 personas est\u00e1n registradas como desaparecidas en M\u00e9xico. Detr\u00e1s de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnolog\u00eda y saberes de familias buscadoras para aprender del campo, localizar y promover cambios sist\u00e9micos.','hero-team-text':'Nuestro equipo central re\u00fane <strong>colectivos de familias de Jalisco y Zacatecas que buscan a sus seres queridos desaparecidos</strong>, junto a CentroGeo, la Universidad de Oxford, la Comisi\u00f3n de B\u00fasqueda de Jalisco, la Universidad Nacional Aut\u00f3noma de M\u00e9xico (UNAM) y la Universidad de Guadalajara. Trabajamos junto a socios estrat\u00e9gicos, entre ellos la Oficina para Asuntos Exteriores, de la Commonwealth y de Desarrollo del Reino Unido (FCDO), la Oficina Ejecutiva del Secretario General de la ONU, la Unidad de B\u00fasqueda de Personas dadas por Desaparecidas (UBPD) de Colombia, la Comisi\u00f3n Nacional de B\u00fasqueda de M\u00e9xico, LAB-Co y Luis Fondebrider.','collab-title':'Alianzas institucionales','tech-title':'Tecnolog\u00edas en acci\u00f3n','tech-item-1':'Im\u00e1genes multiespectrales e hiperespectrales','tech-item-2':'LiDAR aerotransportado','tech-item-3':'Interferometr\u00eda de ruido s\u00edsmico (TIRSA)','tech-item-4':'Tomograf\u00eda de resistividad el\u00e9ctrica y mediciones de conductividad','tech-item-5':'An\u00e1lisis espectral satelital','tech-item-ml':'Aprendizaje autom\u00e1tico','tech-item-6':'Entomolog\u00eda forense, bot\u00e1nica, an\u00e1lisis territorial y ciencia del suelo','buscadoras-title':'El papel de las buscadoras','buscadoras-text':'Los colectivos liderados por mujeres est\u00e1n en el coraz\u00f3n del trabajo de FOUND. Han transformado la conversaci\u00f3n nacional sobre desaparici\u00f3n y justicia. Sus pr\u00e1cticas de b\u00fasqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus m\u00e9todos en nuestros esfuerzos tecnol\u00f3gicos.','social-title':'Sigue nuestro camino','social-subtitle':'Mant\u00e9nte al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.','footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.','stat-label-1':'Tecnolog\u00edas desplegadas','stat-label-2':'Socios institucionales','stat-label-3':'Pa\u00edses'},nah:{'collab-item-labco':'LABCO','collab-note-labco':'Timoitayoh ika IA para titemoa huan tiquixmati','collab-item-eaaf':'Equipo Argentino de Antropolog\u00eda Forense (EAAF)','collab-note-eaaf':'Luis Fondebrider, ixcuitlali (asesor) FOUND','collab-item-ori':'Oxford Robotics Institute','collab-note-ori':'Tlaneltiliztli (alianza), teknikoh tlamatiliztli','collab-item-ipn':'Instituto Polit\u00e9cnico Nacional','collab-note-ipn':'Teknikoh tlamatiliztli, teknoloj\u00edayoh tlatequipanoliztli','project-subtitle':'<span class="title-accent">Tecnolog\u00edas</span> para Encontrar a Quienes nos Faltan','hero-tagline-static':'Teknoloj\u00edayoh ika','word-1':'temoa.','word-2':'quilnamictia.','word-3':'tlatepanita.','word-4':'quipantlalia.','word-5':'yolpakilistli quimacatia.','hero-main-text':'124,354 tl\u0101cameh tlahcuil\u014dlmeh quen pol\u012bhuihqueh ipan M\u0113xihco. Ipan sesen inin caso cah se familia tlatehu\u00eda tlanemilistli. <strong>FOUND</strong> quimixnextia tehnolog\u00edayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia yancuic tlanemilistli ipan sistema.','hero-team-text':'In totequitlacauh quinnechicoa <strong>in colectivoh in familias tlen Jalisco huan Zacatecas tlen quitemoa in inpilhuan polihqueh</strong>, oc nochi CentroGeo, in Universidad de Oxford, in Comisi\u00f3n de B\u00fasqueda de Jalisco, in Universidad Nacional Aut\u00f3noma de M\u00e9xico (UNAM) huan in Universidad de Guadalajara. Timoitayoh ika in tlaneltililmeh tlen FCDO, in Oficina Ejecutiva del Secretario General de la ONU, UBPD, in Comisi\u00f3n Nacional de B\u00fasqueda, LAB-Co huan Luis Fondebrider.','collab-title':'Alianzas institucionales','tech-title':'Teknoloj\u00edayoh tlen motequiti','tech-item-1':'Multispectral &amp; Hyperspectral Imaging','tech-item-2':'Airborne LiDAR','tech-item-3':'Seismic Noise Interferometry (TIRSA)','tech-item-4':'Electrical Resistivity Tomography, Conductivimetry','tech-item-5':'Satellite Spectral Analysis','tech-item-ml':'Machine Learning','tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science','buscadoras-title':'In papel in buscadoras','buscadoras-text':'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan pa\u00eds tlen polihuiliztli huan tlayectlaliz (justicia). Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknol\u00f3gicoh tequitl.','social-title':'Xiquito in totlanejmachtiliz','social-subtitle':'Ximoyetkixtia inin tlen tipantlaliah, tlen tlanechicoliztli in comunidades huan inin tlen timocoyonaltiah san sejco.','footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.','stat-label-1':'Teknoloj\u00edayoh','stat-label-2':'Tlaneltililmeh','stat-label-3':'Tl\u0101ltlameh'}};
+  var translations={en:{'trailer-eyebrow':'Documentary','trailer-title':'Watch the Trailer','trailer-subtitle':'The story of families, science, and the search for those who are missing.','trailer-caption-text':'FOUND Documentary','collab-item-labco':'LABCO','collab-note-labco':'Exploring AI together to locate and identify','collab-item-eaaf':'Argentine Forensic Anthropology Team (EAAF)','collab-note-eaaf':"Luis Fondebrider, FOUND's advisor",'collab-item-ori':'Oxford Robotics Institute','collab-note-ori':'Partnership, technical expertise','collab-item-ipn':'Instituto Polit\u00e9cnico Nacional','collab-note-ipn':'Technical expertise, Technology','project-subtitle':'<span class="title-accent">Technologies</span> To Locate Those Who We Are Missing','hero-tagline-static':'Using technology to','word-1':'search.','word-2':'remember.','word-3':'dignify.','word-4':'find.','word-5':'bring closure.','hero-main-text':'Over 130,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> works at the intersection of frontier technology and the lived knowledge of search groups, driving systemic change and building institutional capacity to improve how governments respond to disappearance.','hero-team-text':'Our core team brings together <strong>collectives of families from Jalisco and Zacatecas searching for their missing loved ones</strong>, alongside CentroGeo, the University of Oxford, Jalisco\'s Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico\'s National Search Commission, LAB-CO, and forensic anthropologist Luis Fondebrider.','collab-title':'Institutional Partnerships','tech-title':'Technologies in Action','tech-item-1':'Multispectral &amp; Hyperspectral Imaging','tech-item-2':'Airborne LiDAR','tech-item-3':'Seismic Noise Interferometry (TIRSA)','tech-item-4':'Electrical Resistivity Tomography, Conductivimetry','tech-item-5':'Satellite Spectral Analysis','tech-item-ml':'Machine Learning','tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science','buscadoras-title':'The Role of Buscadoras','buscadoras-text':"Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.",'social-title':'Follow Our Journey','social-subtitle':'Stay connected with our latest findings, community stories, and collaborations','footer-text':'FOUND: Tecnolog\u00edas para Encontrar a Quienes nos Faltan.','stat-label-1':'Technologies deployed','stat-label-2':'Institutional partners','stat-label-3':'Countries'},es:{'trailer-eyebrow':'Documental','trailer-title':'Mira el Tr\u00e1iler','trailer-subtitle':'La historia de las familias, la ciencia y la b\u00fasqueda de quienes nos faltan.','trailer-caption-text':'Documental FOUND','collab-item-labco':'LABCO','collab-note-labco':'Explorando juntos el uso de IA para localizar e identificar','collab-item-eaaf':'Equipo Argentino de Antropolog\u00eda Forense (EAAF)','collab-note-eaaf':'Luis Fondebrider, asesor de FOUND','collab-item-ori':'Oxford Robotics Institute','collab-note-ori':'Alianza, experiencia t\u00e9cnica','collab-item-ipn':'Instituto Polit\u00e9cnico Nacional','collab-note-ipn':'Experiencia t\u00e9cnica, desarrollo tecnol\u00f3gico','project-subtitle':'<span class="title-accent">Tecnolog\u00edas</span> para Encontrar a Quienes nos Faltan','hero-tagline-static':'Usando tecnolog\u00eda para','word-1':'buscar.','word-2':'recordar.','word-3':'dignificar.','word-4':'encontrar.','word-5':'dar cierre.','hero-main-text':'M\u00e1s de 130,000 personas est\u00e1n registradas como desaparecidas en M\u00e9xico. Detr\u00e1s de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> combina tecnolog\u00eda y saberes de familias buscadoras para aprender del campo, localizar y promover cambios sist\u00e9micos.','hero-team-text':'Nuestro equipo central re\u00fane <strong>colectivos de familias de Jalisco y Zacatecas que buscan a sus seres queridos desaparecidos</strong>, junto a CentroGeo, la Universidad de Oxford, la Comisi\u00f3n de B\u00fasqueda de Jalisco, la Universidad Nacional Aut\u00f3noma de M\u00e9xico (UNAM) y la Universidad de Guadalajara. Trabajamos junto a socios estrat\u00e9gicos, entre ellos la Oficina para Asuntos Exteriores, de la Commonwealth y de Desarrollo del Reino Unido (FCDO), la Oficina Ejecutiva del Secretario General de la ONU, la Unidad de B\u00fasqueda de Personas dadas por Desaparecidas (UBPD) de Colombia, la Comisi\u00f3n Nacional de B\u00fasqueda de M\u00e9xico, LAB-Co y Luis Fondebrider.','collab-title':'Alianzas institucionales','tech-title':'Tecnolog\u00edas en acci\u00f3n','tech-item-1':'Im\u00e1genes multiespectrales e hiperespectrales','tech-item-2':'LiDAR aerotransportado','tech-item-3':'Interferometr\u00eda de ruido s\u00edsmico (TIRSA)','tech-item-4':'Tomograf\u00eda de resistividad el\u00e9ctrica y mediciones de conductividad','tech-item-5':'An\u00e1lisis espectral satelital','tech-item-ml':'Aprendizaje autom\u00e1tico','tech-item-6':'Entomolog\u00eda forense, bot\u00e1nica, an\u00e1lisis territorial y ciencia del suelo','buscadoras-title':'El papel de las buscadoras','buscadoras-text':'Los colectivos liderados por mujeres est\u00e1n en el coraz\u00f3n del trabajo de FOUND. Han transformado la conversaci\u00f3n nacional sobre desaparici\u00f3n y justicia. Sus pr\u00e1cticas de b\u00fasqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus m\u00e9todos en nuestros esfuerzos tecnol\u00f3gicos.','social-title':'Sigue nuestro camino','social-subtitle':'Mant\u00e9nte al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.','footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.','stat-label-1':'Tecnolog\u00edas desplegadas','stat-label-2':'Socios institucionales','stat-label-3':'Pa\u00edses'},nah:{'trailer-eyebrow':'Documental','trailer-title':'Xiquitta in Tr\u00e1iler','trailer-subtitle':'In tlajtol in familias, in tlamatiliztli huan in temoa in aquin techpolohuah.','trailer-caption-text':'Documental FOUND','collab-item-labco':'LABCO','collab-note-labco':'Timoitayoh ika IA para titemoa huan tiquixmati','collab-item-eaaf':'Equipo Argentino de Antropolog\u00eda Forense (EAAF)','collab-note-eaaf':'Luis Fondebrider, ixcuitlali (asesor) FOUND','collab-item-ori':'Oxford Robotics Institute','collab-note-ori':'Tlaneltiliztli (alianza), teknikoh tlamatiliztli','collab-item-ipn':'Instituto Polit\u00e9cnico Nacional','collab-note-ipn':'Teknikoh tlamatiliztli, teknoloj\u00edayoh tlatequipanoliztli','project-subtitle':'<span class="title-accent">Tecnolog\u00edas</span> para Encontrar a Quienes nos Faltan','hero-tagline-static':'Teknoloj\u00edayoh ika','word-1':'temoa.','word-2':'quilnamictia.','word-3':'tlatepanita.','word-4':'quipantlalia.','word-5':'yolpakilistli quimacatia.','hero-main-text':'124,354 tl\u0101cameh tlahcuil\u014dlmeh quen pol\u012bhuihqueh ipan M\u0113xihco. Ipan sesen inin caso cah se familia tlatehu\u00eda tlanemilistli. <strong>FOUND</strong> quimixnextia tehnolog\u00edayoh huan tlamatiliztli in familias buscadoras para momachtia, quitemoa, quipantlalia huan quinemililia yancuic tlanemilistli ipan sistema.','hero-team-text':'In totequitlacauh quinnechicoa <strong>in colectivoh in familias tlen Jalisco huan Zacatecas tlen quitemoa in inpilhuan polihqueh</strong>, oc nochi CentroGeo, in Universidad de Oxford, in Comisi\u00f3n de B\u00fasqueda de Jalisco, in Universidad Nacional Aut\u00f3noma de M\u00e9xico (UNAM) huan in Universidad de Guadalajara. Timoitayoh ika in tlaneltililmeh tlen FCDO, in Oficina Ejecutiva del Secretario General de la ONU, UBPD, in Comisi\u00f3n Nacional de B\u00fasqueda, LAB-Co huan Luis Fondebrider.','collab-title':'Alianzas institucionales','tech-title':'Teknoloj\u00edayoh tlen motequiti','tech-item-1':'Multispectral &amp; Hyperspectral Imaging','tech-item-2':'Airborne LiDAR','tech-item-3':'Seismic Noise Interferometry (TIRSA)','tech-item-4':'Electrical Resistivity Tomography, Conductivimetry','tech-item-5':'Satellite Spectral Analysis','tech-item-ml':'Machine Learning','tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science','buscadoras-title':'In papel in buscadoras','buscadoras-text':'In colectivoh de buscadoras cah ipan yollotl in tequitl tlen FOUND. Yehuan quipatlaqueh in tlajtol ipan pa\u00eds tlen polihuiliztli huan tlayectlaliz (justicia). Inintequiti tlen temoa, tlen tlapanextia de inin nemilistli, mochihua se tlamatiliztli forense huecapan. FOUND quincaca, momachtia huan quincalaquia inintequiti ipan inin teknol\u00f3gicoh tequitl.','social-title':'Xiquito in totlanejmachtiliz','social-subtitle':'Ximoyetkixtia inin tlen tipantlaliah, tlen tlanechicoliztli in comunidades huan inin tlen timocoyonaltiah san sejco.','footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.','stat-label-1':'Teknoloj\u00edayoh','stat-label-2':'Tlaneltililmeh','stat-label-3':'Tl\u0101ltlameh'}};
   var heroWords=[],wordIndex=0,wordInterval=null;
   function buildHeroWords(lang){var dict=translations[lang]||translations.en;heroWords=['word-1','word-2','word-3','word-4','word-5'].map(function(k){return dict[k]}).filter(Boolean);wordIndex=0;var span=document.getElementById('hero-word');if(span&&heroWords.length)span.textContent=heroWords[0]}
   function startWordRotation(){var span=document.getElementById('hero-word');if(wordInterval)clearInterval(wordInterval);if(!span||heroWords.length<2)return;wordInterval=setInterval(function(){span.classList.add('fading-out');setTimeout(function(){wordIndex=(wordIndex+1)%heroWords.length;span.textContent=heroWords[wordIndex];span.classList.remove('fading-out');span.classList.add('fading-in');requestAnimationFrame(function(){requestAnimationFrame(function(){span.classList.remove('fading-in')})})},280)},1600)}
