@@ -936,6 +936,31 @@ author_profile: true
        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
     var newsCards = [
 
+      /* ── 5: CNB Agreement ─────────────────────────────── */
+{
+  id: 'cnb-agreement',
+  date: '2025-07-01',
+  image: 'https://github.com/FOUND-project/found-project.github.io/blob/8859fa47dfbaaabd7722b5849fe9bcfc62b2474f/images/firma%20Convenio%20CNB.jpg?raw=true',
+  link: 'https://www.linkedin.com/posts/frontier-tech-hub_la-firma-del-acuerdo-entre-la-comisi%C3%B3n-nacional-activity-7444632239109332992-KOCM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E',
+  featured: true,
+  category: 'partnership',
+  en: {
+    badge: 'Partnership',
+    title: 'FOUND signs agreement with Mexico’s National Search Commission',
+    body: '<p>FOUND has signed a landmark agreement with Mexico’s <strong>National Search Commission</strong>, marking a significant step towards strengthening national search capacities.</p><p>Through this collaboration, authorities across the country will be trained in the use of FOUND’s platforms to support the location of <strong>clandestine graves</strong> and the identification of <strong>substances linked to disappearances</strong>.</p><p>The training will integrate the use of <strong>satellite imagery</strong>, <strong>drone-based data collection</strong>, and <strong>artificial intelligence</strong>, combining cutting-edge technology with the knowledge of search communities.</p><p>This agreement represents a move towards institutionalising advanced search methodologies and scaling their impact nationwide.</p><p><a href="https://www.linkedin.com/posts/frontier-tech-hub_la-firma-del-acuerdo-entre-la-comisi%C3%B3n-nacional-activity-7444632239109332992-KOCM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E" target="_blank" rel="noopener noreferrer">Read the full post on LinkedIn →</a></p>'
+  },
+  es: {
+    badge: 'Alianza',
+    title: 'FOUND firma convenio con la Comisión Nacional de Búsqueda de México',
+    body: '<p>FOUND firmó un convenio histórico con la <strong>Comisión Nacional de Búsqueda</strong>, marcando un paso clave para fortalecer las capacidades de búsqueda a nivel nacional.</p><p>A través de esta colaboración, autoridades en todo el país serán capacitadas en el uso de las plataformas de FOUND para apoyar la localización de <strong>fosas clandestinas</strong> y la identificación de <strong>sustancias vinculadas a desapariciones</strong>.</p><p>La capacitación integrará el uso de <strong>imágenes satelitales</strong>, <strong>recolección de datos mediante drones</strong> y <strong>inteligencia artificial</strong>, combinando tecnología de frontera con el conocimiento de las comunidades de búsqueda.</p><p>Este acuerdo representa un avance hacia la institucionalización de metodologías avanzadas de búsqueda y la ampliación de su impacto a nivel nacional.</p><p><a href="https://www.linkedin.com/posts/frontier-tech-hub_la-firma-del-acuerdo-entre-la-comisi%C3%B3n-nacional-activity-7444632239109332992-KOCM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E" target="_blank" rel="noopener noreferrer">Leer la publicación completa en LinkedIn →</a></p>'
+  },
+  nah: {
+    badge: 'Tlasentilistli',
+    title: 'FOUND kichiwa convenio iuan Comisión Nacional de Búsqueda de México',
+    body: '<p>FOUND okichij se hueyi convenio iuan <strong>Comisión Nacional de Búsqueda</strong>, se tlatskaniliztli tlen kuali kixnextia in nechikolistli ipan tlatemolistli ipan nochi Mēxihco.</p><p>Ika nin tlasentilistli, autoridades ipan nochi tlalli momachtiskeh kenin kitekitiseh plataformas de FOUND para kitemoseh <strong>fosas clandestinas</strong> huan kiximatiseh <strong>sustancias tlen motlatokaj ika desapariciones</strong>.</p><p>In momachtia motekipachoa ika <strong>imágenes satelitales</strong>, <strong>drones</strong> huan <strong>inteligencia artificial</strong>, tlen mosentlalia ika in tlamatiliztli de in nananmeh huan toknihuan buscadores.</p><p>Nin convenio kixnextia se ohtli para mochiua institucional in yankuik tlatemolistli huan para mopanoloa in impacto ipan nochi tlalli.</p><p><a href="https://www.linkedin.com/posts/frontier-tech-hub_la-firma-del-acuerdo-entre-la-comisi%C3%B3n-nacional-activity-7444632239109332992-KOCM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E" target="_blank" rel="noopener noreferrer">Xikmotlajkolti in tlatlatol ipan LinkedIn →</a></p>'
+  }
+},
+      
       /* ── 0: Mariela Award ─────────────────────────────── */
       {
         id: 'mariela-award',
@@ -951,12 +976,12 @@ author_profile: true
         },
         es: {
           badge: 'Reconocimiento',
-          title: 'La pionera de FOUND recibe el Premio Sir Nicholas Browne de Pol\u00edtica y Pericia del FCDO brit\u00e1nico',
+          title: 'La pioneer de FOUND recibe el Premio Sir Nicholas Browne de Pol\u00edtica y Pericia del FCDO brit\u00e1nico',
           body: '<p>Nos enorgullece compartir que <strong>Mariela Garfias</strong> ha recibido el <strong>Premio Sir Nicholas Browne de Pol\u00edtica y Pericia</strong>, un reconocimiento del FCDO brit\u00e1nico a la excelencia en la implementaci\u00f3n de objetivos de pol\u00edtica, seleccionado entre m\u00e1s de 200 nominaciones.</p><p>Mariela es la pionera de FOUND dentro del FCDO y una de las personas m\u00e1s responsables del impacto del proyecto.</p><p>A trav\u00e9s de FOUND, y con el apoyo de aliadas y aliados extraordinarios, hemos localizado a <strong>27 personas</strong> v\u00edctimas de desaparici\u00f3n en M\u00e9xico, permitiendo que sus familias avancen hacia respuestas y alguna forma de cierre. Nuestro trabajo se est\u00e1 incorporando a autoridades locales y nacionales, y se ha ampliado a una colaboraci\u00f3n con la <strong>Unidad de B\u00fasqueda de Personas dadas por Desaparecidas de Colombia</strong> y con la Oficina Ejecutiva del <strong>Secretario General de la ONU</strong>.</p><p>En su discurso de aceptaci\u00f3n, Mariela comparti\u00f3 unas palabras que capturan el esp\u00edritu de FOUND: \u201cDe mi cuerpo descompuesto crecer\u00e1n flores, y yo estoy en ellas. Eso es la eternidad\u201d. \u2014 Edvard Munch.</p><p>Al buscar fosas clandestinas con tecnolog\u00edas, la naturaleza suele dar testimonio \u2014 a trav\u00e9s de cambios sutiles en el suelo y la vegetaci\u00f3n. La memoria persiste. Nuestra responsabilidad es encontrarla.</p><p>Mariela agradeci\u00f3 a quienes sostienen este trabajo con nosotras y nosotros: la Embajada Brit\u00e1nica en Ciudad de M\u00e9xico, nuestro mentor <strong>Martin Johnston</strong>, el equipo de Frontier Tech Hub y, sobre todo, las madres buscadoras, cuyo conocimiento y fuerza siguen siendo nuestra br\u00fajula.</p><p><a href="https://www.linkedin.com/posts/found-project_mexico-colombian-activity-7405294966266044416-2-bh" target="_blank" rel="noopener noreferrer">Leer la publicaci\u00f3n completa en LinkedIn \u2197</a></p>'
         },
         nah: {
           badge: 'Tlatlepanitaliztli',
-          title: 'In pionera de FOUND kiseli in Premio Sir Nicholas Browne de Pol\u00edtica huan Pericia (FCDO)',
+          title: 'In pioneer de FOUND kiseli in Premio Sir Nicholas Browne de Pol\u00edtica huan Pericia (FCDO)',
           body: '<p>Tiquinechpoua ika pakilistli ke <strong>Mariela Garfias</strong> okiseli in <strong>Premio Sir Nicholas Browne de Pol\u00edtica y Pericia</strong>, tlatlepanitaliztli de in FCDO brit\u00e1nico tlen kixnextia kualli tequitl ipan pol\u00edticas, tlaxtlahuilli tlen m\u00e1s de 200 propuestah.</p><p>Mariela yeto in pionera de FOUND dentro de in FCDO huan se de in tlacameh tlen okitmaka hueyi tlakameh inin proyecto.</p><p>Ika FOUND, huan ika tlatlapalehuiliztli de miek toknihuan, yotiknextijkeh kan okatkah <strong>27 tl\u0101cameh</strong> tlen polihuitkeh ipan M\u0113xihco, tlen kimpalehuiah in familias kiseliskeh tlanemilistli huan se tipo de cierre.</p><p>Ipan in tlajtohketl de kiselis in premio, Mariela okijtoua tlahtolli tlen kixkopina in esp\u00edritu de FOUND: \u201cDe mi cuerpo descompuesto crecer\u00e1n flores, y yo estoy en ellas. Eso es la eternidad\u201d. \u2014 Edvard Munch.</p><p>Ijkuak tiktlatemohuah fosas clandestinas ika tecnolog\u00edas, in tlalli huan xihuitl miek wel kitenextiah \u2014 ika tlapeyaliztli tlen tzintla o ipan xihuitl. In memoria amo polihui. Totekipano in tikajsikilis.</p><p>Mariela okimotlajkamat in tlen kualkanin kinyeknekiltiah nin tequitl: Embajada Brit\u00e1nica ipan Ciudad de M\u00e9xico, in tomentor <strong>Martin Johnston</strong>, in equipo de Frontier Tech Hub, huan, achtoyan, in nananmeh buscadoras.</p><p><a href="https://www.linkedin.com/posts/found-project_mexico-colombian-activity-7405294966266044416-2-bh" target="_blank" rel="noopener noreferrer">Xikmotlajkolti in tlatlatol ipan LinkedIn \u2197</a></p>'
         }
       },
