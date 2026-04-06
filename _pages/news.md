@@ -307,7 +307,7 @@ author_profile: true
         {
           id: 'mariela-award',
           date: '2026-01-15',
-          image: null,
+          image: 'https://github.com/FOUND-project/found-project.github.io/blob/f1d0e85892b4ab9e24779fdbc7ba7db2020a6679/images/Mariela_award.jpg?raw=true',
           link: 'https://www.linkedin.com/posts/found-project_mexico-colombian-activity-7405294966266044416-2-bh',
           featured: true,
           category: 'award',
