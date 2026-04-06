@@ -272,7 +272,7 @@ author_profile: true
 {
   id: 'colombia-ubpd-integration',
   date: '2026-02-17',
-  image: 'https://github.com/FOUND-project/found-project.github.io/raw/9d3b508af5c500046a0806cc047ff9a1b06dd5ab/images/IMG_20260217_165004.jpg?w=1200&h=630&fit=crop',
+  image: 'https://github.com/FOUND-project/found-project.github.io/raw/c6e364287db0cf1e3afb28333b2c63f628212c8a/images/1772208968695.jpg?w=1200&h=630&fit=crop',
   link: 'https://www.linkedin.com/posts/miguelmoctezuma_updates-ugcPost-7439250842781831168-a57F?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E',
   featured: true,
   category: 'field',
