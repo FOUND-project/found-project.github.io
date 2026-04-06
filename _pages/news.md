@@ -272,17 +272,17 @@ author_profile: true
 {
   id: 'colombia-ubpd-integration',
   date: '2026-02-17',
-  image: 'https://github.com/FOUND-project/found-project.github.io/blob/315484ac57c402b45d537d9b3197eaec47a88239/images/IMG_20260217_165004.jpg?raw=true',
+  image: 'https://github.com/FOUND-project/found-project.github.io/blob/5a38531688c1b534e84f8579f8308e101f6dd08f/images/1772208968695.jpg',
   link: 'https://www.linkedin.com/posts/miguelmoctezuma_updates-ugcPost-7439250842781831168-a57F?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E',
   featured: true,
   category: 'field',
   en: {
-    badge: 'Field collaboration',
+    badge: 'Collaboration',
     title: 'FOUND integrates full platform control with Colombia\'s Search Unit (UBPD)',
     body: '<p>We travelled to Colombia to work alongside the <strong>Search Unit (UBPD)</strong> team. The agency will now have full control of FOUND tools and the ability to incorporate new layers and settings.</p><p>The platforms, built by our core member <strong>CentroGeo</strong>, enable two critical capabilities:</p><p><strong>[1] Locating clandestine sites</strong> by cross-referencing AI, institutional data, and field evidence from our experimental sites in Mexico, narrowing where authorities need to search.</p><p><strong>[2] Detecting clandestine graves</strong> through spectral indices and satellite and drone imagery, reading the environmental traces left behind.</p><p>We have now integrated satellite imagery going back to the early 1980s. What drones cannot see today, satellites might have recorded. This approach has already proven effective in two cases, demonstrating the power of historical data in locating missing persons.</p><p><a href="https://www.linkedin.com/posts/miguelmoctezuma_updates-ugcPost-7439250842781831168-a57F?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E" target="_blank" rel="noopener noreferrer">Read the full post on LinkedIn →</a></p>'
   },
   es: {
-    badge: 'Colaboración de campo',
+    badge: 'Colaboración',
     title: 'FOUND integra control completo de plataforma con la Unidad de Búsqueda (UBPD) de Colombia',
     body: '<p>Viajamos a Colombia para trabajar junto al equipo de la <strong>Unidad de Búsqueda (UBPD)</strong>. La agencia ahora tendrá control total de las herramientas de FOUND y la capacidad de incorporar nuevas capas y configuraciones.</p><p>Las plataformas, construidas por nuestro miembro principal <strong>CentroGeo</strong>, habilitan dos capacidades críticas:</p><p><strong>[1] Localizar sitios clandestinos</strong> mediante la referencia cruzada de IA, datos institucionales y evidencia de campo de nuestros sitios experimentales en México, reduciendo dónde las autoridades necesitan buscar.</p><p><strong>[2] Detectar fosas clandestinas</strong> a través de índices espectrales e imágenes satelitales y de drones, leyendo los rastros ambientales dejados atrás.</p><p>Ahora hemos integrado imágenes satelitales desde principios de los años 1980. Lo que los drones no pueden ver hoy, los satélites podrían haber grabado. Este enfoque ya ha demostrado ser efectivo en dos casos, demostrando el poder de los datos históricos en la localización de personas desaparecidas.</p><p><a href="https://www.linkedin.com/posts/miguelmoctezuma_updates-ugcPost-7439250842781831168-a57F?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E" target="_blank" rel="noopener noreferrer">Leer la publicación completa en LinkedIn →</a></p>'
   },
