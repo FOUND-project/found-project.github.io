@@ -271,6 +271,44 @@ author_profile: true
       border-color: rgba(45,95,77,.22);
     }
 
+    .media-card:hover .media-image {
+      transform: scale(1.05);
+    }
+
+    /* ── Card image ── */
+    .media-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      background: linear-gradient(135deg, rgba(45,95,77,.08) 0%, rgba(198,226,216,.15) 100%);
+      transition: transform .3s var(--ease);
+      display: block;
+    }
+
+    .media-image.loading {
+      background: linear-gradient(90deg, rgba(45,95,77,.05) 0%, rgba(45,95,77,.1) 50%, rgba(45,95,77,.05) 100%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .media-image-placeholder {
+      width: 100%;
+      height: 160px;
+      background: linear-gradient(135deg, rgba(45,95,77,.08) 0%, rgba(198,226,216,.15) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: .8rem;
+      text-align: center;
+      padding: 1rem;
+    }
+
     /* ── Card inner ── */
     .media-card-inner {
       padding: 1.4rem 1.5rem;
@@ -440,6 +478,8 @@ author_profile: true
       .media-card-inner { padding: 1.1rem 1.1rem 1.3rem; }
       #talks-title { font-size: 1.45rem; }
       .talk-card { margin-left: .5rem; }
+      .media-image { height: 120px; }
+      .media-image-placeholder { height: 120px; }
     }
   </style>
 </head>
@@ -474,6 +514,7 @@ author_profile: true
 
        <!-- Museo Cada de la Memoria, Medellín -->
       <a class="media-card" href="https://www.museocasadelamemoria.gov.co/noticias/encontrar-a-las-personas-que-nos-hacen-falta-mision-de-alianza-entre-medellin-reino-unido-y-mexico/" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">Museo Medellín</div>
           <h3 class="media-title">Encontrar a las personas que nos hacen falta: misión de alianza entre Medellín, Reino Unido y México</h3>
@@ -483,6 +524,7 @@ author_profile: true
       
       <!-- The Guardian -->
       <a class="media-card" href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">The Guardian</div>
           <h3 class="media-title">How dead pigs are helping in the search for missing victims of Mexico's drug wars</h3>
@@ -492,6 +534,7 @@ author_profile: true
 
       <!-- BBC Mundo -->
       <a class="media-card" href="https://www.bbc.com/mundo/articles/c4gv9r1120mo" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">BBC Mundo</div>
           <h3 class="media-title">Los cerdos y los insectos que están ayudando a encontrar a los desaparecidos en México</h3>
@@ -501,6 +544,7 @@ author_profile: true
 
       <!-- Associated Press (EN) -->
       <a class="media-card" href="https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">Associated Press</div>
           <h3 class="media-title">Why are scientists dressing pigs in clothes and burying them in Mexico?</h3>
@@ -510,6 +554,7 @@ author_profile: true
 
       <!-- Associated Press (ES) -->
       <a class="media-card" href="https://apnews.com/article/mexico-desaparecidos-busqueda-ciencia-tecnologia-dron-92f74132a9a5035b73795181a1023d1e" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">Associated Press</div>
           <h3 class="media-title">Ciencia, tecnología y cerdos. México experimenta nuevas formas de buscar a los desaparecidos</h3>
@@ -519,6 +564,7 @@ author_profile: true
 
       <!-- The Independent -->
       <a class="media-card" href="https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">The Independent</div>
           <h3 class="media-title">How pigs could help find missing Mexican drug cartel victims</h3>
@@ -528,6 +574,7 @@ author_profile: true
 
       <!-- VICE -->
       <a class="media-card" href="https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">VICE</div>
           <h3 class="media-title">Mexico Is Using Pigs, Drones, and Lasers to Find Drug Cartel Victims</h3>
@@ -537,6 +584,7 @@ author_profile: true
 
       <!-- Los Angeles Times -->
       <a class="media-card" href="https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">Los Angeles Times</div>
           <h3 class="media-title">Why are scientists dressing pigs in clothes and burying them in Mexico?</h3>
@@ -546,6 +594,7 @@ author_profile: true
 
       <!-- NBC News -->
       <a class="media-card" href="https://www.nbcnews.com/news/amp/rcna221791" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">NBC News</div>
           <h3 class="media-title">Clothed pigs are buried in Mexico as scientists use them in search of missing</h3>
@@ -555,6 +604,7 @@ author_profile: true
 
       <!-- Animal Político -->
       <a class="media-card" href="https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">Animal Político</div>
           <h3 class="media-title">Con tecnología y drones, investigadores y familias de desaparecidos encuentran fosas clandestinas en Jalisco</h3>
@@ -564,6 +614,7 @@ author_profile: true
 
       <!-- Science -->
       <a class="media-card" href="https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">Science</div>
           <h3 class="media-title">Satellites could reveal the secret burial grounds of Mexico's murder victims</h3>
@@ -573,6 +624,7 @@ author_profile: true
 
       <!-- WIRED -->
       <a class="media-card" href="https://es.wired.com/articulos/tecnologia-geoespacial-expone-el-horror-de-las-fosas-clandestinas-en-mexico" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">WIRED</div>
           <h3 class="media-title">Cómo la tecnología geoespacial expone el horror de las fosas clandestinas en México</h3>
@@ -582,6 +634,7 @@ author_profile: true
 
       <!-- El País (EN) -->
       <a class="media-card" href="https://english.elpais.com/international/2025-03-28/mexicos-izaguirre-ranch-high-concentrations-of-ash-suggest-the-presence-of-clandestine-crematoriums.html" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">El País</div>
           <h3 class="media-title">Mexico's Izaguirre ranch: high concentrations of ash suggest clandestine crematoriums</h3>
@@ -591,6 +644,7 @@ author_profile: true
 
       <!-- El País (ES) -->
       <a class="media-card" href="https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">El País</div>
           <h3 class="media-title">Altas concentraciones de ceniza y humo: indicios de crematorios clandestinos en Teuchitlán</h3>
@@ -600,6 +654,7 @@ author_profile: true
 
       <!-- TV Azteca -->
       <a class="media-card" href="https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">TV Azteca</div>
           <h3 class="media-title">Tecnología contra las desapariciones en México</h3>
@@ -609,6 +664,7 @@ author_profile: true
 
       <!-- Animal Político (Opinion) -->
       <a class="media-card" href="https://animalpolitico.com/analisis/invitades/libro-madres-buscadoras-fil" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">Animal Político</div>
           <h3 class="media-title">Interpretar la naturaleza para encontrar a quienes nos faltan</h3>
@@ -618,6 +674,7 @@ author_profile: true
 
       <!-- Reuters -->
       <a class="media-card" href="https://www.reuters.com/world/americas/mexico-mothers-missing-turn-drones-look-unmarked-graves-2024-01-26/" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">Reuters</div>
           <h3 class="media-title">In Mexico, mothers of the missing turn to drones to look for unmarked graves</h3>
@@ -627,6 +684,7 @@ author_profile: true
 
       <!-- CGTN America -->
       <a class="media-card" href="https://twitter.com/cgtnamerica/status/1751362286118150555" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">CGTN America</div>
           <h3 class="media-title">Jalisco mothers search for hidden graves with drones</h3>
@@ -636,6 +694,7 @@ author_profile: true
 
       <!-- SinEmbargo -->
       <a class="media-card" href="https://www.sinembargo.mx/18-12-2023/4440515" target="_blank" rel="noopener">
+        <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
           <div class="media-outlet">SinEmbargo</div>
           <h3 class="media-title">Tecnología para hallarlos</h3>
@@ -725,6 +784,43 @@ author_profile: true
         try{ localStorage.setItem('found-lang-media', lang); }catch(e){}
       }
 
+      function fetchOpenGraphImage(url){
+        return fetch(url)
+          .then(r => r.text())
+          .then(html => {
+            const match = html.match(/<meta\s+property=['"]og:image['"]\s+content=['"]([^'"]+)['"]/i) ||
+                          html.match(/<meta\s+content=['"]([^'"]+)['"]\s+property=['"]og:image['"]/i);
+            return match ? match[1] : null;
+          })
+          .catch(() => null);
+      }
+
+      function loadCardImage(card){
+        const href = card.getAttribute('href');
+        const placeholder = card.querySelector('.media-image-placeholder');
+        
+        if(!placeholder || !href) return;
+
+        placeholder.classList.add('loading');
+
+        fetchOpenGraphImage(href).then(imageUrl => {
+          if(imageUrl){
+            const img = document.createElement('img');
+            img.className = 'media-image';
+            img.src = imageUrl;
+            img.alt = card.querySelector('.media-title')?.textContent || 'Article image';
+            img.onerror = () => {
+              placeholder.classList.remove('loading');
+            };
+            img.onload = () => {
+              placeholder.replaceWith(img);
+            };
+          } else {
+            placeholder.classList.remove('loading');
+          }
+        });
+      }
+
       document.addEventListener('DOMContentLoaded', function(){
         let savedLang = null;
         try{ savedLang = localStorage.getItem('found-lang-media'); }catch(e){}
@@ -733,6 +829,10 @@ author_profile: true
 
         document.querySelectorAll('.lang-btn').forEach(btn=>{
           btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+        });
+
+        document.querySelectorAll('.media-card').forEach(card => {
+          loadCardImage(card);
         });
       });
     })();
