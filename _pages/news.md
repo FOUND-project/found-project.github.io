@@ -271,7 +271,7 @@ author_profile: true
 
 {
   id: 'colombia-ubpd-integration',
-  date: '2026-02-17',
+  date: '2026-02-16',
   image: 'https://github.com/FOUND-project/found-project.github.io/raw/c6e364287db0cf1e3afb28333b2c63f628212c8a/images/1772208968695.jpg?w=1200&h=630&fit=crop',
   link: 'https://www.linkedin.com/posts/miguelmoctezuma_updates-ugcPost-7439250842781831168-a57F?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E',
   featured: true,
@@ -295,7 +295,7 @@ author_profile: true
         
         {
           id: 'cnb-agreement',
-          date: '2025-07-01',
+          date: '2026-03-23',
           image: 'https://github.com/FOUND-project/found-project.github.io/blob/8859fa47dfbaaabd7722b5849fe9bcfc62b2474f/images/firma%20Convenio%20CNB.jpg?raw=true',
           link: 'https://www.linkedin.com/posts/frontier-tech-hub_la-firma-del-acuerdo-entre-la-comisi%C3%B3n-nacional-activity-7444632239109332992-KOCM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E',
           featured: true,
@@ -306,7 +306,7 @@ author_profile: true
         },
         {
           id: 'mariela-award',
-          date: '2025-06-15',
+          date: '2026-01-15',
           image: null,
           link: 'https://www.linkedin.com/posts/found-project_mexico-colombian-activity-7405294966266044416-2-bh',
           featured: true,
