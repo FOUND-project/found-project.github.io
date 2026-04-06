@@ -471,6 +471,16 @@ author_profile: true
 
     <!-- MEDIA GRID -->
     <section class="media-grid">
+
+       <!-- Museo Cada de la Memoria, Medellín -->
+      <a class="media-card" href="https://www.museocasadelamemoria.gov.co/noticias/encontrar-a-las-personas-que-nos-hacen-falta-mision-de-alianza-entre-medellin-reino-unido-y-mexico/" target="_blank" rel="noopener">
+        <div class="media-card-inner">
+          <div class="media-outlet">Museo Medellín</div>
+          <h3 class="media-title">Encontrar a las personas que nos hacen falta: misión de alianza entre Medellín, Reino Unido y México</h3>
+          <span class="media-tag" data-key="article">Article</span>
+        </div>
+      </a>
+      
       <!-- The Guardian -->
       <a class="media-card" href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" target="_blank" rel="noopener">
         <div class="media-card-inner">
