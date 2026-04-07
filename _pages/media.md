@@ -780,7 +780,7 @@ author_profile: true
     'https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1000w,f_auto,q_auto:best/rockcms/2025-07/250729-Zapopan-ch-1409-5f806d.jpg',
   /* Animal Politico */
   'https://grupoanimal.mx/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia':
-    'https://grupoanimal.sfo3.cdn.digitaloceanspaces.com/uploads/2026/03/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia.jpg',
+    'https://grupoanimal.mx/api/image-proxy?url=https%3A%2F%2Fap-cdn.sfo3.cdn.digitaloceanspaces.com%2Fuploads%2F2024%2F11%2Fmadres-buscadoras-ia.jpg',
   /* Science */
   'https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims':
     'https://www.science.org/do/10.1126/science.z3qry0t/full/_20250825_on_drug_war_graves.jpg',
