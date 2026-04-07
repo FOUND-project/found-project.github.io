@@ -739,76 +739,67 @@ author_profile: true
        Fabricated / guessed paths have been removed — they silently 404ed.
        To add more: open the article, right-click the hero image → Copy image address.
     ────────────────────────────────────────────────────────────────────── */
-    const imageCache = {
-      /* AP English – verified dims.apnews.com CDN */
-      'https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86':
-        'https://dims.apnews.com/dims4/default/1339f24/2147483647/strip/true/crop/5787x3858+0+0/resize/800x533!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F28%2Fd6%2F16de093c02d8eca2c4e72728ee15%2Ff711d05e15a441539dd2a5c5c0d96024',
-      /* AP Spanish – verified */
-      'https://apnews.com/article/mexico-desaparecidos-busqueda-ciencia-tecnologia-dron-92f74132a9a5035b73795181a1023d1e':
-        'https://dims.apnews.com/dims4/default/84d15a6/2147483647/strip/true/crop/6000x4000+0+0/resize/1440x960!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F8a%2F79%2F48ede3475408ac83e81f43fba2df%2Fc4afa1567a524012b687f4a20f823071',
-      /* NBC News – verified s-nbcnews.com CDN */
-      'https://www.nbcnews.com/news/amp/rcna221791':
-        'https://media4.s-nbcnews.com/j/newscms/2025_31/8b3c7f/250729-mexico-pigs-ac-1148a.jpg',
-      /* BBC Mundo – verified ichef.bbci.co.uk CDN */
-      'https://www.bbc.com/mundo/articles/c4gv9r1120mo':
-        'https://ichef.bbci.co.uk/ace/ws/960/cpsprodpb/b0cc/live/6dd78840-9ebb-11f0-85b6-27ff7e482819.jpg',
-      /* El País (English & Spanish) – same image */
-      'https://english.elpais.com/international/2025-03-28/mexicos-izaguirre-ranch-high-concentrations-of-ash-suggest-the-presence-of-clandestine-crematoriums.html':
-        'https://imagenes.elpais.com/resizer/v2/5DABWFBL4VEBVBR5EIKKVFRESM.jpg',
-      'https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html':
-        'https://imagenes.elpais.com/resizer/v2/5DABWFBL4VEBVBR5EIKKVFRESM.jpg',
-      /* Reuters – verified */
-      'https://www.reuters.com/world/americas/mexico-mothers-missing-turn-drones-look-unmarked-graves-2024-01-26/':
-        'https://www.reuters.com/resizer/v2/X6RTO532DRPT7JPBEEGLTE3DJY.jpg',
-      /* Museo Medellín – verified wp-content path */
-      'https://www.museocasadelamemoria.gov.co/noticias/encontrar-a-las-personas-que-nos-hacen-falta-mision-de-alianza-entre-medellin-reino-unido-y-mexico/':
-        'https://www.museocasadelamemoria.gov.co/wp-content/uploads/2026/02/5.jpeg',
-      /* The Independent – verified static.independent.co.uk */
-      'https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html':
-        'https://static.independent.co.uk/2025/07/29/05/Mexico_Disappeared_Science_73653.jpg',
-      /* The Guardian */
-      'https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims':
-        'https://i.guim.co.uk/img/media/a4f0273b6434132a9a64254814c782cf7ad4cc09/836_132_5157_3438/master/5157.jpg?width=1900&dpr=1&s=none&crop=none'
-      /* Vice */
-      'https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/':
-    'https://www.vice.com/wp-content/uploads/sites/2/2024/06/vice-logo_white@2x.png?resize=150,48'
-      /* Los Angeles Times */
-    'https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico':
-    'https://ca-times.brightspotcdn.com/dims4/default/90e3690/2147483647/strip/true/crop/6000x4000+0+0/resize/1200x800!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fc8%2F73%2Fd34a1997355bc3ef47a5b6d7295f%2F73062f68829c4f328744e1d92862bfcb'
-      /* NBC News */
-    'https://www.nbcnews.com/news/latino/mexico-pigs-buried-help-find-missing-rcna221791':
-    'https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1000w,f_auto,q_auto:best/rockcms/2025-07/250729-Zapopan-ch-1409-5f806d.jpg'
-    /* Animal Politico */
-    'https://grupoanimal.mx/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia':
-    'https://grupoanimal.sfo3.cdn.digitaloceanspaces.com/uploads/2026/03/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia.jpg'
-    /* Science */
-    'https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims':
-    'https://www.science.org/do/10.1126/science.z3qry0t/full/_20250825_on_drug_war_graves.jpg'
-    /* Wired */
-    'https://es.wired.com/articulos/tecnologia-geoespacial-expone-el-horror-de-las-fosas-clandestinas-en-mexico':
-      'https://media.es.wired.com/photos/6524b15390bca1e6dd148cb7/master/w_1600,c_limit/%20Familiares%20de%20vi%CC%81ctimas%20desaparecidas%20y%20miembros%20de%20la%20Comisio%CC%81n%20Nacional%20de%20Bu%CC%81squeda%20y%20Guardias%20Nacionales%20buscan%20personas%20desaparecidas%20en%20Morelos,%202022..jpg'
-    /* El Pais ENG */
-    'https://english.elpais.com/international/2025-03-28/mexicos-izaguirre-ranch-high-concentrations-of-ash-suggest-the-presence-of-clandestine-crematoriums.html':
-    'https://imagenes.elpais.com/resizer/v2/5DABWFBL4VEBVBR5EIKKVFRESM.png?auth=9adc5210e779bc292717217b2f47e0aee59c66535e9f222f1070a21c00e54fbb&width=1200'
-    /* El Pais ESP */  
-    'https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html':
-      'https://imagenes.elpais.com/resizer/v2/5DABWFBL4VEBVBR5EIKKVFRESM.png?auth=9adc5210e779bc292717217b2f47e0aee59c66535e9f222f1070a21c00e54fbb&width=1200'
-    /* TV Azteca */  
-    'https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas':
-    'https://tvazteca.brightspotcdn.com/dims4/default/1eaebde/2147483647/strip/true/crop/92x59+0+0/resize/70x45!/format/webp/quality/90/?url=http%3A%2F%2Ftv-azteca-brightspot.s3.amazonaws.com%2F26%2F7e%2F9c61ae1d4b8dbcc1c816c086707d%2Fimagotipo-azteca.webp'
-    /* Animal Politico Interpretar la Naturaleza */  
-    'https://grupoanimal.mx/opinion/libro-madres-buscadoras-fil':
-    'https://grupoanimal.mx/api/image-proxy?url=https%3A%2F%2Fap-cdn.sfo3.cdn.digitaloceanspaces.com%2Fuploads%2F2024%2F11%2Fmadres-buscadoras-ia.jpg'
-     /* Reuters */  
-    'https://www.reuters.com/world/americas/mexico-mothers-missing-turn-drones-look-unmarked-graves-2024-01-26/':
-    'https://www.reuters.com/resizer/v2/X6RTO532DRPT7JPBEEGLTE3DJY.jpg?auth=0317c4086f252f559ecf2bc523208bba7a2d81ec1308e0aae7e35826387c779f&width=960&quality=80'
-    /* CGTN America */  
-    'https://x.com/cgtnamerica/status/1751362286118150555':
-    'https://pbs.twimg.com/media/GE4Wp0mWMAA29uD?format=jpg&name=small'
-    /* SinEmbargo */
-    'https://www.sinembargo.mx/18-12-2023/4440515':
+  const imageCache = {
+  /* AP English – verified dims.apnews.com CDN */
+  'https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86':
+    'https://dims.apnews.com/dims4/default/1339f24/2147483647/strip/true/crop/5787x3858+0+0/resize/800x533!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F28%2Fd6%2F16de093c02d8eca2c4e72728ee15%2Ff711d05e15a441539dd2a5c5c0d96024',
+  /* AP Spanish – verified */
+  'https://apnews.com/article/mexico-desaparecidos-busqueda-ciencia-tecnologia-dron-92f74132a9a5035b73795181a1023d1e':
+    'https://dims.apnews.com/dims4/default/84d15a6/2147483647/strip/true/crop/6000x4000+0+0/resize/1440x960!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F8a%2F79%2F48ede3475408ac83e81f43fba2df%2Fc4afa1567a524012b687f4a20f823071',
+  /* NBC News – verified s-nbcnews.com CDN */
+  'https://www.nbcnews.com/news/amp/rcna221791':
+    'https://media4.s-nbcnews.com/j/newscms/2025_31/8b3c7f/250729-mexico-pigs-ac-1148a.jpg',
+  /* BBC Mundo – verified ichef.bbci.co.uk CDN */
+  'https://www.bbc.com/mundo/articles/c4gv9r1120mo':
+    'https://ichef.bbci.co.uk/ace/ws/960/cpsprodpb/b0cc/live/6dd78840-9ebb-11f0-85b6-27ff7e482819.jpg',
+  /* El País (English & Spanish) – same image */
+  'https://english.elpais.com/international/2025-03-28/mexicos-izaguirre-ranch-high-concentrations-of-ash-suggest-the-presence-of-clandestine-crematoriums.html':
+    'https://imagenes.elpais.com/resizer/v2/5DABWFBL4VEBVBR5EIKKVFRESM.png?auth=9adc5210e779bc292717217b2f47e0aee59c66535e9f222f1070a21c00e54fbb&width=1200',
+  'https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html':
+    'https://imagenes.elpais.com/resizer/v2/5DABWFBL4VEBVBR5EIKKVFRESM.png?auth=9adc5210e779bc292717217b2f47e0aee59c66535e9f222f1070a21c00e54fbb&width=1200',
+  /* Reuters – verified */
+  'https://www.reuters.com/world/americas/mexico-mothers-missing-turn-drones-look-unmarked-graves-2024-01-26/':
+    'https://www.reuters.com/resizer/v2/X6RTO532DRPT7JPBEEGLTE3DJY.jpg?auth=0317c4086f252f559ecf2bc523208bba7a2d81ec1308e0aae7e35826387c779f&width=960&quality=80',
+  /* Museo Medellín – verified wp-content path */
+  'https://www.museocasadelamemoria.gov.co/noticias/encontrar-a-las-personas-que-nos-hacen-falta-mision-de-alianza-entre-medellin-reino-unido-y-mexico/':
+    'https://www.museocasadelamemoria.gov.co/wp-content/uploads/2026/02/5.jpeg',
+  /* The Independent – verified static.independent.co.uk */
+  'https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html':
+    'https://static.independent.co.uk/2025/07/29/05/Mexico_Disappeared_Science_73653.jpg',
+  /* The Guardian */
+  'https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims':
+    'https://i.guim.co.uk/img/media/a4f0273b6434132a9a64254814c782cf7ad4cc09/836_132_5157_3438/master/5157.jpg?width=1900&dpr=1&s=none&crop=none',
+  /* Vice */
+  'https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/':
+    'https://www.vice.com/wp-content/uploads/sites/2/2024/06/vice-logo_white@2x.png?resize=150,48',
+  /* Los Angeles Times */
+  'https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico':
+    'https://ca-times.brightspotcdn.com/dims4/default/90e3690/2147483647/strip/true/crop/6000x4000+0+0/resize/1200x800!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fc8%2F73%2Fd34a1997355bc3ef47a5b6d7295f%2F73062f68829c4f328744e1d92862bfcb',
+  /* NBC News */
+  'https://www.nbcnews.com/news/latino/mexico-pigs-buried-help-find-missing-rcna221791':
+    'https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1000w,f_auto,q_auto:best/rockcms/2025-07/250729-Zapopan-ch-1409-5f806d.jpg',
+  /* Animal Politico */
+  'https://grupoanimal.mx/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia':
+    'https://grupoanimal.sfo3.cdn.digitaloceanspaces.com/uploads/2026/03/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia.jpg',
+  /* Science */
+  'https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims':
+    'https://www.science.org/do/10.1126/science.z3qry0t/full/_20250825_on_drug_war_graves.jpg',
+  /* Wired */
+  'https://es.wired.com/articulos/tecnologia-geoespacial-expone-el-horror-de-las-fosas-clandestinas-en-mexico':
+    'https://media.es.wired.com/photos/6524b15390bca1e6dd148cb7/master/w_1600,c_limit/%20Familiares%20de%20vi%CC%81ctimas%20desaparecidas%20y%20miembros%20de%20la%20Comisio%CC%81n%20Nacional%20de%20Bu%CC%81squeda%20y%20Guardias%20Nacionales%20buscan%20personas%20desaparecidas%20en%20Morelos,%202022..jpg',
+  /* TV Azteca */
+  'https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas':
+    'https://tvazteca.brightspotcdn.com/dims4/default/1eaebde/2147483647/strip/true/crop/92x59+0+0/resize/70x45!/format/webp/quality/90/?url=http%3A%2F%2Ftv-azteca-brightspot.s3.amazonaws.com%2F26%2F7e%2F9c61ae1d4b8dbcc1c816c086707d%2Fimagotipo-azteca.webp',
+  /* Animal Politico Interpretar la Naturaleza */
+  'https://grupoanimal.mx/opinion/libro-madres-buscadoras-fil':
+    'https://grupoanimal.mx/api/image-proxy?url=https%3A%2F%2Fap-cdn.sfo3.cdn.digitaloceanspaces.com%2Fuploads%2F2024%2F11%2Fmadres-buscadoras-ia.jpg',
+  /* CGTN America */
+  'https://x.com/cgtnamerica/status/1751362286118150555':
+    'https://pbs.twimg.com/media/GE4Wp0mWMAA29uD?format=jpg&name=small',
+  /* SinEmbargo */
+  'https://www.sinembargo.mx/18-12-2023/4440515':
     'https://www.sinembargo.mx/wp-content/uploads/2023/12/busqueda-fosas-2-768x768.jpeg'
-  };
+};
 
     /* ── load image for one card ── */
     function loadCard(wrap) {
