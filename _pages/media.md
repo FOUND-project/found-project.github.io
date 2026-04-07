@@ -710,29 +710,12 @@ author_profile: true
         nah:{ article:'Tlatlaquiliztli', tv:'Segmento TV', 'tv-social':'TV / Social', opinion:'Tlaixkomati' }
       };
 
-      // IMAGE CACHE - Add image URLs here (17 still need images)
-      // WORKING: AP (EN), NBC, Wired ES already have images
-      // HOW TO ADD: Visit each URL, right-click main featured image, select "Copy Image Address", paste the URL
-     const imageCache = {
-  'https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86': 'https://dims.apnews.com/dims4/default/2f0c3e9/2147483647/strip/true/crop/6000x4000+0+0/resize/1200x800!/format/webp/quality/85/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fb9%2F44f2345c02d8eca2c4e7272abc28%2F250729-mexico-pigs-01-df-e8e6e8d9d.jpg',
-  'https://www.nbcnews.com/news/amp/rcna221791': 'https://media4.s-nbcnews.com/j/newscms/2025_31/8b3c7f/250729-mexico-pigs-ac-1148a.jpg',
-  'https://www.museocasadelamemoria.gov.co/noticias/encontrar-a-las-personas-que-nos-hacen-falta-mision-de-alianza-entre-medellin-reino-unido-y-mexico/': 'https://www.museocasadelamemoria.gov.co/wp-content/uploads/2026/02/5.jpeg',
-  'https://www.bbc.com/mundo/articles/c4gv9r1120mo': 'https://ichef.bbci.co.uk/ace/ws/960/cpsprodpb/b0cc/live/6dd78840-9ebb-11f0-85b6-27ff7e482819.jpg',
-  'https://apnews.com/article/mexico-desaparecidos-busqueda-ciencia-tecnologia-dron-92f74132a9a5035b73795181a1023d1e': 'https://dims.apnews.com/dims4/default/8f65423/2147483647/strip/true/crop/5787x3858+0+0/resize/1200x800!/format/webp/quality/85/?url=https%3A%2F%2Fassets.apnews.com%2F28%2Fd6%2F16de093c02d8eca2c4e72728ee15%2Ff711d05e15a441539dd2a5c5c0d96024',
-  'https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html': 'https://static.independent.co.uk/2025/07/29/05/Mexico_Disappeared_Science_73653.jpg',
-  'https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/': 'https://video-images.vice.com/articles/655f5c7e6e2d8a0011e4b5c7/lede/1722254400_mexico-pigs-drones.jpg',
-  'https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico': 'https://www.latimes.com/resizer/v2/ca-times-brightspot.s3.amazonaws.com/c8/73/d34a1997355bc3ef47a5b6d7295f/73062f68829c4f328744e1d92862bfcb',
-  'https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia': 'https://www.animalpolitico.com/wp-content/uploads/2024/11/drones-busqueda.jpg',
-  'https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims': 'https://www.science.org/do/10.1126/science.z3qry0t/full/_20250825_on_drug_war_graves.jpg',
-  'https://es.wired.com/articulos/tecnologia-geoespacial-expone-el-horror-de-las-fosas-clandestinas-en-mexico': 'https://media.wired.com/photos/65f3a8b1c2d4e0001a8b3c2d/master/pass/tech-mexico-graves.jpg',
-  'https://english.elpais.com/international/2025-03-28/mexicos-izaguirre-ranch-high-concentrations-of-ash-suggest-the-presence-of-clandestine-crematoriums.html': 'https://imagenes.elpais.com/resizer/v2/5DABWFBL4VEBVBR5EIKKVFRESM.jpg',
-  'https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html': 'https://imagenes.elpais.com/resizer/v2/5DABWFBL4VEBVBR5EIKKVFRESM.jpg',
-  'https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas': 'https://www.tvazteca.com/contenido/imagenes/2024/12/drones-busqueda-desapariciones.jpg',
-  'https://animalpolitico.com/analisis/invitades/libro-madres-buscadoras-fil': 'https://grupoanimal.mx/uploads/2024/11/madres-buscadoras-fil.jpg',
-  'https://www.reuters.com/world/americas/mexico-mothers-missing-turn-drones-look-unmarked-graves-2024-01-26/': 'https://www.reuters.com/resizer/v2/X6RTO532DRPT7JPBEEGLTE3DJY.jpg',
-  'https://twitter.com/cgtnamerica/status/1751362286118150555': 'https://pbs.twimg.com/media/GRt5z3WX0AAH3Pu?format=jpg&name=large',
-  'https://www.sinembargo.mx/18-12-2023/4440515': 'https://www.sinembargo.mx/wp-content/uploads/2023/12/busqueda-fosas-1536x1024.jpeg',
-};
+      // ONLY 2 CONFIRMED WORKING URLs
+      // All other images will be fetched via CORS proxy (auto-fetch)
+      const imageCache = {
+        'https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86': 'https://storage.googleapis.com/afs-prod/media/cdc5d8b5c7f0466b8d7e4b2a1f9c3e6d/1000w.jpg',
+        'https://www.nbcnews.com/news/amp/rcna221791': 'https://media4.s-nbcnews.com/j/newscms/2025_31/8b3c7f/250729-mexico-pigs-ac-1148a.jpg',
+      };
 
       function setLanguage(lang){
         const dict = translations[lang] || translations.en;
@@ -759,12 +742,14 @@ author_profile: true
       }
 
       function fetchOpenGraphImage(url){
-        if(imageCache[url]){
+        // Check cache first
+        if(imageCache[url] && imageCache[url].length > 0){
           return Promise.resolve(imageCache[url]);
         }
 
+        // Try CORS proxy fallback
         const corsProxy = 'https://api.allorigins.win/raw?url=';
-        return fetch(corsProxy + encodeURIComponent(url), { signal: AbortSignal.timeout(5000) })
+        return fetch(corsProxy + encodeURIComponent(url), { signal: AbortSignal.timeout(4000) })
           .then(r => r.text())
           .then(html => {
             const match = html.match(/<meta\s+property=['"]og:image['"]\s+content=['"]([^'"]+)['"]/i) ||
