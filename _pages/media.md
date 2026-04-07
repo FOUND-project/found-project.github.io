@@ -719,7 +719,7 @@ author_profile: true
         
         // TODO: Fill in the missing image URLs below (leave '' empty until you add the URL)
         'https://www.museocasadelamemoria.gov.co/noticias/encontrar-a-las-personas-que-nos-hacen-falta-mision-de-alianza-entre-medellin-reino-unido-y-mexico/': 'https://www.museocasadelamemoria.gov.co/wp-content/uploads/2026/02/5.jpeg',
-        'https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims': '',
+        'https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims': 'https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims#img-1',
         'https://www.bbc.com/mundo/articles/c4gv9r1120mo': 'https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/b0cc/live/6dd78840-9ebb-11f0-85b6-27ff7e482819.jpg.webp',
         'https://apnews.com/article/mexico-desaparecidos-busqueda-ciencia-tecnologia-dron-92f74132a9a5035b73795181a1023d1e': 'https://dims.apnews.com/dims4/default/8f65423/2147483647/strip/true/crop/5787x3858+0+0/resize/1600x1066!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F28%2Fd6%2F16de093c02d8eca2c4e72728ee15%2Ff711d05e15a441539dd2a5c5c0d96024',
         'https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html': 'https://static.independent.co.uk/2025/07/29/05/Mexico_Disappeared_Science_73653.jpg?quality=75&width=1368&auto=webp',
