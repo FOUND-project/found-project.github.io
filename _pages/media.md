@@ -742,10 +742,10 @@ author_profile: true
     const imageCache = {
       /* AP English – verified dims.apnews.com CDN */
       'https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86':
-        'https://dims.apnews.com/dims4/default/2f0c3e9/2147483647/strip/true/crop/6000x4000+0+0/resize/1200x800!/format/webp/quality/85/?url=https%3A%2F%2Fassets.apnews.com%2Fe2%2Fb9%2F44f2345c02d8eca2c4e7272abc28%2F250729-mexico-pigs-01-df-e8e6e8d9d.jpg',
+        'https://dims.apnews.com/dims4/default/1339f24/2147483647/strip/true/crop/5787x3858+0+0/resize/800x533!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F28%2Fd6%2F16de093c02d8eca2c4e72728ee15%2Ff711d05e15a441539dd2a5c5c0d96024',
       /* AP Spanish – verified */
       'https://apnews.com/article/mexico-desaparecidos-busqueda-ciencia-tecnologia-dron-92f74132a9a5035b73795181a1023d1e':
-        'https://dims.apnews.com/dims4/default/8f65423/2147483647/strip/true/crop/5787x3858+0+0/resize/1200x800!/format/webp/quality/85/?url=https%3A%2F%2Fassets.apnews.com%2F28%2Fd6%2F16de093c02d8eca2c4e72728ee15%2Ff711d05e15a441539dd2a5c5c0d96024',
+        'https://dims.apnews.com/dims4/default/84d15a6/2147483647/strip/true/crop/6000x4000+0+0/resize/1440x960!/format/webp/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F8a%2F79%2F48ede3475408ac83e81f43fba2df%2Fc4afa1567a524012b687f4a20f823071',
       /* NBC News – verified s-nbcnews.com CDN */
       'https://www.nbcnews.com/news/amp/rcna221791':
         'https://media4.s-nbcnews.com/j/newscms/2025_31/8b3c7f/250729-mexico-pigs-ac-1148a.jpg',
