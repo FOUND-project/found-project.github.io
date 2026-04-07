@@ -63,7 +63,6 @@ author_profile: true
       padding: clamp(1.5rem,3vw,2.5rem) clamp(1rem,4vw,3rem);
     }
 
-    /* Full-width override for Minimal Mistakes */
     .page, #main, .initial-content, .page__inner-wrap, .page__content, .archive {
       max-width: none !important;
       width: 100% !important;
@@ -75,16 +74,12 @@ author_profile: true
       border-radius: var(--radius-sm);
     }
 
-    /* ═══════════════════════════════════════════════════════
-       SHELL
-       ═══════════════════════════════════════════════════════ */
     .media-shell {
       max-width: 1320px;
       margin: 0 auto 0 5.6rem;
       position: relative;
     }
 
-    /* ── Language toggle ── */
     .lang-toggle {
       position: absolute;
       top: .25rem; right: 0;
@@ -112,9 +107,6 @@ author_profile: true
     .lang-btn:hover  { background:#fff; transform:translateY(-1px); box-shadow:0 7px 20px rgba(15,23,42,.14); }
     .lang-btn.active { background:var(--green-800); color:#fff; border-color:var(--green-800); }
 
-    /* ═══════════════════════════════════════════════════════
-       PAGE HEADER
-       ═══════════════════════════════════════════════════════ */
     .media-header {
       position: relative;
       margin: 1.75rem 0 3rem;
@@ -216,9 +208,6 @@ author_profile: true
       max-width: 680px;
     }
 
-    /* ═══════════════════════════════════════════════════════
-       MEDIA GRID
-       ═══════════════════════════════════════════════════════ */
     .media-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -269,7 +258,6 @@ author_profile: true
       transform: scale(1.05);
     }
 
-    /* ── Card image ── */
     .media-image {
       width: 100%;
       height: 160px;
@@ -303,7 +291,6 @@ author_profile: true
       padding: 1rem;
     }
 
-    /* ── Card inner ── */
     .media-card-inner {
       padding: 1.4rem 1.5rem;
       display: flex;
@@ -355,9 +342,6 @@ author_profile: true
       margin-top: .6rem;
     }
 
-    /* ═══════════════════════════════════════════════════════
-       TALKS SECTION
-       ═══════════════════════════════════════════════════════ */
     .talks-section {
       margin-top: 2rem;
       padding: 2.2rem 2.6rem;
@@ -450,9 +434,6 @@ author_profile: true
       color: var(--green-800);
     }
 
-    /* ═══════════════════════════════════════════════════════
-       RESPONSIVE
-       ═══════════════════════════════════════════════════════ */
     @media (max-width: 900px) {
       body { padding: 1.4rem 1rem; }
       .media-shell { margin-left: 0; }
@@ -502,7 +483,6 @@ author_profile: true
     </header>
 
     <section class="media-grid">
-
        <a class="media-card" href="https://www.museocasadelamemoria.gov.co/noticias/encontrar-a-las-personas-que-nos-hacen-falta-mision-de-alianza-entre-medellin-reino-unido-y-mexico/" target="_blank" rel="noopener">
         <div class="media-image-placeholder">Image</div>
         <div class="media-card-inner">
@@ -730,10 +710,31 @@ author_profile: true
         nah:{ article:'Tlatlaquiliztli', tv:'Segmento TV', 'tv-social':'TV / Social', opinion:'Tlaixkomati' }
       };
 
+      // IMAGE CACHE - Add image URLs here (17 still need images)
+      // WORKING: AP (EN), NBC, Wired ES already have images
+      // HOW TO ADD: Visit each URL, right-click main featured image, select "Copy Image Address", paste the URL
       const imageCache = {
         'https://apnews.com/article/mexico-cartels-disappeared-technology-pigs-9e0fec063c7365c9b1dc4d2262313f86': 'https://storage.googleapis.com/afs-prod/media/cdc5d8b5c7f0466b8d7e4b2a1f9c3e6d/1000w.jpg',
         'https://www.nbcnews.com/news/amp/rcna221791': 'https://media4.s-nbcnews.com/j/newscms/2025_31/8b3c7f/250729-mexico-pigs-ac-1148a.jpg',
-        'https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico': 'https://www.latimes.com/resizer/v2/XYZ123ABC.jpg',
+        
+        // TODO: Fill in the missing image URLs below (leave '' empty until you add the URL)
+        'https://www.museocasadelamemoria.gov.co/noticias/encontrar-a-las-personas-que-nos-hacen-falta-mision-de-alianza-entre-medellin-reino-unido-y-mexico/': '',
+        'https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims': '',
+        'https://www.bbc.com/mundo/articles/c4gv9r1120mo': '',
+        'https://apnews.com/article/mexico-desaparecidos-busqueda-ciencia-tecnologia-dron-92f74132a9a5035b73795181a1023d1e': '',
+        'https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html': '',
+        'https://www.vice.com/en/article/mexico-is-using-pigs-drones-and-lasers-to-find-drug-cartel-victims/': '',
+        'https://www.latimes.com/science/story/2025-07-29/why-are-scientists-dressing-pigs-in-clothes-and-burying-them-in-mexico': '',
+        'https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia': '',
+        'https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims': '',
+        'https://es.wired.com/articulos/tecnologia-geoespacial-expone-el-horror-de-las-fosas-clandestinas-en-mexico': '',
+        'https://english.elpais.com/international/2025-03-28/mexicos-izaguirre-ranch-high-concentrations-of-ash-suggest-the-presence-of-clandestine-crematoriums.html': '',
+        'https://elpais.com/mexico/2025-03-28/altas-concentraciones-de-ceniza-y-humo-de-gasolina-los-indicios-que-apuntan-a-que-en-el-rancho-de-teuchitlan-hubo-crematorios-clandestinos.html': '',
+        'https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas': '',
+        'https://animalpolitico.com/analisis/invitades/libro-madres-buscadoras-fil': '',
+        'https://www.reuters.com/world/americas/mexico-mothers-missing-turn-drones-look-unmarked-graves-2024-01-26/': '',
+        'https://twitter.com/cgtnamerica/status/1751362286118150555': '',
+        'https://www.sinembargo.mx/18-12-2023/4440515': '',
       };
 
       function setLanguage(lang){
