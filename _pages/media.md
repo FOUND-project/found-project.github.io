@@ -766,6 +766,10 @@ author_profile: true
       /* The Independent – verified static.independent.co.uk */
       'https://www.independent.co.uk/news/world/americas/mexico-pigs-tools-drug-cartel-b2797915.html':
         'https://static.independent.co.uk/2025/07/29/05/Mexico_Disappeared_Science_73653.jpg',
+      /* The Guardian */
+      'https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims':
+        'https://i.guim.co.uk/img/media/a4f0273b6434132a9a64254814c782cf7ad4cc09/836_132_5157_3438/master/5157.jpg?width=1900&dpr=1&s=none&crop=none'
+    
     };
 
     /* ── load image for one card ── */
