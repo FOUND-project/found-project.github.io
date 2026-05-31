@@ -281,7 +281,7 @@ author_profile: true
 {
   id: 'cnb-first-training',
   date: '2026-04-15',
-  image: null,
+  image: 'https://github.com/FOUND-project/found-project.github.io/blob/eef1d014b946530cf97009db1836ca88a43f25e1/images/1%20CNB%20Training%20by%20CentroGeo.jpeg?raw=true',
   logoBanner: false,
   link: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7464725884999073792',
   featured: true,
