@@ -108,7 +108,11 @@ author_profile: true
     .card-banner-watermark { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: .5rem; }
     .card-banner-logo { width: 48px; height: 48px; border-radius: 12px; object-fit: cover; opacity: .32; border: 2px solid rgba(255,255,255,.25); }
     .card-banner-label { font-size: .62rem; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.45); }
+    .card-banner.logo-contain { background: var(--banner-bg, linear-gradient(135deg, #2e1065 0%, #4c1d95 60%, #6d28d9 100%)); }
+    .card-banner.logo-contain img { object-fit: contain; padding: 1.4rem; }
+    .news-card:hover .card-banner.logo-contain img { transform: scale(1.03); }
     .card-banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(10,24,18,.42) 100%); pointer-events: none; }
+    .card-banner.logo-contain::after { display: none; }
     .card-body { padding: 1.3rem 1.4rem 1.5rem; display: flex; flex-direction: column; flex: 1; gap: .5rem; }
     .card-meta { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
     .card-badge { display: inline-flex; align-items: center; gap: .3rem; padding: .16rem .6rem; border-radius: var(--radius-pill); font-size: .66rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; background: var(--badge-bg, rgba(30,64,52,.07)); color: var(--badge-color, var(--green-800)); border: 1px solid var(--badge-border, rgba(30,64,52,.16)); }
@@ -130,6 +134,9 @@ author_profile: true
     .modal-panel::-webkit-scrollbar-thumb { background: var(--green-200); border-radius: 10px; }
     .modal-hero { position: relative; min-height: 200px; overflow: hidden; }
     .modal-hero-img { width: 100%; display: block; max-height: 340px; object-fit: cover; }
+    .modal-hero.logo-contain { background: var(--hero-bg, linear-gradient(135deg, #2e1065 0%, #4c1d95 60%, #6d28d9 100%)); display: flex; align-items: center; justify-content: center; min-height: 240px; }
+    .modal-hero.logo-contain .modal-hero-img { max-height: 220px; width: auto; max-width: 80%; object-fit: contain; padding: 1.5rem; }
+    .modal-hero.logo-contain::after { display: none; }
     .modal-hero-gradient { min-height: 160px; background: var(--hero-bg, linear-gradient(135deg, #1e4034 0%, #2d5f4d 60%, #4a8c73 100%)); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
     .modal-hero-gradient::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 15% -10%, rgba(212,175,55,.22) 0%, transparent 60%), radial-gradient(ellipse 60% 80% at 90% 110%, rgba(255,255,255,.07) 0%, transparent 60%); }
     .modal-hero-wm { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: .65rem; }
@@ -156,6 +163,8 @@ author_profile: true
     .modal-body ul { margin: .8rem 0 1.1rem 1.4rem; }
     .modal-body ul li { margin-bottom: .5rem; font-size: .97rem; }
     .modal-body img { width: 100%; border-radius: var(--radius-md); margin: 1.2rem 0 1rem; box-shadow: var(--shadow-md); }
+    .modal-body .li-embed { display: flex; justify-content: center; margin: 1.4rem 0 1rem; }
+    .modal-body .li-embed iframe { border-radius: var(--radius-md); box-shadow: var(--shadow-md); max-width: 100%; background: #fff; }
     .modal-footer { display: flex; align-items: center; gap: .65rem; padding: 1.1rem 2.5rem 1.6rem; border-top: 1px solid rgba(15,23,42,.055); }
     .modal-share-label { font-size: .68rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--text-light); margin-right: .2rem; }
     .share-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(15,23,42,.1); background: var(--green-50); color: var(--green-800); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform .2s var(--ease-spring), box-shadow .2s var(--ease), background .2s, border-color .2s; }
@@ -270,6 +279,56 @@ author_profile: true
       var newsCards = [
 
 {
+  id: 'cnb-first-training',
+  date: '2026-04-15',
+  image: null,
+  logoBanner: false,
+  link: 'https://www.linkedin.com/feed/update/urn:li:ugcPost:7464725884999073792',
+  featured: true,
+  category: 'funding',
+  en: {
+    badge: 'Training',
+    title: 'FOUND delivers first round of training to 45 officials of Mexico\u2019s National Search Commission',
+    body: '<p>Following February\u2019s MoU with <strong>Mexico\u2019s National Search Commission (CNB)</strong>, we have completed the first round of training, delivered to <strong>45 CNB officials</strong>.</p><p><strong>CentroGeo</strong>, FOUND\u2019s implementing partner, has developed two platforms that the CNB has now adopted as part of its official toolkit:</p><ul><li><strong>Global Index Mapper</strong> applies spectral indices to satellite and drone imagery to identify anomalies and substances associated with clandestine graves. It can detect not only the presence of anomalies, but the day they appeared.</li><li><strong>Espacio Clandestino</strong> uses machine learning to identify sites of forensic interest, drawing on patterns from clandestine graves documented to date.</li></ul><p>Global Index Mapper was tested in <strong>Colombia</strong> during our February knowledge exchange with the <em>Unidad de B\u00fasqueda de Personas dadas por Desaparecidas (UBPD)</em>, and successfully identified a site of forensic interest with the same precision documented across Mexican sites.</p><p>The second CNB cohort will take place in <strong>July</strong>, with the Commissioner herself participating. Together, we are shaping two streams of workshops to scale to Mexican states \u2014 one operational and one research-focused \u2014 along with user guides and video tutorials.</p><div class="li-embed"><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7464725884999073792?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe></div><p><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7464725884999073792" target="_blank" rel="noopener noreferrer">View the post on LinkedIn \u2197</a></p>'
+  },
+  es: {
+    badge: 'Capacitaci\u00f3n',
+    title: 'FOUND imparte la primera ronda de capacitaci\u00f3n a 45 funcionarias y funcionarios de la Comisi\u00f3n Nacional de B\u00fasqueda de M\u00e9xico',
+    body: '<p>Tras el convenio (MoU) firmado en febrero con la <strong>Comisi\u00f3n Nacional de B\u00fasqueda (CNB)</strong> de M\u00e9xico, completamos la primera ronda de capacitaci\u00f3n, impartida a <strong>45 funcionarias y funcionarios de la CNB</strong>.</p><p><strong>CentroGeo</strong>, socio implementador de FOUND, ha desarrollado dos plataformas que la CNB ha adoptado como parte de su caja de herramientas oficial:</p><ul><li><strong>Global Index Mapper</strong> aplica \u00edndices espectrales a im\u00e1genes satelitales y de dron para identificar anomal\u00edas y sustancias asociadas a fosas clandestinas. No solo detecta la presencia de anomal\u00edas, sino el d\u00eda en que aparecieron.</li><li><strong>Espacio Clandestino</strong> usa aprendizaje autom\u00e1tico para identificar sitios de inter\u00e9s forense, a partir de los patrones de fosas clandestinas documentadas hasta la fecha.</li></ul><p>Global Index Mapper se prob\u00f3 en <strong>Colombia</strong> durante nuestro intercambio de conocimiento de febrero con la <em>Unidad de B\u00fasqueda de Personas dadas por Desaparecidas (UBPD)</em>, e identific\u00f3 con \u00e9xito un sitio de inter\u00e9s forense con la misma precisi\u00f3n documentada en los sitios mexicanos.</p><p>La segunda generaci\u00f3n de la CNB se realizar\u00e1 en <strong>julio</strong>, con la participaci\u00f3n de la propia Comisionada. Juntas y juntos estamos dise\u00f1ando dos l\u00edneas de talleres para escalar hacia los estados de M\u00e9xico \u2014 una operativa y otra centrada en investigaci\u00f3n \u2014 junto con gu\u00edas de usuario y tutoriales en video.</p><div class="li-embed"><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7464725884999073792?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Publicaci\u00f3n incrustada"></iframe></div><p><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7464725884999073792" target="_blank" rel="noopener noreferrer">Ver la publicaci\u00f3n en LinkedIn \u2197</a></p>'
+  },
+  nah: {
+    badge: 'Nemachtiliztli',
+    title: 'FOUND kichihua achto nemachtiliztli ika 45 tlapixkeh de in Comisi\u00f3n Nacional de B\u00fasqueda de M\u00e9xico',
+    body: '<p>Satepan in MoU de febrero iuan <strong>Comisi\u00f3n Nacional de B\u00fasqueda (CNB)</strong> de M\u00e9xico, otikajsikeh in achto nemachtiliztli, otikmakakeh <strong>45 tlapixkeh de in CNB</strong>.</p><p><strong>CentroGeo</strong>, in socio de FOUND, okichij ome plataformas tlen in CNB axkan okiselij ken parte de in tequiuh oficial:</p><ul><li><strong>Global Index Mapper</strong> kitekitia espectral indices ipan im\u00e1genes satelitales huan drones para tlamiktiloyan anomal\u00edas huan sustancias de fosas clandestinas. Amo san kitenextia in anomal\u00edas, no in tonalli ijkuak omochiuhkeh.</li><li><strong>Espacio Clandestino</strong> kitekitia machine learning para tlamiktiloyan sitios de inter\u00e9s forense, ika patrones de fosas clandestinas tlen yokitemikeh.</li></ul><p>Global Index Mapper omoyejyeko ipan <strong>Colombia</strong> ipan in intercambio de febrero iuan in <em>Unidad de B\u00fasqueda de Personas dadas por Desaparecidas (UBPD)</em>, huan okitemo se sitio de inter\u00e9s forense ika in san precisi\u00f3n tlen okitemikeh ipan sitios mexicanos.</p><p>In ome generaci\u00f3n de in CNB mochiuas ipan <strong>julio</strong>, iuan in Comisionada. Tosenpan tikchihuah ome ohtli de talleres para timopanoloskeh ipan estados de M\u00e9xico \u2014 se operativa huan se de investigaci\u00f3n \u2014 iuan gu\u00edas huan tutoriales ipan video.</p><div class="li-embed"><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7464725884999073792?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Tlatlatol incrustado"></iframe></div><p><a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7464725884999073792" target="_blank" rel="noopener noreferrer">Xikita in tlatlatol ipan LinkedIn \u2197</a></p>'
+  }
+},
+
+{
+  id: 'fcdo-renewed-funding',
+  date: '2026-05-20',
+  image: 'https://github.com/FOUND-project/found-project.github.io/blob/85aba9317a2a148a7a79cef400aed2709c7ce224/images/10%20logo%20FT%2Blogo_Primary%2Bversion_white%2Btext.png?raw=true',
+  logoBanner: true,
+  link: null,
+  featured: true,
+  category: 'funding',
+  en: {
+    badge: 'Funding',
+    title: 'FOUND receives renewed support from the UK\u2019s FCDO through the Frontier Tech Hub',
+    body: '<p>\ud83c\udf31 Massive news \u2014 <strong>FOUND</strong> has just received confirmation of renewed support from the UK\u2019s <strong>Foreign, Commonwealth and Development Office (FCDO)</strong> through the <strong>Frontier Tech Hub</strong>.</p><p>This new round of funding will let us develop, incorporate, and automate new layers into our spectral indices and machine-learning platforms \u2014 and scale them through our partnerships with \ud83c\uddf2\ud83c\uddfd <strong>Mexico\u2019s National Search Commission</strong>, \ud83c\udde8\ud83c\uddf4 <strong>Colombia\u2019s Search Unit</strong>, <strong>Locate International</strong>, and <strong>Human Rights Watch</strong>.</p><p>\ud83d\udd0d FOUND is guided by mothers\u2019 search groups and researchers from Mexico and Colombia. Our mission is to drive systemic change in how missing persons are searched for.</p><p>\ud83d\udef0\ufe0f At FOUND we use advanced tools such as machine-learning models, hyperspectral cameras, satellite imagery, seismic instruments, and electrical resistivity to locate missing persons and bring families closer to answers.</p><p>\ud83d\udccc Alongside our partners at <strong>LAB-CO</strong>, we will present our results to date in <strong>Oxford on 26 June 2026</strong>. More details coming soon.</p><p><em>FOUND: Interpreting Nature to Locate Those We Are Missing.</em></p>'
+  },
+  es: {
+    badge: 'Financiamiento',
+    title: 'FOUND recibe apoyo renovado del FCDO del Reino Unido a trav\u00e9s del Frontier Tech Hub',
+    body: '<p>\ud83c\udf31 Gran noticia \u2014 <strong>FOUND</strong> acaba de recibir la confirmaci\u00f3n del apoyo renovado del <strong>Foreign, Commonwealth and Development Office (FCDO)</strong> del Reino Unido, a trav\u00e9s del <strong>Frontier Tech Hub</strong>.</p><p>Esta nueva ronda de financiamiento nos permitir\u00e1 desarrollar, incorporar y automatizar nuevas capas en nuestras plataformas de \u00edndices espectrales y aprendizaje autom\u00e1tico \u2014 y escalarlas a trav\u00e9s de nuestras alianzas con \ud83c\uddf2\ud83c\uddfd la <strong>Comisi\u00f3n Nacional de B\u00fasqueda de M\u00e9xico</strong>, \ud83c\udde8\ud83c\uddf4 la <strong>Unidad de B\u00fasqueda de Colombia</strong>, <strong>Locate International</strong> y <strong>Human Rights Watch</strong>.</p><p>\ud83d\udd0d FOUND est\u00e1 guiado por colectivos de madres buscadoras y por personas investigadoras de M\u00e9xico y Colombia. Nuestra misi\u00f3n es impulsar un cambio sist\u00e9mico en la forma de buscar a las personas desaparecidas.</p><p>\ud83d\udef0\ufe0f En FOUND usamos herramientas avanzadas como modelos de aprendizaje autom\u00e1tico, c\u00e1maras hiperespectrales, im\u00e1genes satelitales, instrumentos s\u00edsmicos y resistividad el\u00e9ctrica para localizar a personas desaparecidas y acercar a las familias a las respuestas.</p><p>\ud83d\udccc Junto con nuestras y nuestros aliados de <strong>LAB-CO</strong>, presentaremos nuestros resultados a la fecha en <strong>Oxford el 26 de junio de 2026</strong>. Pronto compartiremos m\u00e1s detalles.</p><p><em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em></p>'
+  },
+  nah: {
+    badge: 'Financiamiento',
+    title: 'FOUND kiselia okachi tlapalehuiliztli de in FCDO brit\u00e1nico ika Frontier Tech Hub',
+    body: '<p>\ud83c\udf31 Hueyi tlahtolli \u2014 <strong>FOUND</strong> yokiseli in confirmaci\u00f3n de tlapalehuiliztli yankuik de in <strong>Foreign, Commonwealth and Development Office (FCDO)</strong> de Reino Unido, ika <strong>Frontier Tech Hub</strong>.</p><p>Nin yankuik financiamiento techkahuilis tikchihuaskeh, tiktlaliskeh huan tikautomatizaroskeh yankuik capas ipan tonplataformas de espectral indices huan machine learning \u2014 huan tikueskaltiskeh ika tonalianzas iuan \ud83c\uddf2\ud83c\uddfd in <strong>Comisi\u00f3n Nacional de B\u00fasqueda de M\u00e9xico</strong>, \ud83c\udde8\ud83c\uddf4 in <strong>Unidad de B\u00fasqueda de Colombia</strong>, <strong>Locate International</strong> huan <strong>Human Rights Watch</strong>.</p><p>\ud83d\udd0d FOUND kinyeknemilia nananmeh buscadoras huan investigadores de M\u00e9xico huan Colombia. Tonmisi\u00f3n yeto xikpatla se modo sist\u00e9mico de kenik tiktlatemohuah personas desaparecidas.</p><p>\ud83d\udef0\ufe0f Ipan FOUND tiktekitiah herramientas avanzadas ken machine-learning, c\u00e1maras hiperespectrales, im\u00e1genes satelitales, instrumentos s\u00edsmicos huan resistividad el\u00e9ctrica para tiktemoskeh personas desaparecidas huan tikinmaxitiskeh in familias ika tlanankiliztli.</p><p>\ud83d\udccc Iuan tonaliados de <strong>LAB-CO</strong>, tikteittitiskeh tonresultados ipan <strong>Oxford ipan 26 de junio de 2026</strong>. Achto tiktemakaskeh okachi tlamantli.</p><p><em>FOUND: Interpretar la Naturaleza para Encontrar a Quienes nos Faltan.</em></p>'
+  }
+},
+
+{
   id: 'colombia-ubpd-integration',
   date: '2026-02-16',
   image: 'https://github.com/FOUND-project/found-project.github.io/raw/c6e364287db0cf1e3afb28333b2c63f628212c8a/images/1772208968695.jpg?w=1200&h=630&fit=crop',
@@ -282,17 +341,17 @@ author_profile: true
     body: '<p>We travelled to Colombia to work alongside the <strong>Search Unit (UBPD)</strong> team. The agency will now have full control of FOUND tools and the ability to incorporate new layers and settings.</p><p>The platforms, built by our core member <strong>CentroGeo</strong>, enable two critical capabilities:</p><p><strong>[1] Locating clandestine sites</strong> by cross-referencing AI, institutional data, and field evidence from our experimental sites in Mexico, narrowing where authorities need to search.</p><p><strong>[2] Detecting clandestine graves</strong> through spectral indices and satellite and drone imagery, reading the environmental traces left behind.</p><p>We have now integrated satellite imagery going back to the early 1980s. What drones cannot see today, satellites might have recorded. This approach has already proven effective in two cases, demonstrating the power of historical data in locating missing persons.</p><figure style="margin: 1.5em 0; text-align: center;"><img src="https://github.com/FOUND-project/found-project.github.io/raw/9d3b508af5c500046a0806cc047ff9a1b06dd5ab/images/IMG_20260217_165004.jpg?w=800" alt="FOUND team collaboration with Colombia UBPD" style="max-width: 100%; height: auto; border-radius: 8px; margin: 0.5em 0;"/></figure><figure style="margin: 1.5em 0; text-align: center;"><img src="https://github.com/FOUND-project/found-project.github.io/raw/9d3b508af5c500046a0806cc047ff9a1b06dd5ab/images/IMG_20260217_172823.jpg?w=800" alt="UBPD platform integration demonstration" style="max-width: 100%; height: auto; border-radius: 8px; margin: 0.5em 0;"/></figure><p><a href="https://www.linkedin.com/posts/miguelmoctezuma_updates-ugcPost-7439250842781831168-a57F?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E" target="_blank" rel="noopener noreferrer">Read the full post on LinkedIn →</a></p>'
   },
   es: {
-    badge: 'Colaboración',
-    title: 'FOUND integra control de plataforma de índices espectrales con la Unidad de Búsqueda (UBPD) de Colombia',
-    body: '<p>Viajamos a Colombia para trabajar junto al equipo de la <strong>Unidad de Búsqueda (UBPD)</strong>. La agencia ahora tendrá control total de las herramientas de FOUND y la capacidad de incorporar nuevas capas y configuraciones.</p><p>Las plataformas, construidas por nuestro miembro principal <strong>CentroGeo</strong>, habilitan dos capacidades críticas:</p><p><strong>[1] Localizar sitios clandestinos</strong> mediante la referencia cruzada de IA, datos institucionales y evidencia de campo de nuestros sitios experimentales en México, reduciendo dónde las autoridades necesitan buscar.</p><p><strong>[2] Detectar fosas clandestinas</strong> a través de índices espectrales e imágenes satelitales y de drones, leyendo los rastros ambientales dejados atrás.</p><p>Ahora hemos integrado imágenes satelitales desde principios de los años 1980. Lo que los drones no pueden ver hoy, los satélites podrían haber grabado. Este enfoque ya ha demostrado ser efectivo en dos casos, demostrando el poder de los datos históricos en la localización de personas desaparecidas.</p><figure style="margin: 1.5em 0; text-align: center;"><img src="https://github.com/FOUND-project/found-project.github.io/raw/9d3b508af5c500046a0806cc047ff9a1b06dd5ab/images/IMG_20260217_165004.jpg?w=800" alt="Colaboración del equipo FOUND con UBPD de Colombia" style="max-width: 100%; height: auto; border-radius: 8px; margin: 0.5em 0;"/></figure><figure style="margin: 1.5em 0; text-align: center;"><img src="https://github.com/FOUND-project/found-project.github.io/raw/9d3b508af5c500046a0806cc047ff9a1b06dd5ab/images/IMG_20260217_172823.jpg?w=800" alt="Demostración de integración de plataforma UBPD" style="max-width: 100%; height: auto; border-radius: 8px; margin: 0.5em 0;"/></figure><p><a href="https://www.linkedin.com/posts/miguelmoctezuma_updates-ugcPost-7439250842781831168-a57F?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E" target="_blank" rel="noopener noreferrer">Leer la publicación completa en LinkedIn →</a></p>'
+    badge: 'Colaboraci\u00f3n',
+    title: 'FOUND integra control de plataforma de \u00edndices espectrales con la Unidad de B\u00fasqueda (UBPD) de Colombia',
+    body: '<p>Viajamos a Colombia para trabajar junto al equipo de la <strong>Unidad de B\u00fasqueda (UBPD)</strong>. La agencia ahora tendr\u00e1 control total de las herramientas de FOUND y la capacidad de incorporar nuevas capas y configuraciones.</p><p>Las plataformas, construidas por nuestro miembro principal <strong>CentroGeo</strong>, habilitan dos capacidades cr\u00edticas:</p><p><strong>[1] Localizar sitios clandestinos</strong> mediante la referencia cruzada de IA, datos institucionales y evidencia de campo de nuestros sitios experimentales en M\u00e9xico, reduciendo d\u00f3nde las autoridades necesitan buscar.</p><p><strong>[2] Detectar fosas clandestinas</strong> a trav\u00e9s de \u00edndices espectrales e im\u00e1genes satelitales y de drones, leyendo los rastros ambientales dejados atr\u00e1s.</p><p>Ahora hemos integrado im\u00e1genes satelitales desde principios de los a\u00f1os 1980. Lo que los drones no pueden ver hoy, los sat\u00e9lites podr\u00edan haber grabado. Este enfoque ya ha demostrado ser efectivo en dos casos, demostrando el poder de los datos hist\u00f3ricos en la localizaci\u00f3n de personas desaparecidas.</p><figure style="margin: 1.5em 0; text-align: center;"><img src="https://github.com/FOUND-project/found-project.github.io/raw/9d3b508af5c500046a0806cc047ff9a1b06dd5ab/images/IMG_20260217_165004.jpg?w=800" alt="Colaboraci\u00f3n del equipo FOUND con UBPD de Colombia" style="max-width: 100%; height: auto; border-radius: 8px; margin: 0.5em 0;"/></figure><figure style="margin: 1.5em 0; text-align: center;"><img src="https://github.com/FOUND-project/found-project.github.io/raw/9d3b508af5c500046a0806cc047ff9a1b06dd5ab/images/IMG_20260217_172823.jpg?w=800" alt="Demostraci\u00f3n de integraci\u00f3n de plataforma UBPD" style="max-width: 100%; height: auto; border-radius: 8px; margin: 0.5em 0;"/></figure><p><a href="https://www.linkedin.com/posts/miguelmoctezuma_updates-ugcPost-7439250842781831168-a57F?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E" target="_blank" rel="noopener noreferrer">Leer la publicaci\u00f3n completa en LinkedIn →</a></p>'
   },
   nah: {
     badge: 'Tlayekoliztli tlatekitiliztli',
-    title: 'FOUND itkontenia miac tequitl de plataforma ika Unidad de Búsqueda (UBPD) de Colombia',
-    body: '<p>Otikwiyauh Mexico para tiktemetzin se hueyi tequitl iuan in equipo de <strong>Unidad de Búsqueda (UBPD)</strong>. In agencia axkan kisesia miac tlanechikolistli de in tequitl FOUND huan nececayotl para tikchihua yankuik capas huan configuraciones.</p><p>In plataformas, okichijkeh de in ompa <strong>CentroGeo</strong>, kichiua se omome tlatequitiliztli kuali:</p><p><strong>[1] Tlamiktiloyan motlatiloyan</strong> ika intlachiyaloni AI, datos institucionales huan evidencia de tlalli de nochi sitios experimentales ipan México, para tikmahuiztin kanin tekitizkeh in autoridades.</p><p><strong>[2] Tlamiktiloyan motlatiloyan</strong> ika espectral indices huan imágenes satelitales huan drones, timomatiokeh in tlen okakiua tlalli.</p><p>Axkan otikayaki imágenes satelitales desde princpios de años 1980. Tle drones amo vel kichiuhkeh axkan, in satelites mochíuah huel okikokioke. Nin tlamantli omochi efectivo ika omey hueycamatl, tikmahuizneki in tlakameh de datos oksekan ipan tlatemohuiliztli de personas desaparecidas.</p><figure style="margin: 1.5em 0; text-align: center;"><img src="https://github.com/FOUND-project/found-project.github.io/raw/9d3b508af5c500046a0806cc047ff9a1b06dd5ab/images/IMG_20260217_165004.jpg?w=800" alt="FOUND tequitl ika Colombia UBPD" style="max-width: 100%; height: auto; border-radius: 8px; margin: 0.5em 0;"/></figure><figure style="margin: 1.5em 0; text-align: center;"><img src="https://github.com/FOUND-project/found-project.github.io/raw/9d3b508af5c500046a0806cc047ff9a1b06dd5ab/images/IMG_20260217_172823.jpg?w=800" alt="UBPD plataforma itkontenia tekitiliztli" style="max-width: 100%; height: auto; border-radius: 8px; margin: 0.5em 0;"/></figure><p><a href="https://www.linkedin.com/posts/miguelmoctezuma_updates-ugcPost-7439250842781831168-a57F?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E" target="_blank" rel="noopener noreferrer">Xikmotlajkolti in tlatlatol ipan LinkedIn →</a></p>'
+    title: 'FOUND itkontenia miac tequitl de plataforma ika Unidad de B\u00fasqueda (UBPD) de Colombia',
+    body: '<p>Otikwiyauh Mexico para tiktemetzin se hueyi tequitl iuan in equipo de <strong>Unidad de B\u00fasqueda (UBPD)</strong>. In agencia axkan kisesia miac tlanechikolistli de in tequitl FOUND huan nececayotl para tikchihua yankuik capas huan configuraciones.</p><p>In plataformas, okichijkeh de in ompa <strong>CentroGeo</strong>, kichiua se omome tlatequitiliztli kuali:</p><p><strong>[1] Tlamiktiloyan motlatiloyan</strong> ika intlachiyaloni AI, datos institucionales huan evidencia de tlalli de nochi sitios experimentales ipan M\u00e9xico, para tikmahuiztin kanin tekitizkeh in autoridades.</p><p><strong>[2] Tlamiktiloyan motlatiloyan</strong> ika espectral indices huan im\u00e1genes satelitales huan drones, timomatiokeh in tlen okakiua tlalli.</p><p>Axkan otikayaki im\u00e1genes satelitales desde princpios de a\u00f1os 1980. Tle drones amo vel kichiuhkeh axkan, in satelites moch\u00eduah huel okikokioke. Nin tlamantli omochi efectivo ika omey hueycamatl, tikmahuizneki in tlakameh de datos oksekan ipan tlatemohuiliztli de personas desaparecidas.</p><figure style="margin: 1.5em 0; text-align: center;"><img src="https://github.com/FOUND-project/found-project.github.io/raw/9d3b508af5c500046a0806cc047ff9a1b06dd5ab/images/IMG_20260217_165004.jpg?w=800" alt="FOUND tequitl ika Colombia UBPD" style="max-width: 100%; height: auto; border-radius: 8px; margin: 0.5em 0;"/></figure><figure style="margin: 1.5em 0; text-align: center;"><img src="https://github.com/FOUND-project/found-project.github.io/raw/9d3b508af5c500046a0806cc047ff9a1b06dd5ab/images/IMG_20260217_172823.jpg?w=800" alt="UBPD plataforma itkontenia tekitiliztli" style="max-width: 100%; height: auto; border-radius: 8px; margin: 0.5em 0;"/></figure><p><a href="https://www.linkedin.com/posts/miguelmoctezuma_updates-ugcPost-7439250842781831168-a57F?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB_zGzMBBxcSdtDzNCGsySXIVWQmE2nBr-E" target="_blank" rel="noopener noreferrer">Xikmotlajkolti in tlatlatol ipan LinkedIn →</a></p>'
   }
 },
-        
+
         {
           id: 'cnb-agreement',
           date: '2026-03-23',
@@ -373,8 +432,8 @@ author_profile: true
       function fmtDate(d, l) { try { var date = new Date(d + 'T00:00:00'); return date.toLocaleDateString(l === 'en' ? 'en-US' : 'es-MX', { year:'numeric', month:'long', day:'numeric' }); } catch(e) { return d; } }
       function cardById(id) { for (var i = 0; i < newsCards.length; i++) { if (newsCards[i].id === id) return newsCards[i]; } return null; }
       function setMeta(id, val) { var el = document.getElementById(id); if (el) el.setAttribute('content', val); }
-      function badgeClass(cat) { var map = { award:'badge-award', media:'badge-media', field:'badge-field', funding:'badge-funding', coverage:'badge-coverage' }; return map[cat] || 'badge-field'; }
-      function bannerClass(cat) { var map = { award:'banner-award', media:'banner-media', field:'banner-field', funding:'banner-funding', coverage:'banner-coverage' }; return map[cat] || 'banner-field'; }
+      function badgeClass(cat) { var map = { award:'badge-award', media:'badge-media', field:'badge-field', funding:'badge-funding', coverage:'badge-coverage', partnership:'badge-field', training:'badge-funding' }; return map[cat] || 'badge-field'; }
+      function bannerClass(cat) { var map = { award:'banner-award', media:'banner-media', field:'banner-field', funding:'banner-funding', coverage:'banner-coverage', partnership:'banner-field', training:'banner-funding' }; return map[cat] || 'banner-field'; }
 
       function renderGrid() {
         var grid = document.getElementById('news-grid');
@@ -388,7 +447,9 @@ author_profile: true
           article.setAttribute('tabindex', '0');
           article.setAttribute('aria-label', t.title);
           var bannerHtml;
-          if (card.image) {
+          if (card.image && card.logoBanner) {
+            bannerHtml = '<div class="card-banner logo-contain ' + bannerClass(card.category) + '"><img src="' + card.image + '" alt="" loading="lazy"></div>';
+          } else if (card.image) {
             bannerHtml = '<div class="card-banner"><img src="' + card.image + '" alt="" loading="lazy"></div>';
           } else {
             bannerHtml = '<div class="card-banner no-photo ' + bannerClass(card.category) + '"><div class="card-banner-watermark"><img class="card-banner-logo" src="' + LOGO + '" alt=""><span class="card-banner-label">FOUND</span></div></div>';
@@ -410,9 +471,14 @@ author_profile: true
         var t = card[lang] || card.en;
         var ui = UI[lang] || UI.en;
         var hero = document.getElementById('modal-hero');
-        if (card.image) {
+        if (card.image && card.logoBanner) {
+          hero.className = 'modal-hero logo-contain ' + bannerClass(card.category);
+          hero.innerHTML = '<img class="modal-hero-img" src="' + card.image + '" alt="' + t.title.replace(/<[^>]*>/g,'') + '">';
+        } else if (card.image) {
+          hero.className = 'modal-hero';
           hero.innerHTML = '<img class="modal-hero-img" src="' + card.image + '" alt="' + t.title.replace(/<[^>]*>/g,'') + '"><img class="modal-img-wm" src="' + LOGO + '" alt="">';
         } else {
+          hero.className = 'modal-hero';
           hero.innerHTML = '<div class="modal-hero-gradient ' + bannerClass(card.category) + '"><div class="modal-hero-wm"><img class="modal-hero-logo" src="' + LOGO + '" alt=""><span class="modal-hero-news-label">FOUND NEWS</span></div></div>';
         }
         var badge = document.getElementById('modal-badge');
@@ -425,11 +491,11 @@ author_profile: true
         var plainTitle = t.title.replace(/<[^>]*>/g,'');
         setMeta('og-title', plainTitle);
         setMeta('og-description', plainTitle);
-        setMeta('og-image', card.image || LOGO);
+        setMeta('og-image', (card.image && !card.logoBanner) ? card.image : LOGO);
         setMeta('og-url', BASE_URL + 'cards/' + id);
         setMeta('tw-title', plainTitle);
         setMeta('tw-description', plainTitle);
-        setMeta('tw-image', card.image || LOGO);
+        setMeta('tw-image', (card.image && !card.logoBanner) ? card.image : LOGO);
         history.replaceState(null, '', '#' + id);
         overlay.classList.add('active');
         panel.scrollTop = 0;
