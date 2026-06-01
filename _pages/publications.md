@@ -554,7 +554,7 @@ author_profile: true
         en: {
           'pill-book': 'BOOK',
           'title-book': 'The Book',
-          'book-badge': 'Peer-reviewed chapters',
+          'book-badge': 'Free download',
           'book-desc': 'This volume brings together biological, physical, and earth sciences to design and test methods for detecting clandestine graves. The English translation is currently in progress.',
           'pill-articles': 'ARTICLES',
           'title-articles': 'Articles',
@@ -582,7 +582,7 @@ author_profile: true
         es: {
           'pill-book': 'LIBRO',
           'title-book': 'El libro',
-          'book-badge': 'Arbitraje científico de capítulos',
+          'book-badge': 'Arbitraje científico de capítulos; Descarga gratuita',
           'book-desc': 'Este volumen reúne ciencias biológicas, físicas y de la Tierra para diseñar y probar métodos de detección de fosas clandestinas. La traducción al inglés está en proceso.',
           'pill-articles': 'ARTÍCULOS',
           'title-articles': 'Artículos',
