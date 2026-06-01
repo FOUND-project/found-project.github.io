@@ -251,12 +251,12 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
           </div>
           <div class="featured-body">
             <div class="featured-meta">
-              <span class="featured-tag" id="featured-tag">Training</span>
-              <span class="featured-date" id="featured-date">April 2026</span>
+              <span class="featured-tag" id="featured-tag">Training; Impact</span>
+              <span class="featured-date" id="featured-date">2026</span>
             </div>
             <div class="featured-title" id="featured-title">FOUND trains 45 officials of Mexico's National Search Commission</div>
-            <p class="featured-excerpt" id="featured-excerpt">First round of training delivered to the CNB, which has now adopted FOUND's spectral-index and machine-learning platforms as part of its official toolkit.</p>
-            <span class="featured-cta" id="featured-cta">Read the update <span class="arrow">&#x2192;</span></span>
+            <p class="featured-excerpt" id="featured-excerpt">First round of training delivered alongside LAB-CO to the CNB, which has now adopted FOUND's spectral-index and machine-learning platforms as part of its official toolkit.</p>
+            <span class="featured-cta" id="featured-cta">Read more updates <span class="arrow">&#x2192;</span></span>
           </div>
         </a>
       </div>
