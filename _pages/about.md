@@ -73,10 +73,10 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
 .mc-eyebrow{position:absolute;top:.9rem;left:.9rem;z-index:4;display:inline-flex;align-items:center;gap:.4rem;padding:.22rem .7rem;border-radius:999px;font-size:.68rem;font-weight:750;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(14,40,30,.6);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.22);font-family:var(--font-mono)}
 .mc-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold-accent);box-shadow:0 0 8px rgba(212,175,55,.6)}
 .mc-track{position:relative;width:100%;height:100%}
-.mc-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .6s var(--transition-smooth);display:flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer}
-.mc-slide.is-active{opacity:1;visibility:visible;z-index:1}
-.mc-slide img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;padding:1.5rem 1.5rem 4.5rem}
-.mc-slide::after{content:'';position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(to top,rgba(8,20,15,.92) 0%,rgba(8,20,15,.55) 45%,transparent 100%);pointer-events:none;z-index:1}
+.media-carousel .mc-slide{position:absolute!important;inset:0;opacity:0;visibility:hidden;transition:opacity .6s var(--transition-smooth);display:flex!important;align-items:center;justify-content:center;text-decoration:none!important;cursor:pointer;margin:0!important}
+.media-carousel .mc-slide.is-active{opacity:1!important;visibility:visible!important;z-index:1}
+.media-carousel .mc-slide img{max-width:100%!important;max-height:100%!important;width:auto!important;height:auto!important;object-fit:contain;display:block;padding:1.5rem 1.5rem 4.5rem;border-radius:0!important;box-shadow:none!important;margin:0!important}
+.media-carousel .mc-slide::after{content:'';position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(to top,rgba(8,20,15,.92) 0%,rgba(8,20,15,.55) 45%,transparent 100%);pointer-events:none;z-index:1}
 .mc-caption{position:absolute;left:1.1rem;right:1.1rem;bottom:2.6rem;z-index:3;color:#fff;pointer-events:none}
 .mc-caption-outlet{font-size:.72rem;font-weight:750;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-accent);font-family:var(--font-mono);margin-bottom:.2rem}
 .mc-caption-text{font-size:clamp(.95rem,1.4vw,1.1rem);font-weight:700;line-height:1.35;letter-spacing:-.01em;text-shadow:0 4px 16px rgba(0,0,0,.5)}
@@ -256,23 +256,23 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
             <span class="mc-eyebrow" id="mc-eyebrow">In the Media</span>
             <div class="mc-track" id="mc-track">
               <a href="https://found-project.org/news/cards/international-media" class="mc-slide is-active" target="_blank" rel="noopener noreferrer" role="group" aria-roledescription="slide" aria-label="1 of 5">
-                <img src="https://github.com/FOUND-project/found-project.github.io/blob/d162acab38618d709c74e07c172f6e0c21f53bd0/images/1.1%20media%20Guardian.jpeg?raw=true" alt="FOUND featured in The Guardian" loading="lazy">
+                <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/d162acab38618d709c74e07c172f6e0c21f53bd0/images/1.1%20media%20Guardian.jpeg" alt="FOUND featured in The Guardian" loading="lazy">
                 <div class="mc-caption"><div class="mc-caption-outlet">The Guardian</div><div class="mc-caption-text" data-mc-text="guardian">Dead pigs and grieving mothers: the search for Mexico's missing</div></div>
               </a>
               <a href="https://found-project.org/news/cards/international-media" class="mc-slide" target="_blank" rel="noopener noreferrer" role="group" aria-roledescription="slide" aria-label="2 of 5">
-                <img src="https://github.com/FOUND-project/found-project.github.io/blob/ad5907804281c552756d5799e0fdad2a36e3d01c/images/1.2%20media%20AP.jpg?raw=true" alt="FOUND featured by the Associated Press" loading="lazy">
+                <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/ad5907804281c552756d5799e0fdad2a36e3d01c/images/1.2%20media%20AP.jpg" alt="FOUND featured by the Associated Press" loading="lazy">
                 <div class="mc-caption"><div class="mc-caption-outlet">Associated Press</div><div class="mc-caption-text" data-mc-text="ap">Why scientists are dressing pigs in clothes and burying them in Mexico</div></div>
               </a>
               <a href="https://found-project.org/news/cards/international-media" class="mc-slide" target="_blank" rel="noopener noreferrer" role="group" aria-roledescription="slide" aria-label="3 of 5">
-                <img src="https://github.com/FOUND-project/found-project.github.io/blob/ad5907804281c552756d5799e0fdad2a36e3d01c/images/1.3%20independent.jpg?raw=true" alt="FOUND featured in The Independent" loading="lazy">
+                <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/ad5907804281c552756d5799e0fdad2a36e3d01c/images/1.3%20independent.jpg" alt="FOUND featured in The Independent" loading="lazy">
                 <div class="mc-caption"><div class="mc-caption-outlet">The Independent</div><div class="mc-caption-text" data-mc-text="independent">How pigs could help find missing Mexican cartel victims</div></div>
               </a>
               <a href="https://found-project.org/news/cards/international-media" class="mc-slide" target="_blank" rel="noopener noreferrer" role="group" aria-roledescription="slide" aria-label="4 of 5">
-                <img src="https://github.com/FOUND-project/found-project.github.io/blob/ad5907804281c552756d5799e0fdad2a36e3d01c/images/1.4%20Vice.jpg?raw=true" alt="FOUND featured in VICE" loading="lazy">
+                <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/ad5907804281c552756d5799e0fdad2a36e3d01c/images/1.4%20Vice.jpg" alt="FOUND featured in VICE" loading="lazy">
                 <div class="mc-caption"><div class="mc-caption-outlet">VICE</div><div class="mc-caption-text" data-mc-text="vice">Mexico is using pigs, drones, and lasers to find cartel victims</div></div>
               </a>
               <a href="https://found-project.org/news/cards/international-media" class="mc-slide" target="_blank" rel="noopener noreferrer" role="group" aria-roledescription="slide" aria-label="5 of 5">
-                <img src="https://github.com/FOUND-project/found-project.github.io/blob/ad5907804281c552756d5799e0fdad2a36e3d01c/images/1.5%20LA%20Times.jpg?raw=true" alt="FOUND featured in the LA Times" loading="lazy">
+                <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/ad5907804281c552756d5799e0fdad2a36e3d01c/images/1.5%20LA%20Times.jpg" alt="FOUND featured in the LA Times" loading="lazy">
                 <div class="mc-caption"><div class="mc-caption-outlet">LA Times</div><div class="mc-caption-text" data-mc-text="latimes">Why are scientists dressing pigs in clothes and burying them in Mexico?</div></div>
               </a>
             </div>
@@ -422,8 +422,10 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     <p class="section-subtitle" id="social-subtitle">Our latest findings, community stories, and collaborations</p>
     <div class="social-grid">
     
+      <div class="social-embed"><div class="iframe-container"><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7444423393954648067" height="880" width="504" frameborder="0" allowfullscreen="" title="Agreement CNB"></iframe></div></div>
       <div class="social-embed twitter-embed"><div class="iframe-container"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Almost a year after I started researching the story, I'm thrilled that my <a href="https://twitter.com/guardian?ref_src=twsrc%5Etfw">@guardian</a> article about the innovations being used to try and find some of the thousands of people who have disappeared in Mexico is the most read in its Global Development section. <a href="https://t.co/NztFCj4uEF">https://t.co/NztFCj4uEF</a></p>&mdash; Suzanne Bearne (@sbearne) <a href="https://twitter.com/sbearne/status/1991827389375193330?ref_src=twsrc%5Etfw">November 21, 2025</a></blockquote></div></div>
       <div class="social-embed twitter-embed"><div class="iframe-container"><blockquote class="twitter-tweet"><p lang="es" dir="ltr">Cómo los cerdos y los insectos están ayudando a encontrar a los desaparecidos en México <a href="https://t.co/sJC3oaNLGL">https://t.co/sJC3oaNLGL</a></p>&mdash; BBC News Mundo (@bbcmundo) <a href="https://twitter.com/bbcmundo/status/1973352689867063513?ref_src=twsrc%5Etfw">October 1, 2025</a></blockquote></div></div>
+      <div class="social-embed"><div class="iframe-container"><iframe src="https://www.linkedin.com/embed/feed/update/urn:li:activity:7343552976185114624" height="880" width="504" frameborder="0" allowfullscreen title="FCDO LinkedIn post" loading="lazy"></iframe></div></div>
     </div>
   </div>
 </section>
@@ -479,7 +481,9 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
   }
   function setupScrollReveal(){var reveals=document.querySelectorAll('.reveal');if(!reveals.length)return;if('IntersectionObserver' in window){var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting)entry.target.classList.add('is-visible')})},{threshold:0.05,rootMargin:'0px 0px -20px 0px'});reveals.forEach(function(el){observer.observe(el)});document.body.classList.add('reveal-ready')}}
   function setupTouchZoom(){var zoomables=document.querySelectorAll('.touch-zoomable');if(!zoomables.length)return;function toggleZoom(el){if(el.classList.contains('is-expanded')){el.classList.remove('is-expanded');document.body.classList.remove('zoom-active')}else{document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(o){o.classList.remove('is-expanded')});el.classList.add('is-expanded');document.body.classList.add('zoom-active')}}zoomables.forEach(function(el){el.addEventListener('click',function(e){if(window.matchMedia&&window.matchMedia('(max-width: 768px)').matches){e.preventDefault();e.stopPropagation();toggleZoom(el)}})});document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.touch-zoomable.is-expanded').forEach(function(o){o.classList.remove('is-expanded')});document.body.classList.remove('zoom-active')}})}
-  function init(){var savedLang=null;try{savedLang=localStorage.getItem('found-lang')}catch(e){}var initialLang=(savedLang==='es'||savedLang==='en'||savedLang==='nah')?savedLang:'en';setLanguage(initialLang);document.querySelectorAll('.lang-btn').forEach(function(btn){btn.addEventListener('click',function(){setLanguage(btn.dataset.lang)})});setupCarousel();setupTouchZoom();setupScrollReveal()}
-  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}
+  function init(){try{var savedLang=null;try{savedLang=localStorage.getItem('found-lang')}catch(e){}var initialLang=(savedLang==='es'||savedLang==='en'||savedLang==='nah')?savedLang:'en';setLanguage(initialLang);document.querySelectorAll('.lang-btn').forEach(function(btn){btn.addEventListener('click',function(){setLanguage(btn.dataset.lang)})});setupCarousel();setupTouchZoom();setupScrollReveal()}catch(err){if(window.console&&console.error)console.error('FOUND init error:',err)}}
+  function boot(){if(document.getElementById('media-carousel')||document.getElementById('hero-word')){init()}else{setTimeout(boot,150)}}
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',boot)}else{boot()}
+  window.addEventListener('load',function(){var mc=document.getElementById('media-carousel');if(mc&&!mc.querySelector('.mc-dot')){init()}});
 })();
 </script>
