@@ -244,7 +244,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
         <p class="hero-description" id="hero-main-text">Over 130,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> builds the scientific and institutional capabilities needed to find and return missing persons to their families. Working at the intersection of frontier technology and the lived knowledge of search groups, we drive systemic change in how governments and institutions respond to disappearance.</p>
       </div>
       <div class="hero-side reveal reveal-delay-2">
-        <a href="https://found-project.org/news/cards/cnb-first-training" class="featured-card" id="featured-card">
+          <a href="https://found-project.org/news/" class="featured-card" id="featured-card">
           <span class="featured-pill" id="featured-pill">Featured</span>
           <div class="featured-media">
             <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/eef1d014b946530cf97009db1836ca88a43f25e1/images/1%20CNB%20Training%20by%20CentroGeo.jpeg" alt="FOUND training session with Mexico's National Search Commission" loading="lazy">
