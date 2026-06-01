@@ -393,7 +393,7 @@ author_profile: true
             <div class="pub-card-text">
               <div class="pub-card-topline">
                 <span class="pub-emoji">📘</span>
-                <span class="pub-badge" id="book-badge">Peer-reviewed chapters</span>
+                <span class="pub-badge" id="book-badge">Free download</span>
               </div>
 
               <h3 class="pub-item-title" id="book-title">
