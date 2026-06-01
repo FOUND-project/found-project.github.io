@@ -7,6 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
+<div markdown="0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -489,3 +490,4 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 })();
 {% endraw %}
 </script>
+</div>
