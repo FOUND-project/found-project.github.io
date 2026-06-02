@@ -1,7 +1,7 @@
 ---
-layout: default
-title: Team
+title: "Team"
 permalink: /team/
+author_profile: true
 ---
 
 <style>
