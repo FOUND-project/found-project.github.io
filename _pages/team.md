@@ -124,7 +124,7 @@ author_profile: true
   <div class="team-notice">
     <strong>Under construction</strong>
     This section is a work in progress. Names and roles will continue to be updated, and full biographies will be added in due course. For now, you can reach us at
-    <a href="mailto:miguel.moctezuma@pmb.ox.ac.uk">miguel.moctezuma@pmb.ox.ac.uk</a>.
+    <a miguel.moctezuma[@]pmb.ox.ac.uk">miguel.moctezuma@pmb.ox.ac.uk</a>.
   </div>
 
   <div class="team-group">
