@@ -1,5 +1,8 @@
 # main links links
 main:
+  - title: "News"
+    url: /news/
+  
   - title: "In media/Talks"
     url: /media/
   
@@ -9,8 +12,9 @@ main:
   - title: "How to help"
     url: /how-to-help/
 
-  - title: "News"
-    url: /news/
+- title: "Team"
+    url: /team/
+    
 
 #  - title: "Talks"
 #    url: /talks/    
