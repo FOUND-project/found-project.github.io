@@ -3,7 +3,6 @@ title: "Team"
 permalink: /team/
 author_profile: true
 ---
-
 <style>
   .team-page {
     max-width: 1080px;
