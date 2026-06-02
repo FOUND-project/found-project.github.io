@@ -1,5 +1,6 @@
 # main links links
 main:
+
   - title: "News"
     url: /news/
   
@@ -12,7 +13,7 @@ main:
   - title: "How to help"
     url: /how-to-help/
 
-- title: "Team"
+  - title: "Team"
     url: /team/
     
 
