@@ -124,8 +124,6 @@ author_profile: true
   <div class="team-notice">
     <strong>Under construction</strong>
     This section is a work in progress. Names and roles will continue to be updated, and full biographies will be added in due course. For now, you can reach us at
-    <a href="mailto:found.git@gmail.com">found.git@gmail.com</a>
-    and
     <a href="mailto:miguel.moctezuma@pmb.ox.ac.uk">miguel.moctezuma@pmb.ox.ac.uk</a>.
   </div>
 
@@ -153,10 +151,6 @@ author_profile: true
       <div class="team-member">
         <p class="name">Guillermina Camacho</p>
         <p class="role">Search Group Leader · Siguiendo tu Rastro con Amor</p>
-      </div>
-      <div class="team-member">
-        <p class="name">Indira Navarro</p>
-        <p class="role">Search Group Leader · Guerreros Buscadores de Jalisco</p>
       </div>
       <div class="team-member">
         <p class="name">Luis Fondebrider</p>
@@ -193,7 +187,7 @@ author_profile: true
     <h2 class="team-group-title">Contributors</h2>
     <div class="team-grid">
       <div class="team-member">
-        <p class="name"><a href="https://www.linkedin.com/in/david-vigoureux/">David Vigoureux</a></p>
+        <p class="name">David Vigoureux</p>
         <p class="role">Innovation Manager at Brink · FOUND Coach</p>
       </div>
       <div class="team-member">
