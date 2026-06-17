@@ -210,7 +210,7 @@ author_profile: true
       <button type="button" class="lang-btn" data-lang="nah">NÁHUATL</button>
     </div>
 
-    <header class="news-header">
+        <header class="news-header">
       <div class="news-header-logo">
         <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_logo.jpg?raw=true" alt="FOUND Logo">
       </div>
@@ -222,6 +222,7 @@ author_profile: true
         </div>
         <h1 id="news-title">FOUND — News &amp; Updates</h1>
         <p id="news-subtitle">Latest developments on our work across Mexico, Colombia, and beyond.</p>
+        <div class="news-stats">
           <div class="news-stat">
             <span class="news-stat-value">5</span>
             <span class="news-stat-label" id="stat-label-states">Partner states</span>
