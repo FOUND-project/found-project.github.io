@@ -222,11 +222,6 @@ author_profile: true
         </div>
         <h1 id="news-title">FOUND — News &amp; Updates</h1>
         <p id="news-subtitle">Latest developments on our work across Mexico, Colombia, and beyond.</p>
-        <div class="news-stats">
-          <div class="news-stat">
-            <span class="news-stat-value">27</span>
-            <span class="news-stat-label" id="stat-label-located">Located</span>
-          </div>
           <div class="news-stat">
             <span class="news-stat-value">5</span>
             <span class="news-stat-label" id="stat-label-states">Partner states</span>
