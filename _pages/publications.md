@@ -392,13 +392,13 @@ author_profile: true
           <div class="pub-card-inner">
             <div class="pub-card-text">
               <div class="pub-card-topline">
-                <span class="pub-emoji">Volume 1 📘</span>
+                <span class="pub-emoji">📘</span>
                 <span class="pub-badge" id="book-badge">Free download</span>
               </div>
 
               <h3 class="pub-item-title" id="book-title">
                 <a href="https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file" target="_blank" rel="noopener noreferrer">
-                  Interpreting Nature to Locate Those We Are Missing
+                  Interpreting Nature to Locate Those We Are Missing, Volume 1 
                 </a>
               </h3>
 
@@ -555,7 +555,7 @@ author_profile: true
           'pill-book': 'BOOK',
           'title-book': 'The Book',
           'book-badge': 'Free download',
-          'book-desc': 'This volume brings together biological, physical, and earth sciences to design and test methods for detecting clandestine graves. The English translation is currently in progress.',
+          'book-desc': 'This volume brings together biological, physical, and earth sciences to design and test methods for detecting clandestine graves. Volume 2 will be presented in December 2026.',
           'pill-articles': 'ARTICLES',
           'title-articles': 'Articles',
           'a1-badge': 'Peer-reviewed',
@@ -583,7 +583,7 @@ author_profile: true
           'pill-book': 'LIBRO',
           'title-book': 'El libro',
           'book-badge': 'Arbitraje científico de capítulos; Descarga gratuita',
-          'book-desc': 'Este volumen reúne ciencias biológicas, físicas y de la Tierra para diseñar y probar métodos de detección de fosas clandestinas. La traducción al inglés está en proceso.',
+          'book-desc': 'Este volumen reúne ciencias biológicas, físicas y de la Tierra para diseñar y probar métodos de detección de fosas clandestinas. El Volumen 2 será presentado en diciembre de 2026.',
           'pill-articles': 'ARTÍCULOS',
           'title-articles': 'Artículos',
           'a1-badge': 'Revisado por pares',
