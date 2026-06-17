@@ -157,7 +157,7 @@ author_profile: true
       </div>
       <div class="team-member">
         <p class="name">Luis Fondebrider</p>
-        <p class="role">Forensic Anthropologist</p>
+        <p class="role">Forensic Anthropology Advisor</p>
       </div>
       <div class="team-member">
         <p class="name">Victor Hugo Ávila Barrientos</p>
@@ -177,7 +177,7 @@ author_profile: true
       </div>
       <div class="team-member">
         <p class="name">Brad Evans</p>
-        <p class="role">Centre for the Study of Violence · University of Bath</p>
+        <p class="role">Ethics Advisor · University of Bath</p>
       </div>
       <div class="team-member">
         <p class="name">Karina García</p>
