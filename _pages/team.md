@@ -148,10 +148,11 @@ author_profile: true
   <div class="team-group">
     <h2 class="team-group-title">Advisors</h2>
     <div class="team-grid">
-                <div class="team-member">
+    <div class="team-member">
         <p class="name">Indira Navarro</p>
         <p class="role">Search Group Leader · Guerreros Buscadores</p>
       <div class="team-member">
+          </div>
         <p class="name">Guillermina Camacho</p>
         <p class="role">Search Group Leader · Siguiendo tu Rastro con Amor</p>
       </div>
