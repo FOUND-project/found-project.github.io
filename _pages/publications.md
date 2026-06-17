@@ -392,7 +392,7 @@ author_profile: true
           <div class="pub-card-inner">
             <div class="pub-card-text">
               <div class="pub-card-topline">
-                <span class="pub-emoji">📘</span>
+                <span class="pub-emoji">Volume 1 📘</span>
                 <span class="pub-badge" id="book-badge">Free download</span>
               </div>
 
@@ -407,7 +407,7 @@ author_profile: true
               </p>
 
               <p class="pub-desc" id="book-desc">
-                This volume brings together biological, physical, and earth sciences to design and test methods for detecting clandestine graves. The English translation is currently in progress.
+                This volume brings together biological, physical, and earth sciences to design and test methods for detecting clandestine graves. Volume 2 will be presented in December 2026.
               </p>
             </div>
 
