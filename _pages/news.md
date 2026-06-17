@@ -539,7 +539,6 @@ author_profile: true
         document.getElementById('news-pill').textContent = ui.pill;
         document.getElementById('news-title').innerHTML = ui.title;
         document.getElementById('news-subtitle').innerHTML = ui.subtitle;
-        document.getElementById('stat-label-located').textContent = ui.statLocated;
         document.getElementById('stat-label-states').textContent = ui.statStates;
         document.getElementById('stat-label-countries').textContent = ui.statCountries;
         document.documentElement.lang = l === 'es' ? 'es' : (l === 'nah' ? 'nah' : 'en');
