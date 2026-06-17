@@ -32,7 +32,6 @@ author_profile: true
     line-height: 1.6;
   }
 
-  /* Under construction notice */
   .team-notice {
     border: 1px solid rgba(150, 120, 70, 0.45);
     background: rgba(150, 120, 70, 0.08);
@@ -59,7 +58,6 @@ author_profile: true
     font-weight: 600;
   }
 
-  /* Group sections */
   .team-group {
     margin-bottom: 3.5rem;
   }
@@ -128,14 +126,31 @@ author_profile: true
   </div>
 
   <div class="team-group">
+    <h2 class="team-group-title">Direction</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <p class="name">Miguel Moctezuma</p>
+        <p class="role">Co-Founder &amp; Co-Director · University of Oxford</p>
+      </div>
+      <div class="team-member">
+        <p class="name">José Luis Silván</p>
+        <p class="role">Co-Founder &amp; Co-Director · CentroGeo</p>
+      </div>
+      <div class="team-member">
+        <p class="name">Mariela Garfias</p>
+        <p class="role">FCDO Pioneer</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="team-group">
     <h2 class="team-group-title">Advisors</h2>
     <div class="team-grid">
-    <div class="team-member">
+      <div class="team-member">
         <p class="name">Indira Navarro</p>
         <p class="role">Search Group Leader · Guerreros Buscadores</p>
+      </div>
       <div class="team-member">
-          </div>
-       <div class="team-member">
         <p class="name">Guillermina Camacho</p>
         <p class="role">Search Group Leader · Siguiendo tu Rastro con Amor</p>
       </div>
@@ -166,24 +181,6 @@ author_profile: true
       <div class="team-member">
         <p class="name">Karina García</p>
         <p class="role">UWE Bristol</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="team-group">
-    <h2 class="team-group-title">Direction</h2>
-    <div class="team-grid">
-      <div class="team-member">
-        <p class="name">Miguel Moctezuma</p>
-        <p class="role">Co-Founder &amp; Co-Director · University of Oxford</p>
-      </div>
-      <div class="team-member">
-        <p class="name">José Luis Silván</p>
-        <p class="role">Co-Founder &amp; Co-Director · CentroGeo</p>
-      </div>
-      <div class="team-member">
-        <p class="name">Mariela Garfias</p>
-        <p class="role">FCDO Pioneer</p>
       </div>
     </div>
   </div>
