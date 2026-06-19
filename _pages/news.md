@@ -137,6 +137,9 @@ author_profile: true
     .modal-hero.logo-contain { background: var(--hero-bg, linear-gradient(135deg, #2e1065 0%, #4c1d95 60%, #6d28d9 100%)); display: flex; align-items: center; justify-content: center; min-height: 240px; }
     .modal-hero.logo-contain .modal-hero-img { max-height: 220px; width: auto; max-width: 80%; object-fit: contain; padding: 1.5rem; }
     .modal-hero.logo-contain::after { display: none; }
+    .modal-hero.full-image { background: #0b1c16; text-align: center; }
+.modal-hero.full-image .modal-hero-img { max-height: 80vh; width: auto; max-width: 100%; object-fit: contain; margin: 0 auto; }
+.modal-hero.full-image::after { display: none; }
     .modal-hero-gradient { min-height: 160px; background: var(--hero-bg, linear-gradient(135deg, #1e4034 0%, #2d5f4d 60%, #4a8c73 100%)); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
     .modal-hero-gradient::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 15% -10%, rgba(212,175,55,.22) 0%, transparent 60%), radial-gradient(ellipse 60% 80% at 90% 110%, rgba(255,255,255,.07) 0%, transparent 60%); }
     .modal-hero-wm { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: .65rem; }
@@ -279,6 +282,7 @@ author_profile: true
   date: '2026-06-19',
   image:'https://raw.githubusercontent.com/FOUND-project/found-project.github.io/eacdc8082a25251fa6f305e06b98b0f721e2857b/images/Esp_BSG_June26.jpeg', 
   logoBanner: false,
+   fullImage: true,
   link: 'https://www.bsg.ox.ac.uk/events/found-and-identia',
   featured: true,
   category: 'partnership',
@@ -470,9 +474,10 @@ author_profile: true
           var bannerHtml;
           if (card.image && card.logoBanner) {
             bannerHtml = '<div class="card-banner logo-contain ' + bannerClass(card.category) + '"><img src="' + card.image + '" alt="" loading="lazy"></div>';
-          } else if (card.image) {
-            bannerHtml = '<div class="card-banner"><img src="' + card.image + '" alt="" loading="lazy"></div>';
-          } else {
+        } else if (card.image) {
+          hero.className = 'modal-hero' + (card.fullImage ? ' full-image' : '');
+          hero.innerHTML = '<img class="modal-hero-img" src="' + card.image + '" alt="' + t.title.replace(/<[^>]*>/g,'') + '">' + (card.fullImage ? '' : '<img class="modal-img-wm" src="' + LOGO + '" alt="">');
+        } else {
             bannerHtml = '<div class="card-banner no-photo ' + bannerClass(card.category) + '"><div class="card-banner-watermark"><img class="card-banner-logo" src="' + LOGO + '" alt=""><span class="card-banner-label">FOUND</span></div></div>';
           }
           article.innerHTML = bannerHtml + '<div class="card-body"><div class="card-meta"><span class="card-badge ' + badgeClass(card.category) + '">' + t.badge + '</span>' + (card.date ? '<span class="card-date">' + fmtDate(card.date, lang) + '</span>' : '') + '</div><span class="card-title">' + t.title + '</span><div class="card-cta"><span class="card-read-more">' + ui.readMore + '</span><span class="card-arrow"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></span></div></div>';
