@@ -275,6 +275,31 @@ author_profile: true
       var newsCards = [
 
 {
+  id: 'found-identia-oxford-event',
+  date: '2026-06-19',
+  image: 'https://github.com/FOUND-project/found-project.github.io/blob/1e9d1025d7d3f906b58cf02927f03f6bb904567c/images/ENG_BSG_June26.jpeg?raw=true',
+  logoBanner: false,
+  link: 'https://www.bsg.ox.ac.uk/events/found-and-identia',
+  featured: true,
+  category: 'partnership',
+  en: {
+    badge: 'Event',
+    title: 'Can AI help us find and identify our disappeared? FOUND and identIA at the University of Oxford, 26 June',
+    body: '<p><strong>Can AI help us find and identify our disappeared?</strong></p><p>In Mexico and Colombia, more than <strong>250,000 people</strong> remain missing, leaving families trapped in grief and uncertainty. It is a crisis that touches millions. AI, remote sensing and soil science have the potential to accelerate results and transform how authorities search for and identify the disappeared.</p><p>But technology alone is not the answer. The families who search hold irreplaceable knowledge, and tools must be built with them. <strong>FOUND</strong> and <strong>identIA</strong> are grounded in that principle: co-producing knowledge with searching families, and keeping ethics at the centre of how technologies enter sensitive fields and are embedded in government.</p><p>On <strong>26 June</strong>, FOUND and identIA come together at the <strong>Blavatnik School of Government, University of Oxford</strong>, to share their results to date in Mexico and Colombia.</p><ul><li>🗓 Friday 26 June 2026, 14:00–15:00 (UK)</li><li>📍 In person at the Blavatnik School of Government · also online</li><li>🎟 Free and open to the public</li></ul><p><a href="https://www.bsg.ox.ac.uk/events/found-and-identia" target="_blank" rel="noopener noreferrer">Register here ↗</a></p>'
+  },
+  es: {
+    badge: 'Evento',
+    title: '¿Puede la IA ayudarnos a encontrar e identificar a nuestras personas desaparecidas? FOUND e identIA en la Universidad de Oxford, 26 de junio',
+    body: '<p><strong>¿Puede la IA ayudarnos a encontrar e identificar a nuestras personas desaparecidas?</strong></p><p>En México y Colombia, más de <strong>250,000 personas</strong> continúan desaparecidas, dejando a las familias atrapadas en el duelo y la incertidumbre. Es una crisis que toca a millones. La IA, la percepción remota y la ciencia del suelo tienen el potencial de acelerar resultados y transformar la forma en que las autoridades buscan e identifican a las personas desaparecidas.</p><p>Pero la tecnología por sí sola no es la respuesta. Las familias que buscan poseen un conocimiento irremplazable, y las herramientas deben construirse con ellas. <strong>FOUND</strong> e <strong>identIA</strong> se sostienen en ese principio: coproducir conocimiento con las familias buscadoras, y mantener la ética en el centro de cómo las tecnologías entran en campos sensibles y se incorporan a los gobiernos.</p><p>El <strong>26 de junio</strong>, FOUND e identIA se reúnen en la <strong>Blavatnik School of Government de la Universidad de Oxford</strong> para compartir sus resultados a la fecha en México y Colombia.</p><ul><li>🗓 Viernes 26 de junio de 2026, 14:00–15:00 (Reino Unido)</li><li>📍 Presencial en la Blavatnik School of Government · también en línea</li><li>🎟 Gratuito y abierto al público</li></ul><p><a href="https://www.bsg.ox.ac.uk/events/found-and-identia" target="_blank" rel="noopener noreferrer">Regístrate aquí ↗</a></p>'
+  },
+  nah: {
+    badge: 'Tlanechikoliztli',
+    title: '¿In IA huelis techpalehuis tiktemoskeh huan tikiximatiskeh in topolihuitkeh? FOUND huan identIA ipan Universidad de Oxford, 26 de junio',
+    body: '<p><strong>¿In IA huelis techpalehuis tiktemoskeh huan tikiximatiskeh in topolihuitkeh?</strong></p><p>Ipan Mēxihco huan Colombia, más de <strong>250,000 tlācameh</strong> oksenka polihuih, kinkahuah in familias ipan choquiztli huan amo neltiliztli. Yeh se hueyi tlaihiyohuiliztli tlen kinahnamiki miek. In IA, in percepción remota huan in ciencia de tlalli huelis kiyolchikahuah resultados huan kipatlah kenik in autoridades tlatemohuah huan kiniximatih in polihuitkeh.</p><p>Yece in tecnología san iselti amo yeh in tlanankiliztli. In familias tlen tlatemohuah kipiah tlamatiliztli tlen amo huelis mopatla, huan in herramientas moneki mochihuaskeh inhuan. <strong>FOUND</strong> huan <strong>identIA</strong> motelketzah ipan nin tlamantli: tikchihuah tlamatiliztli inhuan in nananmeh buscadoras, huan tikpiah in ética ipan tlanepantla de kenik in tecnologías kalakih ipan campos sensibles huan motlaliah ipan gobiernos.</p><p>Ipan <strong>26 de junio</strong>, FOUND huan identIA mosentlaliah ipan <strong>Blavatnik School of Government de in Universidad de Oxford</strong> para kitemakaskeh inresultados ipan Mēxihco huan Colombia.</p><ul><li>🗓 Viernes 26 de junio 2026, 14:00–15:00 (Reino Unido)</li><li>📍 Presencial ipan Blavatnik School of Government · noihqui en línea</li><li>🎟 Amo tlaxtlahua huan tlapouhqui para nochtin</li></ul><p><a href="https://www.bsg.ox.ac.uk/events/found-and-identia" target="_blank" rel="noopener noreferrer">Ximotlahcuiloti nican ↗</a></p>'
+  }
+},
+        
+{
   id: 'cnb-first-training',
   date: '2026-04-15',
   image: 'https://github.com/FOUND-project/found-project.github.io/blob/eef1d014b946530cf97009db1836ca88a43f25e1/images/1%20CNB%20Training%20by%20CentroGeo.jpeg?raw=true',
