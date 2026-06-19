@@ -277,7 +277,7 @@ author_profile: true
 {
   id: 'found-identia-oxford-event',
   date: '2026-06-19',
-  image: 'https://github.com/FOUND-project/found-project.github.io/blob/eacdc8082a25251fa6f305e06b98b0f721e2857b/images/Esp_BSG_June26?raw=true.jpeg', 
+  image: 'image: 'https://github.com/FOUND-project/found-project.github.io/blob/eacdc8082a25251fa6f305e06b98b0f721e2857b/images/Esp_BSG_June26.jpeg?raw=true', 
   logoBanner: false,
   link: 'https://www.bsg.ox.ac.uk/events/found-and-identia',
   featured: true,
