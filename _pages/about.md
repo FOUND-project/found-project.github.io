@@ -78,6 +78,7 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
   .featured-media.featured-media-contain{height:auto;aspect-ratio:auto;background:#0b1c16}
 .featured-media.featured-media-contain img{height:auto;object-fit:contain;max-height:560px}
 .featured-media.featured-media-contain::after{display:none}
+  #featured-card .featured-pill{top:-12px;left:14px;box-shadow:0 6px 16px rgba(0,0,0,.28)}
 .featured-body{padding:1.1rem 1.3rem 1.35rem;background:#fff;position:relative;z-index:2}
 .featured-meta{display:flex;align-items:center;gap:.6rem;margin-bottom:.45rem}
 .featured-tag{font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#5b21b6;font-family:var(--font-mono)}
