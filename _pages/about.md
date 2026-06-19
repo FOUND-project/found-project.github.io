@@ -75,6 +75,9 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
 .featured-media img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .6s var(--transition-smooth)}
 .featured-card:hover .featured-media img{transform:scale(1.05)}
 .featured-media::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,20,15,.55) 0%,transparent 55%);pointer-events:none}
+  .featured-media.featured-media-contain{height:auto;aspect-ratio:auto;background:#0b1c16}
+.featured-media.featured-media-contain img{height:auto;object-fit:contain;max-height:560px}
+.featured-media.featured-media-contain::after{display:none}
 .featured-body{padding:1.1rem 1.3rem 1.35rem;background:#fff;position:relative;z-index:2}
 .featured-meta{display:flex;align-items:center;gap:.6rem;margin-bottom:.45rem}
 .featured-tag{font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#5b21b6;font-family:var(--font-mono)}
@@ -269,19 +272,19 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
         <p class="hero-description" id="hero-main-text">Over 130,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> builds the scientific and institutional capabilities needed to find and return missing persons to their families. Working at the intersection of frontier technology and the lived knowledge of search groups, we drive systemic change in how governments and institutions respond to disappearance.</p>
       </div>
       <div class="hero-side reveal reveal-delay-2">
-          <a href="https://found-project.org/news/" class="featured-card" id="featured-card">
+   <a href="https://found-project.org/news/#found-identia-oxford-event" class="featured-card" id="featured-card">
           <span class="featured-pill" id="featured-pill">Featured</span>
-          <div class="featured-media">
-            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/eef1d014b946530cf97009db1836ca88a43f25e1/images/1%20CNB%20Training%20by%20CentroGeo.jpeg" alt="FOUND training session with Mexico's National Search Commission" loading="lazy">
+          <div class="featured-media featured-media-contain">
+            <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/eacdc8082a25251fa6f305e06b98b0f721e2857b/images/Esp_BSG_June26.jpeg" alt="FOUND and identIA event at the Blavatnik School of Government, University of Oxford, 26 June 2026" loading="lazy">
           </div>
           <div class="featured-body">
             <div class="featured-meta">
-              <span class="featured-tag" id="featured-tag">Training; Impact</span>
-              <span class="featured-date" id="featured-date">2026</span>
+              <span class="featured-tag" id="featured-tag">Event · Oxford</span>
+              <span class="featured-date" id="featured-date">26 June 2026</span>
             </div>
-            <div class="featured-title" id="featured-title">FOUND trains 45 officials of Mexico's National Search Commission</div>
-            <p class="featured-excerpt" id="featured-excerpt">First round of training delivered alongside LAB-CO to the CNB, which has now adopted FOUND's spectral-index and machine-learning platforms as part of its official toolkit.</p>
-            <span class="featured-cta" id="featured-cta">Read more updates <span class="arrow">&#x2192;</span></span>
+            <div class="featured-title" id="featured-title">Can AI help us find and identify our disappeared? FOUND and identIA at the University of Oxford</div>
+            <p class="featured-excerpt" id="featured-excerpt">On 26 June, FOUND and identIA come together at the Blavatnik School of Government to share their results to date in Mexico and Colombia. Free and open to the public.</p>
+            <span class="featured-cta" id="featured-cta">Register &amp; read more <span class="arrow">&#x2192;</span></span>
           </div>
         </a>
       </div>
