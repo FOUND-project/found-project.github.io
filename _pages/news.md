@@ -87,10 +87,6 @@ author_profile: true
     .news-eyebrow-text { font-size: .7rem; font-weight: 800; letter-spacing: .2em; text-transform: uppercase; color: var(--green-700); }
     #news-title { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 900; color: var(--green-900); letter-spacing: -.035em; line-height: 1.15; margin-bottom: .5rem; }
     #news-subtitle { font-size: clamp(.95rem, 1.3vw, 1.1rem); color: var(--text-medium); line-height: 1.75; max-width: 680px; }
-    .news-stats { display: flex; gap: 2rem; margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid rgba(15,23,42,.06); }
-    .news-stat { display: flex; flex-direction: column; gap: .1rem; }
-    .news-stat-value { font-size: 1.35rem; font-weight: 900; color: var(--green-800); letter-spacing: -.03em; }
-    .news-stat-label { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--text-light); }
     .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: clamp(1.2rem, 2vw, 1.8rem); margin-bottom: 2rem; --stagger: 60ms; }
     .news-card { background: var(--white); border-radius: var(--radius-lg); border: 1px solid rgba(15,23,42,.055); box-shadow: var(--shadow-sm); overflow: hidden; cursor: pointer; display: flex; flex-direction: column; position: relative; transition: transform .28s var(--ease), box-shadow .28s var(--ease), border-color .28s var(--ease); animation: cardIn .55s var(--ease) both; }
     .news-card:nth-child(1) { animation-delay: calc(1 * var(--stagger)); }
@@ -239,19 +235,8 @@ author_profile: true
         </div>
         <h1 id="news-title">FOUND — News &amp; Updates</h1>
         <p id="news-subtitle">Latest developments on our work across Mexico, Colombia, and beyond.</p>
-        <div class="news-stats">
-          <div class="news-stat">
-            <span class="news-stat-value">5</span>
-            <span class="news-stat-label" id="stat-label-states">Partner states</span>
-          </div>
-          <div class="news-stat">
-            <span class="news-stat-value">3+</span>
-            <span class="news-stat-label" id="stat-label-countries">Countries</span>
-          </div>
-        </div>
       </div>
     </header>
-    <section class="news-grid" id="news-grid" aria-label="News articles"></section>
     <!-- ═══════════════════════════════════════════════════════
          FOUND TIMELINE · 2023 – 2027
          ═══════════════════════════════════════════════════════ -->
@@ -633,6 +618,7 @@ author_profile: true
 </svg>
       </div>
     </section>
+    <section class="news-grid" id="news-grid" aria-label="News articles"></section>
   </div>
   <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title-el">
     <div class="modal-panel" id="modal-panel">
@@ -802,8 +788,8 @@ author_profile: true
         }
       ];
       var UI = {
-        en: { pill: 'NEWS · IMPACT · MEDIA', title: 'FOUND — News &amp; Updates', subtitle: 'Latest developments on our work across Mexico, Colombia, and beyond.', readMore: 'Read more', share: 'Share', statLocated: 'Located', statStates: 'Partner states', statCountries: 'Countries', timelinePill: 'OUR JOURNEY · 2023 – 2027' },
-        es: { pill: 'NOTICIAS · IMPACTO · MEDIOS', title: 'FOUND — Noticias y Actualizaciones', subtitle: 'Las novedades más recientes sobre nuestro trabajo en México, Colombia y más allá.', readMore: 'Leer más', share: 'Compartir', statLocated: 'Localizadas', statStates: 'Estados aliados', statCountries: 'Países', timelinePill: 'NUESTRO CAMINO · 2023 – 2027' }
+        en: { pill: 'NEWS · IMPACT · MEDIA', title: 'FOUND — News &amp; Updates', subtitle: 'Latest developments on our work across Mexico, Colombia, and beyond.', readMore: 'Read more', share: 'Share', timelinePill: 'OUR JOURNEY · 2023 – 2027' },
+        es: { pill: 'NOTICIAS · IMPACTO · MEDIOS', title: 'FOUND — Noticias y Actualizaciones', subtitle: 'Las novedades más recientes sobre nuestro trabajo en México, Colombia y más allá.', readMore: 'Leer más', share: 'Compartir', timelinePill: 'NUESTRO CAMINO · 2023 – 2027' }
       };
       var lang = 'en';
       var activeCardId = null;
@@ -914,8 +900,6 @@ author_profile: true
         document.getElementById('news-pill').textContent = ui.pill;
         document.getElementById('news-title').innerHTML = ui.title;
         document.getElementById('news-subtitle').innerHTML = ui.subtitle;
-        document.getElementById('stat-label-states').textContent = ui.statStates;
-        document.getElementById('stat-label-countries').textContent = ui.statCountries;
         var tlPill = document.getElementById('timeline-pill');
         if (tlPill) tlPill.textContent = ui.timelinePill;
         document.documentElement.lang = l === 'es' ? 'es' : 'en';
