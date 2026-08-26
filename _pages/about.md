@@ -85,16 +85,17 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
 .tl-chip:hover{transform:translateY(-2px);color:#fff;border-color:rgba(212,175,55,.55);background:rgba(255,255,255,.12)}
 .tl-chip.is-active{background:linear-gradient(135deg,var(--gold-accent),#f0d478);color:#0b1c16;border-color:transparent;box-shadow:0 10px 26px rgba(212,175,55,.28)}
 .tl-stage{position:relative;z-index:2;margin-top:clamp(1.5rem,3.2vw,2.5rem)}
-.tl-stage::before,.tl-stage::after{content:'';position:absolute;top:0;bottom:0;width:clamp(28px,5vw,80px);z-index:4;pointer-events:none}
-.tl-stage::before{left:0;background:linear-gradient(90deg,#0b1c16,rgba(11,28,22,0))}
-.tl-stage::after{right:0;background:linear-gradient(270deg,#0b1c16,rgba(11,28,22,0))}
 .tl-viewport{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab;overscroll-behavior-x:contain}
 .tl-viewport::-webkit-scrollbar{display:none}
 .tl-viewport.is-dragging{cursor:grabbing}
 .tl-track{position:relative;display:flex;align-items:stretch;width:max-content;min-height:470px;padding:0 clamp(1rem,4vw,3rem)}
-.tl-track::before{content:'';position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:linear-gradient(90deg,rgba(74,140,115,.08),rgba(74,140,115,.6) 7%,rgba(212,175,55,.8) 50%,rgba(74,140,115,.6) 93%,rgba(74,140,115,.08));z-index:0}
-.tl-year{position:relative;flex:0 0 auto;width:clamp(98px,10vw,138px);display:flex;align-items:center;justify-content:center;z-index:3}
-.tl-year span{font-family:var(--font-mono);font-weight:700;font-size:clamp(.92rem,1.9vw,1.12rem);letter-spacing:.13em;color:#0b1c16;background:linear-gradient(135deg,var(--gold-accent),#f0d478);padding:.45rem .95rem;border-radius:999px;box-shadow:0 12px 28px rgba(0,0,0,.4),0 0 0 7px rgba(11,28,22,.92)}
+.tl-track::before{content:'';position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:linear-gradient(90deg,rgba(122,190,158,.85),rgba(212,175,55,.95) 50%,rgba(122,190,158,.85));box-shadow:0 0 14px rgba(212,175,55,.35);border-radius:2px;z-index:0}
+.tl-group{display:contents}
+.tl-year{position:relative;flex:0 0 auto;width:clamp(104px,10vw,146px);display:flex;align-items:center;justify-content:center;z-index:3;border:none;background:none;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer;-webkit-appearance:none;appearance:none}
+.tl-year-pill{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-mono);font-weight:700;font-size:clamp(.92rem,1.9vw,1.12rem);letter-spacing:.13em;color:#0b1c16;background:linear-gradient(135deg,var(--gold-accent),#f0d478);padding:.4rem .8rem;border-radius:999px;box-shadow:0 12px 28px rgba(0,0,0,.4),0 0 0 4px rgba(11,28,22,.55);transition:transform .25s var(--transition-smooth),box-shadow .25s var(--transition-smooth)}
+.tl-year:hover .tl-year-pill{transform:translateY(-2px);box-shadow:0 16px 34px rgba(0,0,0,.45),0 0 0 4px rgba(11,28,22,.55)}
+.tl-leaf{width:15px;height:18px;flex:0 0 auto;color:#173d2f;display:block}
+.tl-year-count,.tl-year-chev{display:none}
 .tl-item{position:relative;flex:0 0 clamp(232px,24vw,292px);z-index:1}
 .tl-track.tl-anim .tl-item{opacity:0;transform:translateY(14px);transition:opacity .55s var(--transition-smooth),transform .55s var(--transition-smooth)}
 .tl-track.tl-anim .tl-item.is-in{opacity:1;transform:translateY(0)}
@@ -117,7 +118,7 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
 .tl-kind[data-kind="inst"]{color:#b9cfe6}
 .tl-kind[data-kind="media"]{color:#e8c766}
 .tl-kind[data-kind="award"]{color:#f0a878}
-.tl-kind[data-kind="culture"]{color:#e6a3c0}
+.tl-kind[data-kind="research"]{color:#c3b0e8}
 .tl-soon{font-family:var(--font-mono);font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0b1c16;background:var(--gold-accent);padding:.14rem .5rem;border-radius:999px}
 .tl-text{font-size:.94rem;line-height:1.55;color:rgba(255,255,255,.93);font-weight:500}
 .tl-controls{display:flex;align-items:center;gap:1rem;margin-top:1.5rem}
@@ -127,18 +128,28 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
 .tl-progress{flex:1;height:3px;border-radius:999px;background:rgba(232,245,240,.14);overflow:hidden}
 .tl-progress-bar{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--light-green),var(--gold-accent));transition:width .16s linear}
 .tl-hint{margin-top:1rem;text-align:center;font-family:var(--font-mono);font-size:.74rem;letter-spacing:.05em;color:rgba(232,245,240,.5);line-height:1.6}
+.tl-hint-m{display:none}
 @media(max-width:860px){
-  .tl-stage::before,.tl-stage::after{display:none}
   .tl-viewport{overflow-x:hidden;overflow-y:visible;cursor:auto;padding:0 clamp(1rem,4vw,2rem)}
-  .tl-track{flex-direction:column;width:100%;min-height:0;padding:0 0 0 30px}
-  .tl-track::before{left:7px;right:auto;top:0;bottom:0;width:2px;height:auto;margin:0;background:linear-gradient(180deg,rgba(74,140,115,.15),rgba(212,175,55,.75),rgba(74,140,115,.15))}
-  .tl-year{width:auto;justify-content:flex-start;margin:1.35rem 0 .55rem -30px}
-  .tl-year span{box-shadow:0 10px 22px rgba(0,0,0,.4)}
-  .tl-item{flex:0 0 auto;width:100%;padding:.3rem 0}
+  .tl-track{flex-direction:column;width:100%;min-height:0;padding:0}
+  .tl-track::before{left:7px;right:auto;top:0;bottom:0;width:2px;height:auto;margin:0;background:linear-gradient(180deg,rgba(122,190,158,.9),rgba(212,175,55,.95),rgba(122,190,158,.9))}
+  .tl-year{width:100%;justify-content:flex-start;margin:.55rem 0 .2rem;padding:.35rem 0;cursor:pointer}
+  .tl-year-pill{width:100%;justify-content:flex-start;gap:.55rem;padding:.55rem .9rem;box-shadow:0 10px 22px rgba(0,0,0,.4),0 0 0 4px rgba(11,28,22,.55)}
+  .tl-year-num{flex:0 0 auto}
+  .tl-year-count{display:inline-flex;align-items:center;justify-content:center;min-width:1.5rem;height:1.5rem;padding:0 .4rem;border-radius:999px;background:rgba(11,28,22,.82);color:#f0d478;font-size:.68rem;letter-spacing:.04em}
+  .tl-year-chev{display:inline-flex;margin-left:auto;font-size:.9rem;line-height:1;transition:transform .3s var(--transition-smooth)}
+  .tl-year-chev::before{content:'\25BE'}
+  .tl-year[aria-expanded="true"] .tl-year-chev{transform:rotate(180deg)}
+  .tl-group{display:block;overflow:hidden;max-height:0;opacity:0;transition:max-height .45s var(--transition-smooth),opacity .3s ease}
+  .tl-group.is-open{max-height:5000px;opacity:1}
+  .tl-item{flex:0 0 auto;width:100%;padding:.3rem 0 .3rem 30px}
+  .tl-track.tl-anim .tl-item{opacity:1;transform:none}
   .tl-up .tl-card,.tl-down .tl-card{position:relative;top:auto;bottom:auto;left:0;right:0}
   .tl-stem{display:none}
-  .tl-dot{left:-23px;top:1.75rem;margin:0}
+  .tl-dot{left:7px;top:1.85rem;margin:0}
   .tl-controls{display:none}
+  .tl-hint{display:none}
+  .tl-hint-m{display:block}
 }
 /* ===== TEAM BAR ===== */
 .hero-team-bar{position:relative;z-index:1;padding:clamp(.9rem,1.7vw,1.2rem) clamp(1rem,4vw,3rem);background:rgba(9,24,19,.94);backdrop-filter:blur(12px);border-top:1px solid rgba(74,140,115,.22);border-bottom:1px solid rgba(74,140,115,.12)}
@@ -336,7 +347,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     <div class="tl-head reveal">
       <div class="tl-eyebrow" id="tl-eyebrow">Our journey &middot; 2023 &ndash; 2027</div>
       <h2 class="tl-title" id="tl-title">Our journey, milestone by milestone</h2>
-      <p class="tl-sub" id="tl-sub">From the first experimental site in Guadalajara to platforms now running inside national search commissions &mdash; the milestones that brought FOUND here, and what comes next.</p>
+      <p class="tl-sub" id="tl-sub">From the first experimental site in Jalisco to platforms now running inside the national search commissions of Mexico and Colombia.</p>
       <div class="tl-filters" id="tl-filters" role="group" aria-label="Jump to year">
         <button type="button" class="tl-chip is-active" data-year="2023">2023</button>
         <button type="button" class="tl-chip" data-year="2024">2024</button>
@@ -357,7 +368,8 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
       <div class="tl-progress" aria-hidden="true"><span class="tl-progress-bar" id="tl-bar"></span></div>
       <button type="button" class="tl-nav" id="tl-next" aria-label="Next milestones">&#x2192;</button>
     </div>
-    <p class="tl-hint" id="tl-hint">Drag, scroll or use the arrows to travel through the timeline &middot; Tap a year to jump</p>
+    <p class="tl-hint" id="tl-hint">Drag, scroll or use the arrows to travel through the timeline &middot; Click a year to jump</p>
+    <p class="tl-hint tl-hint-m" id="tl-hint-m">Tap a year to open its milestones</p>
   </div>
 </section>
 <!-- TEAM BAR -->
@@ -590,8 +602,8 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 {% raw %}
 (function(){
   var translations={
-    en:{'copro-eyebrow':'Coproduction with search groups','copro-lead':'The knowledge was already there.','copro-body':'For years, searching mothers have walked hills, ranches, abandoned houses and countless roads across Mexico. They learned to read the earth with a precision no book or scientist taught them: that disturbed soil looks different, that certain flowers bloom where or when they shouldn\'t, that vegetation changes colour where the ground holds extra nutrients as a result of the presence of buried bodies. This is, in effect, forensic knowledge; a practice of citizen science. FOUND begins by listening, learning, and building the place where this knowledge can sit at the same table as science, context analysis, and the institutions responsible for the search.','copro-quote-text':'When families speak, they speak in the present tense. "He is a son." "She is a student." The verb stays in present tense. There is an ethic in that grammar — and we have learned it from them, and made it our own.','copro-quote-attr':'A principle FOUND adopted from searching families <span class="copro-quote-sub" id="copro-quote-sub">"There is always something" — in the words of the mothers, nature is a witness of what happens.</span>','copro-ex-label':'Coproduction in practice · Tlajomulco','copro-ex-title':'An example of how families codesigned an experimental site','copro-ex-text':'Our experimental sites were not built from institutional data or scientific evidence alone. Families described that when large amounts of soil are moved to install <strong>electrical-tower bases</strong>, clandestine graves can appear in that disturbed ground. So we built a site beside electrical towers to replicate exactly that condition — and to test how each instrument behaves where the problem actually occurs. The methods adapt to each place; the principle of coproduction with families does not.','fwos-title':'Four ways of seeing the territory','fwos-sub':'FOUND is the integration of four ways of observing the land. The work is to hold the conversation between them — so that, together, they lead to better-equipped and better-informed search.','fwos-caption':'None of these pieces is enough on its own. FOUND builds the place where they converse — and decide, together, where to search.','fwos-n1-k':'01 · FAMILIES\' KNOWLEDGE','fwos-n1-t':'Reading the landscape','fwos-n1-s':'Signs in nature · care · memory','fwos-n2-k':'02 · CONTEXT ANALYSIS','fwos-n2-t':'Territorial & criminal patterns','fwos-n2-s':'Why a place becomes clandestine','fwos-n3-k':'03 · REMOTE SENSING & GEOPHYSICS','fwos-n3-t':'Reading from air, space & below','fwos-n3-s':'Spectral · LiDAR · seismic · Machine Learning','fwos-n4-k':'04 · INSTITUTIONAL PRACTICE','fwos-n4-t':'Formal search decisions','fwos-n4-s':'Legal & operational backing','fwos-core1':'Coproduced','fwos-core2':'search','fwos-sub1':'PRACTICES · PLATFORMS','fwos-sub2':'· POLICY','trailer-eyebrow':'Documentary','trailer-title':'Watch the Trailer','trailer-subtitle':'The story of families, science, and the search for those who are missing.','trailer-caption-text':'FOUND Documentary','collab-item-labco':'LABCO','collab-note-labco':'Exploring AI together to locate and identify','collab-item-eaaf':'Argentine Forensic Anthropology Team (EAAF)','collab-note-eaaf':"Luis Fondebrider, FOUND's advisor",'collab-item-ori':'Oxford Robotics Institute','collab-note-ori':'Partnership, technical expertise','collab-item-ipn':'Instituto Politécnico Nacional','collab-note-ipn':'Technical expertise, Technology','project-subtitle':'<span class="title-accent">Interpreting Nature</span> to Locate Those Who We Are Missing','hero-tagline-static':'Using technology to','word-1':'search.','word-2':'remember.','word-3':'dignify.','word-4':'find.','word-5':'bring closure.','hero-main-text':'Over 130,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> works at the intersection of frontier technology and the lived knowledge of search groups, driving systemic change and building institutional capacity to improve how governments respond to disappearance.','hero-cue':'Explore our journey <span class="cue-arrow" aria-hidden="true">&#x2193;</span>','tl-eyebrow':'Our journey · 2023 – 2027','tl-title':'Our journey, milestone by milestone','tl-sub':'From the first experimental site in Guadalajara to platforms now running inside national search commissions — the milestones that brought FOUND here, and what comes next.','tl-hint':'Drag, scroll or use the arrows to travel through the timeline · Tap a year to jump','hero-team-text':"Our core team brings together <strong>collectives of families from Jalisco, Zacatecas, and Colombia searching for their missing loved ones</strong>, alongside CentroGeo, the University of Oxford, Jalisco's Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico's National Search Commission, LAB-CO, and forensic anthropologist Luis Fondebrider.",'collab-title':'Institutional Partnerships','tech-title':'Technologies in Action','tech-item-1':'Multispectral & Hyperspectral Imaging','tech-item-2':'Airborne LiDAR','tech-item-3':'Seismic Noise Interferometry (TIRSA)','tech-item-4':'Electrical Resistivity Tomography, Conductivimetry','tech-item-5':'Satellite Spectral Analysis','tech-item-ml':'Machine Learning','tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science','buscadoras-title':'The Role of Buscadoras','buscadoras-text':"Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.",'social-title':'Follow Our Journey','social-subtitle':'Stay connected with our latest findings, community stories, and collaborations','footer-text':'FOUND: Interpreting Nature to Locate Those Who We Are Missing.','stat-label-1':'Technologies deployed','stat-label-2':'Institutional partners','stat-label-3':'Countries'},
-    es:{'copro-eyebrow':'Coproducción con colectivos de búsqueda','copro-lead':'El conocimiento ya estaba ahí.','copro-body':'Durante años, las madres buscadoras han recorrido cerros, ranchos, casas abandonadas e innumerables caminos y veredas por todo México. Aprendieron a leer la naturaleza con una precisión que ningún libro ni científico les enseñó: que un suelo removido se ve distinto, que ciertas flores brotan donde o cuando no deberían, que la vegetación cambia de color donde el suelo guarda nutrientes adicionales por la presencia de cuerpos enterrados. Esto es, en efecto, un saber forense; una práctica de ciencia ciudadana. FOUND comienza por escuchar, aprender y construir el lugar donde ese conocimiento puede sentarse a la misma mesa que la ciencia, el análisis de contexto y las instituciones responsables de la búsqueda.','copro-quote-text':'Las familias hablan en presente. «Es hijo.» «Es estudiante.» El verbo se mantiene en presente. Hay una ética en esa gramática — y la hemos aprendido de ellas, y la hemos hecho nuestra.','copro-quote-attr':'Un principio que FOUND adoptó de las familias buscadoras <span class="copro-quote-sub" id="copro-quote-sub">«Siempre hay algo» — en palabras de las madres, la naturaleza es testiga de lo que ocurre.</span>','copro-ex-label':'Coproducción en la práctica · Tlajomulco','copro-ex-title':'Un ejemplo de cómo las familias codiseñaron un sitio de experimentación','copro-ex-text':'Nuestros sitios de experimentación no se construyeron únicamente a partir de datos institucionales o evidencia científica. Las familias describieron que, cuando se mueven grandes cantidades de tierra para instalar las bases de <strong>torres eléctricas</strong>, pueden aparecer fosas clandestinas en ese suelo removido. Por eso construimos un sitio junto a torres eléctricas para replicar exactamente esa condición — y probar cómo se comporta cada instrumento ahí donde el problema realmente ocurre. Los métodos se adaptan a cada lugar; el principio de coproducción con las familias, no.','fwos-title':'Cuatro maneras de observar el entorno','fwos-sub':'FOUND es la integración de cuatro maneras de observar el entorno y la naturaleza. El trabajo es sostener la conversación entre ellas — para que, juntas, conduzcan a una búsqueda mejor equipada y mejor informada.','fwos-caption':'Ninguna de estas piezas basta por sí sola. FOUND construye el lugar donde conversan — y deciden, juntas, dónde buscar.','fwos-n1-k':'01 · CONOCIMIENTO DE LAS FAMILIAS','fwos-n1-t':'Leer el paisaje','fwos-n1-s':'Señales en la naturaleza · cuidado · memoria','fwos-n2-k':'02 · ANÁLISIS DE CONTEXTO','fwos-n2-t':'Patrones territoriales y criminales','fwos-n2-s':'Por qué un lugar se vuelve clandestino','fwos-n3-k':'03 · PERCEPCIÓN REMOTA Y GEOFÍSICA','fwos-n3-t':'Leer desde el aire, el espacio y el subsuelo','fwos-n3-s':'Espectral · LiDAR · sísmico · Machine Learning','fwos-n4-k':'04 · PRÁCTICA INSTITUCIONAL','fwos-n4-t':'Decisiones formales de búsqueda','fwos-n4-s':'Respaldo legal y operativo','fwos-core1':'Búsqueda','fwos-core2':'coproducida','fwos-sub1':'PRÁCTICAS · PLATAFORMAS','fwos-sub2':'· POLÍTICAS','trailer-eyebrow':'Documental','trailer-title':'Mira el tráiler','trailer-subtitle':'La historia de las familias, la ciencia y la búsqueda de quienes nos faltan.','trailer-caption-text':'Documental FOUND','collab-item-labco':'LABCO','collab-note-labco':'Explorando juntos el uso de IA para localizar e identificar','collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)','collab-note-eaaf':'Luis Fondebrider, asesor de FOUND','collab-item-ori':'Oxford Robotics Institute','collab-note-ori':'Alianza, experiencia técnica','collab-item-ipn':'Instituto Politécnico Nacional','collab-note-ipn':'Experiencia técnica, desarrollo tecnológico','project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes Nos Faltan','hero-tagline-static':'Usando tecnología para','word-1':'buscar.','word-2':'recordar.','word-3':'dignificar.','word-4':'encontrar.','word-5':'dar cierre.','hero-main-text':'Más de 130,000 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> trabaja en la intersección entre la tecnología de frontera y el conocimiento vivido de los colectivos de búsqueda, impulsando cambios sistémicos y fortaleciendo las capacidades institucionales para mejorar la respuesta de los gobiernos ante la desaparición.','hero-cue':'Recorre nuestro camino <span class="cue-arrow" aria-hidden="true">&#x2193;</span>','tl-eyebrow':'Nuestro camino · 2023 – 2027','tl-title':'Nuestro camino, hito a hito','tl-sub':'Del primer sitio experimental en Guadalajara a plataformas que hoy operan dentro de comisiones nacionales de búsqueda: los hitos que trajeron a FOUND hasta aquí, y lo que viene.','tl-hint':'Arrastra, desplázate o usa las flechas para recorrer la línea del tiempo · Toca un año para saltar','hero-team-text':'Nuestro equipo central reúne <strong>colectivos de familias de Jalisco, Zacatecas y Colombia que buscan a sus seres queridos desaparecidos</strong>, junto a CentroGeo, la Universidad de Oxford, la Comisión de Búsqueda de Jalisco, la Universidad Nacional Autónoma de México (UNAM) y la Universidad de Guadalajara. Trabajamos junto a socios estratégicos, entre ellos la Oficina para Asuntos Exteriores, de la Commonwealth y de Desarrollo del Reino Unido (FCDO), la Oficina Ejecutiva del Secretario General de la ONU, la Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD) de Colombia, la Comisión Nacional de Búsqueda de México, LAB-Co y el antropólogo forense Luis Fondebrider.','collab-title':'Alianzas institucionales','tech-title':'Tecnologías en acción','tech-item-1':'Imágenes multiespectrales e hiperespectrales','tech-item-2':'LiDAR aerotransportado','tech-item-3':'Interferometría de ruido sísmico (TIRSA)','tech-item-4':'Tomografía de resistividad eléctrica y mediciones de conductividad','tech-item-5':'Análisis espectral satelital','tech-item-ml':'Machine Learning','tech-item-6':'Entomología forense, botánica, análisis territorial y ciencia del suelo','buscadoras-title':'El papel de las buscadoras','buscadoras-text':'Los colectivos liderados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.','social-title':'Sigue nuestro camino','social-subtitle':'Mantente al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.','footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes Nos Faltan.','stat-label-1':'Tecnologías desplegadas','stat-label-2':'Socios institucionales','stat-label-3':'Países'}
+    en:{'copro-eyebrow':'Coproduction with search groups','copro-lead':'The knowledge was already there.','copro-body':'For years, searching mothers have walked hills, ranches, abandoned houses and countless roads across Mexico. They learned to read the earth with a precision no book or scientist taught them: that disturbed soil looks different, that certain flowers bloom where or when they shouldn\'t, that vegetation changes colour where the ground holds extra nutrients as a result of the presence of buried bodies. This is, in effect, forensic knowledge; a practice of citizen science. FOUND begins by listening, learning, and building the place where this knowledge can sit at the same table as science, context analysis, and the institutions responsible for the search.','copro-quote-text':'When families speak, they speak in the present tense. "He is a son." "She is a student." The verb stays in present tense. There is an ethic in that grammar — and we have learned it from them, and made it our own.','copro-quote-attr':'A principle FOUND adopted from searching families <span class="copro-quote-sub" id="copro-quote-sub">"There is always something" — in the words of the mothers, nature is a witness of what happens.</span>','copro-ex-label':'Coproduction in practice · Tlajomulco','copro-ex-title':'An example of how families codesigned an experimental site','copro-ex-text':'Our experimental sites were not built from institutional data or scientific evidence alone. Families described that when large amounts of soil are moved to install <strong>electrical-tower bases</strong>, clandestine graves can appear in that disturbed ground. So we built a site beside electrical towers to replicate exactly that condition — and to test how each instrument behaves where the problem actually occurs. The methods adapt to each place; the principle of coproduction with families does not.','fwos-title':'Four ways of seeing the territory','fwos-sub':'FOUND is the integration of four ways of observing the land. The work is to hold the conversation between them — so that, together, they lead to better-equipped and better-informed search.','fwos-caption':'None of these pieces is enough on its own. FOUND builds the place where they converse — and decide, together, where to search.','fwos-n1-k':'01 · FAMILIES\' KNOWLEDGE','fwos-n1-t':'Reading the landscape','fwos-n1-s':'Signs in nature · care · memory','fwos-n2-k':'02 · CONTEXT ANALYSIS','fwos-n2-t':'Territorial & criminal patterns','fwos-n2-s':'Why a place becomes clandestine','fwos-n3-k':'03 · REMOTE SENSING & GEOPHYSICS','fwos-n3-t':'Reading from air, space & below','fwos-n3-s':'Spectral · LiDAR · seismic · Machine Learning','fwos-n4-k':'04 · INSTITUTIONAL PRACTICE','fwos-n4-t':'Formal search decisions','fwos-n4-s':'Legal & operational backing','fwos-core1':'Coproduced','fwos-core2':'search','fwos-sub1':'PRACTICES · PLATFORMS','fwos-sub2':'· POLICY','trailer-eyebrow':'Documentary','trailer-title':'Watch the Trailer','trailer-subtitle':'The story of families, science, and the search for those who are missing.','trailer-caption-text':'FOUND Documentary','collab-item-labco':'LABCO','collab-note-labco':'Exploring AI together to locate and identify','collab-item-eaaf':'Argentine Forensic Anthropology Team (EAAF)','collab-note-eaaf':"Luis Fondebrider, FOUND's advisor",'collab-item-ori':'Oxford Robotics Institute','collab-note-ori':'Partnership, technical expertise','collab-item-ipn':'Instituto Politécnico Nacional','collab-note-ipn':'Technical expertise, Technology','project-subtitle':'<span class="title-accent">Interpreting Nature</span> to Locate Those Who We Are Missing','hero-tagline-static':'Using technology to','word-1':'search.','word-2':'remember.','word-3':'dignify.','word-4':'find.','word-5':'bring closure.','hero-main-text':'Over 130,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> works at the intersection of frontier technology and the lived knowledge of search groups, driving systemic change and building institutional capacity to improve how governments respond to disappearance.','hero-cue':'Explore our journey <span class="cue-arrow" aria-hidden="true">&#x2193;</span>','tl-eyebrow':'Our journey · 2023 – 2027','tl-title':'Our journey, milestone by milestone','tl-sub':'From the first experimental site in Jalisco to platforms now running inside the national search commissions of Mexico and Colombia.','tl-hint':'Drag, scroll or use the arrows to travel through the timeline · Click a year to jump','tl-hint-m':'Tap a year to open its milestones','hero-team-text':"Our core team brings together <strong>collectives of families from Jalisco, Zacatecas, and Colombia searching for their missing loved ones</strong>, alongside CentroGeo, the University of Oxford, Jalisco's Search Commission, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara. We work alongside strategic partners including the UK Foreign, Commonwealth and Development Office (FCDO), the Executive Office of the UN Secretary-General, the Colombian Search Unit (UBPD), Mexico's National Search Commission, LAB-CO, and forensic anthropologist Luis Fondebrider.",'collab-title':'Institutional Partnerships','tech-title':'Technologies in Action','tech-item-1':'Multispectral & Hyperspectral Imaging','tech-item-2':'Airborne LiDAR','tech-item-3':'Seismic Noise Interferometry (TIRSA)','tech-item-4':'Electrical Resistivity Tomography, Conductivimetry','tech-item-5':'Satellite Spectral Analysis','tech-item-ml':'Machine Learning','tech-item-6':'Forensic Entomology, Botany, Territorial Analysis, Soil Science','buscadoras-title':'The Role of Buscadoras','buscadoras-text':"Women-led collectives are at the heart of FOUND's work. They have reshaped the national conversation on disappearance and justice. Their search practices, born from lived experience, are vital forensic knowledge. Alongside them, FOUND listens, learns, and incorporates their methods into our technological efforts.",'social-title':'Follow Our Journey','social-subtitle':'Stay connected with our latest findings, community stories, and collaborations','footer-text':'FOUND: Interpreting Nature to Locate Those Who We Are Missing.','stat-label-1':'Technologies deployed','stat-label-2':'Institutional partners','stat-label-3':'Countries'},
+    es:{'copro-eyebrow':'Coproducción con colectivos de búsqueda','copro-lead':'El conocimiento ya estaba ahí.','copro-body':'Durante años, las madres buscadoras han recorrido cerros, ranchos, casas abandonadas e innumerables caminos y veredas por todo México. Aprendieron a leer la naturaleza con una precisión que ningún libro ni científico les enseñó: que un suelo removido se ve distinto, que ciertas flores brotan donde o cuando no deberían, que la vegetación cambia de color donde el suelo guarda nutrientes adicionales por la presencia de cuerpos enterrados. Esto es, en efecto, un saber forense; una práctica de ciencia ciudadana. FOUND comienza por escuchar, aprender y construir el lugar donde ese conocimiento puede sentarse a la misma mesa que la ciencia, el análisis de contexto y las instituciones responsables de la búsqueda.','copro-quote-text':'Las familias hablan en presente. «Es hijo.» «Es estudiante.» El verbo se mantiene en presente. Hay una ética en esa gramática — y la hemos aprendido de ellas, y la hemos hecho nuestra.','copro-quote-attr':'Un principio que FOUND adoptó de las familias buscadoras <span class="copro-quote-sub" id="copro-quote-sub">«Siempre hay algo» — en palabras de las madres, la naturaleza es testiga de lo que ocurre.</span>','copro-ex-label':'Coproducción en la práctica · Tlajomulco','copro-ex-title':'Un ejemplo de cómo las familias codiseñaron un sitio de experimentación','copro-ex-text':'Nuestros sitios de experimentación no se construyeron únicamente a partir de datos institucionales o evidencia científica. Las familias describieron que, cuando se mueven grandes cantidades de tierra para instalar las bases de <strong>torres eléctricas</strong>, pueden aparecer fosas clandestinas en ese suelo removido. Por eso construimos un sitio junto a torres eléctricas para replicar exactamente esa condición — y probar cómo se comporta cada instrumento ahí donde el problema realmente ocurre. Los métodos se adaptan a cada lugar; el principio de coproducción con las familias, no.','fwos-title':'Cuatro maneras de observar el entorno','fwos-sub':'FOUND es la integración de cuatro maneras de observar el entorno y la naturaleza. El trabajo es sostener la conversación entre ellas — para que, juntas, conduzcan a una búsqueda mejor equipada y mejor informada.','fwos-caption':'Ninguna de estas piezas basta por sí sola. FOUND construye el lugar donde conversan — y deciden, juntas, dónde buscar.','fwos-n1-k':'01 · CONOCIMIENTO DE LAS FAMILIAS','fwos-n1-t':'Leer el paisaje','fwos-n1-s':'Señales en la naturaleza · cuidado · memoria','fwos-n2-k':'02 · ANÁLISIS DE CONTEXTO','fwos-n2-t':'Patrones territoriales y criminales','fwos-n2-s':'Por qué un lugar se vuelve clandestino','fwos-n3-k':'03 · PERCEPCIÓN REMOTA Y GEOFÍSICA','fwos-n3-t':'Leer desde el aire, el espacio y el subsuelo','fwos-n3-s':'Espectral · LiDAR · sísmico · Machine Learning','fwos-n4-k':'04 · PRÁCTICA INSTITUCIONAL','fwos-n4-t':'Decisiones formales de búsqueda','fwos-n4-s':'Respaldo legal y operativo','fwos-core1':'Búsqueda','fwos-core2':'coproducida','fwos-sub1':'PRÁCTICAS · PLATAFORMAS','fwos-sub2':'· POLÍTICAS','trailer-eyebrow':'Documental','trailer-title':'Mira el tráiler','trailer-subtitle':'La historia de las familias, la ciencia y la búsqueda de quienes nos faltan.','trailer-caption-text':'Documental FOUND','collab-item-labco':'LABCO','collab-note-labco':'Explorando juntos el uso de IA para localizar e identificar','collab-item-eaaf':'Equipo Argentino de Antropología Forense (EAAF)','collab-note-eaaf':'Luis Fondebrider, asesor de FOUND','collab-item-ori':'Oxford Robotics Institute','collab-note-ori':'Alianza, experiencia técnica','collab-item-ipn':'Instituto Politécnico Nacional','collab-note-ipn':'Experiencia técnica, desarrollo tecnológico','project-subtitle':'<span class="title-accent">Interpretar la Naturaleza</span> para Encontrar a Quienes Nos Faltan','hero-tagline-static':'Usando tecnología para','word-1':'buscar.','word-2':'recordar.','word-3':'dignificar.','word-4':'encontrar.','word-5':'dar cierre.','hero-main-text':'Más de 130,000 personas están registradas como desaparecidas en México. Detrás de cada caso hay una familia que busca respuestas. <strong>FOUND</strong> trabaja en la intersección entre la tecnología de frontera y el conocimiento vivido de los colectivos de búsqueda, impulsando cambios sistémicos y fortaleciendo las capacidades institucionales para mejorar la respuesta de los gobiernos ante la desaparición.','hero-cue':'Recorre nuestro camino <span class="cue-arrow" aria-hidden="true">&#x2193;</span>','tl-eyebrow':'Nuestro camino · 2023 – 2027','tl-title':'Nuestro camino, hito a hito','tl-sub':'Del primer sitio experimental en Jalisco a plataformas que hoy operan dentro de las comisiones nacionales de México y Colombia.','tl-hint':'Arrastra, desplázate o usa las flechas para recorrer la línea del tiempo · Haz clic en un año para saltar','tl-hint-m':'Toca un año para ver sus hitos','hero-team-text':'Nuestro equipo central reúne <strong>colectivos de familias de Jalisco, Zacatecas y Colombia que buscan a sus seres queridos desaparecidos</strong>, junto a CentroGeo, la Universidad de Oxford, la Comisión de Búsqueda de Jalisco, la Universidad Nacional Autónoma de México (UNAM) y la Universidad de Guadalajara. Trabajamos junto a socios estratégicos, entre ellos la Oficina para Asuntos Exteriores, de la Commonwealth y de Desarrollo del Reino Unido (FCDO), la Oficina Ejecutiva del Secretario General de la ONU, la Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD) de Colombia, la Comisión Nacional de Búsqueda de México, LAB-Co y el antropólogo forense Luis Fondebrider.','collab-title':'Alianzas institucionales','tech-title':'Tecnologías en acción','tech-item-1':'Imágenes multiespectrales e hiperespectrales','tech-item-2':'LiDAR aerotransportado','tech-item-3':'Interferometría de ruido sísmico (TIRSA)','tech-item-4':'Tomografía de resistividad eléctrica y mediciones de conductividad','tech-item-5':'Análisis espectral satelital','tech-item-ml':'Machine Learning','tech-item-6':'Entomología forense, botánica, análisis territorial y ciencia del suelo','buscadoras-title':'El papel de las buscadoras','buscadoras-text':'Los colectivos liderados por mujeres están en el corazón del trabajo de FOUND. Han transformado la conversación nacional sobre desaparición y justicia. Sus prácticas de búsqueda, nacidas de la experiencia vivida, constituyen un saber forense fundamental. FOUND escucha, aprende e incorpora sus métodos en nuestros esfuerzos tecnológicos.','social-title':'Sigue nuestro camino','social-subtitle':'Mantente al tanto de nuestros hallazgos, las historias de las comunidades y nuestras colaboraciones.','footer-text':'FOUND: Interpretar la Naturaleza para Encontrar a Quienes Nos Faltan.','stat-label-1':'Tecnologías desplegadas','stat-label-2':'Socios institucionales','stat-label-3':'Países'}
   };
   /* ---------- TIMELINE DATA ---------- */
   var TL_KIND={
@@ -600,26 +612,31 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     inst:['Institutional','Institucional'],
     media:['Media','Medios'],
     award:['Recognition','Reconocimiento'],
-    culture:['Culture','Cultura']
+    research:['Research','Investigación']
   };
   var TL_SOON={en:'Upcoming',es:'Próximamente'};
   var TL=[
     {y:'2023',m:['MAY','MAY'],k:'field',t:['First experimental site, University of Guadalajara','Primer sitio experimental, Universidad de Guadalajara']},
+    {y:'2023',m:['AUG','AGO'],k:'field',t:['First studies in forensic entomology, botany, territorial analysis and soil science','Primeros estudios de entomología forense, botánica, análisis territorial y ciencia del suelo']},
     {y:'2024',m:['JAN','ENE'],k:'media',t:['FOUND in Reuters','FOUND en Reuters']},
+    {y:'2024',m:['FEB','FEB'],k:'field',t:['First LiDAR at the Forensic Experimentation Sites','Primer LiDAR en los Sitios de Experimentación Forense']},
     {y:'2024',m:['MAR','MAR'],k:'inst',t:['Presented at the British Embassy in Uruguay','Presentación en la Embajada Británica en Uruguay']},
     {y:'2024',m:['MAY','MAY'],k:'inst',t:['Hosted by Ciaran Martin, University of Oxford','Sesión organizada por Ciaran Martin, Universidad de Oxford']},
     {y:'2024',m:['AUG','AGO'],k:'inst',t:['Funding secured from the FCDO’s Frontier Tech Hub','Financiamiento obtenido del Frontier Tech Hub de la FCDO']},
-    {y:'2024',m:['NOV','NOV'],k:'media',t:['FOUND in Just Security','FOUND en Just Security']},
+    {y:'2024',m:['NOV','NOV'],k:'research',t:['FOUND in Just Security','FOUND en Just Security']},
     {y:'2024',m:['DEC','DIC'],k:'inst',t:['Keynote at the British Association for Forensic Anthropology','Conferencia magistral en la British Association for Forensic Anthropology']},
-    {y:'2024',m:['DEC','DIC'],k:'culture',t:['Book Volume 1 presented at the FIL, Guadalajara','Volumen 1 del libro presentado en la FIL, Guadalajara']},
-    {y:'2025',m:['JUN','JUN'],k:'culture',t:['‘Disappearance of Worlds’ exhibition, Oxford','Exposición ‘Disappearance of Worlds’, Oxford']},
+    {y:'2024',m:['DEC','DIC'],k:'research',t:['FOUND book, Volume 1, presented at the FIL, Guadalajara','Volumen 1 del libro de FOUND presentado en la FIL, Guadalajara']},
+    {y:'2025',m:['MAR','MAR'],k:'field',t:['First electromagnetic conductivity (FDEM) studies: 27 findings','Primeros estudios de conductividad electromagnética (FDEM): 27 hallazgos']},
+    {y:'2025',m:['MAR','MAR'],k:'field',t:['First seismic noise studies','Primeros estudios de ruido sísmico']},
+    {y:'2025',m:['JUN','JUN'],k:'research',t:['‘Disappearance of Worlds’ exhibition, Oxford — with buscadora Indira Navarro in person','Exposición ‘Disappearance of Worlds’, Oxford — con la buscadora Indira Navarro en persona']},
     {y:'2025',m:['JUL','JUL'],k:'media',t:['FOUND in AP, The Independent, LA Times, VICE and NBC','FOUND en AP, The Independent, LA Times, VICE y NBC']},
-    {y:'2025',m:['SEP','SEP'],k:'inst',t:['Colombia’s Search Unit (UBPD) visits the experimental sites','La Unidad de Búsqueda de Colombia (UBPD) visita los sitios experimentales']},
+    {y:'2025',m:['AUG','AGO'],k:'field',t:['First hyperspectral flight for search purposes','Primer vuelo hiperespectral con fines de búsqueda']},
+    {y:'2025',m:['SEP','SEP'],k:'inst',t:['Colombia Search Unit (UBPD) visits the experimental sites','La Unidad de Búsqueda de Colombia (UBPD) visita los sitios experimentales']},
     {y:'2025',m:['NOV','NOV'],k:'media',t:['FOUND in The Guardian','FOUND en The Guardian']},
-    {y:'2025',m:['DEC','DIC'],k:'award',t:['FCDO Sir Nicholas Browne Award to FOUND’s pioneer','Premio Sir Nicholas Browne de la FCDO a la pionera de FOUND']},
-    {y:'2026',m:['FEB','FEB'],k:'tech',t:['Platform integrated with Colombia’s UBPD','Plataforma integrada con la UBPD de Colombia']},
-    {y:'2026',m:['MAR','MAR'],k:'inst',t:['Agreement signed with Mexico’s CNB','Convenio firmado con la CNB de México']},
-    {y:'2026',m:['APR','ABR'],k:'tech',t:['Platform integrated with the CNB','Plataforma integrada con la CNB']},
+    {y:'2025',m:['DEC','DIC'],k:'award',t:['Sir Nicholas Browne Award by the FCDO to FOUND’s pioneer','Premio Sir Nicholas Browne de la FCDO a la pionera de FOUND']},
+    {y:'2026',m:['FEB','FEB'],k:'tech',t:['Platform integrated with the Colombia Search Unit (UBPD)','Plataforma integrada con la Unidad de Búsqueda de Colombia (UBPD)']},
+    {y:'2026',m:['MAR','MAR'],k:'inst',t:['Agreement signed with the Mexico National Search Commission (CNB)','Convenio firmado con la Comisión Nacional de Búsqueda (CNB) de México']},
+    {y:'2026',m:['APR','ABR'],k:'tech',t:['Platform integrated with the Mexico National Search Commission (CNB)','Plataforma integrada con la Comisión Nacional de Búsqueda (CNB)']},
     {y:'2026',m:['JUN','JUN'],k:'inst',t:['Public event with identIA, University of Oxford','Evento público con identIA, Universidad de Oxford']},
     {y:'2026',m:['JUN','JUN'],k:'field',t:['Zacatecas: clandestine crematorium located','Zacatecas: crematorio clandestino localizado']},
     {y:'2026',m:['JUL','JUL'],k:'inst',t:['Luis Fondebrider joins as Forensic Advisor','Luis Fondebrider se suma como Asesor Forense']},
@@ -628,9 +645,18 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     {y:'2026',m:['JUL','JUL'],k:'field',t:['Jalisco: recovery of persons located through machine learning','Jalisco: recuperación de personas localizadas mediante machine learning']},
     {y:'2026',m:['AUG','AGO'],k:'award',t:['Invited to the Routledge Handbook on Forensic Anthropology and Human Rights','Invitación al Routledge Handbook on Forensic Anthropology and Human Rights']},
     {y:'2026',m:['OCT','OCT'],k:'inst',s:1,t:['State trainings in Colima, Zacatecas and Sonora','Capacitaciones estatales en Colima, Zacatecas y Sonora']},
-    {y:'2026',m:['DEC','DIC'],k:'culture',s:1,t:['Book Volumes 2 & 3 presented at the FIL','Volúmenes 2 y 3 del libro presentados en la FIL']},
-    {y:'2027',m:['FEB','FEB'],k:'culture',s:1,t:['Worldwide premiere of ‘The Pattern Hunters’, by Storyteller Films for CNA','Estreno mundial de ‘The Pattern Hunters’, de Storyteller Films para CNA']}
+    {y:'2026',m:['DEC','DIC'],k:'research',s:1,t:['FOUND book, Volumes 2 & 3, presented at the FIL','Volúmenes 2 y 3 del libro de FOUND presentados en la FIL']},
+    {y:'2027',m:['FEB','FEB'],k:'research',s:1,t:['Worldwide premiere of ‘The Pattern Hunters’, by Storyteller Films for CNA','Estreno mundial de ‘The Pattern Hunters’, de Storyteller Films para CNA']}
   ];
+  var TL_LEAF='<svg class="tl-leaf" viewBox="0 0 22 26" aria-hidden="true" focusable="false">'
+    +'<g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">'
+    +'<path d="M11 1C3.9 7.4 3.3 17.4 11 25 18.7 17.4 18.1 7.4 11 1Z"/>'
+    +'<path d="M11 3.2V23.4"/>'
+    +'<path d="M11 9.6 6.6 13.4M11 16 7.1 19.4"/>'
+    +'<path d="M11 8.8h3.5V6.2M11 15.4h4.1V12"/>'
+    +'</g><g fill="currentColor">'
+    +'<circle cx="14.5" cy="5" r="1.5"/><circle cx="15.1" cy="10.8" r="1.5"/>'
+    +'</g></svg>';
   var reduceMotion=false;
   try{reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches}catch(e){}
   /* ---------- HERO WORD CAROUSEL ---------- */
@@ -640,19 +666,37 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
   /* ---------- TIMELINE ---------- */
   var tlVp,tlTrack,tlBar,tlPrev,tlNext,tlObs=null,tlLang='en';
   function tlHorizontal(){return !!tlVp&&(tlVp.scrollWidth-tlVp.clientWidth)>8}
+  function tlAccordion(){try{return window.matchMedia&&window.matchMedia('(max-width: 860px)').matches}catch(e){return false}}
   function tlRender(lang){
     tlTrack=document.getElementById('tl-track');tlVp=document.getElementById('tl-viewport');
     if(!tlTrack)return;
     tlLang=lang;
     var i=(lang==='es')?1:0,ratio=0;
     if(tlVp&&tlVp.scrollWidth>tlVp.clientWidth)ratio=tlVp.scrollLeft/(tlVp.scrollWidth-tlVp.clientWidth);
+    var openYears={};
+    Array.prototype.forEach.call(tlTrack.querySelectorAll('.tl-group.is-open'),function(g){openYears[g.getAttribute('data-year')]=true});
     tlTrack.innerHTML='';
-    var lastYear=null,flip=0;
+    var counts={};
+    TL.forEach(function(it){counts[it.y]=(counts[it.y]||0)+1});
+    var lastYear=null,group=null,flip=0;
     TL.forEach(function(it,idx){
       if(it.y!==lastYear){
-        var ym=document.createElement('div');ym.className='tl-year';ym.setAttribute('data-year',it.y);
-        var ys=document.createElement('span');ys.textContent=it.y;ym.appendChild(ys);
-        tlTrack.appendChild(ym);lastYear=it.y;
+        var btn=document.createElement('button');
+        btn.type='button';btn.className='tl-year';btn.setAttribute('data-year',it.y);
+        btn.id='tl-year-'+it.y;
+        var pill=document.createElement('span');pill.className='tl-year-pill';
+        pill.innerHTML=TL_LEAF+'<span class="tl-year-num"></span><span class="tl-year-count"></span><span class="tl-year-chev" aria-hidden="true"></span>';
+        pill.querySelector('.tl-year-num').textContent=it.y;
+        pill.querySelector('.tl-year-count').textContent=counts[it.y];
+        btn.appendChild(pill);
+        tlTrack.appendChild(btn);
+        group=document.createElement('div');
+        group.className='tl-group'+(openYears[it.y]?' is-open':'');
+        group.setAttribute('data-year',it.y);
+        group.id='tl-group-'+it.y;
+        btn.setAttribute('aria-controls',group.id);
+        tlTrack.appendChild(group);
+        lastYear=it.y;
       }
       var art=document.createElement('article');
       art.className='tl-item '+((flip%2===0)?'tl-up':'tl-down');
@@ -670,11 +714,39 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
       var stem=document.createElement('span');stem.className='tl-stem';
       var dot=document.createElement('span');dot.className='tl-dot';
       art.appendChild(card);art.appendChild(stem);art.appendChild(dot);
-      tlTrack.appendChild(art);flip++;
+      group.appendChild(art);flip++;
     });
+    Array.prototype.forEach.call(tlTrack.querySelectorAll('.tl-year'),function(btn){
+      btn.addEventListener('click',function(){
+        if(tlAccordion())tlToggleYear(btn.getAttribute('data-year'));
+        else tlGoToYear(btn.getAttribute('data-year'));
+      });
+    });
+    tlApplyMode();
     tlAnimate();
     if(tlVp&&ratio>0){var max=tlVp.scrollWidth-tlVp.clientWidth;if(max>0)tlVp.scrollLeft=ratio*max}
     tlSync();
+  }
+  function tlApplyMode(){
+    if(!tlTrack)return;
+    var acc=tlAccordion();
+    Array.prototype.forEach.call(tlTrack.querySelectorAll('.tl-year'),function(btn){
+      if(acc){
+        var g=tlTrack.querySelector('.tl-group[data-year="'+btn.getAttribute('data-year')+'"]');
+        btn.setAttribute('aria-expanded',(g&&g.classList.contains('is-open'))?'true':'false');
+      }else{
+        btn.removeAttribute('aria-expanded');
+      }
+    });
+  }
+  function tlToggleYear(year,forceOpen){
+    var g=tlTrack.querySelector('.tl-group[data-year="'+year+'"]');
+    var btn=tlTrack.querySelector('.tl-year[data-year="'+year+'"]');
+    if(!g||!btn)return false;
+    var open=forceOpen===true?true:!g.classList.contains('is-open');
+    g.classList.toggle('is-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    return open;
   }
   function tlAnimate(){
     if(reduceMotion||!('IntersectionObserver' in window)){tlTrack.classList.remove('tl-anim');return}
@@ -691,8 +763,11 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     if(tlNext)tlNext.disabled=max<=0||tlVp.scrollLeft>=max-2;
     var markers=tlTrack.querySelectorAll('.tl-year'),active=null;
     if(tlHorizontal()){
-      var probe=tlVp.scrollLeft+tlVp.clientWidth*0.3;
-      for(var i=0;i<markers.length;i++){if(markers[i].offsetLeft<=probe)active=markers[i].getAttribute('data-year')}
+      if(max>0&&tlVp.scrollLeft>=max-4){active=markers[markers.length-1].getAttribute('data-year')}
+      else{
+        var probe=tlVp.scrollLeft+tlVp.clientWidth*0.3;
+        for(var i=0;i<markers.length;i++){if(markers[i].offsetLeft<=probe)active=markers[i].getAttribute('data-year')}
+      }
     }else{
       var best=Infinity;
       for(var j=0;j<markers.length;j++){var d=Math.abs(markers[j].getBoundingClientRect().top-120);if(d<best){best=d;active=markers[j].getAttribute('data-year')}}
@@ -707,6 +782,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
       var left=Math.max(0,marker.offsetLeft-tlVp.clientWidth*0.14);
       if(tlVp.scrollTo)tlVp.scrollTo({left:left,behavior:reduceMotion?'auto':'smooth'});else tlVp.scrollLeft=left;
     }else{
+      if(tlAccordion())tlToggleYear(year,true);
       marker.scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'center'});
     }
   }
@@ -721,7 +797,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     tlBar=document.getElementById('tl-bar');tlPrev=document.getElementById('tl-prev');tlNext=document.getElementById('tl-next');
     if(!tlVp||!tlTrack)return;
     tlVp.addEventListener('scroll',tlSync,{passive:true});
-    window.addEventListener('resize',tlSync);
+    window.addEventListener('resize',function(){tlApplyMode();tlSync()});
     window.addEventListener('scroll',function(){if(!tlHorizontal())tlSync()},{passive:true});
     if(tlPrev)tlPrev.addEventListener('click',function(){tlNudge(-1)});
     if(tlNext)tlNext.addEventListener('click',function(){tlNudge(1)});
