@@ -346,7 +346,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
   <div class="tl-inner">
     <div class="tl-head reveal">
       <div class="tl-eyebrow" id="tl-eyebrow">Our journey &middot; 2023 &ndash; 2027</div>
-      <h2 class="tl-title" id="tl-title">Our journey, milestone by milestone</h2>
+      <h2 class="tl-title" id="tl-title"></h2>
       <p class="tl-sub" id="tl-sub">From the first experimental site in Jalisco to platforms now running inside the national search commissions of Mexico and Colombia.</p>
       <div class="tl-filters" id="tl-filters" role="group" aria-label="Jump to year">
         <button type="button" class="tl-chip is-active" data-year="2023">2023</button>
