@@ -854,13 +854,13 @@ author_profile: false
       document.querySelectorAll('.lang-btn').forEach(btn =>
         btn.classList.toggle('active', btn.dataset.lang === lang)
       );
-      try { localStorage.setItem('found-lang-media', lang); } catch(e) {}
+      try { localStorage.setItem('found-lang', lang); } catch(e) {}
     }
 
     /* ── init ── */
     document.addEventListener('DOMContentLoaded', function() {
       let saved = null;
-      try { saved = localStorage.getItem('found-lang-media'); } catch(e) {}
+      try { saved = localStorage.getItem('found-lang') || localStorage.getItem('found-lang-media'); } catch(e) {}
       setLanguage((saved === 'es' || saved === 'en') ? saved : 'en');
 
       document.querySelectorAll('.lang-btn').forEach(btn =>

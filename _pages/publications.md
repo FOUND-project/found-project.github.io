@@ -547,7 +547,8 @@ author_profile: false
 
   <script>
     (function(){
-      const STORAGE_KEY = 'found-lang-pubs';
+      const STORAGE_KEY = 'found-lang';
+      const LEGACY_KEY  = 'found-lang-pubs';
 
       const translations = {
         en: {
@@ -643,7 +644,7 @@ author_profile: false
       document.addEventListener('DOMContentLoaded', function(){
         let saved = 'en';
         try{
-          const stored = localStorage.getItem(STORAGE_KEY);
+          const stored = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_KEY);
           if(stored && ['en','es'].includes(stored)) saved = stored;
         }catch(e){}
 

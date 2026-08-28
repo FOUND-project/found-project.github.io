@@ -510,11 +510,11 @@ author_profile: false
         document.querySelectorAll('.lang-btn').forEach(function(btn) { btn.classList.toggle('active', btn.dataset.lang === l); });
         renderGrid();
         if (activeCardId && overlay.classList.contains('active')) openModal(activeCardId);
-        try { localStorage.setItem('found-lang-news', l); } catch(e) {}
+        try { localStorage.setItem('found-lang', l); } catch(e) {}
       }
       document.addEventListener('DOMContentLoaded', function() {
         var saved = null;
-        try { saved = localStorage.getItem('found-lang-news'); } catch(e) {}
+        try { saved = localStorage.getItem('found-lang') || localStorage.getItem('found-lang-news'); } catch(e) {}
         var init = (saved === 'es' || saved === 'en') ? saved : 'en';
         document.querySelectorAll('.lang-btn').forEach(function(btn) { btn.addEventListener('click', function() { setLang(btn.dataset.lang); }); });
         setLang(init);

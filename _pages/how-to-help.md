@@ -618,14 +618,14 @@ author_profile: false
         });
 
         try{
-          localStorage.setItem('found-lang-help', lang);
+          localStorage.setItem('found-lang', lang);
         }catch(e){}
       }
 
       document.addEventListener('DOMContentLoaded', function(){
         let savedLang = null;
         try{
-          savedLang = localStorage.getItem('found-lang-help');
+          savedLang = localStorage.getItem('found-lang') || localStorage.getItem('found-lang-help');
         }catch(e){}
         const initialLang = (savedLang === 'es' || savedLang === 'en') ? savedLang : 'en';
         setLanguage(initialLang);
