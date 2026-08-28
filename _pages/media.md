@@ -77,7 +77,7 @@ author_profile: false
 
     .lang-toggle {
       position: absolute;
-      top: .25rem; right: 0;
+      top: .25rem; right: 1.75rem;
       display: inline-flex;
       gap: .45rem;
       z-index: 10;

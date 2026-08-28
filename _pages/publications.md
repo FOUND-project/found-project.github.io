@@ -87,6 +87,7 @@ author_profile: false
       justify-content: flex-end;
       gap: 0.5rem;
       margin-bottom: 2.5rem;
+      padding-right: 1.75rem;
       position: relative;
     }
 
