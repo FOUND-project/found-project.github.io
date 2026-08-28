@@ -16,6 +16,7 @@ author_profile: false
     justify-content: flex-end;
     gap: 0.5rem;
     margin: 0 0 1.5rem;
+    padding-right: 1.75rem;
   }
 
   .team-lang button {
@@ -154,7 +155,6 @@ author_profile: false
 
   <div class="team-hero">
     <h1 id="team-title">Our Team</h1>
-    <p class="team-tagline" id="team-tagline">FOUND brings together families, scientists, institutions, and practitioners across Mexico, Colombia, and the United Kingdom.</p>
   </div>
 
   <div class="team-notice">
@@ -255,8 +255,6 @@ author_profile: false
 (function () {
   var T = {
     'team-title':        ['Our Team', 'Nuestro equipo'],
-    'team-tagline':      ['FOUND brings together families, scientists, institutions, and practitioners across Mexico, Colombia, and the United Kingdom.',
-                          'FOUND re\u00fane a familias, cient\u00edficos, instituciones y profesionales de M\u00e9xico, Colombia y el Reino Unido.'],
     'team-notice-label': ['Under construction', 'En construcci\u00f3n'],
     'team-notice-text':  ['This section is a work in progress. Names and roles will continue to be updated, and full biographies will be added in due course. For now, you can reach us at miguel.moctezuma[@]pmb.ox.ac.uk',
                           'Esta secci\u00f3n est\u00e1 en desarrollo. Los nombres y los cargos se seguir\u00e1n actualizando, y las biograf\u00edas completas se a\u00f1adir\u00e1n en su momento. Por ahora, puedes escribirnos a miguel.moctezuma[@]pmb.ox.ac.uk'],

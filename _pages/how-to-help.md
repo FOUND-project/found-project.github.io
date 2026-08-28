@@ -450,14 +450,6 @@ author_profile: false
       <button type="button" class="lang-btn" data-lang="es">ES</button>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <h1 id="hero-title">Support These Mothers</h1>
-      <p id="hero-text">
-        You can support these mothers directly — every contribution makes a difference in their search for missing loved ones.
-      </p>
-    </section>
-
     <!-- Image Showcase -->
     <section class="image-showcase">
       <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/mothers%20walking.gif?raw=true"
@@ -561,8 +553,6 @@ author_profile: false
     (function(){
       const translations = {
         en:{
-          'hero-title':'Support These Mothers',
-          'hero-text':'You can support these mothers directly — every contribution makes a difference in their search for missing loved ones.',
           'donate-title':'Donate',
           'facebook-label':'Visit Facebook Page',
           'testimonial-text':'These are the details to donate — your support allows us to continue our searches. Thank you for your empathy — it is through your support that we can carry on looking for our missing loved ones. Until we find them!',
@@ -580,8 +570,6 @@ author_profile: false
           'linkedin-label':'Follow on LinkedIn'
         },
         es:{
-          'hero-title':'Apoya a Estas Madres',
-          'hero-text':'Puedes apoyar directamente a estas madres — cada contribución marca una diferencia en la búsqueda de sus seres queridos desaparecidos.',
           'donate-title':'Donar',
           'facebook-label':'Visitar página de Facebook',
           'testimonial-text':'Estos son los datos para donar — tu apoyo nos permite seguir buscando. Gracias por tu empatía: es gracias a tu apoyo que podemos continuar la búsqueda de nuestros seres queridos. ¡Hasta encontrarles!',

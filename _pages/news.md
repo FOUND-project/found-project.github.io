@@ -71,7 +71,7 @@ author_profile: false
     .page, #main, .initial-content, .page__inner-wrap, .page__content, .archive { max-width: none !important; width: 100% !important; }
     *:focus-visible { outline: 3px solid rgba(74,140,115,.55); outline-offset: 3px; border-radius: var(--radius-sm); }
     .news-shell { max-width: var(--shell-max); margin: 0 auto; padding: 0 var(--shell-pad); position: relative; }
-    .lang-toggle { position: absolute; top: .25rem; right: 0; display: inline-flex; gap: .45rem; z-index: 10; }
+    .lang-toggle { position: absolute; top: .25rem; right: 1.75rem; display: inline-flex; gap: .45rem; z-index: 10; }
     .lang-btn { border: 1px solid rgba(15,23,42,.09); background: rgba(255,255,255,.88); color: var(--green-800); padding: .28rem .75rem; border-radius: var(--radius-pill); font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; cursor: pointer; backdrop-filter: blur(10px); box-shadow: 0 3px 12px rgba(15,23,42,.07); transition: transform .2s var(--ease), background .2s var(--ease), box-shadow .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease); }
     .lang-btn:hover { background:#fff; transform:translateY(-1px); box-shadow:0 7px 20px rgba(15,23,42,.14); }
     .lang-btn.active { background:var(--green-800); color:#fff; border-color:var(--green-800); }
@@ -221,7 +221,6 @@ author_profile: false
           <span class="news-eyebrow-text" id="news-pill">NEWS · IMPACT · MEDIA</span>
         </div>
         <h1 id="news-title">FOUND — News &amp; Updates</h1>
-        <p id="news-subtitle">Latest developments on our work across Mexico, Colombia, and beyond.</p>
       </div>
     </header>
     <section class="news-grid" id="news-grid" aria-label="News articles"></section>
@@ -394,8 +393,8 @@ author_profile: false
         }
       ];
       var UI = {
-        en: { pill: 'NEWS · IMPACT · MEDIA', title: 'FOUND — News &amp; Updates', subtitle: 'Latest developments on our work across Mexico, Colombia, and beyond.', readMore: 'Read more', share: 'Share' },
-        es: { pill: 'NOTICIAS · IMPACTO · MEDIOS', title: 'FOUND — Noticias y Actualizaciones', subtitle: 'Las novedades más recientes sobre nuestro trabajo en México, Colombia y más allá.', readMore: 'Leer más', share: 'Compartir' }
+        en: { pill: 'NEWS · IMPACT · MEDIA', title: 'FOUND — News &amp; Updates', readMore: 'Read more', share: 'Share' },
+        es: { pill: 'NOTICIAS · IMPACTO · MEDIOS', title: 'FOUND — Noticias y Actualizaciones', readMore: 'Leer más', share: 'Compartir' }
       };
       var lang = 'en';
       var activeCardId = null;
@@ -505,7 +504,6 @@ author_profile: false
         var ui = UI[l] || UI.en;
         document.getElementById('news-pill').textContent = ui.pill;
         document.getElementById('news-title').innerHTML = ui.title;
-        document.getElementById('news-subtitle').innerHTML = ui.subtitle;
         document.documentElement.lang = l === 'es' ? 'es' : 'en';
         document.querySelectorAll('.lang-btn').forEach(function(btn) { btn.classList.toggle('active', btn.dataset.lang === l); });
         renderGrid();
