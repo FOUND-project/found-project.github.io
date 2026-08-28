@@ -2,7 +2,7 @@
 layout: archive
 title: "Publications"
 permalink: /publications/
-author_profile: true
+author_profile: false
 ---
 
 <html lang="en">
@@ -60,9 +60,9 @@ author_profile: true
 
     /* CONTENEDOR PRINCIPAL */
     .pub-shell {
-      max-width: 1400px;
-      margin: 0 auto 4rem 6.8rem; /* deja espacio para el logo redondo */
-      padding: 2rem clamp(1.5rem, 4vw, 3rem);
+      max-width: var(--shell-max);
+      margin: 0 auto 4rem;
+      padding: 2rem var(--shell-pad);
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
       background: linear-gradient(135deg, var(--gray-50) 0%, var(--off-white) 100%);
       min-height: 100vh;
@@ -377,7 +377,6 @@ author_profile: true
     <div class="lang-toggle" aria-label="Language selection">
       <button type="button" class="lang-btn active" data-lang="en">EN</button>
       <button type="button" class="lang-btn" data-lang="es">ES</button>
-      <button type="button" class="lang-btn" data-lang="nah">NÁHUATL</button>
     </div>
 
     <!-- BOOK -->
@@ -548,7 +547,8 @@ author_profile: true
 
   <script>
     (function(){
-      const STORAGE_KEY = 'found-lang-pubs';
+      const STORAGE_KEY = 'found-lang';
+      const LEGACY_KEY  = 'found-lang-pubs';
 
       const translations = {
         en: {
@@ -606,34 +606,6 @@ author_profile: true
           'b2-meta': 'University of the West of England – Bristol (2025)',
           'b3-title': 'Drones con cámara pueden ayudar a localizar fosas de personas desaparecidas en México',
           'b3-meta': 'Karina García-Reyes &amp; Miguel Moctezuma (2024)'
-        },
-        nah: {
-          'pill-book': 'AMATLAHCUILOLLI',
-          'title-book': 'In amatl',
-          'book-badge': 'Amatl kuali',
-          'book-desc': 'Nin amatl kualtsin kualtlalia ciencias de biología, física huan tlalli para kijtos kenik tiktlatemohuah fosas clandestinas. In traducción inglés ok inon onkaj ipan tequiti.',
-          'pill-articles': 'TLATLAHCUILOLLI',
-          'title-articles': 'Tlatlahcuilolli',
-          'a1-badge': 'Tlatlatzintli ipan revista',
-          'a2-badge': 'Tlatlatzintli ipan revista',
-          'a3-badge': 'Capítulo de libro',
-          'a1-title': 'Diseño de índices espectrales para detectar kontaminantes ipan tlalli tlen kixnechikah desaparición de tlācameh',
-          'a1-meta': 'J.L. Silván-Cárdenas, A.J. Alegre-Mondragón, J.M. Madrigal-Gómez, C. Silva-Arias (2025)',
-          'a2-title': 'Evaluación de modelos geoespaciales para explicar tlen ika mochihua fosas clandestinas ipan Mēxihco',
-          'a2-meta': 'J.L. Silván-Cárdenas, A.J. Alegre-Mondragón, C. Silva-Arias (2024)',
-          'a3-title': 'Espacio Clandestino: plataforma para se país tlen kipalehui tlatemohuiliztli de fosas clandestinas ipan Mēxihco',
-          'a3-meta': 'J.L. Silván-Cárdenas, A.J. Alegre-Mondragón (2024)',
-          'pill-blogs': 'BLOGS',
-          'title-blogs': 'Blogs',
-          'b1-badge': 'Blog',
-          'b2-badge': 'Noticia',
-          'b3-badge': 'Op-ed',
-          'b1-title': 'Ipan frontera para kajsikamatilistli yolsewilia',
-          'b1-meta': 'Mariela Garfias &amp; Frontier Tech Hub (2025)',
-          'b2-title': 'Tlamachtij ipan universidad kimpalehui proyekto para tiktlatemohua fosas tlatsentlalka ipan Mēxihco ika drones',
-          'b2-meta': 'University of the West of England – Bristol (2025)',
-          'b3-title': 'Drones ika cámara welis kimpalehuiah tiktlatemohua fosas de tlācameh tlen polihuitkeh ipan Mēxihco',
-          'b3-meta': 'Karina García-Reyes &amp; Miguel Moctezuma (2024)'
         }
       };
 
@@ -663,7 +635,7 @@ author_profile: true
 
         document.documentElement.setAttribute(
           'lang',
-          lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
+          lang === 'es' ? 'es' : 'en'
         );
 
         try{ localStorage.setItem(STORAGE_KEY, lang); }catch(e){}
@@ -672,8 +644,8 @@ author_profile: true
       document.addEventListener('DOMContentLoaded', function(){
         let saved = 'en';
         try{
-          const stored = localStorage.getItem(STORAGE_KEY);
-          if(stored && ['en','es','nah'].includes(stored)) saved = stored;
+          const stored = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_KEY);
+          if(stored && ['en','es'].includes(stored)) saved = stored;
         }catch(e){}
 
         setLanguage(saved);
