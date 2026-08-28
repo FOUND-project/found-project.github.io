@@ -1,13 +1,13 @@
 ---
 title: "Team"
 permalink: /team/
-author_profile: true
+author_profile: false
 ---
 <style>
   .team-page {
-    max-width: 1080px;
+    max-width: var(--shell-max);
     margin: 0 auto;
-    padding: 4rem 1.5rem 5rem;
+    padding: 3rem var(--shell-pad) 4rem;
     font-family: inherit;
   }
 

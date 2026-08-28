@@ -2,7 +2,7 @@
 layout: archive
 title: 
 permalink: /how-to-help/
-author_profile: true
+author_profile: false
 ---
 
 <html lang="en">
@@ -81,8 +81,8 @@ author_profile: true
       width:100%;
       margin:0;
       position:relative;
-      padding-left:clamp(10rem,14vw,13rem);
-      padding-right:2rem;
+      padding-left:var(--shell-pad);
+      padding-right:var(--shell-pad);
     }
 
     /* Language toggle */
@@ -448,7 +448,6 @@ author_profile: true
     <div class="lang-toggle" aria-label="Language selection">
       <button type="button" class="lang-btn active" data-lang="en">EN</button>
       <button type="button" class="lang-btn" data-lang="es">ES</button>
-      <button type="button" class="lang-btn" data-lang="nah">NÁHUATL</button>
     </div>
 
     <!-- Hero Section -->
@@ -598,25 +597,6 @@ author_profile: true
           'collab-title':'Cómo Colaborar y Amplificar',
           'collab-text':'Súmate a visibilizar y apoyar esta misión fundamental.',
           'linkedin-label':'Seguir en LinkedIn'
-        },
-        nah:{
-          'hero-title':'Tlen tikpalehuise ininon nanmeh',
-          'hero-text':'Tikonpalehui ninnananmeh direkte — nochi tlen tiktoktia kipalehui in tlatemoliztli de ininteixpoyohwan tlapolpoliwkeh.',
-          'donate-title':'Titetlanejma',
-          'facebook-label':'Tlachiyaliztli ipan Facebook',
-          'testimonial-text':'Ini nin datos para titetlanejma — motlapalehuilis techmaka chicahualistli para oksejpa titetlatemoliseh. Tlazohcamati por moempatía; ika motlapalehuilis weli tikmoyetztia in tlatemoliztli de ininteixpoyohwan. ¡Hasta tikinmatiskeh!',
-          'payment-title':'Tlatlajko tlen tlapalehuilistli (pago)',
-          'label-paypal':'PayPal',
-          'label-holder':'Tlen motoka ipan cuenta',
-          'label-country':'País',
-          'label-bank':'Banco',
-          'label-card':'Datos de tarjeta',
-          'label-account':'Número de cuenta',
-          'label-clabe':'CLABE',
-          'label-swift':'SWIFT',
-          'collab-title':'Kenin Tikonpalehuis huan Tikonmachtis',
-          'collab-text':'Ximoyekona techpalehuikan para se okachi motematiltis nin importante tlamantli.',
-          'linkedin-label':'Tikneki tiksewis ipan LinkedIn'
         }
       };
 
@@ -630,7 +610,7 @@ author_profile: true
 
         document.documentElement.setAttribute(
           'lang',
-          lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en')
+          lang === 'es' ? 'es' : 'en'
         );
 
         document.querySelectorAll('.lang-btn').forEach(btn=>{
@@ -647,7 +627,7 @@ author_profile: true
         try{
           savedLang = localStorage.getItem('found-lang-help');
         }catch(e){}
-        const initialLang = (savedLang === 'es' || savedLang === 'en' || savedLang === 'nah') ? savedLang : 'en';
+        const initialLang = (savedLang === 'es' || savedLang === 'en') ? savedLang : 'en';
         setLanguage(initialLang);
 
         document.querySelectorAll('.lang-btn').forEach(btn=>{

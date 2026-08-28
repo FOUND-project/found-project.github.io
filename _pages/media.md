@@ -2,7 +2,7 @@
 layout: archive
 title: "Media"
 permalink: /media/
-author_profile: true
+author_profile: false
 ---
 <html lang="en">
 <head>
@@ -69,8 +69,9 @@ author_profile: true
     }
 
     .media-shell {
-      max-width: 1320px;
-      margin: 0 auto 0 5.6rem;
+      max-width: var(--shell-max);
+      margin: 0 auto;
+      padding: 0 var(--shell-pad);
       position: relative;
     }
 
@@ -462,7 +463,6 @@ author_profile: true
     <div class="lang-toggle" aria-label="Language selection">
       <button type="button" class="lang-btn active" data-lang="en">EN</button>
       <button type="button" class="lang-btn" data-lang="es">ES</button>
-      <button type="button" class="lang-btn" data-lang="nah">NÁHUATL</button>
     </div>
 
     <header class="media-header">
@@ -725,13 +725,11 @@ author_profile: true
     /* ── translations ── */
     const translations = {
       en:{ 'media-pill':'MEDIA · COVERAGE · TALKS','media-title':'Media Coverage','media-intro':'Our research and work has been featured in leading international publications.','talks-title':'Talks' },
-      es:{ 'media-pill':'MEDIOS · COBERTURA · CHARLAS','media-title':'Cobertura en medios','media-intro':'Nuestras investigaciones y trabajo han aparecido en medios internacionales de referencia.','talks-title':'Charlas' },
-      nah:{ 'media-pill':'MEDIOS · TLAYEKOLOLLO · TLAHTOLMEH','media-title':'Tlayekoliztli ipan medios','media-intro':'Totlatequi huan totlatlamachtiliztli yopanok ipan medios internacionales.','talks-title':'Tlatlahtolmeh' }
+      es:{ 'media-pill':'MEDIOS · COBERTURA · CHARLAS','media-title':'Cobertura en medios','media-intro':'Nuestras investigaciones y trabajo han aparecido en medios internacionales de referencia.','talks-title':'Charlas' }
     };
     const tagLabels = {
       en:{ article:'Article', tv:'TV Segment', 'tv-social':'TV / Social', opinion:'Opinion' },
-      es:{ article:'Artículo', tv:'Segmento TV', 'tv-social':'TV / Redes', opinion:'Opinión' },
-      nah:{ article:'Tlatlaquiliztli', tv:'Segmento TV', 'tv-social':'TV / Social', opinion:'Tlaixkomati' }
+      es:{ article:'Artículo', tv:'Segmento TV', 'tv-social':'TV / Redes', opinion:'Opinión' }
     };
 
     /* ── verified OG image cache ──────────────────────────────────────────
@@ -852,7 +850,7 @@ author_profile: true
         const key = el.dataset.key;
         if (key && tagMap[key]) el.textContent = tagMap[key];
       });
-      document.documentElement.lang = lang === 'es' ? 'es' : (lang === 'nah' ? 'nah' : 'en');
+      document.documentElement.lang = lang === 'es' ? 'es' : 'en';
       document.querySelectorAll('.lang-btn').forEach(btn =>
         btn.classList.toggle('active', btn.dataset.lang === lang)
       );
@@ -863,7 +861,7 @@ author_profile: true
     document.addEventListener('DOMContentLoaded', function() {
       let saved = null;
       try { saved = localStorage.getItem('found-lang-media'); } catch(e) {}
-      setLanguage((saved === 'es' || saved === 'en' || saved === 'nah') ? saved : 'en');
+      setLanguage((saved === 'es' || saved === 'en') ? saved : 'en');
 
       document.querySelectorAll('.lang-btn').forEach(btn =>
         btn.addEventListener('click', () => setLanguage(btn.dataset.lang))
