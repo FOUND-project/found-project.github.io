@@ -87,6 +87,7 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
 .tl-viewport::-webkit-scrollbar{display:none}
 .tl-viewport.is-dragging{cursor:grabbing}
 .tl-track{position:relative;display:flex;align-items:stretch;width:max-content;min-height:396px;padding:0 var(--shell-pad)}
+.tl-track{position:relative;display:flex;align-items:stretch;width:max-content;min-height:600px;padding:0 var(--shell-pad)}
 .tl-item::before,.tl-year::before{content:'';position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:rgba(212,175,55,.82);box-shadow:0 0 10px rgba(212,175,55,.22);z-index:0;pointer-events:none}
 .tl-group{display:contents}
 .tl-year{position:relative;flex:0 0 auto;width:clamp(104px,10vw,146px);display:flex;align-items:center;justify-content:center;z-index:3;border:none;background:none;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer;-webkit-appearance:none;appearance:none}
@@ -95,6 +96,7 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
 .tl-leaf{width:15px;height:18px;flex:0 0 auto;color:#173d2f;display:block}
 .tl-year-count,.tl-year-chev{display:none}
 .tl-item{position:relative;flex:0 0 288px;z-index:1}
+.tl-item{position:relative;flex:0 0 clamp(250px,27vw,340px);z-index:1}
 .tl-track.tl-anim .tl-card,.tl-track.tl-anim .tl-stem,.tl-track.tl-anim .tl-dot{opacity:0}
 .tl-track.tl-anim .tl-item.is-in .tl-card,.tl-track.tl-anim .tl-item.is-in .tl-stem,.tl-track.tl-anim .tl-item.is-in .tl-dot{opacity:1}
 .tl-dot{position:absolute;left:50%;top:50%;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;border-radius:50%;background:var(--gold-accent);box-shadow:0 0 0 4px rgba(11,28,22,.95),0 0 16px rgba(212,175,55,.6);z-index:3;transition:transform .3s var(--transition-smooth),box-shadow .3s var(--transition-smooth),opacity .5s var(--transition-smooth)}
@@ -106,6 +108,11 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
 .tl-card{position:absolute;left:.6rem;right:.6rem;background:rgba(255,255,255,.055);border:1px solid rgba(232,245,240,.14);border-radius:16px;padding:.7rem .9rem .8rem;backdrop-filter:blur(10px);box-shadow:0 14px 36px rgba(0,0,0,.3);z-index:2;transition:transform .3s var(--transition-smooth),border-color .3s var(--transition-smooth),background .3s var(--transition-smooth),box-shadow .3s var(--transition-smooth),opacity .5s var(--transition-smooth)}
 .tl-up .tl-card{bottom:calc(50% + 40px)}
 .tl-down .tl-card{top:calc(50% + 40px)}
+.tl-up .tl-stem{bottom:50%;height:70px}
+.tl-down .tl-stem{top:50%;height:70px;background:linear-gradient(0deg,rgba(212,175,55,.6),rgba(212,175,55,.1))}
+.tl-card{position:absolute;left:.6rem;right:.6rem;background:rgba(255,255,255,.055);border:1px solid rgba(232,245,240,.14);border-radius:16px;padding:.9rem 1rem 1.05rem;backdrop-filter:blur(10px);box-shadow:0 14px 36px rgba(0,0,0,.3);z-index:2;transition:transform .3s var(--transition-smooth),border-color .3s var(--transition-smooth),background .3s var(--transition-smooth),box-shadow .3s var(--transition-smooth),opacity .5s var(--transition-smooth)}
+.tl-up .tl-card{bottom:calc(50% + 70px)}
+.tl-down .tl-card{top:calc(50% + 70px)}
 .tl-item[data-soon="1"] .tl-card{border-style:dashed;border-color:rgba(212,175,55,.42);background:rgba(212,175,55,.05)}
 .tl-item:hover .tl-card,.tl-item:focus-within .tl-card{transform:translateY(-5px);border-color:rgba(212,175,55,.55);background:rgba(255,255,255,.11);box-shadow:0 22px 48px rgba(0,0,0,.42)}
 .tl-meta{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem;margin-bottom:.35rem}
@@ -632,6 +639,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
     {y:'2025',m:['NOV','NOV'],k:'media',t:['FOUND in The Guardian','FOUND en The Guardian']},
     {y:'2025',m:['DEC','DIC'],k:'award',t:['Sir Nicholas Browne Award by the FCDO to FOUND’s pioneer','Premio Sir Nicholas Browne de la FCDO a la pionera de FOUND']},
     {y:'2026',m:['FEB','FEB'],k:'tech',t:['Platform integrated with the Colombia Search Unit (UBPD)','Plataforma integrada con la Unidad de Búsqueda de Colombia (UBPD)']},
+    {y:'2026',m:['FEB','FEB'],k:'inst',t:['FOUND invited by Colombia’s Search Unit (UBPD) as observer to the handover of the remains of Camilo Torres','FOUND invitado por la Unidad de Búsqueda de Colombia (UBPD) como observador a la entrega de los restos de Camilo Torres']},
     {y:'2026',m:['MAR','MAR'],k:'inst',t:['Agreement signed with the Mexico National Search Commission (CNB)','Convenio firmado con la Comisión Nacional de Búsqueda (CNB) de México']},
     {y:'2026',m:['APR','ABR'],k:'tech',t:['Platform integrated with the Mexico National Search Commission (CNB)','Plataforma integrada con la Comisión Nacional de Búsqueda (CNB)']},
     {y:'2026',m:['JUN','JUN'],k:'inst',t:['Public event with identIA, University of Oxford','Evento público con identIA, Universidad de Oxford']},
