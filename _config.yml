@@ -150,6 +150,7 @@ exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
+  - CLAUDE.md
   - .bundle
   - .jekyll-assets-cache
   - .sass-cache
