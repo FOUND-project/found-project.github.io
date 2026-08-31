@@ -1000,7 +1000,7 @@ author_profile: false
             </a>
           </h3>
           <p class="pub-meta" id="b0-meta">
-            Miguel Moctezuma, Daniele Rugo &amp; Brad Evans
+            Miguel Moctezuma, Daniele Rugo &amp; Brad Evans (2026)
           </p>
         </article>
 
@@ -1037,7 +1037,7 @@ author_profile: false
         <article class="pub-card">
           <div class="pub-card-topline">
             <span class="pub-emoji">📝</span>
-            <span class="pub-badge" id="b3-badge">Op-ed</span>
+            <span class="pub-badge" id="b3-badge">Blog</span>
           </div>
           <h3 class="pub-item-title">
             <a href="https://www.justsecurity.org/105181/drones-graves-mexicos-disappeared/" target="_blank" rel="noopener noreferrer" id="b3-title">
@@ -1077,9 +1077,9 @@ author_profile: false
           'b0-badge': 'Blog',
           'b1-badge': 'Blog',
           'b2-badge': 'News story',
-          'b3-badge': 'Op-ed',
+          'b3-badge': 'Blog',
           'b0-title': 'An ethics for the disappeared in a technological age',
-          'b0-meta': 'Miguel Moctezuma, Daniele Rugo &amp; Brad Evans',
+          'b0-meta': 'Miguel Moctezuma, Daniele Rugo &amp; Brad Evans (2026)',
           'b1-title': 'On the Frontier of Finding Peace',
           'b1-meta': 'Mariela Garfias &amp; Frontier Tech Hub (2025)',
           'b2-title': 'Academic playing role in project to find hidden graves in Mexico using drone technology',
@@ -1105,9 +1105,9 @@ author_profile: false
           'b0-badge': 'Blog',
           'b1-badge': 'Blog',
           'b2-badge': 'Nota informativa',
-          'b3-badge': 'Artículo de opinión',
-          'b0-title': 'Una ética para las personas desaparecidas en la era tecnológica',
-          'b0-meta': 'Miguel Moctezuma, Daniele Rugo &amp; Brad Evans',
+          'b3-badge': 'Blog',
+          'b0-title': 'Ética para las personas desaparecidas en la era tecnológica',
+          'b0-meta': 'Miguel Moctezuma, Daniele Rugo &amp; Brad Evans (2026)',
           'b1-title': 'En la frontera de encontrar la paz',
           'b1-meta': 'Mariela Garfias &amp; Frontier Tech Hub (2025)',
           'b2-title': 'Académica participa en proyecto para encontrar fosas ocultas en México mediante tecnología de drones',
