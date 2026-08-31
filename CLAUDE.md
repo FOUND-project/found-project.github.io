@@ -97,6 +97,24 @@ which wrapper you are actually in before writing a defensive selector. Confirm
 with `getComputedStyle` rather than by eye; all three of these look like
 "my CSS didn't apply".
 
+### Render content in HTML, not from JS
+
+The Volume 1 chapter list was first built by a JS renderer writing into an empty
+`<div>`. It built correctly and passed every local check, but on the owner's
+browser the script did not run and the section was simply **empty** — header,
+search box and nothing else. Nothing in the build was wrong, and it is not
+reproducible from here.
+
+So: emit the content as real HTML and let JS only enhance it. The chapter list
+now uses native `<details>`/`<summary>`, so every chapter opens and every PDF
+downloads with JavaScript switched off entirely; each translatable node carries
+`data-en` / `data-es` and JS swaps `textContent` on a language click. Controls
+that genuinely need JS (filter, expand-all, copy) are hidden by default and
+revealed by a `.bk-js` class the script adds to the section.
+
+Test it: Playwright with `javaScriptEnabled: false` must still show all 17
+chapters and 17 download links.
+
 ### Do not pin the viewport
 
 `publications.md` carried `<meta name="viewport" content="width=1200">`, which
