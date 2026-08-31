@@ -313,15 +313,16 @@ author_profile: false
       box-shadow: var(--shadow-lg);
       border: 1px solid rgba(27, 77, 62, 0.1);
       background: var(--white);
-      width: 200px;
-      height: 280px;
+      width: 380px;
+      max-width: 100%;
+      aspect-ratio: 1431 / 976;
       flex-shrink: 0;
     }
 
     .pub-card-media img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
       transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -340,7 +341,6 @@ author_profile: false
       }
       .pub-card-media{
         width:100%;
-        height:200px;
         order:-1;
       }
     }
@@ -367,10 +367,16 @@ author_profile: false
 
     @media (max-width:480px){
       .pub-title{font-size:1.5rem;}
-      .pub-card-media{height:180px;}
     }
 
     /* ===== Volume 1 — index & chapter downloads ===== */
+    .bk-subhead{display:flex;align-items:center;gap:.9rem;margin:2.5rem 0 1rem;padding-top:1.75rem;
+      border-top:1px solid var(--gray-200)}
+    .bk-subtitle{font-size:clamp(1.4rem,2.2vw,1.75rem);font-weight:800;letter-spacing:-.02em;
+      color:var(--primary-green-dark);line-height:1.2;margin:0}
+    @media (max-width:560px){
+      .bk-subhead{flex-direction:column;align-items:flex-start;gap:.55rem}
+    }
     .bk-intro{max-width:70ch;color:#4b5563;font-size:1rem;line-height:1.65;margin:0 0 1.4rem}
     .bk-bar{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem;padding:.9rem 1.15rem;margin-bottom:1.25rem;
       background:linear-gradient(135deg,var(--primary-green) 0%,var(--primary-green-dark) 100%);
@@ -485,8 +491,8 @@ author_profile: false
       <button type="button" class="lang-btn" data-lang="es">ES</button>
     </div>
 
-    <!-- BOOK -->
-    <section class="pub-section">
+    <!-- BOOK — VOLUME 1 -->
+    <section class="pub-section" id="volume-1">
       <div class="pub-section-header">
         <h2 class="pub-title" id="title-book">The Book</h2>
       </div>
@@ -502,7 +508,7 @@ author_profile: false
 
               <h3 class="pub-item-title" id="book-title">
                 <a href="https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file" target="_blank" rel="noopener noreferrer">
-                  Interpreting Nature to Locate Those We Are Missing, Volume 1 
+                  Interpreting Nature to Locate Those We Are Missing
                 </a>
               </h3>
 
@@ -511,27 +517,28 @@ author_profile: false
               </p>
 
               <p class="pub-desc" id="book-desc">
-                This volume brings together biological, physical, and earth sciences to design and test methods for detecting clandestine graves. Volume 2 and Volume 3 will be presented in December 2026.
+                This volume brings together biological, physical, and earth sciences to design and test methods for detecting clandestine graves.
+              </p>
+
+              <p class="pub-desc" id="book-desc2">
+                Volume 2 and Volume 3 will be presented in December 2026.
               </p>
             </div>
 
             <div class="pub-card-media">
-              <img src="/images/the%20book.png" alt="FOUND book cover" loading="lazy" class="loading" onload="this.classList.remove('loading')">
+              <img src="/images/the-book-web.jpg" alt="FOUND book cover" loading="lazy" class="loading" onload="this.classList.remove('loading')">
             </div>
           </div>
         </article>
       </div>
-    </section>
 
-
-    <!-- VOLUME 1 — INDEX & CHAPTER DOWNLOADS -->
-    <section class="pub-section" id="volume-1">
-      <div class="pub-section-header">
-        <span class="pub-pill" data-en="VOLUME 1 · CHAPTERS" data-es="VOLUMEN 1 · CAPÍTULOS">VOLUME 1 · CHAPTERS</span>
-        <h2 class="pub-title" data-en="Index &amp; chapter downloads" data-es="Índice y descarga de capítulos">Index &amp; chapter downloads</h2>
+      <!-- VOLUME 1 — CHAPTERS -->
+      <div class="bk-subhead">
+        <span class="pub-pill" data-en="VOLUME 1" data-es="VOLUMEN 1">VOLUME 1</span>
+        <h3 class="bk-subtitle" data-en="Chapters" data-es="Capítulos">Chapters</h3>
       </div>
 
-      <p class="bk-intro" data-en="The complete index of Volume 1. Every chapter can be opened in the browser or downloaded as a PDF, and each one carries its own reference in Harvard style. Chapters run from page 63 of the printed volume." data-es="El índice completo del Volumen 1. Cada capítulo puede abrirse en el navegador o descargarse en PDF, y cada uno incluye su referencia en formato Harvard. Los capítulos comienzan en la página 63 del volumen impreso.">The complete index of Volume 1. Every chapter can be opened in the browser or downloaded as a PDF, and each one carries its own reference in Harvard style. Chapters run from page 63 of the printed volume.</p>
+      <p class="bk-intro" data-en="Every chapter can be opened in the browser or downloaded as a PDF." data-es="Cada capítulo puede abrirse en el navegador o descargarse en PDF.">Every chapter can be opened in the browser or downloaded as a PDF.</p>
 
       <div class="bk-bar">
         <div class="bk-bar-title" data-en="Chapter downloads" data-es="Descarga de capítulos">Chapter downloads</div>
@@ -1021,7 +1028,8 @@ author_profile: false
         en: {
           'title-book': 'The Book',
           'book-badge': 'Free download',
-          'book-desc': 'This volume brings together biological, physical, and earth sciences to design and test methods for detecting clandestine graves. Volume 2 and Volume 3 will be presented in December 2026.',
+          'book-desc': 'This volume brings together biological, physical, and earth sciences to design and test methods for detecting clandestine graves.',
+          'book-desc2': 'Volume 2 and Volume 3 will be presented in December 2026.',
           'pill-articles': 'ARTICLES',
           'title-articles': 'Articles',
           'a1-badge': 'Peer-reviewed',
@@ -1048,7 +1056,8 @@ author_profile: false
         es: {
           'title-book': 'El libro',
           'book-badge': 'Arbitraje científico de capítulos; Descarga gratuita',
-          'book-desc': 'Este volumen reúne ciencias biológicas, físicas y de la Tierra para diseñar y probar métodos de detección de fosas clandestinas. El Volumen 2 y el Volumen 3 serán presentados en diciembre de 2026.',
+          'book-desc': 'Este volumen reúne ciencias biológicas, físicas y de la Tierra para diseñar y probar métodos de detección de fosas clandestinas.',
+          'book-desc2': 'El Volumen 2 y el Volumen 3 serán presentados en diciembre de 2026.',
           'pill-articles': 'ARTÍCULOS',
           'title-articles': 'Artículos',
           'a1-badge': 'Revisado por pares',
@@ -1075,7 +1084,7 @@ author_profile: false
       };
 
       const ids = [
-        'title-book','book-badge','book-desc',
+        'title-book','book-badge','book-desc','book-desc2',
         'pill-articles','title-articles',
         'a1-badge','a2-badge','a3-badge',
         'a1-title','a1-meta','a2-title','a2-meta','a3-title','a3-meta',
