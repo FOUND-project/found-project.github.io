@@ -80,6 +80,31 @@ Spanish where it already establishes a form.
 - Avoid blank lines inside `<style>` and `<script>` blocks.
 - Check for stray `{{` before committing.
 
+### The theme outranks your page CSS more often than you expect
+
+Page-level styles sit in an inline `<style>`, so they win ties on order — but a
+bare class (0,1,0) loses to the theme's compound selectors. These three have
+each silently overridden new styling:
+
+| Theme rule | Where | Beats |
+|---|---|---|
+| `.archive a { text-decoration: underline }` | `_sass/_archive.scss` | any `.my-btn` |
+| `.page__content a { text-decoration: underline }` | `_sass/_page.scss` | any `.my-btn` |
+| `input[type="search"] { box-sizing: content-box }` | `_sass/_reset.scss` | any `.my-input` |
+
+Note the custom pages render inside `.archive`, **not** `.page__content` — check
+which wrapper you are actually in before writing a defensive selector. Confirm
+with `getComputedStyle` rather than by eye; all three of these look like
+"my CSS didn't apply".
+
+### Do not pin the viewport
+
+`publications.md` carried `<meta name="viewport" content="width=1200">`, which
+rendered the whole page at about a third scale on a phone and left its own
+1024/768/480 media queries as dead code. The theme already emits a correct
+`width=device-width` tag. If a page looks untouched by your breakpoints, check
+for a second viewport meta before debugging the CSS.
+
 ## Verifying before you push
 
 There is no `.github/workflows` — GitHub Pages runs its own legacy build, and a
@@ -100,6 +125,16 @@ local previews need those requests routed back to the built site.
 Check the deployed result with the GitHub Actions API: the "pages build and
 deployment" run for the merge commit must be `success`. Its logs are not
 retrievable, so a green local `jekyll build --safe` is the real safety net.
+
+## Files and downloads
+
+`files/` is served as-is by Pages, so anything in it is downloadable at
+`found-project.org/files/...`. The book's chapters live in
+`files/libro-vol1/` (17 chapter PDFs plus the index, ~45MB). The publications
+page builds its index, download links and Harvard citations from a JS data
+array in `_pages/publications.md` — chapter titles, authors, page ranges and
+file sizes are all in that one array, so add or correct a chapter there rather
+than in the markup.
 
 ## Images
 
