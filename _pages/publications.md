@@ -370,6 +370,19 @@ author_profile: false
     }
 
     /* ===== Volume 1 — index & chapter downloads ===== */
+    /* one pill: white book band, green chapters band, white how-to-cite band */
+    .bk-pill{border-radius:20px;overflow:hidden;border:1px solid rgba(27,77,62,.15);
+      box-shadow:var(--shadow-lg);background:var(--white)}
+    .bk-pill-book{border:0;border-radius:0;box-shadow:none;height:auto}
+    .bk-pill-book:hover{transform:none;box-shadow:none;border-color:transparent}
+    .bk-pill-book::after{border-radius:0}
+    .bk-pill .bk-wrap{margin:0}
+    .bk-pill .bk-bar,.bk-pill .bk-wrap[open] .bk-bar{border-radius:0}
+    .bk-pill .bk-how{margin-top:0;border:0;border-top:1px solid var(--gray-200);border-radius:0;
+      box-shadow:none}
+    .bk-bar-meta{display:inline-flex;align-items:baseline;flex-wrap:wrap;gap:.3rem .55rem}
+    .bk-bar-cta{color:var(--gold-accent);font-size:.82rem;font-weight:800;letter-spacing:.02em;
+      text-decoration:underline;text-underline-offset:3px}
     /* the bar is the <summary> that opens the chapter list — works with no JS */
     .bk-wrap{margin:2.25rem 0 1.25rem}
     .bk-cover-click{cursor:pointer}
@@ -389,7 +402,7 @@ author_profile: false
       transition:transform var(--transition-base)}
     .bk-wrap[open] .bk-bar-chev{transform:rotate(180deg)}
     .bk-bar-hint{display:block;margin-top:.4rem;color:#cfe3d6;font-size:.8rem;line-height:1.5;max-width:80ch}
-    .bk-wrap-body{padding:1.2rem 0 0;animation:bkIn .22s ease}
+    .bk-wrap-body{background:var(--gray-50);padding:1.25rem 1.15rem;animation:bkIn .22s ease}
     .bk-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem .9rem;border-radius:9px;
       font-size:.8rem;font-weight:700;letter-spacing:.01em;text-decoration:none;border:1px solid transparent;
       cursor:pointer;transition:all var(--transition-base);white-space:nowrap;font-family:inherit;line-height:1.2}
@@ -505,8 +518,8 @@ author_profile: false
         <h2 class="pub-title" id="title-book">The Book</h2>
       </div>
 
-      <div class="pub-grid">
-        <article class="pub-card pub-card-featured">
+      <div class="bk-pill">
+        <article class="pub-card pub-card-featured bk-pill-book">
           <div class="pub-card-inner">
             <div class="pub-card-text">
               <div class="pub-card-topline">
@@ -538,17 +551,19 @@ author_profile: false
             </div>
           </div>
         </article>
-      </div>
 
       <!-- chapters, collapsed until the bar or the cover is clicked -->
       <details class="bk-wrap" id="bk-wrap">
         <summary class="bk-bar">
           <span class="bk-bar-main">
             <span class="bk-bar-title" data-en="Chapter downloads" data-es="Descarga de capítulos">Chapter downloads</span>
-            <span class="bk-stats" data-en="17 chapters · free download" data-es="17 capítulos · descarga gratuita">17 chapters · free download</span>
+            <span class="bk-bar-meta">
+              <span class="bk-stats" data-en="17 chapters · free download" data-es="17 capítulos · descarga gratuita">17 chapters · free download</span>
+              <span class="bk-bar-cta" data-en="Click here" data-es="Haz clic aquí">Click here</span>
+            </span>
             <svg class="bk-bar-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </span>
-          <span class="bk-bar-hint" data-en="Click here or on the book. Every chapter can be opened in the browser or downloaded as a PDF." data-es="Haz clic aquí o en el libro. Cada capítulo puede abrirse en el navegador o descargarse en PDF.">Click here or on the book. Every chapter can be opened in the browser or downloaded as a PDF.</span>
+          <span class="bk-bar-hint" data-en="Every chapter can be opened in the browser or downloaded as a PDF." data-es="Cada capítulo puede abrirse en el navegador o descargarse en PDF.">Every chapter can be opened in the browser or downloaded as a PDF.</span>
         </summary>
         <div class="bk-wrap-body">
 
@@ -895,12 +910,12 @@ author_profile: false
           </div>
         </div>
       </details>
+      </div>
     </section>
 
     <!-- ARTICLES -->
     <section class="pub-section">
       <div class="pub-section-header">
-        <span class="pub-pill" id="pill-articles">ARTICLES</span>
         <h2 class="pub-title" id="title-articles">Articles</h2>
       </div>
 
@@ -970,11 +985,25 @@ author_profile: false
     <!-- BLOGS -->
     <section class="pub-section">
       <div class="pub-section-header">
-        <span class="pub-pill" id="pill-blogs">BLOGS &amp; INSIGHTS</span>
-        <h2 class="pub-title" id="title-blogs">Blogs</h2>
+        <h2 class="pub-title" id="title-blogs">Blogs and Insights</h2>
       </div>
 
       <div class="pub-grid">
+        <article class="pub-card">
+          <div class="pub-card-topline">
+            <span class="pub-emoji">📝</span>
+            <span class="pub-badge" id="b0-badge">Blog</span>
+          </div>
+          <h3 class="pub-item-title">
+            <a href="https://www.frontiertechhub.org/insights/ethics-for-the-disappeared-in-a-technological-age" target="_blank" rel="noopener noreferrer" id="b0-title">
+              An ethics for the disappeared in a technological age
+            </a>
+          </h3>
+          <p class="pub-meta" id="b0-meta">
+            Miguel Moctezuma, Daniele Rugo &amp; Brad Evans
+          </p>
+        </article>
+
         <article class="pub-card">
           <div class="pub-card-topline">
             <span class="pub-emoji">📝</span>
@@ -1034,7 +1063,6 @@ author_profile: false
           'title-book': 'The Book',
           'book-desc': 'This volume brings together biological, physical, and earth sciences to design and test methods for detecting clandestine graves.',
           'book-desc2': 'Volume 2 and Volume 3 will be presented in December 2026.',
-          'pill-articles': 'ARTICLES',
           'title-articles': 'Articles',
           'a1-badge': 'Peer-reviewed',
           'a2-badge': 'Peer-reviewed',
@@ -1045,11 +1073,13 @@ author_profile: false
           'a2-meta': 'J.L. Silván-Cárdenas, A.J. Alegre-Mondragón, C. Silva-Arias (2024)',
           'a3-title': 'Espacio Clandestino: A Nationwide Platform to Support Clandestine Graves Search in Mexico',
           'a3-meta': 'J.L. Silván-Cárdenas, A.J. Alegre-Mondragón (2024)',
-          'pill-blogs': 'BLOGS &amp; INSIGHTS',
-          'title-blogs': 'Blogs',
+          'title-blogs': 'Blogs and Insights',
+          'b0-badge': 'Blog',
           'b1-badge': 'Blog',
           'b2-badge': 'News story',
           'b3-badge': 'Op-ed',
+          'b0-title': 'An ethics for the disappeared in a technological age',
+          'b0-meta': 'Miguel Moctezuma, Daniele Rugo &amp; Brad Evans',
           'b1-title': 'On the Frontier of Finding Peace',
           'b1-meta': 'Mariela Garfias &amp; Frontier Tech Hub (2025)',
           'b2-title': 'Academic playing role in project to find hidden graves in Mexico using drone technology',
@@ -1061,7 +1091,6 @@ author_profile: false
           'title-book': 'El libro',
           'book-desc': 'Este volumen reúne ciencias biológicas, físicas y de la Tierra para diseñar y probar métodos de detección de fosas clandestinas.',
           'book-desc2': 'El Volumen 2 y el Volumen 3 serán presentados en diciembre de 2026.',
-          'pill-articles': 'ARTÍCULOS',
           'title-articles': 'Artículos',
           'a1-badge': 'Revisado por pares',
           'a2-badge': 'Revisado por pares',
@@ -1072,11 +1101,13 @@ author_profile: false
           'a2-meta': 'J.L. Silván-Cárdenas, A.J. Alegre-Mondragón, C. Silva-Arias (2024)',
           'a3-title': 'Espacio Clandestino: una plataforma nacional para apoyar la búsqueda de fosas clandestinas en México',
           'a3-meta': 'J.L. Silván-Cárdenas, A.J. Alegre-Mondragón (2024)',
-          'pill-blogs': 'BLOGS Y REFLEXIONES',
-          'title-blogs': 'Blogs',
+          'title-blogs': 'Blogs y reflexiones',
+          'b0-badge': 'Blog',
           'b1-badge': 'Blog',
           'b2-badge': 'Nota informativa',
           'b3-badge': 'Artículo de opinión',
+          'b0-title': 'Una ética para las personas desaparecidas en la era tecnológica',
+          'b0-meta': 'Miguel Moctezuma, Daniele Rugo &amp; Brad Evans',
           'b1-title': 'En la frontera de encontrar la paz',
           'b1-meta': 'Mariela Garfias &amp; Frontier Tech Hub (2025)',
           'b2-title': 'Académica participa en proyecto para encontrar fosas ocultas en México mediante tecnología de drones',
@@ -1088,12 +1119,12 @@ author_profile: false
 
       const ids = [
         'title-book','book-desc','book-desc2',
-        'pill-articles','title-articles',
+        'title-articles',
         'a1-badge','a2-badge','a3-badge',
         'a1-title','a1-meta','a2-title','a2-meta','a3-title','a3-meta',
-        'pill-blogs','title-blogs',
-        'b1-badge','b2-badge','b3-badge',
-        'b1-title','b1-meta','b2-title','b2-meta','b3-title','b3-meta'
+        'title-blogs',
+        'b0-badge','b1-badge','b2-badge','b3-badge',
+        'b0-title','b0-meta','b1-title','b1-meta','b2-title','b2-meta','b3-title','b3-meta'
       ];
 
       function setLanguage(lang){
