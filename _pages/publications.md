@@ -528,9 +528,7 @@ author_profile: false
               </div>
 
               <h3 class="pub-item-title" id="book-title">
-                <a href="https://www.centrogeo.org.mx/archivo/archivo-publicaciones/publicaciones-libros/3804-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/file" target="_blank" rel="noopener noreferrer">
-                  Interpreting Nature to Locate Those We Are Missing
-                </a>
+                Interpreting Nature to Locate Those We Are Missing
               </h3>
 
               <p class="pub-meta" id="book-meta">
