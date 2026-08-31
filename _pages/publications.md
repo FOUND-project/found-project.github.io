@@ -370,19 +370,26 @@ author_profile: false
     }
 
     /* ===== Volume 1 — index & chapter downloads ===== */
-    .bk-subhead{display:flex;align-items:center;gap:.9rem;margin:2.5rem 0 1rem;padding-top:1.75rem;
-      border-top:1px solid var(--gray-200)}
-    .bk-subtitle{font-size:clamp(1.4rem,2.2vw,1.75rem);font-weight:800;letter-spacing:-.02em;
-      color:var(--primary-green-dark);line-height:1.2;margin:0}
-    @media (max-width:560px){
-      .bk-subhead{flex-direction:column;align-items:flex-start;gap:.55rem}
-    }
-    .bk-intro{max-width:70ch;color:#4b5563;font-size:1rem;line-height:1.65;margin:0 0 1.4rem}
-    .bk-bar{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem;padding:.9rem 1.15rem;margin-bottom:1.25rem;
+    /* the bar is the <summary> that opens the chapter list — works with no JS */
+    .bk-wrap{margin:2.25rem 0 1.25rem}
+    .bk-cover-click{cursor:pointer}
+    .bk-cover-click:focus-visible{outline:2px solid var(--secondary-green);outline-offset:3px}
+    .bk-bar{display:block;cursor:pointer;list-style:none;padding:.95rem 1.15rem;
       background:linear-gradient(135deg,var(--primary-green) 0%,var(--primary-green-dark) 100%);
-      border-radius:14px;box-shadow:var(--shadow-sm)}
+      border-radius:14px;box-shadow:var(--shadow-sm);transition:box-shadow var(--transition-base)}
+    .bk-bar::-webkit-details-marker{display:none}
+    .bk-bar::marker{content:""}
+    .bk-bar:hover{box-shadow:var(--shadow-lg)}
+    .bk-bar:focus-visible{outline:2px solid var(--gold-accent);outline-offset:2px}
+    .bk-wrap[open] .bk-bar{border-radius:14px 14px 0 0}
+    .bk-bar-main{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem 1rem}
     .bk-bar-title{color:var(--gold-accent);font-size:1.02rem;font-weight:800;letter-spacing:.01em}
     .bk-stats{color:#cfe3d6;font-size:.82rem;font-weight:600;letter-spacing:.02em}
+    .bk-bar-chev{width:18px;height:18px;flex:0 0 18px;color:var(--gold-accent);margin-left:auto;
+      transition:transform var(--transition-base)}
+    .bk-wrap[open] .bk-bar-chev{transform:rotate(180deg)}
+    .bk-bar-hint{display:block;margin-top:.4rem;color:#cfe3d6;font-size:.8rem;line-height:1.5;max-width:80ch}
+    .bk-wrap-body{padding:1.2rem 0 0;animation:bkIn .22s ease}
     .bk-btn{display:inline-flex;align-items:center;gap:.4rem;padding:.5rem .9rem;border-radius:9px;
       font-size:.8rem;font-weight:700;letter-spacing:.01em;text-decoration:none;border:1px solid transparent;
       cursor:pointer;transition:all var(--transition-base);white-space:nowrap;font-family:inherit;line-height:1.2}
@@ -457,16 +464,17 @@ author_profile: false
     .bk-how{margin-top:1.8rem;background:var(--white);border:1px solid var(--gray-200);border-radius:14px;
       padding:1.2rem 1.3rem;box-shadow:var(--shadow-sm)}
     .bk-how-title{display:flex;align-items:center;gap:.55rem;font-size:1.02rem;font-weight:800;
-      color:var(--gray-900);margin:0 0 .5rem}
+      color:var(--gray-900);margin:0;cursor:pointer;list-style:none}
+    .bk-how-title::-webkit-details-marker{display:none}
+    .bk-how-title::marker{content:""}
+    .bk-how-title:focus-visible{outline:2px solid var(--secondary-green);outline-offset:3px}
     .bk-how-title svg{width:17px;height:17px;color:var(--gold-accent);flex:0 0 17px}
-    .bk-how-note{font-size:.83rem;line-height:1.6;color:#4b5563;margin:0 0 1rem;max-width:80ch}
-    .bk-how-grid{display:grid;gap:.75rem}
+    .bk-how-chev{margin-left:auto;color:var(--secondary-green);transition:transform var(--transition-base)}
+    .bk-how[open] .bk-how-chev{transform:rotate(180deg)}
+    .bk-how-grid{display:grid;gap:.75rem;margin-top:1rem;animation:bkIn .22s ease}
     .bk-how-item{background:var(--gray-50);border:1px solid var(--gray-100);border-left:3px solid var(--primary-green);
       border-radius:0 10px 10px 0;padding:.75rem .9rem}
     .bk-how-item .bk-cite-label{color:var(--primary-green)}
-    .bk-how-tpl{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.72rem;line-height:1.65;
-      color:var(--gray-700);word-break:break-word;margin:0}
-    .bk-how-tpl em{color:var(--primary-green);font-style:normal;font-weight:700}
     @media (max-width:860px){
       .bk-ch-head{flex-wrap:wrap;gap:.6rem .75rem;padding:.8rem .85rem}
       .bk-ch-main{flex:1 1 0}
@@ -503,7 +511,7 @@ author_profile: false
             <div class="pub-card-text">
               <div class="pub-card-topline">
                 <span class="pub-emoji">📘</span>
-                <span class="pub-badge" id="book-badge">Free download</span>
+                <span class="pub-pill" data-en="VOLUME 1" data-es="VOLUMEN 1">VOLUME 1</span>
               </div>
 
               <h3 class="pub-item-title" id="book-title">
@@ -532,18 +540,17 @@ author_profile: false
         </article>
       </div>
 
-      <!-- VOLUME 1 — CHAPTERS -->
-      <div class="bk-subhead">
-        <span class="pub-pill" data-en="VOLUME 1" data-es="VOLUMEN 1">VOLUME 1</span>
-        <h3 class="bk-subtitle" data-en="Chapters" data-es="Capítulos">Chapters</h3>
-      </div>
-
-      <p class="bk-intro" data-en="Every chapter can be opened in the browser or downloaded as a PDF." data-es="Cada capítulo puede abrirse en el navegador o descargarse en PDF.">Every chapter can be opened in the browser or downloaded as a PDF.</p>
-
-      <div class="bk-bar">
-        <div class="bk-bar-title" data-en="Chapter downloads" data-es="Descarga de capítulos">Chapter downloads</div>
-        <div class="bk-stats" data-en="17 chapters · 600 pages · free download" data-es="17 capítulos · 600 páginas · descarga gratuita">17 chapters · 600 pages · free download</div>
-      </div>
+      <!-- chapters, collapsed until the bar or the cover is clicked -->
+      <details class="bk-wrap" id="bk-wrap">
+        <summary class="bk-bar">
+          <span class="bk-bar-main">
+            <span class="bk-bar-title" data-en="Chapter downloads" data-es="Descarga de capítulos">Chapter downloads</span>
+            <span class="bk-stats" data-en="17 chapters · free download" data-es="17 capítulos · descarga gratuita">17 chapters · free download</span>
+            <svg class="bk-bar-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+          <span class="bk-bar-hint" data-en="Click here or on the book. Every chapter can be opened in the browser or downloaded as a PDF." data-es="Haz clic aquí o en el libro. Cada capítulo puede abrirse en el navegador o descargarse en PDF.">Click here or on the book. Every chapter can be opened in the browser or downloaded as a PDF.</span>
+        </summary>
+        <div class="bk-wrap-body">
 
       <div class="bk-tools">
         <div class="bk-search-wrap">
@@ -560,7 +567,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">01</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Interpreting signals in nature: buscadoras’ knowledge shaping search practices in Jalisco" data-es="Interpretando señales en la naturaleza: los saberes de mujeres buscadoras influenciando las prácticas de búsqueda en Jalisco">Interpreting signals in nature: buscadoras’ knowledge shaping search practices in Jalisco</span><span class="bk-ch-who" data-en="Miguel Moctezuma Barraza and Karina G. García Reyes" data-es="Miguel Moctezuma Barraza y Karina G. García Reyes">Miguel Moctezuma Barraza and Karina G. García Reyes</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 63–106</span><span class="bk-ch-size" data-en="38 pp · 0.9 MB" data-es="38 págs. · 0.9 MB">38 pp · 0.9 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 63–106</span><span class="bk-ch-size" data-en="38 pp" data-es="38 págs.">38 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Interpretando señales en la naturaleza: los saberes de mujeres buscadoras influenciando las prácticas de búsqueda en Jalisco" data-es="Interpreting signals in nature: buscadoras’ knowledge shaping search practices in Jalisco">Interpretando señales en la naturaleza: los saberes de mujeres buscadoras influenciando las prácticas de búsqueda en Jalisco</p>
@@ -578,7 +585,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">02</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Knowledge born of pain: testimonies and proposals of the searching mothers" data-es="Saberes nacidos del dolor: testimonios y propuestas de las madres buscadoras">Knowledge born of pain: testimonies and proposals of the searching mothers</span><span class="bk-ch-who" data-en="José Darío Pereira Benítez, Eduardo Santana Castellón, Tunuari Roberto Chávez González, Lourdes Andrea Linton Padilla and Gabriel Aquiles González Ruiz" data-es="José Darío Pereira Benítez, Eduardo Santana Castellón, Tunuari Roberto Chávez González, Lourdes Andrea Linton Padilla y Gabriel Aquiles González Ruiz">José Darío Pereira Benítez, Eduardo Santana Castellón, Tunuari Roberto Chávez González, Lourdes Andrea Linton Padilla and Gabriel Aquiles González Ruiz</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 107–132</span><span class="bk-ch-size" data-en="26 pp · 1.3 MB" data-es="26 págs. · 1.3 MB">26 pp · 1.3 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 107–132</span><span class="bk-ch-size" data-en="26 pp" data-es="26 págs.">26 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Saberes nacidos del dolor: testimonios y propuestas de las madres buscadoras" data-es="Knowledge born of pain: testimonies and proposals of the searching mothers">Saberes nacidos del dolor: testimonios y propuestas de las madres buscadoras</p>
@@ -596,7 +603,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">03</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Searching mothers (madres buscadoras) do citizen science" data-es="Las madres buscadoras hacen ciencia ciudadana">Searching mothers (madres buscadoras) do citizen science</span><span class="bk-ch-who" data-en="Eduardo Santana, Tunuari Roberto Chávez González, Lourdes Andrea Linton Padilla and Gabriel Aquiles González Ruiz" data-es="Eduardo Santana, Tunuari Roberto Chávez González, Lourdes Andrea Linton Padilla y Gabriel Aquiles González Ruiz">Eduardo Santana, Tunuari Roberto Chávez González, Lourdes Andrea Linton Padilla and Gabriel Aquiles González Ruiz</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 133–172</span><span class="bk-ch-size" data-en="40 pp · 2.2 MB" data-es="40 págs. · 2.2 MB">40 pp · 2.2 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 133–172</span><span class="bk-ch-size" data-en="40 pp" data-es="40 págs.">40 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Las madres buscadoras hacen ciencia ciudadana" data-es="Searching mothers (madres buscadoras) do citizen science">Las madres buscadoras hacen ciencia ciudadana</p>
@@ -615,7 +622,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">04</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Forensic experimentation: the story of a project" data-es="Experimentación forense: la historia de un proyecto">Forensic experimentation: the story of a project</span><span class="bk-ch-who" data-en="COBUPEJ" data-es="COBUPEJ">COBUPEJ</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 173–196</span><span class="bk-ch-size" data-en="24 pp · 3.5 MB" data-es="24 págs. · 3.5 MB">24 pp · 3.5 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 173–196</span><span class="bk-ch-size" data-en="24 pp" data-es="24 págs.">24 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Experimentación forense: la historia de un proyecto" data-es="Forensic experimentation: the story of a project">Experimentación forense: la historia de un proyecto</p>
@@ -634,7 +641,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">05</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Feeling the wind and looking at the sky to find you on the ground: reading climatic-meteorological conditions and other natural features as a tool for field search and the identification of disappeared persons" data-es="Sentir el viento y mirar al cielo para encontrarte en tierra: la lectura de condiciones climato-meteorológicas y de otros aspectos naturales como herramienta para la búsqueda en campo y la identificación de personas desaparecidas">Feeling the wind and looking at the sky to find you on the ground: reading climatic-meteorological conditions and other natural features as a tool for field search and the identification of disappeared persons</span><span class="bk-ch-who" data-en="José Darío Pereira Benítez and Luz Adriana Vizcaíno Rodríguez" data-es="José Darío Pereira Benítez y Luz Adriana Vizcaíno Rodríguez">José Darío Pereira Benítez and Luz Adriana Vizcaíno Rodríguez</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 197–228</span><span class="bk-ch-size" data-en="32 pp · 2.0 MB" data-es="32 págs. · 2.0 MB">32 pp · 2.0 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 197–228</span><span class="bk-ch-size" data-en="32 pp" data-es="32 págs.">32 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Sentir el viento y mirar al cielo para encontrarte en tierra: la lectura de condiciones climato-meteorológicas y de otros aspectos naturales como herramienta para la búsqueda en campo y la identificación de personas desaparecidas" data-es="Feeling the wind and looking at the sky to find you on the ground: reading climatic-meteorological conditions and other natural features as a tool for field search and the identification of disappeared persons">Sentir el viento y mirar al cielo para encontrarte en tierra: la lectura de condiciones climato-meteorológicas y de otros aspectos naturales como herramienta para la búsqueda en campo y la identificación de personas desaparecidas</p>
@@ -653,7 +660,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">06</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Experimental forensic observation using high-resolution geophysical prospecting techniques" data-es="Observación forense experimental utilizando técnicas de prospección geofísica de alta resolución">Experimental forensic observation using high-resolution geophysical prospecting techniques</span><span class="bk-ch-who" data-en="Anna Caccavari Garza, Martín Cárdenas Soto, Gerardo Cifuentes Nava, David Escobedo Zenil, José Antonio Martínez González and Jesús Sánchez González" data-es="Anna Caccavari Garza, Martín Cárdenas Soto, Gerardo Cifuentes Nava, David Escobedo Zenil, José Antonio Martínez González y Jesús Sánchez González">Anna Caccavari Garza, Martín Cárdenas Soto, Gerardo Cifuentes Nava, David Escobedo Zenil, José Antonio Martínez González and Jesús Sánchez González</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 229–268</span><span class="bk-ch-size" data-en="40 pp · 2.1 MB" data-es="40 págs. · 2.1 MB">40 pp · 2.1 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 229–268</span><span class="bk-ch-size" data-en="40 pp" data-es="40 págs.">40 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Observación forense experimental utilizando técnicas de prospección geofísica de alta resolución" data-es="Experimental forensic observation using high-resolution geophysical prospecting techniques">Observación forense experimental utilizando técnicas de prospección geofísica de alta resolución</p>
@@ -671,7 +678,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">07</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="An electric shock can revive you; we believe it can also find you. Applied geophysics" data-es="Una descarga eléctrica te puede revivir, creemos que también te puede encontrar. Geofísica aplicada">An electric shock can revive you; we believe it can also find you. Applied geophysics</span><span class="bk-ch-who" data-en="Uriel Gutiérrez Mendiola, Adán González Nisino and Ciclos GIP" data-es="Uriel Gutiérrez Mendiola, Adán González Nisino y Ciclos GIP">Uriel Gutiérrez Mendiola, Adán González Nisino and Ciclos GIP</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 269–288</span><span class="bk-ch-size" data-en="20 pp · 1.9 MB" data-es="20 págs. · 1.9 MB">20 pp · 1.9 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 269–288</span><span class="bk-ch-size" data-en="20 pp" data-es="20 págs.">20 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Una descarga eléctrica te puede revivir, creemos que también te puede encontrar. Geofísica aplicada" data-es="An electric shock can revive you; we believe it can also find you. Applied geophysics">Una descarga eléctrica te puede revivir, creemos que también te puede encontrar. Geofísica aplicada</p>
@@ -689,7 +696,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">08</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Reflections of a search: the use of Ground-Penetrating Radar (GPR) for the detection of clandestine burials" data-es="Reflejos de una búsqueda: el uso del Radar de Penetración Terrestre (GPR) para la detección de inhumaciones clandestinas">Reflections of a search: the use of Ground-Penetrating Radar (GPR) for the detection of clandestine burials</span><span class="bk-ch-who" data-en="Melina Gil Meza, Uriel Gutiérrez Mendiola and Dorian Quezada Esparza" data-es="Melina Gil Meza, Uriel Gutiérrez Mendiola y Dorian Quezada Esparza">Melina Gil Meza, Uriel Gutiérrez Mendiola and Dorian Quezada Esparza</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 289–322</span><span class="bk-ch-size" data-en="34 pp · 3.4 MB" data-es="34 págs. · 3.4 MB">34 pp · 3.4 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 289–322</span><span class="bk-ch-size" data-en="34 pp" data-es="34 págs.">34 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Reflejos de una búsqueda: el uso del Radar de Penetración Terrestre (GPR) para la detección de inhumaciones clandestinas" data-es="Reflections of a search: the use of Ground-Penetrating Radar (GPR) for the detection of clandestine burials">Reflejos de una búsqueda: el uso del Radar de Penetración Terrestre (GPR) para la detección de inhumaciones clandestinas</p>
@@ -708,7 +715,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">09</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Terrain morphology through drone photogrammetry: opportunities and limitations for the detection of clandestine graves" data-es="Morfología del terreno mediante fotogrametría con drones: oportunidades y limitaciones para la detección de fosas clandestinas">Terrain morphology through drone photogrammetry: opportunities and limitations for the detection of clandestine graves</span><span class="bk-ch-who" data-en="Ana Josselinne Alegre Mondragón and José Luis Silván Cárdenas" data-es="Ana Josselinne Alegre Mondragón y José Luis Silván Cárdenas">Ana Josselinne Alegre Mondragón and José Luis Silván Cárdenas</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 323–354</span><span class="bk-ch-size" data-en="32 pp · 3.8 MB" data-es="32 págs. · 3.8 MB">32 pp · 3.8 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 323–354</span><span class="bk-ch-size" data-en="32 pp" data-es="32 págs.">32 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Morfología del terreno mediante fotogrametría con drones: oportunidades y limitaciones para la detección de fosas clandestinas" data-es="Terrain morphology through drone photogrammetry: opportunities and limitations for the detection of clandestine graves">Morfología del terreno mediante fotogrametría con drones: oportunidades y limitaciones para la detección de fosas clandestinas</p>
@@ -726,7 +733,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">10</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Design and application of spectral indices for the detection of clandestine graves" data-es="Diseño y aplicación de índices espectrales para la detección de fosas clandestinas">Design and application of spectral indices for the detection of clandestine graves</span><span class="bk-ch-who" data-en="José Luis Silván Cárdenas, Anna Josselinne Alegre Mondragón, Edgar Daniel Ramírez Aceves, David Rogelio Campos Cornejo and Maximiano Bautista Andalón" data-es="José Luis Silván Cárdenas, Anna Josselinne Alegre Mondragón, Edgar Daniel Ramírez Aceves, David Rogelio Campos Cornejo y Maximiano Bautista Andalón">José Luis Silván Cárdenas, Anna Josselinne Alegre Mondragón, Edgar Daniel Ramírez Aceves, David Rogelio Campos Cornejo and Maximiano Bautista Andalón</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 355–392</span><span class="bk-ch-size" data-en="38 pp · 2.3 MB" data-es="38 págs. · 2.3 MB">38 pp · 2.3 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 355–392</span><span class="bk-ch-size" data-en="38 pp" data-es="38 págs.">38 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Diseño y aplicación de índices espectrales para la detección de fosas clandestinas" data-es="Design and application of spectral indices for the detection of clandestine graves">Diseño y aplicación de índices espectrales para la detección de fosas clandestinas</p>
@@ -744,7 +751,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">11</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="The warmth of the people we are missing: searching for clandestine graves with drones equipped with a thermographic camera" data-es="El calor de las personas que nos faltan: búsqueda de fosas clandestinas con apoyo de drones equipados con cámara termográfica">The warmth of the people we are missing: searching for clandestine graves with drones equipped with a thermographic camera</span><span class="bk-ch-who" data-en="Sergio Alberto Quezada Godinez, Andrea Ponce Chávez, José Luis Silván Cárdenas and Tunuari Roberto Chávez González" data-es="Sergio Alberto Quezada Godinez, Andrea Ponce Chávez, José Luis Silván Cárdenas y Tunuari Roberto Chávez González">Sergio Alberto Quezada Godinez, Andrea Ponce Chávez, José Luis Silván Cárdenas and Tunuari Roberto Chávez González</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 393–430</span><span class="bk-ch-size" data-en="38 pp · 3.9 MB" data-es="38 págs. · 3.9 MB">38 pp · 3.9 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 393–430</span><span class="bk-ch-size" data-en="38 pp" data-es="38 págs.">38 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="El calor de las personas que nos faltan: búsqueda de fosas clandestinas con apoyo de drones equipados con cámara termográfica" data-es="The warmth of the people we are missing: searching for clandestine graves with drones equipped with a thermographic camera">El calor de las personas que nos faltan: búsqueda de fosas clandestinas con apoyo de drones equipados con cámara termográfica</p>
@@ -763,7 +770,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">12</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Unearthing the truth: analysis of changes in the chemical signature and soil characteristics at clandestine burial sites" data-es="Desenterrando la verdad: análisis de cambios en la firma química y características del suelo en sitios de inhumación clandestina">Unearthing the truth: analysis of changes in the chemical signature and soil characteristics at clandestine burial sites</span><span class="bk-ch-who" data-en="Enrique Martin Ortega Higareda, Sonia Citlalli Saucedo Aguilar, Tunuari Roberto Chávez González and Luis Manuel Martínez Rivera" data-es="Enrique Martin Ortega Higareda, Sonia Citlalli Saucedo Aguilar, Tunuari Roberto Chávez González y Luis Manuel Martínez Rivera">Enrique Martin Ortega Higareda, Sonia Citlalli Saucedo Aguilar, Tunuari Roberto Chávez González and Luis Manuel Martínez Rivera</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 431–490</span><span class="bk-ch-size" data-en="60 pp · 6.4 MB" data-es="60 págs. · 6.4 MB">60 pp · 6.4 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 431–490</span><span class="bk-ch-size" data-en="60 pp" data-es="60 págs.">60 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Desenterrando la verdad: análisis de cambios en la firma química y características del suelo en sitios de inhumación clandestina" data-es="Unearthing the truth: analysis of changes in the chemical signature and soil characteristics at clandestine burial sites">Desenterrando la verdad: análisis de cambios en la firma química y características del suelo en sitios de inhumación clandestina</p>
@@ -781,7 +788,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">13</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Life after life: forensic botany applied to the study and detection of clandestine graves" data-es="La vida después de la vida: botánica forense aplicada al estudio y detección de fosas clandestinas">Life after life: forensic botany applied to the study and detection of clandestine graves</span><span class="bk-ch-who" data-en="Ramón Cuevas Guzmán, María L. Baca Cruz, José Guadalupe Robles Estrada, Fátima Yazmin Salcedo García and Melina Gil Meza" data-es="Ramón Cuevas Guzmán, María L. Baca Cruz, José Guadalupe Robles Estrada, Fátima Yazmin Salcedo García y Melina Gil Meza">Ramón Cuevas Guzmán, María L. Baca Cruz, José Guadalupe Robles Estrada, Fátima Yazmin Salcedo García and Melina Gil Meza</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 491–536</span><span class="bk-ch-size" data-en="46 pp · 2.7 MB" data-es="46 págs. · 2.7 MB">46 pp · 2.7 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 491–536</span><span class="bk-ch-size" data-en="46 pp" data-es="46 págs.">46 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="La vida después de la vida: botánica forense aplicada al estudio y detección de fosas clandestinas" data-es="Life after life: forensic botany applied to the study and detection of clandestine graves">La vida después de la vida: botánica forense aplicada al estudio y detección de fosas clandestinas</p>
@@ -799,7 +806,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">14</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Who are the first to detect a clandestine burial? Forensic entomology: insects and their relationship with clandestine graves" data-es="¿Quiénes son los primeros en detectar una inhumación clandestina? Entomología forense: los insectos y su relación con las fosas clandestinas">Who are the first to detect a clandestine burial? Forensic entomology: insects and their relationship with clandestine graves</span><span class="bk-ch-who" data-en="Jessica Berenice López Caro, Lizbeth G. Romero Aguilar, José L. Navarrete Heredia and María L. Baca Cruz" data-es="Jessica Berenice López Caro, Lizbeth G. Romero Aguilar, José L. Navarrete Heredia y María L. Baca Cruz">Jessica Berenice López Caro, Lizbeth G. Romero Aguilar, José L. Navarrete Heredia and María L. Baca Cruz</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 537–576</span><span class="bk-ch-size" data-en="40 pp · 1.5 MB" data-es="40 págs. · 1.5 MB">40 pp · 1.5 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 537–576</span><span class="bk-ch-size" data-en="40 pp" data-es="40 págs.">40 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="¿Quiénes son los primeros en detectar una inhumación clandestina? Entomología forense: los insectos y su relación con las fosas clandestinas" data-es="Who are the first to detect a clandestine burial? Forensic entomology: insects and their relationship with clandestine graves">¿Quiénes son los primeros en detectar una inhumación clandestina? Entomología forense: los insectos y su relación con las fosas clandestinas</p>
@@ -818,7 +825,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">15</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Comparative taphonomic analysis: deposition and its relationship with the estimation of the post-mortem interval" data-es="Análisis tafonómico comparativo: la deposición y su relación con la estimación del intervalo post mortem">Comparative taphonomic analysis: deposition and its relationship with the estimation of the post-mortem interval</span><span class="bk-ch-who" data-en="Dalia Nonatzin Miranda Díaz" data-es="Dalia Nonatzin Miranda Díaz">Dalia Nonatzin Miranda Díaz</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 577–600</span><span class="bk-ch-size" data-en="24 pp · 3.5 MB" data-es="24 págs. · 3.5 MB">24 pp · 3.5 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 577–600</span><span class="bk-ch-size" data-en="24 pp" data-es="24 págs.">24 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Análisis tafonómico comparativo: la deposición y su relación con la estimación del intervalo post mortem" data-es="Comparative taphonomic analysis: deposition and its relationship with the estimation of the post-mortem interval">Análisis tafonómico comparativo: la deposición y su relación con la estimación del intervalo post mortem</p>
@@ -837,7 +844,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">16</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Simulation of clandestine graves as a teaching strategy in the training of forensic scientists: participation of Forensic Science undergraduate students in the collaboration project between COBUPEJ and the University of Guadalajara" data-es="Simulación de fosas clandestinas como estrategia didáctica en la formación del científico forense: participación del estudiantado de la Licenciatura en Ciencias Forenses en el proyecto de vinculación entre la COBUPEJ y la Universidad de Guadalajara">Simulation of clandestine graves as a teaching strategy in the training of forensic scientists: participation of Forensic Science undergraduate students in the collaboration project between COBUPEJ and the University of Guadalajara</span><span class="bk-ch-who" data-en="Denisse Ayala Hernández, Alma Cristina Padilla de Anda and Teresita de Jesús Bustamante Flores" data-es="Denisse Ayala Hernández, Alma Cristina Padilla de Anda y Teresita de Jesús Bustamante Flores">Denisse Ayala Hernández, Alma Cristina Padilla de Anda and Teresita de Jesús Bustamante Flores</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 601–632</span><span class="bk-ch-size" data-en="32 pp · 1.9 MB" data-es="32 págs. · 1.9 MB">32 pp · 1.9 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 601–632</span><span class="bk-ch-size" data-en="32 pp" data-es="32 págs.">32 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Simulación de fosas clandestinas como estrategia didáctica en la formación del científico forense: participación del estudiantado de la Licenciatura en Ciencias Forenses en el proyecto de vinculación entre la COBUPEJ y la Universidad de Guadalajara" data-es="Simulation of clandestine graves as a teaching strategy in the training of forensic scientists: participation of Forensic Science undergraduate students in the collaboration project between COBUPEJ and the University of Guadalajara">Simulación de fosas clandestinas como estrategia didáctica en la formación del científico forense: participación del estudiantado de la Licenciatura en Ciencias Forenses en el proyecto de vinculación entre la COBUPEJ y la Universidad de Guadalajara</p>
@@ -856,7 +863,7 @@ author_profile: false
         <summary class="bk-ch-head">
           <span class="bk-num">17</span>
           <span class="bk-ch-main"><span class="bk-ch-title" data-en="Interpreting nature to find those who are missing: integration of a multidisciplinary study and perspectives" data-es="Interpretar la naturaleza para encontrar a quienes nos faltan: integración de un estudio multidisciplinario y perspectivas">Interpreting nature to find those who are missing: integration of a multidisciplinary study and perspectives</span><span class="bk-ch-who" data-en="Tunuari Roberto Chávez González, Enrique José Jardel Peláez and Sergio Alberto Quezada Godinez" data-es="Tunuari Roberto Chávez González, Enrique José Jardel Peláez y Sergio Alberto Quezada Godinez">Tunuari Roberto Chávez González, Enrique José Jardel Peláez and Sergio Alberto Quezada Godinez</span></span>
-          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 633–666</span><span class="bk-ch-size" data-en="36 pp · 1.3 MB" data-es="36 págs. · 1.3 MB">36 pp · 1.3 MB</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
+          <span class="bk-ch-side"><span class="bk-ch-meta"><span class="bk-ch-pages">pp. 633–666</span><span class="bk-ch-size" data-en="36 pp" data-es="36 págs.">36 pp</span></span><svg class="bk-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></span>
         </summary>
         <div class="bk-ch-body">
           <p class="bk-alt" data-en="Interpretar la naturaleza para encontrar a quienes nos faltan: integración de un estudio multidisciplinario y perspectivas" data-es="Interpreting nature to find those who are missing: integration of a multidisciplinary study and perspectives">Interpretar la naturaleza para encontrar a quienes nos faltan: integración de un estudio multidisciplinario y perspectivas</p>
@@ -872,24 +879,22 @@ author_profile: false
       </details>
         <div class="bk-empty" id="bk-empty" hidden data-en="No chapters match that search." data-es="Ningún capítulo coincide con esa búsqueda.">No chapters match that search.</div>
       </div>
+        </div>
+      </details>
 
-      <div class="bk-how">
-        <h3 class="bk-how-title">
+      <details class="bk-how">
+        <summary class="bk-how-title">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21c3-4 6-2 9-6"/><path d="M9 9h6"/><path d="M9 13h4"/><path d="M5 3h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 3V5a2 2 0 0 1 1-2z"/></svg>
-          <span class="" data-en="How to cite" data-es="Cómo citar">How to cite</span>
-        </h3>
-        <p class="bk-how-note" data-en="References follow Harvard style. Each chapter entry gives the original Spanish title followed by an English translation in square brackets, matching the style used in FOUND's academic references. Open any chapter above to copy its full reference." data-es="Las referencias siguen el formato Harvard. Cada entrada ofrece el título original en español seguido de su traducción al inglés entre corchetes, siguiendo el estilo empleado en las referencias académicas de FOUND. Abre cualquier capítulo para copiar su referencia completa.">References follow Harvard style. Each chapter entry gives the original Spanish title followed by an English translation in square brackets, matching the style used in FOUND's academic references. Open any chapter above to copy its full reference.</p>
+          <span data-en="How to cite" data-es="Cómo citar">How to cite</span>
+          <svg class="bk-how-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </summary>
         <div class="bk-how-grid">
           <div class="bk-how-item">
-            <div class="bk-cite-label"><span class="" data-en="The whole volume" data-es="El volumen completo">The whole volume</span><button type="button" class="bk-copy" data-copy-whole data-en="Copy" data-es="Copiar">Copy</button></div>
+            <div class="bk-cite-label"><span data-en="The whole volume" data-es="El volumen completo">The whole volume</span><button type="button" class="bk-copy" data-copy-whole data-en="Copy" data-es="Copiar">Copy</button></div>
             <p class="bk-cite-text" id="bk-whole-cite">Ávila Barrientos, V. H., Chávez González, T. R. and Silván Cárdenas, J. L. (eds.) (2024) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco.</p>
           </div>
-          <div class="bk-how-item">
-            <div class="bk-cite-label"><span class="" data-en="A single chapter" data-es="Un capítulo">A single chapter</span></div>
-            <p class="bk-how-tpl" data-html-en="&lt;em&gt;Author(s)&lt;/em&gt; (2024) &amp;lsquo;&lt;em&gt;Spanish title&lt;/em&gt;&amp;rsquo; [&lt;em&gt;English title&lt;/em&gt;], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. &lt;em&gt;page range&lt;/em&gt;." data-html-es="&lt;em&gt;Autoría&lt;/em&gt; (2024) &amp;lsquo;&lt;em&gt;Título en español&lt;/em&gt;&amp;rsquo; [&lt;em&gt;Título en inglés&lt;/em&gt;], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. &lt;em&gt;páginas&lt;/em&gt;."><em>Author(s)</em> (2024) &lsquo;<em>Spanish title</em>&rsquo; [<em>English title</em>], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. <em>page range</em>.</p>
-          </div>
         </div>
-      </div>
+      </details>
     </section>
 
     <!-- ARTICLES -->
@@ -1027,7 +1032,6 @@ author_profile: false
       const translations = {
         en: {
           'title-book': 'The Book',
-          'book-badge': 'Free download',
           'book-desc': 'This volume brings together biological, physical, and earth sciences to design and test methods for detecting clandestine graves.',
           'book-desc2': 'Volume 2 and Volume 3 will be presented in December 2026.',
           'pill-articles': 'ARTICLES',
@@ -1055,7 +1059,6 @@ author_profile: false
         },
         es: {
           'title-book': 'El libro',
-          'book-badge': 'Arbitraje científico de capítulos; Descarga gratuita',
           'book-desc': 'Este volumen reúne ciencias biológicas, físicas y de la Tierra para diseñar y probar métodos de detección de fosas clandestinas.',
           'book-desc2': 'El Volumen 2 y el Volumen 3 serán presentados en diciembre de 2026.',
           'pill-articles': 'ARTÍCULOS',
@@ -1084,7 +1087,7 @@ author_profile: false
       };
 
       const ids = [
-        'title-book','book-badge','book-desc','book-desc2',
+        'title-book','book-desc','book-desc2',
         'pill-articles','title-articles',
         'a1-badge','a2-badge','a3-badge',
         'a1-title','a1-meta','a2-title','a2-meta','a3-title','a3-meta',
@@ -1145,6 +1148,9 @@ author_profile: false
     var lang = 'en';
     var COUNT = {en:'%s of 17 shown', es:'%s de 17 visibles'};
     var DONE  = {en:'Copied', es:'Copiado'};
+    var COVER = {en:'Show the chapter downloads', es:'Mostrar la descarga de capítulos'};
+    var wrap  = document.getElementById('bk-wrap');
+    var cover = sec.querySelector('.pub-card-media');
 
     function chapters(){ return [].slice.call(list.querySelectorAll('.bk-ch')); }
     function visible(){ return chapters().filter(function(e){ return e.style.display !== 'none'; }); }
@@ -1160,6 +1166,7 @@ author_profile: false
         var txt = el.getAttribute('data-' + lang);
         if(txt !== null) el.textContent = txt;
       });
+      if(cover) cover.setAttribute('aria-label', COVER[lang]);
       syncToggle();
       updateCount();
     }
@@ -1237,6 +1244,21 @@ author_profile: false
     document.querySelectorAll('.lang-btn').forEach(function(b){
       b.addEventListener('click', function(){ setLang(this.dataset.lang); });
     });
+
+    // "click here or on the book" — the cover opens the same disclosure as the bar
+    if(wrap && cover){
+      var flip = function(){
+        wrap.open = !wrap.open;
+        if(wrap.open && wrap.scrollIntoView) wrap.scrollIntoView({behavior:'smooth', block:'start'});
+      };
+      cover.setAttribute('role','button');
+      cover.setAttribute('tabindex','0');
+      cover.classList.add('bk-cover-click');
+      cover.addEventListener('click', flip);
+      cover.addEventListener('keydown', function(ev){
+        if(ev.key === 'Enter' || ev.key === ' ' || ev.key === 'Spacebar'){ ev.preventDefault(); flip(); }
+      });
+    }
 
     sec.classList.add('bk-js');
     try{
