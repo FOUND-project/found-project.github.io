@@ -592,7 +592,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Moctezuma Barraza, M. and García Reyes, K. G. (2024) 'Interpretando señales en la naturaleza: los saberes de mujeres buscadoras influenciando las prácticas de búsqueda en Jalisco' [Interpreting signals in nature: buscadoras’ knowledge shaping search practices in Jalisco], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 63–106.</p>
+            <p class="bk-cite-text">Moctezuma Barraza, M. and García Reyes, K. G. (2024) 'Interpretando señales en la naturaleza: los saberes de mujeres buscadoras influenciando las prácticas de búsqueda en Jalisco' [Interpreting signals in nature: buscadoras’ knowledge shaping search practices in Jalisco], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 63–106.</p>
           </div>
         </div>
       </details>
@@ -610,7 +610,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Pereira Benítez, J. D., Santana Castellón, E., Chávez González, T. R., Linton Padilla, L. A. and González Ruiz, G. A. (2024) 'Saberes nacidos del dolor: testimonios y propuestas de las madres buscadoras' [Knowledge born of pain: testimonies and proposals of the searching mothers], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 107–132.</p>
+            <p class="bk-cite-text">Pereira Benítez, J. D., Santana Castellón, E., Chávez González, T. R., Linton Padilla, L. A. and González Ruiz, G. A. (2024) 'Saberes nacidos del dolor: testimonios y propuestas de las madres buscadoras' [Knowledge born of pain: testimonies and proposals of the searching mothers], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 107–132.</p>
           </div>
         </div>
       </details>
@@ -628,7 +628,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Santana, E., Chávez González, T. R., Linton Padilla, L. A. and González Ruiz, G. A. (2024) 'Las madres buscadoras hacen ciencia ciudadana' [Searching mothers (madres buscadoras) do citizen science], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 133–172.</p>
+            <p class="bk-cite-text">Santana, E., Chávez González, T. R., Linton Padilla, L. A. and González Ruiz, G. A. (2024) 'Las madres buscadoras hacen ciencia ciudadana' [Searching mothers (madres buscadoras) do citizen science], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 133–172.</p>
           </div>
         </div>
       </details>
@@ -647,7 +647,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Comisión de Búsqueda de Personas del Estado de Jalisco (COBUPEJ) (2024) 'Experimentación forense: la historia de un proyecto' [Forensic experimentation: the story of a project], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 173–196.</p>
+            <p class="bk-cite-text">Comisión de Búsqueda de Personas del Estado de Jalisco (COBUPEJ) (2024) 'Experimentación forense: la historia de un proyecto' [Forensic experimentation: the story of a project], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 173–196.</p>
           </div>
         </div>
       </details>
@@ -666,7 +666,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Pereira Benítez, J. D. and Vizcaíno Rodríguez, L. A. (2024) 'Sentir el viento y mirar al cielo para encontrarte en tierra: la lectura de condiciones climato-meteorológicas y de otros aspectos naturales como herramienta para la búsqueda en campo y la identificación de personas desaparecidas' [Feeling the wind and looking at the sky to find you on the ground: reading climatic-meteorological conditions and other natural features as a tool for field search and the identification of disappeared persons], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 197–228.</p>
+            <p class="bk-cite-text">Pereira Benítez, J. D. and Vizcaíno Rodríguez, L. A. (2024) 'Sentir el viento y mirar al cielo para encontrarte en tierra: la lectura de condiciones climato-meteorológicas y de otros aspectos naturales como herramienta para la búsqueda en campo y la identificación de personas desaparecidas' [Feeling the wind and looking at the sky to find you on the ground: reading climatic-meteorological conditions and other natural features as a tool for field search and the identification of disappeared persons], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 197–228.</p>
           </div>
         </div>
       </details>
@@ -685,7 +685,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Caccavari Garza, A., Cárdenas Soto, M., Cifuentes Nava, G., Escobedo Zenil, D., Martínez González, J. A. and Sánchez González, J. (2024) 'Observación forense experimental utilizando técnicas de prospección geofísica de alta resolución' [Experimental forensic observation using high-resolution geophysical prospecting techniques], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 229–268.</p>
+            <p class="bk-cite-text">Caccavari Garza, A., Cárdenas Soto, M., Cifuentes Nava, G., Escobedo Zenil, D., Martínez González, J. A. and Sánchez González, J. (2024) 'Observación forense experimental utilizando técnicas de prospección geofísica de alta resolución' [Experimental forensic observation using high-resolution geophysical prospecting techniques], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 229–268.</p>
           </div>
         </div>
       </details>
@@ -703,7 +703,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Gutiérrez Mendiola, U., González Nisino, A. and Ciclos GIP (2024) 'Una descarga eléctrica te puede revivir, creemos que también te puede encontrar. Geofísica aplicada' [An electric shock can revive you; we believe it can also find you. Applied geophysics], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 269–288.</p>
+            <p class="bk-cite-text">Gutiérrez Mendiola, U., González Nisino, A. and Ciclos GIP (2024) 'Una descarga eléctrica te puede revivir, creemos que también te puede encontrar. Geofísica aplicada' [An electric shock can revive you; we believe it can also find you. Applied geophysics], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 269–288.</p>
           </div>
         </div>
       </details>
@@ -721,7 +721,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Gil Meza, M., Gutiérrez Mendiola, U. and Quezada Esparza, D. (2024) 'Reflejos de una búsqueda: el uso del Radar de Penetración Terrestre (GPR) para la detección de inhumaciones clandestinas' [Reflections of a search: the use of Ground-Penetrating Radar (GPR) for the detection of clandestine burials], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 289–322.</p>
+            <p class="bk-cite-text">Gil Meza, M., Gutiérrez Mendiola, U. and Quezada Esparza, D. (2024) 'Reflejos de una búsqueda: el uso del Radar de Penetración Terrestre (GPR) para la detección de inhumaciones clandestinas' [Reflections of a search: the use of Ground-Penetrating Radar (GPR) for the detection of clandestine burials], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 289–322.</p>
           </div>
         </div>
       </details>
@@ -740,7 +740,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Alegre Mondragón, A. J. and Silván Cárdenas, J. L. (2024) 'Morfología del terreno mediante fotogrametría con drones: oportunidades y limitaciones para la detección de fosas clandestinas' [Terrain morphology through drone photogrammetry: opportunities and limitations for the detection of clandestine graves], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 323–354.</p>
+            <p class="bk-cite-text">Alegre Mondragón, A. J. and Silván Cárdenas, J. L. (2024) 'Morfología del terreno mediante fotogrametría con drones: oportunidades y limitaciones para la detección de fosas clandestinas' [Terrain morphology through drone photogrammetry: opportunities and limitations for the detection of clandestine graves], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 323–354.</p>
           </div>
         </div>
       </details>
@@ -758,7 +758,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Silván Cárdenas, J. L., Alegre Mondragón, A. J., Ramírez Aceves, E. D., Campos Cornejo, D. R. and Bautista Andalón, M. (2024) 'Diseño y aplicación de índices espectrales para la detección de fosas clandestinas' [Design and application of spectral indices for the detection of clandestine graves], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 355–392.</p>
+            <p class="bk-cite-text">Silván Cárdenas, J. L., Alegre Mondragón, A. J., Ramírez Aceves, E. D., Campos Cornejo, D. R. and Bautista Andalón, M. (2024) 'Diseño y aplicación de índices espectrales para la detección de fosas clandestinas' [Design and application of spectral indices for the detection of clandestine graves], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 355–392.</p>
           </div>
         </div>
       </details>
@@ -776,7 +776,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Quezada Godinez, S. A., Ponce Chávez, A., Silván Cárdenas, J. L. and Chávez González, T. R. (2024) 'El calor de las personas que nos faltan: búsqueda de fosas clandestinas con apoyo de drones equipados con cámara termográfica' [The warmth of the people we are missing: searching for clandestine graves with drones equipped with a thermographic camera], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 393–430.</p>
+            <p class="bk-cite-text">Quezada Godinez, S. A., Ponce Chávez, A., Silván Cárdenas, J. L. and Chávez González, T. R. (2024) 'El calor de las personas que nos faltan: búsqueda de fosas clandestinas con apoyo de drones equipados con cámara termográfica' [The warmth of the people we are missing: searching for clandestine graves with drones equipped with a thermographic camera], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 393–430.</p>
           </div>
         </div>
       </details>
@@ -795,7 +795,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Ortega Higareda, E. M., Saucedo Aguilar, S. C., Chávez González, T. R. and Martínez Rivera, L. M. (2024) 'Desenterrando la verdad: análisis de cambios en la firma química y características del suelo en sitios de inhumación clandestina' [Unearthing the truth: analysis of changes in the chemical signature and soil characteristics at clandestine burial sites], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 431–490.</p>
+            <p class="bk-cite-text">Ortega Higareda, E. M., Saucedo Aguilar, S. C., Chávez González, T. R. and Martínez Rivera, L. M. (2024) 'Desenterrando la verdad: análisis de cambios en la firma química y características del suelo en sitios de inhumación clandestina' [Unearthing the truth: analysis of changes in the chemical signature and soil characteristics at clandestine burial sites], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 431–490.</p>
           </div>
         </div>
       </details>
@@ -813,7 +813,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Cuevas Guzmán, R., Baca Cruz, M. L., Robles Estrada, J. G., Salcedo García, F. Y. and Gil Meza, M. (2024) 'La vida después de la vida: botánica forense aplicada al estudio y detección de fosas clandestinas' [Life after life: forensic botany applied to the study and detection of clandestine graves], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 491–536.</p>
+            <p class="bk-cite-text">Cuevas Guzmán, R., Baca Cruz, M. L., Robles Estrada, J. G., Salcedo García, F. Y. and Gil Meza, M. (2024) 'La vida después de la vida: botánica forense aplicada al estudio y detección de fosas clandestinas' [Life after life: forensic botany applied to the study and detection of clandestine graves], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 491–536.</p>
           </div>
         </div>
       </details>
@@ -831,7 +831,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">López Caro, J. B., Romero Aguilar, L. G., Navarrete Heredia, J. L. and Baca Cruz, M. L. (2024) '¿Quiénes son los primeros en detectar una inhumación clandestina? Entomología forense: los insectos y su relación con las fosas clandestinas' [Who are the first to detect a clandestine burial? Forensic entomology: insects and their relationship with clandestine graves], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 537–576.</p>
+            <p class="bk-cite-text">López Caro, J. B., Romero Aguilar, L. G., Navarrete Heredia, J. L. and Baca Cruz, M. L. (2024) '¿Quiénes son los primeros en detectar una inhumación clandestina? Entomología forense: los insectos y su relación con las fosas clandestinas' [Who are the first to detect a clandestine burial? Forensic entomology: insects and their relationship with clandestine graves], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 537–576.</p>
           </div>
         </div>
       </details>
@@ -850,7 +850,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Miranda Díaz, D. N. (2024) 'Análisis tafonómico comparativo: la deposición y su relación con la estimación del intervalo post mortem' [Comparative taphonomic analysis: deposition and its relationship with the estimation of the post-mortem interval], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 577–600.</p>
+            <p class="bk-cite-text">Miranda Díaz, D. N. (2024) 'Análisis tafonómico comparativo: la deposición y su relación con la estimación del intervalo post mortem' [Comparative taphonomic analysis: deposition and its relationship with the estimation of the post-mortem interval], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 577–600.</p>
           </div>
         </div>
       </details>
@@ -869,7 +869,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Ayala Hernández, D., Padilla de Anda, A. C. and Bustamante Flores, T. de J. (2024) 'Simulación de fosas clandestinas como estrategia didáctica en la formación del científico forense: participación del estudiantado de la Licenciatura en Ciencias Forenses en el proyecto de vinculación entre la COBUPEJ y la Universidad de Guadalajara' [Simulation of clandestine graves as a teaching strategy in the training of forensic scientists: participation of Forensic Science undergraduate students in the collaboration project between COBUPEJ and the University of Guadalajara], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 601–632.</p>
+            <p class="bk-cite-text">Ayala Hernández, D., Padilla de Anda, A. C. and Bustamante Flores, T. de J. (2024) 'Simulación de fosas clandestinas como estrategia didáctica en la formación del científico forense: participación del estudiantado de la Licenciatura en Ciencias Forenses en el proyecto de vinculación entre la COBUPEJ y la Universidad de Guadalajara' [Simulation of clandestine graves as a teaching strategy in the training of forensic scientists: participation of Forensic Science undergraduate students in the collaboration project between COBUPEJ and the University of Guadalajara], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 601–632.</p>
           </div>
         </div>
       </details>
@@ -888,7 +888,7 @@ author_profile: false
           </div>
           <div class="bk-cite">
             <div class="bk-cite-label"><span class="" data-en="Cite this chapter (Harvard)" data-es="Cómo citar este capítulo (Harvard)">Cite this chapter (Harvard)</span><button type="button" class="bk-copy" data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text">Chávez González, T. R., Jardel Peláez, E. J. and Quezada Godinez, S. A. (2024) 'Interpretar la naturaleza para encontrar a quienes nos faltan: integración de un estudio multidisciplinario y perspectivas' [Interpreting nature to find those who are missing: integration of a multidisciplinary study and perspectives], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco, pp. 633–666.</p>
+            <p class="bk-cite-text">Chávez González, T. R., Jardel Peláez, E. J. and Quezada Godinez, S. A. (2024) 'Interpretar la naturaleza para encontrar a quienes nos faltan: integración de un estudio multidisciplinario y perspectivas' [Interpreting nature to find those who are missing: integration of a multidisciplinary study and perspectives], in V. H. Ávila Barrientos, T. R. Chávez González and J. L. Silván Cárdenas (eds.) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo, pp. 633–666.</p>
           </div>
         </div>
       </details>
@@ -906,7 +906,7 @@ author_profile: false
         <div class="bk-how-grid">
           <div class="bk-how-item">
             <div class="bk-cite-label"><span data-en="The whole volume" data-es="El volumen completo">The whole volume</span><button type="button" class="bk-copy" data-copy-whole data-en="Copy" data-es="Copiar">Copy</button></div>
-            <p class="bk-cite-text" id="bk-whole-cite">Ávila Barrientos, V. H., Chávez González, T. R. and Silván Cárdenas, J. L. (eds.) (2024) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo / Gobierno del Estado de Jalisco.</p>
+            <p class="bk-cite-text" id="bk-whole-cite">Ávila Barrientos, V. H., Chávez González, T. R. and Silván Cárdenas, J. L. (eds.) (2024) Interpretar la naturaleza para encontrar a quienes nos faltan: ciencias biológicas, físicas y de la tierra aplicadas a la detección de inhumaciones clandestinas. Ciudad de México: CentroGeo.</p>
           </div>
         </div>
       </details>
