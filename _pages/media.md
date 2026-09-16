@@ -696,6 +696,16 @@ author_profile: false
     <section class="talks-section">
       <h2 id="talks-title">Talks</h2>
 
+      <a class="talk-card" href="https://aiforgood.itu.int/event/130000-missing-how-ai-is-helping-identify-disappeared-persons-in-mexico/" target="_blank" rel="noopener">
+        <div class="talk-title">ITU — AI for Good</div>
+        <span class="talk-link">130,000 Missing: How AI Is Helping Identify Disappeared Persons in Mexico</span>
+      </a>
+
+      <a class="talk-card" href="https://www.bsg.ox.ac.uk/events/found-and-identia" target="_blank" rel="noopener">
+        <div class="talk-title">Blavatnik School of Government, University of Oxford</div>
+        <span class="talk-link">Can AI help us find and identify our disappeared? FOUND and identIA</span>
+      </a>
+
       <a class="talk-card" href="https://www.ox.ac.uk/event/technological-responses-disappearance" target="_blank" rel="noopener">
         <div class="talk-title">University of Oxford / Oxford Festival of the Arts</div>
         <span class="talk-link">Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance</span>
