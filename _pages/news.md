@@ -256,6 +256,24 @@ author_profile: false
       var BASE_URL = 'https://found-project.org/news/';
       var newsCards = [
 {
+  id: 'aiforgood-itu-2026',
+  date: '2026-07-09',
+  image: null,
+  link: 'https://aiforgood.itu.int/event/130000-missing-how-ai-is-helping-identify-disappeared-persons-in-mexico/',
+  featured: true,
+  category: 'partnership',
+  en: {
+    badge: 'Event',
+    title: '130,000 Missing: FOUND at the AI for Good Global Summit in Geneva',
+    body: '<p><strong>130,000 Missing: How AI Is Helping Identify Disappeared Persons in Mexico.</strong></p><p>On <strong>9 July 2026</strong>, as part of the <strong>AI for Good Global Summit</strong> in Geneva, FOUND co-founder and co-director <strong>Miguel Moctezuma</strong> joined <strong>Angel Serrano</strong> (Data and Technology Coordinator, LAB-CO) and <strong>Thomas Favennec</strong> (Co-Founder and Executive Director, LAB-CO) to discuss how artificial intelligence is helping identify the more than 130,000 people reported missing in Mexico.</p><p>The session brought together technology, forensic science, and the lived experience of searching families to explore how AI tools are being applied to one of the world’s most severe crises of enforced disappearance.</p><ul><li>🗓 Thursday 9 July 2026</li><li>📍 AI for Good Global Summit, Geneva</li></ul><p><a href="https://aiforgood.itu.int/event/130000-missing-how-ai-is-helping-identify-disappeared-persons-in-mexico/" target="_blank" rel="noopener noreferrer">View the session on AI for Good ↗</a></p>'
+  },
+  es: {
+    badge: 'Evento',
+    title: '130,000 desaparecidos: FOUND en la Cumbre Mundial AI for Good en Ginebra',
+    body: '<p><strong>130,000 desaparecidos: cómo la IA está ayudando a identificar a personas desaparecidas en México.</strong></p><p>El <strong>9 de julio de 2026</strong>, como parte de la <strong>Cumbre Mundial AI for Good</strong> en Ginebra, el cofundador y codirector de FOUND, <strong>Miguel Moctezuma</strong>, se unió a <strong>Angel Serrano</strong> (Coordinador de Datos y Tecnología, LAB-CO) y <strong>Thomas Favennec</strong> (Cofundador y Director Ejecutivo, LAB-CO) para conversar sobre cómo la inteligencia artificial está ayudando a identificar a las más de 130,000 personas reportadas como desaparecidas en México.</p><p>La sesión reunió tecnología, ciencia forense y el conocimiento vivido de las familias buscadoras para explorar cómo se están aplicando herramientas de IA a una de las crisis de desaparición forzada más graves del mundo.</p><ul><li>🗓 Jueves 9 de julio de 2026</li><li>📍 Cumbre Mundial AI for Good, Ginebra</li></ul><p><a href="https://aiforgood.itu.int/event/130000-missing-how-ai-is-helping-identify-disappeared-persons-in-mexico/" target="_blank" rel="noopener noreferrer">Ver la sesión en AI for Good ↗</a></p>'
+  }
+},
+{
   id: 'found-identia-oxford-event',
   date: '2026-06-19',
   image:'https://raw.githubusercontent.com/FOUND-project/found-project.github.io/eacdc8082a25251fa6f305e06b98b0f721e2857b/images/Esp_BSG_June26.jpeg',
