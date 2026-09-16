@@ -284,12 +284,12 @@ author_profile: false
   category: 'partnership',
   en: {
     badge: 'Event',
-    title: 'Can AI help us find and identify our disappeared? FOUND and identIA at the University of Oxford, 26 June',
+    title: 'Can AI help us find and identify our disappeared? FOUND and identIA at the University of Oxford',
     body: '<p><strong>Can AI help us find and identify our disappeared?</strong></p><p>In Mexico and Colombia, more than <strong>250,000 people</strong> remain missing, leaving families trapped in grief and uncertainty. It is a crisis that touches millions. AI, remote sensing and soil science have the potential to accelerate results and transform how authorities search for and identify the disappeared.</p><p>But technology alone is not the answer. The families who search hold irreplaceable knowledge, and tools must be built with them. <strong>FOUND</strong> and <strong>identIA</strong> are grounded in that principle: co-producing knowledge with searching families, and keeping ethics at the centre of how technologies enter sensitive fields and are embedded in government.</p><p>On <strong>26 June</strong>, FOUND and identIA come together at the <strong>Blavatnik School of Government, University of Oxford</strong>, to share their results to date in Mexico and Colombia.</p><ul><li>🗓 Friday 26 June 2026, 14:00–15:00 (UK)</li><li>📍 In person at the Blavatnik School of Government · also online</li><li>🎟 Free and open to the public</li></ul><p><a href="https://www.bsg.ox.ac.uk/events/found-and-identia" target="_blank" rel="noopener noreferrer">Register here ↗</a></p>'
   },
   es: {
     badge: 'Evento',
-    title: '¿Puede la IA ayudarnos a encontrar e identificar a nuestras personas desaparecidas? FOUND e identIA en la Universidad de Oxford, 26 de junio',
+    title: '¿Puede la IA ayudarnos a encontrar e identificar a nuestras personas desaparecidas? FOUND e identIA en la Universidad de Oxford',
     body: '<p><strong>¿Puede la IA ayudarnos a encontrar e identificar a nuestras personas desaparecidas?</strong></p><p>En México y Colombia, más de <strong>250,000 personas</strong> continúan desaparecidas, dejando a las familias atrapadas en el duelo y la incertidumbre. Es una crisis que toca a millones. La IA, la percepción remota y la ciencia del suelo tienen el potencial de acelerar resultados y transformar la forma en que las autoridades buscan e identifican a las personas desaparecidas.</p><p>Pero la tecnología por sí sola no es la respuesta. Las familias que buscan poseen un conocimiento irremplazable, y las herramientas deben construirse con ellas. <strong>FOUND</strong> e <strong>identIA</strong> se sostienen en ese principio: coproducir conocimiento con las familias buscadoras, y mantener la ética en el centro de cómo las tecnologías entran en campos sensibles y se incorporan a los gobiernos.</p><p>El <strong>26 de junio</strong>, FOUND e identIA se reúnen en la <strong>Blavatnik School of Government de la Universidad de Oxford</strong> para compartir sus resultados a la fecha en México y Colombia.</p><ul><li>🗓 Viernes 26 de junio de 2026, 14:00–15:00 (Reino Unido)</li><li>📍 Presencial en la Blavatnik School of Government · también en línea</li><li>🎟 Gratuito y abierto al público</li></ul><p><a href="https://www.bsg.ox.ac.uk/events/found-and-identia" target="_blank" rel="noopener noreferrer">Regístrate aquí ↗</a></p>'
   }
 },
@@ -416,7 +416,7 @@ author_profile: false
       };
       var lang = 'en';
       var activeCardId = null;
-      function fmtDate(d, l) { try { var date = new Date(d + 'T00:00:00'); return date.toLocaleDateString(l === 'en' ? 'en-US' : 'es-MX', { year:'numeric', month:'long', day:'numeric' }); } catch(e) { return d; } }
+      function fmtDate(d, l) { try { var date = new Date(d + 'T00:00:00'); return date.toLocaleDateString(l === 'en' ? 'en-US' : 'es-MX', { year:'numeric', month:'long' }); } catch(e) { return d; } }
       function cardById(id) { for (var i = 0; i < newsCards.length; i++) { if (newsCards[i].id === id) return newsCards[i]; } return null; }
       function setMeta(id, val) { var el = document.getElementById(id); if (el) el.setAttribute('content', val); }
       function badgeClass(cat) { var map = { award:'badge-award', media:'badge-media', field:'badge-field', funding:'badge-funding', coverage:'badge-coverage', partnership:'badge-field', training:'badge-funding' }; return map[cat] || 'badge-field'; }
