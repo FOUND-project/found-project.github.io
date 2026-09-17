@@ -360,81 +360,6 @@ author_profile: false
       margin-top: .6rem;
     }
 
-    .talks-section {
-      margin-top: 2rem;
-      padding: 2.2rem 2.6rem;
-      border-radius: var(--radius-xl);
-      background:
-        radial-gradient(ellipse 700px 400px at 0% -10%, rgba(212,175,55,.08) 0%, transparent 60%),
-        linear-gradient(135deg, #ffffff 0%, #f6fbf8 100%);
-      box-shadow: var(--shadow-md);
-      border: 1px solid rgba(15,23,42,.055);
-      position: relative;
-      overflow: hidden;
-    }
-    .talks-section::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 4px;
-      background: linear-gradient(180deg, var(--gold) 0%, rgba(212,175,55,.2) 100%);
-    }
-
-    #talks-title {
-      font-size: clamp(1.5rem, 2.2vw, 2rem);
-      font-weight: 900;
-      color: var(--green-900);
-      letter-spacing: -.03em;
-      margin-bottom: 1.8rem;
-      padding-left: 1rem;
-    }
-
-    .talk-card {
-      background: var(--white);
-      padding: 1.3rem 1.6rem;
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-xs);
-      border: 1px solid rgba(15,23,42,.055);
-      position: relative;
-      overflow: hidden;
-      transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
-      margin-bottom: 1rem;
-      margin-left: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: .5rem;
-    }
-    .talk-card::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 3px;
-      background: var(--green-700);
-      transform: scaleY(0);
-      transform-origin: bottom;
-      transition: transform .3s var(--ease-spring);
-    }
-    .talk-card:hover { transform: translateX(4px); box-shadow: var(--shadow-md); border-color: rgba(45,95,77,.18); }
-    .talk-card:hover::before { transform: scaleY(1); transform-origin: top; }
-
-    .talk-title {
-      font-size: .75rem;
-      font-weight: 750;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      color: var(--text-light);
-    }
-    .talk-link {
-      font-size: 1.04rem;
-      text-decoration: none;
-      color: var(--text-dark);
-      font-weight: 700;
-      line-height: 1.45;
-      letter-spacing: -.01em;
-      transition: color .2s var(--ease);
-    }
-    .talk-link:hover { color: var(--green-800); }
-
     @media (max-width: 900px) {
       body { padding: 1.4rem 1rem; }
       .media-shell { margin-left: 0; }
@@ -445,14 +370,10 @@ author_profile: false
       .media-header-body { padding: 1rem 1.6rem 1.8rem; }
       #media-title { font-size: 1.65rem; }
       .media-grid { grid-template-columns: 1fr; }
-      .talks-section { padding: 1.8rem 1.6rem; }
-      #talks-title { padding-left: 1.5rem; }
     }
     @media (max-width: 480px) {
       .media-header { padding: 1.3rem 1.1rem; }
       .media-card-inner { padding: 1.1rem 1.1rem 1.3rem; }
-      #talks-title { font-size: 1.45rem; }
-      .talk-card { margin-left: .5rem; }
       .card-img-wrap { height: 120px; }
     }
   </style>
@@ -473,7 +394,7 @@ author_profile: false
       <div class="media-header-body">
         <div class="media-eyebrow">
           <span class="media-eyebrow-dot"></span>
-          <span class="media-eyebrow-text" id="media-pill">MEDIA · COVERAGE · TALKS</span>
+          <span class="media-eyebrow-text" id="media-pill">MEDIA · COVERAGE</span>
         </div>
         <h1 id="media-title">Media Coverage</h1>
         <p id="media-intro">Our research and work has been featured in leading international publications.</p>
@@ -693,40 +614,6 @@ author_profile: false
 
     </section>
 
-    <section class="talks-section">
-      <h2 id="talks-title">Talks</h2>
-
-      <a class="talk-card" href="https://aiforgood.itu.int/event/130000-missing-how-ai-is-helping-identify-disappeared-persons-in-mexico/" target="_blank" rel="noopener">
-        <div class="talk-title">ITU — AI for Good</div>
-        <span class="talk-link">130,000 Missing: How AI Is Helping Identify Disappeared Persons in Mexico</span>
-      </a>
-
-      <a class="talk-card" href="https://www.bsg.ox.ac.uk/events/found-and-identia" target="_blank" rel="noopener">
-        <div class="talk-title">Blavatnik School of Government, University of Oxford</div>
-        <span class="talk-link">Can AI help us find and identify our disappeared? FOUND and identIA</span>
-      </a>
-
-      <a class="talk-card" href="https://www.ox.ac.uk/event/technological-responses-disappearance" target="_blank" rel="noopener">
-        <div class="talk-title">University of Oxford / Oxford Festival of the Arts</div>
-        <span class="talk-link">Disappearance of Worlds | Art Exhibition & Dialogues on Disappearance</span>
-      </a>
-
-      <a class="talk-card" href="https://bafauk.weebly.com/winter-conference--agm-2024.html" target="_blank" rel="noopener">
-        <div class="talk-title">British Association for Forensic Anthropology</div>
-        <span class="talk-link">Interpreting nature to locate the disappeared: influencing search practices</span>
-      </a>
-
-      <a class="talk-card" href="https://jalisco.quadratin.com.mx/principal/presentan-interpretar-la-naturaleza-para-encontrar-a-quienes-nos-faltan/" target="_blank" rel="noopener">
-        <div class="talk-title">Guadalajara International Book Fair</div>
-        <span class="talk-link">Presentan Interpretar la naturaleza para encontrar a quienes nos faltan</span>
-      </a>
-
-      <a class="talk-card" href="https://www.ox.ac.uk/event/mexicos-missing-how-families-and-technology-are-working-together" target="_blank" rel="noopener">
-        <div class="talk-title">University of Oxford</div>
-        <span class="talk-link">Mexico's Missing: How families and technology are working together</span>
-      </a>
-    </section>
-
   </div>
 
   <script>
@@ -734,8 +621,8 @@ author_profile: false
 
     /* ── translations ── */
     const translations = {
-      en:{ 'media-pill':'MEDIA · COVERAGE · TALKS','media-title':'Media Coverage','media-intro':'Our research and work has been featured in leading international publications.','talks-title':'Talks' },
-      es:{ 'media-pill':'MEDIOS · COBERTURA · CHARLAS','media-title':'Cobertura en medios','media-intro':'Nuestras investigaciones y trabajo han aparecido en medios internacionales de referencia.','talks-title':'Charlas' }
+      en:{ 'media-pill':'MEDIA · COVERAGE','media-title':'Media Coverage','media-intro':'Our research and work has been featured in leading international publications.' },
+      es:{ 'media-pill':'MEDIOS · COBERTURA','media-title':'Cobertura en medios','media-intro':'Nuestras investigaciones y trabajo han aparecido en medios internacionales de referencia.' }
     };
     const tagLabels = {
       en:{ article:'Article', tv:'TV Segment', 'tv-social':'TV / Social', opinion:'Opinion' },
