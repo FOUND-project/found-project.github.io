@@ -202,10 +202,40 @@ author_profile: false
       left: 0;
       right: 0;
       height: 4px;
+      z-index: 2;
       background: linear-gradient(90deg, var(--primary-green) 0%, var(--accent-green) 100%);
       transform: scaleX(0);
       transform-origin: left;
       transition: transform var(--transition-base);
+    }
+
+    /* image band: pulled out to the card edges, so the card reads as photo + text */
+    .pub-thumb {
+      margin: -1.75rem -1.75rem 1.25rem;
+      height: 170px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%);
+    }
+
+    .pub-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .pub-card:hover .pub-thumb img {
+      transform: scale(1.06);
+    }
+
+    .pub-thumb::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(11, 28, 22, 0) 55%, rgba(11, 28, 22, 0.4) 100%);
+      pointer-events: none;
     }
 
     .pub-card:hover {
@@ -988,6 +1018,9 @@ author_profile: false
 
       <div class="pub-grid">
         <article class="pub-card">
+          <div class="pub-thumb">
+            <img src="/images/pub-thumb-ethics.jpg" alt="A woman wrapped in flowers standing in a field of marigolds" loading="lazy">
+          </div>
           <div class="pub-card-topline">
             <span class="pub-emoji">📝</span>
             <span class="pub-badge" id="b0-badge">Blog</span>
@@ -1003,6 +1036,9 @@ author_profile: false
         </article>
 
         <article class="pub-card">
+          <div class="pub-thumb">
+            <img src="/images/pub-thumb-peace.jpg" alt="Gloved hands holding bone fragments from which a seedling has grown" loading="lazy">
+          </div>
           <div class="pub-card-topline">
             <span class="pub-emoji">📝</span>
             <span class="pub-badge" id="b1-badge">Blog</span>
@@ -1018,6 +1054,9 @@ author_profile: false
         </article>
 
         <article class="pub-card">
+          <div class="pub-thumb">
+            <img src="/images/pub-thumb-uwe.jpg" alt="A drone controller showing a thermal image alongside an aerial view of an experimental site" loading="lazy">
+          </div>
           <div class="pub-card-topline">
             <span class="pub-emoji">📝</span>
             <span class="pub-badge" id="b2-badge">News story</span>
@@ -1033,6 +1072,9 @@ author_profile: false
         </article>
 
         <article class="pub-card">
+          <div class="pub-thumb">
+            <img src="/images/pub-thumb-drones.jpg" alt="Painting of a mother holding a baby, flanked by drones against a background of roses" loading="lazy">
+          </div>
           <div class="pub-card-topline">
             <span class="pub-emoji">📝</span>
             <span class="pub-badge" id="b3-badge">Blog</span>
