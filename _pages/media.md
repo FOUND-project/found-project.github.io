@@ -503,8 +503,8 @@ author_profile: false
       </a>
 
       <a class="media-card" href="https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia" target="_blank" rel="noopener">
-        <div class="card-img-wrap" data-url="https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia">
-          <div class="card-img-fallback"><div class="card-img-fallback-initial">AP</div><span class="card-img-fallback-label">Animal Político</span></div>
+        <div class="card-img-wrap has-image" data-url="https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia">
+          <img class="card-img" src="/images/media-thumb-ap-drones.jpg" alt="Spectral analysis of drone imagery over a search site" loading="lazy">
         </div>
         <div class="media-card-inner">
           <div class="media-outlet">Animal Político</div>
@@ -569,8 +569,8 @@ author_profile: false
       </a>
 
       <a class="media-card" href="https://animalpolitico.com/analisis/invitades/libro-madres-buscadoras-fil" target="_blank" rel="noopener">
-        <div class="card-img-wrap" data-url="https://animalpolitico.com/analisis/invitades/libro-madres-buscadoras-fil">
-          <div class="card-img-fallback"><div class="card-img-fallback-initial">AP</div><span class="card-img-fallback-label">Animal Político</span></div>
+        <div class="card-img-wrap has-image" data-url="https://animalpolitico.com/analisis/invitades/libro-madres-buscadoras-fil">
+          <img class="card-img" src="/images/media-thumb-ap-libro.jpg" alt="The FOUND book &quot;Interpretar la naturaleza para encontrar a quienes nos faltan&quot;" loading="lazy">
         </div>
         <div class="media-card-inner">
           <div class="media-outlet">Animal Político</div>
@@ -591,8 +591,8 @@ author_profile: false
       </a>
 
       <a class="media-card" href="https://twitter.com/cgtnamerica/status/1751362286118150555" target="_blank" rel="noopener">
-        <div class="card-img-wrap" data-url="https://twitter.com/cgtnamerica/status/1751362286118150555">
-          <div class="card-img-fallback"><div class="card-img-fallback-initial">CG</div><span class="card-img-fallback-label">CGTN America</span></div>
+        <div class="card-img-wrap has-image" data-url="https://twitter.com/cgtnamerica/status/1751362286118150555">
+          <img class="card-img" src="/images/media-thumb-cgtn.jpg" alt="Searching mothers digging with shovels at a site in Jalisco" loading="lazy">
         </div>
         <div class="media-card-inner">
           <div class="media-outlet">CGTN America</div>
@@ -674,7 +674,7 @@ author_profile: false
   'https://www.nbcnews.com/news/latino/mexico-pigs-buried-help-find-missing-rcna221791':
     'https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1000w,f_auto,q_auto:best/rockcms/2025-07/250729-Zapopan-ch-1409-5f806d.jpg',
   /* Animal Politico */
-  'https://grupoanimal.mx/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia':
+  'https://www.animalpolitico.com/sociedad/familias-desaparecidos-fosas-clandestinas-jalisco-tecnologia':
     'https://grupoanimal.mx/api/image-proxy?url=https%3A%2F%2Fap-cdn.sfo3.cdn.digitaloceanspaces.com%2Fuploads%2F2024%2F11%2Fmadres-buscadoras-ia.jpg',
   /* Science */
   'https://www.science.org/content/article/satellites-could-reveal-secret-burial-grounds-mexico-s-murder-victims':
@@ -686,10 +686,10 @@ author_profile: false
   'https://www.tvazteca.com/aztecanoticias/tecnologia-drones-desapariciones-mexico-fosas-clandestinas':
     'https://tvazteca.brightspotcdn.com/dims4/default/1eaebde/2147483647/strip/true/crop/92x59+0+0/resize/70x45!/format/webp/quality/90/?url=http%3A%2F%2Ftv-azteca-brightspot.s3.amazonaws.com%2F26%2F7e%2F9c61ae1d4b8dbcc1c816c086707d%2Fimagotipo-azteca.webp',
   /* Animal Politico Interpretar la Naturaleza */
-  'https://grupoanimal.mx/opinion/libro-madres-buscadoras-fil':
+  'https://animalpolitico.com/analisis/invitades/libro-madres-buscadoras-fil':
     'https://grupoanimal.mx/api/image-proxy?url=https%3A%2F%2Fap-cdn.sfo3.cdn.digitaloceanspaces.com%2Fuploads%2F2024%2F11%2Fmadres-buscadoras-ia.jpg',
   /* CGTN America */
-  'https://x.com/cgtnamerica/status/1751362286118150555':
+  'https://twitter.com/cgtnamerica/status/1751362286118150555':
     'https://pbs.twimg.com/media/GE4Wp0mWMAA29uD?format=jpg&name=small',
   /* SinEmbargo */
   'https://www.sinembargo.mx/18-12-2023/4440515':
