@@ -371,6 +371,16 @@ author_profile: false
           es: { badge: 'Medios', title: 'FOUND en The Guardian', body: '<p>Este reportaje es el resultado de más de seis meses de correos electrónicos, mensajes de WhatsApp y la visita en terreno de la periodista a nuestros sitios experimentales en Jalisco, México.</p><p>Agradecemos profundamente el cuidado, la profundidad y el compromiso con el que se trabajó esta historia, tras meses escuchando a familias, personas investigadoras y autoridades.</p><p><a href="https://www.theguardian.com/global-development/2025/nov/19/dead-pigs-grieving-mothers-missing-people-mexico-mexican-cartel-victims" target="_blank" rel="noopener noreferrer">Leer el reportaje en The Guardian ↗</a></p>' }
         },
         {
+          id: 'ubpd-first-visit',
+          date: '2025-10-01',
+          image: null,
+          link: null,
+          featured: false,
+          category: 'field',
+          en: { badge: 'Field visit', title: 'Colombia\'s Search Unit (UBPD) visits FOUND\'s experimental sites', body: '<p><strong>Dr Julián Arias</strong>, Director of Prospection, Recovery and Identification at Colombia\'s <em>Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD)</em>, visited our experimental fields to explore how some of our methodologies could be adapted to the Colombian case.</p><p>There was particular interest in our <strong>spectral indices platform</strong> and in the use of <strong>satellite imagery</strong> to identify anomalies associated with clandestine graves.</p><p>The visit formally launched our collaboration with the UBPD on search and identification methodologies.</p>' },
+          es: { badge: 'Visita de campo', title: 'La Unidad de Búsqueda (UBPD) de Colombia visita los sitios experimentales de FOUND', body: '<p>El <strong>Dr. Julián Arias</strong>, Director de Prospección, Recuperación e Identificación de la <em>Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD)</em> de Colombia, visitó nuestros campos experimentales para explorar cómo algunas de nuestras metodologías podrían adaptarse al caso colombiano.</p><p>Hubo un interés particular en nuestra <strong>plataforma de índices espectrales</strong> y en el uso de <strong>imágenes satelitales</strong> para identificar anomalías asociadas a fosas clandestinas.</p><p>La visita marcó el inicio formal de nuestra colaboración con la UBPD en metodologías de búsqueda e identificación.</p>' }
+        },
+        {
           id: 'international-media',
           date: '2025-07-29',
           image: null,
