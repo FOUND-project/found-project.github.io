@@ -144,6 +144,23 @@ Check the deployed result with the GitHub Actions API: the "pages build and
 deployment" run for the merge commit must be `success`. Its logs are not
 retrievable, so a green local `jekyll build --safe` is the real safety net.
 
+### Moving belts
+
+Strips marked `data-belt` (the "FOUND in Action" photos, all widths) or
+`data-belt-mobile` (the gif strip under the timeline, phones only) are plain
+swipeable rows in HTML. `setupBelts()` in `about.md` clones the items once and
+drifts the row right-to-left by advancing `scrollLeft`, not with a CSS
+transform, because a transformed ancestor would break the `position:fixed`
+tap-to-zoom. It pauses on hover, touch and zoom, and stays still under
+reduced motion.
+
+## Link previews
+
+`og_image` in `_config.yml` is `images/og-found.png` (1200x630, the full
+pin-and-wordmark logo `images/logo_FOUND_pin.png` on white). The theme's
+`seo.html` only emitted page header images, so it now falls back to
+`og_image` for `og:image` and a large Twitter card.
+
 ## Files and downloads
 
 `files/` is served as-is by Pages, so anything in it is downloadable at
