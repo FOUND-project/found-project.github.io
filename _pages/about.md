@@ -187,7 +187,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 .info-list li:hover::before{transform:translateY(-50%) scale(1.08);background:var(--light-green);color:#fff}
 .image-gallery{margin-top:2.15rem;display:flex;gap:clamp(.75rem,1.25vw,1.05rem);overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:.5rem 0 .75rem}
 .image-gallery::-webkit-scrollbar{display:none}
-.belt{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 3%,#000 97%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 3%,#000 97%,transparent 100%)}
+.belt:not(.image-gallery){-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 3%,#000 97%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 3%,#000 97%,transparent 100%)}
 body.zoom-active .belt{-webkit-mask-image:none;mask-image:none}
 .gallery-item{flex:0 0 clamp(220px,21%,380px);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-md);border:1px solid rgba(45,95,77,.10);background:linear-gradient(180deg,rgba(232,245,240,.35) 0%,rgba(255,255,255,.9) 100%);position:relative;transform:translateY(0);transition:transform .35s var(--transition-smooth),box-shadow .35s var(--transition-smooth);aspect-ratio:4/5;min-height:0}
 .gallery-item::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 20%,rgba(212,175,55,.12) 0%,transparent 45%),linear-gradient(180deg,rgba(0,0,0,.06) 0%,transparent 45%);opacity:0;transition:opacity .35s var(--transition-smooth);pointer-events:none}
@@ -324,7 +324,9 @@ body.zoom-active .belt{-webkit-mask-image:none;mask-image:none}
 @media(prefers-reduced-motion:reduce){.fwos-sparks{display:none}}
 .buscadoras-knowledge{text-align:left;max-width:640px;margin:1.6rem auto 1.4rem}
 .buscadoras-belt{margin:1.6rem 0 .2rem}
+#technologies .gallery-item{aspect-ratio:1/1;flex-basis:clamp(260px,27%,460px)}
 .buscadoras-belt .gallery-item{flex-basis:clamp(220px,24%,360px)}
+.buscadoras-section .buscadoras-text,.buscadoras-section .copro-body{max-width:none}
 @media(min-width:901px){
   .buscadoras-content{text-align:left;padding:clamp(1.5rem,3vw,2.5rem)}
   .buscadoras-knowledge{max-width:none;margin:1.25rem 0 0}
@@ -364,6 +366,7 @@ body.zoom-active .belt{-webkit-mask-image:none;mask-image:none}
   .gallery-item{flex:0 0 74%;max-width:74%;aspect-ratio:4/5;border-radius:16px;box-shadow:var(--shadow-sm)}
   .buscadoras-belt{margin-top:1.2rem}
   .buscadoras-belt .gallery-item{flex-basis:62%;max-width:62%}
+  #technologies .gallery-item{flex-basis:86%;max-width:86%}
   .gallery-item::before{content:'\2922';position:absolute;right:.45rem;bottom:.45rem;z-index:2;width:27px;height:27px;display:flex;align-items:center;justify-content:center;font-size:.9rem;color:#fff;background:rgba(11,28,22,.6);border:1px solid rgba(255,255,255,.32);border-radius:9px;pointer-events:none}
   .touch-zoomable.is-expanded::before{content:'\00d7';position:fixed;top:1rem;right:1rem;left:auto;bottom:auto;width:44px;height:44px;font-size:1.7rem;border-radius:50%;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.4);z-index:10000}
   /* Coproduction reads better as one column with a tighter quote */
