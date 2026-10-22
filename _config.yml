@@ -201,9 +201,6 @@ kramdown:
 # Collections
 collections:
 
-  how-to-help:
-    output: true
-    permalink: /:collection/:path/
   teaching:
     output: true
     permalink: /:collection/:path/
@@ -303,6 +300,7 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jekyll-redirect-from
   - jemoji
 
 
