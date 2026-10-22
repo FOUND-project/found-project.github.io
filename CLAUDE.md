@@ -92,7 +92,8 @@ each silently overridden new styling:
 | `.page__content a { text-decoration: underline }` | `_sass/_page.scss` | any `.my-btn` |
 | `input[type="search"] { box-sizing: content-box }` | `_sass/_reset.scss` | any `.my-input` |
 
-Note the custom pages render inside `.archive`, **not** `.page__content` — check
+Note most custom pages render inside `.archive`, **not** `.page__content` — but the
+homepage (`about.md`) renders inside `.page__content` — check
 which wrapper you are actually in before writing a defensive selector. Confirm
 with `getComputedStyle` rather than by eye; all three of these look like
 "my CSS didn't apply".
