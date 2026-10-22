@@ -338,8 +338,9 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 @media(prefers-reduced-motion:reduce){.fwos-sparks{display:none}}
 .buscadoras-knowledge{text-align:left;max-width:640px;margin:1.6rem auto 1.4rem}
 .buscadoras-belt{margin:1.6rem 0 .2rem}
-#technologies .gallery-item{aspect-ratio:1/1;flex-basis:clamp(260px,27%,460px)}
-.buscadoras-belt .gallery-item{flex-basis:clamp(220px,24%,360px)}
+/* photo belts use the gif strip's panel size: a fifth of the shell at 4:3 */
+#technologies .image-gallery,.buscadoras-belt{gap:clamp(.55rem,1.2vw,.9rem)}
+#technologies .gallery-item,.buscadoras-belt .gallery-item{aspect-ratio:4/3;flex-basis:max(200px,calc((min(100vw,var(--shell-max)) - 2*var(--shell-pad) - 4*clamp(.55rem,1.2vw,.9rem))/5))}
 .buscadoras-section .buscadoras-text,.buscadoras-section .copro-body{max-width:none}
 @media(min-width:901px){
   .buscadoras-content{text-align:left;padding:clamp(1.5rem,3vw,2.5rem)}
@@ -391,8 +392,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
   .image-gallery{gap:.6rem;margin-top:0;padding:0 0 .35rem}
   .gallery-item{flex:0 0 74%;max-width:74%;aspect-ratio:4/5;border-radius:16px;box-shadow:var(--shadow-sm)}
   .buscadoras-belt{margin-top:1.2rem}
-  .buscadoras-belt .gallery-item{flex-basis:62%;max-width:62%}
-  #technologies .gallery-item{flex-basis:86%;max-width:86%}
+  #technologies .gallery-item,.buscadoras-belt .gallery-item{flex-basis:78%;max-width:78%;aspect-ratio:16/10}
   .gallery-item::before{content:'\2922';position:absolute;right:.45rem;bottom:.45rem;z-index:2;width:27px;height:27px;display:flex;align-items:center;justify-content:center;font-size:.9rem;color:#fff;background:rgba(11,28,22,.6);border:1px solid rgba(255,255,255,.32);border-radius:9px;pointer-events:none}
   
   /* Coproduction reads better as one column with a tighter quote */
@@ -481,7 +481,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 <!-- GIF STRIP -->
 <section class="gif-strip" aria-label="FOUND in action">
   <div class="gif-strip-inner belt" data-belt-mobile>
-    <div class="gs-panel gs-panel-side touch-zoomable" data-label="360&deg; imaging"><img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="360 degree imaging technology in use" loading="lazy" class="loading" onload="this.classList.remove('loading')" /></div>
+    <div class="gs-panel gs-panel-side touch-zoomable" data-label="Experimental site"><img src="https://github.com/FOUND-project/found-project.github.io/raw/master/images/360.gif" alt="Experimental site" loading="lazy" class="loading" onload="this.classList.remove('loading')" /></div>
     <div class="gs-panel gs-panel-main touch-zoomable" data-label="Spectral indices, clandestine crematoriums, substance detection"><img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/1047db9c85ff842e083e9fb45c0bdf05213da88a/images/NDAI5.gif" alt="FOUND Project team using advanced technology in field search operations" loading="lazy" class="loading" onload="this.classList.remove('loading')" /></div>
     <div class="gs-panel gs-panel-side touch-zoomable" data-label="Satellite analysis, time series"><img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/33b2627b6b245e9632f59abf0a02f5ad58956bf4/images/Areas_de_busqueda_3.gif" alt="Satellite spectral time-series analysis of search areas" loading="lazy" class="loading" onload="this.classList.remove('loading')" /></div>
     <div class="gs-panel gs-panel-side touch-zoomable" data-label="Clandestine space detection"><img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/9b9df755f7129ba10ee53479d528d42d14e5648a/images/ClandestineSpace.gif" alt="Spectral detection of clandestine sites using satellite imagery" loading="lazy" class="loading" onload="this.classList.remove('loading')" /></div>
