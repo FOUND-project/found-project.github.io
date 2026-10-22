@@ -68,7 +68,7 @@ body.reveal-ready .reveal-delay-2{transition-delay:.18s}
 .page__content a.featured-pub-card,.archive a.featured-pub-card{text-decoration:none}
 .featured-row{display:flex;align-items:stretch;justify-content:center;gap:.75rem;flex-wrap:wrap}
 .featured-fig{width:320px;max-width:100%;min-height:150px;border-radius:22px;overflow:hidden;border:1px solid rgba(212,175,55,.4);box-shadow:var(--shadow-md);position:relative;display:block;transition:transform .25s var(--transition-smooth),box-shadow .25s var(--transition-smooth)}
-.featured-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.featured-fig video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .featured-fig:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
 .featured-pub-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--gold-accent),rgba(212,175,55,.25))}
 .featured-pub-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:rgba(212,175,55,.7)}
@@ -441,7 +441,7 @@ body.copro-modal-open{overflow:hidden}
           <span class="featured-pub-meta">Miguel Moctezuma, Daniele Rugo &amp; Brad Evans (2026)</span>
           <span class="featured-pub-link" id="featured-pub-link">Read here <span aria-hidden="true">&#x2197;</span></span>
         </a>
-        <a class="featured-fig" href="/news/#tree-of-hope-oxford-2026" aria-label="News: A Tree of Hope in Oxford for the International Day of the Victims of Enforced Disappearances"><img src="/images/tree_of_hope_oxford_2026.jpg" alt="Portraits of disappeared people hanging from a Tree of Hope in Oxford"></a>
+        <a class="featured-fig" href="/news/#tree-of-hope-oxford-2026" aria-label="News: A Tree of Hope in Oxford for the International Day of the Victims of Enforced Disappearances"><video poster="/images/tree_of_hope_oxford_2026.jpg" autoplay muted loop playsinline aria-label="Portraits of disappeared people hanging from a Tree of Hope in Oxford"><source src="/images/tree_of_hope_oxford_2026.webm" type="video/webm"><source src="/images/tree_of_hope_oxford_2026.mp4" type="video/mp4"></video></a>
         </div>
       </div>
       <p class="hero-description" id="hero-main-text">Over 130,000 persons are reported as disappeared in Mexico. Behind each case there is a family searching for answers. <strong>FOUND</strong> works at the intersection of frontier technology and the lived knowledge of search groups, driving systemic change and building institutional capacity to improve how governments respond to disappearance.</p>
