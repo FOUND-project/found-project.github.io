@@ -171,7 +171,7 @@ author_profile: false
 
   <div class="team-notice">
     <strong id="team-notice-label">Under construction</strong>
-    <span id="team-notice-text">This section is a work in progress. Names and roles will continue to be updated, and full biographies will be added in due course. For now, you can reach us at miguel.moctezuma[@]pmb.ox.ac.uk</span>
+    <span id="team-notice-text">This section is a work in progress. Names and roles will continue to be updated, and full biographies will be added in due course. For now, you can reach us at miguel.moctezuma[@]found-project.org</span>
   </div>
 
   <div class="team-group">
@@ -271,8 +271,8 @@ author_profile: false
     'team-intro-text':   ['Our core team brings together search collectives of Mexico and Colombia, CentroGeo, the University of Oxford, Jalisco\u2019s Search Commission, the British Embassy in Mexico City, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara.',
                           'Nuestro equipo central re\u00fane a colectivos de b\u00fasqueda de M\u00e9xico y Colombia, CentroGeo, la Universidad de Oxford, la Comisi\u00f3n de B\u00fasqueda de Jalisco, la Embajada Brit\u00e1nica en la Ciudad de M\u00e9xico, la Universidad Nacional Aut\u00f3noma de M\u00e9xico (UNAM) y la Universidad de Guadalajara.'],
     'team-notice-label': ['Under construction', 'En construcci\u00f3n'],
-    'team-notice-text':  ['This section is a work in progress. Names and roles will continue to be updated, and full biographies will be added in due course. For now, you can reach us at miguel.moctezuma[@]pmb.ox.ac.uk',
-                          'Esta secci\u00f3n est\u00e1 en desarrollo. Los nombres y los cargos se seguir\u00e1n actualizando, y las biograf\u00edas completas se a\u00f1adir\u00e1n en su momento. Por ahora, puedes escribirnos a miguel.moctezuma[@]pmb.ox.ac.uk'],
+    'team-notice-text':  ['This section is a work in progress. Names and roles will continue to be updated, and full biographies will be added in due course. For now, you can reach us at miguel.moctezuma[@]found-project.org',
+                          'Esta secci\u00f3n est\u00e1 en desarrollo. Los nombres y los cargos se seguir\u00e1n actualizando, y las biograf\u00edas completas se a\u00f1adir\u00e1n en su momento. Por ahora, puedes escribirnos a miguel.moctezuma[@]found-project.org'],
     'tg-direction':      ['Direction', 'Direcci\u00f3n'],
     'tg-advisors':       ['Advisors', 'Consejo asesor'],
     'tg-contributors':   ['Contributors', 'Colaboradores'],

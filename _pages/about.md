@@ -6,6 +6,7 @@ classes: wide home-full
 redirect_from:
   - /about/
   - /about.html
+  - /how-to-help/
 ---
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

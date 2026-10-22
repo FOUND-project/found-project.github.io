@@ -59,7 +59,7 @@ Use `display:inline-flex` with `width:auto`.
 English and Spanish only — no other locales.
 
 - Every page with a toggle (`about`, `news`, `media`, `publications`,
-  `how-to-help`, `team`) stores the choice under the single key **`found-lang`**,
+  `team`) stores the choice under the single key **`found-lang`**,
   so one choice follows the reader across the site. Some pages still read a
   legacy per-page key as a fallback; keep writing to `found-lang`.
 - Translations are dictionaries keyed by element `id`; `setLanguage` walks the
@@ -164,7 +164,7 @@ hit YouTube's own links and open the app.
 
 ## Page headers
 
-News, Media, Publications, How to Help and Team open with the same header card:
+News, Media, Publications and Team open with the same header card:
 the FOUND pin-and-leaf logo (`images/logo_FOUND_leaf.png`, transparent, no
 wordmark) in an 88px white tile (`.found-logo-tile`, `object-fit:contain`) on the
 left, then an eyebrow and the `<h1>`. The shared `.found-header` CSS is in
