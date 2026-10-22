@@ -44,23 +44,12 @@ author_profile: false
     }
 
     /* nuevo título encima del logo, como en News */
-  .pub-sidebar-title{
-  position:absolute;
-  top:72px;    /* moved down */
-  left:86px;
-  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif;
-  font-size:1.9rem;
-  font-weight:800;
-  letter-spacing:-0.03em;
-  color:#111827;
-  z-index:30;
-}
 
     /* CONTENEDOR PRINCIPAL */
     .pub-shell {
       max-width: var(--shell-max);
       margin: 0 auto 4rem;
-      padding: 2rem var(--shell-pad);
+      padding: 0 var(--shell-pad);
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
       background: linear-gradient(135deg, var(--gray-50) 0%, var(--off-white) 100%);
       min-height: 100vh;
@@ -122,6 +111,7 @@ author_profile: false
       position: relative;
     }
 
+    #volume-1 .pub-title { margin-top: 0; }
     .pub-section-header {
       display: flex;
       align-items: center;
@@ -377,14 +367,8 @@ author_profile: false
 
     @media (max-width:768px){
       .pub-shell{
-        padding:1.5rem 1.25rem 3rem;
+        padding:0 var(--shell-pad) 3rem;
         margin-left:0;
-      }
-      .pub-sidebar-title{
-        position:static;
-        margin:0 0 1rem;
-        padding:0 1.25rem;
-        font-size:1.6rem;
       }
       .pub-grid{
         grid-template-columns:1fr;
@@ -534,13 +518,12 @@ author_profile: false
 
   <div class="pub-shell">
 
-    <!-- LANGUAGE TOGGLE -->
-    <div class="lang-toggle" aria-label="Language selection">
-      <button type="button" class="lang-btn active" data-lang="en">EN</button>
-      <button type="button" class="lang-btn" data-lang="es">ES</button>
-    </div>
 
     <header class="found-header">
+      <div class="lang-toggle" aria-label="Language selection">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+      </div>
       <div class="found-header-logo"><img class="found-logo-tile" src="/images/logo_FOUND_leaf.png" alt="FOUND"></div>
       <div class="found-header-divider"></div>
       <div class="found-header-body">
