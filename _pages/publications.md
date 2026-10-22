@@ -531,8 +531,6 @@ author_profile: false
 </head>
 
 <body>
-  <!-- nuevo título tipo “News” -->
-  <div class="pub-sidebar-title">Publications</div>
 
   <div class="pub-shell">
 
@@ -541,6 +539,15 @@ author_profile: false
       <button type="button" class="lang-btn active" data-lang="en">EN</button>
       <button type="button" class="lang-btn" data-lang="es">ES</button>
     </div>
+
+    <header class="found-header">
+      <div class="found-header-logo"><img class="found-logo-tile" src="/images/logo_FOUND_leaf.png" alt="FOUND"></div>
+      <div class="found-header-divider"></div>
+      <div class="found-header-body">
+        <div class="found-header-eyebrow" id="pub-header-pill">Research · Publications</div>
+        <h1 id="pub-header-title">Publications</h1>
+      </div>
+    </header>
 
     <!-- BOOK — VOLUME 1 -->
     <section class="pub-section" id="volume-1">
@@ -1100,6 +1107,8 @@ author_profile: false
 
       const translations = {
         en: {
+          'pub-header-pill': 'Research · Publications',
+          'pub-header-title': 'Publications',
           'title-book': 'The Book',
           'book-desc': 'This volume brings together biological, physical, and earth sciences to design and test methods for detecting clandestine graves.',
           'book-desc2': 'Volume 2 and Volume 3 will be presented in December 2026.',
@@ -1128,6 +1137,8 @@ author_profile: false
           'b3-meta': 'Karina García-Reyes &amp; Miguel Moctezuma (2024)'
         },
         es: {
+          'pub-header-pill': 'Investigación · Publicaciones',
+          'pub-header-title': 'Publicaciones',
           'title-book': 'El libro',
           'book-desc': 'Este volumen reúne ciencias biológicas, físicas y de la Tierra para diseñar y probar métodos de detección de fosas clandestinas.',
           'book-desc2': 'El Volumen 2 y el Volumen 3 serán presentados en diciembre de 2026.',
@@ -1158,6 +1169,7 @@ author_profile: false
       };
 
       const ids = [
+        'pub-header-pill','pub-header-title',
         'title-book','book-desc','book-desc2',
         'title-articles',
         'a1-badge','a2-badge','a3-badge',

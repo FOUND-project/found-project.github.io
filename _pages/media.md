@@ -141,15 +141,6 @@ author_profile: false
       position: relative;
       z-index: 1;
     }
-    .media-header-logo img {
-      width: 88px;
-      height: 88px;
-      border-radius: 20px;
-      object-fit: cover;
-      box-shadow: 0 12px 32px rgba(15,23,42,.22);
-      border: 3px solid rgba(255,255,255,.95);
-      background: #fff;
-    }
 
     .media-header-divider {
       width: 1px;
@@ -388,7 +379,7 @@ author_profile: false
 
     <header class="media-header">
       <div class="media-header-logo">
-        <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/master/images/Found_logo.jpg" alt="FOUND Logo">
+        <img class="found-logo-tile" src="/images/logo_FOUND_leaf.png" alt="FOUND">
       </div>
       <div class="media-header-divider"></div>
       <div class="media-header-body">

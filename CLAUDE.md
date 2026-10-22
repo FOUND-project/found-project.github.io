@@ -162,6 +162,15 @@ The documentary trailer is a poster button that only inserts the YouTube
 iframe (`playsinline=1`) when tapped, so a scroll gesture over it can no longer
 hit YouTube's own links and open the app.
 
+## Page headers
+
+News, Media, Publications, How to Help and Team open with the same header card:
+the FOUND pin-and-leaf logo (`images/logo_FOUND_leaf.png`, transparent, no
+wordmark) in an 88px white tile (`.found-logo-tile`, `object-fit:contain`) on the
+left, then an eyebrow and the `<h1>`. The shared `.found-header` CSS is in
+`_includes/head/custom.html`; News and Media keep their own header wrappers but
+use the same tile. Do not reintroduce the cream `Found_logo.jpg` there.
+
 ## Link previews
 
 `og_image` in `_config.yml` is `images/og-found.png` (1200x630, the full

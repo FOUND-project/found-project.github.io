@@ -450,6 +450,15 @@ author_profile: false
       <button type="button" class="lang-btn" data-lang="es">ES</button>
     </div>
 
+    <header class="found-header">
+      <div class="found-header-logo"><img class="found-logo-tile" src="/images/logo_FOUND_leaf.png" alt="FOUND"></div>
+      <div class="found-header-divider"></div>
+      <div class="found-header-body">
+        <div class="found-header-eyebrow" id="help-header-pill">Donate · Collaborate · Amplify</div>
+        <h1 id="help-header-title">How to Help</h1>
+      </div>
+    </header>
+
     <!-- Image Showcase -->
     <section class="image-showcase">
       <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/mothers%20walking.gif?raw=true"
@@ -553,6 +562,8 @@ author_profile: false
     (function(){
       const translations = {
         en:{
+          'help-header-pill':'Donate · Collaborate · Amplify',
+          'help-header-title':'How to Help',
           'donate-title':'Donate',
           'facebook-label':'Visit Facebook Page',
           'testimonial-text':'These are the details to donate — your support allows us to continue our searches. Thank you for your empathy — it is through your support that we can carry on looking for our missing loved ones. Until we find them!',
@@ -570,6 +581,8 @@ author_profile: false
           'linkedin-label':'Follow on LinkedIn'
         },
         es:{
+          'help-header-pill':'Dona · Colabora · Difunde',
+          'help-header-title':'Cómo ayudar',
           'donate-title':'Donar',
           'facebook-label':'Visitar página de Facebook',
           'testimonial-text':'Estos son los datos para donar — tu apoyo nos permite seguir buscando. Gracias por tu empatía: es gracias a tu apoyo que podemos continuar la búsqueda de nuestros seres queridos. ¡Hasta encontrarles!',
