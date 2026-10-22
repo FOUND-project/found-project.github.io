@@ -282,13 +282,13 @@ author_profile: false
   category: 'partnership',
   en: {
     badge: 'Donation',
-    title: 'Guillermina Camacho donates to FOUND the bear made from the clothing of her son, Jorge Solís Camacho',
-    body: '<p><strong>Guillermina Camacho</strong>, a buscadora in Zacatecas and a member of FOUND’s Advisory Board, has donated to FOUND the teddy bear made from the clothing of her son, <strong>Jorge Solís Camacho</strong>, who disappeared in Zacatecas, Mexico, nine years ago.</p><p>It will also form part of a permanent exhibition at the <strong>University of Bath</strong>.</p><blockquote><p>“The bears, made from clothing of our disappeared treasures, are the embrace we need to give our sons and daughters when we miss them, the one their absence will not let us give. It is a hug of love across the distance.”</p></blockquote><p>Thank you, Guillermina.</p>'
+    title: 'Guillermina Camacho donates to FOUND a bear made from the clothing of her son, Jorge Solís Camacho',
+    body: '<p><strong>Guillermina Camacho</strong>, a buscadora in Zacatecas and a member of FOUND’s Advisory Board, has donated to FOUND a bear made from the clothing of her son, <strong>Jorge Solís Camacho</strong>, who disappeared in Zacatecas, Mexico, nine years ago.</p><p>It will also form part of a permanent exhibition at the <strong>University of Bath</strong>.</p><blockquote><p>“The bears, made from clothing of our disappeared treasures, are the embrace we need to give our sons and daughters when we miss them, the one their absence will not let us give. It is a hug of love across the distance.”</p></blockquote><p>Thank you, Guillermina.</p>'
   },
   es: {
     badge: 'Donación',
-    title: 'Guillermina Camacho dona a FOUND el oso hecho con la ropa de su hijo, Jorge Solís Camacho',
-    body: '<p><strong>Guillermina Camacho</strong>, buscadora en Zacatecas e integrante del Consejo Asesor de FOUND, donó a FOUND el oso de peluche hecho con la ropa de su hijo, <strong>Jorge Solís Camacho</strong>, desaparecido en Zacatecas, México, hace nueve años.</p><p>También formará parte de una exposición permanente en la <strong>Universidad de Bath</strong>.</p><blockquote><p>“Los osos, hechos con la ropa de nuestros tesoros desaparecidos, son el abrazo que necesitamos darles a nuestros hijos e hijas cuando los extrañamos, el que su ausencia no nos deja darles. Es un abrazo de amor a la distancia.”</p></blockquote><p>Gracias, Guillermina.</p>'
+    title: 'Guillermina Camacho dona a FOUND un osito hecho con la ropa de su hijo, Jorge Solís Camacho',
+    body: '<p><strong>Guillermina Camacho</strong>, buscadora en Zacatecas e integrante del Consejo Asesor de FOUND, donó a FOUND un osito hecho con la ropa de su hijo, <strong>Jorge Solís Camacho</strong>, desaparecido en Zacatecas, México, hace nueve años.</p><p>También formará parte de una exposición permanente en la <strong>Universidad de Bath</strong>.</p><blockquote><p>“Los osos, hechos con la ropa de nuestros tesoros desaparecidos, son el abrazo que necesitamos darles a nuestros hijos e hijas cuando los extrañamos, el que su ausencia no nos deja darles. Es un abrazo de amor a la distancia.”</p></blockquote><p>Gracias, Guillermina.</p>'
   }
 },
 {
