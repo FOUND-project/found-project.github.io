@@ -116,13 +116,18 @@ revealed by a `.bk-js` class the script adds to the section.
 Test it: Playwright with `javaScriptEnabled: false` must still show all 17
 chapters and 17 download links.
 
-### Do not pin the viewport
+### Viewport: desktop layout on phones for the section pages
 
-`publications.md` carried `<meta name="viewport" content="width=1200">`, which
-rendered the whole page at about a third scale on a phone and left its own
-1024/768/480 media queries as dead code. The theme already emits a correct
-`width=device-width` tag. If a page looks untouched by your breakpoints, check
-for a second viewport meta before debugging the CSS.
+The owner prefers **News, Media, Publications and Team** to show their
+big-screen layout on phones, scaled down. Each of those four pages carries its
+own `<meta name="viewport" content="width=1200">` in the page content; it comes
+after the theme's `width=device-width` tag, so it wins. Keep the four in step.
+The **homepage is not pinned** — it has a real phone layout.
+
+Because of this, a plain 390px Playwright viewport shows a phone layout those
+pages never get on a real phone; test them with a device profile
+(`devices['iPhone 13']`, which honours the meta) instead. Their own small-screen
+media queries are effectively dead on phones.
 
 ## Verifying before you push
 

@@ -3,6 +3,7 @@ title: "Team"
 permalink: /team/
 author_profile: false
 ---
+<meta name="viewport" content="width=1200">
 <style>
   .team-page {
     max-width: var(--shell-max);
