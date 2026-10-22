@@ -544,7 +544,6 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
         </ul>
         <p class="gallery-hint" id="gallery-hint">Tap to enlarge</p>
         <div class="image-gallery belt" data-belt>
-          <div class="gallery-item touch-zoomable"><img src="/images/drone-heatmap-field-platform.jpg" alt="Drone model of a search area, an anomaly heatmap of a site, and a search team in the field consulting the platform on a laptop" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
           <div class="gallery-item touch-zoomable"><img src="/images/heatmap-site-analysis.jpg" alt="Heatmap over satellite imagery marking numbered points of interest across a search site" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
           <div class="gallery-item touch-zoomable"><img src="/images/field-search-platform-laptop.jpg" alt="Searching families and officials at a field site, with the search platform open on a laptop in the foreground" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
           <div class="gallery-item touch-zoomable"><img src="/images/knowledge-exchange-workshop.jpg" alt="Knowledge exchange workshop: participants at computers following a geospatial search platform on a projected screen" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
