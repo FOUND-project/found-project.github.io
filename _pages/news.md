@@ -256,6 +256,24 @@ author_profile: false
       var BASE_URL = 'https://found-project.org/news/';
       var newsCards = [
 {
+  id: 'cnb-second-training',
+  date: '2026-09-15',
+  image: '/images/cnb_second_training_2026.jpg',
+  logoBanner: false,
+  featured: true,
+  category: 'funding',
+  en: {
+    badge: 'Training',
+    title: 'FOUND and LABCO deliver second round of training to officials of Mexico’s National Search Commission',
+    body: '<p>FOUND and <strong>LABCO</strong> have delivered the second round of training to officials of <strong>Mexico’s National Search Commission (CNB)</strong>, this time with a new group of officials.</p><p>Building on the first round in April, the training covered the two platforms developed by <strong>CentroGeo</strong>, FOUND’s implementing partner, and adopted by the CNB as part of its official toolkit:</p><ul><li><strong>Global Index Mapper</strong>, which applies spectral indices to satellite and drone imagery to identify anomalies and substances associated with clandestine graves, including the day they appeared.</li><li><strong>Espacio Clandestino</strong>, which uses machine learning to identify sites of forensic interest, drawing on patterns from clandestine graves documented to date.</li></ul><p>With each new cohort, more of the people responsible for searching across Mexico can bring these tools into their daily work, as we continue shaping workshops to scale to Mexican states along with user guides and video tutorials.</p>'
+  },
+  es: {
+    badge: 'Capacitación',
+    title: 'FOUND y LABCO imparten la segunda ronda de capacitación a personal de la Comisión Nacional de Búsqueda de México',
+    body: '<p>FOUND y <strong>LABCO</strong> impartieron la segunda ronda de capacitación al personal de la <strong>Comisión Nacional de Búsqueda (CNB)</strong> de México, esta vez con un nuevo grupo de funcionarias y funcionarios.</p><p>Como continuación de la primera ronda de abril, la capacitación abarcó las dos plataformas desarrolladas por <strong>CentroGeo</strong>, socio implementador de FOUND, y adoptadas por la CNB como parte de su caja de herramientas oficial:</p><ul><li><strong>Global Index Mapper</strong>, que aplica índices espectrales a imágenes satelitales y de dron para identificar anomalías y sustancias asociadas a fosas clandestinas, incluido el día en que aparecieron.</li><li><strong>Espacio Clandestino</strong>, que usa aprendizaje automático para identificar sitios de interés forense, a partir de los patrones de fosas clandestinas documentadas hasta la fecha.</li></ul><p>Con cada nueva generación, más personas responsables de la búsqueda en México pueden incorporar estas herramientas a su trabajo diario, mientras seguimos diseñando talleres para escalar hacia los estados del país, junto con guías de usuario y tutoriales en video.</p>'
+  }
+},
+{
   id: 'aiforgood-itu-2026',
   date: '2026-07-09',
   image: '/images/aiforgood_geneva_2026.jpg',
