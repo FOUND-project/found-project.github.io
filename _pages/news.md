@@ -159,6 +159,9 @@ author_profile: false
     .modal-body p { margin-bottom: 1rem; font-size: .97rem; }
     .modal-body strong { color: var(--green-900); font-weight: 700; }
     .modal-body em { font-style: italic; }
+    .modal-body .video-embed { position: relative; aspect-ratio: 16/9; margin: 1.3rem 0 .55rem; border-radius: var(--radius-md); overflow: hidden; background: #000; box-shadow: var(--shadow-md); }
+    .modal-body .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .modal-body .video-caption { font-size: .9rem; line-height: 1.6; margin-bottom: 1.2rem; }
     .modal-body a { color: var(--green-700); text-decoration: none; font-weight: 650; border-bottom: 2px solid rgba(45,95,77,.3); padding-bottom: .05rem; transition: border-color .2s, color .2s; }
     .modal-body a:hover { border-bottom-color: var(--gold); color: var(--green-700); }
     .modal-body ul { margin: .8rem 0 1.1rem 1.4rem; }
@@ -346,6 +349,24 @@ author_profile: false
     badge: 'Evento',
     title: '¿Puede la IA ayudarnos a encontrar e identificar a nuestras personas desaparecidas? FOUND e identIA en la Universidad de Oxford',
     body: '<p><strong>¿Puede la IA ayudarnos a encontrar e identificar a nuestras personas desaparecidas?</strong></p><p>En México y Colombia, más de <strong>250,000 personas</strong> continúan desaparecidas, dejando a las familias atrapadas en el duelo y la incertidumbre. Es una crisis que toca a millones. La IA, la percepción remota y la ciencia del suelo tienen el potencial de acelerar resultados y transformar la forma en que las autoridades buscan e identifican a las personas desaparecidas.</p><p>Pero la tecnología por sí sola no es la respuesta. Las familias que buscan poseen un conocimiento irremplazable, y las herramientas deben construirse con ellas. <strong>FOUND</strong> e <strong>identIA</strong> se sostienen en ese principio: coproducir conocimiento con las familias buscadoras, y mantener la ética en el centro de cómo las tecnologías entran en campos sensibles y se incorporan a los gobiernos.</p><p>El <strong>26 de junio</strong>, FOUND e identIA se reúnen en la <strong>Blavatnik School of Government de la Universidad de Oxford</strong> para compartir sus resultados a la fecha en México y Colombia.</p><ul><li>🗓 Viernes 26 de junio de 2026, 14:00–15:00 (Reino Unido)</li><li>📍 Presencial en la Blavatnik School of Government · también en línea</li><li>🎟 Gratuito y abierto al público</li></ul><p><a href="https://www.bsg.ox.ac.uk/events/found-and-identia" target="_blank" rel="noopener noreferrer">Míralo aquí ↗</a></p>'
+  }
+},
+{
+  id: 'ethics-buscadoras-oxford-2026',
+  date: '2026-06-01',
+  image: 'https://i.ytimg.com/vi/OyoscaPt_Gk/hqdefault.jpg',
+  logoBanner: false,
+  featured: true,
+  category: 'partnership',
+  en: {
+    badge: 'Event',
+    title: 'Ethics in the words of the buscadoras. Event in Oxford: “Care as a research topic, a methodology and a practice”',
+    body: '<p>These videos were part of a keynote at the <strong>Schwarzman Centre for the Humanities, University of Oxford</strong>, at the invitation of FOUND and the <strong>Oxford Latin American Graduate Network</strong>. June 2026.</p><p>Two buscadoras spoke about care as a research topic, a methodology and a practice, and about what makes an encounter with a searching family feel like care rather than extraction.</p><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/OyoscaPt_Gk?playsinline=1&rel=0" title="Maestra Guille, University of Oxford, June 2026" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div><p class="video-caption"><strong>Maestra Guille (Guillermina Camacho)</strong>, search collective <em>Siguiendo tu Rastro con Amor</em> (“Following Your Trail with Love”). México</p><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/H3Xs7lxLQnw?playsinline=1&rel=0" title="Yolanda Melo, University of Oxford, June 2026" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div><p class="video-caption"><strong>Yolanda Melo</strong>, search collective “Fundación Yovany Quevedo: Lazos de Vida”. Colombia</p>'
+  },
+  es: {
+    badge: 'Evento',
+    title: 'Ética en palabras de las buscadoras. Evento en Oxford: “El cuidado como tema de investigación, como metodología y como práctica”',
+    body: '<p>Estos videos formaron parte de una conferencia magistral en el <strong>Schwarzman Centre for the Humanities, Universidad de Oxford</strong>, por invitación de FOUND y de la <strong>Oxford Latin American Graduate Network</strong>. Junio de 2026.</p><p>Dos buscadoras hablaron del cuidado como tema de investigación, como metodología y como práctica, y de qué hace que un encuentro con una familia buscadora se sienta como cuidado y no como extracción.</p><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/OyoscaPt_Gk?playsinline=1&rel=0" title="Maestra Guille, University of Oxford, June 2026" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div><p class="video-caption"><strong>Maestra Guille (Guillermina Camacho)</strong>, colectivo de búsqueda <em>Siguiendo tu Rastro con Amor</em>. México</p><div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/H3Xs7lxLQnw?playsinline=1&rel=0" title="Yolanda Melo, University of Oxford, June 2026" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div><p class="video-caption"><strong>Yolanda Melo</strong>, colectivo de búsqueda “Fundación Yovany Quevedo: Lazos de Vida”. Colombia</p>'
   }
 },
 {
