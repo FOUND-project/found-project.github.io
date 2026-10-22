@@ -8,6 +8,7 @@ author_profile: false
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
   <title>FOUND — Publications</title>
 
   <style>
