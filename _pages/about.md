@@ -559,6 +559,8 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
           <div class="gallery-item touch-zoomable"><img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/70206a6b5788f7204524bfdd4e1a6c365668b75d/assets/WhatsApp%20Image%202025-03-22%20at%2019.01.44.jpeg" alt="Search methodology in practice" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
           <div class="gallery-item touch-zoomable"><img src="https://github.com/FOUND-project/found-project.github.io/blob/51a35a3f1915699b8fe9835270ddfe6f3c5c0946/images/hyperspectral%20from%20presentation.png?raw=true" alt="Hyperspectral analysis output" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
           <div class="gallery-item touch-zoomable"><img src="https://github.com/FOUND-project/found-project.github.io/blob/51a35a3f1915699b8fe9835270ddfe6f3c5c0946/images/pigs_aerial.jpg?raw=true" alt="Aerial view of experimental calibration site" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
+          <div class="gallery-item touch-zoomable"><img src="/images/drone-flight-fog.jpg" alt="Survey drone flying low over a field site in the fog" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
+          <div class="gallery-item touch-zoomable"><img src="/images/ndai5-time-series-anomaly.jpg" alt="Sentinel-2 NDAI5 time series for one point, 2017 to 2026, with a single sharp spike on 29 March 2019" style="object-fit:contain;background:#fff" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
         </div>
       </section>
     </div>
