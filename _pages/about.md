@@ -418,7 +418,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
   </div>
   <div class="title-inner">
     <div class="title-brand">
-      <img src="https://raw.githubusercontent.com/FOUND-project/found-project.github.io/9466ebc27c9487e8bfbff1d1dd904f4f9e6df81d/images/logo_FOUND_white.png" alt="FOUND logo" class="project-logo" />
+      <img src="/images/logo_FOUND_white_greenleaf.png" alt="FOUND logo" class="project-logo" />
       <h1 class="project-title">FOUND</h1>
     </div>
     <hr class="title-divider" />
