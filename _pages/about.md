@@ -302,17 +302,25 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 .copro-lead{font-size:clamp(1.15rem,2.6vw,1.5rem);line-height:1.6;color:var(--text-dark);font-weight:450;max-width:920px;margin-bottom:1.1rem}
 .copro-lead strong{color:var(--primary-green);font-weight:750}
 .copro-body{font-size:clamp(1.02rem,2.2vw,1.15rem);line-height:1.85;color:var(--text-medium);max-width:920px;margin-bottom:1rem}
-.copro-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.5rem,3vw,2.75rem);align-items:center;margin-top:clamp(1.75rem,3vw,2.5rem)}
+.copro-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(1.5rem,3vw,2.75rem);align-items:center;margin-top:clamp(1.75rem,3vw,2.5rem)}
 .copro-quote{position:relative;border-radius:var(--radius-lg);padding:clamp(1.75rem,3vw,2.5rem) clamp(1.75rem,3vw,2.75rem);background:radial-gradient(circle at 12% 0%,rgba(212,175,55,.10) 0%,transparent 55%),linear-gradient(135deg,#0e2a1f 0%,#0b1c16 100%);overflow:hidden;isolation:isolate;box-shadow:var(--shadow-lg)}
 .copro-quote::before{content:'\201C';position:absolute;top:-.35em;left:.28em;font-family:var(--font-display);font-size:8rem;line-height:1;color:rgba(212,175,55,.22);pointer-events:none;z-index:0}
 .copro-quote-text{position:relative;z-index:1;font-family:var(--font-display);font-style:italic;font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.5;color:#fff;letter-spacing:.01em;margin-bottom:1.1rem}
 .copro-quote-attr{position:relative;z-index:1;font-family:var(--font-mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(212,175,55,.85);font-weight:700}
-.copro-example{background:#fff;border-radius:var(--radius-lg);border:1px solid rgba(45,95,77,.12);box-shadow:var(--shadow-md);padding:clamp(1.5rem,2.8vw,2rem);position:relative;overflow:hidden}
-.copro-example::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold-accent),rgba(212,175,55,.25));opacity:.85}
-.copro-example-label{font-family:var(--font-mono);font-size:.7rem;font-weight:750;letter-spacing:.12em;text-transform:uppercase;color:var(--light-green);margin-bottom:.55rem}
-.copro-example-title{font-size:1.15rem;font-weight:800;color:var(--dark-green);line-height:1.35;letter-spacing:-.01em;margin-bottom:.55rem}
-.copro-example-text{font-size:.98rem;line-height:1.75;color:var(--text-medium)}
-.copro-example-text strong{color:var(--primary-green);font-weight:700}
+.copro-quote-fig{margin:0}
+.copro-ex{position:relative;z-index:1;margin-top:clamp(1.25rem,2.4vw,1.75rem);border-top:1px solid rgba(212,175,55,.25);padding-top:clamp(1rem,2vw,1.35rem)}
+.copro-ex-sum{display:flex;align-items:center;gap:1rem;cursor:pointer;list-style:none}
+.copro-ex-sum::-webkit-details-marker{display:none}
+.copro-ex-heads{display:block;flex:1 1 auto;min-width:0}
+.copro-ex-chev{flex:0 0 auto;width:34px;height:34px;border-radius:50%;border:1px solid rgba(212,175,55,.55);background:rgba(212,175,55,.12);position:relative;transition:transform .25s var(--transition-smooth),background .2s ease}
+.copro-ex-chev::after{content:'';position:absolute;left:11px;top:9px;width:9px;height:9px;border-right:2px solid var(--gold-accent);border-bottom:2px solid var(--gold-accent);transform:rotate(45deg)}
+.copro-ex-sum:hover .copro-ex-chev{background:rgba(212,175,55,.25)}
+.copro-ex[open] .copro-ex-chev{transform:rotate(180deg)}
+.copro-ex[open] .copro-example-text{animation:bkOpen .3s ease}
+.copro-example-label{display:block;font-family:var(--font-mono);font-size:.7rem;font-weight:750;letter-spacing:.12em;text-transform:uppercase;color:rgba(212,175,55,.85);margin-bottom:.4rem}
+.copro-example-title{display:block;font-size:clamp(1.05rem,2vw,1.2rem);font-weight:750;color:#fff;line-height:1.4;letter-spacing:-.005em}
+.copro-example-text{font-size:clamp(.98rem,1.8vw,1.06rem);line-height:1.8;color:rgba(232,245,240,.85);margin:.9rem 0 0}
+.copro-example-text strong{color:#fff;font-weight:700}
 .fwos{margin-top:clamp(2.5rem,4vw,3.5rem)}
 .fwos-title{font-size:clamp(1.4rem,3vw,2rem);font-weight:400;font-family:var(--font-display);color:var(--dark-green);margin-bottom:1.25rem;line-height:1.25}
 .fwos-figure{width:100%;max-width:980px;margin:0 auto;display:block}
@@ -347,13 +355,6 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 @keyframes bkOpen{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
 
 /* ===== Tlajomulco example: clickable disclosure ===== */
-.copro-ex-toggle{display:flex;align-items:flex-start;gap:.75rem;width:100%;text-align:left;background:none;border:none;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer}
-.copro-ex-heads{display:block;flex:1 1 auto;min-width:0}
-.copro-ex-toggle .copro-example-label{display:block}
-.copro-ex-toggle .copro-example-title{display:block;margin-bottom:0}
-.copro-ex-chev{flex:0 0 auto;width:30px;height:30px;border-radius:50%;border:1px solid rgba(45,95,77,.22);background:rgba(232,245,240,.75);display:flex;align-items:center;justify-content:center;margin-top:.15rem;transition:transform .3s var(--transition-smooth),background .25s var(--transition-smooth),border-color .25s var(--transition-smooth)}
-.copro-ex-chev::before{content:'\2922';font-size:.85rem;line-height:1;color:var(--primary-green)}
-.copro-example:hover .copro-ex-chev{background:#fff;border-color:rgba(212,175,55,.6);transform:scale(1.08)}
 /* ===== Four ways of seeing: card list for small screens ===== */
 .fwos-cards{display:none;list-style:none;padding:0;margin:0;gap:.7rem}
 .fwos-card{background:#fff;border:1px solid rgba(45,95,77,.13);border-left:3px solid var(--gold-accent);border-radius:14px;padding:.85rem .95rem;box-shadow:var(--shadow-sm);animation:fwosCard 5s ease-in-out infinite}
@@ -386,7 +387,6 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
   .copro-quote{padding:1.25rem 1.15rem 1.35rem;border-radius:var(--radius-md)}
   .copro-quote::before{font-size:5rem;top:-.28em}
   .copro-quote-text{font-size:1.12rem;line-height:1.45;margin-bottom:.75rem}
-  .copro-example{padding:1.1rem 1rem 1.2rem}
   .copro-grid{gap:1rem;margin-top:1.25rem}
   .copro-lead{font-size:1.15rem}
   .copro-body{font-size:1rem;line-height:1.7}
@@ -397,26 +397,6 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 }
 
 /* ===== Tlajomulco: preview card opens a square modal ===== */
-.copro-ex-toggle{cursor:pointer}
-.copro-example{cursor:pointer}
-.copro-example:hover{border-color:rgba(212,175,55,.5);box-shadow:var(--shadow-lg)}
-.copro-ex-preview{position:relative}
-.copro-ex-preview .copro-example-text{display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.copro-modal{position:fixed;inset:0;z-index:9998;display:flex;align-items:center;justify-content:center;padding:clamp(1rem,4vw,2rem);background:rgba(6,18,14,.62);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);opacity:0;transition:opacity .28s var(--transition-smooth)}
-.copro-modal[hidden]{display:none}
-.copro-modal.is-open{opacity:1}
-.copro-modal-panel{position:relative;width:min(92vw,600px);aspect-ratio:1/1;height:auto;max-height:88vh;overflow-y:auto;background:#fff;border-radius:var(--radius-lg);border:1px solid rgba(45,95,77,.14);box-shadow:0 30px 70px rgba(0,0,0,.35);padding:clamp(1.5rem,3.5vw,2.5rem);transform:translateY(14px) scale(.97);transition:transform .3s var(--transition-smooth)}
-.copro-modal.is-open .copro-modal-panel{transform:none}
-.copro-modal-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--radius-lg) var(--radius-lg) 0 0;background:linear-gradient(90deg,var(--gold-accent),rgba(212,175,55,.25))}
-.copro-modal-close{position:absolute;top:.75rem;right:.75rem;width:38px;height:38px;border-radius:50%;border:1px solid rgba(45,95,77,.18);background:rgba(232,245,240,.7);color:var(--dark-green);font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease,transform .2s ease}
-.copro-modal-close:hover{background:#fff;transform:scale(1.06)}
-.copro-modal-label{font-family:var(--font-mono);font-size:.7rem;font-weight:750;letter-spacing:.12em;text-transform:uppercase;color:var(--light-green);margin-bottom:.55rem;padding-right:2.5rem}
-.copro-modal-title{font-size:clamp(1.15rem,2.4vw,1.5rem);font-weight:800;color:var(--dark-green);line-height:1.3;letter-spacing:-.01em;margin:0 0 .9rem;padding-bottom:0}
-.copro-modal-title::after{display:none}
-.copro-modal-text{font-size:clamp(.98rem,2vw,1.05rem);line-height:1.8;color:var(--text-medium)}
-.copro-modal-text strong{color:var(--primary-green);font-weight:700}
-body.copro-modal-open{overflow:hidden}
-@media(max-width:520px){.copro-modal-panel{aspect-ratio:auto}}
 </style>
 <!-- TITLE SECTION -->
 <section class="title-section">
@@ -599,22 +579,22 @@ body.copro-modal-open{overflow:hidden}
   <div class="copro-inner">
     <div class="copro-eyebrow" id="copro-eyebrow">Coproduction with search groups</div>
     <div class="copro-grid">
-      <figure class="copro-quote">
+      <div class="copro-quote">
+        <figure class="copro-quote-fig">
         <p class="copro-quote-text" id="copro-quote-text">When families speak, they speak in the present tense. "He is a son." "She is a student." The verb stays in present tense. There is an ethic in that grammar.</p>
         <figcaption class="copro-quote-attr" id="copro-quote-attr">A principle FOUND adopted from searching families
         </figcaption>
-      </figure>
-      <div class="copro-example">
-        <button type="button" class="copro-ex-toggle" id="copro-ex-toggle" aria-haspopup="dialog">
-          <span class="copro-ex-heads">
-            <span class="copro-example-label" id="copro-ex-label">Coproduction in practice &middot; Tlajomulco</span>
-            <span class="copro-example-title" id="copro-ex-title">An example of how families codesigned an experimental site</span>
-          </span>
-          <span class="copro-ex-chev" aria-hidden="true"></span>
-        </button>
-        <div class="copro-ex-preview">
-        <p class="copro-example-text" id="copro-ex-text">Our experimental sites were not built from institutional data or scientific evidence alone. Families described that when large amounts of soil are moved to install <strong>electrical-tower bases</strong>, clandestine graves can appear in that disturbed ground. So we built one of our sites beside electrical towers to replicate exactly that condition &mdash; and to test how each instrument behaves where the problem actually occurs. The methods adapt to each place; the principle of coproduction with families does not.</p>
-        </div>
+        </figure>
+        <details class="copro-ex">
+          <summary class="copro-ex-sum">
+            <span class="copro-ex-heads">
+              <span class="copro-example-label" id="copro-ex-label">Coproduction in practice &middot; Tlajomulco</span>
+              <span class="copro-example-title" id="copro-ex-title">An example of how families codesigned an experimental site</span>
+            </span>
+            <span class="copro-ex-chev" aria-hidden="true"></span>
+          </summary>
+          <p class="copro-example-text" id="copro-ex-text">Our experimental sites were not built from institutional data or scientific evidence alone. Families described that when large amounts of soil are moved to install <strong>electrical-tower bases</strong>, clandestine graves can appear in that disturbed ground. So we built one of our sites beside electrical towers to replicate exactly that condition &mdash; and to test how each instrument behaves where the problem actually occurs. The methods adapt to each place; the principle of coproduction with families does not.</p>
+        </details>
       </div>
     </div>
     <div class="fwos">
@@ -693,14 +673,6 @@ body.copro-modal-open{overflow:hidden}
     </div>
   </div>
 </section>
-<div class="copro-modal" id="copro-modal" role="dialog" aria-modal="true" aria-labelledby="copro-modal-title" hidden>
-  <div class="copro-modal-panel" role="document">
-    <button type="button" class="copro-modal-close" id="copro-modal-close" aria-label="Close">&times;</button>
-    <div class="copro-modal-label" id="copro-modal-label"></div>
-    <h3 class="copro-modal-title" id="copro-modal-title"></h3>
-    <div class="copro-modal-text" id="copro-modal-text"></div>
-  </div>
-</div>
 <div class="section-divider"><hr/></div>
 <!-- INSTITUTIONAL PARTNERSHIPS -->
 <section class="content-section" id="collaborations">
@@ -1024,43 +996,6 @@ body.copro-modal-open{overflow:hidden}
     if(dc&&c1&&c2)dc.textContent=(c1.textContent+' '+c2.textContent).trim();
     if(ds&&s1&&s2)ds.textContent=(s1.textContent+' '+s2.textContent).replace(/\s+/g,' ').trim();
   }
-  function setupCoproModal(){
-    var card=document.querySelector('.copro-example'),modal=document.getElementById('copro-modal'),
-        closeBtn=document.getElementById('copro-modal-close');
-    if(!card||!modal)return;
-    var lastFocus=null;
-    function fill(){
-      var src={label:'copro-ex-label',title:'copro-ex-title',text:'copro-ex-text'},
-          dst={label:'copro-modal-label',title:'copro-modal-title',text:'copro-modal-text'};
-      Object.keys(src).forEach(function(k){
-        var a=document.getElementById(src[k]),b=document.getElementById(dst[k]);
-        if(a&&b)b.innerHTML=a.innerHTML;
-      });
-    }
-    function open(){
-      fill();
-      lastFocus=document.activeElement;
-      modal.hidden=false;
-      document.body.classList.add('copro-modal-open');
-      requestAnimationFrame(function(){modal.classList.add('is-open')});
-      if(closeBtn)closeBtn.focus();
-    }
-    function close(){
-      modal.classList.remove('is-open');
-      document.body.classList.remove('copro-modal-open');
-      setTimeout(function(){modal.hidden=true},reduceMotion?0:280);
-      if(lastFocus&&lastFocus.focus)lastFocus.focus();
-    }
-    card.addEventListener('click',function(e){
-      if(e.target.closest('a'))return;
-      e.preventDefault();open();
-    });
-    if(closeBtn)closeBtn.addEventListener('click',function(e){e.stopPropagation();close()});
-    modal.addEventListener('click',function(e){if(e.target===modal)close()});
-    document.addEventListener('keydown',function(e){
-      if(e.key==='Escape'&&!modal.hidden)close();
-    });
-  }
   function setupScrollReveal(){var reveals=document.querySelectorAll('.reveal');if(!reveals.length)return;if('IntersectionObserver' in window){var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting)entry.target.classList.add('is-visible')})},{threshold:0.05,rootMargin:'0px 0px -20px 0px'});Array.prototype.forEach.call(reveals,function(el){observer.observe(el)});document.body.classList.add('reveal-ready')}}
   function setupTouchZoom(){
     var zoomables=document.querySelectorAll('.touch-zoomable');if(!zoomables.length)return;
@@ -1138,7 +1073,7 @@ body.copro-modal-open{overflow:hidden}
     setupTimeline();
     setLanguage(initialLang);
     Array.prototype.forEach.call(document.querySelectorAll('.lang-btn'),function(btn){btn.addEventListener('click',function(){setLanguage(btn.dataset.lang)})});
-    setupTrailer();setupBelts();setupTouchZoom();setupScrollReveal();setupCounters();setupCoproModal();
+    setupTrailer();setupBelts();setupTouchZoom();setupScrollReveal();setupCounters();
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}
 })();
