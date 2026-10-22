@@ -27,7 +27,7 @@ redirect_from:
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}html{scroll-behavior:auto!important}}
 body{font-family:var(--font-body);color:var(--text-dark);line-height:1.7;background:#fff;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overflow-x:hidden}
-body.zoom-active{overflow:hidden}
+
 body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(900px 520px at 18% 18%,rgba(232,245,240,.55) 0%,transparent 60%),radial-gradient(820px 520px at 82% 10%,rgba(212,175,55,.10) 0%,transparent 62%),url("/images/found-bg.svg");background-repeat:no-repeat;background-size:cover;background-position:center;opacity:0.14;transform:translateZ(0)}
 @media(prefers-reduced-motion:reduce){body::before{transform:none}}
 html{scroll-behavior:smooth}
@@ -230,7 +230,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 .footer-figure img.loading{opacity:0}
 .footer-figure::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,28,22,.30) 0%,transparent 26%,transparent 74%,rgba(11,28,22,.45) 100%);pointer-events:none}
 .footer-figure:hover img{transform:scale(1.04)}
-@media(max-width:768px){.touch-zoomable{cursor:zoom-in}.touch-zoomable.is-expanded{position:fixed;inset:0;margin:0!important;width:100vw!important;height:100vh!important;max-width:none!important;max-height:none!important;z-index:9999;background:rgba(0,0,0,.9);border-radius:0!important;box-shadow:none!important;padding:0!important;display:flex;align-items:center;justify-content:center}.touch-zoomable.is-expanded img,.touch-zoomable.is-expanded .hero-image{width:100%;height:100%;object-fit:contain;transform:none!important;box-shadow:none!important}}
+@media(max-width:768px){.touch-zoomable{cursor:zoom-in}}
 @media(max-width:900px){.copro-grid{grid-template-columns:1fr}}
 @media(max-width:768px){.page,#main,.initial-content,.page__inner-wrap,.page__content,.archive{width:100%!important}.lang-toggle{top:.9rem}.hero{padding:1.5rem 0 1.75rem}.hero-text{max-width:100%;gap:1.1rem}.animated-tagline{flex-direction:column;align-items:center;gap:.45rem}.tagline-pill{padding:.75rem 1.25rem .9rem;max-width:100%;border-radius:26px}.tagline-pill span#hero-tagline-static{font-size:clamp(1.6rem,6.4vw,2.1rem)}.hero-word{font-size:clamp(1.7rem,6.4vw,2.2rem)}.featured-pub-card{width:100%;align-items:center;text-align:center;padding:1rem 1.2rem 1.1rem}.featured-row{width:100%}.featured-fig{width:100%;aspect-ratio:16/9}.featured-pub-card::before{width:100%;height:4px;top:0;left:0;bottom:auto;background:linear-gradient(90deg,var(--gold-accent),rgba(212,175,55,.25))}.collab-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem;margin-top:1.1rem}.collab-card{min-height:0;box-shadow:var(--shadow-sm);border-radius:14px}.collab-logo{min-height:58px;padding:.6rem .5rem .35rem}.collab-logo img{max-height:44px}.collab-card-gif .collab-logo{height:88px}.collab-meta{padding:.45rem .55rem .6rem}.collab-name{font-size:.76rem;line-height:1.3;letter-spacing:0}.collab-note{display:none}#collab-note-eaaf{display:block;font-size:.68rem;line-height:1.35;margin-top:.25rem}.social-grid{grid-template-columns:1fr}.social-embed{min-height:auto;box-shadow:var(--shadow-sm)}.iframe-container iframe{height:520px}.project-logo{width:80px}}
 @media(max-width:480px){.iframe-container iframe{height:430px}}
@@ -281,6 +281,16 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
 .trailer-embed-wrapper:hover{transform:translateY(-4px);box-shadow:0 32px 72px rgba(0,0,0,.55),0 0 0 1px rgba(212,175,55,.15)}
 .trailer-embed-responsive{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
 .trailer-embed-responsive iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.zoom-lightbox{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:1rem;cursor:zoom-out;animation:zoomIn .2s ease}
+.zoom-lightbox img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px}
+.zoom-close{position:fixed;top:max(1rem,env(safe-area-inset-top));right:1rem;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(0,0,0,.55);color:#fff;font-size:1.7rem;line-height:1;cursor:pointer}
+@keyframes zoomIn{from{opacity:0}to{opacity:1}}
+.trailer-facade{position:absolute;inset:0;width:100%;height:100%;padding:0;margin:0;border:0;background:#000;cursor:pointer;display:block}
+.trailer-facade img{width:100%;height:100%;object-fit:cover;display:block;opacity:.88;transition:opacity .3s ease}
+.trailer-facade:hover img,.trailer-facade:focus-visible img{opacity:1}
+.trailer-play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(11,28,22,.78);border:2px solid var(--gold-accent);box-shadow:0 10px 30px rgba(0,0,0,.45);transition:transform .25s var(--transition-smooth)}
+.trailer-play::after{content:'';position:absolute;left:30px;top:22px;border-style:solid;border-width:16px 0 16px 26px;border-color:transparent transparent transparent #fff}
+.trailer-facade:hover .trailer-play{transform:scale(1.08)}
 .trailer-caption{margin-top:1.4rem;display:flex;align-items:center;justify-content:center;gap:.8rem;flex-wrap:wrap}
 .trailer-caption-text{font-size:clamp(.82rem,1.6vw,.92rem);color:rgba(232,245,240,.55);font-family:var(--font-mono);letter-spacing:.03em}
 .trailer-caption-divider{width:28px;height:1px;background:linear-gradient(90deg,transparent,rgba(212,175,55,.4),transparent)}
@@ -363,7 +373,7 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
   .buscadoras-belt .gallery-item{flex-basis:62%;max-width:62%}
   #technologies .gallery-item{flex-basis:86%;max-width:86%}
   .gallery-item::before{content:'\2922';position:absolute;right:.45rem;bottom:.45rem;z-index:2;width:27px;height:27px;display:flex;align-items:center;justify-content:center;font-size:.9rem;color:#fff;background:rgba(11,28,22,.6);border:1px solid rgba(255,255,255,.32);border-radius:9px;pointer-events:none}
-  .touch-zoomable.is-expanded::before{content:'\00d7';position:fixed;top:1rem;right:1rem;left:auto;bottom:auto;width:44px;height:44px;font-size:1.7rem;border-radius:50%;background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.4);z-index:10000}
+  
   /* Coproduction reads better as one column with a tighter quote */
   .copro-quote{padding:1.25rem 1.15rem 1.35rem;border-radius:var(--radius-md)}
   .copro-quote::before{font-size:5rem;top:-.28em}
@@ -504,7 +514,8 @@ body.copro-modal-open{overflow:hidden}
     <p class="trailer-subtitle" id="trailer-subtitle">The story of families, science, and the search for those who are missing.</p>
     <div class="trailer-embed-wrapper">
       <div class="trailer-embed-responsive">
-        <iframe src="https://www.youtube.com/embed/hbo9H4yj1VQ?si=0o_D0HgsLp2pMjW5" title="FOUND Documentary Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        <button type="button" class="trailer-facade" data-yt="hbo9H4yj1VQ" aria-label="Play the FOUND documentary trailer"><img src="https://i.ytimg.com/vi/hbo9H4yj1VQ/hqdefault.jpg" alt="" loading="lazy"><span class="trailer-play" aria-hidden="true"></span></button>
+        <noscript><iframe src="https://www.youtube-nocookie.com/embed/hbo9H4yj1VQ?playsinline=1&amp;rel=0" title="FOUND Documentary Trailer" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></noscript>
       </div>
     </div>
     <div class="trailer-caption">
@@ -1043,7 +1054,33 @@ body.copro-modal-open{overflow:hidden}
     });
   }
   function setupScrollReveal(){var reveals=document.querySelectorAll('.reveal');if(!reveals.length)return;if('IntersectionObserver' in window){var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting)entry.target.classList.add('is-visible')})},{threshold:0.05,rootMargin:'0px 0px -20px 0px'});Array.prototype.forEach.call(reveals,function(el){observer.observe(el)});document.body.classList.add('reveal-ready')}}
-  function setupTouchZoom(){var zoomables=document.querySelectorAll('.touch-zoomable');if(!zoomables.length)return;function toggleZoom(el){if(el.classList.contains('is-expanded')){el.classList.remove('is-expanded');document.body.classList.remove('zoom-active')}else{Array.prototype.forEach.call(document.querySelectorAll('.touch-zoomable.is-expanded'),function(o){o.classList.remove('is-expanded')});el.classList.add('is-expanded');document.body.classList.add('zoom-active')}}Array.prototype.forEach.call(zoomables,function(el){el.addEventListener('click',function(e){if(window.matchMedia&&window.matchMedia('(max-width: 768px)').matches){e.preventDefault();e.stopPropagation();toggleZoom(el)}})});document.addEventListener('keydown',function(e){if(e.key==='Escape'){Array.prototype.forEach.call(document.querySelectorAll('.touch-zoomable.is-expanded'),function(o){o.classList.remove('is-expanded')});document.body.classList.remove('zoom-active')}})}
+  function setupTouchZoom(){
+    var zoomables=document.querySelectorAll('.touch-zoomable');if(!zoomables.length)return;
+    var mq=window.matchMedia?window.matchMedia('(max-width: 768px)'):null;
+    var box=null,startY=0;
+    function close(){if(!box)return;box.parentNode.removeChild(box);box=null;document.body.classList.remove('zoom-active')}
+    function open(src,alt){
+      close();
+      box=document.createElement('div');box.className='zoom-lightbox';box.setAttribute('role','dialog');box.setAttribute('aria-label',alt||'Image');
+      var im=document.createElement('img');im.src=src;im.alt=alt||'';box.appendChild(im);
+      var x=document.createElement('button');x.type='button';x.className='zoom-close';x.setAttribute('aria-label','Close');x.innerHTML='&times;';box.appendChild(x);
+      box.addEventListener('click',close);
+      box.addEventListener('touchstart',function(e){startY=e.touches[0].clientY},{passive:true});
+      box.addEventListener('touchmove',function(e){if(Math.abs(e.touches[0].clientY-startY)>12)close()},{passive:true});
+      box.addEventListener('wheel',close,{passive:true});
+      document.body.appendChild(box);document.body.classList.add('zoom-active');
+    }
+    Array.prototype.forEach.call(zoomables,function(el){
+      el.addEventListener('click',function(e){
+        if(!mq||!mq.matches)return;
+        var im=el.querySelector('img');if(!im)return;
+        e.preventDefault();e.stopPropagation();
+        open(im.currentSrc||im.src,im.alt);
+      });
+    });
+    window.addEventListener('scroll',close,{passive:true});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  }
   /* Moving belts: clone the items once so the strip can loop, then drift it
      right-to-left by scrolling. Without JS (or with reduced motion) the strip
      is still an ordinary swipeable row. Pauses on hover, touch and zoom. */
@@ -1076,13 +1113,24 @@ body.copro-modal-open{overflow:hidden}
       window.requestAnimationFrame(step);
     });
   }
+  function setupTrailer(){
+    var btn=document.querySelector('.trailer-facade');if(!btn)return;
+    btn.addEventListener('click',function(){
+      var f=document.createElement('iframe');
+      f.src='https://www.youtube-nocookie.com/embed/'+btn.getAttribute('data-yt')+'?autoplay=1&playsinline=1&rel=0&modestbranding=1';
+      f.title='FOUND Documentary Trailer';
+      f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; fullscreen');
+      f.setAttribute('allowfullscreen','');
+      btn.parentNode.replaceChild(f,btn);
+    });
+  }
   function init(){
     var savedLang=null;try{savedLang=localStorage.getItem('found-lang')}catch(e){}
     var initialLang=(savedLang==='es')?'es':'en';
     setupTimeline();
     setLanguage(initialLang);
     Array.prototype.forEach.call(document.querySelectorAll('.lang-btn'),function(btn){btn.addEventListener('click',function(){setLanguage(btn.dataset.lang)})});
-    setupBelts();setupTouchZoom();setupScrollReveal();setupCounters();setupCoproModal();
+    setupTrailer();setupBelts();setupTouchZoom();setupScrollReveal();setupCounters();setupCoproModal();
   }
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init)}else{init()}
 })();

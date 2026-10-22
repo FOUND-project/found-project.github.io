@@ -151,9 +151,16 @@ Strips marked `data-belt` (the "FOUND in Action" photos, all widths) or
 `data-belt-mobile` (the gif strip under the timeline, phones only) are plain
 swipeable rows in HTML. `setupBelts()` in `about.md` clones the items once and
 drifts the row right-to-left by advancing `scrollLeft`, not with a CSS
-transform, because a transformed ancestor would break the `position:fixed`
-tap-to-zoom. It pauses on hover, touch and zoom, and stays still under
-reduced motion.
+transform, to keep layout simple. It pauses on hover, touch and zoom, and stays still
+under reduced motion.
+
+Tap-to-zoom (`.touch-zoomable`, phones only) opens a separate lightbox
+appended to `<body>` — never make the element itself `position:fixed`: the
+`.reveal` sections carry transforms, which trap fixed children, and the old
+version also locked body scroll. The lightbox closes on tap, swipe or scroll.
+The documentary trailer is a poster button that only inserts the YouTube
+iframe (`playsinline=1`) when tapped, so a scroll gesture over it can no longer
+hit YouTube's own links and open the app.
 
 ## Link previews
 
