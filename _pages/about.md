@@ -336,7 +336,15 @@ h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;bac
   .buscadoras-content{text-align:left;padding:clamp(1.5rem,3vw,2.5rem)}
   .buscadoras-knowledge{max-width:none;margin:1.25rem 0 0}
 }
-.buscadoras-knowledge .copro-lead{margin-bottom:.7rem}
+.buscadoras-knowledge .copro-lead{max-width:none;margin-bottom:0;display:flex;align-items:center;gap:.7rem;cursor:pointer;list-style:none;padding:.85rem 1.1rem;border-radius:14px;background:rgba(232,245,240,.55);border:1px solid rgba(45,95,77,.14);transition:background .2s ease,border-color .2s ease}
+.buscadoras-knowledge .copro-lead::-webkit-details-marker{display:none}
+.buscadoras-knowledge .copro-lead:hover{background:rgba(232,245,240,.9);border-color:rgba(45,95,77,.28)}
+.bk-chev{margin-left:auto;flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--primary-green);position:relative;transition:transform .25s var(--transition-smooth)}
+.bk-chev::after{content:'';position:absolute;left:10px;top:8px;width:8px;height:8px;border-right:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(45deg)}
+.buscadoras-knowledge[open] .bk-chev{transform:rotate(180deg)}
+.buscadoras-knowledge[open] .copro-lead{margin-bottom:.9rem}
+.buscadoras-knowledge[open] .copro-body{animation:bkOpen .3s ease}
+@keyframes bkOpen{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
 
 /* ===== Tlajomulco example: clickable disclosure ===== */
 .copro-ex-toggle{display:flex;align-items:flex-start;gap:.75rem;width:100%;text-align:left;background:none;border:none;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer}
@@ -578,10 +586,10 @@ body.copro-modal-open{overflow:hidden}
             <div class="gallery-item touch-zoomable"><img src="/images/buscadoras-walking-street.jpg" alt="A search collective walking down a street of abandoned houses carrying shovels and probes" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
             <div class="gallery-item touch-zoomable"><img src="/images/buscadoras-field-search.jpg" alt="A search collective walking across an open field during a search" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
           </div>
-          <div class="buscadoras-knowledge">
-            <p class="copro-lead buscadoras-lead"><strong id="copro-lead">The knowledge was already there.</strong></p>
+          <details class="buscadoras-knowledge">
+            <summary class="copro-lead buscadoras-lead"><strong id="copro-lead">The knowledge was already there.</strong><span class="bk-chev" aria-hidden="true"></span></summary>
             <p class="copro-body buscadoras-body" id="copro-body">For years, searching mothers have walked hills, ranches, abandoned houses and countless roads across Mexico. They learned to read the earth with a precision no book or scientist taught them: that disturbed soil looks different, that certain flowers bloom where or when they shouldn't, that vegetation changes colour where the ground holds extra nutrients as a result of the presence of buried bodies. This is, in effect, forensic knowledge; a practice of citizen science. FOUND begins by listening, learning, and building the place where this knowledge can sit at the same table as science, context analysis, and the institutions responsible for the search.</p>
-          </div>
+          </details>
         </div>
       </section>
     </div>
