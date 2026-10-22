@@ -99,8 +99,8 @@ author_profile: false
     .news-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(45,95,77,.22); }
     .news-card.featured { border-top: 3px solid var(--gold); }
     .card-banner { width: 100%; height: 160px; position: relative; overflow: hidden; flex-shrink: 0; }
-    .card-banner img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .55s var(--ease); }
-    .news-card:hover .card-banner img { transform: scale(1.05); }
+    .card-banner img, .card-banner video { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .55s var(--ease); }
+    .news-card:hover .card-banner img, .news-card:hover .card-banner video { transform: scale(1.05); }
     .card-banner.no-photo { background: var(--banner-bg, linear-gradient(135deg, #1e4034 0%, #2d5f4d 100%)); display: flex; align-items: center; justify-content: center; }
     .card-banner-icon { width: 52px; height: 52px; opacity: .22; color: #fff; }
     .card-banner-icon svg { width: 100%; height: 100%; fill: currentColor; }
@@ -277,6 +277,7 @@ author_profile: false
   id: 'tree-of-hope-oxford-2026',
   date: '2026-08-30',
   image: '/images/tree_of_hope_oxford_2026.jpg',
+  video: '/images/tree_of_hope_oxford_2026',
   logoBanner: false,
   featured: true,
   category: 'partnership',
@@ -472,6 +473,8 @@ author_profile: false
           var bannerHtml;
           if (card.image && card.logoBanner) {
             bannerHtml = '<div class="card-banner logo-contain ' + bannerClass(card.category) + '"><img src="' + card.image + '" alt="" loading="lazy"></div>';
+          } else if (card.video) {
+            bannerHtml = '<div class="card-banner"><video poster="' + card.image + '" autoplay muted loop playsinline aria-hidden="true"><source src="' + card.video + '.webm" type="video/webm"><source src="' + card.video + '.mp4" type="video/mp4"></video></div>';
           } else if (card.image) {
             bannerHtml = '<div class="card-banner"><img src="' + card.image + '" alt="" loading="lazy"></div>';
           } else {
@@ -495,6 +498,9 @@ author_profile: false
         if (card.image && card.logoBanner) {
           hero.className = 'modal-hero logo-contain ' + bannerClass(card.category);
           hero.innerHTML = '<img class="modal-hero-img" src="' + card.image + '" alt="' + t.title.replace(/<[^>]*>/g,'') + '">';
+        } else if (card.video) {
+          hero.className = 'modal-hero';
+          hero.innerHTML = '<video class="modal-hero-img" poster="' + card.image + '" autoplay muted loop playsinline aria-label="' + t.title.replace(/<[^>]*>/g,'') + '"><source src="' + card.video + '.webm" type="video/webm"><source src="' + card.video + '.mp4" type="video/mp4"></video><img class="modal-img-wm" src="' + LOGO + '" alt="">';
         } else if (card.image) {
           hero.className = 'modal-hero' + (card.fullImage ? ' full-image' : '');
           hero.innerHTML = '<img class="modal-hero-img" src="' + card.image + '" alt="' + t.title.replace(/<[^>]*>/g,'') + '">' + (card.fullImage ? '' : '<img class="modal-img-wm" src="' + LOGO + '" alt="">');

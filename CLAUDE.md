@@ -179,3 +179,11 @@ referencing anything new on a page (`images/in-the-flowers-web.jpg` is a 329KB
 web version of a 6MB PNG). Many `<img>` tags point at
 `raw.githubusercontent.com` pinned to a commit — that works, but new assets are
 better referenced by site-relative path.
+
+### Animated images
+
+GIFs sent in the chat arrive as a single still frame — ask the owner to upload
+the file to `images/` on GitHub instead. Large GIFs go on the page as a looping
+muted video (`ffmpeg` to `.webm` VP9 + `.mp4` H.264, both as `<source>`s, with
+a still `poster`): the 11.5MB Tree of Hope GIF became ~1MB each. News cards take
+a `video:` field (path without extension) alongside `image:` for this.
