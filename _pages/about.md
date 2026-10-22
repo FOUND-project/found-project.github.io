@@ -539,6 +539,8 @@ body.copro-modal-open{overflow:hidden}
         </ul>
         <p class="gallery-hint" id="gallery-hint">Tap to enlarge</p>
         <div class="image-gallery belt" data-belt>
+          <div class="gallery-item touch-zoomable"><img src="/images/drone-heatmap-field-platform.jpg" alt="Drone model of a search area, an anomaly heatmap of a site, and a search team in the field consulting the platform on a laptop" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
+          <div class="gallery-item touch-zoomable"><img src="/images/heatmap-site-analysis.jpg" alt="Heatmap over satellite imagery marking numbered points of interest across a search site" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
           <div class="gallery-item touch-zoomable"><img src="/images/knowledge-exchange-workshop.jpg" alt="Knowledge exchange workshop: participants at computers following a geospatial search platform on a projected screen" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
           <div class="gallery-item touch-zoomable"><img src="/images/aerial-search-site.jpg" alt="Aerial image of a search area with two marked points of interest" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
           <div class="gallery-item touch-zoomable"><img src="https://github.com/FOUND-project/found-project.github.io/blob/master/assets/WhatsApp%20Image%202025-03-22%20at%2019.03.01.jpeg?raw=true" alt="Advanced field equipment setup" loading="lazy" class="loading" onload="this.classList.remove('loading')"></div>
