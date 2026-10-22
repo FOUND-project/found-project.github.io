@@ -205,11 +205,12 @@ author_profile: false
 </head>
 <body>
   <div class="news-shell">
-    <div class="lang-toggle" aria-label="Language selection">
-      <button type="button" class="lang-btn active" data-lang="en">EN</button>
-      <button type="button" class="lang-btn" data-lang="es">ES</button>
-    </div>
         <header class="news-header">
+      <div class="lang-toggle" aria-label="Language selection">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+      </div>
+
       <div class="news-header-logo">
         <img class="found-logo-tile" src="/images/logo_FOUND_leaf.png" alt="FOUND">
       </div>

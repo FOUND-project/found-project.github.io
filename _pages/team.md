@@ -7,43 +7,13 @@ author_profile: false
   .team-page {
     max-width: var(--shell-max);
     margin: 0 auto;
-    padding: 3rem var(--shell-pad) 4rem;
+    padding: 0 var(--shell-pad) 4rem;
     font-family: inherit;
   }
 
-  .team-lang {
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.5rem;
-    margin: 0 0 1.5rem;
-    padding-right: 1.75rem;
-  }
 
-  .team-lang button {
-    padding: 0.45rem 1.1rem;
-    border: 1px solid rgba(45, 95, 77, 0.25);
-    background: rgba(255, 255, 255, 0.9);
-    color: #2d5f4d;
-    font-family: inherit;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  }
 
-  .team-lang button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.1);
-  }
 
-  .team-lang button.active {
-    background: #2d5f4d;
-    color: #fff;
-    border-color: #2d5f4d;
-  }
 
   .team-hero {
     text-align: center;
@@ -66,7 +36,7 @@ author_profile: false
     line-height: 1.6;
   }
 
-  .team-hero .team-intro { max-width: 900px; margin: 1.25rem auto 0; padding: 1.1rem 1.5rem; border-radius: 14px; background: rgba(9,24,19,.94); color: rgba(232,245,240,.85); line-height: 1.7; font-size: 1.02rem; text-align: left; }
+  .team-hero .team-intro { max-width: none; margin: 0; padding: 1.1rem 1.5rem; border-radius: 14px; background: rgba(9,24,19,.94); color: rgba(232,245,240,.85); line-height: 1.7; font-size: 1.02rem; text-align: left; }
   .team-intro .ti-label { color: #d4af37; font-weight: 700; letter-spacing: .04em; white-space: nowrap; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92rem; }
   .team-intro .ti-brace { color: rgba(74,140,115,.9); font-weight: 400; }
   .team-intro .ti-divider { color: rgba(74,140,115,.6); margin: 0 .6rem; }
@@ -75,8 +45,8 @@ author_profile: false
     background: rgba(150, 120, 70, 0.08);
     border-radius: 10px;
     padding: 1.1rem 1.4rem;
-    margin: 0 auto 3.5rem;
-    max-width: 720px;
+    margin: 0 0 3.5rem;
+    max-width: none;
     text-align: center;
     font-size: 0.95rem;
     line-height: 1.55;
@@ -152,12 +122,12 @@ author_profile: false
 
 <div class="team-page" markdown="0">
 
-  <div class="team-lang" aria-label="Language selection">
-    <button type="button" class="active" data-lang="en">EN</button>
-    <button type="button" data-lang="es">ES</button>
-  </div>
 
   <header class="found-header">
+      <div class="lang-toggle" aria-label="Language selection">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+      </div>
       <div class="found-header-logo"><img class="found-logo-tile" src="/images/logo_FOUND_leaf.png" alt="FOUND"></div>
       <div class="found-header-divider"></div>
       <div class="found-header-body">
@@ -303,7 +273,7 @@ author_profile: false
       if (el) el.textContent = T[id][i];
     });
     document.documentElement.setAttribute('lang', i ? 'es' : 'en');
-    Array.prototype.forEach.call(document.querySelectorAll('.team-lang button'), function (b) {
+    Array.prototype.forEach.call(document.querySelectorAll('.found-header .lang-btn'), function (b) {
       b.classList.toggle('active', b.getAttribute('data-lang') === (i ? 'es' : 'en'));
     });
     try { localStorage.setItem('found-lang', i ? 'es' : 'en'); } catch (e) {}
@@ -313,7 +283,7 @@ author_profile: false
     var saved = null;
     try { saved = localStorage.getItem('found-lang'); } catch (e) {}
     setLanguage(saved === 'es' ? 'es' : 'en');
-    Array.prototype.forEach.call(document.querySelectorAll('.team-lang button'), function (b) {
+    Array.prototype.forEach.call(document.querySelectorAll('.found-header .lang-btn'), function (b) {
       b.addEventListener('click', function () { setLanguage(b.getAttribute('data-lang')); });
     });
   }

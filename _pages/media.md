@@ -363,7 +363,6 @@ author_profile: false
       .media-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 480px) {
-      .media-header { padding: 1.3rem 1.1rem; }
       .media-card-inner { padding: 1.1rem 1.1rem 1.3rem; }
       .card-img-wrap { height: 120px; }
     }
@@ -372,12 +371,13 @@ author_profile: false
 <body>
   <div class="media-shell">
 
-    <div class="lang-toggle" aria-label="Language selection">
-      <button type="button" class="lang-btn active" data-lang="en">EN</button>
-      <button type="button" class="lang-btn" data-lang="es">ES</button>
-    </div>
 
     <header class="media-header">
+      <div class="lang-toggle" aria-label="Language selection">
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+      </div>
+
       <div class="media-header-logo">
         <img class="found-logo-tile" src="/images/logo_FOUND_leaf.png" alt="FOUND">
       </div>

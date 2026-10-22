@@ -100,17 +100,23 @@ body{padding-left:0!important;padding-right:0!important;padding-top:70px!importa
   .site-brand__text{font-size:.92rem;letter-spacing:.14em}
   .greedy-nav a{font-size:.7rem;padding:.5rem .6rem!important;letter-spacing:.1em}
 }
-/* Page header with the FOUND pin-and-leaf logo on the left (publications, team) */
-.found-header{position:relative;margin:1.75rem 0 2.5rem;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(15,23,42,.08);border:1px solid rgba(15,23,42,.055);display:flex;align-items:stretch;text-align:left}
-.found-header::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#d4af37 0%,rgba(212,175,55,.3) 100%)}
+/* Page header card, modelled on News (publications, team share it; news/media keep their own copy) */
+.found-header{position:relative;margin:1.75rem 0 3rem;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 10px 28px rgba(15,23,42,.12);border:1px solid rgba(15,23,42,.055);display:flex;align-items:stretch;text-align:left;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif}
+.found-header::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#d4af37 0%,rgba(212,175,55,.3) 100%);border-radius:26px 0 0 26px}
 .found-header::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 600px 300px at -5% 0%,rgba(212,175,55,.13) 0%,transparent 60%),radial-gradient(ellipse 500px 300px at 110% 100%,rgba(198,226,216,.5) 0%,transparent 60%);pointer-events:none}
-.found-header-logo{flex:0 0 auto;display:flex;align-items:center;padding:2rem 2rem 2rem 2.8rem;position:relative;z-index:1}
-.found-logo-tile{width:88px;height:88px;padding:5px;box-sizing:border-box;border-radius:20px;object-fit:contain;background:#fff;box-shadow:0 12px 32px rgba(15,23,42,.18);border:1px solid rgba(15,23,42,.06)}
+.found-header-logo{flex:0 0 auto;display:flex;align-items:center;padding:2.2rem 2rem 2.2rem 2.8rem;position:relative;z-index:1}
 .found-header-divider{width:1px;background:linear-gradient(180deg,transparent,rgba(15,23,42,.08),transparent);margin:2rem 0;flex-shrink:0}
-.found-header-body{flex:1;padding:2rem 2.8rem 2rem 2.4rem;position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;min-width:0}
-.found-header-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#1e4034;margin-bottom:.55rem}
-.found-header-eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:#d4af37;box-shadow:0 0 0 3px rgba(212,175,55,.18)}
-.found-header h1{font-size:clamp(1.9rem,4vw,2.75rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;color:#14342a;margin:0;padding:0}
+.found-header-body{flex:1;padding:2.2rem 2.8rem 2.2rem 2.4rem;position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.found-header-eyebrow{display:inline-flex;align-items:center;gap:.5rem;margin-bottom:.65rem;font-size:.7rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#2d5f4d}
+.found-header-eyebrow::before{content:'';flex:0 0 auto;width:7px;height:7px;border-radius:50%;background:#d4af37;box-shadow:0 0 0 3px rgba(212,175,55,.2)}
+.found-header h1{font-size:clamp(1.8rem,3vw,2.5rem);font-weight:900;color:#0f2d22;letter-spacing:-.035em;line-height:1.15;margin:0 0 .5rem;padding:0;font-family:inherit}
 .found-header h1::after{display:none}
-@media(max-width:640px){.found-header{flex-direction:column}.found-header-logo{padding:1.4rem 1.4rem 0}.found-header-divider{display:none}.found-header-body{padding:.9rem 1.4rem 1.5rem}}
+@media(max-width:900px){.found-header{flex-direction:column}.found-header-logo{padding:1.6rem 1.6rem 0}.found-header-divider{display:none}.found-header-body{padding:1rem 1.6rem 1.8rem}.found-header h1{font-size:1.65rem}}
+/* The FOUND logo tile used in every header card */
+.found-logo-tile{width:88px;height:88px;padding:5px;box-sizing:border-box;border-radius:20px;object-fit:contain;background:#fff;box-shadow:0 12px 32px rgba(15,23,42,.18);border:1px solid rgba(15,23,42,.06)}
+/* EN/ES live inside the header card, top right, on every page */
+.found-header .lang-toggle,.news-header .lang-toggle,.media-header .lang-toggle{position:absolute!important;top:1rem!important;right:1.1rem!important;left:auto!important;margin:0!important;padding:0!important;display:inline-flex!important;justify-content:flex-end;gap:.4rem;z-index:5}
+.found-header .lang-btn,.news-header .lang-btn,.media-header .lang-btn{border:1px solid rgba(15,23,42,.09);background:rgba(255,255,255,.88);color:#1e4034;padding:.28rem .75rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;line-height:1.5;box-shadow:none;transition:background .2s ease,transform .2s ease,box-shadow .2s ease}
+.found-header .lang-btn:hover,.news-header .lang-btn:hover,.media-header .lang-btn:hover{background:#fff;transform:translateY(-1px);box-shadow:0 7px 20px rgba(15,23,42,.14)}
+.found-header .lang-btn.active,.news-header .lang-btn.active,.media-header .lang-btn.active{background:#1e4034;color:#fff;border-color:#1e4034}
 </style>

@@ -164,12 +164,17 @@ hit YouTube's own links and open the app.
 
 ## Page headers
 
-News, Media, Publications and Team open with the same header card:
-the FOUND pin-and-leaf logo (`images/logo_FOUND_leaf.png`, transparent, no
+News, Media, Publications and Team open with the same header card, modelled on
+News: the FOUND pin-and-leaf logo (`images/logo_FOUND_leaf.png`, transparent, no
 wordmark) in an 88px white tile (`.found-logo-tile`, `object-fit:contain`) on the
-left, then an eyebrow and the `<h1>`. The shared `.found-header` CSS is in
-`_includes/head/custom.html`; News and Media keep their own header wrappers but
-use the same tile. Do not reintroduce the cream `Found_logo.jpg` there.
+left, then an eyebrow and the `<h1>`. **EN/ES sit inside the card, top right** —
+the `.lang-toggle` markup goes inside the `<header>` on every page, and shared
+rules in `_includes/head/custom.html` place and style it (they override each
+page's older `.lang-toggle` CSS). Publications and Team use `.found-header`,
+whose CSS there mirrors News's own `.news-header` copy; keep the two in step.
+Page shells use `padding:0 var(--shell-pad)` so every header lands at the same
+x and width (32px/1377px at 1440, 14px/363px at 390). Do not reintroduce the
+cream `Found_logo.jpg` there.
 
 ## Link previews
 
