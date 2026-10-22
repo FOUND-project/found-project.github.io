@@ -157,8 +157,15 @@ author_profile: false
     <button type="button" data-lang="es">ES</button>
   </div>
 
+  <header class="found-header">
+      <div class="found-header-logo"><img class="found-logo-tile" src="/images/logo_FOUND_leaf.png" alt="FOUND"></div>
+      <div class="found-header-divider"></div>
+      <div class="found-header-body">
+        <div class="found-header-eyebrow" id="team-pill">FOUND · Team</div>
+        <h1 id="team-title">Our Team</h1>
+      </div>
+    </header>
   <div class="team-hero">
-    <h1 id="team-title">Our Team</h1>
     <p class="team-intro"><span class="ti-label" aria-hidden="true">FOUND<span class="ti-brace">{</span>Team<span class="ti-brace">}</span></span><span class="ti-divider" aria-hidden="true">&middot;</span><span id="team-intro-text">Our core team brings together search collectives of Mexico and Colombia, CentroGeo, the University of Oxford, Jalisco’s Search Commission, the British Embassy in Mexico City, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara.</span></p>
   </div>
 
@@ -260,6 +267,7 @@ author_profile: false
 (function () {
   var T = {
     'team-title':        ['Our Team', 'Nuestro equipo'],
+    'team-pill':         ['FOUND · Team', 'FOUND · Equipo'],
     'team-intro-text':   ['Our core team brings together search collectives of Mexico and Colombia, CentroGeo, the University of Oxford, Jalisco\u2019s Search Commission, the British Embassy in Mexico City, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara.',
                           'Nuestro equipo central re\u00fane a colectivos de b\u00fasqueda de M\u00e9xico y Colombia, CentroGeo, la Universidad de Oxford, la Comisi\u00f3n de B\u00fasqueda de Jalisco, la Embajada Brit\u00e1nica en la Ciudad de M\u00e9xico, la Universidad Nacional Aut\u00f3noma de M\u00e9xico (UNAM) y la Universidad de Guadalajara.'],
     'team-notice-label': ['Under construction', 'En construcci\u00f3n'],

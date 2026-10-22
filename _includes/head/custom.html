@@ -100,4 +100,17 @@ body{padding-left:0!important;padding-right:0!important;padding-top:70px!importa
   .site-brand__text{font-size:.92rem;letter-spacing:.14em}
   .greedy-nav a{font-size:.7rem;padding:.5rem .6rem!important;letter-spacing:.1em}
 }
+/* Page header with the FOUND pin-and-leaf logo on the left (publications, how-to-help, team) */
+.found-header{position:relative;margin:1.75rem 0 2.5rem;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(15,23,42,.08);border:1px solid rgba(15,23,42,.055);display:flex;align-items:stretch;text-align:left}
+.found-header::before{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,#d4af37 0%,rgba(212,175,55,.3) 100%)}
+.found-header::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 600px 300px at -5% 0%,rgba(212,175,55,.13) 0%,transparent 60%),radial-gradient(ellipse 500px 300px at 110% 100%,rgba(198,226,216,.5) 0%,transparent 60%);pointer-events:none}
+.found-header-logo{flex:0 0 auto;display:flex;align-items:center;padding:2rem 2rem 2rem 2.8rem;position:relative;z-index:1}
+.found-logo-tile{width:88px;height:88px;padding:5px;box-sizing:border-box;border-radius:20px;object-fit:contain;background:#fff;box-shadow:0 12px 32px rgba(15,23,42,.18);border:1px solid rgba(15,23,42,.06)}
+.found-header-divider{width:1px;background:linear-gradient(180deg,transparent,rgba(15,23,42,.08),transparent);margin:2rem 0;flex-shrink:0}
+.found-header-body{flex:1;padding:2rem 2.8rem 2rem 2.4rem;position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.found-header-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:#1e4034;margin-bottom:.55rem}
+.found-header-eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:#d4af37;box-shadow:0 0 0 3px rgba(212,175,55,.18)}
+.found-header h1{font-size:clamp(1.9rem,4vw,2.75rem);font-weight:800;letter-spacing:-.03em;line-height:1.1;color:#14342a;margin:0;padding:0}
+.found-header h1::after{display:none}
+@media(max-width:640px){.found-header{flex-direction:column}.found-header-logo{padding:1.4rem 1.4rem 0}.found-header-divider{display:none}.found-header-body{padding:.9rem 1.4rem 1.5rem}}
 </style>

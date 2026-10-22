@@ -79,7 +79,6 @@ author_profile: false
     .news-header::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: linear-gradient(180deg, var(--gold) 0%, rgba(212,175,55,.3) 100%); border-radius: var(--radius-xl) 0 0 var(--radius-xl); }
     .news-header::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 600px 300px at -5% 0%, rgba(212,175,55,.13) 0%, transparent 60%), radial-gradient(ellipse 500px 300px at 110% 100%, rgba(198,226,216,.5) 0%, transparent 60%); pointer-events: none; }
     .news-header-logo { flex: 0 0 auto; display: flex; align-items: center; padding: 2.2rem 2rem 2.2rem 2.8rem; position: relative; z-index: 1; }
-    .news-header-logo img { width: 88px; height: 88px; border-radius: 20px; object-fit: cover; box-shadow: 0 12px 32px rgba(15,23,42,.22); border: 3px solid rgba(255,255,255,.95); background: #fff; }
     .news-header-divider { width: 1px; background: linear-gradient(180deg, transparent, rgba(15,23,42,.08), transparent); margin: 2rem 0; flex-shrink: 0; }
     .news-header-body { flex: 1; padding: 2.2rem 2.8rem 2.2rem 2.4rem; position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; }
     .news-eyebrow { display: inline-flex; align-items: center; gap: .5rem; margin-bottom: .65rem; }
@@ -212,7 +211,7 @@ author_profile: false
     </div>
         <header class="news-header">
       <div class="news-header-logo">
-        <img src="https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_logo.jpg?raw=true" alt="FOUND Logo">
+        <img class="found-logo-tile" src="/images/logo_FOUND_leaf.png" alt="FOUND">
       </div>
       <div class="news-header-divider"></div>
       <div class="news-header-body">
