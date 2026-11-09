@@ -167,6 +167,12 @@ author_profile: false
     .modal-body ul { margin: .8rem 0 1.1rem 1.4rem; }
     .modal-body ul li { margin-bottom: .5rem; font-size: .97rem; }
     .modal-body img { width: 100%; border-radius: var(--radius-md); margin: 1.2rem 0 1rem; box-shadow: var(--shadow-md); }
+    .modal-body .partner-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem 1.4rem; margin: 1.4rem 0 1.3rem; padding: 1.1rem 1.2rem; background: #fff; border: 1px solid rgba(30,64,52,.12); border-radius: var(--radius-md); }
+    .modal-body .partner-logos img { width: auto; height: 46px; max-width: 46%; object-fit: contain; margin: 0; border-radius: 0; box-shadow: none; }
+    .modal-body .partner-logos img.pl-tall { height: 62px; }
+    .modal-body .partner-logos img.pl-wide { height: 32px; }
+    .modal-body a.register-btn { display: inline-flex; align-items: center; gap: .45rem; padding: .7rem 1.3rem; border-radius: 999px; background: var(--green-900); color: #fff; border: 0; font-weight: 750; letter-spacing: .02em; }
+    .modal-body a.register-btn:hover { background: var(--green-700); color: #fff; }
     .modal-body .li-embed { display: flex; justify-content: center; margin: 1.4rem 0 1rem; }
     .modal-body .li-embed iframe { border-radius: var(--radius-md); box-shadow: var(--shadow-md); max-width: 100%; background: #fff; }
     .modal-footer { display: flex; align-items: center; gap: .65rem; padding: 1.1rem 2.5rem 1.6rem; border-top: 1px solid rgba(15,23,42,.055); }
@@ -258,6 +264,26 @@ author_profile: false
       var LOGO = 'https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_logo.jpg?raw=true';
       var BASE_URL = 'https://found-project.org/news/';
       var newsCards = [
+{
+  id: 'when-words-become-search-2026',
+  date: '2026-11-09',
+  image: '/images/when_words_become_search_2026.jpg',
+  logoBanner: false,
+  fullImage: true,
+  link: 'https://www.bsg.ox.ac.uk/events/when-words-become-search',
+  featured: true,
+  category: 'partnership',
+  en: {
+    badge: 'Event',
+    title: 'When Words Become a Search: a screening of the UBPD documentary <em>Cuando la palabra se hace búsqueda</em> at the University of Oxford',
+    body: '<p><strong>When Words Become a Search</strong>: a documentary screening and conversation at the <strong>Blavatnik School of Government, University of Oxford</strong>.</p><p>Ten years on from Colombia’s 2016 Peace Agreement, FOUND and the <strong>Oxford Institute of Technology and Justice</strong>, together with the <strong>Frontier Tech Hub</strong> and the <strong>Oxford Colombian Society</strong>, are screening <em>Cuando la palabra se hace búsqueda</em>, a new documentary by <strong>Colombia’s Search Unit for Persons Deemed Missing (UBPD)</strong>, the body the Agreement created.</p><p>Directed by <strong>Frank Benítez Peña</strong>, the one-hour film follows people who took part in Colombia’s armed conflict and have chosen to share what they know with the Unit’s humanitarian search. Through their meetings with families of the disappeared, it shows how truth, once shared, can ease suffering and dignify memory, and how technology is becoming part of the search.</p><p>After the screening, a conversation with:</p><ul><li><strong>Luz Janeth Forero</strong>, Director of the UBPD</li><li><a href="/team/luis-fondebrider/">Luis Fondebrider</a>, co-founder of the Nobel Peace Prize–nominated Argentine Forensic Anthropology Team (EAAF) and former head of the ICRC’s Forensic Unit</li><li><strong>Professor Philippa Webb</strong>, Director of the Oxford Institute of Technology and Justice</li></ul><p>They will reflect on the UBPD’s work, on what forensic science brings to the search for the disappeared, and on how technology can widen access to justice, strengthen accountability and move international law forward in the digital age. A drinks reception follows.</p><ul><li>🗓 Thursday 26 November 2026, 17:30–19:30 (UK)</li><li>📍 In person at the Blavatnik School of Government, Oxford · also online</li><li>🎟 Free and open to the public · registration required</li></ul><div class="partner-logos"><img class="pl-tall" src="/images/logo_FOUND_pin.png" alt="FOUND"><img class="pl-wide" src="/images/logos/ubpd.png" alt="Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD)"><img class="pl-tall" src="/images/logos/oxford_colombian_society.png" alt="Oxford Colombian Society"><img src="/images/logos/blavatnik_school_of_government.png" alt="Blavatnik School of Government, University of Oxford"><img src="/images/logos/frontier_tech_hub.png" alt="Frontier Tech Hub"></div><p><a class="register-btn" href="https://www.bsg.ox.ac.uk/events/when-words-become-search" target="_blank" rel="noopener noreferrer">Register here ↗</a></p>'
+  },
+  es: {
+    badge: 'Evento',
+    title: 'Cuando la palabra se hace búsqueda: proyección del documental de la UBPD en la Universidad de Oxford',
+    body: '<p><strong>Cuando la palabra se hace búsqueda</strong>: proyección de un documental y conversatorio en la <strong>Blavatnik School of Government de la Universidad de Oxford</strong>.</p><p>A diez años del Acuerdo de Paz de 2016 en Colombia, FOUND y el <strong>Oxford Institute of Technology and Justice</strong>, junto con el <strong>Frontier Tech Hub</strong> y la <strong>Oxford Colombian Society</strong>, proyectan <em>Cuando la palabra se hace búsqueda</em>, el nuevo documental de la <strong>Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD)</strong> de Colombia, creada por el Acuerdo.</p><p>Dirigida por <strong>Frank Benítez Peña</strong>, la película de una hora acompaña a personas que participaron en el conflicto armado colombiano y que decidieron compartir lo que saben con la búsqueda humanitaria de la Unidad. A través de sus encuentros con familias de personas desaparecidas, muestra cómo la verdad compartida puede aliviar el dolor y dignificar la memoria, y cómo la tecnología se integra cada vez más a la búsqueda.</p><p>Después de la proyección, conversarán:</p><ul><li><strong>Luz Janeth Forero</strong>, directora de la UBPD</li><li><a href="/team/luis-fondebrider/">Luis Fondebrider</a>, cofundador del Equipo Argentino de Antropología Forense (EAAF), nominado al Premio Nobel de la Paz, y exjefe de la Unidad Forense del CICR</li><li><strong>Prof. Philippa Webb</strong>, al frente del Oxford Institute of Technology and Justice</li></ul><p>Reflexionarán sobre el trabajo de la UBPD, lo que aporta la ciencia forense a la búsqueda de personas desaparecidas y cómo la tecnología puede ampliar el acceso a la justicia, fortalecer la rendición de cuentas y hacer avanzar el derecho internacional en la era digital. Al final habrá un brindis.</p><ul><li>🗓 Jueves 26 de noviembre de 2026, 17:30–19:30 (hora del Reino Unido)</li><li>📍 Presencial en la Blavatnik School of Government, Oxford · también en línea</li><li>🎟 Gratuito y abierto al público · requiere registro</li></ul><div class="partner-logos"><img class="pl-tall" src="/images/logo_FOUND_pin.png" alt="FOUND"><img class="pl-wide" src="/images/logos/ubpd.png" alt="Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD)"><img class="pl-tall" src="/images/logos/oxford_colombian_society.png" alt="Oxford Colombian Society"><img src="/images/logos/blavatnik_school_of_government.png" alt="Blavatnik School of Government, University of Oxford"><img src="/images/logos/frontier_tech_hub.png" alt="Frontier Tech Hub"></div><p><a class="register-btn" href="https://www.bsg.ox.ac.uk/events/when-words-become-search" target="_blank" rel="noopener noreferrer">Regístrate aquí ↗</a></p>'
+  }
+},
 {
   id: 'cnb-second-training',
   date: '2026-09-15',
