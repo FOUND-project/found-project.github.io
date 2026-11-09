@@ -215,7 +215,11 @@ registration page, in both `en` and `es`. Partner logos live in `images/logos/`
 with ids `featured-pub-eyebrow|title|meta|link` in both dictionaries, linking to
 the News card (`/news/#<id>`); an event's image goes inside that card as
 `<span class="featured-pub-img">`. Beside it, `.featured-fig` holds the Tree of
-Hope video — the owner wants it kept there; do not replace it.
+Hope video — the owner wants it kept there; do not replace it, and never crop it
+(`object-fit:contain`, `aspect-ratio:400/224`, the source is only 400x224). On
+laptops it is 740px wide so its height (414px) matches the card in both
+languages; `.hero-text` is 1120px wide to fit both side by side. Below ~1180px
+the row wraps and the video goes full-width under the card.
 
 ## Files and downloads
 
