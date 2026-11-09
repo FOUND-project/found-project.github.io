@@ -192,7 +192,9 @@ Team. Both language versions of the bio are real HTML blocks (`lang="en"` /
 `lang="es" hidden`), so the English one shows with JS off. On `team.md`, link the
 name and add a `.bio-link` "Read bio →" with an id in the `T` dictionary.
 The owner supplies source bios; paraphrase them (not literal) and show the
-draft in EN and ES for approval before posting.
+draft in EN and ES for approval before posting. Portraits go in `images/team/<first-last>.jpg`
+(square, ~600px, flattened onto white, well under 100KB) and sit in the bio card
+beside the text.
 
 ## Link previews
 

@@ -10,7 +10,9 @@ excerpt: "Argentine forensic anthropologist, co-founder of the EAAF and FOUND's 
   .bio-back{display:inline-flex;align-items:center;gap:.4rem;margin:0 0 1.6rem;font-size:.85rem;font-weight:700;letter-spacing:.04em;color:#1b4d3e}
   .archive a.bio-back,.page__content a.bio-back{text-decoration:none}
   .bio-back:hover{text-decoration:underline}
-  .bio-card{background:#fff;border:1px solid rgba(27,77,62,.15);border-left:4px solid #d4af37;border-radius:14px;padding:2rem 2.25rem;max-width:860px}
+  .bio-card{background:#fff;border:1px solid rgba(27,77,62,.15);border-left:4px solid #d4af37;border-radius:14px;padding:2rem 2.25rem;max-width:1100px;display:grid;grid-template-columns:240px 1fr;gap:2.25rem;align-items:start}
+  .bio-photo{width:240px;height:240px;border-radius:12px;object-fit:cover;display:block;background:#f3f4f6;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+  .bio-body{min-width:0;max-width:760px}
   .bio-role{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:#1b4d3e;font-weight:700;margin:0 0 1.2rem}
   .bio-text p{font-size:1.05rem;line-height:1.75;color:#1f2937;margin:0 0 1.1rem}
   .bio-text p:last-child{margin-bottom:0}
@@ -31,6 +33,8 @@ excerpt: "Argentine forensic anthropologist, co-founder of the EAAF and FOUND's 
   </header>
   <a class="bio-back" href="/team/" data-en="← Back to Team" data-es="← Volver al equipo">← Back to Team</a>
   <article class="bio-card">
+    <img class="bio-photo" src="/images/team/luis-fondebrider.jpg" alt="Luis Fondebrider" width="240" height="240">
+    <div class="bio-body">
     <p class="bio-role" data-en="Forensic Anthropology Advisor" data-es="Asesor en antropología forense">Forensic Anthropology Advisor</p>
     <div class="bio-text" lang="en">
       <p>Luis Fondebrider is an Argentine forensic anthropologist known worldwide for investigating human rights violations and for helping to find and identify people who were forcibly disappeared.</p>
@@ -43,6 +47,7 @@ excerpt: "Argentine forensic anthropologist, co-founder of the EAAF and FOUND's 
       <p>Es cofundador del Equipo Argentino de Antropología Forense (EAAF), que presidió hasta 2021. Entre 2021 y 2022 dirigió la Unidad Forense del Comité Internacional de la Cruz Roja (CICR).</p>
       <p>En más de cuatro décadas de trayectoria ha encabezado investigaciones forenses en más de 65 países, en contextos de conflicto armado y de violencia política, étnica y vinculada a la migración. Tribunales, comisiones de Naciones Unidas, organizaciones de derechos humanos y gobiernos han recurrido a su asesoría en más de 1,200 casos.</p>
       <p>Su trabajo va más allá del campo. También contribuye a definir protocolos y políticas internacionales en materia de derechos humanos y justicia transicional. En 2020, el EAAF fue nominado al Premio Nobel de la Paz.</p>
+    </div>
     </div>
   </article>
 </div>
