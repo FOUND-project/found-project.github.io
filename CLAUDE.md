@@ -214,12 +214,16 @@ registration page, in both `en` and `es`. Partner logos live in `images/logos/`
 `.featured-row` (in `about.md`) holds the featured item: a `.featured-pub-card`
 with ids `featured-pub-eyebrow|title|meta|link` in both dictionaries, linking to
 the News card (`/news/#<id>`); an event's image goes inside that card as
-`<span class="featured-pub-img">`. Beside it, `.featured-fig` holds the Tree of
-Hope video — the owner wants it kept there; do not replace it, and never crop it
-(`object-fit:contain`, `aspect-ratio:400/224`, the source is only 400x224). On
-laptops it is 740px wide so its height (414px) matches the card in both
-languages; `.hero-text` is 1120px wide to fit both side by side. Below ~1180px
-the row wraps and the video goes full-width under the card.
+`<span class="featured-pub-img">` (an image, or a looping `<video>` inside
+`.featured-pub-vid`). The row now holds **two** highlighted cards: the Oxford
+event and the Jalisco machine-learning finding (ids `featured2-*` in both
+dictionaries).
+
+The Tree of Hope video lives in **The Role of Buscadoras**, as the first tile of
+the photo strip: `.buscadoras-belt-row` holds a still `figure.belt-still` (never
+cropped: `object-fit:contain`, `aspect-ratio:400/224`, height matched to the
+belt's 4:3 tiles) followed by the moving `data-belt` strip, whose left edge
+fades under it. On phones the video stacks full-width above the strip.
 
 ## Files and downloads
 
