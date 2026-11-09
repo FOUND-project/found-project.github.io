@@ -181,6 +181,19 @@ Page shells use `padding:0 var(--shell-pad)` so every header lands at the same
 x and width (32px/1377px at 1440, 14px/363px at 390). Do not reintroduce the
 cream `Found_logo.jpg` there.
 
+## Team bio pages
+
+A team member with a full biography gets their own page at
+`/team/<first-last>/` (e.g. `_pages/team-luis-fondebrider.md`, served at
+`found-project.org/team/luis-fondebrider/`). Copy that file for the next one.
+It reuses the shared header card, wraps content in `.team-page` (so the theme's
+duplicate `page__title` stays hidden) and carries the `width=1200` viewport like
+Team. Both language versions of the bio are real HTML blocks (`lang="en"` /
+`lang="es" hidden`), so the English one shows with JS off. On `team.md`, link the
+name and add a `.bio-link` "Read bio →" with an id in the `T` dictionary.
+The owner supplies source bios; paraphrase them (not literal) and show the
+draft in EN and ES for approval before posting.
+
 ## Link previews
 
 `og_image` in `_config.yml` is `images/og-found.png` (1200x630, the full
