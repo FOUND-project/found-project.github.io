@@ -98,6 +98,7 @@ author_profile: false
   }
 
   .team-member .name a {
+    color: inherit;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.2s ease;
@@ -115,6 +116,17 @@ author_profile: false
     margin: 0;
   }
 
+  .team-member .bio-link {
+    display: inline-block;
+    margin-top: 0.45rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #1b4d3e;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.8);
+  }
+  .archive .team-member a.bio-link, .page__content .team-member a.bio-link { text-decoration: none; }
+  .team-member .bio-link:hover { border-bottom-color: #1b4d3e; }
   @media (max-width: 520px) {
     .team-grid { grid-template-columns: 1fr 1fr; gap: 1.4rem 1.2rem; }
     .team-member .name { font-size: 0.98rem; }
@@ -175,8 +187,9 @@ author_profile: false
         <p class="role" id="r-guillermina">Search Group Leader · Siguiendo tu Rastro con Amor</p>
       </div>
       <div class="team-member">
-        <p class="name">Luis Fondebrider</p>
+        <p class="name"><a href="/team/luis-fondebrider/">Luis Fondebrider</a></p>
         <p class="role" id="r-fondebrider">Forensic Anthropology Advisor</p>
+        <a class="bio-link" href="/team/luis-fondebrider/" id="bio-fondebrider">Read bio →</a>
       </div>
       <div class="team-member">
         <p class="name">Victor Hugo Ávila Barrientos</p>
@@ -253,6 +266,7 @@ author_profile: false
     'r-indira':          ['Search Group Leader \u00b7 Guerreros Buscadores', 'Liderazgo de colectivo de b\u00fasqueda \u00b7 Guerreros Buscadores'],
     'r-guillermina':     ['Search Group Leader \u00b7 Siguiendo tu Rastro con Amor', 'Liderazgo de colectivo de b\u00fasqueda \u00b7 Siguiendo tu Rastro con Amor'],
     'r-fondebrider':     ['Forensic Anthropology Advisor', 'Asesor en antropolog\u00eda forense'],
+    'bio-fondebrider':   ['Read bio \u2192', 'Leer biograf\u00eda \u2192'],
     'r-avila':           ['Jalisco Search Commission', 'Comisi\u00f3n de B\u00fasqueda de Jalisco'],
     'r-tunuary':         ['Jalisco Search Commission', 'Comisi\u00f3n de B\u00fasqueda de Jalisco'],
     'r-forero':          ['Colombia Search Unit', 'Unidad de B\u00fasqueda de Colombia'],
