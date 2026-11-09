@@ -239,6 +239,17 @@ web version of a 6MB PNG). Many `<img>` tags point at
 `raw.githubusercontent.com` pinned to a commit — that works, but new assets are
 better referenced by site-relative path.
 
+### Small or soft photos
+
+When only a low-resolution or heavily compressed photo exists (e.g. the four
+documentary stills, ~490x265 each), upscale it with OpenCV's EDSR x4 model
+(`opencv-contrib-python-headless`; weights `EDSR_x4.pb` from the
+Saafke/EDSR_Tensorflow repo), after a light `fastNlMeansDenoisingColored` pass,
+then blend ~25% of a plain Lanczos upscale back in so skin and fabric keep their
+texture, and cut to the exact display size with a mild unsharp mask. In this
+sandbox `pip` stalls because PyPI is in `NO_PROXY`; run it with
+`NO_PROXY=localhost,127.0.0.1`.
+
 ### Animated images
 
 GIFs sent in the chat arrive as a single still frame — ask the owner to upload
