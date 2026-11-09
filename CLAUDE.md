@@ -239,6 +239,12 @@ web version of a 6MB PNG). Many `<img>` tags point at
 `raw.githubusercontent.com` pinned to a commit — that works, but new assets are
 better referenced by site-relative path.
 
+### Search sites: never publish exact locations
+
+Screenshots of Espacio Clandestino, Global Index Mapper or drone tools can carry
+the coordinates of a search or recovery site (e.g. the "Carga puntos" text box).
+Blur or pixelate them before publishing, and tell the owner you did.
+
 ### Small or soft photos
 
 When only a low-resolution or heavily compressed photo exists (e.g. the four
