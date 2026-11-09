@@ -212,9 +212,10 @@ registration page, in both `en` and `es`. Partner logos live in `images/logos/`
 (trimmed PNGs on white, 160px tall). Give it a share page at
 `news/cards/<id>/index.html` (copy an existing one). The homepage hero's
 `.featured-row` (in `about.md`) holds the featured item: a `.featured-pub-card`
-with ids `featured-pub-eyebrow|title|meta|link` in both dictionaries, and a
-`.featured-fig` that links to the same card (`/news/#<id>`); an image there uses
-`object-fit:contain` so the title in it is never cropped.
+with ids `featured-pub-eyebrow|title|meta|link` in both dictionaries, linking to
+the News card (`/news/#<id>`); an event's image goes inside that card as
+`<span class="featured-pub-img">`. Beside it, `.featured-fig` holds the Tree of
+Hope video — the owner wants it kept there; do not replace it.
 
 ## Files and downloads
 
