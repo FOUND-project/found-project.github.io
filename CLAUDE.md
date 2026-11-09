@@ -203,6 +203,19 @@ pin-and-wordmark logo `images/logo_FOUND_pin.png` on white). The theme's
 `seo.html` only emitted page header images, so it now falls back to
 `og_image` for `og:image` and a large Twitter card.
 
+## Event cards and the homepage feature
+
+An event is a News card (`newsCards` in `_pages/news.md`) with `fullImage: true`,
+a 1200x630 image (also its link preview), the partner logos in a
+`<div class="partner-logos">` row and a `<a class="register-btn">` to the
+registration page, in both `en` and `es`. Partner logos live in `images/logos/`
+(trimmed PNGs on white, 160px tall). Give it a share page at
+`news/cards/<id>/index.html` (copy an existing one). The homepage hero's
+`.featured-row` (in `about.md`) holds the featured item: a `.featured-pub-card`
+with ids `featured-pub-eyebrow|title|meta|link` in both dictionaries, and a
+`.featured-fig` that links to the same card (`/news/#<id>`); an image there uses
+`object-fit:contain` so the title in it is never cropped.
+
 ## Files and downloads
 
 `files/` is served as-is by Pages, so anything in it is downloadable at
