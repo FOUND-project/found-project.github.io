@@ -33,7 +33,7 @@ review first.
 ### Homepage structure (Nov 2026 refresh)
 
 Top to bottom: `.home-hero` (one dark band: brand lockup, `.hh-headline` with the
-rotating word, mission paragraph, two `.hh-btn` buttons; the two featured cards sit
+rotating word, mission paragraph, one gold `.hh-btn` to `#buscadoras`; the two featured cards sit
 in `.hh-featured` on the right, below on screens under 1100px) → `.stats-ribbon` →
 timeline → `.gif-strip` ("Platforms", heading above the clips) → trailer → FOUND in
 Action → Buscadoras → coproduction → partnerships → `.social-section` ("In the
@@ -224,6 +224,13 @@ whose CSS there mirrors News's own `.news-header` copy; keep the two in step.
 Page shells use `padding:0 var(--shell-pad)` so every header lands at the same
 x and width (32px/1377px at 1440, 14px/363px at 390). Do not reintroduce the
 cream `Found_logo.jpg` there.
+
+## Team page cards
+
+Each person on `team.md` is a `.team-member` card: a `.team-avatar` circle (initials
+written in the HTML, or the portrait `<img>` when one exists), name, role, and a
+`.bio-link` when there is a bio page. The Direction group carries
+`.team-group--lead` (three larger cards). Add a person by copying a card.
 
 ## Team bio pages
 

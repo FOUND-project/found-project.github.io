@@ -11,23 +11,16 @@ author_profile: false
     padding: 0 var(--shell-pad) 4rem;
     font-family: inherit;
   }
-
-
-
-
-
   .team-hero {
     text-align: center;
     margin-bottom: 3rem;
   }
-
   .team-hero h1 {
     font-size: clamp(2.2rem, 5vw, 3.2rem);
     letter-spacing: 0.04em;
     margin: 0 0 0.75rem;
     font-weight: 700;
   }
-
   .team-hero .team-tagline {
     font-style: italic;
     opacity: 0.8;
@@ -36,101 +29,33 @@ author_profile: false
     margin: 0 auto;
     line-height: 1.6;
   }
-
   .team-hero .team-intro { max-width: none; margin: 0; padding: 1.1rem 1.5rem; border-radius: 14px; background: rgba(9,24,19,.94); color: rgba(232,245,240,.85); line-height: 1.7; font-size: 1.02rem; text-align: left; }
   .team-intro .ti-label { color: #d4af37; font-weight: 700; letter-spacing: .04em; white-space: nowrap; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92rem; }
   .team-intro .ti-brace { color: rgba(74,140,115,.9); font-weight: 400; }
   .team-intro .ti-divider { color: rgba(74,140,115,.6); margin: 0 .6rem; }
-  .team-notice {
-    border: 1px solid rgba(150, 120, 70, 0.45);
-    background: rgba(150, 120, 70, 0.08);
-    border-radius: 10px;
-    padding: 1.1rem 1.4rem;
-    margin: 0 0 3.5rem;
-    max-width: none;
-    text-align: center;
-    font-size: 0.95rem;
-    line-height: 1.55;
-  }
-
-  .team-notice strong {
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    font-size: 0.78rem;
-    display: block;
-    margin-bottom: 0.4rem;
-    opacity: 0.75;
-  }
-
-  .team-notice a {
-    text-decoration: underline;
-    font-weight: 600;
-  }
-
-  .team-group {
-    margin-bottom: 3.5rem;
-  }
-
-  .team-group-title {
-    font-size: 0.82rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    opacity: 0.6;
-    margin: 0 0 1.4rem;
-    padding-bottom: 0.6rem;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.25);
-  }
-
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 1.6rem 2rem;
-  }
-
-  .team-member {
-    line-height: 1.4;
-  }
-
-  .team-member .name {
-    font-size: 1.08rem;
-    font-weight: 600;
-    margin: 0 0 0.25rem;
-  }
-
-  .team-member .name a {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
-  }
-
-  .team-member .name a:hover {
-    border-bottom-color: currentColor;
-  }
-
-  .team-member .role {
-    font-size: 0.8rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    opacity: 0.65;
-    margin: 0;
-  }
-
-  .team-member .bio-link {
-    display: inline-block;
-    margin-top: 0.45rem;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    color: #1b4d3e;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.8);
-  }
+  .team-notice { display: flex; align-items: center; gap: 1rem 1.4rem; flex-wrap: wrap; border: 1px solid rgba(212,175,55,.5); border-left: 4px solid #d4af37; background: #fffdf6; border-radius: 14px; padding: 1rem 1.4rem; margin: 0 0 3.25rem; font-size: .98rem; line-height: 1.55; color: #3f3f3f; }
+  .team-notice strong { flex: none; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .14em; text-transform: uppercase; font-size: .72rem; color: #7a5f00; background: rgba(212,175,55,.16); border: 1px solid rgba(212,175,55,.5); border-radius: 999px; padding: .3rem .8rem; }
+  .team-group { margin-bottom: 3.5rem; }
+  .archive h2.team-group-title, .page__content h2.team-group-title { display: flex; align-items: center; gap: 1rem; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 1.9rem; letter-spacing: 0; text-transform: none; color: #1e4034; margin: 0 0 1.5rem; padding: 0; border: 0; opacity: 1; }
+  .team-group-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(212,175,55,.75), rgba(212,175,55,0)); }
+  .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 1.25rem; }
+  .team-group--lead .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .team-member { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: .2rem; padding: 1.4rem 1.35rem 1.3rem; background: #fff; border: 1px solid rgba(45,95,77,.14); border-radius: 18px; box-shadow: 0 2px 10px rgba(15,23,42,.06); overflow: hidden; line-height: 1.4; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .team-member::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: linear-gradient(90deg, #d4af37, rgba(212,175,55,.2)); }
+  .team-member:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(15,23,42,.12); border-color: rgba(212,175,55,.6); }
+  .team-avatar { flex: none; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: .85rem; background: linear-gradient(135deg, #123126, #2d5f4d); color: #f1d98a; font-family: 'DM Serif Display', Georgia, serif; font-size: 1.3rem; letter-spacing: .03em; box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(212,175,55,.55); overflow: hidden; }
+  .team-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
+  .team-group--lead .team-member { padding: 1.7rem 1.6rem 1.55rem; background: linear-gradient(135deg, #fff 0%, #f5fbf8 100%); }
+  .team-group--lead .team-avatar { width: 72px; height: 72px; font-size: 1.55rem; }
+  .team-member .name { font-size: 1.14rem; font-weight: 700; color: #1e4034; margin: 0; letter-spacing: 0; }
+  .team-group--lead .team-member .name { font-size: 1.3rem; }
+  .team-member .name a { color: inherit; }
+  .archive .team-member .name a, .page__content .team-member .name a { text-decoration: none; }
+  .team-member .name a::after { content: ''; position: absolute; inset: 0; }
+  .team-member .role { font-size: .9rem; line-height: 1.5; letter-spacing: 0; text-transform: none; color: #5d6763; opacity: 1; margin: .15rem 0 0; }
+  .team-member .bio-link { position: relative; display: inline-block; margin-top: auto; padding-top: .9rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #2d5f4d; }
   .archive .team-member a.bio-link, .page__content .team-member a.bio-link { text-decoration: none; }
-  .team-member .bio-link:hover { border-bottom-color: #1b4d3e; }
-  @media (max-width: 520px) {
-    .team-grid { grid-template-columns: 1fr 1fr; gap: 1.4rem 1.2rem; }
-    .team-member .name { font-size: 0.98rem; }
-  }
+  .team-member:hover .bio-link { color: #1e4034; }
 </style>
 
 <div class="team-page" markdown="0">
@@ -154,21 +79,24 @@ author_profile: false
 
   <div class="team-notice">
     <strong id="team-notice-label">Under construction</strong>
-    <span id="team-notice-text">This section is a work in progress. Names and roles will continue to be updated, and full biographies will be added in due course. For now, you can reach us at miguel.moctezuma[@]found-project.org</span>
+    <span id="team-notice-text">This section is a work in progress. For now, you can reach us at miguel.moctezuma[@]found-project.org</span>
   </div>
 
-  <div class="team-group">
+  <div class="team-group team-group--lead">
     <h2 class="team-group-title" id="tg-direction">Direction</h2>
     <div class="team-grid">
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">MM</span>
         <p class="name">Miguel Moctezuma</p>
         <p class="role" id="r-miguel">Co-Founder &amp; Co-Director · University of Oxford</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">JS</span>
         <p class="name">José Luis Silván</p>
         <p class="role" id="r-silvan">Co-Founder &amp; Co-Director · CentroGeo</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">MG</span>
         <p class="name">Mariela Garfias</p>
         <p class="role" id="r-mariela">FCDO Pioneer</p>
       </div>
@@ -179,39 +107,48 @@ author_profile: false
     <h2 class="team-group-title" id="tg-advisors">Advisors</h2>
     <div class="team-grid">
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">IN</span>
         <p class="name">Indira Navarro</p>
         <p class="role" id="r-indira">Search Group Leader · Guerreros Buscadores</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">GC</span>
         <p class="name">Guillermina Camacho</p>
         <p class="role" id="r-guillermina">Search Group Leader · Siguiendo tu Rastro con Amor</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar"><img src="/images/team/luis-fondebrider.jpg" alt="" loading="lazy"></span>
         <p class="name"><a href="/team/luis-fondebrider/">Luis Fondebrider</a></p>
         <p class="role" id="r-fondebrider">Forensic Anthropology Advisor</p>
         <a class="bio-link" href="/team/luis-fondebrider/" id="bio-fondebrider">Read bio →</a>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">VÁ</span>
         <p class="name">Victor Hugo Ávila Barrientos</p>
         <p class="role" id="r-avila">Jalisco Search Commission</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">TC</span>
         <p class="name">Tunuary Chávez</p>
         <p class="role" id="r-tunuary">Jalisco Search Commission</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">LF</span>
         <p class="name">Luz Janeth Forero</p>
         <p class="role" id="r-forero">Colombia Search Unit</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">MP</span>
         <p class="name">Martha Lidia Pérez</p>
         <p class="role" id="r-martha">Mexico Search Commission</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">BE</span>
         <p class="name">Brad Evans</p>
         <p class="role" id="r-brad">Ethics Advisor · University of Bath</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">KG</span>
         <p class="name">Karina García</p>
         <p class="role" id="r-karina">UWE Bristol</p>
       </div>
@@ -222,22 +159,27 @@ author_profile: false
     <h2 class="team-group-title" id="tg-contributors">Contributors</h2>
     <div class="team-grid">
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">DV</span>
         <p class="name">David Vigoureux</p>
         <p class="role" id="r-vigoureux">Innovation Manager at Brink · FOUND Coach</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">SF</span>
         <p class="name">Samuel Fookes</p>
         <p class="role" id="r-fookes">Innovation at DT Global · FOUND Coach</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">MG</span>
         <p class="name">Magnus Green</p>
         <p class="role" id="r-green">FOUND Strategy &amp; External Affairs · Director, Istituto Fiorentino di Critica Culturale</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">MF</span>
         <p class="name">Mercedes Fernández</p>
         <p class="role" id="r-mercedes">FOUND Expert on Visual Cultures</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">DN</span>
         <p class="name">Daniel Nájera-Betancourt</p>
         <p class="role" id="r-najera">FOUND Documentalist</p>
       </div>
@@ -255,8 +197,8 @@ author_profile: false
     'team-intro-text':   ['Our core team brings together search collectives of Mexico and Colombia, CentroGeo, the University of Oxford, Jalisco\u2019s Search Commission, the British Embassy in Mexico City, the National Autonomous University of Mexico (UNAM), and the Universidad de Guadalajara.',
                           'Nuestro equipo central re\u00fane a colectivos de b\u00fasqueda de M\u00e9xico y Colombia, CentroGeo, la Universidad de Oxford, la Comisi\u00f3n de B\u00fasqueda de Jalisco, la Embajada Brit\u00e1nica en la Ciudad de M\u00e9xico, la Universidad Nacional Aut\u00f3noma de M\u00e9xico (UNAM) y la Universidad de Guadalajara.'],
     'team-notice-label': ['Under construction', 'En construcci\u00f3n'],
-    'team-notice-text':  ['This section is a work in progress. Names and roles will continue to be updated, and full biographies will be added in due course. For now, you can reach us at miguel.moctezuma[@]found-project.org',
-                          'Esta secci\u00f3n est\u00e1 en desarrollo. Los nombres y los cargos se seguir\u00e1n actualizando, y las biograf\u00edas completas se a\u00f1adir\u00e1n en su momento. Por ahora, puedes escribirnos a miguel.moctezuma[@]found-project.org'],
+    'team-notice-text':  ['This section is a work in progress. For now, you can reach us at miguel.moctezuma[@]found-project.org',
+                          'Esta secci\u00f3n est\u00e1 en desarrollo. Por ahora, puedes escribirnos a miguel.moctezuma[@]found-project.org'],
     'tg-direction':      ['Direction', 'Direcci\u00f3n'],
     'tg-advisors':       ['Advisors', 'Consejo asesor'],
     'tg-contributors':   ['Contributors', 'Colaboradores'],
