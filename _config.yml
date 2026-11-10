@@ -147,6 +147,19 @@ include:
   - _pages
   - files
 exclude:
+  # Heavy originals that no page references (157MB). They stay in the repository
+  # but are kept out of the published site: with them the Pages deploy ran past
+  # GitHub's 10-minute limit. Remove a line to publish that file again.
+  - "images/mothers walking.gif"
+  - "images/final finding July .gif"
+  - images/360.gif
+  - images/ClandestineSpace.gif
+  - "images/GIF rancho.gif"
+  - "_pages/GIF rancho.gif"
+  - "images/tree of hope.gif"
+  - "images/flowers graves.gif"
+  - images/NDAI5.gif
+  - "images/Screenshot 2024-11-11 at 14.12.53.png"
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache

@@ -177,6 +177,19 @@ Check the deployed result with the GitHub Actions API: the "pages build and
 deployment" run for the merge commit must be `success`. Its logs are not
 retrievable, so a green local `jekyll build --safe` is the real safety net.
 
+### Keep the published site small, or the deploy times out
+
+The run has two jobs. `build` can pass while `deploy` fails: GitHub copies the
+whole built site and aborts after 10 minutes ("Timeout reached, aborting!" in the
+deploy job log, which *is* retrievable with `get_job_logs`). At 282MB the homepage
+refresh failed to deploy three times in a row; re-running did not help.
+
+So heavy files no page references are listed under `exclude:` in `_config.yml`
+(old GIF originals, 157MB). They stay in the repository but are not published;
+the site is ~125MB. When a large original is replaced by a lighter version, add
+the original to that list — do not leave it in the published site. Check
+`du -sh /tmp/_site` after a local build.
+
 ### Moving belts
 
 Strips marked `data-belt` (the "FOUND in Action" photos, all widths) or
@@ -293,7 +306,8 @@ The homepage loads **no GIFs**: the five it used (68MB together) are looping
 videos (`site_360`, `ndai5`, `areas_de_busqueda`, `clandestine_space`,
 `mothers_walking`, each `.webm` + `.mp4` + `.jpg` poster in `images/`, under 4MB
 in total). `setupVideos()` in `about.md` pauses any `video[autoplay]` that is off
-screen. The original `.gif` files are still in `images/` for other uses.
+screen. The original `.gif` files are still in `images/` but excluded from the
+published site (see "Keep the published site small").
 
 GIFs sent in the chat arrive as a single still frame — ask the owner to upload
 the file to `images/` on GitHub instead. Large GIFs go on the page as a looping
