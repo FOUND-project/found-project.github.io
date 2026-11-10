@@ -30,6 +30,33 @@ review first.
 - Shared width tokens: `--shell-max` (1860px) and `--shell-pad`. Use them for
   any new full-width section rather than inventing another max-width.
 
+### Homepage structure (Nov 2026 refresh)
+
+Top to bottom: `.home-hero` (one dark band: brand lockup, `.hh-headline` with the
+rotating word, mission paragraph, two `.hh-btn` buttons; the two featured cards sit
+in `.hh-featured` on the right, below on screens under 1100px) → `.stats-ribbon` →
+timeline → `.gif-strip` ("Platforms", heading above the clips) → trailer → FOUND in
+Action → Buscadoras → coproduction → partnerships → `.social-section` ("In the
+media") → closing `.footer`. Bands alternate dark and light; keep that when adding
+a section.
+
+The refresh styles are one block at the **end** of the page `<style>`, under the
+`HOME REFRESH` comment, so they win ties with the older rules above them. Put
+homepage polish there. The version before the refresh is kept on the branch
+`backup/home-before-redesign-2026-11-10`.
+
+Theme rules that silently distort the homepage (all neutralised in that block —
+do not reintroduce):
+
+- `h1`–`h6` get `margin-top:2em`, and `.page__content h2` a `border-bottom`. That
+  was ~100px of dead space and a stray rule above every section title.
+- `.page__content p` sets margins and beats a bare class, so a `<p>` styled as a
+  headline or centred with `margin:auto` needs `.parent p.class`.
+- `body` has `padding-bottom:9em` and the empty `.page__meta` a top margin: a white
+  gap between the closing band and the site footer.
+- The fixed masthead is 70px tall: sections that are link targets need
+  `scroll-margin-top` of at least that.
+
 ### Full-bleed: two things fight it
 
 The theme reserves large empty margins. Both are already neutralised in
@@ -211,7 +238,7 @@ a 1200x630 image (also its link preview), the partner logos in a
 registration page, in both `en` and `es`. Partner logos live in `images/logos/`
 (trimmed PNGs on white, 160px tall). Give it a share page at
 `news/cards/<id>/index.html` (copy an existing one). The homepage hero's
-`.featured-row` (in `about.md`) holds the featured item: a `.featured-pub-card`
+`.featured-row` (in `about.md`, inside `.hh-featured`) holds the featured item: a `.featured-pub-card`
 with ids `featured-pub-eyebrow|title|meta|link` in both dictionaries, linking to
 the News card (`/news/#<id>`); an event's image goes inside that card as
 `<span class="featured-pub-img">` (an image, or a looping `<video>` inside
@@ -261,6 +288,12 @@ sandbox `pip` stalls because PyPI is in `NO_PROXY`; run it with
 `NO_PROXY=localhost,127.0.0.1`.
 
 ### Animated images
+
+The homepage loads **no GIFs**: the five it used (68MB together) are looping
+videos (`site_360`, `ndai5`, `areas_de_busqueda`, `clandestine_space`,
+`mothers_walking`, each `.webm` + `.mp4` + `.jpg` poster in `images/`, under 4MB
+in total). `setupVideos()` in `about.md` pauses any `video[autoplay]` that is off
+screen. The original `.gif` files are still in `images/` for other uses.
 
 GIFs sent in the chat arrive as a single still frame — ask the owner to upload
 the file to `images/` on GitHub instead. Large GIFs go on the page as a looping
