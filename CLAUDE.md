@@ -177,18 +177,22 @@ Check the deployed result with the GitHub Actions API: the "pages build and
 deployment" run for the merge commit must be `success`. Its logs are not
 retrievable, so a green local `jekyll build --safe` is the real safety net.
 
-### Keep the published site small, or the deploy times out
+### When the deploy times out
 
 The run has two jobs. `build` can pass while `deploy` fails: GitHub copies the
-whole built site and aborts after 10 minutes ("Timeout reached, aborting!" in the
-deploy job log, which *is* retrievable with `get_job_logs`). At 282MB the homepage
-refresh failed to deploy three times in a row; re-running did not help.
+built site and aborts after 10 minutes ("Timeout reached, aborting!" in the
+deploy job log, which *is* retrievable with `get_job_logs`). On 10 Nov 2026 the
+homepage refresh hit this four times in a row, at 282MB and again at 125MB; the
+next re-run then deployed in 43 seconds. So the timeouts were GitHub being slow,
+not the site's size. A green `build` job with a timed-out `deploy` is not a
+problem with the change: re-run the failed job (`rerun_failed_jobs`), and if it
+keeps timing out, wait and re-run later. Never push an empty commit to force it.
+The live site keeps serving the last good deploy meanwhile.
 
-So heavy files no page references are listed under `exclude:` in `_config.yml`
-(old GIF originals, 157MB). They stay in the repository but are not published;
-the site is ~125MB. When a large original is replaced by a lighter version, add
-the original to that list — do not leave it in the published site. Check
-`du -sh /tmp/_site` after a local build.
+Heavy files no page references are still listed under `exclude:` in
+`_config.yml` (old GIF originals, 157MB): they stay in the repository but are not
+published, which keeps the site at ~125MB. When a large original is replaced by a
+lighter version, add the original to that list.
 
 ### Moving belts
 
@@ -307,7 +311,7 @@ videos (`site_360`, `ndai5`, `areas_de_busqueda`, `clandestine_space`,
 `mothers_walking`, each `.webm` + `.mp4` + `.jpg` poster in `images/`, under 4MB
 in total). `setupVideos()` in `about.md` pauses any `video[autoplay]` that is off
 screen. The original `.gif` files are still in `images/` but excluded from the
-published site (see "Keep the published site small").
+published site (see "When the deploy times out").
 
 GIFs sent in the chat arrive as a single still frame — ask the owner to upload
 the file to `images/` on GitHub instead. Large GIFs go on the page as a looping
