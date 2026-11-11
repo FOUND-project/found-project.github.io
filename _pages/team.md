@@ -115,11 +115,13 @@ author_profile: false
       </div>
       <div class="team-member">
         <span class="team-avatar" aria-hidden="true">GC</span>
+        <img class="team-logo" src="/images/logos/siguiendo_tu_rastro_con_amor.png" alt="Siguiendo tu Rastro con Amor" loading="lazy">
         <p class="name">Guillermina Camacho</p>
         <p class="role" id="r-guillermina">Search Collective · Siguiendo tu Rastro con Amor</p>
       </div>
       <div class="team-member">
         <span class="team-avatar" aria-hidden="true">MM</span>
+        <img class="team-logo" src="/images/logos/manos_buscadoras.png" alt="Colectivo Manos Buscadoras" loading="lazy">
         <p class="name">María del Carmen Meza Ponce</p>
         <p class="role" id="r-meza">Search Collective · Manos Buscadoras de Jalisco</p>
       </div>
