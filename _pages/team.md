@@ -109,12 +109,17 @@ author_profile: false
       <div class="team-member">
         <span class="team-avatar" aria-hidden="true">IN</span>
         <p class="name">Indira Navarro</p>
-        <p class="role" id="r-indira">Search Group Leader · Guerreros Buscadores</p>
+        <p class="role" id="r-indira">Search Collective · Guerreros Buscadores</p>
       </div>
       <div class="team-member">
         <span class="team-avatar" aria-hidden="true">GC</span>
         <p class="name">Guillermina Camacho</p>
-        <p class="role" id="r-guillermina">Search Group Leader · Siguiendo tu Rastro con Amor</p>
+        <p class="role" id="r-guillermina">Search Collective · Siguiendo tu Rastro con Amor</p>
+      </div>
+      <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">MM</span>
+        <p class="name">María del Carmen Meza Ponce</p>
+        <p class="role" id="r-meza">Search Collective · Manos Buscadoras de Jalisco</p>
       </div>
       <div class="team-member">
         <span class="team-avatar"><img src="/images/team/luis-fondebrider.jpg" alt="" loading="lazy"></span>
@@ -205,8 +210,9 @@ author_profile: false
     'r-miguel':          ['Co-Founder & Co-Director \u00b7 University of Oxford', 'Cofundaci\u00f3n y codirecci\u00f3n \u00b7 Universidad de Oxford'],
     'r-silvan':          ['Co-Founder & Co-Director \u00b7 CentroGeo', 'Cofundaci\u00f3n y codirecci\u00f3n \u00b7 CentroGeo'],
     'r-mariela':         ['FCDO Pioneer', 'Pionera del FCDO'],
-    'r-indira':          ['Search Group Leader \u00b7 Guerreros Buscadores', 'Liderazgo de colectivo de b\u00fasqueda \u00b7 Guerreros Buscadores'],
-    'r-guillermina':     ['Search Group Leader \u00b7 Siguiendo tu Rastro con Amor', 'Liderazgo de colectivo de b\u00fasqueda \u00b7 Siguiendo tu Rastro con Amor'],
+    'r-indira':          ['Search Collective \u00b7 Guerreros Buscadores', 'Colectivo de b\u00fasqueda \u00b7 Guerreros Buscadores'],
+    'r-guillermina':     ['Search Collective \u00b7 Siguiendo tu Rastro con Amor', 'Colectivo de b\u00fasqueda \u00b7 Siguiendo tu Rastro con Amor'],
+    'r-meza':            ['Search Collective \u00b7 Manos Buscadoras de Jalisco', 'Colectivo de b\u00fasqueda \u00b7 Manos Buscadoras de Jalisco'],
     'r-fondebrider':     ['Forensic Anthropology Advisor', 'Asesor en antropolog\u00eda forense'],
     'bio-fondebrider':   ['Read bio \u2192', 'Leer biograf\u00eda \u2192'],
     'r-avila':           ['Jalisco Search Commission', 'Comisi\u00f3n de B\u00fasqueda de Jalisco'],
