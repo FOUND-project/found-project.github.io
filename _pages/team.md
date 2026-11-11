@@ -44,6 +44,7 @@ author_profile: false
   .team-member::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: linear-gradient(90deg, #d4af37, rgba(212,175,55,.2)); }
   .team-member:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(15,23,42,.12); border-color: rgba(212,175,55,.6); }
   .team-avatar { flex: none; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: .85rem; background: linear-gradient(135deg, #123126, #2d5f4d); color: #f1d98a; font-family: 'DM Serif Display', Georgia, serif; font-size: 1.3rem; letter-spacing: .03em; box-shadow: 0 0 0 3px #fff, 0 0 0 4px rgba(212,175,55,.55); overflow: hidden; }
+  .team-member .team-logo { position: absolute; top: 1.15rem; right: 1.1rem; height: 66px; width: auto; max-width: 42%; object-fit: contain; margin: 0; border-radius: 6px; }
   .team-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; margin: 0; }
   .team-group--lead .team-member { padding: 1.7rem 1.6rem 1.55rem; background: linear-gradient(135deg, #fff 0%, #f5fbf8 100%); }
   .team-group--lead .team-avatar { width: 72px; height: 72px; font-size: 1.55rem; }
@@ -108,6 +109,7 @@ author_profile: false
     <div class="team-grid">
       <div class="team-member">
         <span class="team-avatar" aria-hidden="true">IN</span>
+        <img class="team-logo" src="/images/logos/guerreros_buscadores.png" alt="Guerreros Buscadores de Jalisco" loading="lazy">
         <p class="name">Indira Navarro</p>
         <p class="role" id="r-indira">Search Collective · Guerreros Buscadores</p>
       </div>
