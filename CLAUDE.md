@@ -231,6 +231,9 @@ Each person on `team.md` is a `.team-member` card: a `.team-avatar` circle (init
 written in the HTML, or the portrait `<img>` when one exists), name, role, and a
 `.bio-link` when there is a bio page. The Direction group carries
 `.team-group--lead` (three larger cards). Add a person by copying a card.
+A search-collective member's card also carries the collective's logo as
+`<img class="team-logo">` (top-right corner, from `images/logos/`, ~240px PNG) —
+never in the avatar circle, which is reserved for the person's portrait.
 
 ## Team bio pages
 
