@@ -186,12 +186,6 @@ author_profile: false
       line-height: 1.15;
       margin-bottom: .5rem;
     }
-    #media-intro {
-      font-size: clamp(.95rem, 1.3vw, 1.1rem);
-      color: var(--text-medium);
-      line-height: 1.75;
-      max-width: 680px;
-    }
 
     .media-grid {
       display: grid;
@@ -405,7 +399,6 @@ author_profile: false
           <span class="media-eyebrow-text" id="media-pill">MEDIA · COVERAGE</span>
         </div>
         <h1 id="media-title">Media Coverage</h1>
-        <p id="media-intro">Our research and work has been featured in leading international publications.</p>
       </div>
     </header>
 
@@ -629,8 +622,8 @@ author_profile: false
 
     /* ── translations ── */
     const translations = {
-      en:{ 'media-pill':'MEDIA · COVERAGE','media-title':'Media Coverage','media-intro':'Our research and work has been featured in leading international publications.' },
-      es:{ 'media-pill':'MEDIOS · COBERTURA','media-title':'Cobertura en medios','media-intro':'Nuestras investigaciones y trabajo han aparecido en medios internacionales de referencia.' }
+      en:{ 'media-pill':'MEDIA · COVERAGE','media-title':'Media Coverage' },
+      es:{ 'media-pill':'MEDIOS · COBERTURA','media-title':'Cobertura en medios' }
     };
     const tagLabels = {
       en:{ article:'Article', tv:'TV Segment', 'tv-social':'TV / Social', opinion:'Opinion' },
