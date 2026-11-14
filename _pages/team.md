@@ -156,6 +156,11 @@ author_profile: false
         <p class="role" id="r-karina">UWE Bristol</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">CM</span>
+        <p class="name">Ciaran Martin</p>
+        <p class="role" id="r-ciaran">Cyber and Technology Policy · University of Oxford</p>
+      </div>
+      <div class="team-member">
         <span class="team-avatar" aria-hidden="true">VÁ</span>
         <p class="name">Victor Hugo Ávila Barrientos</p>
         <p class="role" id="r-avila">Jalisco Search Commission</p>
@@ -245,6 +250,7 @@ author_profile: false
     'r-martha':          ['Mexico Search Commission', 'Comisi\u00f3n Nacional de B\u00fasqueda de M\u00e9xico'],
     'r-brad':            ['Ethics Advisor \u00b7 University of Bath', 'Asesor\u00eda en \u00e9tica \u00b7 Universidad de Bath'],
     'r-karina':          ['UWE Bristol', 'UWE Bristol'],
+      'r-ciaran':           ['Cyber and Technology Policy · University of Oxford', 'Política cibernética y tecnológica · Universidad de Oxford'],
     'r-vigoureux':       ['Innovation Manager at Brink \u00b7 FOUND Coach', 'Gesti\u00f3n de innovaci\u00f3n en Brink \u00b7 Coach de FOUND'],
     'r-fookes':          ['Innovation at DT Global \u00b7 FOUND Coach', 'Innovaci\u00f3n en DT Global \u00b7 Coach de FOUND'],
     'r-green':           ['FOUND Strategy & External Affairs \u00b7 Director, Istituto Fiorentino di Critica Culturale',
