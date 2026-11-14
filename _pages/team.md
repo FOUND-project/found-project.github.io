@@ -107,10 +107,10 @@ author_profile: false
     <h2 class="team-group-title" id="tg-advisors">Advisors</h2>
     <div class="team-grid">
       <div class="team-member">
-        <span class="team-avatar" aria-hidden="true">IN</span>
-        <img class="team-logo" src="/images/logos/guerreros_buscadores.png" alt="Guerreros Buscadores de Jalisco" loading="lazy">
-        <p class="name">Indira Navarro</p>
-        <p class="role" id="r-indira">Search Collective · Guerreros Buscadores</p>
+        <span class="team-avatar" aria-hidden="true">MM</span>
+        <img class="team-logo" src="/images/logos/manos_buscadoras.png" alt="Colectivo Manos Buscadoras" loading="lazy">
+        <p class="name">María del Carmen Meza Ponce</p>
+        <p class="role" id="r-meza">Search Collective · Manos Buscadoras de Jalisco</p>
       </div>
       <div class="team-member">
         <span class="team-avatar" aria-hidden="true">GC</span>
@@ -119,10 +119,10 @@ author_profile: false
         <p class="role" id="r-guillermina">Search Collective · Siguiendo tu Rastro con Amor</p>
       </div>
       <div class="team-member">
-        <span class="team-avatar" aria-hidden="true">MM</span>
-        <img class="team-logo" src="/images/logos/manos_buscadoras.png" alt="Colectivo Manos Buscadoras" loading="lazy">
-        <p class="name">María del Carmen Meza Ponce</p>
-        <p class="role" id="r-meza">Search Collective · Manos Buscadoras de Jalisco</p>
+        <span class="team-avatar" aria-hidden="true">IN</span>
+        <img class="team-logo" src="/images/logos/guerreros_buscadores.png" alt="Guerreros Buscadores de Jalisco" loading="lazy">
+        <p class="name">Indira Navarro</p>
+        <p class="role" id="r-indira">Search Collective · Guerreros Buscadores</p>
       </div>
       <div class="team-member">
         <span class="team-avatar"><img src="/images/team/luis-fondebrider.jpg" alt="" loading="lazy"></span>
