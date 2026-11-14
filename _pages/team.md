@@ -103,27 +103,6 @@ author_profile: false
     <span id="team-notice-text">This section is a work in progress. For now, you can reach us at miguel.moctezuma[@]found-project.org</span>
   </div>
 
-  <div class="team-group team-group--lead">
-    <h2 class="team-group-title" id="tg-direction">Direction</h2>
-    <div class="team-grid">
-      <div class="team-member">
-        <span class="team-avatar" aria-hidden="true">MM</span>
-        <p class="name">Miguel Moctezuma</p>
-        <p class="role" id="r-miguel">Co-Founder &amp; Co-Director · University of Oxford</p>
-      </div>
-      <div class="team-member">
-        <span class="team-avatar" aria-hidden="true">JS</span>
-        <p class="name">José Luis Silván</p>
-        <p class="role" id="r-silvan">Co-Founder &amp; Co-Director · CentroGeo</p>
-      </div>
-      <div class="team-member">
-        <span class="team-avatar" aria-hidden="true">MG</span>
-        <p class="name">Mariela Garfias</p>
-        <p class="role" id="r-mariela">FCDO Pioneer</p>
-      </div>
-    </div>
-  </div>
-
   <div class="team-group">
     <h2 class="team-group-title" id="tg-advisors">Advisors</h2>
     <div class="team-grid">
@@ -152,16 +131,6 @@ author_profile: false
         <a class="bio-link" href="/team/luis-fondebrider/" id="bio-fondebrider">Read bio →</a>
       </div>
       <div class="team-member">
-        <span class="team-avatar" aria-hidden="true">VÁ</span>
-        <p class="name">Victor Hugo Ávila Barrientos</p>
-        <p class="role" id="r-avila">Jalisco Search Commission</p>
-      </div>
-      <div class="team-member">
-        <span class="team-avatar" aria-hidden="true">TC</span>
-        <p class="name">Tunuary Chávez</p>
-        <p class="role" id="r-tunuary">Jalisco Search Commission</p>
-      </div>
-      <div class="team-member">
         <span class="team-avatar" aria-hidden="true">LF</span>
         <p class="name">Luz Janeth Forero</p>
         <p class="role" id="r-forero">Colombia Search Unit</p>
@@ -180,6 +149,16 @@ author_profile: false
         <span class="team-avatar" aria-hidden="true">KG</span>
         <p class="name">Karina García</p>
         <p class="role" id="r-karina">UWE Bristol</p>
+      </div>
+      <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">VÁ</span>
+        <p class="name">Victor Hugo Ávila Barrientos</p>
+        <p class="role" id="r-avila">Jalisco Search Commission</p>
+      </div>
+      <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">TC</span>
+        <p class="name">Tunuary Chávez</p>
+        <p class="role" id="r-tunuary">Jalisco Search Commission</p>
       </div>
     </div>
   </div>
@@ -214,6 +193,27 @@ author_profile: false
       </div>
     </div>
   </div>
+  <div class="team-group team-group--lead">
+    <h2 class="team-group-title" id="tg-direction">Direction</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">MG</span>
+        <p class="name">Mariela Garfias</p>
+        <p class="role" id="r-mariela">FCDO Pioneer</p>
+      </div>
+      <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">JS</span>
+        <p class="name">José Luis Silván</p>
+        <p class="role" id="r-silvan">Co-Founder &amp; Co-Director · CentroGeo</p>
+      </div>
+      <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">MM</span>
+        <p class="name">Miguel Moctezuma</p>
+        <p class="role" id="r-miguel">Co-Founder &amp; Co-Director · University of Oxford</p>
+      </div>
+    </div>
+  </div>
+
 
 </div>
 
