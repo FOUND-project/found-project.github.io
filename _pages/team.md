@@ -3,7 +3,6 @@ title: "Team"
 permalink: /team/
 author_profile: false
 ---
-<meta name="viewport" content="width=1200">
 <style>
   .team-page {
     max-width: var(--shell-max);
@@ -57,6 +56,27 @@ author_profile: false
   .team-member .bio-link { position: relative; display: inline-block; margin-top: auto; padding-top: .9rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #2d5f4d; }
   .archive .team-member a.bio-link, .page__content .team-member a.bio-link { text-decoration: none; }
   .team-member:hover .bio-link { color: #1e4034; }
+  /* Phones: one column, and each card becomes a row (portrait left, text right) */
+  @media (max-width: 700px) {
+    .team-page { padding-bottom: 2.5rem; }
+    .team-hero { margin-bottom: 1.25rem; }
+    .team-hero .team-intro { padding: 1rem 1.1rem; font-size: .96rem; line-height: 1.65; }
+    .team-notice { margin-bottom: 2rem; padding: .9rem 1.05rem; gap: .6rem 1rem; font-size: .94rem; }
+    .team-notice span { overflow-wrap: anywhere; }
+    .team-group { margin-bottom: 2.1rem; }
+    .archive h2.team-group-title, .page__content h2.team-group-title { font-size: 1.55rem; margin-bottom: .9rem; }
+    .team-grid, .team-group--lead .team-grid { grid-template-columns: minmax(0, 1fr); gap: .7rem; }
+    .team-member, .team-group--lead .team-member { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; column-gap: .95rem; row-gap: .12rem; align-content: center; padding: 1rem 1.05rem .95rem; border-radius: 16px; }
+    .team-member:hover { transform: none; }
+    .team-avatar, .team-group--lead .team-avatar { grid-column: 1; grid-row: 1 / span 3; align-self: center; margin: 0; width: 54px; height: 54px; font-size: 1.15rem; }
+    .team-group--lead .team-avatar { width: 62px; height: 62px; font-size: 1.32rem; }
+    .team-member .name, .team-member .role, .team-member .bio-link { grid-column: 2; }
+    .team-member .name { align-self: end; font-size: 1.06rem; line-height: 1.3; }
+    .team-group--lead .team-member .name { font-size: 1.16rem; }
+    .team-member .role { align-self: start; margin: 0; font-size: .86rem; line-height: 1.45; }
+    .team-member .bio-link { justify-self: start; margin-top: 0; padding-top: .45rem; }
+    .team-member .team-logo { position: static; grid-column: 3; grid-row: 1 / span 3; align-self: center; height: 46px; max-width: 64px; }
+  }
 </style>
 
 <div class="team-page" markdown="0">

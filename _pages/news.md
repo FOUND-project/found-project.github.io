@@ -7,7 +7,6 @@ author_profile: false
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1200">
   <title>FOUND — News & Updates</title>
   <!-- ═══════════════════════════════════════════════════════
        OPEN GRAPH — dynamic per-card when shared via #card-id
@@ -209,6 +208,22 @@ author_profile: false
     @media (max-width: 480px) {
       .news-card .card-body { padding: 1.1rem 1.1rem 1.3rem; }
       .modal-panel { border-radius: var(--radius-lg); }
+    }
+    /* Tablets: two columns, not one very wide one */
+    @media (min-width: 601px) and (max-width: 900px) {
+      .news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    /* Phones: the pop-up starts below the fixed 70px masthead, so its close button is never covered */
+    @media (max-width: 600px) {
+      .news-grid { gap: 1rem; margin-bottom: 1.25rem; }
+      .news-card:hover { transform: none; }
+      .modal-overlay { align-items: flex-start; padding: calc(70px + .6rem) .6rem .6rem; }
+      .modal-panel { max-height: calc(100vh - 70px - 1.2rem); max-height: calc(100dvh - 70px - 1.2rem); }
+      .modal-content { padding: 1.25rem 1.15rem 1.1rem; }
+      .modal-title { margin-bottom: 1.1rem; }
+      .modal-divider { margin-bottom: 1.1rem; }
+      .modal-footer { padding: .85rem 1.15rem 1.1rem; }
+      .modal-body .partner-logos { gap: .8rem 1rem; padding: .9rem; }
     }
   </style>
 </head>
