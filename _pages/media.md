@@ -396,7 +396,7 @@ author_profile: false
       <div class="media-header-body">
         <div class="media-eyebrow">
           <span class="media-eyebrow-dot"></span>
-          <span class="media-eyebrow-text" id="media-pill">MEDIA · COVERAGE</span>
+          <span class="media-eyebrow-text fx">FOUND<span class="fxb">{</span><span id="media-pill">Media · Coverage</span><span class="fxb">}</span></span>
         </div>
         <h1 id="media-title">Media Coverage</h1>
       </div>
@@ -622,8 +622,8 @@ author_profile: false
 
     /* ── translations ── */
     const translations = {
-      en:{ 'media-pill':'MEDIA · COVERAGE','media-title':'Media Coverage' },
-      es:{ 'media-pill':'MEDIOS · COBERTURA','media-title':'Cobertura en medios' }
+      en:{ 'media-pill':'Media · Coverage','media-title':'Media Coverage' },
+      es:{ 'media-pill':'Medios · Cobertura','media-title':'Cobertura en medios' }
     };
     const tagLabels = {
       en:{ article:'Article', tv:'TV Segment', 'tv-social':'TV / Social', opinion:'Opinion' },
