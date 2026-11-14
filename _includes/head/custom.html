@@ -119,6 +119,17 @@ body{padding-left:0!important;padding-right:0!important;padding-top:70px!importa
 .found-header .lang-btn,.news-header .lang-btn,.media-header .lang-btn{border:1px solid rgba(15,23,42,.09);background:rgba(255,255,255,.88);color:#1e4034;padding:.28rem .75rem;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;cursor:pointer;line-height:1.5;box-shadow:none;transition:background .2s ease,transform .2s ease,box-shadow .2s ease}
 .found-header .lang-btn:hover,.news-header .lang-btn:hover,.media-header .lang-btn:hover{background:#fff;transform:translateY(-1px);box-shadow:0 7px 20px rgba(15,23,42,.14)}
 .found-header .lang-btn.active,.news-header .lang-btn.active,.media-header .lang-btn.active{background:#1e4034;color:#fff;border-color:#1e4034}
+/* ---- FOUND{...} code accent ------------------------------------------
+   The brand pattern from the Team intro, used as a small "technology in the
+   middle" touch. FOUND and the braces are static markup; JS swaps only the
+   inner span, so the braces survive textContent swaps (News, Team, bio). */
+.fx{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.fxb{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#d4af37;font-weight:500}
+.found-header-eyebrow.fx,.news-eyebrow-text.fx,.media-eyebrow-text.fx{letter-spacing:.12em}
+/* the eyebrow is inline-flex with a .5rem gap (for its dot), which would split
+   FOUND { Team } apart: zero the gap and give the dot its margin back */
+.found-header-eyebrow.fx{gap:0}
+.found-header-eyebrow.fx::before{margin-right:.5rem}
 /* ---- Phones: News, Media, Publications, Team and the bio pages --------
    These pages used to pin a 1200px viewport; they now have a real phone
    layout, and the header card becomes one compact row. The `body` prefix is

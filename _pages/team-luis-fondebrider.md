@@ -35,7 +35,7 @@ excerpt: "Argentine forensic anthropologist, co-founder of the EAAF and FOUND's 
     <div class="found-header-logo"><img class="found-logo-tile" src="/images/logo_FOUND_leaf.png" alt="FOUND"></div>
     <div class="found-header-divider"></div>
     <div class="found-header-body">
-      <div class="found-header-eyebrow" data-en="FOUND · Team · Advisors" data-es="FOUND · Equipo · Consejo asesor">FOUND · Team · Advisors</div>
+      <div class="found-header-eyebrow fx">FOUND<span class="fxb">{</span><span data-en="Team · Advisors" data-es="Equipo · Consejo asesor">Team · Advisors</span><span class="fxb">}</span></div>
       <h1>Luis Fondebrider</h1>
     </div>
   </header>

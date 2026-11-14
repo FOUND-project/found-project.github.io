@@ -70,6 +70,22 @@ The theme reserves large empty margins. Both are already neutralised in
   and so sits at its static position. It also clobbers the top padding that
   clears the nav.
 
+## The FOUND{...} accent
+
+The owner likes the Team intro's `FOUND{Team}` look — "technology in the middle
+of stuff, not dominating". Shared classes in `_includes/head/custom.html`: `.fx`
+(mono) and `.fxb` (a gold mono brace). **Keep FOUND and the braces as static
+markup and let JS swap only an inner span** — News, Team and the bio pages swap
+with `textContent`, which would wipe spans inside the swapped element. Used on:
+the header-card eyebrows of News, Media, Publications, Team and the bio pages
+(`FOUND{News · Impact · Media}` etc.); the homepage headings `FOUND{in Action}`
+and `FOUND{in the media}` and the hero `{Highlights}` label (green braces there,
+`.fxb-hero`, since the label itself is gold); the Publications chapter bar
+(`{17 chapters · free download}`); and the site footer (`© FOUND{2026}`). The
+eyebrow is `inline-flex` with a `.5rem` gap, which would split `FOUND { Team }`
+apart — `.found-header-eyebrow.fx` zeroes the gap and gives the dot a margin.
+Kept deliberately off The Role of Buscadoras, which stays free of code styling.
+
 ## Navigation
 
 `_includes/masthead.html` carries the FOUND mark (`images/logo_FOUND_mark.png`)

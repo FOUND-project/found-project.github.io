@@ -242,7 +242,7 @@ author_profile: false
       <div class="news-header-body">
         <div class="news-eyebrow">
           <span class="news-eyebrow-dot"></span>
-          <span class="news-eyebrow-text" id="news-pill">NEWS · IMPACT · MEDIA</span>
+          <span class="news-eyebrow-text fx">FOUND<span class="fxb">{</span><span id="news-pill">News · Impact · Media</span><span class="fxb">}</span></span>
         </div>
         <h1 id="news-title">FOUND — News &amp; Updates</h1>
       </div>
@@ -548,8 +548,8 @@ author_profile: false
         }
       ];
       var UI = {
-        en: { pill: 'NEWS · IMPACT · MEDIA', title: 'FOUND — News &amp; Updates', readMore: 'Read more', share: 'Share' },
-        es: { pill: 'NOTICIAS · IMPACTO · MEDIOS', title: 'FOUND — Noticias y Actualizaciones', readMore: 'Leer más', share: 'Compartir' }
+        en: { pill: 'News · Impact · Media', title: 'FOUND — News &amp; Updates', readMore: 'Read more', share: 'Share' },
+        es: { pill: 'Noticias · Impacto · Medios', title: 'FOUND — Noticias y Actualizaciones', readMore: 'Leer más', share: 'Compartir' }
       };
       var lang = 'en';
       var activeCardId = null;

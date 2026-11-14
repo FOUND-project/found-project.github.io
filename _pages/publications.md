@@ -555,7 +555,7 @@ author_profile: false
       <div class="found-header-logo"><img class="found-logo-tile" src="/images/logo_FOUND_leaf.png" alt="FOUND"></div>
       <div class="found-header-divider"></div>
       <div class="found-header-body">
-        <div class="found-header-eyebrow" id="pub-header-pill">Research · Publications</div>
+        <div class="found-header-eyebrow fx">FOUND<span class="fxb">{</span><span id="pub-header-pill">Research · Publications</span><span class="fxb">}</span></div>
         <h1 id="pub-header-title">Publications</h1>
       </div>
     </header>
@@ -604,7 +604,7 @@ author_profile: false
           <span class="bk-bar-main">
             <span class="bk-bar-title" data-en="Chapter downloads" data-es="Descarga de capítulos">Chapter downloads</span>
             <span class="bk-bar-meta">
-              <span class="bk-stats" data-en="17 chapters · free download" data-es="17 capítulos · descarga gratuita">17 chapters · free download</span>
+              <span class="fxb">{</span><span class="bk-stats" data-en="17 chapters · free download" data-es="17 capítulos · descarga gratuita">17 chapters · free download</span><span class="fxb">}</span>
               <span class="bk-bar-cta" data-en="Click here" data-es="Haz clic aquí">Click here</span>
             </span>
             <svg class="bk-bar-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
