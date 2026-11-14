@@ -267,7 +267,7 @@ written in the HTML, or the portrait `<img>` when one exists), name, role, and a
 `.bio-link` when there is a bio page. The Direction group carries
 `.team-group--lead` (three larger cards). Page order, set by the owner: Advisors
 (the three buscadoras first: María del Carmen Meza Ponce, Guillermina Camacho,
-Indira Navarro; Mariela Garfias after the other advisors; the two Jalisco Search
+Indira Navarro; Mariela Garfias right after Luis Fondebrider; the two Jalisco Search
 Commission members last), Contributors, then Direction at the very end, holding
 only the two co-directors: Miguel Moctezuma, then José Luis Silván. Add a person by copying a card.
 A search-collective member's card also carries the collective's logo as
