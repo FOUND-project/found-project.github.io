@@ -8,7 +8,6 @@ author_profile: false
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1200">
   <title>FOUND — Publications</title>
 
   <style>
@@ -512,6 +511,33 @@ author_profile: false
       .bk-ch-body{padding:0 .85rem .95rem .85rem}
       .bk-count{margin-left:0;width:100%}
       .bk-acts .bk-btn{flex:1 1 auto;justify-content:center}
+      .bk-ch-meta{text-align:left}
+      .bk-ch-pages,.bk-ch-size{display:inline}
+      .bk-ch-size::before{content:'\00b7';margin:0 .4em}
+    }
+    /* Tablets: two columns, not one very wide one */
+    @media (min-width:601px) and (max-width:768px){
+      .pub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    /* Phones: tighter sections and cards; the chevron no longer wraps under the bar text */
+    @media (max-width:600px){
+      .pub-shell{min-height:0;margin-bottom:0;padding-bottom:1.75rem}
+      .pub-section{margin-bottom:2.2rem}
+      .pub-section-header{margin-bottom:1.05rem}
+      .pub-title{font-size:1.45rem}
+      .pub-grid{gap:.9rem}
+      .pub-card{padding:1.15rem 1.1rem 1.2rem;border-radius:16px}
+      .pub-card:hover{transform:none}
+      .pub-thumb{margin:-1.15rem -1.1rem 1rem;height:150px}
+      .pub-card-inner{gap:1.1rem}
+      .pub-card-topline{margin-bottom:.7rem}
+      .pub-item-title{font-size:1.05rem;line-height:1.38;margin-bottom:.55rem}
+      .pub-meta{margin-bottom:0}
+      .pub-desc{margin-top:.75rem}
+      .bk-bar{position:relative;padding:.9rem 2.7rem .9rem 1.1rem}
+      .bk-bar-chev{position:absolute;right:1rem;top:1rem;margin:0}
+      .bk-wrap-body{padding:1rem .85rem}
+      .bk-how{padding:1rem 1.1rem}
     }
   </style>
 </head>

@@ -7,7 +7,6 @@ author_profile: false
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1200">
   <title>FOUND — Media & Talks</title>
   <style>
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -365,6 +364,24 @@ author_profile: false
     @media (max-width: 480px) {
       .media-card-inner { padding: 1.1rem 1.1rem 1.3rem; }
       .card-img-wrap { height: 120px; }
+    }
+    /* Tablets: two columns, not one very wide one */
+    @media (min-width: 601px) and (max-width: 900px) {
+      .media-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    /* Phones: each card is one compact row, thumbnail left and text right */
+    @media (max-width: 600px) {
+      .media-grid { gap: .7rem; margin-bottom: 1.5rem; }
+      .media-card, .archive a.media-card { flex-direction: row; align-items: stretch; border-radius: 16px; text-decoration: none; }
+      .media-card:hover { transform: none; }
+      .media-card .card-img-wrap { flex: 0 0 104px; width: 104px; height: auto; min-height: 104px; }
+      .media-card .card-img { position: absolute; inset: 0; }
+      .card-img-fallback-label { display: none; }
+      .card-img-fallback-initial { width: 44px; height: 44px; font-size: 1rem; }
+      .media-card .media-card-inner { padding: .8rem .95rem .85rem; gap: .32rem; min-width: 0; justify-content: center; }
+      .media-outlet { font-size: .62rem; letter-spacing: .12em; }
+      .media-card .media-title { margin: 0; flex: 0 1 auto; font-size: .98rem; line-height: 1.35; overflow-wrap: anywhere; }
+      .media-card .media-tag { margin-top: .3rem; font-size: .62rem; padding: .1rem .55rem; }
     }
   </style>
 </head>

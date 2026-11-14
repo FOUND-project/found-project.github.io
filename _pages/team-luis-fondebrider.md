@@ -4,7 +4,6 @@ permalink: /team/luis-fondebrider/
 author_profile: false
 excerpt: "Argentine forensic anthropologist, co-founder of the EAAF and FOUND's Forensic Anthropology Advisor."
 ---
-<meta name="viewport" content="width=1200">
 <style>
   .bio-page{max-width:var(--shell-max);margin:0 auto;padding:0 var(--shell-pad) 4rem;font-family:inherit}
   .bio-back{display:inline-flex;align-items:center;gap:.4rem;margin:0 0 1.6rem;font-size:.85rem;font-weight:700;letter-spacing:.04em;color:#1b4d3e}
@@ -17,6 +16,15 @@ excerpt: "Argentine forensic anthropologist, co-founder of the EAAF and FOUND's 
   .bio-text p{font-size:1.05rem;line-height:1.75;color:#1f2937;margin:0 0 1.1rem}
   .bio-text p:last-child{margin-bottom:0}
   .bio-text[hidden]{display:none}
+  /* Phones: portrait above the text */
+  @media (max-width:700px){
+    .bio-page{padding-bottom:2.5rem}
+    .bio-back{margin-bottom:1rem}
+    .bio-card{grid-template-columns:minmax(0,1fr);gap:1.15rem;padding:1.25rem 1.15rem 1.35rem}
+    .bio-photo{width:132px;height:132px}
+    .bio-role{margin-bottom:.9rem;font-size:.76rem}
+    .bio-text p{font-size:1rem;line-height:1.7;margin-bottom:1rem}
+  }
 </style>
 <div class="team-page bio-page" markdown="0">
   <header class="found-header">

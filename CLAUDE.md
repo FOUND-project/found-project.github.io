@@ -143,18 +143,37 @@ revealed by a `.bk-js` class the script adds to the section.
 Test it: Playwright with `javaScriptEnabled: false` must still show all 17
 chapters and 17 download links.
 
-### Viewport: desktop layout on phones for the section pages
+### Phones and tablets: the section pages have real small-screen layouts
 
-The owner prefers **News, Media, Publications and Team** to show their
-big-screen layout on phones, scaled down. Each of those four pages carries its
-own `<meta name="viewport" content="width=1200">` in the page content; it comes
-after the theme's `width=device-width` tag, so it wins. Keep the four in step.
-The **homepage is not pinned** — it has a real phone layout.
+Until Nov 2026 **News, Media, Publications and Team** pinned
+`<meta name="viewport" content="width=1200">` and showed the desktop layout
+scaled down. The owner then asked for them to be phone friendly like the
+homepage, so the pin is gone from all four and from the bio pages. Do not put it
+back.
 
-Because of this, a plain 390px Playwright viewport shows a phone layout those
-pages never get on a real phone; test them with a device profile
-(`devices['iPhone 13']`, which honours the meta) instead. Their own small-screen
-media queries are effectively dead on phones.
+- **Shared header card** (`_includes/head/custom.html`, the `max-width:600px`
+  block at the end): one compact row, 58px logo tile left, eyebrow and `<h1>`
+  right, EN/ES top right. The selectors carry a `body` prefix on purpose: News
+  and Media keep their own header CSS in the page, which loads later and would
+  otherwise win.
+- **Each page's phone rules** are one block at the end of that page's `<style>`.
+  News: the pop-up starts below the 70px masthead (the masthead sits above the
+  overlay, so a centred pop-up hides its close button). Media: each card is a
+  row, 104px thumbnail left. Publications: tighter cards, chevron pinned in the
+  chapter bar. Team: one column, each card a row (avatar, text, collective logo).
+  Bio: portrait above the text.
+- **Tablets (601-900px)** get two columns on News, Media and Publications. The
+  pages' older `max-width:900px` rules force one column, which is right for a
+  phone and far too wide at 768px.
+- The same block removes the theme's `9em` body padding on these pages (via
+  `body:has(...)`), which left a tall empty band above the footer.
+
+Test with device profiles (`devices['iPhone 13']`, `['Galaxy S8']`,
+`['iPad Mini']`) as well as 1440px, in both languages, and check
+`document.documentElement.scrollWidth` equals the viewport width. Desktop must
+stay pixel-identical when only phone rules change: build `origin/master` to a
+second folder and diff full-page screenshots (looping card videos differ by a
+frame, nothing else should).
 
 ## Verifying before you push
 
@@ -241,8 +260,8 @@ A team member with a full biography gets their own page at
 `/team/<first-last>/` (e.g. `_pages/team-luis-fondebrider.md`, served at
 `found-project.org/team/luis-fondebrider/`). Copy that file for the next one.
 It reuses the shared header card, wraps content in `.team-page` (so the theme's
-duplicate `page__title` stays hidden) and carries the `width=1200` viewport like
-Team. Both language versions of the bio are real HTML blocks (`lang="en"` /
+duplicate `page__title` stays hidden); on phones the portrait stacks above the
+text. Both language versions of the bio are real HTML blocks (`lang="en"` /
 `lang="es" hidden`), so the English one shows with JS off. On `team.md`, link the
 name and add a `.bio-link` "Read bio →" with an id in the `T` dictionary.
 The owner supplies source bios; paraphrase them (not literal) and show the
