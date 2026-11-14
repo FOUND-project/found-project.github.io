@@ -38,7 +38,7 @@ author_profile: false
   .archive h2.team-group-title, .page__content h2.team-group-title { display: flex; align-items: center; gap: 1rem; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 1.9rem; letter-spacing: 0; text-transform: none; color: #1e4034; margin: 0 0 1.5rem; padding: 0; border: 0; opacity: 1; }
   .team-group-title::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(212,175,55,.75), rgba(212,175,55,0)); }
   .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(255px, 1fr)); gap: 1.25rem; }
-  .team-group--lead .team-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .team-group--lead .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .team-member { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: .2rem; padding: 1.4rem 1.35rem 1.3rem; background: #fff; border: 1px solid rgba(45,95,77,.14); border-radius: 18px; box-shadow: 0 2px 10px rgba(15,23,42,.06); overflow: hidden; line-height: 1.4; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
   .team-member::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: linear-gradient(90deg, #d4af37, rgba(212,175,55,.2)); }
   .team-member:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(15,23,42,.12); border-color: rgba(212,175,55,.6); }
@@ -151,6 +151,11 @@ author_profile: false
         <p class="role" id="r-karina">UWE Bristol</p>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">MG</span>
+        <p class="name">Mariela Garfias</p>
+        <p class="role" id="r-mariela">FCDO Pioneer</p>
+      </div>
+      <div class="team-member">
         <span class="team-avatar" aria-hidden="true">VÁ</span>
         <p class="name">Victor Hugo Ávila Barrientos</p>
         <p class="role" id="r-avila">Jalisco Search Commission</p>
@@ -197,19 +202,14 @@ author_profile: false
     <h2 class="team-group-title" id="tg-direction">Direction</h2>
     <div class="team-grid">
       <div class="team-member">
-        <span class="team-avatar" aria-hidden="true">MG</span>
-        <p class="name">Mariela Garfias</p>
-        <p class="role" id="r-mariela">FCDO Pioneer</p>
+        <span class="team-avatar" aria-hidden="true">MM</span>
+        <p class="name">Miguel Moctezuma</p>
+        <p class="role" id="r-miguel">Co-Founder &amp; Co-Director · University of Oxford</p>
       </div>
       <div class="team-member">
         <span class="team-avatar" aria-hidden="true">JS</span>
         <p class="name">José Luis Silván</p>
         <p class="role" id="r-silvan">Co-Founder &amp; Co-Director · CentroGeo</p>
-      </div>
-      <div class="team-member">
-        <span class="team-avatar" aria-hidden="true">MM</span>
-        <p class="name">Miguel Moctezuma</p>
-        <p class="role" id="r-miguel">Co-Founder &amp; Co-Director · University of Oxford</p>
       </div>
     </div>
   </div>
