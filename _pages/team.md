@@ -131,6 +131,11 @@ author_profile: false
         <a class="bio-link" href="/team/luis-fondebrider/" id="bio-fondebrider">Read bio →</a>
       </div>
       <div class="team-member">
+        <span class="team-avatar" aria-hidden="true">MG</span>
+        <p class="name">Mariela Garfias</p>
+        <p class="role" id="r-mariela">FCDO Pioneer</p>
+      </div>
+      <div class="team-member">
         <span class="team-avatar" aria-hidden="true">LF</span>
         <p class="name">Luz Janeth Forero</p>
         <p class="role" id="r-forero">Colombia Search Unit</p>
@@ -149,11 +154,6 @@ author_profile: false
         <span class="team-avatar" aria-hidden="true">KG</span>
         <p class="name">Karina García</p>
         <p class="role" id="r-karina">UWE Bristol</p>
-      </div>
-      <div class="team-member">
-        <span class="team-avatar" aria-hidden="true">MG</span>
-        <p class="name">Mariela Garfias</p>
-        <p class="role" id="r-mariela">FCDO Pioneer</p>
       </div>
       <div class="team-member">
         <span class="team-avatar" aria-hidden="true">VÁ</span>
