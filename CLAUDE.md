@@ -318,6 +318,17 @@ cropped: `object-fit:contain`, `aspect-ratio:400/224`, height matched to the
 belt's 4:3 tiles) followed by the moving `data-belt` strip, whose left edge
 fades under it. On phones the video stacks full-width above the strip.
 
+### Instagram posts on News
+
+A News card can carry `instagram: '<post id>'` (the code in `instagram.com/p/<id>/`):
+the pop-up then embeds the post below the card text with Instagram's `embed.js`,
+which loads only when such a card opens, and shows a "View this post on Instagram"
+link until it does. The first one is `manos-buscadoras-ai-search-2026` (Nov 2026).
+This sandbox cannot fetch Instagram (posts, captions, images), and its headless
+browser cannot finish drawing the embed: ask the owner for screenshots of the
+caption and slides, and crop the tile image from those. Quote the buscadoras'
+own words rather than paraphrasing them.
+
 ## Files and downloads
 
 `files/` is served as-is by Pages, so anything in it is downloadable at
