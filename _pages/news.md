@@ -161,6 +161,10 @@ author_profile: false
     .modal-body .video-embed { position: relative; aspect-ratio: 16/9; margin: 1.3rem 0 .55rem; border-radius: var(--radius-md); overflow: hidden; background: #000; box-shadow: var(--shadow-md); }
     .modal-body .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
     .modal-body .video-caption { font-size: .9rem; line-height: 1.6; margin-bottom: 1.2rem; }
+    .modal-body .ig-embed { display: flex; justify-content: center; margin: 1.3rem 0 1.2rem; }
+    .modal-body .ig-embed .instagram-media, .modal-body .ig-embed iframe { margin: 0 auto !important; width: 100% !important; max-width: 540px !important; min-width: 0 !important; }
+    .modal-body .ig-embed blockquote { border: 0; margin: 0 auto; padding: 0; font-style: normal; background: none; }
+    .modal-body .ig-embed a.ig-fallback { display: block; padding: 1.1rem 1.2rem; border: 1px solid rgba(45,95,77,.2); border-radius: var(--radius-md); text-align: center; font-style: normal; text-decoration: none; }
     .modal-body a { color: var(--green-700); text-decoration: none; font-weight: 650; border-bottom: 2px solid rgba(45,95,77,.3); padding-bottom: .05rem; transition: border-color .2s, color .2s; }
     .modal-body a:hover { border-bottom-color: var(--gold); color: var(--green-700); }
     .modal-body ul { margin: .8rem 0 1.1rem 1.4rem; }
@@ -279,6 +283,25 @@ author_profile: false
       var LOGO = 'https://github.com/FOUND-project/found-project.github.io/blob/master/images/Found_logo.jpg?raw=true';
       var BASE_URL = 'https://found-project.org/news/';
       var newsCards = [
+{
+  id: 'manos-buscadoras-ai-search-2026',
+  date: '2026-11-11',
+  image: '/images/manos_buscadoras_ai_finding_2026.jpg',
+  instagram: 'DfnljlrnzFn',
+  logoBanner: false,
+  featured: true,
+  category: 'field',
+  en: {
+    badge: 'From the buscadoras',
+    title: 'Colectivo Manos Buscadoras on the AI-guided search that located two missing persons in Zapopan, Jalisco',
+    body: '<p>The mothers of the <strong>Colectivo Manos Buscadoras</strong> shared on Instagram their account of the July 2026 search in <strong>Zapopan, Jalisco</strong>, where an experimental search guided by artificial intelligence and satellite imagery made it possible to locate two missing persons. FOUND, <strong>CentroGeo</strong>, the <strong>Jalisco Search Commission (COBUPEJ)</strong> and the <strong>National Guard</strong> took part in the field.</p><p>In their words:</p><blockquote><p>“The tool learned from us, the buscadoras, and from the scientists and authorities we work with in FOUND. It is free and for humanitarian purposes.”</p><p>“It already operates at the National Search Commission (CNB), the Jalisco Search Commission (COBUPEJ) and Colombia’s Search Unit for Persons Deemed Missing (UBPD). In the coming months it will reach at least three more states.”</p><p>“Searching is the responsibility of the State. We collaborate so that searches are faster and carry less risk.”</p><p>“Much of what the CentroGeo and FOUND platform knows, it learned from the search collectives and from context analysis at COBUPEJ. <strong>We are part of FOUND.</strong>”</p></blockquote><p>The next searches will be announced in real time through the collectives. <a href="#jalisco-ml-finding-2026">Read how the search areas were proposed</a>.</p><div class="partner-logos"><img class="pl-tall" src="/images/logos/manos_buscadoras.png" alt="Colectivo Manos Buscadoras"><img class="pl-tall" src="/images/logos/guerreros_buscadores.png" alt="Guerreros Buscadores de Jalisco"></div>'
+  },
+  es: {
+    badge: 'Desde las buscadoras',
+    title: 'El Colectivo Manos Buscadoras cuenta la búsqueda guiada por inteligencia artificial que localizó a dos personas en Zapopan, Jalisco',
+    body: '<p>Las madres del <strong>Colectivo Manos Buscadoras</strong> compartieron en Instagram su relato de la búsqueda de julio de 2026 en <strong>Zapopan, Jalisco</strong>, donde una búsqueda experimental guiada por inteligencia artificial e imágenes satelitales permitió localizar a dos personas desaparecidas. Participaron en campo FOUND, <strong>CentroGeo</strong>, la <strong>Comisión de Búsqueda de Personas del Estado de Jalisco (COBUPEJ)</strong> y la <strong>Guardia Nacional</strong>.</p><p>En sus palabras:</p><blockquote><p>“La herramienta aprendió de nosotras, las buscadoras, y de las personas científicas y autoridades con quienes colaboramos en FOUND. Es gratuita y con fines humanitarios.”</p><p>“Ya opera en la Comisión Nacional de Búsqueda (CNB), la Comisión de Búsqueda de Personas del Estado de Jalisco (COBUPEJ) y la Unidad de Búsqueda de Personas dadas por Desaparecidas (UBPD) de Colombia. En los próximos meses llegará al menos a tres estados más.”</p><p>“Buscar es responsabilidad del Estado. Colaboramos para que la búsqueda sea más rápida y con menos riesgo.”</p><p>“Mucho de lo que sabe la plataforma de CentroGeo y FOUND lo aprendió de los colectivos de búsqueda y del análisis de contexto en la COBUPEJ. <strong>Nosotras somos parte de FOUND.</strong>”</p></blockquote><p>Las próximas búsquedas se darán a conocer en tiempo real a través de los colectivos. <a href="#jalisco-ml-finding-2026">Lee cómo se propusieron las zonas de búsqueda</a>.</p><div class="partner-logos"><img class="pl-tall" src="/images/logos/manos_buscadoras.png" alt="Colectivo Manos Buscadoras"><img class="pl-tall" src="/images/logos/guerreros_buscadores.png" alt="Guerreros Buscadores de Jalisco"></div>'
+  }
+},
 {
   id: 'when-words-become-search-2026',
   date: '2026-11-09',
@@ -554,6 +577,13 @@ author_profile: false
       var lang = 'en';
       var activeCardId = null;
       function fmtDate(d, l) { try { var date = new Date(d + 'T00:00:00'); return date.toLocaleDateString(l === 'en' ? 'en-US' : 'es-MX', { year:'numeric', month:'long' }); } catch(e) { return d; } }
+      function loadInstagram() {
+        if (window.instgrm && window.instgrm.Embeds) { window.instgrm.Embeds.process(); return; }
+        if (document.getElementById('ig-embed-js')) return;
+        var s = document.createElement('script');
+        s.id = 'ig-embed-js'; s.async = true; s.src = 'https://www.instagram.com/embed.js';
+        document.body.appendChild(s);
+      }
       function cardById(id) { for (var i = 0; i < newsCards.length; i++) { if (newsCards[i].id === id) return newsCards[i]; } return null; }
       function setMeta(id, val) { var el = document.getElementById(id); if (el) el.setAttribute('content', val); }
       function badgeClass(cat) { var map = { award:'badge-award', media:'badge-media', field:'badge-field', funding:'badge-funding', coverage:'badge-coverage', partnership:'badge-field', training:'badge-funding' }; return map[cat] || 'badge-field'; }
@@ -613,6 +643,12 @@ author_profile: false
         document.getElementById('modal-date').textContent = card.date ? fmtDate(card.date, lang) : '';
         document.getElementById('modal-title-el').innerHTML = t.title;
         document.getElementById('modal-body').innerHTML = t.body;
+        if (card.instagram) {
+          var igUrl = 'https://www.instagram.com/p/' + card.instagram + '/';
+          var igLabel = lang === 'es' ? 'Ver esta publicación en Instagram ↗' : 'View this post on Instagram ↗';
+          document.getElementById('modal-body').insertAdjacentHTML('beforeend', '<div class="ig-embed"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="' + igUrl + '" data-instgrm-version="14"><a class="ig-fallback" href="' + igUrl + '" target="_blank" rel="noopener noreferrer">' + igLabel + '</a></blockquote></div>');
+          loadInstagram();
+        }
         document.getElementById('share-label').textContent = ui.share;
         var plainTitle = t.title.replace(/<[^>]*>/g,'');
         setMeta('og-title', plainTitle);
