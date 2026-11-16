@@ -161,6 +161,9 @@ author_profile: false
     .modal-body .video-embed { position: relative; aspect-ratio: 16/9; margin: 1.3rem 0 .55rem; border-radius: var(--radius-md); overflow: hidden; background: #000; box-shadow: var(--shadow-md); }
     .modal-body .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
     .modal-body .video-caption { font-size: .9rem; line-height: 1.6; margin-bottom: 1.2rem; }
+    .modal-body .ig-embed { display: flex; justify-content: center; margin: 1.3rem 0 1.2rem; }
+    .modal-body .ig-embed .instagram-media, .modal-body .ig-embed iframe { margin: 0 auto !important; width: 100% !important; max-width: 540px !important; min-width: 0 !important; }
+    .modal-body .ig-embed .ig-fallback { display: block; padding: 1.1rem 1.2rem; border: 1px solid rgba(45,95,77,.2); border-radius: var(--radius-md); text-align: center; }
     .modal-body a { color: var(--green-700); text-decoration: none; font-weight: 650; border-bottom: 2px solid rgba(45,95,77,.3); padding-bottom: .05rem; transition: border-color .2s, color .2s; }
     .modal-body a:hover { border-bottom-color: var(--gold); color: var(--green-700); }
     .modal-body ul { margin: .8rem 0 1.1rem 1.4rem; }
@@ -554,6 +557,13 @@ author_profile: false
       var lang = 'en';
       var activeCardId = null;
       function fmtDate(d, l) { try { var date = new Date(d + 'T00:00:00'); return date.toLocaleDateString(l === 'en' ? 'en-US' : 'es-MX', { year:'numeric', month:'long' }); } catch(e) { return d; } }
+      function loadInstagram() {
+        if (window.instgrm && window.instgrm.Embeds) { window.instgrm.Embeds.process(); return; }
+        if (document.getElementById('ig-embed-js')) return;
+        var s = document.createElement('script');
+        s.id = 'ig-embed-js'; s.async = true; s.src = 'https://www.instagram.com/embed.js';
+        document.body.appendChild(s);
+      }
       function cardById(id) { for (var i = 0; i < newsCards.length; i++) { if (newsCards[i].id === id) return newsCards[i]; } return null; }
       function setMeta(id, val) { var el = document.getElementById(id); if (el) el.setAttribute('content', val); }
       function badgeClass(cat) { var map = { award:'badge-award', media:'badge-media', field:'badge-field', funding:'badge-funding', coverage:'badge-coverage', partnership:'badge-field', training:'badge-funding' }; return map[cat] || 'badge-field'; }
@@ -613,6 +623,12 @@ author_profile: false
         document.getElementById('modal-date').textContent = card.date ? fmtDate(card.date, lang) : '';
         document.getElementById('modal-title-el').innerHTML = t.title;
         document.getElementById('modal-body').innerHTML = t.body;
+        if (card.instagram) {
+          var igUrl = 'https://www.instagram.com/p/' + card.instagram + '/';
+          var igLabel = lang === 'es' ? 'Ver esta publicación en Instagram ↗' : 'View this post on Instagram ↗';
+          document.getElementById('modal-body').insertAdjacentHTML('beforeend', '<div class="ig-embed"><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="' + igUrl + '" data-instgrm-version="14"><a class="ig-fallback" href="' + igUrl + '" target="_blank" rel="noopener noreferrer">' + igLabel + '</a></blockquote></div>');
+          loadInstagram();
+        }
         document.getElementById('share-label').textContent = ui.share;
         var plainTitle = t.title.replace(/<[^>]*>/g,'');
         setMeta('og-title', plainTitle);
